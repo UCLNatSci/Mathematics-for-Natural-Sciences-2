@@ -1,0 +1,12 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: integrationprelim
+- file: coordinatesystems
+- file: surfaceintegrals
+- file: volumeintegrals
+- file: vectorcalctheorems
+- file: notebooks
