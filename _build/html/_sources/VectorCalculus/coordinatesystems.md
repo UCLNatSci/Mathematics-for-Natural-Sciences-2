@@ -2,4 +2,4 @@
 
 # Spherical Polar Coordinaes
 
-# Cylindrical Polar Ccoindtea 
+# Cylindrical Polar Coordinates

@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Mathematics for Natural Sciences 2
-author: Peter Bratby, Ella Metcalfe and Peter Bratby
+author: Natural Sciences
 logo: logo.png
 
 # Force re-execution of notebooks on each build.
@@ -28,5 +28,26 @@ repository:
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
-  use_issues_button: true
-  use_repository_button: true
+  use_issues_button: false
+  use_repository_button: false
+
+parse:
+  myst_enable_extensions:
+    # don't forget to list any other extensions you want enabled,
+    # including those that are enabled by default!
+    - amsmath
+    - dollarmath
+    - html_image
+    - html_admonition
+    - colon_fence
+    - deflist
+    - linkify
+    - replacements
+    - smartquotes
+    - substitution
+  myst_dmath_double_inline: true
+
+sphinx:
+  config:
+    html_css_files:
+      - "_static/mystyle.css"

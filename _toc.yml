@@ -12,4 +12,5 @@ chapters:
 - file: VectorCalculus/surfaceintegrals
 - file: VectorCalculus/volumeintegrals
 - file: VectorCalculus/vectorcalctheorems
-# - file: notebooks
+
+- file: LinearAlgebra/linear_systems_matrices/notes.md
