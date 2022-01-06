@@ -7,6 +7,7 @@ chapters:
 - file: VectorCalculus/partialdifferentiation
 - file: VectorCalculus/integrationprelim
 - file: VectorCalculus/vectoralgebra
+- file: VectorCalculus/calculusonfields
 - file: VectorCalculus/indexnotation
 - file: VectorCalculus/coordinatesystems
 - file: VectorCalculus/surfaceintegrals

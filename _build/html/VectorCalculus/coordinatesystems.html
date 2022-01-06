@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coordinate System Changes &#8212; Mathematics for Natural Sciences 2</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
@@ -23,29 +22,32 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -105,6 +107,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="vectoralgebra.html">
    Vectors and Vector Algebra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="calculusonfields.html">
+   Vector Fields
   </a>
  </li>
  <li class="toctree-l1">
@@ -208,17 +215,17 @@
             </div>
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Coordinate System Changes
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cartesian-coordinates">
+   Cartesian Coordinates
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#spherical-polar-coordinaes">
    Spherical Polar Coordinaes
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#cylindrical-polar-coordinates">
    Cylindrical Polar Coordinates
   </a>
@@ -234,15 +241,19 @@
         
               <div>
                 
-  <section id="coordinate-system-changes">
+  <div class="section" id="coordinate-system-changes">
 <h1>Coordinate System Changes<a class="headerlink" href="#coordinate-system-changes" title="Permalink to this headline">¶</a></h1>
-</section>
-<section id="spherical-polar-coordinaes">
-<h1>Spherical Polar Coordinaes<a class="headerlink" href="#spherical-polar-coordinaes" title="Permalink to this headline">¶</a></h1>
-</section>
-<section id="cylindrical-polar-coordinates">
-<h1>Cylindrical Polar Coordinates<a class="headerlink" href="#cylindrical-polar-coordinates" title="Permalink to this headline">¶</a></h1>
-</section>
+<div class="section" id="cartesian-coordinates">
+<h2>Cartesian Coordinates<a class="headerlink" href="#cartesian-coordinates" title="Permalink to this headline">¶</a></h2>
+<p>In our discussion of vectors, we looked at the Cartesian coordinate system</p>
+</div>
+<div class="section" id="spherical-polar-coordinaes">
+<h2>Spherical Polar Coordinaes<a class="headerlink" href="#spherical-polar-coordinaes" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="cylindrical-polar-coordinates">
+<h2>Cylindrical Polar Coordinates<a class="headerlink" href="#cylindrical-polar-coordinates" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
