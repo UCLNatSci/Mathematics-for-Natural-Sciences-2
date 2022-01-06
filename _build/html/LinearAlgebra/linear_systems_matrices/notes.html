@@ -325,6 +325,18 @@
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-2x2-inverse">
+   16.5. The (2x2) inverse
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#concept-and-definition">
+     16.5.1. Concept and definition
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
             </nav>
@@ -344,8 +356,8 @@
 <section id="motivation">
 <h3><span class="section-number">16.1.1. </span>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">¶</a></h3>
 <p>Gaussian elimination is a systematic technique for solving systems of linear equations, which are of the form</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e72f1a00-56e0-4461-8606-6243746a6b22">
-<span class="eqno">(16.1)<a class="headerlink" href="#equation-e72f1a00-56e0-4461-8606-6243746a6b22" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-d793eef0-43be-4de1-96a7-ec2b3f74929d">
+<span class="eqno">(16.1)<a class="headerlink" href="#equation-d793eef0-43be-4de1-96a7-ec2b3f74929d" title="Permalink to this equation">¶</a></span>\[\begin{align}
 a_{1,1} x_1 + a_{1,2} x_2 + a_{1,3} x_3 + \dots + a_{1,n} x_n &amp;= b_1 \\
 
    a_{2,1} x_1 + a_{2,2} x_2 + a_{2,3} x_3 + \dots + a_{2,n} x_n &amp;= b_2\\
@@ -355,8 +367,8 @@ a_{1,1} x_1 + a_{1,2} x_2 + a_{1,3} x_3 + \dots + a_{1,n} x_n &amp;= b_1 \\
 <p>where <span class="math notranslate nohighlight">\(a_{i,j}\)</span> are constants. Usually there are the same number of equations as unknowns, so <span class="math notranslate nohighlight">\(m = n\)</span>.  If <span class="math notranslate nohighlight">\(m &lt; n\)</span> then the system is undetermined, if <span class="math notranslate nohighlight">\(m &gt; n\)</span>, the system is over constrained.</p>
 <div class="tip admonition">
 <p class="admonition-title">Example</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fee2cf89-c9f4-4c16-b582-f49ea30883f3">
-<span class="eqno">(16.2)<a class="headerlink" href="#equation-fee2cf89-c9f4-4c16-b582-f49ea30883f3" title="Permalink to this equation">¶</a></span>\[\begin{align}4 x_1 - x_2 &amp;= 1\\ -2 x_1 + 3 x_2 &amp;= 12 \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-b2fd2549-50bf-43bd-b1be-8c2cf06ddc96">
+<span class="eqno">(16.2)<a class="headerlink" href="#equation-b2fd2549-50bf-43bd-b1be-8c2cf06ddc96" title="Permalink to this equation">¶</a></span>\[\begin{align}4 x_1 - x_2 &amp;= 1\\ -2 x_1 + 3 x_2 &amp;= 12 \end{align}\]</div>
 <p>Each equation here defines a line, and we are looking for a point which satisfies both equations, which means that the lines intersect.</p>
 <p>From the first line we obtain <span class="math notranslate nohighlight">\(x_2 = 4 x_1 - 1\)</span>, and by substituting this into the second line, we obtain <span class="math notranslate nohighlight">\(x = \frac{3}{2}\)</span>, <span class="math notranslate nohighlight">\(y = 5\)</span>. Two equations with two unknowns will always give a unique solution, unless the lines are parallel (and so the equations are just a scaling of each other).</p>
 <ul class="simple">
@@ -419,8 +431,8 @@ For instance, continuing with the naive row reduction for the example shown in t
 <p>In the example below, the technique is applied to a case where the system of equations is under-determined, so a unique solution cannot be obtained.</p>
 <p>Kirchoff’s law states that $\mathrm{current~in} = \mathrm{current~out}.</p>
 <p>For the system of 4 nodes shown above, this gives us four equations:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-028a72fd-8cf9-411f-a7ad-c3fbd89e440a">
-<span class="eqno">(16.3)<a class="headerlink" href="#equation-028a72fd-8cf9-411f-a7ad-c3fbd89e440a" title="Permalink to this equation">¶</a></span>\[\begin{align}y_3&amp;=y_1+y_4\\y_1&amp;=y_2+y_5\\y_2&amp;=y_3+y_6\\y_4+y_5+y_6&amp;=0\end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-267e901c-36f2-4050-9344-1d2232825ed0">
+<span class="eqno">(16.3)<a class="headerlink" href="#equation-267e901c-36f2-4050-9344-1d2232825ed0" title="Permalink to this equation">¶</a></span>\[\begin{align}y_3&amp;=y_1+y_4\\y_1&amp;=y_2+y_5\\y_2&amp;=y_3+y_6\\y_4+y_5+y_6&amp;=0\end{align}\]</div>
 <p>The equations at each node are of the form <span class="math notranslate nohighlight">\(c_1 y_1 +c_2 y_2+\dots +c_6 y_6=d\)</span>. Written in augmented matrix form, the system is:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\left(\begin{array}{cccccc:c}1 &amp; 0 &amp; -1 &amp; 1 &amp; 0 &amp; 0 &amp;0\\-1 &amp; 1 &amp; 0 &amp; 0 &amp; 1 &amp; 0&amp;0 \\0 &amp; -1 &amp; 1 &amp; 0 &amp; 0 &amp; 1&amp;0 \\0 &amp; 0 &amp; 0 &amp; -1 &amp; -1 &amp; -1 &amp;0\\\end{array}\right)\end{split}\]</div>
@@ -451,8 +463,8 @@ Choosing <span class="math notranslate nohighlight">\((y_3,y_5,y_6)=(0,0,1)\)</s
 <span class="eqno">(16.4)<a class="headerlink" href="#equation-square-matrix" title="Permalink to this equation">¶</a></span>\[\begin{split}\left( \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right) \qquad \left[ \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right]\end{split}\]</div>
 <p>It is important that you do not use commas to separate the elements, which is incorrect notation.</p>
 <p>Either square or round brackets can be used to denote a matrix - but you should avoid mixing notation. Other types of brackets cannot be used, so none of the expressions below are matrices. In fact, the third expression has a special meaning, as we will see later.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b2bce08f-bc8c-4344-898c-efc97a7b9a0d">
-<span class="eqno">(16.5)<a class="headerlink" href="#equation-b2bce08f-bc8c-4344-898c-efc97a7b9a0d" title="Permalink to this equation">¶</a></span>\[\begin{align}\begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \qquad \left\{ \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right\} \qquad \left| \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right|	\end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-365f05d7-8471-4283-96a4-99cfbaa8529d">
+<span class="eqno">(16.5)<a class="headerlink" href="#equation-365f05d7-8471-4283-96a4-99cfbaa8529d" title="Permalink to this equation">¶</a></span>\[\begin{align}\begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \qquad \left\{ \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right\} \qquad \left| \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right|	\end{align}\]</div>
 <section id="terminology">
 <h3><span class="section-number">16.3.1. </span>Terminology<a class="headerlink" href="#terminology" title="Permalink to this headline">¶</a></h3>
 <p>The matrix featured in <a class="reference internal" href="#equation-square-matrix">(16.4)</a> is referred to as a square matrix because it has the same number of rows and columns. We also can say that it is a (2x2) matrix, because it has two rows and two columns.</p>
@@ -612,24 +624,113 @@ a general proof using element notation, is given below.</p>
 <section id="linking-matrix-multiplication-and-gaussian-elimination">
 <h3><span class="section-number">16.4.11. </span>Linking matrix multiplication and Gaussian elimination<a class="headerlink" href="#linking-matrix-multiplication-and-gaussian-elimination" title="Permalink to this headline">¶</a></h3>
 <p>The row-reduction operations that were introduced in the section on Gaussian elimination can be implemented by matrix multiplication. The illustration here matches the example that was given in <a class="reference internal" href="#id1"><span class="std std-ref">A systematic technique for solving systems of equations</span></a> for the augmented coefficient matrix:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-91f7b362-d9e6-429a-9cda-de30250fbd94">
-<span class="eqno">(16.6)<a class="headerlink" href="#equation-91f7b362-d9e6-429a-9cda-de30250fbd94" title="Permalink to this equation">¶</a></span>\[\begin{equation}A = \left(\begin{array}{ccc:c}1&amp;1&amp;2&amp;2\\2&amp;3&amp;-4&amp;1\\-1&amp;1&amp;1&amp;3\end{array}\right).\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-63fe3cf2-e813-4d42-a9b4-b171f79f92e0">
+<span class="eqno">(16.6)<a class="headerlink" href="#equation-63fe3cf2-e813-4d42-a9b4-b171f79f92e0" title="Permalink to this equation">¶</a></span>\[\begin{equation}A = \left(\begin{array}{ccc:c}1&amp;1&amp;2&amp;2\\2&amp;3&amp;-4&amp;1\\-1&amp;1&amp;1&amp;3\end{array}\right).\end{equation}\]</div>
 <p>In the first step we used the row operations <span class="math notranslate nohighlight">\(\hat{r}_2=r_2-2r_1\)</span>,   <span class="math notranslate nohighlight">\(\hat{r}_3=r_3+r_1\)</span>, and in the second step we used the row operation <span class="math notranslate nohighlight">\(\hat{r}_3=r_3-2r_2\)</span>. These are equivalent to the following row operation matrices:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}L_1 = \left(\begin{array}{ccc}1&amp;0&amp;0\\-2&amp;1&amp;0\\1&amp;0&amp;1\end{array}\right), \quad  L_2=\left(\begin{array}{ccc}1 &amp; 0 &amp; 0 \\0 &amp; 1 &amp; 0 \\0 &amp; -2 &amp; 1 \\\end{array}\right) \end{split}\]</div>
 <p>The composition of these two matrices puts the coefficient matrix into the upper triangular form previously obtained:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-470ac337-2fbb-4a6a-8ad7-77cfcc9db29d">
-<span class="eqno">(16.7)<a class="headerlink" href="#equation-470ac337-2fbb-4a6a-8ad7-77cfcc9db29d" title="Permalink to this equation">¶</a></span>\[\begin{equation}L_2 L_1 A = \left(\begin{array}{ccc}1 &amp; 0 &amp; 0 \\0 &amp; 1 &amp; 0 \\0 &amp; -2 &amp; 1 \\\end{array}\right)\left(\begin{array}{ccc:c}1 &amp; 1 &amp; 2 &amp; 2 \\0 &amp; 1 &amp; -8 &amp; -3 \\0 &amp; 2 &amp; 3 &amp; 5 \\\end{array}\right)=\left(\begin{array}{ccc:c}1 &amp; 1 &amp; 2 &amp; 2 \\0 &amp; 1 &amp; -8 &amp; -3 \\0 &amp; 0 &amp; 19 &amp; 11 \\\end{array}\right).\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-84bf90e8-68d3-427a-b237-37707dca1352">
+<span class="eqno">(16.7)<a class="headerlink" href="#equation-84bf90e8-68d3-427a-b237-37707dca1352" title="Permalink to this equation">¶</a></span>\[\begin{equation}L_2 L_1 A = \left(\begin{array}{ccc}1 &amp; 0 &amp; 0 \\0 &amp; 1 &amp; 0 \\0 &amp; -2 &amp; 1 \\\end{array}\right)\left(\begin{array}{ccc:c}1 &amp; 1 &amp; 2 &amp; 2 \\0 &amp; 1 &amp; -8 &amp; -3 \\0 &amp; 2 &amp; 3 &amp; 5 \\\end{array}\right)=\left(\begin{array}{ccc:c}1 &amp; 1 &amp; 2 &amp; 2 \\0 &amp; 1 &amp; -8 &amp; -3 \\0 &amp; 0 &amp; 19 &amp; 11 \\\end{array}\right).\end{equation}\]</div>
 <p>The additional operations that were carried out to fully row-reduce the matrix can be captured in the following row-reduction matrices:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1fdfcac3-746c-42f5-8a8a-605073d056b0">
-<span class="eqno">(16.8)<a class="headerlink" href="#equation-1fdfcac3-746c-42f5-8a8a-605073d056b0" title="Permalink to this equation">¶</a></span>\[\begin{equation}P=\left(\begin{array}{ccc}1 &amp; 0 &amp; 0 \\0 &amp; 1 &amp; 0 \\0 &amp; 0 &amp; \frac{1}{19} \\\end{array}\right), \quad U_1=\left(\begin{array}{ccc}1 &amp; 0 &amp; -2 \\0 &amp; 1 &amp; 8 \\0 &amp; 0 &amp; 1 \\\end{array}\right), \quad U_2 = \left(\begin{array}{ccc}1 &amp; 0 &amp; -2 \\0 &amp; 1 &amp; 8 \\0 &amp; 0 &amp; 1 \\\end{array}\right)\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-e17a5ce6-d5ff-47ac-973a-b2455a648fb4">
+<span class="eqno">(16.8)<a class="headerlink" href="#equation-e17a5ce6-d5ff-47ac-973a-b2455a648fb4" title="Permalink to this equation">¶</a></span>\[\begin{equation}P=\left(\begin{array}{ccc}1 &amp; 0 &amp; 0 \\0 &amp; 1 &amp; 0 \\0 &amp; 0 &amp; \frac{1}{19} \\\end{array}\right), \quad U_1=\left(\begin{array}{ccc}1 &amp; 0 &amp; -2 \\0 &amp; 1 &amp; 8 \\0 &amp; 0 &amp; 1 \\\end{array}\right), \quad U_2 = \left(\begin{array}{ccc}1 &amp; 0 &amp; -2 \\0 &amp; 1 &amp; 8 \\0 &amp; 0 &amp; 1 \\\end{array}\right)\end{equation}\]</div>
 <p>You may verify the result:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}U_2 U_1 P L_2 L_1 A =\left(\begin{array}{ccc:c}1 &amp; 0 &amp; 0 &amp; -\frac{15}{19} \\0 &amp; 1 &amp; 0 &amp; \frac{31}{19} \\0 &amp; 0 &amp; 1 &amp; \frac{11}{19} \\\end{array}\right)\end{split}\]</div>
 <p>It is also possible to combine the row reduction operations into a single multiplication matrix:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d73b3618-f411-481e-8660-a617a137f552">
-<span class="eqno">(16.9)<a class="headerlink" href="#equation-d73b3618-f411-481e-8660-a617a137f552" title="Permalink to this equation">¶</a></span>\[\begin{equation}U_2 U_1 P L_2 L_1 = \frac{1}{19}\left(\begin{array}{ccc}7 &amp; 1 &amp; -10 \\2 &amp; 3 &amp; 8 \\5 &amp; -2 &amp; 1 \\\end{array}\right)\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-7d3ed10e-4d86-48aa-a781-546fa17656a6">
+<span class="eqno">(16.9)<a class="headerlink" href="#equation-7d3ed10e-4d86-48aa-a781-546fa17656a6" title="Permalink to this equation">¶</a></span>\[\begin{equation}U_2 U_1 P L_2 L_1 = \frac{1}{19}\left(\begin{array}{ccc}7 &amp; 1 &amp; -10 \\2 &amp; 3 &amp; 8 \\5 &amp; -2 &amp; 1 \\\end{array}\right)\end{equation}\]</div>
 <p>Later, we will come to think of this as the inverse of the coefficient matrix.</p>
+</section>
+</section>
+<section id="the-2x2-inverse">
+<h2><span class="section-number">16.5. </span>The (2x2) inverse<a class="headerlink" href="#the-2x2-inverse" title="Permalink to this headline">¶</a></h2>
+<section id="concept-and-definition">
+<h3><span class="section-number">16.5.1. </span>Concept and definition<a class="headerlink" href="#concept-and-definition" title="Permalink to this headline">¶</a></h3>
+<p>Suppose that we are given the definitions below and asked to compute the result for <span class="math notranslate nohighlight">\(B\)</span> :</p>
+<div class="math notranslate nohighlight" id="equation-a-ab">
+<span class="eqno">(16.10)<a class="headerlink" href="#equation-a-ab" title="Permalink to this equation">¶</a></span>\[\begin{split}A=\left(\begin{array}{cc}1 &amp; 2 \\2 &amp; 1 \end{array}\right), \quad A B=\left(\begin{array}{cc}5 &amp; 3 \\4 &amp; 3 \end{array}\right)\end{split}\]</div>
+<p>If this was ordinary scalar algebra, then <span class="math notranslate nohighlight">\(B\)</span> would be given by <span class="math notranslate nohighlight">\(\frac{AB}{A}\)</span>, but we have not defined the concept of division for matrices. Indeed, we should recognise a difficulty in doing so, since matrix multiplication is not commutative. The problems <span class="math notranslate nohighlight">\(Q X = P\)</span> and <span class="math notranslate nohighlight">\(X Q=P\)</span> do not generally have the same solution, and so the expression <span class="math notranslate nohighlight">\(X=\frac{P}{Q}\)</span> would be ambiguous.</p>
+<p>The difficulty could be addressed by introducing separate concepts of “left-division” and “right-division”, and some authors have done exactly this. However, a more fundamental approach is to abandon the idea of division for matrices altogether, and consider what it means for matrix multiplication to be invertible.</p>
+<p>The inverse of an operation should somehow take us back to where we started. Specifically, we require that the inverse matrix <span class="math notranslate nohighlight">\(A^{-1}\)</span> satisfies the definition given below. We restrict the definition to the inverse of a square matrix, because the inverse of a non-square matrix is generally not well defined.</p>
+<div class="admonition-the-inverse-matrix admonition">
+<p class="admonition-title">The Inverse Matrix</p>
+<p>For a given <span class="math notranslate nohighlight">\((n\times n)\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span>, the inverse matrix <span class="math notranslate nohighlight">\(A^{-1}\)</span> is the <span class="math notranslate nohighlight">\((n\times n)\)</span> matrix which satisfies the result</p>
+<div class="math notranslate nohighlight">
+\[A A^{-1} = A^{-1}A=I\]</div>
+<p>where <span class="math notranslate nohighlight">\(I\)</span> is the identity matrix.</p>
+<p>Thus, if we multiply a result by matrix <span class="math notranslate nohighlight">\(A\)</span> then to get back to where we started we can multiply by <span class="math notranslate nohighlight">\(A^{-1}\)</span></p>
+</div>
+<p>To illustrate the use of the inverse matrix, we multiply each side of the equation for <span class="math notranslate nohighlight">\(A B\)</span> in Equation <a class="reference internal" href="#equation-a-ab">(16.10)</a> by <span class="math notranslate nohighlight">\(A^{-1}\)</span> as follows:</p>
+<p><span class="math notranslate nohighlight">\(A^{-1}(AB)=A^{-1}\left(\begin{array}{cc}5&amp;3\\4&amp;3\end{array}\right)\)</span>
+3.16</p>
+<p>It is very important to recognise that we must do exactly the same thing to both sides of the equation. Since we pre-multiply (left multiply) the left-hand side by <span class="math notranslate nohighlight">\(A^{-1}\)</span>, we must also pre-multiply the right-hand side by <span class="math notranslate nohighlight">\(A^{-1}\)</span>.</p>
+<p>Due to the non-commutative nature of matrix multiplication, the result <span class="math notranslate nohighlight">\(A^{-1}(A B)\)</span> is not the same as the result <span class="math notranslate nohighlight">\((A B)A^{-1}\)</span></p>
+<p>Now, since matrix multiplication is associative, the left hand side of Equation 3.12 can be rewritten as <span class="math notranslate nohighlight">\((A^{-1} A)B\)</span>, and by the definitions of the inverse and identity matrix given in section 3.5, we can write <span class="math notranslate nohighlight">\((A^{-1} A)B=I B=B\)</span> in order to obtain</p>
+<p><span class="math notranslate nohighlight">\(B=A^{-1}\left(\begin{array}{cc}5&amp;3\\4&amp;3\end{array}\right)\)</span>	3.17
+Thus, the result for <span class="math notranslate nohighlight">\(B\)</span> can be determined by performing a matrix multiplication, provided that we can find <span class="math notranslate nohighlight">\(A^{-1}\)</span>.</p>
+<p>In general, we can show that</p>
+<p><span class="math notranslate nohighlight">\(A X = B\)</span> has solution <span class="math notranslate nohighlight">\(X=A^{-1}B \)</span></p>
+<p><span class="math notranslate nohighlight">\(X A = B\)</span> has solution <span class="math notranslate nohighlight">\(X=B A^{-1}\)</span></p>
+<p>3.18
+(provided that the inverse exists and can be determined).
+These two results are broadly equivalent to the definitions of left and right division that are used by some authors.</p>
+<p>Questions 3.4.1</p>
+<p>Given that <span class="math notranslate nohighlight">\(C X D = E\)</span>, write down the solution for <span class="math notranslate nohighlight">\(X\)</span> explicitly in terms of inverse matrices <span class="math notranslate nohighlight">\(C^{-1}\)</span> and <span class="math notranslate nohighlight">\(D^{-1}\)</span></p>
+<p>3.4.2 Calculating the (2x2) inverse</p>
+<p>The (2x2) matrix that satisfies the definition <span class="math notranslate nohighlight">\(A A^{-1} = A^{-1}A=I\)</span> is outlined in the box below. In section 3.6 we will examine how the result may be derived from first principles, but for now you may simply verify the claim by checking the result of the products <span class="math notranslate nohighlight">\(A A^{-1}\)</span> and <span class="math notranslate nohighlight">\(A^{-1}A\)</span>.</p>
+<p>Box 3.4. The inverse of a (2x2) matrix</p>
+<p>The inverse of a (2x2) matrix <span class="math notranslate nohighlight">\(A=\left(\begin{array}{cc}a_{11} &amp; a_{12} \\a_{21} &amp; a_{22} \end{array}\right)\)</span> is given by</p>
+<p><span class="math notranslate nohighlight">\(A^{-1}=\frac{1}{\mathrm{det}(A)}\mathrm{adj}(A)\)</span></p>
+<p>where</p>
+<p><span class="math notranslate nohighlight">\(\mathrm{det}(A)=\left|\begin{array}{cc}a_{11} &amp; a_{12} \\a_{21} &amp; a_{22} \end{array}\right|=a_{11} a_{22}-a_{12} a_{21}\)</span>        <span class="math notranslate nohighlight">\(\mathrm{adj}A=\left(\begin{array}{cc}a_{22} &amp; -a_{12} \\-a_{21} &amp; a_{11} \end{array}\right)\)</span></p>
+<p>(note that <span class="math notranslate nohighlight">\(\text{det}(A)\)</span> is a scalar quantity).</p>
+<p><span class="math notranslate nohighlight">\(\text{det}(A)\)</span> s referred to as the determinant of <span class="math notranslate nohighlight">\(A\)</span>. For a (2x2) matrix, the determinant is given by subtracting the product of the anti-diagonal elements from the product of the leading diagonal elements.</p>
+<p><span class="math notranslate nohighlight">\(\text{adj}(A)\)</span> is known as the adjugate matrix. For a (2x2) matrix, the adjugate is given by swapping the diagonal elements and multiplying the anti-diagonal elements by -1.</p>
+<p>Notice the special notation <span class="math notranslate nohighlight">\(|A|\)</span> that is used to denote the determinant of <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p>Questions 3.4.2</p>
+<ol class="simple">
+<li><p>What is the determinant of the matrix <span class="math notranslate nohighlight">\(M=\left(\begin{array}{cc}2 &amp; -1 \\3 &amp; 4 \end{array}\right)\)</span></p></li>
+<li></li>
+</ol>
+<p>Write the equations below in the form <span class="math notranslate nohighlight">\(A\mathbf{x}=\mathbf{b}\)</span></p>
+<p><span class="math notranslate nohighlight">\(2x-3y=1\)</span></p>
+<p><span class="math notranslate nohighlight">\(3x-2y=2\)</span></p>
+<p>Calculate the coefficient matrix <span class="math notranslate nohighlight">\(A\)</span> and hence obtain the solution for <span class="math notranslate nohighlight">\(\mathbf{x}\)</span></p>
+<ol class="simple">
+<li><p>Solve the problem given in (3.15) to find B.</p></li>
+</ol>
+<p>3.4.3 What it means if det(A)=0</p>
+<p>The value of the determinant can be used to infer whether a given linear system has a unique solution. If the determinant is zero then the matrix <span class="math notranslate nohighlight">\(A\)</span> is not invertible and the problem will not have a unique solution.</p>
+<p>To illustrate, we will consider the example of a system of two equations in two unknowns:</p>
+<p><span class="math notranslate nohighlight">\(\begin{array}{c}2 x-3 y=1 \\9 y-6 x=3 \end{array}\)</span>             <span class="math notranslate nohighlight">\(\begin{array}{c}2 x-3 y=1 \\9 y-6 x=-3 \end{array}\)</span></p>
+<p>3.19</p>
+<p>Both sets of equations can be written in the form <span class="math notranslate nohighlight">\(A \mathbf{x} =\mathbf{b}\)</span>, where <span class="math notranslate nohighlight">\(A=\left(\begin{array}{cc}2 &amp; -3 \\-6 &amp; 9 \end{array}\right)\)</span>. In that case, <span class="math notranslate nohighlight">\(\det(A)=18-18=0\)</span>, which means that the inverse matrix cannot be calculated and the problems do not have a unique solution for <span class="math notranslate nohighlight">\(\underline{x}\)</span>.</p>
+<p>The two equations on the left hand side of (3.15) are inconsistent, and so there is no solution, whilst the two equations on the right have an infinite number of solutions satisfying <span class="math notranslate nohighlight">\(y=\frac{2}{3}x-\frac{1}{3}\)</span>.</p>
+<p>You can also think about this problem graphically. In general, the determinant of a (2x2) matrix <span class="math notranslate nohighlight">\(A\)</span> is zero if and only if the second row is a constant multiple of the first row. For a problem of the form <span class="math notranslate nohighlight">\(A\underline{x}=\underline{b}\)</span>, this means that the two lines have the same gradient. Either the equations represent distinct parallel lines, with no common points, or they represent the same line, with all points in common. In this example, both lines have gradient 2/3.</p>
+<p>Questions 3.4.3</p>
+<p>What is wrong with the following “proof?”</p>
+<p>Assume <span class="math notranslate nohighlight">\(A,B\)</span> are two matrices of the same order, with <span class="math notranslate nohighlight">\(AB=\underline{\underline{0}}\)</span> and <span class="math notranslate nohighlight">\(A\neq\underline{\underline{0}}\)</span>.</p>
+<p>Then, <span class="math notranslate nohighlight">\(A^{−1}AB=A^{−1}\underline{\underline{0}} \Rightarrow B=\underline{\underline{0}}\)</span></p>
+<p>3.4.4. Derivation of the (2x2) inverse from first principles</p>
+<p>Consider the problem <span class="math notranslate nohighlight">\(A X = I\)</span>, which has solution <span class="math notranslate nohighlight">\(X=A^{-1}\)</span>. We can solve this problem applying row reduction operations (Gaussian elimination) to the augmented matrix <span class="math notranslate nohighlight">\(\biggr[\begin{array}{c:c}A&amp;I\end{array}\biggr]\)</span></p>
+<p>The algorithm proceeds as follows:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-621e7a1e-ba66-470d-af6a-13dfeaa29d06">
+<span class="eqno">(16.11)<a class="headerlink" href="#equation-621e7a1e-ba66-470d-af6a-13dfeaa29d06" title="Permalink to this equation">¶</a></span>\[\begin{equation}\biggr[\begin{array}{c:c}A&amp;I\end{array}\biggr]\quad \rightarrow \quad \biggr[\begin{array}{c:c}U&amp;L\end{array}\biggr] \quad \rightarrow \quad \biggr[\begin{array}{c:c}I&amp;A^{-1}\end{array}\biggr]\end{equation}\]</div>
+<p>in which <span class="math notranslate nohighlight">\(U\)</span> is an upper-diagonal matrix and <span class="math notranslate nohighlight">\(L\)</span> is a lower-diagonal matrix.</p>
+<p>For the (2x2) problem we start with the augmented matrix</p>
+<p><span class="math notranslate nohighlight">\(A=\left(\begin{array}{cc:cc}a_{11} &amp; a_{12} &amp; 1 &amp; 0 \\a_{21} &amp; a_{22} &amp; 0 &amp; 1 \\\end{array}\right)\)</span>	3.21</p>
+<p>The following row operations can be used:</p>
+<p><span class="math notranslate nohighlight">\(\hat{r}_2=r_2-r_1 a_{21}/a_{11}\)</span>
+<span class="math notranslate nohighlight">\(\hat{r}_1=r_1/a_{11}\)</span>,    <span class="math notranslate nohighlight">\(\hat{r}_2=r_2 a_{11}/(a_{11}a_{22}-a_{12}a_{21})\)</span>
+<span class="math notranslate nohighlight">\(\hat{r}_1=r_1-r_2 a_{12}/a_{11}\)</span>
+We obtain</p>
+<div class="amsmath math notranslate nohighlight" id="equation-548bb645-1f3d-4e5c-8bc2-d3d663692aeb">
+<span class="eqno">(16.12)<a class="headerlink" href="#equation-548bb645-1f3d-4e5c-8bc2-d3d663692aeb" title="Permalink to this equation">¶</a></span>\[\begin{equation}\left[\begin{array}{cc:cc}a_{11}&amp;a_{12}&amp;1&amp;0\\a_{21}&amp;a_{22}&amp;0&amp;1\end{array}\right] \quad \Rightarrow \quad \left[\begin{array}{cc:cc}1&amp;0&amp;\frac{a_{22}}{a_{11}a_{22}-a_{12}a_{21}}&amp;\frac{-a_{12}}{a_{11}a_{22}-a_{12}a_{21}}\\0&amp;1&amp;\frac{-a_{21}}{a_{11}a_{22}-a_{12}a_{21}}&amp;\frac{a_{11}}{a_{11}a_{22}-a_{12}a_{21}}\end{array}\right]\end{equation}\]</div>
+<p>from which the following result for the inverse matrix <span class="math notranslate nohighlight">\(A^{-1}\)</span> is inferred:</p>
+<p><span class="math notranslate nohighlight">\(A^{-1}=\frac{1}{a_{11} a_{22}-a_{12} a_{21}}\left(\begin{array}{cc}a_{22} &amp; -a_{12} \\ -a_{22} &amp; a_{11} \end{array}\right)\)</span>	3.22
+The steps that were carried out here were purely algebraic manipulations, and so we can see that the result for <span class="math notranslate nohighlight">\(A^{-1}\)</span> can always be computed, providing that <span class="math notranslate nohighlight">\(a_{11} a_{22}-a_{12} a_{21}\neq 0\)</span>.</p>
 </section>
 </section>
 </section>
