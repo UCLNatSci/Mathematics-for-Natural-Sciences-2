@@ -135,7 +135,7 @@ In general, the values contained in a matrix could represent anything, although 
 
 The Gaussian elimination technique that we have looked at is a brute force method for solving a given set of equations, whilst matrix methods are more concerned with finding general solutions and simplifications of certain types of problems.
 
-## Notation
+### Notation
 
 Two example matrices are given below
 
@@ -399,144 +399,122 @@ Thus, if we multiply a result by matrix $A$ then to get back to where we started
 
 To illustrate the use of the inverse matrix, we multiply each side of the equation for $A B$ in {eq}`a_ab` by $A^{-1}$ as follows:
 
-$A^{-1}(AB)=A^{-1}\left(\begin{array}{cc}5&3\\4&3\end{array}\right)$
-3.16
-
+$$A^{-1}(AB)=A^{-1}\left(\begin{array}{cc}5&3\\4&3\end{array}\right)$$ (a_inverse_ab)
 
 It is very important to recognise that we must do exactly the same thing to both sides of the equation. Since we pre-multiply (left multiply) the left-hand side by $A^{-1}$, we must also pre-multiply the right-hand side by $A^{-1}$.
 
-Due to the non-commutative nature of matrix multiplication, the result $A^{-1}(A B)$ is not the same as the result $(A B)A^{-1}$
+Due to the non-commutative nature of matrix multiplication, the result $A^{-1}(A B)$ is not the same as the result $(A B)A^{-1}$.
 
+Now, since matrix multiplication is associative, the left hand side of {eq}`a_inverse_ab` can be rewritten as $(A^{-1} A)B$, and by the definitions of the inverse and identity matrix, we can write $(A^{-1} A)B=I B=B$ in order to obtain
 
+$$B=A^{-1}\left(\begin{array}{cc}5&3\\4&3\end{array}\right)$$
 
-Now, since matrix multiplication is associative, the left hand side of Equation 3.12 can be rewritten as $(A^{-1} A)B$, and by the definitions of the inverse and identity matrix given in section 3.5, we can write $(A^{-1} A)B=I B=B$ in order to obtain
-
-$B=A^{-1}\left(\begin{array}{cc}5&3\\4&3\end{array}\right)$	3.17
 Thus, the result for $B$ can be determined by performing a matrix multiplication, provided that we can find $A^{-1}$.
 
+```{admonition} Solving $AX=B$ and $XA=B$
 
-In general, we can show that
+In general, we can show that:
 
 $A X = B$ has solution $X=A^{-1}B $
 
 $X A = B$ has solution $X=B A^{-1}$
 
-3.18
 (provided that the inverse exists and can be determined).
+
 These two results are broadly equivalent to the definitions of left and right division that are used by some authors.
+```
+### Questions
 
+Given that $C X D = E$, write down the solution for $X$ explicitly in terms of inverse matrices $C^{-1}$ and $D^{-1}$.
 
-
-Questions 3.4.1
-
-Given that $C X D = E$, write down the solution for $X$ explicitly in terms of inverse matrices $C^{-1}$ and $D^{-1}$
-
-
-
-3.4.2 Calculating the (2x2) inverse
+### Calculating the (2x2) inverse
 
 The (2x2) matrix that satisfies the definition $A A^{-1} = A^{-1}A=I$ is outlined in the box below. In section 3.6 we will examine how the result may be derived from first principles, but for now you may simply verify the claim by checking the result of the products $A A^{-1}$ and $A^{-1}A$.
 
-Box 3.4. The inverse of a (2x2) matrix
+```{admonition} The inverse of a (2x2) matrix
 
 The inverse of a (2x2) matrix $A=\left(\begin{array}{cc}a_{11} & a_{12} \\a_{21} & a_{22} \end{array}\right)$ is given by
 
-$A^{-1}=\frac{1}{\mathrm{det}(A)}\mathrm{adj}(A)$
+$$A^{-1}=\frac{1}{\mathrm{det}(A)}\mathrm{adj}(A)$$
 
 where
 
-$\mathrm{det}(A)=\left|\begin{array}{cc}a_{11} & a_{12} \\a_{21} & a_{22} \end{array}\right|=a_{11} a_{22}-a_{12} a_{21}$        $\mathrm{adj}A=\left(\begin{array}{cc}a_{22} & -a_{12} \\-a_{21} & a_{11} \end{array}\right)$
+$$\mathrm{det}(A)=\left|\begin{array}{cc}a_{11} & a_{12} \\a_{21} & a_{22} \end{array}\right|=a_{11} a_{22}-a_{12} a_{21}$$
+
+and
+
+$$\mathrm{adj}A=\left(\begin{array}{cc}a_{22} & -a_{12} \\-a_{21} & a_{11} \end{array}\right)$$
 
 (note that $\text{det}(A)$ is a scalar quantity).
-
-
 
 $\text{det}(A)$ s referred to as the determinant of $A$. For a (2x2) matrix, the determinant is given by subtracting the product of the anti-diagonal elements from the product of the leading diagonal elements.  
 
 $\text{adj}(A)$ is known as the adjugate matrix. For a (2x2) matrix, the adjugate is given by swapping the diagonal elements and multiplying the anti-diagonal elements by -1.
 
 Notice the special notation $|A|$ that is used to denote the determinant of $A$.
+```
 
+### Questions
 
+1\. 	Calculate the determinant of the matrix $M=\left(\begin{array}{cc}2 & -1 \\3 & 4 \end{array}\right)$.
 
-
-
-Questions 3.4.2
-
-1. 	What is the determinant of the matrix $M=\left(\begin{array}{cc}2 & -1 \\3 & 4 \end{array}\right)$
-2. 	
-Write the equations below in the form $A\mathbf{x}=\mathbf{b}$
-
-$2x-3y=1$
-
-$3x-2y=2$
+2\. 	Write the equations below in the form $A\mathbf{x}=\mathbf{b}$:
+\begin{align*}
+2x-3y&=1\\
+3x-2y&=2
+\end{align*}
 
 Calculate the coefficient matrix $A$ and hence obtain the solution for $\mathbf{x}$
 
-3.	Solve the problem given in (3.15) to find B.
+3\.	Solve the problem given in {eq}`a_ab` to find B.
+
+### What it means if $det(A)=0$
+
+The value of the determinant can be used to infer whether a given linear system has a unique solution. If the determinant is zero then the matrix $A$ is not **invertible** and the problem will not have a unique solution.
 
 
+To illustrate, we will consider two examples of a system of two equations in two unknowns:
 
-
-3.4.3 What it means if det(A)=0
-
-The value of the determinant can be used to infer whether a given linear system has a unique solution. If the determinant is zero then the matrix $A$ is not invertible and the problem will not have a unique solution.
-
-
-
-To illustrate, we will consider the example of a system of two equations in two unknowns:
-
-$\begin{array}{c}2 x-3 y=1 \\9 y-6 x=3 \end{array}$             $\begin{array}{c}2 x-3 y=1 \\9 y-6 x=-3 \end{array}$
-
-3.19
-
+$$\begin{array}{c}2 x-3 y&=1 \\9 y-6 x&=3 \end{array}$$ (inconsistent_1)
+$$\begin{array}{c}2 x-3 y&=1 \\9 y-6 x&=-3 \end{array}$$ (inconsistent_2)
 
 Both sets of equations can be written in the form $A \mathbf{x} =\mathbf{b}$, where $A=\left(\begin{array}{cc}2 & -3 \\-6 & 9 \end{array}\right)$. In that case, $\det(A)=18-18=0$, which means that the inverse matrix cannot be calculated and the problems do not have a unique solution for $\underline{x}$.
 
-The two equations on the left hand side of (3.15) are inconsistent, and so there is no solution, whilst the two equations on the right have an infinite number of solutions satisfying $y=\frac{2}{3}x-\frac{1}{3}$.
+The two equations in {eq}`inconsistent_1` are inconsistent, and so there is no solution, whilst the two equations in {eq}`inconsistent_1` have an infinite number of solutions satisfying $y=\frac{2}{3}x-\frac{1}{3}$.
 
 You can also think about this problem graphically. In general, the determinant of a (2x2) matrix $A$ is zero if and only if the second row is a constant multiple of the first row. For a problem of the form $A\underline{x}=\underline{b}$, this means that the two lines have the same gradient. Either the equations represent distinct parallel lines, with no common points, or they represent the same line, with all points in common. In this example, both lines have gradient 2/3.
 
+### Questions
 
+What is wrong with the following "proof" ?
 
-Questions 3.4.3
+Assume $A,B$ are two matrices of the same order, with $AB=\underline{\underline{0}}$ and $A\neq\underline{\underline{0}}$. Then, $A^{−1}AB=A^{−1}\underline{\underline{0}} \Rightarrow B=\underline{\underline{0}}$
 
-What is wrong with the following "proof?"
+### Derivation of the (2x2) inverse from first principles
 
-Assume $A,B$ are two matrices of the same order, with $AB=\underline{\underline{0}}$ and $A\neq\underline{\underline{0}}$.
-
-Then, $A^{−1}AB=A^{−1}\underline{\underline{0}} \Rightarrow B=\underline{\underline{0}}$
-
-
-
-3.4.4. Derivation of the (2x2) inverse from first principles
-
-Consider the problem $A X = I$, which has solution $X=A^{-1}$. We can solve this problem applying row reduction operations (Gaussian elimination) to the augmented matrix $\biggr[\begin{array}{c:c}A&I\end{array}\biggr]$
+Consider the problem $A X = I$, which has solution $X=A^{-1}$. We can solve this problem applying row reduction operations (Gaussian elimination) to the augmented matrix $\biggr[\begin{array}{c:c}A&I\end{array}\biggr]$.
 
 The algorithm proceeds as follows:
 
-\begin{equation}\biggr[\begin{array}{c:c}A&I\end{array}\biggr]\quad \rightarrow \quad \biggr[\begin{array}{c:c}U&L\end{array}\biggr] \quad \rightarrow \quad \biggr[\begin{array}{c:c}I&A^{-1}\end{array}\biggr]\end{equation}	3.20
+\begin{equation}\biggr[\begin{array}{c:c}A&I\end{array}\biggr]\quad \rightarrow \quad \biggr[\begin{array}{c:c}U&L\end{array}\biggr] \quad \rightarrow \quad \biggr[\begin{array}{c:c}I&A^{-1}\end{array}\biggr]\end{equation}
 in which $U$ is an upper-diagonal matrix and $L$ is a lower-diagonal matrix.
 
+For the (2x2) problem we start with the augmented matrix:
 
+$$A=\left(\begin{array}{cc:cc}a_{11} & a_{12} & 1 & 0 \\a_{21} & a_{22} & 0 & 1 \\\end{array}\right)$$
 
-For the (2x2) problem we start with the augmented matrix
+the following row operations can be used:
 
-$A=\left(\begin{array}{cc:cc}a_{11} & a_{12} & 1 & 0 \\a_{21} & a_{22} & 0 & 1 \\\end{array}\right)$	3.21
+1. $\hat{r}_2=r_2-r_1 a_{21}/a_{11}$
+1. $\hat{r}_1=r_1/a_{11}$,    $\hat{r}_2=r_2 a_{11}/(a_{11}a_{22}-a_{12}a_{21})$
+1. $\hat{r}_1=r_1-r_2 a_{12}/a_{11}$
 
-
-The following row operations can be used:
-
-$\hat{r}_2=r_2-r_1 a_{21}/a_{11}$
-$\hat{r}_1=r_1/a_{11}$,    $\hat{r}_2=r_2 a_{11}/(a_{11}a_{22}-a_{12}a_{21})$
-$\hat{r}_1=r_1-r_2 a_{12}/a_{11}$
 We obtain
 
 \begin{equation}\left[\begin{array}{cc:cc}a_{11}&a_{12}&1&0\\a_{21}&a_{22}&0&1\end{array}\right] \quad \Rightarrow \quad \left[\begin{array}{cc:cc}1&0&\frac{a_{22}}{a_{11}a_{22}-a_{12}a_{21}}&\frac{-a_{12}}{a_{11}a_{22}-a_{12}a_{21}}\\0&1&\frac{-a_{21}}{a_{11}a_{22}-a_{12}a_{21}}&\frac{a_{11}}{a_{11}a_{22}-a_{12}a_{21}}\end{array}\right]\end{equation}
 
-
-
 from which the following result for the inverse matrix $A^{-1}$ is inferred:
 
-$A^{-1}=\frac{1}{a_{11} a_{22}-a_{12} a_{21}}\left(\begin{array}{cc}a_{22} & -a_{12} \\ -a_{22} & a_{11} \end{array}\right)$	3.22
+$$A^{-1}=\frac{1}{a_{11} a_{22}-a_{12} a_{21}}\left(\begin{array}{cc}a_{22} & -a_{12} \\ -a_{22} & a_{11} \end{array}\right)$$
+
 The steps that were carried out here were purely algebraic manipulations, and so we can see that the result for $A^{-1}$ can always be computed, providing that $a_{11} a_{22}-a_{12} a_{21}\neq 0$.
