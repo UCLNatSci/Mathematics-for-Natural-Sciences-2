@@ -4,9 +4,12 @@
 format: jb-book
 root: intro
 chapters:
-- file: integrationprelim
-- file: coordinatesystems
-- file: surfaceintegrals
-- file: volumeintegrals
-- file: vectorcalctheorems
-- file: notebooks
+- file: VectorCalculus/partialdifferentiation
+- file: VectorCalculus/integrationprelim
+- file: VectorCalculus/vectoralgebra
+- file: VectorCalculus/indexnotation
+- file: VectorCalculus/coordinatesystems
+- file: VectorCalculus/surfaceintegrals
+- file: VectorCalculus/volumeintegrals
+- file: VectorCalculus/vectorcalctheorems
+# - file: notebooks
