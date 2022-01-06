@@ -1,16 +1,9 @@
-# Welcome to your Jupyter Book
+# Welcome to NSCI0027
 
-This is a small sample book to give you a feel for how book content is
-structured.
+This module is designed as a follow on to NSCI0005, a second module mathematical methods for natural sciences students.  In it we will cover:
 
-:::{note}
-Here is a note!
-:::
+- Vector methods and multivariable calculus OR Set theory, logic and methods of proof
 
-And here is a code block:
+- Matrices, vector spaces and linear algebra
 
-```
-e = mc^2
-```
-
-Check out the content pages bundled with this sample book to see more.
+- Dynamical systems theory and stability
