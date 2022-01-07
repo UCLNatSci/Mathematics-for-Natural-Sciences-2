@@ -268,7 +268,6 @@ the answer is zero:
 ```{math}
 \bf a \times a = 0
 ```
-
 where $\bf 0$ is a zero vector.
 
 ## Algebraic Definition
@@ -315,3 +314,45 @@ which by the cofactor method along the first row produces:
 &=&\, (a_y\,b_z - a_z\,b_y)\hat{\bf x} - (a_x\,b_z - a_x\,b_z)\hat{\bf y} + (a_x\,b_y - a_y\,b_x)\hat{\bf z} 
 ```
 which we find are equivalent definitions.
+
+# Triple Vector Products
+Now that we have multiplcation of two vectors formalised, we find that multiplying three vectors also leads to some further geometric and algebraic ideas.
+
+## Triple Scalar Product
+Here we have three vectors $\bf a, \,b,\,c$ composed so that
+```{math}
+\bf a \cdot (b \times c)
+```
+since the combination of $\bf b \times c$ produces a vector, which we can then do a scalar multiplcation with $\bf a$.  Therefore this produces a scalar result.
+
+Geometrically this is related to the parallepiped, as depicted in {numref}`parallepiped`, where the magnitude of this result is the shapes volume:
+```{math}
+V = |{\bf a \cdot (b \times c)}|
+```
+
+```{figure} ../figures/parallepiped.png
+---
+name: parallepiped
+---
+A parallepiped, composed from three vectors $\bf a, \,b,\,c$.
+```
+
+We can also evaluate the triple scalar product from a matrix determinant:
+```{math}
+ {\bf a \cdot (b \times c)} = \mathbf{a}\times\mathbf{b} = \begin{vmatrix}
+ a_x & a_y & a_z \\
+ b_x & b_y & b_z \\
+ c_x & c_y & c_z \\
+\end{vmatrix}
+```
+
+## Triple Vector Product
+Unsurprisingly we can also find an expression for the vector product between three vectors $\bf a, \,b,\,c$:
+```{math}
+\bf a \times (b \times c) = (a\cdot c)b - (a \cdot b)c
+```
+which is useful particularly when we want to work out results like:
+```{math}
+\bf \nabla \times \nabla \times A = \nabla(\nabla \cdot A) - (\nabla\cdot \nabla)A = \nabla(\nabla \cdot A) - \nabla^2 A
+```
+which will be useful later!
