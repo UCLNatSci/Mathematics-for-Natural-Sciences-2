@@ -61,7 +61,7 @@ Add multiples of the pivot row to the rows below, to obtain zeros in the pivot c
 
 The pivot moves to the next element on the leading diagonal.  
 
-** Repeat **
+**Repeat**
 Repeat from Step 2 until the matrix is in upper triangular form (containing all zeros below the leading diagonal).
 
 The solutions can then be obtained by back-substitution.
