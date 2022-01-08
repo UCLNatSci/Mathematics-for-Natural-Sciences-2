@@ -1,4 +1,4 @@
-## Vectors and Vector Algebra
+# Vectors and Vector Algebra
 
 We can think of vectors at their heart as directions being given to get between two points in space.  If we have to move in one, two or three dimensions, along spatially flat or curved surfaces, 
 we can attempt to give directions.  At the heart of a any vector system are the <b>basis vectors</b>, these give us the funadmental possible directions within a vector space, which any vector can be

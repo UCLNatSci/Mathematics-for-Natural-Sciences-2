@@ -1,4 +1,4 @@
-## (Einstein) Index Notation
+# (Einstein) Index Notation
 
 Vector quantities can also be expressed in index notation, which makes use of two quantities $\delta_{ij},\, \epsilon_{ijk}$, which in three dimensions follow the following rules:
 ```{math}

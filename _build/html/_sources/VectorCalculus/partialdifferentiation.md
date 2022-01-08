@@ -1,4 +1,4 @@
-## Multivariable Calculus
+# Multivariable Calculus
  
 ## First Partial Derivatives
 The plot shown in {numref}`surf1` is of a function, $f(x,\, y)= x^3 - y^3 - 2xy + 2$, on which curves marked on the surface for lines of constant $x,\,y$.  

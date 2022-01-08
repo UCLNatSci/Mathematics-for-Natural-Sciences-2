@@ -1,4 +1,4 @@
-## Vector Fields
+# Vector Fields
 
 A field in a mathematical sense is some function which can be defined within some domain $D$, we will examine fields in two and three spatial dimensions, 
 (but this can be extended to more later as required), therefore $D \subset \mathbb{R}^2$ or $D \subset \mathbb{R}^3$ respectively.  If $D$ is not specified, then 
