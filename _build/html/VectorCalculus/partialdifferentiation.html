@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Multivariable Calculus &#8212; Mathematics for Natural Sciences 2</title>
+    <title>1. Multivariable Calculus &#8212; Mathematics for Natural Sciences 2</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -55,7 +55,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Integration Preliminaries" href="integrationprelim.html" />
+    <link rel="next" title="8. Integration Preliminaries" href="integrationprelim.html" />
     <link rel="prev" title="Welcome to NSCI0027" href="../intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -96,52 +96,52 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Multivariable Calculus
+   1. Multivariable Calculus
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="integrationprelim.html">
-   Integration Preliminaries
+   8. Integration Preliminaries
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vectoralgebra.html">
-   Vectors and Vector Algebra
+   9. Vectors and Vector Algebra
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="calculusonfields.html">
-   Vector Fields
+   16. Vector Fields
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="indexnotation.html">
-   (Einstein) Index Notation
+   18. (Einstein) Index Notation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="coordinatesystems.html">
-   Coordinate System Changes
+   20. Coordinate System Changes
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="surfaceintegrals.html">
-   Markdown Files
+   21. Markdown Files
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="volumeintegrals.html">
-   Markdown Files
+   22. Markdown Files
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vectorcalctheorems.html">
-   Markdown Files
+   23. Markdown Files
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/notes.html">
-   Linear Systems and Matrices
+   24. Linear Systems and Matrices
   </a>
  </li>
 </ul>
@@ -217,54 +217,54 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Multivariable Calculus
+   1. Multivariable Calculus
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#first-partial-derivatives">
-   First Partial Derivatives
+   2. First Partial Derivatives
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#second-partial-derivatives">
-   Second Partial Derivatives
+   3. Second Partial Derivatives
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-common-mistake">
-     A Common Mistake
+     3.1. A Common Mistake
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#notation-for-partial-derivatives">
-   Notation for Partial Derivatives
+   4. Notation for Partial Derivatives
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#multivariable-chain-rule">
-   Multivariable Chain Rule
+   5. Multivariable Chain Rule
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#dependency-trees">
-   Dependency Trees
+   6. Dependency Trees
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exact-derivatives-and-differentials">
-   Exact derivatives and differentials
+   7. Exact derivatives and differentials
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#solving-1st-order-odes">
-     Solving 1st order ODEs *
+     7.1. Solving 1st order ODEs *
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#stationary-points">
-     Stationary Points
+     7.2. Stationary Points
     </a>
    </li>
   </ul>
@@ -281,11 +281,11 @@
               <div>
                 
   <div class="section" id="multivariable-calculus">
-<h1>Multivariable Calculus<a class="headerlink" href="#multivariable-calculus" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">1. </span>Multivariable Calculus<a class="headerlink" href="#multivariable-calculus" title="Permalink to this headline">¶</a></h1>
 </div>
 <div class="section" id="first-partial-derivatives">
-<h1>First Partial Derivatives<a class="headerlink" href="#first-partial-derivatives" title="Permalink to this headline">¶</a></h1>
-<p>The plot shown in <a class="reference internal" href="#surf1"><span class="std std-numref">Fig. 1</span></a> is of a function, <span class="math notranslate nohighlight">\(f(x,\, y)= x^3 - y^3 - 2xy + 2\)</span>, on which curves marked on the surface for lines of constant <span class="math notranslate nohighlight">\(x,\,y\)</span>.</p>
+<h1><span class="section-number">2. </span>First Partial Derivatives<a class="headerlink" href="#first-partial-derivatives" title="Permalink to this headline">¶</a></h1>
+<p>The plot shown in <a class="reference internal" href="#surf1"><span class="std std-numref">Fig. 2.1</span></a> is of a function, <span class="math notranslate nohighlight">\(f(x,\, y)= x^3 - y^3 - 2xy + 2\)</span>, on which curves marked on the surface for lines of constant <span class="math notranslate nohighlight">\(x,\,y\)</span>.</p>
 <p>We can consider the rate of change of the function, however since it is a function of two variables, we can see there are two possible kinds of derivative we can find:</p>
 <ul class="simple">
 <li><p>along a curve parallel to the <span class="math notranslate nohighlight">\(x\)</span>-axis, by holding <span class="math notranslate nohighlight">\(y\)</span> constant and differentiating with respect to <span class="math notranslate nohighlight">\(x\)</span>.</p></li>
@@ -299,7 +299,7 @@
 consider only variations in one of the two variables here.  The results show the local rate of change parallel to each axis at a point <span class="math notranslate nohighlight">\((x,\,y)\)</span>.</p>
 <div class="figure align-default" id="surf1">
 <img alt="../_images/surf1.png" src="../_images/surf1.png" />
-<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">A plot of the function <span class="math notranslate nohighlight">\(f(x,\, y) = x^3 - y^3 - 2xy + 2\)</span>, along with lines of constant <span class="math notranslate nohighlight">\(x,\,y\)</span>.</span><a class="headerlink" href="#surf1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.1 </span><span class="caption-text">A plot of the function <span class="math notranslate nohighlight">\(f(x,\, y) = x^3 - y^3 - 2xy + 2\)</span>, along with lines of constant <span class="math notranslate nohighlight">\(x,\,y\)</span>.</span><a class="headerlink" href="#surf1" title="Permalink to this image">¶</a></p>
 </div>
 <p>As an example, we can calculate all the first partial derivatives <span class="math notranslate nohighlight">\(\partial/\partial x,\, \partial/\partial y\)</span> for the following functions:</p>
 <ul class="simple">
@@ -325,7 +325,7 @@ consider only variations in one of the two variables here.  The results show the
 \frac{\partial z}{\partial y} &amp;=&amp;\, \frac{2y\sin(x)}{x+y^2\sin(x)}\end{split}\]</div>
 </div>
 <div class="section" id="second-partial-derivatives">
-<h1>Second Partial Derivatives<a class="headerlink" href="#second-partial-derivatives" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">3. </span>Second Partial Derivatives<a class="headerlink" href="#second-partial-derivatives" title="Permalink to this headline">¶</a></h1>
 <p>The second partial derivatives with respect to <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> are denoted as follows:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\frac{\partial^2 f}{\partial x^2} &amp;=&amp;\, \frac{\partial}{\partial x}\left(\frac{\partial f}{\partial x}\right), \\
@@ -342,7 +342,7 @@ these two expressions are <em>always</em> equal.  The proof of this result (call
 \frac{\partial^2 f}{\partial x^2} = 18x y^2, &amp;\quad&amp;\, \frac{\partial^2 f}{\partial y^2} = 6x^3, \\
 \frac{\partial^2 f}{\partial y\,\partial x} = 18x^2 y, &amp;\quad&amp;\, \frac{\partial^2 f}{\partial x\,\partial y} = 18x^2 y \end{split}\]</div>
 <div class="section" id="a-common-mistake">
-<h2>A Common Mistake<a class="headerlink" href="#a-common-mistake" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.1. </span>A Common Mistake<a class="headerlink" href="#a-common-mistake" title="Permalink to this headline">¶</a></h2>
 <p>Lets look at the function <span class="math notranslate nohighlight">\(f(x,\, y) = x^2 y^3 + x + y\)</span> at the point <span class="math notranslate nohighlight">\((1,\, 1)\)</span>, calculating the mixed partial derivative:</p>
 <div class="math notranslate nohighlight">
 \[\frac{\partial^2}{\partial y\,\partial x}(x^2 y^3 + x + y)\]</div>
@@ -365,7 +365,7 @@ perform differentiation first and only substitute in the values in the very last
 </div>
 </div>
 <div class="section" id="notation-for-partial-derivatives">
-<h1>Notation for Partial Derivatives<a class="headerlink" href="#notation-for-partial-derivatives" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">4. </span>Notation for Partial Derivatives<a class="headerlink" href="#notation-for-partial-derivatives" title="Permalink to this headline">¶</a></h1>
 <p>Partial derivatives are commonly denoted using subscript notation:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}f_x=\frac{\partial f}{\partial x}, &amp;\quad&amp;\, f_y=\frac{\partial f}{\partial y}, \\
@@ -380,11 +380,11 @@ f_{yx} &amp;=&amp;\, (f_y)_x = \frac{\partial^2 f}{\partial x\, \partial y}\end{
 <p>is also a common notation.</p>
 </div>
 <div class="section" id="multivariable-chain-rule">
-<h1>Multivariable Chain Rule<a class="headerlink" href="#multivariable-chain-rule" title="Permalink to this headline">¶</a></h1>
-<p>We now consider a function <span class="math notranslate nohighlight">\(f(x,\,y)\)</span> subjected to small variations in both <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> as shown in <a class="reference internal" href="#two-step"><span class="std std-numref">Fig. 2</span></a>.</p>
+<h1><span class="section-number">5. </span>Multivariable Chain Rule<a class="headerlink" href="#multivariable-chain-rule" title="Permalink to this headline">¶</a></h1>
+<p>We now consider a function <span class="math notranslate nohighlight">\(f(x,\,y)\)</span> subjected to small variations in both <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> as shown in <a class="reference internal" href="#two-step"><span class="std std-numref">Fig. 5.1</span></a>.</p>
 <div class="figure align-default" id="two-step">
 <img alt="../_images/two_step.png" src="../_images/two_step.png" />
-<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Showing the variations <span class="math notranslate nohighlight">\(f(x+\Delta x, y+\Delta y)\)</span> in two steps.</span><a class="headerlink" href="#two-step" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.1 </span><span class="caption-text">Showing the variations <span class="math notranslate nohighlight">\(f(x+\Delta x, y+\Delta y)\)</span> in two steps.</span><a class="headerlink" href="#two-step" title="Permalink to this image">¶</a></p>
 </div>
 <p>Loosely speaking, the total change in the function <span class="math notranslate nohighlight">\(f(x,\, y)\)</span> is the sum of changes due to each variable:</p>
 <div class="math notranslate nohighlight">
@@ -419,18 +419,18 @@ is held constant. Written formally:</p>
 <p>The leson here is - it is dangerous to treat partial derivatives as fractions!</p>
 </div>
 <div class="section" id="dependency-trees">
-<h1>Dependency Trees<a class="headerlink" href="#dependency-trees" title="Permalink to this headline">¶</a></h1>
-<p>The multivariate chain rule can be illustrated as a dependency tree, in <a class="reference internal" href="#dependency1"><span class="std std-numref">Fig. 3</span></a>, where we examine <span class="math notranslate nohighlight">\(f(x,\, y)\)</span> where <span class="math notranslate nohighlight">\(x = x(u,\, v)\)</span>
+<h1><span class="section-number">6. </span>Dependency Trees<a class="headerlink" href="#dependency-trees" title="Permalink to this headline">¶</a></h1>
+<p>The multivariate chain rule can be illustrated as a dependency tree, in <a class="reference internal" href="#dependency1"><span class="std std-numref">Fig. 6.1</span></a>, where we examine <span class="math notranslate nohighlight">\(f(x,\, y)\)</span> where <span class="math notranslate nohighlight">\(x = x(u,\, v)\)</span>
 and <span class="math notranslate nohighlight">\(y = y(u,\, v)\)</span>:</p>
 <div class="figure align-default" id="dependency1">
 <img alt="../_images/dependency1.png" src="../_images/dependency1.png" />
-<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Dependency tree for first derivatives.</span><a class="headerlink" href="#dependency1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 6.1 </span><span class="caption-text">Dependency tree for first derivatives.</span><a class="headerlink" href="#dependency1" title="Permalink to this image">¶</a></p>
 </div>
 <p>For instance, if we follow the dependency routes involving <span class="math notranslate nohighlight">\(u\)</span>, we get <span class="math notranslate nohighlight">\(f_u = f_x\, x_u + f_y\, y_u\)</span>.</p>
-<p>We can do the same thing for the second derivatives (a repeat application of the chain rule), in <a class="reference internal" href="#dependency2"><span class="std std-numref">Fig. 4</span></a>.</p>
+<p>We can do the same thing for the second derivatives (a repeat application of the chain rule), in <a class="reference internal" href="#dependency2"><span class="std std-numref">Fig. 6.2</span></a>.</p>
 <div class="figure align-default" id="dependency2">
 <img alt="../_images/dependency2.png" src="../_images/dependency2.png" />
-<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Dependency tree for second derivatives.</span><a class="headerlink" href="#dependency2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 6.2 </span><span class="caption-text">Dependency tree for second derivatives.</span><a class="headerlink" href="#dependency2" title="Permalink to this image">¶</a></p>
 </div>
 <p>As an example lets look at the function <span class="math notranslate nohighlight">\(f(x,y)=x^2 y+y^2\)</span>, if we have <span class="math notranslate nohighlight">\(x = u+v\)</span> and <span class="math notranslate nohighlight">\(y = u-v\)</span>, then we can calculate <span class="math notranslate nohighlight">\(f_u,\, f_v\)</span> using dependency trees:</p>
 <div class="math notranslate nohighlight">
@@ -454,7 +454,7 @@ f_v = f_x\, x_v + f_y\, y_v &amp;=&amp;\, 2xy-(x^2+2y) = 2(u+v)(u-v)-(u+v)^2-2(u
 \[f_x = f_u\, u_x +f_v\, v_x = \cos(u)(2x+2y)+2v = 2(x+y)\cos(x^2+2xy) + 2(x-y)\]</div>
 </div>
 <div class="section" id="exact-derivatives-and-differentials">
-<h1>Exact derivatives and differentials<a class="headerlink" href="#exact-derivatives-and-differentials" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">7. </span>Exact derivatives and differentials<a class="headerlink" href="#exact-derivatives-and-differentials" title="Permalink to this headline">¶</a></h1>
 <p>The multivariate chain rule is sometimes written in <b>differential form</b>:</p>
 <div class="math notranslate nohighlight">
 \[\mathrm{d}F=\frac{\partial F}{\partial x}\,\mathrm{d}x+\frac{\partial F}{\partial y}\,\mathrm{d}y\]</div>
@@ -487,7 +487,7 @@ B &amp;=&amp;\, \sin{x}+x\cos{y}+x\end{split}\]</div>
 \Rightarrow \frac{\partial A}{\partial y} &amp;=&amp;\, \frac{\partial B}{\partial x}\end{split}\]</div>
 <p>and therefore the expression is exact.</p>
 <div class="section" id="solving-1st-order-odes">
-<h2>Solving 1st order ODEs *<a class="headerlink" href="#solving-1st-order-odes" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.1. </span>Solving 1st order ODEs *<a class="headerlink" href="#solving-1st-order-odes" title="Permalink to this headline">¶</a></h2>
 <p>Optionally, this result could be used to solve the nonlinear 1st order ODE:</p>
 <div class="math notranslate nohighlight">
 \[\frac{\mathrm{d}y}{\mathrm{d}x} + \frac{y\cos{x} + \sin{y} + y}{\sin{x} + x\cos{y} + x}=0\]</div>
@@ -516,7 +516,7 @@ allows us to write the given ODE as:</p>
 <p>and <span class="math notranslate nohighlight">\(k\)</span> here is an arbitrary constant.</p>
 </div>
 <div class="section" id="stationary-points">
-<h2>Stationary Points<a class="headerlink" href="#stationary-points" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.2. </span>Stationary Points<a class="headerlink" href="#stationary-points" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -546,7 +546,7 @@ allows us to write the given ODE as:</p>
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">Welcome to NSCI0027</a>
-    <a class='right-next' id="next-link" href="integrationprelim.html" title="next page">Integration Preliminaries</a>
+    <a class='right-next' id="next-link" href="integrationprelim.html" title="next page"><span class="section-number">8. </span>Integration Preliminaries</a>
 
         </div>
         

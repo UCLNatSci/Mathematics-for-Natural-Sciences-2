@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Integration Preliminaries &#8212; Mathematics for Natural Sciences 2</title>
+    <title>8. Integration Preliminaries &#8212; Mathematics for Natural Sciences 2</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -55,8 +55,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Vectors and Vector Algebra" href="vectoralgebra.html" />
-    <link rel="prev" title="Multivariable Calculus" href="partialdifferentiation.html" />
+    <link rel="next" title="9. Vectors and Vector Algebra" href="vectoralgebra.html" />
+    <link rel="prev" title="1. Multivariable Calculus" href="partialdifferentiation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -96,52 +96,52 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="partialdifferentiation.html">
-   Multivariable Calculus
+   1. Multivariable Calculus
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Integration Preliminaries
+   8. Integration Preliminaries
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vectoralgebra.html">
-   Vectors and Vector Algebra
+   9. Vectors and Vector Algebra
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="calculusonfields.html">
-   Vector Fields
+   16. Vector Fields
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="indexnotation.html">
-   (Einstein) Index Notation
+   18. (Einstein) Index Notation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="coordinatesystems.html">
-   Coordinate System Changes
+   20. Coordinate System Changes
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="surfaceintegrals.html">
-   Markdown Files
+   21. Markdown Files
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="volumeintegrals.html">
-   Markdown Files
+   22. Markdown Files
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vectorcalctheorems.html">
-   Markdown Files
+   23. Markdown Files
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/notes.html">
-   Linear Systems and Matrices
+   24. Linear Systems and Matrices
   </a>
  </li>
 </ul>
@@ -217,12 +217,12 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#arc-length">
-   Arc Length
+   8.1. Arc Length
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#surfaces-of-revolution">
-   Surfaces of Revolution
+   8.2. Surfaces of Revolution
   </a>
  </li>
 </ul>
@@ -237,27 +237,27 @@
               <div>
                 
   <div class="section" id="integration-preliminaries">
-<h1>Integration Preliminaries<a class="headerlink" href="#integration-preliminaries" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">8. </span>Integration Preliminaries<a class="headerlink" href="#integration-preliminaries" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="arc-length">
-<h2>Arc Length<a class="headerlink" href="#arc-length" title="Permalink to this headline">¶</a></h2>
-<p>Suppose that we have a function <span class="math notranslate nohighlight">\(y = f(x)\)</span>, we know through integration that we can find the area under the curve, as shown in <a class="reference internal" href="#functionarea"><span class="std std-numref">Fig. 5</span></a>.</p>
-<div class="figure align-default" id="functionarea">
-<img alt="../_images/FunctionArea.png" src="../_images/FunctionArea.png" />
-<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">The area (in blue) under a function <span class="math notranslate nohighlight">\(f(x)\)</span> over the interval <span class="math notranslate nohighlight">\(x \in [a,\,b]\)</span> given by the integral <span class="math notranslate nohighlight">\(\int_a^bf(x)\,\mathrm(d)x\)</span>.</span><a class="headerlink" href="#functionarea" title="Permalink to this image">¶</a></p>
+<h2><span class="section-number">8.1. </span>Arc Length<a class="headerlink" href="#arc-length" title="Permalink to this headline">¶</a></h2>
+<p>Suppose that we have a function <span class="math notranslate nohighlight">\(y = f(x)\)</span>, we know through integration that we can find the area under the curve, as shown in <a class="reference internal" href="#functionarea"><span class="std std-numref">Fig. 8.1</span></a>.</p>
+<div class="figure" id="functionarea">
+<img alt="figures/FunctionArea.png" src="figures/FunctionArea.png" />
+<p class="caption"><span class="caption-number">Fig. 8.1 </span><span class="caption-text">The area (in blue) under a function <span class="math notranslate nohighlight">\(f(x)\)</span> over the interval <span class="math notranslate nohighlight">\(x \in [a,\,b]\)</span> given by the integral <span class="math notranslate nohighlight">\(\int_a^bf(x)\,\mathrm(d)x\)</span>.</span><a class="headerlink" href="#functionarea" title="Permalink to this image">¶</a></p>
 </div>
 <p>Another question that we could ask however is what is the length of the path traced out by the function <span class="math notranslate nohighlight">\(f(x)\)</span> over the range <span class="math notranslate nohighlight">\([a,\,b]\)</span>, as shown in
-<a class="reference internal" href="#functionpathlength"><span class="std std-numref">Fig. 6</span></a>.</p>
-<div class="figure align-default" id="functionpathlength">
-<img alt="../_images/FunctionPathLength.png" src="../_images/FunctionPathLength.png" />
-<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">The path traced out by the function <span class="math notranslate nohighlight">\(f(x)\)</span> over the interval <span class="math notranslate nohighlight">\(x \in [a,\,b]\)</span>.</span><a class="headerlink" href="#functionpathlength" title="Permalink to this image">¶</a></p>
+<a class="reference internal" href="#functionpathlength"><span class="std std-numref">Fig. 8.2</span></a>.</p>
+<div class="figure" id="functionpathlength">
+<img alt="figures/FunctionPathLength.png" src="figures/FunctionPathLength.png" />
+<p class="caption"><span class="caption-number">Fig. 8.2 </span><span class="caption-text">The path traced out by the function <span class="math notranslate nohighlight">\(f(x)\)</span> over the interval <span class="math notranslate nohighlight">\(x \in [a,\,b]\)</span>.</span><a class="headerlink" href="#functionpathlength" title="Permalink to this image">¶</a></p>
 </div>
 <p>To find an expression for this length <span class="math notranslate nohighlight">\(S\)</span>, we can break up the path into infinitesimal segments and then integrate these over the whole function.  We can see this
-process in <a class="reference internal" href="#arclength"><span class="std std-numref">Fig. 7</span></a>, where we break down the change in arc length <span class="math notranslate nohighlight">\(\Delta s\)</span> by Pythagoras:</p>
+process in <a class="reference internal" href="#arclength"><span class="std std-numref">Fig. 8.3</span></a>, where we break down the change in arc length <span class="math notranslate nohighlight">\(\Delta s\)</span> by Pythagoras:</p>
 <div class="math notranslate nohighlight">
 \[(\Delta s)^2 = (\Delta x)^2 + (\Delta y)^2 \Rightarrow \Delta s = \sqrt{(\Delta x)^2 + (\Delta y)^2} = \Delta x\,\sqrt{1 + \left(\frac{\Delta y}{\Delta x}\right)^2}\]</div>
-<div class="figure align-default" id="arclength">
-<img alt="../_images/ArcLength2.png" src="../_images/ArcLength2.png" />
-<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text"><b>Left Pane:</b> Breaking down path legnth segment <span class="math notranslate nohighlight">\(\Delta s\)</span> into <span class="math notranslate nohighlight">\(x,\, y\)</span> comoonents <span class="math notranslate nohighlight">\(\Delta x,\, \Delta y\)</span>,
+<div class="figure" id="arclength">
+<img alt="figures/ArcLength2.png" src="figures/ArcLength2.png" />
+<p class="caption"><span class="caption-number">Fig. 8.3 </span><span class="caption-text"><b>Left Pane:</b> Breaking down path legnth segment <span class="math notranslate nohighlight">\(\Delta s\)</span> into <span class="math notranslate nohighlight">\(x,\, y\)</span> comoonents <span class="math notranslate nohighlight">\(\Delta x,\, \Delta y\)</span>,
 <b>Right Pane:</b> Effect of taking the limit of smaller <span class="math notranslate nohighlight">\(\Delta x\)</span> in finding the path length.</span><a class="headerlink" href="#arclength" title="Permalink to this image">¶</a></p>
 </div>
 <p>Taking the limit of <span class="math notranslate nohighlight">\(\Delta x\rightarrow 0\)</span> we find:</p>
@@ -281,11 +281,11 @@ process in <a class="reference internal" href="#arclength"><span class="std std-
 <p>which gives the result for the circumference of a circle!</p>
 </div>
 <div class="section" id="surfaces-of-revolution">
-<h2>Surfaces of Revolution<a class="headerlink" href="#surfaces-of-revolution" title="Permalink to this headline">¶</a></h2>
-<p>Lets now go further, what happens if we take a function and rotate it around an axis, as shown in <a class="reference internal" href="#areavolumerevolution"><span class="std std-numref">Fig. 8</span></a>.</p>
-<div class="figure align-default" id="areavolumerevolution">
-<img alt="../_images/AreaVolumeRevolution.png" src="../_images/AreaVolumeRevolution.png" />
-<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text"><b>Left Pane:</b> Rotating a function <span class="math notranslate nohighlight">\(y = f(x)\)</span> around the <span class="math notranslate nohighlight">\(x\)</span> axis, over  <span class="math notranslate nohighlight">\(x \in [a,\, b]\)</span> producing a solid of revolution,
+<h2><span class="section-number">8.2. </span>Surfaces of Revolution<a class="headerlink" href="#surfaces-of-revolution" title="Permalink to this headline">¶</a></h2>
+<p>Lets now go further, what happens if we take a function and rotate it around an axis, as shown in <a class="reference internal" href="#areavolumerevolution"><span class="std std-numref">Fig. 8.4</span></a>.</p>
+<div class="figure" id="areavolumerevolution">
+<img alt="figures/AreaVolumeRevolution.png" src="figures/AreaVolumeRevolution.png" />
+<p class="caption"><span class="caption-number">Fig. 8.4 </span><span class="caption-text"><b>Left Pane:</b> Rotating a function <span class="math notranslate nohighlight">\(y = f(x)\)</span> around the <span class="math notranslate nohighlight">\(x\)</span> axis, over  <span class="math notranslate nohighlight">\(x \in [a,\, b]\)</span> producing a solid of revolution,
 <b>Right Pane:</b> Breaking down the volume into discrete slices, each of width <span class="math notranslate nohighlight">\(\mathrm{d} x\)</span>.</span><a class="headerlink" href="#areavolumerevolution" title="Permalink to this image">¶</a></p>
 </div>
 <p>To find the volume of such a rotated solid, we need to think about the cross sectional area along the range, which will be <span class="math notranslate nohighlight">\(\pi \,y^2\)</span> since the
@@ -303,7 +303,7 @@ slice <span class="math notranslate nohighlight">\(2\pi\,y\)</span> multiplied b
 path length over the <span class="math notranslate nohighlight">\(y\)</span> axis:</p>
 <div class="math notranslate nohighlight">
 \[A_y = \int_{y(a)}^{y(b)} 2\pi\,x\,\mathrm{d}s = \int_{y(a)}^{y(b)} 2\pi\,x\,\sqrt{1 + \left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)^2}\,\mathrm{d}y\]</div>
-<p>As an exmaple, lets find the volume of a cone depicted in <a class="reference internal" href="#cone"><span class="std std-numref">Fig. 9</span></a>, with height <span class="math notranslate nohighlight">\(h\)</span> and circular radius <span class="math notranslate nohighlight">\(R\)</span>, so <span class="math notranslate nohighlight">\(y = R x / h\)</span> over the range <span class="math notranslate nohighlight">\(x \in [0,\, h]\)</span>:</p>
+<p>As an exmaple, lets find the volume of a cone depicted in <a class="reference internal" href="#cone"><span class="std std-numref">Fig. 8.5</span></a>, with height <span class="math notranslate nohighlight">\(h\)</span> and circular radius <span class="math notranslate nohighlight">\(R\)</span>, so <span class="math notranslate nohighlight">\(y = R x / h\)</span> over the range <span class="math notranslate nohighlight">\(x \in [0,\, h]\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}V_x = \int_0^h \pi\,\left(\frac{R x}{h}\right)^2\,\mathrm{d}x = \frac{R^2 \,\pi}{h^2}\Big[ \frac{1}{3}x^3\Big]_0^h = \frac{1}{3}\pi \,R^2\,h\\\end{split}\]</div>
 <p>which matches the expression we expect and explains where this factor of <span class="math notranslate nohighlight">\(1/3\)</span> comes from!</p>
@@ -313,9 +313,9 @@ path length over the <span class="math notranslate nohighlight">\(y\)</span> axi
 &amp;=&amp;\, 2\pi \frac{R}{h}\sqrt{1 + \left(\frac{R}{h}\right)^2}\Bigg[ \frac{1}{2}x^2\Bigg]_0^h \\
 &amp;=&amp;\, \pi R h\sqrt{1 + \left(\frac{R}{h}\right)^2} = \pi R\sqrt{h^2 + R^2}\end{split}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\sqrt{h^2 + R^2}\)</span> is the slant length.</p>
-<div class="figure align-default" id="cone">
-<img alt="../_images/cone.png" src="../_images/cone.png" />
-<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Depiction of a function <span class="math notranslate nohighlight">\(y = R x / h\)</span> and the solid of revolution around the <span class="math notranslate nohighlight">\(x\)</span> axis - a cone.</span><a class="headerlink" href="#cone" title="Permalink to this image">¶</a></p>
+<div class="figure" id="cone">
+<img alt="figures/cone.png" src="figures/cone.png" />
+<p class="caption"><span class="caption-number">Fig. 8.5 </span><span class="caption-text">Depiction of a function <span class="math notranslate nohighlight">\(y = R x / h\)</span> and the solid of revolution around the <span class="math notranslate nohighlight">\(x\)</span> axis - a cone.</span><a class="headerlink" href="#cone" title="Permalink to this image">¶</a></p>
 </div>
 <p>Likewise if we have parametrised expressions <span class="math notranslate nohighlight">\(x = x(t),\, y = y(t)\)</span>, over the range <span class="math notranslate nohighlight">\(t \in [t_1,\, t_2]\)</span> then these expressions become:</p>
 <div class="math notranslate nohighlight">
@@ -351,8 +351,8 @@ A_y &amp;=&amp;\, \int_{t_1}^{t_2} 2\pi\,x\,\sqrt{\left(\frac{\mathrm{d}x}{\math
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="partialdifferentiation.html" title="previous page">Multivariable Calculus</a>
-    <a class='right-next' id="next-link" href="vectoralgebra.html" title="next page">Vectors and Vector Algebra</a>
+    <a class='left-prev' id="prev-link" href="partialdifferentiation.html" title="previous page"><span class="section-number">1. </span>Multivariable Calculus</a>
+    <a class='right-next' id="next-link" href="vectoralgebra.html" title="next page"><span class="section-number">9. </span>Vectors and Vector Algebra</a>
 
         </div>
         
