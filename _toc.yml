@@ -16,4 +16,4 @@ chapters:
 - file: VectorCalculus/volumeintegrals
 - file: VectorCalculus/vectorcalctheorems
 
-- file: LinearAlgebra/linear_systems_matrices/notes.md
+#- file: LinearAlgebra/linear_systems_matrices/notes.md
