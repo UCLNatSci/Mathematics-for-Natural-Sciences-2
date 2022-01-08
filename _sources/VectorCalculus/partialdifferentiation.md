@@ -96,7 +96,7 @@ perform differentiation first and only substitute in the values in the very last
 = \Bigg[\frac{\partial }{\partial y}(2xy^3+1)\Big]_{(1,1)} = \Big[6xy^2\Bigg]_{(1,1)} = 6
 ```   
 
-# Notation for Partial Derivatives
+## Notation for Partial Derivatives
 Partial derivatives are commonly denoted using subscript notation:
 
 ```{math}
@@ -118,7 +118,7 @@ D_x=\frac{\partial}{\partial x}
 is also a common notation.
     
 
-# Multivariable chain rule
+## Multivariable Chain Rule
 We now consider a function $f(x,\,y)$ subjected to small variations in both $x$ and $y$ as shown in {numref}`two_step`.
 
 ```{figure} ../figures/two_step.png
@@ -183,8 +183,8 @@ is held constant. Written formally:
 The leson here is - it is dangerous to treat partial derivatives as fractions!
 
 ## Dependency Trees
-The multivariate chain rule can be illustrated as a dependency tree, in {numref}`dependency1`. For the first and second derivatives of 
-$f(x,\, y)$ where $x = x(u,\, v)$ and $y = y(u,\, v)$:
+The multivariate chain rule can be illustrated as a dependency tree, in {numref}`dependency1`, where we examine $f(x,\, y)$ where $x = x(u,\, v)$ 
+and $y = y(u,\, v)$:
 
 ```{figure} ../figures/dependency1.png
 ---
@@ -234,7 +234,7 @@ f_x = f_u\, u_x +f_v\, v_x = \cos(u)(2x+2y)+2v = 2(x+y)\cos(x^2+2xy) + 2(x-y)
 
    
 
-# Exact derivatives and differentials
+## Exact derivatives and differentials
 The multivariate chain rule is sometimes written in <b>differential form</b>:
 
 ```{math}
@@ -327,4 +327,4 @@ F(x,\, y) = y\sin{x} + x\sin{y} + xy + k
 ``` 
 and $k$ here is an arbitrary constant.
 
-## Stationary Points
+### Stationary Points

@@ -17,7 +17,7 @@ Vector quantities can also be expressed in index notation, which makes use of tw
 where we notice that $\epsilon_{ijk}$ has both a cyclic and anti-cyclic set of values.  In each case we are expressing the $(x,\,y,\,z)$ components using the 
 $(1,\,2,\,3)$ notation.  In higher dimensions this can be extended also! 
 
-## Dot Product
+### Dot Product
 We can express a dot product using the $\delta_{ij}$ symbol
 ```{math}
 {\bf A} \cdot {\bf B} = \delta_{ij}\,A_i\,B_j = A_1\,B_1 + A_2\,B_2 + A_3\,B_3 
@@ -27,7 +27,7 @@ For a divergence, we can use the differential vector operator in index notation 
 \nabla \cdot {\bf A} = \delta_{ij}\,\partial_i\,A_j = \partial_x\,A_x + \partial_y\,A_y +\partial_z\,A_z 
 ```
 
-## Cross Product
+### Cross Product
 We can express a cross product using the $\epsilon_{ijk}$ symbol
 ```{math}
 {\bf A} \times {\bf B} &=& ({\bf A}_i \times {\bf B}_j)_k = \epsilon_{ijk}\,A_i\,B_j \\
@@ -40,7 +40,7 @@ differential vector operator in index notation:
 \nabla \times {\bf A} = (\nabla_i \times {\bf A}_j)_k =  \epsilon_{ijk}\,\partial_i\,A_j 
 ```
 
-\subsubsection{$\epsilon-\delta$ identities}
+## $\epsilon-\delta$ Identities
 We can use these index notation devices to calculate more easily some vector calculus identities, in order to do so we may consider the index equivalent of the triple product:
 ```{math}
 {\bf A} \times \left({\bf B} \times {\bf C}\right) &=& {\bf A} \times\left(\epsilon_{ijk}\, B_i \, C_j \right)_k = \left[\epsilon_{lkm}\, A_l\,\left(\epsilon_{ijk}\,B_i\,C_j\right)_k\right]_m\\ 

@@ -156,8 +156,8 @@ As an example lets consider $\bf v_1$:
 \hat{\bf v_1} = \frac{\bf v_1}{|\bf v_1|} = \frac{3\hat{\bf x} + 4\hat{\bf y} + 12\hat{\bf z}}{\sqrt{3^2 + 4^2 + 12^2}} = \frac{1}{13}\left(3\hat{\bf x} + 4\hat{\bf y} + 12\hat{\bf z}\right)
 ```
 
-# Scalar Product / Dot Product
-## Geometric Definiton
+## Scalar Product / Dot Product
+### Geometric Definiton
 Lets consider two vectors $\bf A,\, B$, as shown in {numref}`scalarprojection`.  We can consider the scalar projection of the vector $\bf B$ on to the vector $\bf A$, where we resolve the 
 parallel components of $\bf B$ in the direction of vector $\bf A$.
 
@@ -181,7 +181,7 @@ $\bf B$, using ${\bf A \cdot B} / |{\bf B}|$.
 
 We can also find the magntiude of a vector from $\bf A \cdot A = |A|^2 $.
 
-## Algebraic Definition
+### Algebraic Definition
 There is another perspective on the scalar product, which is for two vectors with components:
 ```{math}
 {\bf A} &=&\, a_x\,\hat{\bf x} + a_y\,\hat{\bf y} + a_z\,\hat{\bf z} = \begin{pmatrix}
@@ -201,7 +201,7 @@ then the dot product can be found by:
 ```
 where the last expression uses the index notation.
 
-## Properties of the Dot Product
+### Properties of the Dot Product
 
 The dot product of two vectors $\bf a,\, b$ have the following mathematical properties:
 
@@ -220,8 +220,8 @@ $ (c_{1}\mathbf {a} )\cdot (c_{2}\mathbf {b} )=c_{1}c_{2}(\mathbf {a} \cdot \mat
 - Orthogonal:</b>
 Two non-zero vectors $\bf a,\, b$ are orthogonal if and only if $\bf a \cdot b = 0$.
 
-# Vector Product / Cross Product
-## Geometric Definition
+## Vector Product / Cross Product
+### Geometric Definition
 Unsurprisingly we can also make a vector product that results in a vector, rather than a scalar.  This <b>Vector Product</b>, also known as the <b>Cross Product</b>,
 can be constructed from the basis vectors:
 ```{math}
@@ -270,7 +270,7 @@ the answer is zero:
 ```
 where $\bf 0$ is a zero vector.
 
-## Algebraic Definition
+### Algebraic Definition
 Once again there is also an algebraic route to the cross product, this is based on the vector components.  
 
 Since the cross product is distributive over addition we find that:
@@ -315,10 +315,10 @@ which by the cofactor method along the first row produces:
 ```
 which we find are equivalent definitions.
 
-# Triple Vector Products
+## Triple Vector Products
 Now that we have multiplcation of two vectors formalised, we find that multiplying three vectors also leads to some further geometric and algebraic ideas.
 
-## Triple Scalar Product
+### Triple Scalar Product
 Here we have three vectors $\bf a, \,b,\,c$ composed so that
 ```{math}
 \bf a \cdot (b \times c)
@@ -346,7 +346,7 @@ We can also evaluate the triple scalar product from a matrix determinant:
 \end{vmatrix}
 ```
 
-## Triple Vector Product
+### Triple Vector Product
 Unsurprisingly we can also find an expression for the vector product between three vectors $\bf a, \,b,\,c$:
 ```{math}
 \bf a \times (b \times c) = (a\cdot c)b - (a \cdot b)c

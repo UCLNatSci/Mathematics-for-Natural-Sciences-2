@@ -1,6 +1,6 @@
-# Integration Preliminaries
+## Integration Preliminaries
 
-## Arc Length
+### Arc Length
 Suppose that we have a function $y = f(x)$, we know through integration that we can find the area under the curve, as shown in {numref}`FunctionArea`.  
 
 ```{figure} ../figures/FunctionArea.png
@@ -57,7 +57,7 @@ L = \int_0^{2\pi} \sqrt{R^2\sin^2(t) + R^2\cos^2(t)}\,\mathrm{d}t = \int_0^{2\pi
 ```
 which gives the result for the circumference of a circle!
 
-## Surfaces of Revolution
+### Surfaces of Revolution
 
 Lets now go further, what happens if we take a function and rotate it around an axis, as shown in {numref}`AreaVolumeRevolution`.
 
