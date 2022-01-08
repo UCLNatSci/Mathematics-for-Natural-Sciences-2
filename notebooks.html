@@ -137,11 +137,6 @@
    9. Markdown Files
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="LinearAlgebra/linear_systems_matrices/notes.html">
-   10. Linear Systems and Matrices
-  </a>
- </li>
 </ul>
 
     </div>
@@ -299,7 +294,80 @@ For example, here’s some sample Matplotlib code:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.pyplot._IonContext at 0x1fa31441d88&gt;
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\NatSciTeaching\anaconda3\lib\site-packages\numpy\__init__.py:143: UserWarning: mkl-service package failed to import, therefore Intel(R) MKL initialization ensuring its correct out-of-the box operation under condition when Gnu OpenMP had already been loaded by Python process is not assured. Please install mkl-service package, see http://github.com/IntelPython/mkl-service
+  from . import _distributor_init
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ImportError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
+<span class="o">~</span>\<span class="n">anaconda3</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">numpy</span>\<span class="n">core</span>\<span class="fm">__init__</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">22</span>     <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">multiarray</span>
+<span class="g g-Whitespace">     </span><span class="mi">23</span> <span class="k">except</span> <span class="ne">ImportError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+
+<span class="o">~</span>\<span class="n">anaconda3</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">numpy</span>\<span class="n">core</span>\<span class="n">multiarray</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span> 
+<span class="ne">---&gt; </span><span class="mi">12</span> <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">overrides</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">_multiarray_umath</span>
+
+<span class="o">~</span>\<span class="n">anaconda3</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">numpy</span>\<span class="n">core</span>\<span class="n">overrides</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> 
+<span class="ne">----&gt; </span><span class="mi">7</span> <span class="kn">from</span> <span class="nn">numpy.core._multiarray_umath</span> <span class="kn">import</span> <span class="p">(</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="n">add_docstring</span><span class="p">,</span> <span class="n">implement_array_function</span><span class="p">,</span> <span class="n">_get_implementing_args</span><span class="p">)</span>
+
+<span class="ne">ImportError</span>: DLL load failed: The specified module could not be found.
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">ImportError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
+<span class="ne">C</span>:\Users\NATSCI~1\AppData\Local\Temp/ipykernel_9656/2191868119.py in &lt;module&gt;
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rcParams</span><span class="p">,</span> <span class="n">cycler</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">plt</span><span class="o">.</span><span class="n">ion</span><span class="p">()</span>
+
+<span class="o">~</span>\<span class="n">anaconda3</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">matplotlib</span>\<span class="fm">__init__</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">    </span><span class="mi">102</span> <span class="kn">import</span> <span class="nn">warnings</span>
+<span class="g g-Whitespace">    </span><span class="mi">103</span> 
+<span class="ne">--&gt; </span><span class="mi">104</span> <span class="kn">import</span> <span class="nn">numpy</span>
+<span class="g g-Whitespace">    </span><span class="mi">105</span> <span class="kn">from</span> <span class="nn">packaging.version</span> <span class="kn">import</span> <span class="n">parse</span> <span class="k">as</span> <span class="n">parse_version</span>
+<span class="g g-Whitespace">    </span><span class="mi">106</span> 
+
+<span class="o">~</span>\<span class="n">anaconda3</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">numpy</span>\<span class="fm">__init__</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">    </span><span class="mi">143</span>     <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">_distributor_init</span>
+<span class="g g-Whitespace">    </span><span class="mi">144</span> 
+<span class="ne">--&gt; </span><span class="mi">145</span>     <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">core</span>
+<span class="g g-Whitespace">    </span><span class="mi">146</span>     <span class="kn">from</span> <span class="nn">.core</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="g g-Whitespace">    </span><span class="mi">147</span>     <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">compat</span>
+
+<span class="o">~</span>\<span class="n">anaconda3</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">numpy</span>\<span class="n">core</span>\<span class="fm">__init__</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">46</span> <span class="s2">&quot;&quot;&quot; % (sys.version_info[0], sys.version_info[1], sys.executable,</span>
+<span class="g g-Whitespace">     </span><span class="mi">47</span><span class="s2">         __version__, exc)</span>
+<span class="ne">---&gt; </span><span class="mi">48</span><span class="s2">     raise ImportError(msg)</span>
+<span class="g g-Whitespace">     </span><span class="mi">49</span><span class="s2"> finally:</span>
+<span class="g g-Whitespace">     </span><span class="mi">50</span><span class="s2">     for envkey in env_added:</span>
+
+<span class="ne">ImportError</span>: 
+
+<span class="ne">IMPORTANT</span>: PLEASE READ THIS FOR ADVICE ON HOW TO SOLVE THIS ISSUE!
+
+<span class="s2">Importing the numpy C-extensions failed. This error can happen for</span>
+<span class="s2">many reasons, often due to issues with your setup or how NumPy was</span>
+<span class="s2">installed.</span>
+
+<span class="s2">We have compiled some common reasons and troubleshooting tips at:</span>
+
+<span class="s2">    https://numpy.org/devdocs/user/troubleshooting-importerror.html</span>
+
+<span class="s2">Please note and check the following:</span>
+
+<span class="s2">  * The Python version is: Python3.7 from &quot;C:\Users\NatSciTeaching</span><span class="se">\a</span><span class="s2">naconda3\python.exe&quot;</span>
+<span class="s2">  * The NumPy version is: &quot;1.20.3&quot;</span>
+
+<span class="s2">and make sure that they are the versions you expect.</span>
+<span class="s2">Please carefully study the documentation linked above for further help.</span>
+
+<span class="s2">Original error was: DLL load failed: The specified module could not be found.</span>
 </pre></div>
 </div>
 </div>
@@ -326,9 +394,6 @@ For example, here’s some sample Matplotlib code:</p>
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">custom_lines</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Cold&#39;</span><span class="p">,</span> <span class="s1">&#39;Medium&#39;</span><span class="p">,</span> <span class="s1">&#39;Hot&#39;</span><span class="p">]);</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/notebooks_2_0.png" src="_images/notebooks_2_0.png" />
 </div>
 </div>
 <p>There is a lot more that you can do with outputs (such as including interactive outputs)
