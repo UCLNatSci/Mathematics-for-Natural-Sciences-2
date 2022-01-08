@@ -55,7 +55,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="(Einstein) Index Notation" href="indexnotation.html" />
+    <link rel="next" title="Vector Fields" href="calculusonfields.html" />
     <link rel="prev" title="Integration Preliminaries" href="integrationprelim.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -107,6 +107,11 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Vectors and Vector Algebra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="calculusonfields.html">
+   Vector Fields
   </a>
  </li>
  <li class="toctree-l1">
@@ -214,23 +219,21 @@
   <a class="reference internal nav-link" href="#">
    Vectors and Vector Algebra
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#addition-and-scaling-of-vectors">
-     Addition and Scaling of Vectors
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#magnitude-of-a-vector">
-     Magnitude of a Vector
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#normalised-vectors">
-     Normalised Vectors
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#addition-and-scaling-of-vectors">
+   Addition and Scaling of Vectors
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#magnitude-of-a-vector">
+   Magnitude of a Vector
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#normalised-vectors">
+   Normalised Vectors
+  </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#scalar-product-dot-product">
@@ -336,8 +339,9 @@ decompsoed into a weighted sum of.</p>
 <div class="math notranslate nohighlight">
 \[x_i = \left(\hat{\bf x},\, \hat{\bf y},\, \hat{\bf z}\right)\]</div>
 <p>where the value of <span class="math notranslate nohighlight">\(i = \in \{1,\,2,\,3\}\)</span> denotes the specific basis vector.</p>
+</div>
 <div class="section" id="addition-and-scaling-of-vectors">
-<h2>Addition and Scaling of Vectors<a class="headerlink" href="#addition-and-scaling-of-vectors" title="Permalink to this headline">¶</a></h2>
+<h1>Addition and Scaling of Vectors<a class="headerlink" href="#addition-and-scaling-of-vectors" title="Permalink to this headline">¶</a></h1>
 <p>If we start with the basis vectors as building blocks of our coordinate system, then we can write any three dimensional Cartesian coordinate in terms of
 weighted basis vectors, we can see this in <a class="reference internal" href="#basisvectors"><span class="std std-numref">Fig. 11</span></a>.</p>
 <div class="figure align-default" id="basisvectors">
@@ -403,7 +407,7 @@ weighted basis vectors, we can see this in <a class="reference internal" href="#
 \end{pmatrix} = 21\hat{\bf x} + 44\hat{\bf y} + 49\hat{\bf z}\end{split}\]</div>
 </div>
 <div class="section" id="magnitude-of-a-vector">
-<h2>Magnitude of a Vector<a class="headerlink" href="#magnitude-of-a-vector" title="Permalink to this headline">¶</a></h2>
+<h1>Magnitude of a Vector<a class="headerlink" href="#magnitude-of-a-vector" title="Permalink to this headline">¶</a></h1>
 <p>Given some vector, which will take us some distance from two points in space, we can find the shortest path length between the points.</p>
 <p>In two dimensions this would just follow Pythagoras’s theorem:</p>
 <div class="math notranslate nohighlight">
@@ -418,7 +422,7 @@ v_3 = |{\bf v}| = \sqrt{{a_x}^2 + {a_y}^2 + {a_z}^2} \]</div>
 \[|3\hat{\bf x} + 4\hat{\bf y} + 12\hat{\bf z}| = \sqrt{3^2 + 4^2 + 12^2} = 13\]</div>
 </div>
 <div class="section" id="normalised-vectors">
-<h2>Normalised Vectors<a class="headerlink" href="#normalised-vectors" title="Permalink to this headline">¶</a></h2>
+<h1>Normalised Vectors<a class="headerlink" href="#normalised-vectors" title="Permalink to this headline">¶</a></h1>
 <p>Each of the basis vectors is a normalised vector <span class="math notranslate nohighlight">\(|\hat{\bf x}| = |\hat{\bf y}| = |\hat{\bf z}| = 1\)</span>, however if we have a more general vector
 <span class="math notranslate nohighlight">\({\bf v} = a_x\hat{\bf x} + a_y\hat{\bf y} + a_z\hat{\bf z}\)</span> moving in some direction, we can also construct a normalised vector:</p>
 <div class="math notranslate nohighlight">
@@ -426,7 +430,6 @@ v_3 = |{\bf v}| = \sqrt{{a_x}^2 + {a_y}^2 + {a_z}^2} \]</div>
 <p>As an example lets consider <span class="math notranslate nohighlight">\(\bf v_1\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\hat{\bf v_1} = \frac{\bf v_1}{|\bf v_1|} = \frac{3\hat{\bf x} + 4\hat{\bf y} + 12\hat{\bf z}}{\sqrt{3^2 + 4^2 + 12^2}} = \frac{1}{13}\left(3\hat{\bf x} + 4\hat{\bf y} + 12\hat{\bf z}\right)\]</div>
-</div>
 </div>
 <div class="section" id="scalar-product-dot-product">
 <h1>Scalar Product / Dot Product<a class="headerlink" href="#scalar-product-dot-product" title="Permalink to this headline">¶</a></h1>
@@ -619,7 +622,7 @@ the answer is zero:</p>
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="integrationprelim.html" title="previous page">Integration Preliminaries</a>
-    <a class='right-next' id="next-link" href="indexnotation.html" title="next page">(Einstein) Index Notation</a>
+    <a class='right-next' id="next-link" href="calculusonfields.html" title="next page">Vector Fields</a>
 
         </div>
         

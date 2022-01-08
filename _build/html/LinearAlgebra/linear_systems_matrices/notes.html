@@ -109,6 +109,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../../VectorCalculus/calculusonfields.html">
+   Vector Fields
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/indexnotation.html">
    (Einstein) Index Notation
   </a>
@@ -339,8 +344,8 @@
 <div class="section" id="motivation">
 <h3>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">¶</a></h3>
 <p>Gaussian elimination is a systematic technique for solving systems of linear equations, which are of the form</p>
-<div class="amsmath math notranslate nohighlight" id="equation-250c8671-83e8-4ea1-b5c0-7f50230284f2">
-<span class="eqno">(1)<a class="headerlink" href="#equation-250c8671-83e8-4ea1-b5c0-7f50230284f2" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-37e79197-f8ae-48c6-8757-1a3d65368acb">
+<span class="eqno">(1)<a class="headerlink" href="#equation-37e79197-f8ae-48c6-8757-1a3d65368acb" title="Permalink to this equation">¶</a></span>\[\begin{align}
 a_{1,1} x_1 + a_{1,2} x_2 + a_{1,3} x_3 + \dots + a_{1,n} x_n &amp;= b_1 \\
 
    a_{2,1} x_1 + a_{2,2} x_2 + a_{2,3} x_3 + \dots + a_{2,n} x_n &amp;= b_2\\
@@ -350,8 +355,8 @@ a_{1,1} x_1 + a_{1,2} x_2 + a_{1,3} x_3 + \dots + a_{1,n} x_n &amp;= b_1 \\
 <p>where <span class="math notranslate nohighlight">\(a_{i,j}\)</span> are constants. Usually there are the same number of equations as unknowns, so <span class="math notranslate nohighlight">\(m = n\)</span>.  If <span class="math notranslate nohighlight">\(m &lt; n\)</span> then the system is undetermined, if <span class="math notranslate nohighlight">\(m &gt; n\)</span>, the system is over constrained.</p>
 <div class="tip admonition">
 <p class="admonition-title">Example</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0e24590c-afad-42f6-85d9-4dee118ab842">
-<span class="eqno">(2)<a class="headerlink" href="#equation-0e24590c-afad-42f6-85d9-4dee118ab842" title="Permalink to this equation">¶</a></span>\[\begin{align}4 x_1 - x_2 &amp;= 1\\ -2 x_1 + 3 x_2 &amp;= 12 \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-ddade62d-d5cc-403c-b206-83ab0472491d">
+<span class="eqno">(2)<a class="headerlink" href="#equation-ddade62d-d5cc-403c-b206-83ab0472491d" title="Permalink to this equation">¶</a></span>\[\begin{align}4 x_1 - x_2 &amp;= 1\\ -2 x_1 + 3 x_2 &amp;= 12 \end{align}\]</div>
 <p>Each equation here defines a line, and we are looking for a point which satisfies both equations, which means that the lines intersect.</p>
 <p>From the first line we obtain <span class="math notranslate nohighlight">\(x_2 = 4 x_1 - 1\)</span>, and by substituting this into the second line, we obtain <span class="math notranslate nohighlight">\(x = \frac{3}{2}\)</span>, <span class="math notranslate nohighlight">\(y = 5\)</span>. Two equations with two unknowns will always give a unique solution, unless the lines are parallel (and so the equations are just a scaling of each other).</p>
 <ul class="simple">
@@ -414,8 +419,8 @@ For instance, continuing with the naive row reduction for the example shown in t
 <p>In the example below, the technique is applied to a case where the system of equations is under-determined, so a unique solution cannot be obtained.</p>
 <p>Kirchoff’s law states that $\mathrm{current~in} = \mathrm{current~out}.</p>
 <p>For the system of 4 nodes shown above, this gives us four equations:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d58f4d45-9412-4477-ab22-1a31c8839343">
-<span class="eqno">(3)<a class="headerlink" href="#equation-d58f4d45-9412-4477-ab22-1a31c8839343" title="Permalink to this equation">¶</a></span>\[\begin{align}y_3&amp;=y_1+y_4\\y_1&amp;=y_2+y_5\\y_2&amp;=y_3+y_6\\y_4+y_5+y_6&amp;=0\end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-ca7dc741-a261-4557-9494-85a340c7062e">
+<span class="eqno">(3)<a class="headerlink" href="#equation-ca7dc741-a261-4557-9494-85a340c7062e" title="Permalink to this equation">¶</a></span>\[\begin{align}y_3&amp;=y_1+y_4\\y_1&amp;=y_2+y_5\\y_2&amp;=y_3+y_6\\y_4+y_5+y_6&amp;=0\end{align}\]</div>
 <p>The equations at each node are of the form <span class="math notranslate nohighlight">\(c_1 y_1 +c_2 y_2+\dots +c_6 y_6=d\)</span>. Written in augmented matrix form, the system is:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\left(\begin{array}{cccccc:c}1 &amp; 0 &amp; -1 &amp; 1 &amp; 0 &amp; 0 &amp;0\\-1 &amp; 1 &amp; 0 &amp; 0 &amp; 1 &amp; 0&amp;0 \\0 &amp; -1 &amp; 1 &amp; 0 &amp; 0 &amp; 1&amp;0 \\0 &amp; 0 &amp; 0 &amp; -1 &amp; -1 &amp; -1 &amp;0\\\end{array}\right)\end{split}\]</div>
@@ -446,8 +451,8 @@ Choosing <span class="math notranslate nohighlight">\((y_3,y_5,y_6)=(0,0,1)\)</s
 <span class="eqno">(4)<a class="headerlink" href="#equation-square-matrix" title="Permalink to this equation">¶</a></span>\[\begin{split}\left( \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right) \qquad \left[ \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right]\end{split}\]</div>
 <p>It is important that you do not use commas to separate the elements, which is incorrect notation.</p>
 <p>Either square or round brackets can be used to denote a matrix - but you should avoid mixing notation. Other types of brackets cannot be used, so none of the expressions below are matrices. In fact, the third expression has a special meaning, as we will see later.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d459e419-0ee4-45ac-bbaf-fcad20c14460">
-<span class="eqno">(5)<a class="headerlink" href="#equation-d459e419-0ee4-45ac-bbaf-fcad20c14460" title="Permalink to this equation">¶</a></span>\[\begin{align}\begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \qquad \left\{ \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right\} \qquad \left| \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right|	\end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-9bb33e53-4ea2-4caf-87c0-a11da35dc180">
+<span class="eqno">(5)<a class="headerlink" href="#equation-9bb33e53-4ea2-4caf-87c0-a11da35dc180" title="Permalink to this equation">¶</a></span>\[\begin{align}\begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \qquad \left\{ \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right\} \qquad \left| \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right|	\end{align}\]</div>
 <div class="section" id="terminology">
 <h3>Terminology<a class="headerlink" href="#terminology" title="Permalink to this headline">¶</a></h3>
 <p>The matrix featured in <a class="reference internal" href="#equation-square-matrix">(4)</a> is referred to as a square matrix because it has the same number of rows and columns. We also can say that it is a (2x2) matrix, because it has two rows and two columns.</p>
@@ -607,23 +612,23 @@ a general proof using element notation, is given below.</p>
 <div class="section" id="linking-matrix-multiplication-and-gaussian-elimination">
 <h3>Linking matrix multiplication and Gaussian elimination<a class="headerlink" href="#linking-matrix-multiplication-and-gaussian-elimination" title="Permalink to this headline">¶</a></h3>
 <p>The row-reduction operations that were introduced in the section on Gaussian elimination can be implemented by matrix multiplication. The illustration here matches the example that was given in <a class="reference internal" href="#id1"><span class="std std-ref">A systematic technique for solving systems of equations</span></a> for the augmented coefficient matrix:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e60d768c-2295-4f72-8dbd-8e586056f744">
-<span class="eqno">(6)<a class="headerlink" href="#equation-e60d768c-2295-4f72-8dbd-8e586056f744" title="Permalink to this equation">¶</a></span>\[\begin{equation}A = \left(\begin{array}{ccc:c}1&amp;1&amp;2&amp;2\\2&amp;3&amp;-4&amp;1\\-1&amp;1&amp;1&amp;3\end{array}\right).\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-a8191232-ad99-4cfd-9096-4299a296f282">
+<span class="eqno">(6)<a class="headerlink" href="#equation-a8191232-ad99-4cfd-9096-4299a296f282" title="Permalink to this equation">¶</a></span>\[\begin{equation}A = \left(\begin{array}{ccc:c}1&amp;1&amp;2&amp;2\\2&amp;3&amp;-4&amp;1\\-1&amp;1&amp;1&amp;3\end{array}\right).\end{equation}\]</div>
 <p>In the first step we used the row operations <span class="math notranslate nohighlight">\(\hat{r}_2=r_2-2r_1\)</span>,   <span class="math notranslate nohighlight">\(\hat{r}_3=r_3+r_1\)</span>, and in the second step we used the row operation <span class="math notranslate nohighlight">\(\hat{r}_3=r_3-2r_2\)</span>. These are equivalent to the following row operation matrices:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}L_1 = \left(\begin{array}{ccc}1&amp;0&amp;0\\-2&amp;1&amp;0\\1&amp;0&amp;1\end{array}\right), \quad  L_2=\left(\begin{array}{ccc}1 &amp; 0 &amp; 0 \\0 &amp; 1 &amp; 0 \\0 &amp; -2 &amp; 1 \\\end{array}\right) \end{split}\]</div>
 <p>The composition of these two matrices puts the coefficient matrix into the upper triangular form previously obtained:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4464590e-80b5-4e44-98ae-5d20a9d973ae">
-<span class="eqno">(7)<a class="headerlink" href="#equation-4464590e-80b5-4e44-98ae-5d20a9d973ae" title="Permalink to this equation">¶</a></span>\[\begin{equation}L_2 L_1 A = \left(\begin{array}{ccc}1 &amp; 0 &amp; 0 \\0 &amp; 1 &amp; 0 \\0 &amp; -2 &amp; 1 \\\end{array}\right)\left(\begin{array}{ccc:c}1 &amp; 1 &amp; 2 &amp; 2 \\0 &amp; 1 &amp; -8 &amp; -3 \\0 &amp; 2 &amp; 3 &amp; 5 \\\end{array}\right)=\left(\begin{array}{ccc:c}1 &amp; 1 &amp; 2 &amp; 2 \\0 &amp; 1 &amp; -8 &amp; -3 \\0 &amp; 0 &amp; 19 &amp; 11 \\\end{array}\right).\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-e4acb4bd-a541-49e0-bc64-3f1ce52c0560">
+<span class="eqno">(7)<a class="headerlink" href="#equation-e4acb4bd-a541-49e0-bc64-3f1ce52c0560" title="Permalink to this equation">¶</a></span>\[\begin{equation}L_2 L_1 A = \left(\begin{array}{ccc}1 &amp; 0 &amp; 0 \\0 &amp; 1 &amp; 0 \\0 &amp; -2 &amp; 1 \\\end{array}\right)\left(\begin{array}{ccc:c}1 &amp; 1 &amp; 2 &amp; 2 \\0 &amp; 1 &amp; -8 &amp; -3 \\0 &amp; 2 &amp; 3 &amp; 5 \\\end{array}\right)=\left(\begin{array}{ccc:c}1 &amp; 1 &amp; 2 &amp; 2 \\0 &amp; 1 &amp; -8 &amp; -3 \\0 &amp; 0 &amp; 19 &amp; 11 \\\end{array}\right).\end{equation}\]</div>
 <p>The additional operations that were carried out to fully row-reduce the matrix can be captured in the following row-reduction matrices:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9a99beb1-76f2-4abc-b8b8-b5cc9c2ca6a9">
-<span class="eqno">(8)<a class="headerlink" href="#equation-9a99beb1-76f2-4abc-b8b8-b5cc9c2ca6a9" title="Permalink to this equation">¶</a></span>\[\begin{equation}P=\left(\begin{array}{ccc}1 &amp; 0 &amp; 0 \\0 &amp; 1 &amp; 0 \\0 &amp; 0 &amp; \frac{1}{19} \\\end{array}\right), \quad U_1=\left(\begin{array}{ccc}1 &amp; 0 &amp; -2 \\0 &amp; 1 &amp; 8 \\0 &amp; 0 &amp; 1 \\\end{array}\right), \quad U_2 = \left(\begin{array}{ccc}1 &amp; 0 &amp; -2 \\0 &amp; 1 &amp; 8 \\0 &amp; 0 &amp; 1 \\\end{array}\right)\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-e3204ca5-14ef-433a-8d1b-fe9c869acf62">
+<span class="eqno">(8)<a class="headerlink" href="#equation-e3204ca5-14ef-433a-8d1b-fe9c869acf62" title="Permalink to this equation">¶</a></span>\[\begin{equation}P=\left(\begin{array}{ccc}1 &amp; 0 &amp; 0 \\0 &amp; 1 &amp; 0 \\0 &amp; 0 &amp; \frac{1}{19} \\\end{array}\right), \quad U_1=\left(\begin{array}{ccc}1 &amp; 0 &amp; -2 \\0 &amp; 1 &amp; 8 \\0 &amp; 0 &amp; 1 \\\end{array}\right), \quad U_2 = \left(\begin{array}{ccc}1 &amp; 0 &amp; -2 \\0 &amp; 1 &amp; 8 \\0 &amp; 0 &amp; 1 \\\end{array}\right)\end{equation}\]</div>
 <p>You may verify the result:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}U_2 U_1 P L_2 L_1 A =\left(\begin{array}{ccc:c}1 &amp; 0 &amp; 0 &amp; -\frac{15}{19} \\0 &amp; 1 &amp; 0 &amp; \frac{31}{19} \\0 &amp; 0 &amp; 1 &amp; \frac{11}{19} \\\end{array}\right)\end{split}\]</div>
 <p>It is also possible to combine the row reduction operations into a single multiplication matrix:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b14cb150-fee0-47fe-ba74-12c901dc4993">
-<span class="eqno">(9)<a class="headerlink" href="#equation-b14cb150-fee0-47fe-ba74-12c901dc4993" title="Permalink to this equation">¶</a></span>\[\begin{equation}U_2 U_1 P L_2 L_1 = \frac{1}{19}\left(\begin{array}{ccc}7 &amp; 1 &amp; -10 \\2 &amp; 3 &amp; 8 \\5 &amp; -2 &amp; 1 \\\end{array}\right)\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-8860fd9b-a921-42f8-91b2-db1a9245d73d">
+<span class="eqno">(9)<a class="headerlink" href="#equation-8860fd9b-a921-42f8-91b2-db1a9245d73d" title="Permalink to this equation">¶</a></span>\[\begin{equation}U_2 U_1 P L_2 L_1 = \frac{1}{19}\left(\begin{array}{ccc}7 &amp; 1 &amp; -10 \\2 &amp; 3 &amp; 8 \\5 &amp; -2 &amp; 1 \\\end{array}\right)\end{equation}\]</div>
 <p>Later, we will come to think of this as the inverse of the coefficient matrix.</p>
 </div>
 </div>

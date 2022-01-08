@@ -56,7 +56,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Coordinate System Changes" href="coordinatesystems.html" />
-    <link rel="prev" title="Vectors and Vector Algebra" href="vectoralgebra.html" />
+    <link rel="prev" title="Vector Fields" href="calculusonfields.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -107,6 +107,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="vectoralgebra.html">
    Vectors and Vector Algebra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="calculusonfields.html">
+   Vector Fields
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -210,14 +215,29 @@
             </div>
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dot-product">
-   Dot Product
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   (Einstein) Index Notation
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dot-product">
+     Dot Product
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cross-product">
+     Cross Product
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#cross-product">
-   Cross Product
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#epsilon-delta-identities">
+   <span class="math notranslate nohighlight">
+    \(\epsilon-\delta\)
+   </span>
+   Identities
   </a>
  </li>
 </ul>
@@ -268,8 +288,11 @@
 differential vector operator in index notation:</p>
 <div class="math notranslate nohighlight">
 \[\nabla \times {\bf A} = (\nabla_i \times {\bf A}_j)_k =  \epsilon_{ijk}\,\partial_i\,A_j \]</div>
-<p>\subsubsection{<span class="math notranslate nohighlight">\(\epsilon-\delta\)</span> identities}
-We can use these index notation devices to calculate more easily some vector calculus identities, in order to do so we may consider the index equivalent of the triple product:</p>
+</div>
+</div>
+<div class="section" id="epsilon-delta-identities">
+<h1><span class="math notranslate nohighlight">\(\epsilon-\delta\)</span> Identities<a class="headerlink" href="#epsilon-delta-identities" title="Permalink to this headline">¶</a></h1>
+<p>We can use these index notation devices to calculate more easily some vector calculus identities, in order to do so we may consider the index equivalent of the triple product:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}{\bf A} \times \left({\bf B} \times {\bf C}\right) &amp;=&amp; {\bf A} \times\left(\epsilon_{ijk}\, B_i \, C_j \right)_k = \left[\epsilon_{lkm}\, A_l\,\left(\epsilon_{ijk}\,B_i\,C_j\right)_k\right]_m\\ 
 &amp;=&amp; \epsilon_{ijk}\,\epsilon_{lkm}\,A_l\,B_i\,C_j \end{split}\]</div>
@@ -291,7 +314,6 @@ We can use these index notation devices to calculate more easily some vector cal
 &amp;=&amp; \epsilon_{kij}\,\epsilon_{lmj}\,\partial_i\, \partial_j\,A_m =\left(\delta_{kl}\,\delta_{im} - \delta_{km}\,\delta_{il}\right)\,\partial_i\, \partial_j\,A_m \\ 
 &amp;=&amp; \partial_k (\partial_i A_i) - (\partial_i \partial_i) A_k \\ &amp;=&amp; \nabla(\nabla\cdot {\bf A}) - \nabla^2 {\bf A}\end{split}\]</div>
 <p>which is often known as Lagrange’s formula for <span class="math notranslate nohighlight">\(\nabla\)</span>.</p>
-</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -319,7 +341,7 @@ We can use these index notation devices to calculate more easily some vector cal
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="vectoralgebra.html" title="previous page">Vectors and Vector Algebra</a>
+    <a class='left-prev' id="prev-link" href="calculusonfields.html" title="previous page">Vector Fields</a>
     <a class='right-next' id="next-link" href="coordinatesystems.html" title="next page">Coordinate System Changes</a>
 
         </div>
