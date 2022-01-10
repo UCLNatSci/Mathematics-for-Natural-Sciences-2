@@ -3,17 +3,20 @@
 
 format: jb-book
 root: intro
-options:
-  numbered: True
 chapters:
 - file: VectorCalculus/partialdifferentiation
 - file: VectorCalculus/integrationprelim
 - file: VectorCalculus/vectoralgebra
 - file: VectorCalculus/calculusonfields
-- file: VectorCalculus/indexnotation
 - file: VectorCalculus/coordinatesystems
 - file: VectorCalculus/surfaceintegrals
 - file: VectorCalculus/volumeintegrals
 - file: VectorCalculus/vectorcalctheorems
 
+- file: ProofLogic/setsnotation
+- file: ProofLogic/functions
+- file: ProofLogic/propositionallogic
+- file: ProofLogic/methodsofproof
+
 - file: LinearAlgebra/linear_systems_matrices/notes.md
+- file: VectorCalculus/indexnotation

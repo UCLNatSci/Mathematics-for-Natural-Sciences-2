@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>5. (Einstein) Index Notation &#8212; Mathematics for Natural Sciences 2</title>
+    <title>(Einstein) Index Notation &#8212; Mathematics for Natural Sciences 2</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -55,8 +55,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6. Coordinate System Changes" href="coordinatesystems.html" />
-    <link rel="prev" title="4. Vector Fields" href="calculusonfields.html" />
+    <link rel="prev" title="Linear Systems and Matrices" href="../LinearAlgebra/linear_systems_matrices/notes.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -96,52 +95,72 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="partialdifferentiation.html">
-   1. Multivariable Calculus
+   Multivariable Calculus
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="integrationprelim.html">
-   2. Integration Preliminaries
+   Integration Preliminaries
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vectoralgebra.html">
-   3. Vectors and Vector Algebra
+   Vectors and Vector Algebra
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="calculusonfields.html">
-   4. Vector Fields
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   5. (Einstein) Index Notation
+   Vector Fields
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="coordinatesystems.html">
-   6. Coordinate System Changes
+   Coordinate System Changes
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="surfaceintegrals.html">
-   7. Markdown Files
+   Surface Integrals
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="volumeintegrals.html">
-   8. Markdown Files
+   Volume Integrals
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vectorcalctheorems.html">
-   9. Markdown Files
+   Vector Calculus Theorems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ProofLogic/setsnotation.html">
+   Set Theory
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ProofLogic/functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ProofLogic/propositionallogic.html">
+   Propositional Logic
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ProofLogic/methodsofproof.html">
+   Techniques of Proof
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/notes.html">
-   10. Linear Systems and Matrices
+   Linear Systems and Matrices
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   (Einstein) Index Notation
   </a>
  </li>
 </ul>
@@ -217,17 +236,16 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#dot-product">
-   5.1. Dot Product
+   Dot Product
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#cross-product">
-   5.2. Cross Product
+   Cross Product
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#epsilon-delta-identities">
-   5.3.
    <span class="math notranslate nohighlight">
     \(\epsilon-\delta\)
    </span>
@@ -246,7 +264,7 @@
               <div>
                 
   <div class="section" id="einstein-index-notation">
-<h1><span class="section-number">5. </span>(Einstein) Index Notation<a class="headerlink" href="#einstein-index-notation" title="Permalink to this headline">¶</a></h1>
+<h1>(Einstein) Index Notation<a class="headerlink" href="#einstein-index-notation" title="Permalink to this headline">¶</a></h1>
 <p>Vector quantities can also be expressed in index notation, which makes use of two quantities <span class="math notranslate nohighlight">\(\delta_{ij},\, \epsilon_{ijk}\)</span>, which in three dimensions follow the following rules:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\delta_{ij} &amp;=&amp;\,
@@ -263,7 +281,7 @@
 <p>where we notice that <span class="math notranslate nohighlight">\(\epsilon_{ijk}\)</span> has both a cyclic and anti-cyclic set of values.  In each case we are expressing the <span class="math notranslate nohighlight">\((x,\,y,\,z)\)</span> components using the
 <span class="math notranslate nohighlight">\((1,\,2,\,3)\)</span> notation.  In higher dimensions this can be extended also!</p>
 <div class="section" id="dot-product">
-<h2><span class="section-number">5.1. </span>Dot Product<a class="headerlink" href="#dot-product" title="Permalink to this headline">¶</a></h2>
+<h2>Dot Product<a class="headerlink" href="#dot-product" title="Permalink to this headline">¶</a></h2>
 <p>We can express a dot product using the <span class="math notranslate nohighlight">\(\delta_{ij}\)</span> symbol</p>
 <div class="math notranslate nohighlight">
 \[{\bf A} \cdot {\bf B} = \delta_{ij}\,A_i\,B_j = A_1\,B_1 + A_2\,B_2 + A_3\,B_3 \]</div>
@@ -272,7 +290,7 @@
 \[\nabla \cdot {\bf A} = \delta_{ij}\,\partial_i\,A_j = \partial_x\,A_x + \partial_y\,A_y +\partial_z\,A_z \]</div>
 </div>
 <div class="section" id="cross-product">
-<h2><span class="section-number">5.2. </span>Cross Product<a class="headerlink" href="#cross-product" title="Permalink to this headline">¶</a></h2>
+<h2>Cross Product<a class="headerlink" href="#cross-product" title="Permalink to this headline">¶</a></h2>
 <p>We can express a cross product using the <span class="math notranslate nohighlight">\(\epsilon_{ijk}\)</span> symbol</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}{\bf A} \times {\bf B} &amp;=&amp; ({\bf A}_i \times {\bf B}_j)_k = \epsilon_{ijk}\,A_i\,B_j \\
@@ -284,7 +302,7 @@ differential vector operator in index notation:</p>
 \[\nabla \times {\bf A} = (\nabla_i \times {\bf A}_j)_k =  \epsilon_{ijk}\,\partial_i\,A_j \]</div>
 </div>
 <div class="section" id="epsilon-delta-identities">
-<h2><span class="section-number">5.3. </span><span class="math notranslate nohighlight">\(\epsilon-\delta\)</span> Identities<a class="headerlink" href="#epsilon-delta-identities" title="Permalink to this headline">¶</a></h2>
+<h2><span class="math notranslate nohighlight">\(\epsilon-\delta\)</span> Identities<a class="headerlink" href="#epsilon-delta-identities" title="Permalink to this headline">¶</a></h2>
 <p>We can use these index notation devices to calculate more easily some vector calculus identities, in order to do so we may consider the index equivalent of the triple product:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}{\bf A} \times \left({\bf B} \times {\bf C}\right) &amp;=&amp; {\bf A} \times\left(\epsilon_{ijk}\, B_i \, C_j \right)_k = \left[\epsilon_{lkm}\, A_l\,\left(\epsilon_{ijk}\,B_i\,C_j\right)_k\right]_m\\ 
@@ -335,8 +353,7 @@ differential vector operator in index notation:</p>
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="calculusonfields.html" title="previous page"><span class="section-number">4. </span>Vector Fields</a>
-    <a class='right-next' id="next-link" href="coordinatesystems.html" title="next page"><span class="section-number">6. </span>Coordinate System Changes</a>
+    <a class='left-prev' id="prev-link" href="../LinearAlgebra/linear_systems_matrices/notes.html" title="previous page">Linear Systems and Matrices</a>
 
         </div>
         
