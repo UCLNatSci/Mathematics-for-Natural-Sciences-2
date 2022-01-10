@@ -14,7 +14,7 @@ chapters:
 #- file: VectorCalculus/vectorcalctheorems
 
 - file: ProofLogic/setsnotation
-#- file: ProofLogic/functions
+- file: ProofLogic/functions
 - file: ProofLogic/propositionallogic
 - file: ProofLogic/methodsofproof
 

@@ -5,7 +5,9 @@ We can turn out statements about set theory into statements about propositions, 
 [<b>The Logic of Quantum Mechanics, by Birkhoff & Von Neumann</b>](https://doi.org/10.2307/1968621).
 
 A propositional or statement is a declaration that is either <b>TRUE (T)</b> or <b>FALSE (F)</b> but not both.  Some propositions are <b>composite</b> or 
-<b>compound</b> - i.e. composed of sub-propositions and then are connected in different ways.  Others are primitive or unitary, i.e. cannot be broken down in to simpler propositions.  
+<b>compound</b> - i.e. composed of sub-propositions and then are connected in different ways.  Others are primitive or unitary, i.e. cannot be broken down in to 
+simpler propositions.  One way to present and calculate the outcomes of compound statements is to use a <truth table</b> - these might look familiar from computer science, 
+where the associated algebra is known as <em>Boolean algebra</em> and the T/F is replaced with 1/0.  
 
 Our ideas from set theory can be very easily applied in this area, using the algebra of basic logic:
 - <b>Conjunction</b> 
@@ -14,11 +16,11 @@ $p \wedge q$: Any two propositions can be combined by the word "AND" to form a c
 depends on the truth values of $p$ and $q$, according to the truth table below:
 
 |$p$| $q$ | $p \wedge q$ |
-| ---| ---|---|
-|T | T | T |
-|T | F | F |
-|F | T | F |
-|F | F | F |
+|---|---|---|
+| T | T | T |
+| T | F | F |
+| F | T | F |
+| F | F | F |
 
 
 - <b>Disjunction</b>
@@ -27,11 +29,11 @@ $p \vee q$: Any two propositions can be combined by the word "OR" to form a comp
 $p \vee q$ depends on the truth values of $p$ and $q$, according to the truth table below:  
 
 |$p$ | $q$ | $p \vee q$ |
-| --- | --- | ---|
-|T | T | T |
-|T | F | T |
-|F | T | T |
-|F | F | F |
+|---|---|---|
+| T | T | T |
+| T | F | T |
+| F | T | T |
+| F | F | F |
 
 
 - <b>Negation</b> 
@@ -60,10 +62,10 @@ An example would be $\neg p \wedge q$ means $(\neg p) \wedge q$ and NOT $\neg(p 
 
 |$p$ | $q$ | $p \wedge q$ | $\neg p$ | $\neg p \wedge q$ | $\neg (p \wedge q)$ |
 |---|---|---|---|---|---|
-|T | T | T | F | F | F|
-|T | F | F | F | F | T|
-|F | T | F | T | T | T|
-|F | F | F | T | F | T|
+| T | T | T | F | F | F |
+| T | F | F | F | F | T |
+| F | T | F | T | T | T |
+| F | F | F | T | F | T |
 
 
 We can use these ideas to outline and differentiate logical ideas, such as those of <b>Contradiction</b> and <b>Tautology</b>. A contraction is a proposition that is always 
@@ -72,8 +74,8 @@ e.g. it is raining or isn't raining, we can see this as a truth table that ends 
 
 |$p$ | $\neg p$ | $p \wedge \neg p$ | $p \vee \neg p$ |
 |---|---|---|---|
-|T | F | F | T |
-|F | F | F | T |
+| T | F | F | T |
+| F | T | F | T |
 
 
 ## Laws of the Algebra of Propositions
@@ -124,42 +126,44 @@ which we see mirrors the algebra of sets.
 
 ## Conditional and Biconditional Statements
 Many statements in mathematics and elsewhere are of the form if a proposition $p$ (called the antecedent) applies then a proposition 
-$q$ (called the consequent) follows, these are known as <b>conditional</b> statements and are denoted:
+$q$ (called the consequent) follows, these are known as <b>Conditional</b> statements and are denoted:
 ```{math}
 p \rightarrow q
 ```
-which is read $p$ <b>implies</b> $q$ or $p$ <b>only if</b> $q$.  The truth table is defined as:
+which is read $p$ <b>Implies</b> $q$ or $p$ <b>only if</b> $q$.  The truth table is defined as:
 
 |$p$ | $q$ | $p \rightarrow q$ |
 |---|---|---| 
-|T | T | T |
-|F | F | T |
-|T | F | F |
-|F | T | T |
+| T | T | T |
+| F | F | T |
+| T | F | F |
+| F | T | T |
 
 We note that the conditional $p \rightarrow q$ is only false when $p = T$ and $q = F$. 
 
-Another common statement is of the form proposition $p$ applies <b>if and only if</b> proposition $q$ applies, these are known as <b>biconditional</b> statements and are denoted:
+Another common statement is of the form proposition $p$ applies <b>if and only if</b> proposition $q$ applies, these are known as <b>Biconditional</b> statements 
+and are denoted:
 ```{math}
 p \longleftrightarrow q
 ```
 The truth table is defined as:
 |$p$ | $q$ | $p \longleftrightarrow q$ |
 |---|---|---|
-|    T | T | T |
-|    F | F | T |
-|    T | F | F |
-|    F | T | F |
+| T | T | T |
+| F | F | T |
+| T | F | F |
+| F | T | F |
 
-We note that the conditional $p \longleftrightarrow q$ is true when $p$ and $q$ have the same truth values and false otherwise. If the form truth table for 
-$p \leftarrow q$ looks familiar, then you'd be correct - it can be constructed from primitive propositions:
+We note that the conditional $p \longleftrightarrow q$ is true when $p$ and $q$ have the same truth values and false otherwise. 
+
+What is also interesting here is that $p \rightarrow q$ is composite, it can be constructed from primitive propositions:
 
 |$p$ | $q$ | $\neg p$ | $\neg p \vee q$ | $p \rightarrow q$|
 |---|---|---|---|---|
 | T | T | F | T | T |
+| F | F | T | T | T |
 | T | F | F | F | F |
 | F | T | T | T | T |
-| F | F | T | T | T |
 
 and therefore we see the equivalence between the two propositions:
 
@@ -168,8 +172,8 @@ p \rightarrow q \equiv \neg p \vee q
 ```
 
 ## Arguments and Fallacies
-A logical argument is a situation where there are given set of propositions $\{P_1,\,P_2,\,\dots P_n\}$ called <b>premises</b> have that as a consequence (or yield) a proposition 
-$Q$ known as a <b>conclusion</b>, we denote this:
+A logical argument is a situation where there are given set of propositions $\{P_1,\,P_2,\,\dots P_n\}$ called <b>Premises</b> have that as a consequence 
+(or yield) a proposition $Q$ known as a <b>Conclusion</b>, we denote this:
 ```{math}
 \{P_1,\,P_2,\,\dots P_n \}\vdash Q
 ```
@@ -180,12 +184,13 @@ We can consider some simple arguments and their validity:
 - $\{p,\,p \rightarrow q\} \vdash q$
 
 We should consider the truth table for all the premises and see if they can be simultaneously true:
+
 |$p$ | $q$ | $p \rightarrow q$ |
 |---|---|---|
-|   T | T | T |
-|    T | F | F |
-|    F | T | T|
-|    F | F | T|
+| T | T | T |
+| T | F | F |
+| F | T | T |
+| F | F | T |
 
 Since in the first line the case of the two premises $\{p,\,p\rightarrow q\}$ being simultaneously true results in $q$ true, this argument is valid.
     
@@ -195,16 +200,18 @@ We should consider the truth table for all the premises and see if they can be s
 
 |$p$ | $q$ | $p \rightarrow q$ |
 |---|---|---|
-|    T | T | T |
-|    T | F | F |
-|    F | T | T|
-|    F | F | T|
+| T | T | T |
+| T | F | F |
+| F | T | T |
+| F | F | T |
+
 
 Since in the first line the case of the two premises being simultaneously true results in $p$ being true and in the third line the case of the two premises being 
 true results in $p$ being false, this argument is fallacy.
 
 ## Logical Implications
-A proposition $P(p,\,q,\,\dots)$ is said to <b>logically imply</b> a proposition $Q(p,\,q,\,\dots)$ if $Q(p,\,q,\,\dots)$ is true whenever $P(p,\,q,\,\dots)$ is true.  We denote this as:
+A proposition $P(p,\,q,\,\dots)$ is said to <b>Logically Imply</b> a proposition $Q(p,\,q,\,\dots)$ if $Q(p,\,q,\,\dots)$ is true whenever $P(p,\,q,\,\dots)$ is 
+true.  We denote this as:
 ```{math}
 P(p,\,q,\,\dots) \Rightarrow Q(p,\,q,\,\dots) 
 ```
@@ -214,10 +221,10 @@ We can consider the truth table:
 
 |$p$ | $q$ | $p \vee q$ |
 |---|---|---|
-|    T | T | T | 
-|    T | F | T | 
-|    F | T | T |
-|   F | F | F |
+| T | T | T | 
+| T | F | T | 
+| F | T | T |
+| F | F | F |
 
 Since in the first two rows $p \vee q$ is true whenever $p$ is true, thus $p \Rightarrow p \vee q$:
 
@@ -225,9 +232,9 @@ Since in the first two rows $p \vee q$ is true whenever $p$ is true, thus $p \Ri
 
 |$p$ | $\neg p$ | $q$ | $\neg q$ | $\neg p \wedge \neg q$ |
 |---|---|---|---|---|
-|    T | F | T | F | F |
-|    T | F | F | T | F | 
-|   F | T | T | F | F |
-|F | T | F | T | T |
+| T | F | T | F | F |
+| T | F | F | T | F | 
+| F | T | T | F | F |
+| F | T | F | T | T |
 
-Since in the final row $\neg p \vee \neg q$ is true but $p$ is  false, this implication is false.
+Since in the final row $\neg p \vee \neg q$ is true but $p$ is false, this implication is false.
