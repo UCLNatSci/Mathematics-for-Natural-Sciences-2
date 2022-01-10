@@ -24,26 +24,31 @@ name: surf1
 A plot of the function $f(x,\, y) = x^3 - y^3 - 2xy + 2$, along with lines of constant $x,\,y$.
 ```
 
-As an example, we can calculate all the first partial derivatives $\partial/\partial x,\, \partial/\partial y$ for the following functions:
-
--
+Just like the one variable derivative, there is a limit definition for partial derivatives for a function $f = f(x,\,y)$:
 ```{math}
-f(x,y) &=&\, 3x^3 y^2 + 2 y \\
+\frac{\partial f}{\partial x} &=&\, \lim_{\Delta x \rightarrow 0} \left[\frac{f(x + \Delta x,\, y) - f(x,\, y)}{\Delta x} \right]\\
+\frac{\partial f}{\partial y} &=&\, \lim_{\Delta x \rightarrow 0} \left[\frac{f(x,\, y + \Delta y) - f(x,\, y)}{\Delta y} \right]
+```
+
+By way of examples, we can calculate all the first partial derivatives $\partial/\partial x,\, \partial/\partial y$ for the following functions:
+
+- $f(x,\,y) = 3x^3 y^2 + 2 y $
+
+```{math}
 \frac{\partial f}{\partial x} &=&\, x^2 y^2, \\
 \frac{\partial f}{\partial y} &=&\, 6x^3 y+2
 ```
 
--  
+- $f(x,\,y) = x^2 \ln(3x+y)$ 
+
 ```{math}
-f(x,y) &=&\, x^2 \ln(3x+y) \\
 \frac{\partial f}{\partial x} &=&\, 2x\ln(3x+y) + \frac{3x^2}{3x+y}, \\
 \frac{\partial f}{\partial y} &=&\, \frac{x^2}{3x+y}
 ```
 
--  
+- $z(x,\,y) = \ln(x+y^2\sin(x))$
 ```{math}
-z(x,y) &=&\, \ln(x+y^2\sin(x)) \\
-\frac{\partial z}{\partial x} &=&\, \frac{1+y^2\cos(x)}{x+y^2\sin(x)}, 
+\frac{\partial z}{\partial x} &=&\, \frac{1+y^2\cos(x)}{x+y^2\sin(x)}, \\
 \frac{\partial z}{\partial y} &=&\, \frac{2y\sin(x)}{x+y^2\sin(x)}
 ```
 
@@ -111,11 +116,11 @@ f_{xy} &=&\, (f_x)_y = \frac{\partial^2 f}{\partial y\, \partial x}, \\
 f_{yx} &=&\, (f_y)_x = \frac{\partial^2 f}{\partial x\, \partial y}
 ```
 
-You will likely come across yet more alternative notations in the literature. For instance, the notation 
+You will likely come across yet more alternative notations in the literature, another common one being:
 ```{math}
 D_x=\frac{\partial}{\partial x}
 ```
-is also a common notation.
+
     
 
 ## Multivariable Chain Rule
@@ -125,7 +130,7 @@ We now consider a function $f(x,\,y)$ subjected to small variations in both $x$ 
 ---
 name: two_step
 ---
-Showing the variations $f(x+\Delta x, y+\Delta y)$ in two steps.
+Showing the variations $f(x+\Delta x, \,y+\Delta y)$ in two steps.
 ```
 
 Loosely speaking, the total change in the function $f(x,\, y)$ is the sum of changes due to each variable:
@@ -170,8 +175,9 @@ Many student's first go at encountering this rule often think that it "can't be 
 \Delta f = \frac{\Delta f}{\Delta x}\Delta x + \frac{\Delta f}{\Delta y}\Delta y
 ```
 
-which suggests the result $\Delta f = 2\Delta f$. However, this misunderstanding comes from ambiguity in writing $\Delta f$. On the left-hand side it 
-means changes in $f$ dues to variations in both $x$ and $y$, whilst in $f_x$ and $f_y$ the changes are due to only one of these variables whilst the other 
+which suggests the result $\Delta f = 2\Delta f$. However, this misunderstanding comes from ambiguity in writing $\Delta f$. 
+
+On the left-hand side it means changes in $f$ dues to variations in both $x$ and $y$, whilst in $f_x$ and $f_y$ the changes are due to only one of these variables, whilst the other 
 is held constant. Written formally:
 
 ```{math}
@@ -180,11 +186,10 @@ is held constant. Written formally:
 =\lim_{\Delta u\rightarrow 0}\frac{f(x(u+\Delta u,v),y(u,v))-f(x(u,v),y(u,v))}{\Delta u}
 ```
 
-The leson here is - it is dangerous to treat partial derivatives as fractions!
+The lseson here is - <em>it is dangerous to treat partial derivatives as fractions!</em>
 
 ## Dependency Trees
-The multivariate chain rule can be illustrated as a dependency tree, in {numref}`dependency1`, where we examine $f(x,\, y)$ where $x = x(u,\, v)$ 
-and $y = y(u,\, v)$:
+The multivariate chain rule can be illustrated as a dependency tree, in {numref}`dependency1`, where we examine $f(x,\, y)$ with $x = x(u,\, v)$ and $y = y(u,\, v)$:
 
 ```{figure} ../figures/dependency1.png
 ---
@@ -261,13 +266,15 @@ Therefore, we require that:
 ```
 
 If the differential is <b>exact</b>, then it can be exactly integrated to obtain a solution $F$. Whilst you might not be asked to obtain solutions for $F$, you 
-may be asked to verify if a differential expression is exact by testing this condition/
+may be asked to verify if a differential expression is exact by testing this condition.
 
 As an example, lets try showing that:
 ```{math}
 (y\cos{x}+\sin{y}+y)\,\mathrm{d}x + (\sin{x}+x\cos{y}+x)\,\mathrm{d}y
 ```
-is an exact differential.  The expression is of the form:
+is an exact differential.  
+
+The expression is of the form:
 ```{math}
 A(x,\, y)\,\mathrm{d}x + B(x,\, y)\,\mathrm{d}y = 0
 ```
@@ -327,4 +334,4 @@ F(x,\, y) = y\sin{x} + x\sin{y} + xy + k
 ``` 
 and $k$ here is an arbitrary constant.
 
-### Stationary Points
+% ## Stationary Points

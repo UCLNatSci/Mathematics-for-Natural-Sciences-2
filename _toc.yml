@@ -8,19 +8,15 @@ chapters:
 - file: VectorCalculus/integrationprelim
 - file: VectorCalculus/vectoralgebra
 - file: VectorCalculus/calculusonfields
-- file: VectorCalculus/coordinatesystems
-- file: VectorCalculus/surfaceintegrals
-- file: VectorCalculus/volumeintegrals
-- file: VectorCalculus/vectorcalctheorems
+#- file: VectorCalculus/coordinatesystems
+#- file: VectorCalculus/surfaceintegrals
+#- file: VectorCalculus/volumeintegrals
+#- file: VectorCalculus/vectorcalctheorems
 
-<<<<<<< HEAD
 - file: ProofLogic/setsnotation
-- file: ProofLogic/functions
+#- file: ProofLogic/functions
 - file: ProofLogic/propositionallogic
 - file: ProofLogic/methodsofproof
 
-- file: LinearAlgebra/linear_systems_matrices/notes.md
-- file: VectorCalculus/indexnotation
-=======
-#- file: LinearAlgebra/linear_systems_matrices/notes.md
->>>>>>> d0d9a9a0a8141eb44228bff144d34da03d2d2129
+#- file: LinearAlgebra/linear_systems_matrices/notes
+#- file: VectorCalculus/indexnotation
