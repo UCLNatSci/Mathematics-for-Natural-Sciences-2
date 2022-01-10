@@ -36,15 +36,19 @@ We will begin by finding a solution to the following system:
 
 ![](Picture1.png)
 
-The equations have been labelled $r_1,r_2,r_3$
+The equations have been labelled $r_1,r_2,r_3$.
+
 First, we will use $r_1$ to eliminate $x_1$ from $r_2$ and $r_3$. This gives two equations in two unknowns. Then, we will use $r_2$ to eliminate $x_2$ from $r_3$.
+
 The steps are written out below:    
 
-The solution for $x_3$ can now be read off from $r_3$, $x_2$ can be obtained from $r_2$ using the result for $x_3$ and $x_1$ can be obtained from $r_1$ using the results for $x_1$ and $x_2$ - This is known as **back-substitution**.  
+![](Picture2.png)
+
+The solution for $x_3$ can now be read off from $r_3$, $x_2$ can be obtained from $r_2$ using the result for $x_3$ and $x_1$ can be obtained from $r_1$ using the results for $x_1$ and $x_2$. This is known as **back-substitution**.  
 
 These manipulations can be conveniently done by looking only at the coefficients, which we collect together in a form called the augmented matrix:
 
-![](Picture2.png)
+![](Picture3.png)
 
 We can see that the algorithm (described in the box below) works by eliminating the coefficients below the leading diagonal, which is highlighted in pink in the image.
 
@@ -84,9 +88,9 @@ It is often possible to apply these steps creatively to get a result with greate
 2. For ease of process-checking - for example, when using automated quiz-marking, or when comparing solutions.
 
 It is also not necessary to stop at upper triangular form. Once the last row has been fully simplified, it can be used to obtain zeros above the main diagonal in the last column. Then, the second-last row is used to obtain zeros in the second-last column above the main diagonal, and so-on until the only non-zero elements remaining are on the main diagonal. Then the solutions can be simply read off from each row.
-For instance, continuing with the naive row reduction for the example shown in the previous section, we obtain
+For instance, continuing with the naive row reduction for the example shown in the previous section, we obtain:
 
-![](Picture3.png)
+![](diag.png)
 
 We have obtained row-reduced form and the solutions for $x_1,x_2,x_3$ can now be read off from the final column.
 
@@ -97,7 +101,15 @@ https://www.intmath.com/matrices-determinants/6-matrices-linear-equations.php
 
 In the example below, the technique is applied to a case where the system of equations is under-determined, so a unique solution cannot be obtained.
 
-Kirchoff's law states that $\mathrm{current~in} = \mathrm{current~out}.
+![](kirchoff.png)
+
+```{admonition} Kirchoff's Law
+
+Kirchoff's law states that
+
+$$\mathrm{current~in} = \mathrm{current~out}$$
+
+```
 
 For the system of 4 nodes shown above, this gives us four equations:
 
@@ -127,8 +139,16 @@ The full solution space consists of all possible linear combinations $a s_1 + b 
 
 A matrix (plural: matrices) is essentially just an array (or collection) of values, arranged in rows and columns. For example, when we were solving systems of linear equations by Gaussian elimination, we formed the **augmented matrix** of coefficients:
 
-![matrix coefficients](augme.png)
-
+$$
+\left[
+\begin{array}{cccc:c}
+    a_{1,1} & a_{1,2} & \cdots & a_{1,n} &  b_1 \\
+    a_{2,1} & a_{2,2} & \cdots & a_{2,n} &  b_2 \\
+    \vdots & \vdots & \ddots & \vdots & \vdots \\
+    a_{m,1} & a_{m,2} & \cdots & a_{m,n} & b_m
+\end{array}
+\right]
+$$
 The dashed line was used to indicate that the matrix is partitioned into two sub-matrices, representing the coefficients and constant terms, respectively.
 
 In general, the values contained in a matrix could represent anything, although manipulating systems of linear equations is one of the most valuable uses of matrices.
@@ -166,7 +186,7 @@ The **transpose** of a matrix, written with a superscript letter T, means that w
 
 $ M = \left( \begin{matrix} 1 &2 &3 \\ 4& 5& 6\end{matrix} \right) \Rightarrow M^T = \left( \begin{matrix} 1 & 4 \\ 2 & 5  \\ 3 & 6\end{matrix} \right)$
 
-In element notation, for any matrix $X$, we can write that $X^T_{i,j} = X_{j,i}$.
+In element notation, for any matrix $X$, we can write that $\left(X^T\right)_{i,j} = X_{j,i}$.
 
 That is, the element in the $i^{th}$ row and $j^{th}$ column of $X$ becomes the element in the $j^{th}$ row and $i^{th}$ column of $X^T$.
 
@@ -205,7 +225,7 @@ For example, $ -3\left( \begin{matrix} 0 & -2 \\ 1 & 5 \\ -1 & 3 \end{matrix} \r
 
 Let $A$ and $B$ be two matrices of the same order. Then,
 
-$$(A + B)_{i,j} = A_{i,j} + B_{i,j}$$
+$$\left(A + B\right)_{i,j} = A_{i,j} + B_{i,j}$$
 
 The expression states that to add two matrices, we add together the corresponding elements. This type of operation on two matrices can be referred to as an element-wise operation.
 
@@ -226,7 +246,7 @@ For example, $ \left( \begin{matrix} 1 & -3 \\ 3 & 0 \\ 5 & -7 \end{matrix} \rig
 
 Given the matrices $A=\left(\begin{array}{cc}1 & 2 \\-1 & 0 \\3 & 1 \\\end{array}\right)$, $B=\left(\begin{array}{cc}-4 & 1 \\1 & 2 \\-2 & 3 \\\end{array}\right)$, $C=\left(\begin{array}{cc}0 & 3 \\4 & 2 \\1 & 1 \\\end{array}\right)$, $D=\left(\begin{array}{cc}5 & 1 \\3 & 2 \\\end{array}\right)$, what will be the result of the following expressions?
 
-1. $(A+B)+C$
+1. $\left(A+B\right)+C$
 2. $(C+B)+A$
 3. $A-2B+\frac{1}{2}C$
 4. $A+D$
@@ -243,7 +263,7 @@ To multiply two matrices together, their inner dimensions must be the same. That
 
 Given a $(p × r)$ matrix $\boldsymbol{A}$ and a $(r × q)$ matrix $\boldsymbol{B}$, the matrix product $\boldsymbol{A\,B}$ defines a $(p × q)$ matrix, whose elements are given by
 
-$$ (A B)_{i,j} = \sum_k  A_{i,k} B_{k,j} $$
+$$ \left(A B\right)_{i,j} = \sum_k  A_{i,k} B_{k,j} $$
 ```
 
 To perform matrix multiplication, we must take elements in a row on the left hand side matrix and multiply with elements in a column on the right hand side matrix. The process is illustrate graphically here for a (2 x 2 ) example:
@@ -482,7 +502,7 @@ $$\begin{array}{c}2 x-3 y&=1 \\9 y-6 x&=-3 \end{array}$$ (inconsistent_2)
 
 Both sets of equations can be written in the form $A \mathbf{x} =\mathbf{b}$, where $A=\left(\begin{array}{cc}2 & -3 \\-6 & 9 \end{array}\right)$. In that case, $\det(A)=18-18=0$, which means that the inverse matrix cannot be calculated and the problems do not have a unique solution for $\underline{x}$.
 
-The two equations in {eq}`inconsistent_1` are inconsistent, and so there is no solution, whilst the two equations in {eq}`inconsistent_1` have an infinite number of solutions satisfying $y=\frac{2}{3}x-\frac{1}{3}$.
+The two equations in {eq}`inconsistent_1` are inconsistent, and so there is no solution, whilst the two equations in {eq}`inconsistent_2` have an infinite number of solutions satisfying $y=\frac{2}{3}x-\frac{1}{3}$.
 
 You can also think about this problem graphically. In general, the determinant of a (2x2) matrix $A$ is zero if and only if the second row is a constant multiple of the first row. For a problem of the form $A\underline{x}=\underline{b}$, this means that the two lines have the same gradient. Either the equations represent distinct parallel lines, with no common points, or they represent the same line, with all points in common. In this example, both lines have gradient 2/3.
 
@@ -602,7 +622,7 @@ We can liken the result to the operation of getting dressed/undressed: If you pu
 
 {numref}`Question %s <q_matrix_definitions>`
 
-$A$ is a (3 x 2) matrix, since it has 3 rows and 2 columns.
+1\. $A$ is a (3 x 2) matrix, since it has 3 rows and 2 columns.
 Matrices are nearly always given upper case letters as variable names.
 
 $\mathbf{b}$ is a (3 x 1) matrix.
@@ -612,25 +632,25 @@ To represent a bold letter by hand, we underline it like this: $\underline{b}$
 $c$ is a (1 x 1) matrix.
 In that case, we could dispense with the brackets, since it is equivalent to a scalar (basically just a single value).
 
-The element in the second row and third column of the transpose matrix is the element in the third row and second column of the original matrix, so the result is -4.
+2\. The element in the second row and third column of the transpose matrix is the element in the third row and second column of the original matrix, so the result is -4.
 
-The only upper-triangular matrix here is $A$. Matrix $B$ is an upper anti-triangular matrix and matrix $C$ is a lower triangular matrix
+3\. The only upper-triangular matrix here is $A$. Matrix $B$ is an upper anti-triangular matrix and matrix $C$ is a lower triangular matrix
 
 {numref}`Question %s <q_matrix_arithmetic>`
 
 Matrix addition is both commutative and associative, because it is an elementwise operation and therefore has the same properties as addition of real numbers. Thus, the first two expressions give the same result:
 
-$(A+B)+C=A+(B+C)=\left(\begin{array}{cc}1-4+0 & 2+1+3 \\-1+1+4 & 0+2+2 \\3-2+1 & 1+3+1 \\\end{array}\right)=\left(\begin{array}{cc}-3 & 6 \\4 & 4 \\2 & 5 \\\end{array}\right)$
+1\. and 2\. $(A+B)+C=A+(B+C)=\left(\begin{array}{cc}1-4+0 & 2+1+3 \\-1+1+4 & 0+2+2 \\3-2+1 & 1+3+1 \\\end{array}\right)=\left(\begin{array}{cc}-3 & 6 \\4 & 4 \\2 & 5 \\\end{array}\right)$
 
-The third expression gives:
+3\. $A-2 B+\frac{C}{2}=\left(\begin{array}{cc}1+8+0 & 2-2+\frac{3}{2} \\-1-2+2 & 0-4+1 \\3+4+\frac{1}{2} & 1-6+\frac{1}{2} \\\end{array}\right)=\left(\begin{array}{cc}9 & \frac{3}{2} \\-1 & -3 \\\frac{15}{2} & -\frac{9}{2} \\\end{array}\right)$
 
-$A-2 B+\frac{C}{2}=\left(\begin{array}{cc}1+8+0 & 2-2+\frac{3}{2} \\-1-2+2 & 0-4+1 \\3+4+\frac{1}{2} & 1-6+\frac{1}{2} \\\end{array}\right)=\left(\begin{array}{cc}9 & \frac{3}{2} \\-1 & -3 \\\frac{15}{2} & -\frac{9}{2} \\\end{array}\right)$
-
-Since $A$ and $D$ are not the same order, these two matrices cannot be added
+4\. Since $A$ and $D$ are not the same order, these two matrices cannot be added
 
 {numref}`Question %s <q_matrix_multiplication>`
 
-$A B=\left(\begin{array}{cc}(3\times 2)+(1 \times-3)+(-2\times 1) & (3\times 3)+(1\times 0)+(-2\times 1) \$0\times 2)+(2\times -3)+(4\times 1) & (0\times 3)+(2\times 0)+(4\times 1) \end{array}\right)=\left(\begin{array}{cc}1 & 7 \\-2 & 4 \end{array}\right)$
+1\.
+
+$A B=\left(\begin{array}{cc}(3\times 2)+(1 \times-3)+(-2\times 1) & (3\times 3)+(1\times 0)+(-2\times 1) \\ (0\times 2)+(2\times -3)+(4\times 1) & (0\times 3)+(2\times 0)+(4\times 1) \end{array}\right)=\left(\begin{array}{cc}1 & 7 \\-2 & 4 \end{array}\right)$
 
 We multiplied a (2x3) matrix with a (3x2) matrix. The result is a (2x2) matrix. The two results are not the same, and do not even have the same dimensions.
 
@@ -638,17 +658,16 @@ In general, $A B\neq B A$, even when $A$ and $B$ are square matrices. That is, m
 
 According to the definition $A B_{i,j}= \sum _k A_{i,k} B_{k,j}$, whilst $B A_{i,j}= \sum _k A_{k,j} B_{i,k}$. In the first case, the multiplied elements come from the $i^{th}$ row of $A$ and the $j^{th}$ column of B. In the second case, the multiplied elements come from the $i^{th}$ row of $B$ and the $j^{th}$ column of $A$
 
-The given result cannot be calculated because the inner dimensions do not match. That is, the number of columns in the left hand matrix does not match the number of rows in the right hand matrix.
+2\. The given result cannot be calculated because the inner dimensions do not match. That is, the number of columns in the left hand matrix does not match the number of rows in the right hand matrix.
 
-Since A is (2x3) and C is (3x4), the result A C is (2x4). Notice that the result C A is impossible.
-The element in the second row and third column is given by multiplying the second row of A and the third column of C to give (0*2)+(2*-3)+(4*8)=26.
+3\. Since A is (2x3) and C is (3x4), the result A C is (2x4). Notice that the result C A is impossible. The element in the second row and third column is given by multiplying the second row of A and the third column of C to give $(0\times 2)+(2 \times -3)+(4 \times8)=26$.
 
-$\left(\begin{array}{ccc}9 & 4 & 8 \\4 & 3 & 5 \\4 & 4 & 7 \\\end{array}\right)$
+4\. $\left(\begin{array}{ccc}9 & 4 & 8 \\4 & 3 & 5 \\4 & 4 & 7 \\\end{array}\right)$
 
 
 {numref}`Question %s <q_matrix_identity>`
 
-Your first guess might be just a lot of number 1's:
+1\. Your first guess might be just a lot of number 1's:
 
 $ \left( \begin{matrix} 1 & 1 \\ 1 & 1 \end{matrix} \right) $
 
@@ -664,7 +683,7 @@ Check by yourself that this the results in
 
 $ \left(\begin{matrix} 1 & 0 \\ 0 & 1 \end{matrix} \right) \left(\begin{matrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{matrix} \right) = \left(\begin{matrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{matrix} \right) \left(\begin{matrix} 1 & 0 \\ 0 & 1 \end{matrix} \right) = \left(\begin{matrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{matrix} \right) $
 
-To arrive at the general result for any dimension, we will use the definition of matrix multiplication. We require that
+2\. To arrive at the general result for any dimension, we will use the definition of matrix multiplication. We require that
 
 $ (A I)_{i,j} = (I A)_{i,j} = A_{i,j} $
 
@@ -682,9 +701,7 @@ The $(3 × 3)$ identity matrix $\boldsymbol{I}_3$ therefore is:
 
 $ \left( \begin{matrix} 1 & 0 & 0\\ 0 & 1 &0 \\ 0 & 0 & 1\end{matrix} \right) $
 
-
-
-The key here is to recognise that $(A+\lambda)B$ is not valid, since a scalar can't be meaningfully added to a matrix. But by recognising that $B=IB$ where I is the identity matrix, we can write
+3\. The key here is to recognise that $(A+\lambda)B$ is not valid, since a scalar can't be meaningfully added to a matrix. But by recognising that $B=IB$ where I is the identity matrix, we can write
 
 $AB+\lambda B=AB+\lambda IB=(A+\lambda I)B$
 
@@ -703,17 +720,17 @@ If you wrote down any other answer then it is incorrect!
 
 {numref}`Question %s <q_twobytwo_inverse>`
 
- $\det  M=(2*4)-(-1*3)=11$
+1\. $\det  M=(2*4)-(-1*3)=11$
 
 
-We have $A=\left(\begin{array}{cc}2 & -3 \\3 & -2 \end{array}\right)$, $\mathbf{x}=\left(\begin{array}{c}x\\y\end{array}\right)$,   $b=\left(\begin{array}{c}1 \\2 \end{array}\right)$
+2\. We have $A=\left(\begin{array}{cc}2 & -3 \\3 & -2 \end{array}\right)$, $\mathbf{x}=\left(\begin{array}{c}x\\y\end{array}\right)$,   $b=\left(\begin{array}{c}1 \\2 \end{array}\right)$
 
 $A^{-1}=\frac{1}{9-4}\left(\begin{array}{cc}-2 & 3 \\-3 & 2 \end{array}\right)$ so $\mathbf{x}=\frac{1}{5} \left(\begin{array}{cc}-2 & 3 \\-3 & 2 \end{array}\right) \left(\begin{array}{c}1 \\2 \end{array}\right)=\frac{1}{5} \left(\begin{array}{c}6-2 \\4-3 \end{array}\right)$
 
 That is, $x=4/5$, $y=1/5$. (Check it!)
 
 
-$B=A^{-1}\left(\begin{array}{cc}5 & 3 \\4 & 3 \end{array}\right)=-\frac{1}{3} \left(\begin{array}{cc}1 & -2 \\-2 & 1 \end{array}\right) \left(\begin{array}{cc}5 & 3 \\4 & 3 \end{array}\right)=-\frac{1}{3} \left(\begin{array}{cc}5-8 & 3-6 \\4-10 & 3-6 \end{array}\right)=\left(\begin{array}{cc} 1 & 1 \\2 & 1 \\\end{array}\right)$
+3\. $B=A^{-1}\left(\begin{array}{cc}5 & 3 \\4 & 3 \end{array}\right)=-\frac{1}{3} \left(\begin{array}{cc}1 & -2 \\-2 & 1 \end{array}\right) \left(\begin{array}{cc}5 & 3 \\4 & 3 \end{array}\right)=-\frac{1}{3} \left(\begin{array}{cc}5-8 & 3-6 \\4-10 & 3-6 \end{array}\right)=\left(\begin{array}{cc} 1 & 1 \\2 & 1 \\\end{array}\right)$
 
 {numref}`Question %s <q_dodgy_proof>`
 
