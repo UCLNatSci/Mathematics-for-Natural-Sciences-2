@@ -84,7 +84,7 @@ P \rightarrow Q
 
 By way of an example, consider this classic proof:
 
-<b>Statement:</b> Prove that for $x \in \mathbb{R}$, if the function $x^2 - 6x + 5$ is even, then $x$ is odd.\\
+<b>Statement:</b> Prove that for $x \in \mathbb{R}$, if the function $x^2 - 6x + 5$ is even, then $x$ is odd.
 
 <b>Proof:</b> Suppose $x \in \mathbb{R}$ is even, when we need to show $x^2 - 6x + 5$ is odd.  
 Lets write $x = 2a$ with some $a \in \mathbb{Z}$, then we find that:
@@ -102,7 +102,7 @@ We can summarise this technique as:
     \{P_1,\,P_2,\,P_3,\,\dots,\,P_n\} \vdash Q
 ```
 
-<b>Statement:</b> Prove that for $x \in \mathbb{R}$, if the function $x^2 - 6x + 5$ is even, then $x$ is odd.\\
+<b>Statement:</b> Prove that for $x \in \mathbb{R}$, if the function $x^2 - 6x + 5$ is even, then $x$ is odd.
 
 <b>Proof:</b> For $x \in \mathbb{R}$, lets write $x^2 - 6x + 5 = 2a$ with some $a \in \mathbb{N}$, so that $x^2 - 6x + 5$ is even, then we find that:
 ```{math}
