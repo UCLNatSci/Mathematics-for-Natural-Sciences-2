@@ -184,6 +184,7 @@ We can consider some simple arguments and their validity:
 - $\{p,\,p \rightarrow q\} \vdash q$
 
 We should consider the truth table for all the premises and see if they can be simultaneously true:
+
 |$p$ | $q$ | $p \rightarrow q$ |
 |---|---|---|
 | T | T | T |
@@ -197,12 +198,13 @@ Since in the first line the case of the two premises $\{p,\,p\rightarrow q\}$ be
 
 We should consider the truth table for all the premises and see if they can be simultaneously true:
 
-|$p$ | $q$ | $p \rightarrow q$ | $q$ |
+|$p$ | $q$ | $p \rightarrow q$ |
 |---|---|---|
 | T | T | T |
 | T | F | F |
 | F | T | T |
 | F | F | T |
+
 
 Since in the first line the case of the two premises being simultaneously true results in $p$ being true and in the third line the case of the two premises being 
 true results in $p$ being false, this argument is fallacy.

@@ -606,12 +606,32 @@ but otherwise it is false.  An argument that is not true is known as a <b>fallac
 <li><p><span class="math notranslate nohighlight">\(\{p \rightarrow q,\,q\} \vdash p\)</span></p></li>
 </ul>
 <p>We should consider the truth table for all the premises and see if they can be simultaneously true:</p>
-<p>|<span class="math notranslate nohighlight">\(p\)</span> | <span class="math notranslate nohighlight">\(q\)</span> | <span class="math notranslate nohighlight">\(p \rightarrow q\)</span> | <span class="math notranslate nohighlight">\(q\)</span> |
-|—|—|—|
-| T | T | T |
-| T | F | F |
-| F | T | T |
-| F | F | T |</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(p\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(q\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(p \rightarrow q\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>T</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+</tr>
+<tr class="row-odd"><td><p>T</p></td>
+<td><p>F</p></td>
+<td><p>F</p></td>
+</tr>
+<tr class="row-even"><td><p>F</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+</tr>
+<tr class="row-odd"><td><p>F</p></td>
+<td><p>F</p></td>
+<td><p>T</p></td>
+</tr>
+</tbody>
+</table>
 <p>Since in the first line the case of the two premises being simultaneously true results in <span class="math notranslate nohighlight">\(p\)</span> being true and in the third line the case of the two premises being
 true results in <span class="math notranslate nohighlight">\(p\)</span> being false, this argument is fallacy.</p>
 </div>
