@@ -114,11 +114,11 @@ therefore $|\nabla_{\hat{\bf u}} \phi|$ is maximised when $\theta = 0$ - The gra
 direction of maximum increase of $\phi$ (i.e. a maxima).  
 
 Likewise the directional derivative is zero when $\theta = \pi/2$, i.e. tangential surfaces, which would be given by $\phi({\bf r}) = C$ which is 
-ons dimension lower than the dimension of the problem (therefore in 3D, these would be surface areas, in 2D there would be contour lines).
+one dimension lower than the dimension of the problem (therefore in 3D, these would be surface areas, in 2D there would be contour lines).
 
 As example, lets consider $\phi = \exp(-(x^2+y^2)$ defined over the domain $x^2 + y^2 \leq 1$:
 ```{math}
-\nabla phi = \begin{pmatrix}
+\nabla \phi = \begin{pmatrix}
  -2x\,\exp(-(x^2+y^2) \\
  -2y\,\exp(-(x^2+y^2)
 \end{pmatrix} = -2\,\exp(-(x^2+y^2) \begin{pmatrix}
@@ -137,6 +137,6 @@ $\bf r=r_0$).  The gradients are perpendicular to the contour lines and point to
 which from {numref}`scalarvectorfield` we know is a maxima.
 ```
 
-### Total Differenetial
+% ## Total Differenetial
 
-Recall from our discussions about partial derivatives, we can also find a <em>total derivative</em>
+% Recall from our discussions about partial derivatives, we can also find a <em>total derivative</em>
