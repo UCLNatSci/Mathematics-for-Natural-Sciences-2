@@ -1,0 +1,392 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Techniques of Proof &#8212; Mathematics for Natural Sciences 2</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Propositional Logic" href="propositionallogic.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Mathematics for Natural Sciences 2</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Welcome to NSCI0027
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../VectorCalculus/partialdifferentiation.html">
+   Multivariable Calculus
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../VectorCalculus/integrationprelim.html">
+   Integration Preliminaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../VectorCalculus/vectoralgebra.html">
+   Vectors and Vector Algebra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../VectorCalculus/calculusonfields.html">
+   Vector Fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="setsnotation.html">
+   Set Theory
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="propositionallogic.html">
+   Propositional Logic
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Techniques of Proof
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/ProofLogic/methodsofproof.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#proof-by-contradiction">
+   Proof by Contradiction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#proof-by-counterexample">
+   Proof by Counterexample
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#proof-by-induction">
+   Proof by Induction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#proof-by-contraposition">
+   Proof by Contraposition
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#proof-by-construction">
+   Proof By Construction
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="techniques-of-proof">
+<h1>Techniques of Proof<a class="headerlink" href="#techniques-of-proof" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="proof-by-contradiction">
+<h2>Proof by Contradiction<a class="headerlink" href="#proof-by-contradiction" title="Permalink to this headline">¶</a></h2>
+<p>This is a form of proof that seeks to establish if the validity of a proposition by showing that by assuming the proposition is false leads to a direct contradiction.
+We can summarise the technique as:</p>
+<ol class="simple">
+<li><p>The statement to proven <span class="math notranslate nohighlight">\(P\)</span> is assumed false, i.e. assume <span class="math notranslate nohighlight">\(\lnot{P}\)</span> is true.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lnot P\)</span> leads directly to assertions <span class="math notranslate nohighlight">\(Q\)</span> and <span class="math notranslate nohighlight">\(R\)</span>, such that <span class="math notranslate nohighlight">\(R = \lnot Q\)</span>.</p></li>
+<li><p>Since <span class="math notranslate nohighlight">\(Q\)</span> and <span class="math notranslate nohighlight">\(\lnot Q\)</span> cannot both be simultaneously true, <span class="math notranslate nohighlight">\(\lnot P\)</span> is also untrue and hence <span class="math notranslate nohighlight">\(P\)</span> is true.</p></li>
+</ol>
+<p>By way of an example, consider this classic proof from Euclid:</p>
+<p><b>Statement:</b> There are infinitely many prime numbers</p>
+<p><b>Proof:</b>
+The <b>fundamental theorem of arithmetic</b> states that every positive integer (other than 1) can be represented in exactly one way (apart from rearrangement)
+as a product of one or more primes.  Assume there are <span class="math notranslate nohighlight">\(n\)</span> finitely many prime numbers <span class="math notranslate nohighlight">\(p\)</span>, then consider the number <span class="math notranslate nohighlight">\(N\)</span> composed of the product of all of the
+prime numbers from the first <span class="math notranslate nohighlight">\(p_1 = 2\)</span> up to the largest <span class="math notranslate nohighlight">\(p_n\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[N = p_1.p_2...p_{n-1}.p_n\]</div>
+<p>Now consider the number <span class="math notranslate nohighlight">\(N+1\)</span></p>
+<div class="math notranslate nohighlight">
+\[N+1 = p_1.p_2...p_{n-1}.p_n+1\]</div>
+<p>Since <span class="math notranslate nohighlight">\(N+1\)</span> is another whole number, it should be divisible by one of the prime numbers <span class="math notranslate nohighlight">\(p={p_1,p_2,\dots,p_n}\)</span>, but clearly it cannot be - hence contradiction.  Therefore
+there cannot be a finite number of primes and so there are an infinite number of primes. <b>QED</b></p>
+</div>
+<div class="section" id="proof-by-counterexample">
+<h2>Proof by Counterexample<a class="headerlink" href="#proof-by-counterexample" title="Permalink to this headline">¶</a></h2>
+<p>This is form of proof that disproves a proposition by giving an example which is a direct contradiction to the proposition.  This technique is often used to disprove a
+universal (or <span class="math notranslate nohighlight">\(\forall\)</span> type) statement.  We can summarise the technique as:</p>
+<ol class="simple">
+<li><p>The statement <span class="math notranslate nohighlight">\(P\)</span> is shown to be satisfied by an example <span class="math notranslate nohighlight">\(E_1\)</span> and it is assumed</p></li>
+<li><p>A further example <span class="math notranslate nohighlight">\(E_2\)</span> is shown not to satisfy <span class="math notranslate nohighlight">\(P\)</span> or leads directly to assertion <span class="math notranslate nohighlight">\(\lnot P\)</span> being true.</p></li>
+<li><p>Since <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(\lnot P\)</span> cannot both be simultaneously true, <span class="math notranslate nohighlight">\(P\)</span> cannot be held to be always true (although can be shown to sometimes hold).</p></li>
+</ol>
+<p>By way of an example, consider this classic proof:</p>
+<p><b>Statement:</b> <span class="math notranslate nohighlight">\(\forall n \in \mathbb{R}\)</span>, if <span class="math notranslate nohighlight">\(n^2\)</span> is divisible by 4, then <span class="math notranslate nohighlight">\(n\)</span> is divisible by 4.</p>
+<p><b>Proof:</b>
+We can find examples where this proof holds for both divisibility, e.g. <span class="math notranslate nohighlight">\(n=4\)</span>, <span class="math notranslate nohighlight">\(n^2 = 16\)</span> and non-divisibility e.g. <span class="math notranslate nohighlight">\(n=5\)</span>, <span class="math notranslate nohighlight">\(n^2=25\)</span>.</p>
+<p>However a counter example to this statement would be given by <span class="math notranslate nohighlight">\(n = 6\)</span>, <span class="math notranslate nohighlight">\(n^2=36\)</span>, here the <span class="math notranslate nohighlight">\(n^2\)</span> statement passes the test but <span class="math notranslate nohighlight">\(n\)</span> statement in the
+proposition does not - hence the statement can be shown not be always true.  <b>QED</b></p>
+</div>
+<div class="section" id="proof-by-induction">
+<h2>Proof by Induction<a class="headerlink" href="#proof-by-induction" title="Permalink to this headline">¶</a></h2>
+<p>This is a form of proof where a proposition, which is shown to be true for an initial case and a more general case <span class="math notranslate nohighlight">\(n\)</span>, which then allows a higher general
+case <span class="math notranslate nohighlight">\(n+1\)</span> to be shown to be true.  This idea of a higher and higher steps on a proof ladder can be quite a powerful technique.  We can summarise the technique as:</p>
+<ol class="simple">
+<li><p>A proposition <span class="math notranslate nohighlight">\(P_n\)</span> is shown to be true for an initial or base case, i.e. we can prove that the statement holds for <span class="math notranslate nohighlight">\(0, 1\)</span>.</p></li>
+<li><p>Assuming that the proposition is true for <span class="math notranslate nohighlight">\(P_n\)</span>, we can show that it is true for <span class="math notranslate nohighlight">\(P_{n+1}\)</span>.</p></li>
+</ol>
+<p>By way of an example, consider this classic proof:</p>
+<p><b>Statement:</b> Prove that</p>
+<div class="math notranslate nohighlight">
+\[S_n = 1 + 2 + \dots + n = \frac{n(n+1)}{2}\]</div>
+<p><b>Proof:</b>
+<span class="math notranslate nohighlight">\(S_1 = \frac{1(2)}{2} = 1\)</span> which is true, <span class="math notranslate nohighlight">\(S_2 = \frac{2(3)}{2} = 3\)</span> which is also true. Assuming that <span class="math notranslate nohighlight">\(S_n\)</span> is true, we need to see if we can prove <span class="math notranslate nohighlight">\(S_{n+1} = \frac{(n+1)(n+2)}{2}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}S_{n+1} &amp;=&amp;\, 1 + 2 + \dots + n + n+1 = S_{n} + n+1 \\ 
+&amp;=&amp;\, \frac{n(n+1)}{2} + n+1 \\ 
+&amp;=&amp;\, \frac{n(n+1) + 2(n+1)}{2} \\ 
+&amp;=&amp;\, \frac{(n+1)(n+2)}{2}\end{split}\]</div>
+<p><b>QED</b></p>
+</div>
+<div class="section" id="proof-by-contraposition">
+<h2>Proof by Contraposition<a class="headerlink" href="#proof-by-contraposition" title="Permalink to this headline">¶</a></h2>
+<p>We can summarise this technique as:</p>
+<ol class="simple">
+<li><p>Given a statement <span class="math notranslate nohighlight">\(P\)</span> which leads directly to assertion <span class="math notranslate nohighlight">\(Q\)</span>, i.e.</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[P \rightarrow Q \]</div>
+<ol class="simple">
+<li><p>First order tells us that the negation of statement <span class="math notranslate nohighlight">\(Q\)</span>, i.e. <span class="math notranslate nohighlight">\(\neg Q\)</span> leads directly to the negation of assertion <span class="math notranslate nohighlight">\(P\)</span>, i.e. <span class="math notranslate nohighlight">\(\neg P\)</span>,</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\neg Q \rightarrow \neg P\]</div>
+<p>By way of an example, consider this classic proof:</p>
+<p><b>Statement:</b> Prove that for <span class="math notranslate nohighlight">\(x \in \mathbb{R}\)</span>, if the function <span class="math notranslate nohighlight">\(x^2 - 6x + 5\)</span> is even, then <span class="math notranslate nohighlight">\(x\)</span> is odd.\</p>
+<p><b>Proof:</b> Suppose <span class="math notranslate nohighlight">\(x \in \mathbb{R}\)</span> is even, when we need to show <span class="math notranslate nohighlight">\(x^2 - 6x + 5\)</span> is odd.<br />
+Lets write <span class="math notranslate nohighlight">\(x = 2a\)</span> with some <span class="math notranslate nohighlight">\(a \in \mathbb{Z}\)</span>, then we find that:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}x^2 - 6x + 5 &amp;=&amp; (2a)^2 - 6(2a) + 5 \\
+&amp;=&amp; 4a^2 - 12a + 5 \\
+&amp;=&amp; 2(2a^2 - 6a + 2) + 1\end{split}\]</div>
+<p>which we can see clearly is odd.  Thus when <span class="math notranslate nohighlight">\(x^2 - 6x + 5\)</span> is odd, <span class="math notranslate nohighlight">\(x\)</span> is even and therefore when <span class="math notranslate nohighlight">\(x^2 - 6x + 5\)</span> is even, <span class="math notranslate nohighlight">\(x\)</span> is odd. <b>QED</b></p>
+</div>
+<div class="section" id="proof-by-construction">
+<h2>Proof By Construction<a class="headerlink" href="#proof-by-construction" title="Permalink to this headline">¶</a></h2>
+<p>We can summarise this technique as:</p>
+<ol class="simple">
+<li><p>Given a statement <span class="math notranslate nohighlight">\(P_1\)</span>, we construct  <span class="math notranslate nohighlight">\(P_2,\,P_3,\,\dots,\,P_n\)</span> which leads to assertion <span class="math notranslate nohighlight">\(Q\)</span>,</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[    \{P_1,\,P_2,\,P_3,\,\dots,\,P_n\} \vdash Q\]</div>
+<p><b>Statement:</b> Prove that for <span class="math notranslate nohighlight">\(x \in \mathbb{R}\)</span>, if the function <span class="math notranslate nohighlight">\(x^2 - 6x + 5\)</span> is even, then <span class="math notranslate nohighlight">\(x\)</span> is odd.\</p>
+<p><b>Proof:</b> For <span class="math notranslate nohighlight">\(x \in \mathbb{R}\)</span>, lets write <span class="math notranslate nohighlight">\(x^2 - 6x + 5 = 2a\)</span> with some <span class="math notranslate nohighlight">\(a \in \mathbb{N}\)</span>, so that <span class="math notranslate nohighlight">\(x^2 - 6x + 5\)</span> is even, then we find that:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}x^2 - 6x + 5 &amp;=&amp; 2a  \\
+x^2 - 6x &amp;=&amp; 2a - 5 \\
+x(x-6) &amp;=&amp; 2a - 5\end{split}\]</div>
+<p>Since the RHS is clearly odd by construction, this means the LHS is odd.  Given that ODD <span class="math notranslate nohighlight">\(\times\)</span> ODD = ODD, then given <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(x-6\)</span> differ by an even numbers, <span class="math notranslate nohighlight">\(x\)</span> must be an odd number. <b>QED</b></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./ProofLogic"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="propositionallogic.html" title="previous page">Propositional Logic</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Natural Sciences<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
