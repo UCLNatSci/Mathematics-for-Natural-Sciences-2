@@ -334,4 +334,155 @@ F(x,\, y) = y\sin{x} + x\sin{y} + xy + k
 ``` 
 and $k$ here is an arbitrary constant.
 
-% ## Stationary Points
+## Stationary Points
+
+If we think about stationary points in multivariable calculus:
+
+- When $\frac{\partial f}{\partial x}=0$ the function is stationary (flat) with respect to the $x$-axis
+- When $\frac{\partial f}{\partial y}=0$ the function is stationary (flat) with respect to the $y$-axis
+
+Recall from the multivariate chain rule:
+
+```{math}
+\mathrm{d}f = \frac{\partial f}{\partial x}\mathrm{d}x+\frac{\partial f}{\partial y}\mathrm{d}y
+```
+
+then it is apparent that when both $\frac{\partial f}{\partial x}=0$ AND $\frac{\partial f}{\partial y}=0$, then the instantaneous rate of change of 
+$f$ is zero in any direction.  
+
+As an example, lets think again about the function in {numref}`surf1`, $f(x,\, y) = x^3 - y^3 - 2xy + 2$ can be found by solving $f_x = f_y = 0$ simultaneously:
+
+```{math}
+3y^2+2x&=&\,0\\
+3x^2-2y&=&\,0
+```
+
+In general, it may be very difficult (or impossible!) to solve nonlinear equations by hand, and so we would need to resort to numerical methods. In this case, 
+however, we can proceed by rearranging one of the equations to substitute into the other, to obtain
+
+```{math}
+3\left(\frac{3}{2}x^2\right)^2+2x=0 \quad \leftrightarrow\quad x(27x^3+8)=0
+```
+
+This equation has solutions $x=0$ and $x=-\frac{2}{3}$, as well as a complex conjugate pair of solutions $\frac{1}{3}(1\pm\sqrt{3}i)$, which we will discard here.  
+
+Hence, the stationary points are $(0,\, 0,\, 2)$ and $\left(-\frac{2}{3},\, \frac{2}{3},\, \frac{62}{27}\right)$, where we write $(x,\, y,\, f)$
+
+   
+### Classification of Stationary Points
+For a function $f(x,\,y)$, we might expect to classify stationary points using $f_{xx}$ and $f_{yy}$. After all:
+
+- $f_{xx}$ tells us the function concavity parallel to the $y$ axis
+- $f_{yy}$ tells us the function concavity parallel to the $x$ axis 
+- If the function is concave up in both the $x$ and $y$ directions through a stationary point, then intuition tells us that this is a local minimum. 
+- If the function is concave down in both the $x$ and $y$ directions through a stationary point, then our intuition tells us that this is a local maximum.
+
+We can examine this through some example functions, 
+
+```{figure} ../figures/bowl1.png
+---
+name: bowl1
+---
+Left: Local minimum of a function $f(x,y)$. The red lines illustrate the concave upwards behaviour in the $x$ and $y$ directions $f_{xx}>0$, $f_{yy}>0$. 
+The black contours are plotted on the surface at constant height. Notice that they form rings around the stationary point.
+Right: Contour plot showing locations in the $(x,y)$ plane where $f(x,y)$ is constant. 
+The colour scheme blue$\rightarrow$yellow is used to indicate the height of the contours, with yellow representing points at higher elevation. 
+The contour plot shows that the function is increasing in all directions away from the stationary point.
+```
+    
+```{figure} ../figures/hill1.png
+---
+name: hill1
+---
+<b>Left Panel:</b> Local maximum of a function $f(x,y)$. The red lines illustrate the concave downwards behaviour in the $x$ and $y$ directions $f_{xx}<0$, $f_{yy}<0$. 
+The black contours are plotted on the surface at constant height. Notice that they form rings around the stationary point.
+<b>Right Panel:</b> Contour plot showing locations in the $(x,y)$ plane where $f(x,y)$ is constant. The colour scheme blue$\rightarrow$yellow is used to indicate 
+the height of the contours, with yellow representing points at higher elevation. The contour plot shows that the function is decreasing in all directions away 
+from the stationary point.
+```
+   
+
+However, a local maximum/minimum is not the only type of stationary point that a surface $f(x,\,y)$ can have. For instance, a surface may have a stationary 
+point that sits where the function is concave upwards with respect to one axis and concave downwards with respect to the other axis. This type of point is called 
+a saddle point (it looks like a saddle for a horse). The figure below shows an example:
+
+```{figure} ../figures/saddle1.png
+---
+name: saddle1
+---
+<b>Left Panel:</b> Saddle point of a function $f(x,\,y)$. The red lines illustrate the concave upwards/downwards behaviour in the $x$ and $y$ directions 
+$f_{xx}>0$, $f_{yy}<0$. The black contours are plotted on the surface at constant height. Notice that the contours cross at a saddle point.
+<b>Right Panel:</b> Contour plot showing locations in the $(x,\,y)$ plane where $f(x,\,y)$ is constant. The colour scheme blue$\rightarrow$yellow 
+is used to indicate the height of the contours, with yellow representing points at higher elevation. The contour plot also shows the function concavity in the 
+$x,\, y$ directions.
+```
+   
+
+We conclude that at a stationary point, if $f_{xx}$ and $f_{yy}$ are opposite sign, then the point is a saddle point. However, the converse is not 
+necessarily true! It turns out that we can have a saddle point where $f_{xx}$ and $f_{yy}$ are both the same sign (or even when they are both zero). An example is 
+illustrated in the figure below. In this case the saddle point is not aligned squarely with the $(x,\,y)$ coordinate directions.
+
+   
+```{figure} ../figures/squish1.png
+---
+name: squish
+---
+<b>Left Panel:</b> Saddle point of a function $f(x,y)$ that is not aligned squarely with the $x,\,y$ axes. The red lines illustrate the concave upwards 
+behaviour in the $x$ and $y$ directions $f_{xx}>0$, $f_{yy}>0$. The curve has concave down behaviour at approximately $45^{\circ}$ to the $x$-axis.
+<b>Right Panel:</b> Contour plot showing locations in the $(x,\,y)$ plane where $f(x,\,y)$ is constant. The colour scheme blue$\rightarrow$yellow is used 
+to indicate the height of the contours, with yellow representing points at higher elevation. The competing concave up/down behaviour is apparent from the contour plot.
+```
+
+So, it turns outs that the condition for a maximum/minimum is more complicated than we first thought! A valid classification algorithm is presented in the box below.
+
+The result can be proved by utilising a multivariate Taylor series expansion about the stationary point and retaining terms only up to quadratic order 
+so that the shape of the function may be inferred from the properties of a quadratic. Neglecting the higher order terms in the expansion is justified in the 
+limit approaching the stationary point. We have not studied the multivariate chain rule, so the proof is not presented here.
+
+### Hessian Matrix
+
+At a stationary point, $f_x(x_0,y_0)=f_y(x_0,y_0)$, we calculate the determinant of the Hessian matrix at $H(x_0,\,y_0)$:
+
+```{math}
+\det(H) = \begin{vmatrix}
+f_{xx}&f_{xy}\\
+f_{yx}&f_{yy}
+\end{vmatrix}=f_{xx}f_{yy}-(f_{xy})^2
+```
+
+This can have a few different outcomes:
+
+- If $\det(H(x_0,\,y_0))>0$ then the point is a local max/min, depending on the signs of $f_{xx}$ and $f_{yy}$.
+- If $\det(H(x_0,\,y_0))<0$ then the point is a saddle.
+- If $\det(H(x_0,\,y_0))=0$ then the test is inconclusive and further analysis is needed.
+  
+
+Example 2:
+
+Lets classify the stationary points of the function $f=x^3-y^3-2xy+2$, we already found that the stationary points are located at $(0,0,2)$ and 
+$\left(-\frac{2}{3},\frac{2}{3},\frac{62}{27}\right)$.
+
+Calculating the Hessian determinant components $f_{xx}=6x, \quad f_{yy}=-6y, \quad f_{xy}=f_{yx}=-2$ and therefore:
+
+```{math}
+\det(H(x,y)) = \begin{vmatrix} 
+6x &-2 \\ 
+-2 &-6y 
+\end{vmatrix}=-36xy-4
+```
+
+$\det(H(0,0))=-4<0$ so the origin is a saddle point.
+
+$\det\biggr(H\biggr(-\frac{2}{3},\frac{2}{3}\biggr)\biggr)=12>0$ and $f_{xx}\left(-\frac{2}{3},\frac{2}{3}\right)<0$, so the point 
+$\left(-\frac{2}{3}\frac{2}{3}\right)$ is a local maximum.
+
+A contour plot of the function, shown in {numref}`example1`, confirms these findings.
+```{figure} ../figures/example1.png
+---
+name: example1
+---
+Contour plot of $f=x^3-y^3-2xy+2$, showing stationary points clearly.
+```
+
+
+  

@@ -22,15 +22,15 @@
       
 
     
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
@@ -38,6 +38,7 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -45,7 +46,7 @@
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
@@ -74,10 +75,6 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
-      
-      
       <img src="../_static/logo.png" class="logo" alt="logo">
       
       
@@ -87,7 +84,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -206,7 +203,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
@@ -243,10 +240,10 @@
                 
   <div class="section" id="functions">
 <h1>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h1>
-<p>We are probably quite used to thinking about functions when we plot graphs, such as <span class="math notranslate nohighlight">\(y = x^2\)</span> or <span class="math notranslate nohighlight">\(y = \cos(x)\)</span>, as we idealise in <a class="reference internal" href="#functionmachine"><span class="std std-numref">Fig. 19</span></a>.</p>
+<p>We are probably quite used to thinking about functions when we plot graphs, such as <span class="math notranslate nohighlight">\(y = x^2\)</span> or <span class="math notranslate nohighlight">\(y = \cos(x)\)</span>, as we idealise in <a class="reference internal" href="#functionmachine"><span class="std std-numref">Fig. 24</span></a>.</p>
 <div class="figure align-default" id="functionmachine">
 <img alt="../_images/functionmachine2.png" src="../_images/functionmachine2.png" />
-<p class="caption"><span class="caption-number">Fig. 19 </span><span class="caption-text">These are examples of a much richer mathematical structure, known as <b>Functions</b>, which we can roughly think of as a machine with inputs and outputs.</span><a class="headerlink" href="#functionmachine" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 24 </span><span class="caption-text">These are examples of a much richer mathematical structure, known as <b>Functions</b>, which we can roughly think of as a machine with inputs and outputs.</span><a class="headerlink" href="#functionmachine" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="definition-of-a-function">
 <h2>Definition of a Function<a class="headerlink" href="#definition-of-a-function" title="Permalink to this headline">¶</a></h2>
@@ -300,10 +297,10 @@ denotes the set of elements of A each whose image belongs to <span class="math n
 f(b) &amp;=&amp;\, u \\
 f(c) &amp;=&amp;\, r \\
 f(d) &amp;=&amp;\, s\end{split}\]</div>
-<p>which we can represent graphically as shown in <a class="reference internal" href="#functionimage"><span class="std std-numref">Fig. 20</span></a>.</p>
+<p>which we can represent graphically as shown in <a class="reference internal" href="#functionimage"><span class="std std-numref">Fig. 25</span></a>.</p>
 <div class="figure align-default" id="functionimage">
 <img alt="../_images/FunctionImage.png" src="../_images/FunctionImage.png" />
-<p class="caption"><span class="caption-number">Fig. 20 </span><span class="caption-text">The image <span class="math notranslate nohighlight">\(f\)</span> is the set <span class="math notranslate nohighlight">\(\text{Im}(f) = \{r,\,s,\,u\}\)</span> and the element is <span class="math notranslate nohighlight">\(t \notin \text{Im}(f)\)</span> because <span class="math notranslate nohighlight">\(t\)</span> is not the image of any
+<p class="caption"><span class="caption-number">Fig. 25 </span><span class="caption-text">The image <span class="math notranslate nohighlight">\(f\)</span> is the set <span class="math notranslate nohighlight">\(\text{Im}(f) = \{r,\,s,\,u\}\)</span> and the element is <span class="math notranslate nohighlight">\(t \notin \text{Im}(f)\)</span> because <span class="math notranslate nohighlight">\(t\)</span> is not the image of any
 element of <span class="math notranslate nohighlight">\(A\)</span> under <span class="math notranslate nohighlight">\(f\)</span> - therefore any elements not mapped <em>to</em> under a function are excluded from the image of the function.</span><a class="headerlink" href="#functionimage" title="Permalink to this image">¶</a></p>
 </div>
 <p>The graph of <span class="math notranslate nohighlight">\(f\)</span> is the following set of ordered pairs:</p>
@@ -318,19 +315,19 @@ some intermediate set.  Consider functions <span class="math notranslate nohighl
 the <b>Composition</b> of <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span>, denoted by:</p>
 <div class="math notranslate nohighlight">
 \[g \circ f \equiv g(f(a)\]</div>
-<p>where we emphasise that the composition of functions is read from right to left (and not left to right as we usually do).  We picture this in <a class="reference internal" href="#compositefunction"><span class="std std-numref">Fig. 21</span></a>.</p>
+<p>where we emphasise that the composition of functions is read from right to left (and not left to right as we usually do).  We picture this in <a class="reference internal" href="#compositefunction"><span class="std std-numref">Fig. 26</span></a>.</p>
 <div class="figure align-default" id="compositefunction">
 <img alt="../_images/compositefunction.png" src="../_images/compositefunction.png" />
-<p class="caption"><span class="caption-number">Fig. 21 </span><span class="caption-text">We can introduce more and more functions and same rules apply, however we can also consider the associativity of the composition of functions, given
+<p class="caption"><span class="caption-number">Fig. 26 </span><span class="caption-text">We can introduce more and more functions and same rules apply, however we can also consider the associativity of the composition of functions, given
 <span class="math notranslate nohighlight">\(f:\,A \rightarrow B,\,g:\, b \rightarrow C,\,h:\,c \rightarrow D\)</span>.</span><a class="headerlink" href="#compositefunction" title="Permalink to this image">¶</a></p>
 </div>
 <p>The composition law is also associative:</p>
 <div class="math notranslate nohighlight">
 \[h \circ(g \circ f) = (h \circ g) \circ f\]</div>
-<p>which we prove diagrammatically in <a class="reference internal" href="#assocompfns"><span class="std std-numref">Fig. 22</span></a>.</p>
+<p>which we prove diagrammatically in <a class="reference internal" href="#assocompfns"><span class="std std-numref">Fig. 27</span></a>.</p>
 <div class="figure align-default" id="assocompfns">
 <img alt="../_images/associativitycompositefunctions.png" src="../_images/associativitycompositefunctions.png" />
-<p class="caption"><span class="caption-number">Fig. 22 </span><span class="caption-text">Associativity of composite functions.</span><a class="headerlink" href="#assocompfns" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 27 </span><span class="caption-text">Associativity of composite functions.</span><a class="headerlink" href="#assocompfns" title="Permalink to this image">¶</a></p>
 </div>
 <p>Lets think about two simple functions:</p>
 <div class="math notranslate nohighlight">
@@ -369,10 +366,10 @@ of some element <span class="math notranslate nohighlight">\(a \in A\)</span>, i
 \[f^{-1} \circ f = I_A \Longleftrightarrow f \circ f^{-1} = I_B\]</div>
 <p>A function <span class="math notranslate nohighlight">\(f:\,A \rightarrow B\)</span> is invertible iff <span class="math notranslate nohighlight">\(f\)</span> is both one-to-one and onto.  We say such functions are a <b>one-to-one correspondence</b>
 between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>.  This is also known as a <b>Bijection</b>.</p>
-<p>Lets consider functions <span class="math notranslate nohighlight">\(f_1:\,A \rightarrow B\)</span>, <span class="math notranslate nohighlight">\(f_2:\,B \rightarrow C\)</span>, <span class="math notranslate nohighlight">\(f_3:\,C \rightarrow D\)</span>, <span class="math notranslate nohighlight">\(f_4:\,D \rightarrow E\)</span> depicted in <a class="reference internal" href="#invertibilityoffunctions"><span class="std std-numref">Fig. 23</span></a></p>
+<p>Lets consider functions <span class="math notranslate nohighlight">\(f_1:\,A \rightarrow B\)</span>, <span class="math notranslate nohighlight">\(f_2:\,B \rightarrow C\)</span>, <span class="math notranslate nohighlight">\(f_3:\,C \rightarrow D\)</span>, <span class="math notranslate nohighlight">\(f_4:\,D \rightarrow E\)</span> depicted in <a class="reference internal" href="#invertibilityoffunctions"><span class="std std-numref">Fig. 28</span></a></p>
 <div class="figure align-default" id="invertibilityoffunctions">
 <img alt="../_images/InvertibilityOfFunctions.png" src="../_images/InvertibilityOfFunctions.png" />
-<p class="caption"><span class="caption-number">Fig. 23 </span><span class="caption-text">Invertibility of four functions which map elements from <span class="math notranslate nohighlight">\(A \rightarrow B \rightarrow C \rightarrow D \rightarrow E\)</span>.</span><a class="headerlink" href="#invertibilityoffunctions" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 28 </span><span class="caption-text">Invertibility of four functions which map elements from <span class="math notranslate nohighlight">\(A \rightarrow B \rightarrow C \rightarrow D \rightarrow E\)</span>.</span><a class="headerlink" href="#invertibilityoffunctions" title="Permalink to this image">¶</a></p>
 </div>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(f_1:\,A \rightarrow B\)</span> is one-to-one but not onto, since every element in <span class="math notranslate nohighlight">\(A\)</span> has a unique image, but element <span class="math notranslate nohighlight">\(3 \in B\)</span> does not have any image under <span class="math notranslate nohighlight">\(f_1\)</span>.</p></li>
@@ -405,36 +402,16 @@ between <span class="math notranslate nohighlight">\(A\)</span> and <span class=
               </div>
               
         
+        <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="setsnotation.html" title="previous page">Set Theory</a>
+    <a class='right-next' id="next-link" href="propositionallogic.html" title="next page">Propositional Logic</a>
 
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="setsnotation.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Set Theory</p>
-            </div>
-        </a>
-    </div>
-     <div id="next">
-        <a class="right-next" href="propositionallogic.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Propositional Logic</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
-</div>
+        </div>
         
         </div>
     </div>
-    <footer class="footer">
+    <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
         
