@@ -137,6 +137,36 @@ $\bf r=r_0$).  The gradients are perpendicular to the contour lines and point to
 which from {numref}`scalarvectorfield` we know is a maxima.
 ```
 
-% ## Total Differenetial
+## Total Differenetial
+Recall from our discussions about partial derivatives, we can also find a <em>total derivative</em> of a scalar field $\phi$:
 
-% Recall from our discussions about partial derivatives, we can also find a <em>total derivative</em>
+```{math}
+\mathrm{d} \phi = \frac{\partial \phi}{\partial x}\mathrm{d}x + \frac{\partial \phi}{\partial y}\mathrm{d}y + \frac{\partial \phi}{\partial x}\mathrm{d}z
+```
+
+which clearly says what is the differential change in $\phi$ as we make some path along the field, changing $\x,\, y\, z$. If we define the <em>vectorial line element</em>
+
+```{math}
+\mathrm{d}{\bf r} = \begin{pmatrix} \mathrm{d}x \\ \mathrm{d}y \\\mathrm{d}z \end{pmatrix} 
+``` 
+
+which means we can re-write the total differential in the form
+
+```{math}
+\mathrm{d}\phi = \nabla \phi \cdot \mathrm{d}{\bf}
+```
+
+and likewise the total differential of a vector fiedl ${\bf A(r)}$ is found from:
+
+```{math}
+\mathrm{d} {\bf A} = \frac{\partial {\bf A}}{\partial x}\mathrm{d}x + \frac{\partial {\bf A}}{\partial y}\mathrm{d}y + \frac{\partial {\bf A}}{\partial x}\mathrm{d}z
+```
+
+We can read this by considering only changes in $x$ and keeping $y,\, z$ cxonstant, then:
+
+```{math}
+\mathrm{d} {\bf A} = \frac{\partial {\bf A}}{\partial x}\mathrm{d}x 
+```
+
+which means $\bf A$ is a vector changing by some quantifty $\mathrm{d} {\bf A}$ which is parallel to the vector $\partial {\bf A}/\partial x$.  Therefore for some 
+general set of changes in the $x,\, y,\, z$ directions, we can break down the vectors changes in each axes direction.

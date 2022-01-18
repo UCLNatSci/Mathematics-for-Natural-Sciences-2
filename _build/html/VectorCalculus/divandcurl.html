@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Surface Integrals &#8212; Mathematics for Natural Sciences 2</title>
+    <title>Divergence and Curl &#8212; Mathematics for Natural Sciences 2</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -55,8 +55,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Volume Integrals" href="volumeintegrals.html" />
-    <link rel="prev" title="Coordinate System Changes" href="coordinatesystems.html" />
+    <link rel="next" title="Coordinate System Changes" href="coordinatesystems.html" />
+    <link rel="prev" title="Vector Fields" href="calculusonfields.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -114,9 +114,9 @@
    Vector Fields
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="divandcurl.html">
-   Divergence
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Divergence and Curl
   </a>
  </li>
  <li class="toctree-l1">
@@ -124,8 +124,8 @@
    Coordinate System Changes
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="surfaceintegrals.html">
    Surface Integrals
   </a>
  </li>
@@ -200,7 +200,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/VectorCalculus/surfaceintegrals.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/VectorCalculus/divandcurl.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -231,8 +231,13 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#cartesian-coordinates">
-   Cartesian Coordinates
+  <a class="reference internal nav-link" href="#divergence">
+   Divergence
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#curl">
+   Curl
   </a>
  </li>
 </ul>
@@ -246,10 +251,35 @@
         
               <div>
                 
-  <div class="section" id="surface-integrals">
-<h1>Surface Integrals<a class="headerlink" href="#surface-integrals" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="cartesian-coordinates">
-<h2>Cartesian Coordinates<a class="headerlink" href="#cartesian-coordinates" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="divergence-and-curl">
+<h1>Divergence and Curl<a class="headerlink" href="#divergence-and-curl" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="divergence">
+<h2>Divergence<a class="headerlink" href="#divergence" title="Permalink to this headline">¶</a></h2>
+<p>If we start with a vector field <span class="math notranslate nohighlight">\({\bf A(r)} = A_x({\bf r})\,\hat{\bf x} + A_y({\bf r})\,\hat{\bf y} + A_z({\bf r})\,\hat{\bf z} \)</span>, then we can define the quantity
+<span class="math notranslate nohighlight">\(\nabla\cdot {\bf A(r)}\)</span>, i.e. taking the scalar product of the gradient operator with vector field <span class="math notranslate nohighlight">\({\bf A(r)} \)</span> which since the gradient vector is a differential
+operator, means the expression has the form:</p>
+<div class="math notranslate nohighlight">
+\[\nabla\cdot {\bf A(r)} = \partial_x\, A_x + \partial_y\, A_y + \partial_z\, A_z\]</div>
+<p>This is often known as the <b>Divergence</b> of <span class="math notranslate nohighlight">\({\bf A(r)}\)</span> or <span class="math notranslate nohighlight">\(\text{div}\,{\bf A(r)}\)</span>.  Note that in the case of operators we need to be a little careful of the
+ordering of the terms, since <span class="math notranslate nohighlight">\({\bf A(r)}\cdot \nabla\)</span> would give:</p>
+<div class="math notranslate nohighlight">
+\[{\bf A(r)} \cdot \nabla= A_x\,\partial_x  + A_y\,\partial_y  + A_z\,\partial_z  \]</div>
+<p>which is also a differential operator, waiting to act on another term, which we apply on the right.</p>
+<p>Lets see the effect of this on two vector fields <span class="math notranslate nohighlight">\({\bf A_1(r)} = \begin{pmatrix} x \\ y \\ 0\end{pmatrix}, \,{\bf A_2(r)} = \begin{pmatrix} y \\ -x \\ 0\end{pmatrix}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\nabla \cdot {\bf A_1} &amp;=&amp;\, \partial_x\, x + \partial_y\, y + \partial_z\, 0 = 2 \\
+\nabla \cdot {\bf A_2} &amp;=&amp;\, \partial_x\, y - \partial_y\, x + \partial_z\, 0 = 0 \end{split}\]</div>
+</div>
+<div class="section" id="curl">
+<h2>Curl<a class="headerlink" href="#curl" title="Permalink to this headline">¶</a></h2>
+<p>We can likewise take a vector field $<span class="math notranslate nohighlight">\({\bf A(r)} \)</span> and here take the vector product with the gradient operator <span class="math notranslate nohighlight">\(\nabla\times {\bf A(r)}\)</span>, which has components:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\nabla\times {\bf A(r)} = \begin{pmatrix} \partial_y\, A_z - \partial_z\, A_y \\ \partial_z\, A_x - \partial_x\, A_z \\ \partial_x\, A_y - \partial_y\, A_x  \end{pmatrix}\end{split}\]</div>
+<p>which is know as the <b>Curl</b> or <b>Rotation</b> of the vector field <span class="math notranslate nohighlight">\(\bf A(r)\)</span> or <span class="math notranslate nohighlight">\(\text{curl}\,{\bf A(r)}\)</span>.</p>
+<p>To see the effects of these, lets consider again <span class="math notranslate nohighlight">\({\bf A_1(r)} = \begin{pmatrix} x \\ y \\ 0\end{pmatrix}, \,{\bf A_2(r)} = \begin{pmatrix} y \\ -x \\ 0\end{pmatrix}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\nabla \times {\bf A_1} &amp;=&amp;\, \begin{pmatrix} \partial_y\, 0 + \partial_z\, x \\ \partial_z\, y - \partial_x\, 0 \\ \partial_x\, y - \partial_y\, x  \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix} \\
+\nabla \times {\bf A_2} &amp;=&amp;\, \begin{pmatrix} \partial_y\, 0 + \partial_z\, x \\ \partial_z\, y - \partial_x\, 0 \\ \partial_x\, x + \partial_y\, y  \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ 2 \end{pmatrix}\end{split}\]</div>
 </div>
 </div>
 
@@ -278,8 +308,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="coordinatesystems.html" title="previous page">Coordinate System Changes</a>
-    <a class='right-next' id="next-link" href="volumeintegrals.html" title="next page">Volume Integrals</a>
+    <a class='left-prev' id="prev-link" href="calculusonfields.html" title="previous page">Vector Fields</a>
+    <a class='right-next' id="next-link" href="coordinatesystems.html" title="next page">Coordinate System Changes</a>
 
         </div>
         

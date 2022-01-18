@@ -55,7 +55,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Set Theory" href="../ProofLogic/setsnotation.html" />
+    <link rel="next" title="Divergence" href="divandcurl.html" />
     <link rel="prev" title="Vectors and Vector Algebra" href="vectoralgebra.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -112,6 +112,31 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Vector Fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="divandcurl.html">
+   Divergence
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="coordinatesystems.html">
+   Coordinate System Changes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="surfaceintegrals.html">
+   Surface Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="volumeintegrals.html">
+   Volume Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vectorcalctheorems.html">
+   Vector Calculus Theorems
   </a>
  </li>
  <li class="toctree-l1">
@@ -226,6 +251,11 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#total-differenetial">
+   Total Differenetial
+  </a>
  </li>
 </ul>
 
@@ -351,6 +381,26 @@ which from <a class="reference internal" href="#scalarvectorfield"><span class="
 </div>
 </div>
 </div>
+<div class="section" id="total-differenetial">
+<h2>Total Differenetial<a class="headerlink" href="#total-differenetial" title="Permalink to this headline">¶</a></h2>
+<p>Recall from our discussions about partial derivatives, we can also find a <em>total derivative</em> of a scalar field <span class="math notranslate nohighlight">\(\phi\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{d} \phi = \frac{\partial \phi}{\partial x}\mathrm{d}x + \frac{\partial \phi}{\partial y}\mathrm{d}y + \frac{\partial \phi}{\partial x}\mathrm{d}z\]</div>
+<p>which clearly says what is the differential change in <span class="math notranslate nohighlight">\(\phi\)</span> as we make some path along the field, changing <span class="math notranslate nohighlight">\(\x,\, y\, z\)</span>. If we define the <em>vectorial line element</em></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathrm{d}{\bf r} = \begin{pmatrix} \mathrm{d}x \\ \mathrm{d}y \\\mathrm{d}z \end{pmatrix} \end{split}\]</div>
+<p>which means we can re-write the total differential in the form</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{d}\phi = \nabla \phi \cdot \mathrm{d}{\bf}\]</div>
+<p>and likewise the total differential of a vector fiedl <span class="math notranslate nohighlight">\({\bf A(r)}\)</span> is found from:</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{d} {\bf A} = \frac{\partial {\bf A}}{\partial x}\mathrm{d}x + \frac{\partial {\bf A}}{\partial y}\mathrm{d}y + \frac{\partial {\bf A}}{\partial x}\mathrm{d}z\]</div>
+<p>We can read this by considering only changes in <span class="math notranslate nohighlight">\(x\)</span> and keeping <span class="math notranslate nohighlight">\(y,\, z\)</span> cxonstant, then:</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{d} {\bf A} = \frac{\partial {\bf A}}{\partial x}\mathrm{d}x \]</div>
+<p>which means <span class="math notranslate nohighlight">\(\bf A\)</span> is a vector changing by some quantifty <span class="math notranslate nohighlight">\(\mathrm{d} {\bf A}\)</span> which is parallel to the vector <span class="math notranslate nohighlight">\(\partial {\bf A}/\partial x\)</span>.  Therefore for some
+general set of changes in the <span class="math notranslate nohighlight">\(x,\, y,\, z\)</span> directions, we can break down the vectors changes in each axes direction.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -379,7 +429,7 @@ which from <a class="reference internal" href="#scalarvectorfield"><span class="
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="vectoralgebra.html" title="previous page">Vectors and Vector Algebra</a>
-    <a class='right-next' id="next-link" href="../ProofLogic/setsnotation.html" title="next page">Set Theory</a>
+    <a class='right-next' id="next-link" href="divandcurl.html" title="next page">Divergence</a>
 
         </div>
         
