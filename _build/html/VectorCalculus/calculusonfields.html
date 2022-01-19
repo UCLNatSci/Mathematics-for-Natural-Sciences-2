@@ -55,7 +55,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Divergence" href="divandcurl.html" />
+    <link rel="next" title="1st Order Variations of Fields" href="divandcurl.html" />
     <link rel="prev" title="Vectors and Vector Algebra" href="vectoralgebra.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -105,6 +105,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="lineintegrals.html">
+   Line Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="vectoralgebra.html">
    Vectors and Vector Algebra
   </a>
@@ -116,7 +121,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="divandcurl.html">
-   Divergence
+   1st Order Variations of Fields
   </a>
  </li>
  <li class="toctree-l1">
@@ -296,10 +301,10 @@ examples include velocity, force, and electric and magnetic fields.  Mathematica
  A_y ({\bf r})\\
  A_z ({\bf r}) 
 \end{pmatrix}\end{split}\]</div>
-<p>We can picture these fields in <a class="reference internal" href="#scalarvectorfield"><span class="std std-numref">Fig. 20</span></a>, outlining the difference between scalar and vecor fields.</p>
+<p>We can picture these fields in <a class="reference internal" href="#scalarvectorfield"><span class="std std-numref">Fig. 21</span></a>, outlining the difference between scalar and vecor fields.</p>
 <div class="figure align-default" id="scalarvectorfield">
 <img alt="../_images/scalarvectorfield.png" src="../_images/scalarvectorfield.png" />
-<p class="caption"><span class="caption-number">Fig. 20 </span><span class="caption-text"><b> Left Pane:</b> An example of a two-dimensional scalar field, <span class="math notranslate nohighlight">\(\phi(x,\, y) = \exp(-(x^2+y^2))\)</span> (plotted in green on the <span class="math notranslate nohighlight">\(z\)</span> axis) defined
+<p class="caption"><span class="caption-number">Fig. 21 </span><span class="caption-text"><b> Left Pane:</b> An example of a two-dimensional scalar field, <span class="math notranslate nohighlight">\(\phi(x,\, y) = \exp(-(x^2+y^2))\)</span> (plotted in green on the <span class="math notranslate nohighlight">\(z\)</span> axis) defined
 over the domain <span class="math notranslate nohighlight">\(D\,:\,x^2 + y^2 \leq 1\)</span> (shown in red on the <span class="math notranslate nohighlight">\((x,\,y)\)</span> plane),
 <b> Center Pane:</b> Contour lines of the scalar field, showing lines of constant <span class="math notranslate nohighlight">\(\phi\)</span> in blue, within the domain <span class="math notranslate nohighlight">\(D\)</span>,
 <b> Right Pane:</b> The vector field <span class="math notranslate nohighlight">\({\bf A(r)} = \frac{1}{10}\begin{pmatrix}
@@ -372,12 +377,12 @@ one dimension lower than the dimension of the problem (therefore in 3D, these wo
  x \\
  y
 \end{pmatrix}\end{split}\]</div>
-<p>We see that for all <span class="math notranslate nohighlight">\(x,\, y\)</span> within the domain, the vector will be directed inwards, as we see in <a class="reference internal" href="#scalarfieldgradient"><span class="std std-numref">Fig. 21</span></a>.</p>
+<p>We see that for all <span class="math notranslate nohighlight">\(x,\, y\)</span> within the domain, the vector will be directed inwards, as we see in <a class="reference internal" href="#scalarfieldgradient"><span class="std std-numref">Fig. 22</span></a>.</p>
 <div class="figure align-default" id="scalarfieldgradient">
 <img alt="../_images/scalarfieldgradient.png" src="../_images/scalarfieldgradient.png" />
-<p class="caption"><span class="caption-number">Fig. 21 </span><span class="caption-text">Gradients <span class="math notranslate nohighlight">\(\nabla \phi\)</span> for a scalr field <span class="math notranslate nohighlight">\(\phi(\hat{\bf r}) = \exp(-(x^2+y^2))\)</span> at a few different points along the contour plot (denoted
+<p class="caption"><span class="caption-number">Fig. 22 </span><span class="caption-text">Gradients <span class="math notranslate nohighlight">\(\nabla \phi\)</span> for a scalr field <span class="math notranslate nohighlight">\(\phi(\hat{\bf r}) = \exp(-(x^2+y^2))\)</span> at a few different points along the contour plot (denoted
 <span class="math notranslate nohighlight">\(\bf r=r_0\)</span>).  The gradients are perpendicular to the contour lines and point toward the direction of the largest increase of <span class="math notranslate nohighlight">\(\phi\)</span>,
-which from <a class="reference internal" href="#scalarvectorfield"><span class="std std-numref">Fig. 20</span></a> we know is a maxima.</span><a class="headerlink" href="#scalarfieldgradient" title="Permalink to this image">¶</a></p>
+which from <a class="reference internal" href="#scalarvectorfield"><span class="std std-numref">Fig. 21</span></a> we know is a maxima.</span><a class="headerlink" href="#scalarfieldgradient" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
@@ -429,7 +434,7 @@ general set of changes in the <span class="math notranslate nohighlight">\(x,\, 
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="vectoralgebra.html" title="previous page">Vectors and Vector Algebra</a>
-    <a class='right-next' id="next-link" href="divandcurl.html" title="next page">Divergence</a>
+    <a class='right-next' id="next-link" href="divandcurl.html" title="next page">1st Order Variations of Fields</a>
 
         </div>
         
