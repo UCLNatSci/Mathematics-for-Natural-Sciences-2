@@ -56,7 +56,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Vector Fields" href="calculusonfields.html" />
-    <link rel="prev" title="Integration Preliminaries" href="integrationprelim.html" />
+    <link rel="prev" title="Line Integrals" href="lineintegrals.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -104,6 +104,11 @@
    Integration Preliminaries
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lineintegrals.html">
+   Line Integrals
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Vectors and Vector Algebra
@@ -112,6 +117,31 @@
  <li class="toctree-l1">
   <a class="reference internal" href="calculusonfields.html">
    Vector Fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="divandcurl.html">
+   1st Order Variations of Fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="coordinatesystems.html">
+   Coordinate System Changes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="surfaceintegrals.html">
+   Surface Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="volumeintegrals.html">
+   Volume Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vectorcalctheorems.html">
+   Vector Calculus Theorems
   </a>
  </li>
  <li class="toctree-l1">
@@ -314,10 +344,10 @@ decompsoed into a weighted sum of.</p>
 \[\begin{split}\hat{\bf x} &amp;=&amp;\, {\bf e_x} = \vec{x} = \hat{\bf i}\\
 \hat{\bf y} &amp;=&amp;\, {\bf e_y} = \vec{y} = \hat{\bf j}\\
 \hat{\bf z} &amp;=&amp;\, {\bf e_z} = \vec{z} = \hat{\bf k}\end{split}\]</div>
-<p>To see how these visually fit together, see <a class="reference internal" href="#cartcoords"><span class="std std-numref">Fig. 15</span></a>.  We note that all the coordinates meet at right angles and that we have defined <em>right handed axes</em>.</p>
+<p>To see how these visually fit together, see <a class="reference internal" href="#cartcoords"><span class="std std-numref">Fig. 16</span></a>.  We note that all the coordinates meet at right angles and that we have defined <em>right handed axes</em>.</p>
 <div class="figure align-default" id="cartcoords">
 <img alt="../_images/CartesianCoordinateSystem.png" src="../_images/CartesianCoordinateSystem.png" />
-<p class="caption"><span class="caption-number">Fig. 15 </span><span class="caption-text"><b>Left Pane</b>: Graphical breakdown of the Cartesian coordinate system with vector path in red,
+<p class="caption"><span class="caption-number">Fig. 16 </span><span class="caption-text"><b>Left Pane</b>: Graphical breakdown of the Cartesian coordinate system with vector path in red,
 <b>Right Pane</b>: The differences between left handed (top) and right handed (bottom) axes.</span><a class="headerlink" href="#cartcoords" title="Permalink to this image">¶</a></p>
 </div>
 <p>We can also write coordinates in so-called <b>index notation</b>:</p>
@@ -327,10 +357,10 @@ decompsoed into a weighted sum of.</p>
 <div class="section" id="addition-and-scaling-of-vectors">
 <h2>Addition and Scaling of Vectors<a class="headerlink" href="#addition-and-scaling-of-vectors" title="Permalink to this headline">¶</a></h2>
 <p>If we start with the basis vectors as building blocks of our coordinate system, then we can write any three dimensional Cartesian coordinate in terms of
-weighted basis vectors, we can see this in <a class="reference internal" href="#basisvectors"><span class="std std-numref">Fig. 16</span></a>.</p>
+weighted basis vectors, we can see this in <a class="reference internal" href="#basisvectors"><span class="std std-numref">Fig. 17</span></a>.</p>
 <div class="figure align-default" id="basisvectors">
 <img alt="../_images/basisvectors.png" src="../_images/basisvectors.png" />
-<p class="caption"><span class="caption-number">Fig. 16 </span><span class="caption-text">Breakdown of vector <span class="math notranslate nohighlight">\(\bf a = a_x \,\hat{\bf x} + a_y \,\hat{\bf y} + a_z \,\hat{\bf z}\)</span>.</span><a class="headerlink" href="#basisvectors" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 17 </span><span class="caption-text">Breakdown of vector <span class="math notranslate nohighlight">\(\bf a = a_x \,\hat{\bf x} + a_y \,\hat{\bf y} + a_z \,\hat{\bf z}\)</span>.</span><a class="headerlink" href="#basisvectors" title="Permalink to this image">¶</a></p>
 </div>
 <p>As an example we can define two vectors <span class="math notranslate nohighlight">\(\bf v_1,\, v_2\)</span></p>
 <div class="math notranslate nohighlight">
@@ -419,11 +449,11 @@ v_3 = |{\bf v}| = \sqrt{{a_x}^2 + {a_y}^2 + {a_z}^2} \]</div>
 <h2>Scalar Product / Dot Product<a class="headerlink" href="#scalar-product-dot-product" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="geometric-definiton">
 <h3>Geometric Definiton<a class="headerlink" href="#geometric-definiton" title="Permalink to this headline">¶</a></h3>
-<p>Lets consider two vectors <span class="math notranslate nohighlight">\(\bf A,\, B\)</span>, as shown in <a class="reference internal" href="#scalarprojection"><span class="std std-numref">Fig. 17</span></a>.  We can consider the scalar projection of the vector <span class="math notranslate nohighlight">\(\bf B\)</span> on to the vector <span class="math notranslate nohighlight">\(\bf A\)</span>, where we resolve the
+<p>Lets consider two vectors <span class="math notranslate nohighlight">\(\bf A,\, B\)</span>, as shown in <a class="reference internal" href="#scalarprojection"><span class="std std-numref">Fig. 18</span></a>.  We can consider the scalar projection of the vector <span class="math notranslate nohighlight">\(\bf B\)</span> on to the vector <span class="math notranslate nohighlight">\(\bf A\)</span>, where we resolve the
 parallel components of <span class="math notranslate nohighlight">\(\bf B\)</span> in the direction of vector <span class="math notranslate nohighlight">\(\bf A\)</span>.</p>
 <div class="figure align-default" id="scalarprojection">
 <img alt="../_images/scalarprojection.png" src="../_images/scalarprojection.png" />
-<p class="caption"><span class="caption-number">Fig. 17 </span><span class="caption-text"><b>Left Pane</b>: Vectors <span class="math notranslate nohighlight">\(\bf A,\, B\)</span> which share a common coordinate and span an angle <span class="math notranslate nohighlight">\(\theta\)</span> between them,
+<p class="caption"><span class="caption-number">Fig. 18 </span><span class="caption-text"><b>Left Pane</b>: Vectors <span class="math notranslate nohighlight">\(\bf A,\, B\)</span> which share a common coordinate and span an angle <span class="math notranslate nohighlight">\(\theta\)</span> between them,
 <b>Right Pane</b> The scalar projection of the vector <span class="math notranslate nohighlight">\(\bf B\)</span> on to the vector <span class="math notranslate nohighlight">\(\bf A\)</span>, which by trigonometry gives the length <span class="math notranslate nohighlight">\(|{\bf B}| \cos\theta\)</span>.</span><a class="headerlink" href="#scalarprojection" title="Permalink to this image">¶</a></p>
 </div>
 <p>If we multiply these two distances, this is <b>Scalar Product</b> of the vectors:</p>
@@ -481,10 +511,10 @@ can be constructed from the basis vectors:</p>
 \hat{\bf y} \times \hat{\bf z} &amp;=&amp;\, \hat{\bf x} \\
 \hat{\bf z} \times \hat{\bf x} &amp;=&amp;\, \hat{\bf y} \end{split}\]</div>
 <p>In general however we write the cross product between two vectors as a new vector, normal to the other two (following the right hand rule), as depicted in
-<a class="reference internal" href="#vectorproduct"><span class="std std-numref">Fig. 18</span></a>.</p>
+<a class="reference internal" href="#vectorproduct"><span class="std std-numref">Fig. 19</span></a>.</p>
 <div class="figure align-default" id="vectorproduct">
 <img alt="../_images/VectorProduct.png" src="../_images/VectorProduct.png" />
-<p class="caption"><span class="caption-number">Fig. 18 </span><span class="caption-text"><b>Left Pane</b>: Graphical depiction of the cross product, producing a vector <span class="math notranslate nohighlight">\(\bf a \times b\)</span> which is normal to both <span class="math notranslate nohighlight">\(\bf a,\, b\)</span>,
+<p class="caption"><span class="caption-number">Fig. 19 </span><span class="caption-text"><b>Left Pane</b>: Graphical depiction of the cross product, producing a vector <span class="math notranslate nohighlight">\(\bf a \times b\)</span> which is normal to both <span class="math notranslate nohighlight">\(\bf a,\, b\)</span>,
 <b>Right Pane</b>: The area of the parallogram produced by vectors <span class="math notranslate nohighlight">\(\bf a,\, b\)</span> is found from <span class="math notranslate nohighlight">\(|\bf a \times b|\)</span></span><a class="headerlink" href="#vectorproduct" title="Permalink to this image">¶</a></p>
 </div>
 <p>This means that if vectors span an angle <span class="math notranslate nohighlight">\(\theta\)</span>, then we need to resolve the perpendicular component:</p>
@@ -553,12 +583,12 @@ the answer is zero:</p>
 <div class="math notranslate nohighlight">
 \[\bf a \cdot (b \times c)\]</div>
 <p>since the combination of <span class="math notranslate nohighlight">\(\bf b \times c\)</span> produces a vector, which we can then do a scalar multiplcation with <span class="math notranslate nohighlight">\(\bf a\)</span>.  Therefore this produces a scalar result.</p>
-<p>Geometrically this is related to the parallepiped, as depicted in <a class="reference internal" href="#parallepiped"><span class="std std-numref">Fig. 19</span></a>, where the magnitude of this result is the shapes volume:</p>
+<p>Geometrically this is related to the parallepiped, as depicted in <a class="reference internal" href="#parallepiped"><span class="std std-numref">Fig. 20</span></a>, where the magnitude of this result is the shapes volume:</p>
 <div class="math notranslate nohighlight">
 \[V = |{\bf a \cdot (b \times c)}|\]</div>
 <div class="figure align-default" id="parallepiped">
 <img alt="../_images/parallepiped.png" src="../_images/parallepiped.png" />
-<p class="caption"><span class="caption-number">Fig. 19 </span><span class="caption-text">A parallepiped, composed from three vectors <span class="math notranslate nohighlight">\(\bf a, \,b,\,c\)</span>.</span><a class="headerlink" href="#parallepiped" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 20 </span><span class="caption-text">A parallepiped, composed from three vectors <span class="math notranslate nohighlight">\(\bf a, \,b,\,c\)</span>.</span><a class="headerlink" href="#parallepiped" title="Permalink to this image">¶</a></p>
 </div>
 <p>We can also evaluate the triple scalar product from a matrix determinant:</p>
 <div class="math notranslate nohighlight">
@@ -606,7 +636,7 @@ the answer is zero:</p>
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="integrationprelim.html" title="previous page">Integration Preliminaries</a>
+    <a class='left-prev' id="prev-link" href="lineintegrals.html" title="previous page">Line Integrals</a>
     <a class='right-next' id="next-link" href="calculusonfields.html" title="next page">Vector Fields</a>
 
         </div>

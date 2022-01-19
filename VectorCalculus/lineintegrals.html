@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coordinate System Changes &#8212; Mathematics for Natural Sciences 2</title>
+    <title>Line Integrals &#8212; Mathematics for Natural Sciences 2</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -55,8 +55,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Surface Integrals" href="surfaceintegrals.html" />
-    <link rel="prev" title="Divergence" href="divandcurl.html" />
+    <link rel="next" title="Vectors and Vector Algebra" href="vectoralgebra.html" />
+    <link rel="prev" title="Integration Preliminaries" href="integrationprelim.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -104,6 +104,11 @@
    Integration Preliminaries
   </a>
  </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Line Integrals
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vectoralgebra.html">
    Vectors and Vector Algebra
@@ -116,11 +121,11 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="divandcurl.html">
-   Divergence
+   1st Order Variations of Fields
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="coordinatesystems.html">
    Coordinate System Changes
   </a>
  </li>
@@ -200,7 +205,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/VectorCalculus/coordinatesystems.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/VectorCalculus/lineintegrals.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -231,18 +236,8 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#cartesian-coordinates">
-   Cartesian Coordinates
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#spherical-polar-coordinaes">
-   Spherical Polar Coordinaes
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#cylindrical-polar-coordinates">
-   Cylindrical Polar Coordinates
+  <a class="reference internal nav-link" href="#calculating-line-integrals">
+   Calculating Line Integrals
   </a>
  </li>
 </ul>
@@ -256,17 +251,76 @@
         
               <div>
                 
-  <div class="section" id="coordinate-system-changes">
-<h1>Coordinate System Changes<a class="headerlink" href="#coordinate-system-changes" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="cartesian-coordinates">
-<h2>Cartesian Coordinates<a class="headerlink" href="#cartesian-coordinates" title="Permalink to this headline">¶</a></h2>
-<p>In our discussion of vectors, we looked at the Cartesian coordinate system</p>
+  <div class="section" id="line-integrals">
+<h1>Line Integrals<a class="headerlink" href="#line-integrals" title="Permalink to this headline">¶</a></h1>
+<p>Following on from the idea of breaking up a function into infintesimal sections <span class="math notranslate nohighlight">\(\mathrm{d} s\)</span>, we can think about a path through a vector field <span class="math notranslate nohighlight">\(\bf A(r)\)</span>, as depicted
+in <a class="reference internal" href="#lineintegral"><span class="std std-numref">Fig. 15</span></a>.  Starting from some vector <span class="math notranslate nohighlight">\(\bf r_A\)</span> we can follow some path through the vector field (which we denote <span class="math notranslate nohighlight">\(C\)</span>), with the path following the
+field’s direction at each point before finishing at point <span class="math notranslate nohighlight">\(\bf r_B\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[I = \int_C {\bf G(r)} \cdot \mathrm{d}{\bf r}\]</div>
+<div class="figure align-default" id="lineintegral">
+<img alt="../_images/lineintegral.png" src="../_images/lineintegral.png" />
+<p class="caption"><span class="caption-number">Fig. 15 </span><span class="caption-text">Ilustration of a line integral, with <span class="math notranslate nohighlight">\(I = \int_C {\bf G(r)}\cdot \mathrm{d}{\bf r}\)</span></span><a class="headerlink" href="#lineintegral" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="spherical-polar-coordinaes">
-<h2>Spherical Polar Coordinaes<a class="headerlink" href="#spherical-polar-coordinaes" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="cylindrical-polar-coordinates">
-<h2>Cylindrical Polar Coordinates<a class="headerlink" href="#cylindrical-polar-coordinates" title="Permalink to this headline">¶</a></h2>
+<p>We see that that this is a scalar, found from the scalar product of <span class="math notranslate nohighlight">\(\bf G\)</span> with the differential line element <span class="math notranslate nohighlight">\(\mathrm{d}{\bf r}\)</span>.</p>
+<p>IF we pick a closed path, we call this a <b>Loop Integral</b>:</p>
+<div class="math notranslate nohighlight">
+\[I = \oint_C {\bf G(r)} \cdot \mathrm{d}{\bf r}\]</div>
+<div class="section" id="calculating-line-integrals">
+<h2>Calculating Line Integrals<a class="headerlink" href="#calculating-line-integrals" title="Permalink to this headline">¶</a></h2>
+<p>Whilst the notation for a line integral looks compact, it does not really make it clear <em>how</em> we can evaluate over a path <span class="math notranslate nohighlight">\(C\)</span>.  In order to make progress,
+we need to parametrise the path, lets say with some variable <span class="math notranslate nohighlight">\(t\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}t &amp;\rightarrow&amp;\, {\bf r}(t) \\
+[a\, b] &amp;\rightarrow&amp;\, \mathbb{R}^3\end{split}\]</div>
+<p>which means the path runs <span class="math notranslate nohighlight">\({\bf r_A} = {\bf r}(a) \rightarrow {\bf r_B} = {\bf r}(b)\)</span>.  Looking at the line element:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathrm{d}{\bf r}(t) = \begin{pmatrix} \mathrm{d}x (t) \\ \mathrm{d}y (t) \\\mathrm{d}z (t)\end{pmatrix} = 
+\begin{pmatrix} x'\mathrm{d}t \\ y'\mathrm{d}t \\ z'\mathrm{d}t\end{pmatrix} = {\bf r}'(t)\,\mathrm{d} t\end{split}\]</div>
+<p>and thus to express this as an integral in a way we can calculate it, with some parameter <span class="math notranslate nohighlight">\(t\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[I = \int_C {\bf G}(r) \cdot \mathrm{d}{\bf r} = \int_a^b {\bf G}({\bf r}(t)) \cdot {\bf r}(t)\,\mathrm{d}t
+\]</div>
+<p>As an example lets consider the vector field <span class="math notranslate nohighlight">\({\bf G(r)} = \begin{pmatrix} xy\\ -y^2 \end{pmatrix} and look at the line integral over the points 
+\)</span>(0,, 0<span class="math notranslate nohighlight">\( \rightarrow (1,2)\)</span> across different paths.  Lets pick the parameter <span class="math notranslate nohighlight">\(t\)</span> to be the <span class="math notranslate nohighlight">\(x\)</span> coordinate, so that the path if determined by
+<span class="math notranslate nohighlight">\(y = f(x), \, x \in [a,\, b]\)</span> such that:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}{\bf r)(x) = \begin{pmatrix} x\\ f(x) \end{pmatrix}\end{split}\]</div>
+<p>Lets consider different paths:</p>
+<ul class="simple">
+<li><p>Straight line path</p></li>
+</ul>
+<p>The function following by this path will be <span class="math notranslate nohighlight">\(y = 2x,\, x \in [0, 1]\)</span>, so:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}{\bf r}(x) = \begin{pmatrix} x \\ 2x \end{pmatrix}$ \end{split}\]</div>
+<p>Thus <span class="math notranslate nohighlight">\({\bf G(r(}x)\)</span> will be:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}{\bf G(r(}x) = \begin{pmatrix} 2x^2 \\ -4x^2 \end{pmatrix}$ \end{split}\]</div>
+<p>and <span class="math notranslate nohighlight">\({\bf r'}(x)\)</span> is given by:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}{\bf r}(x) = \begin{pmatrix} 1 \\ 2 \end{pmatrix}$ \end{split}\]</div>
+<p>so the line integral is found by:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}I &amp;=&amp;\, \int_C {\bf G}(r) \cdot \mathrm{d}{\bf r} = \int_0^1 {\bf G}({\bf r}(t)) \cdot {\bf r}(t)\,\mathrm{d}t = 
+\int_0^1 \begin{pmatrix} 2x^2 \\ -4x^2 \end{pmatrix} \cdot \begin{pmatrix} 1 \\ 2 \end{pmatrix} \mathrm{d}x \\
+&amp;=&amp;\, \int_0^1 \left( 2x^2 - 8x^2 \right)\,\textrm{d}x = -\int_0^1 6x^2 \,\textrm{d}x = \Big[ -\frac{6}{3}x^3\Big ]_0^1 = -2\end{split}\]</div>
+<ul class="simple">
+<li><p>Curved path following <span class="math notranslate nohighlight">\(y = x^2\)</span></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}{\bf r}(x) = \begin{pmatrix} x \\ x^2 \end{pmatrix}$ \end{split}\]</div>
+<p>Thus <span class="math notranslate nohighlight">\({\bf G(r(}x)\)</span> will be:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}{\bf G(r(}x) = \begin{pmatrix} x^3 \\ -x^4 \end{pmatrix}$ \end{split}\]</div>
+<p>and <span class="math notranslate nohighlight">\({\bf r'}(x)\)</span> is given by:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}{\bf r}(x) = \begin{pmatrix} 1 \\ 2x \end{pmatrix}$ \end{split}\]</div>
+<p>so the line integral is found by:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}I &amp;=&amp;\, \int_C {\bf G}(r) \cdot \mathrm{d}{\bf r} = \int_0^1 {\bf G}({\bf r}(t)) \cdot {\bf r}(t)\,\mathrm{d}t = 
+\int_0^1 \begin{pmatrix} x^3 \\ -x^4 \end{pmatrix} \cdot \begin{pmatrix} 1 \\ 2x \end{pmatrix} \mathrm{d}x \\
+&amp;=&amp;\, \int_0^1 \left( x^3 - 2x^5 \right)\,\textrm{d}x = \int_0^1 \left(\frac{1}{4}x^4 - \frac{2}{6}x^6 \right) \,\textrm{d}x 
+= \Big[\frac{1}{4}x^4 - \frac{1}{3}x^6 \Big ]_0^1 = -\frac{1}{12}\end{split}\]</div>
 </div>
 </div>
 
@@ -295,8 +349,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="divandcurl.html" title="previous page">Divergence</a>
-    <a class='right-next' id="next-link" href="surfaceintegrals.html" title="next page">Surface Integrals</a>
+    <a class='left-prev' id="prev-link" href="integrationprelim.html" title="previous page">Integration Preliminaries</a>
+    <a class='right-next' id="next-link" href="vectoralgebra.html" title="next page">Vectors and Vector Algebra</a>
 
         </div>
         

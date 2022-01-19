@@ -55,7 +55,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Set Theory" href="../ProofLogic/setsnotation.html" />
+    <link rel="next" title="1st Order Variations of Fields" href="divandcurl.html" />
     <link rel="prev" title="Vectors and Vector Algebra" href="vectoralgebra.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -105,6 +105,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="lineintegrals.html">
+   Line Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="vectoralgebra.html">
    Vectors and Vector Algebra
   </a>
@@ -112,6 +117,31 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Vector Fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="divandcurl.html">
+   1st Order Variations of Fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="coordinatesystems.html">
+   Coordinate System Changes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="surfaceintegrals.html">
+   Surface Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="volumeintegrals.html">
+   Volume Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vectorcalctheorems.html">
+   Vector Calculus Theorems
   </a>
  </li>
  <li class="toctree-l1">
@@ -227,6 +257,11 @@
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#total-differenetial">
+   Total Differenetial
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -266,10 +301,10 @@ examples include velocity, force, and electric and magnetic fields.  Mathematica
  A_y ({\bf r})\\
  A_z ({\bf r}) 
 \end{pmatrix}\end{split}\]</div>
-<p>We can picture these fields in <a class="reference internal" href="#scalarvectorfield"><span class="std std-numref">Fig. 20</span></a>, outlining the difference between scalar and vecor fields.</p>
+<p>We can picture these fields in <a class="reference internal" href="#scalarvectorfield"><span class="std std-numref">Fig. 21</span></a>, outlining the difference between scalar and vecor fields.</p>
 <div class="figure align-default" id="scalarvectorfield">
 <img alt="../_images/scalarvectorfield.png" src="../_images/scalarvectorfield.png" />
-<p class="caption"><span class="caption-number">Fig. 20 </span><span class="caption-text"><b> Left Pane:</b> An example of a two-dimensional scalar field, <span class="math notranslate nohighlight">\(\phi(x,\, y) = \exp(-(x^2+y^2))\)</span> (plotted in green on the <span class="math notranslate nohighlight">\(z\)</span> axis) defined
+<p class="caption"><span class="caption-number">Fig. 21 </span><span class="caption-text"><b> Left Pane:</b> An example of a two-dimensional scalar field, <span class="math notranslate nohighlight">\(\phi(x,\, y) = \exp(-(x^2+y^2))\)</span> (plotted in green on the <span class="math notranslate nohighlight">\(z\)</span> axis) defined
 over the domain <span class="math notranslate nohighlight">\(D\,:\,x^2 + y^2 \leq 1\)</span> (shown in red on the <span class="math notranslate nohighlight">\((x,\,y)\)</span> plane),
 <b> Center Pane:</b> Contour lines of the scalar field, showing lines of constant <span class="math notranslate nohighlight">\(\phi\)</span> in blue, within the domain <span class="math notranslate nohighlight">\(D\)</span>,
 <b> Right Pane:</b> The vector field <span class="math notranslate nohighlight">\({\bf A(r)} = \frac{1}{10}\begin{pmatrix}
@@ -342,14 +377,34 @@ one dimension lower than the dimension of the problem (therefore in 3D, these wo
  x \\
  y
 \end{pmatrix}\end{split}\]</div>
-<p>We see that for all <span class="math notranslate nohighlight">\(x,\, y\)</span> within the domain, the vector will be directed inwards, as we see in <a class="reference internal" href="#scalarfieldgradient"><span class="std std-numref">Fig. 21</span></a>.</p>
+<p>We see that for all <span class="math notranslate nohighlight">\(x,\, y\)</span> within the domain, the vector will be directed inwards, as we see in <a class="reference internal" href="#scalarfieldgradient"><span class="std std-numref">Fig. 22</span></a>.</p>
 <div class="figure align-default" id="scalarfieldgradient">
 <img alt="../_images/scalarfieldgradient.png" src="../_images/scalarfieldgradient.png" />
-<p class="caption"><span class="caption-number">Fig. 21 </span><span class="caption-text">Gradients <span class="math notranslate nohighlight">\(\nabla \phi\)</span> for a scalr field <span class="math notranslate nohighlight">\(\phi(\hat{\bf r}) = \exp(-(x^2+y^2))\)</span> at a few different points along the contour plot (denoted
+<p class="caption"><span class="caption-number">Fig. 22 </span><span class="caption-text">Gradients <span class="math notranslate nohighlight">\(\nabla \phi\)</span> for a scalr field <span class="math notranslate nohighlight">\(\phi(\hat{\bf r}) = \exp(-(x^2+y^2))\)</span> at a few different points along the contour plot (denoted
 <span class="math notranslate nohighlight">\(\bf r=r_0\)</span>).  The gradients are perpendicular to the contour lines and point toward the direction of the largest increase of <span class="math notranslate nohighlight">\(\phi\)</span>,
-which from <a class="reference internal" href="#scalarvectorfield"><span class="std std-numref">Fig. 20</span></a> we know is a maxima.</span><a class="headerlink" href="#scalarfieldgradient" title="Permalink to this image">¶</a></p>
+which from <a class="reference internal" href="#scalarvectorfield"><span class="std std-numref">Fig. 21</span></a> we know is a maxima.</span><a class="headerlink" href="#scalarfieldgradient" title="Permalink to this image">¶</a></p>
 </div>
 </div>
+</div>
+<div class="section" id="total-differenetial">
+<h2>Total Differenetial<a class="headerlink" href="#total-differenetial" title="Permalink to this headline">¶</a></h2>
+<p>Recall from our discussions about partial derivatives, we can also find a <em>total derivative</em> of a scalar field <span class="math notranslate nohighlight">\(\phi\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{d} \phi = \frac{\partial \phi}{\partial x}\mathrm{d}x + \frac{\partial \phi}{\partial y}\mathrm{d}y + \frac{\partial \phi}{\partial x}\mathrm{d}z\]</div>
+<p>which clearly says what is the differential change in <span class="math notranslate nohighlight">\(\phi\)</span> as we make some path along the field, changing <span class="math notranslate nohighlight">\(\x,\, y\, z\)</span>. If we define the <em>vectorial line element</em></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathrm{d}{\bf r} = \begin{pmatrix} \mathrm{d}x \\ \mathrm{d}y \\\mathrm{d}z \end{pmatrix} \end{split}\]</div>
+<p>which means we can re-write the total differential in the form</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{d}\phi = \nabla \phi \cdot \mathrm{d}{\bf}\]</div>
+<p>and likewise the total differential of a vector fiedl <span class="math notranslate nohighlight">\({\bf A(r)}\)</span> is found from:</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{d} {\bf A} = \frac{\partial {\bf A}}{\partial x}\mathrm{d}x + \frac{\partial {\bf A}}{\partial y}\mathrm{d}y + \frac{\partial {\bf A}}{\partial x}\mathrm{d}z\]</div>
+<p>We can read this by considering only changes in <span class="math notranslate nohighlight">\(x\)</span> and keeping <span class="math notranslate nohighlight">\(y,\, z\)</span> cxonstant, then:</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{d} {\bf A} = \frac{\partial {\bf A}}{\partial x}\mathrm{d}x \]</div>
+<p>which means <span class="math notranslate nohighlight">\(\bf A\)</span> is a vector changing by some quantifty <span class="math notranslate nohighlight">\(\mathrm{d} {\bf A}\)</span> which is parallel to the vector <span class="math notranslate nohighlight">\(\partial {\bf A}/\partial x\)</span>.  Therefore for some
+general set of changes in the <span class="math notranslate nohighlight">\(x,\, y,\, z\)</span> directions, we can break down the vectors changes in each axes direction.</p>
 </div>
 </div>
 
@@ -379,7 +434,7 @@ which from <a class="reference internal" href="#scalarvectorfield"><span class="
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="vectoralgebra.html" title="previous page">Vectors and Vector Algebra</a>
-    <a class='right-next' id="next-link" href="../ProofLogic/setsnotation.html" title="next page">Set Theory</a>
+    <a class='right-next' id="next-link" href="divandcurl.html" title="next page">1st Order Variations of Fields</a>
 
         </div>
         

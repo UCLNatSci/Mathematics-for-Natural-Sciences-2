@@ -56,7 +56,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Functions" href="functions.html" />
-    <link rel="prev" title="Vector Fields" href="../VectorCalculus/calculusonfields.html" />
+    <link rel="prev" title="Vector Calculus Theorems" href="../VectorCalculus/vectorcalctheorems.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -105,6 +105,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../VectorCalculus/lineintegrals.html">
+   Line Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/vectoralgebra.html">
    Vectors and Vector Algebra
   </a>
@@ -112,6 +117,31 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/calculusonfields.html">
    Vector Fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../VectorCalculus/divandcurl.html">
+   1st Order Variations of Fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../VectorCalculus/coordinatesystems.html">
+   Coordinate System Changes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../VectorCalculus/surfaceintegrals.html">
+   Surface Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../VectorCalculus/volumeintegrals.html">
+   Volume Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../VectorCalculus/vectorcalctheorems.html">
+   Vector Calculus Theorems
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -410,10 +440,10 @@ after him in Clapham, South London!), which are an easy to see how different set
 \[\begin{split}\mathbb{U} &amp;=&amp; \{ 1,\,2,\,3,\,4,\,5,\,6,\,7\}\\
 A &amp;=&amp; \{1,\,2,\,3,\,4\}\\
 B &amp;=&amp; \{3,\,4,\,5\}\end{split}\]</div>
-<p>this could be represented by the Venn diagram in <a class="reference internal" href="#venn1"><span class="std std-numref">Fig. 22</span></a>.</p>
+<p>this could be represented by the Venn diagram in <a class="reference internal" href="#venn1"><span class="std std-numref">Fig. 27</span></a>.</p>
 <div class="figure align-default" id="venn1">
 <img alt="../_images/Venn1.png" src="../_images/Venn1.png" />
-<p class="caption"><span class="caption-number">Fig. 22 </span><span class="caption-text">Venn diagram depicting sets <span class="math notranslate nohighlight">\(A,\,B,\,\mathbb{U}\)</span>.</span><a class="headerlink" href="#venn1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 27 </span><span class="caption-text">Venn diagram depicting sets <span class="math notranslate nohighlight">\(A,\,B,\,\mathbb{U}\)</span>.</span><a class="headerlink" href="#venn1" title="Permalink to this image">¶</a></p>
 </div>
 <p>We can see that the union of both sets is given by the entire shaded area</p>
 <div class="math notranslate nohighlight">
@@ -425,10 +455,10 @@ B &amp;=&amp; \{3,\,4,\,5\}\end{split}\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}(A\cup B) \setminus B &amp;=&amp; \{ 1,\,2\} \\
 (A\cup B) \setminus A &amp;=&amp; \{ 5\} \end{split}\]</div>
-<p>these could be represented by Venn diagrams, such as that seen in <a class="reference internal" href="#venn2"><span class="std std-numref">Fig. 23</span></a>.</p>
+<p>these could be represented by Venn diagrams, such as that seen in <a class="reference internal" href="#venn2"><span class="std std-numref">Fig. 28</span></a>.</p>
 <div class="figure align-default" id="venn2">
 <img alt="../_images/Venn2.png" src="../_images/Venn2.png" />
-<p class="caption"><span class="caption-number">Fig. 23 </span><span class="caption-text">Venn diagram depicting sets <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(B\)</span>, <span class="math notranslate nohighlight">\(A \cup A\)</span>, <span class="math notranslate nohighlight">\(| \cap B\)</span> and <span class="math notranslate nohighlight">\((A\cup B) \setminus B\)</span>.</span><a class="headerlink" href="#venn2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 28 </span><span class="caption-text">Venn diagram depicting sets <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(B\)</span>, <span class="math notranslate nohighlight">\(A \cup A\)</span>, <span class="math notranslate nohighlight">\(| \cap B\)</span> and <span class="math notranslate nohighlight">\((A\cup B) \setminus B\)</span>.</span><a class="headerlink" href="#venn2" title="Permalink to this image">¶</a></p>
 </div>
 <p>and likewise the complement</p>
 <div class="math notranslate nohighlight">
@@ -489,7 +519,7 @@ If <span class="math notranslate nohighlight">\(A\)</span> and <span class="math
 <p>which is simply joining up a set and its complement. One issue with counting elements in sets is over counting, consider for finite sets <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[n(A \cup B) = n(A) + n(B) - n(A \cap B)\]</div>
-<p>which is outlined graphically in Figure <a class="reference internal" href="#venn2"><span class="std std-numref">Fig. 23</span></a>.  We can also state this idea as:</p>
+<p>which is outlined graphically in Figure <a class="reference internal" href="#venn2"><span class="std std-numref">Fig. 28</span></a>.  We can also state this idea as:</p>
 <div class="math notranslate nohighlight">
 \[n(A \cup B) \leq n(A) + n(B)\]</div>
 <p>where the equality holds if the sets are disjoint and the inequality holds otherwise.  To avoid this over counting, we can construct the set <span class="math notranslate nohighlight">\(A \cap B\)</span> and so</p>
@@ -526,7 +556,7 @@ If <span class="math notranslate nohighlight">\(A\)</span> and <span class="math
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../VectorCalculus/calculusonfields.html" title="previous page">Vector Fields</a>
+    <a class='left-prev' id="prev-link" href="../VectorCalculus/vectorcalctheorems.html" title="previous page">Vector Calculus Theorems</a>
     <a class='right-next' id="next-link" href="functions.html" title="next page">Functions</a>
 
         </div>
