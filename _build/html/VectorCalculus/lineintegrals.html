@@ -125,26 +125,6 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="coordinatesystems.html">
-   Coordinate System Changes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="surfaceintegrals.html">
-   Surface Integrals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="volumeintegrals.html">
-   Volume Integrals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="vectorcalctheorems.html">
-   Vector Calculus Theorems
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/setsnotation.html">
    Set Theory
   </a>
@@ -279,48 +259,64 @@ we need to parametrise the path, lets say with some variable <span class="math n
 \begin{pmatrix} x'\mathrm{d}t \\ y'\mathrm{d}t \\ z'\mathrm{d}t\end{pmatrix} = {\bf r}'(t)\,\mathrm{d} t\end{split}\]</div>
 <p>and thus to express this as an integral in a way we can calculate it, with some parameter <span class="math notranslate nohighlight">\(t\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[I = \int_C {\bf G}(r) \cdot \mathrm{d}{\bf r} = \int_a^b {\bf G}({\bf r}(t)) \cdot {\bf r}(t)\,\mathrm{d}t
+\[I = \int_C {\bf G}(r) \cdot \mathrm{d}{\bf r} = \int_a^b {\bf G}({\bf r}(t)) \cdot {\bf r}'(t)\,\mathrm{d}t
 \]</div>
-<p>As an example lets consider the vector field <span class="math notranslate nohighlight">\({\bf G(r)} = \begin{pmatrix} xy\\ -y^2 \end{pmatrix} and look at the line integral over the points 
-\)</span>(0,, 0<span class="math notranslate nohighlight">\( \rightarrow (1,2)\)</span> across different paths.  Lets pick the parameter <span class="math notranslate nohighlight">\(t\)</span> to be the <span class="math notranslate nohighlight">\(x\)</span> coordinate, so that the path if determined by
+<p>As an example lets consider the vector field <span class="math notranslate nohighlight">\({\bf G(r)} = \begin{pmatrix} xy\\ -y^2 \end{pmatrix}\)</span> and look at the line integral over the points
+<span class="math notranslate nohighlight">\((0,\, 0) \rightarrow (1,2)\)</span> across different paths.  Lets pick the parameter <span class="math notranslate nohighlight">\(t\)</span> to be the <span class="math notranslate nohighlight">\(x\)</span> coordinate, so that the path if determined by
 <span class="math notranslate nohighlight">\(y = f(x), \, x \in [a,\, b]\)</span> such that:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}{\bf r)(x) = \begin{pmatrix} x\\ f(x) \end{pmatrix}\end{split}\]</div>
+\[\begin{split}{\bf r}(x) = \begin{pmatrix} x \\ f(x) \end{pmatrix}\end{split}\]</div>
 <p>Lets consider different paths:</p>
 <ul class="simple">
 <li><p>Straight line path</p></li>
 </ul>
 <p>The function following by this path will be <span class="math notranslate nohighlight">\(y = 2x,\, x \in [0, 1]\)</span>, so:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}{\bf r}(x) = \begin{pmatrix} x \\ 2x \end{pmatrix}$ \end{split}\]</div>
-<p>Thus <span class="math notranslate nohighlight">\({\bf G(r(}x)\)</span> will be:</p>
+\[\begin{split}{\bf r}(x) = \begin{pmatrix} x \\ 2x \end{pmatrix}\end{split}\]</div>
+<p>Thus <span class="math notranslate nohighlight">\({\bf G}({\bf r}(x))\)</span> will be:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}{\bf G(r(}x) = \begin{pmatrix} 2x^2 \\ -4x^2 \end{pmatrix}$ \end{split}\]</div>
+\[\begin{split}{\bf G}({\bf r}(x)) = \begin{pmatrix} 2x^2 \\ -4x^2 \end{pmatrix}\end{split}\]</div>
 <p>and <span class="math notranslate nohighlight">\({\bf r'}(x)\)</span> is given by:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}{\bf r}(x) = \begin{pmatrix} 1 \\ 2 \end{pmatrix}$ \end{split}\]</div>
+\[\begin{split}{\bf r}'(x) = \begin{pmatrix} 1 \\ 2 \end{pmatrix}\end{split}\]</div>
 <p>so the line integral is found by:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}I &amp;=&amp;\, \int_C {\bf G}(r) \cdot \mathrm{d}{\bf r} = \int_0^1 {\bf G}({\bf r}(t)) \cdot {\bf r}(t)\,\mathrm{d}t = 
+\[\begin{split}I &amp;=&amp;\, \int_C {\bf G}(r) \cdot \mathrm{d}{\bf r} = \int_0^1 {\bf G}({\bf r}(t)) \cdot {\bf r}'(t)\,\mathrm{d}t = 
 \int_0^1 \begin{pmatrix} 2x^2 \\ -4x^2 \end{pmatrix} \cdot \begin{pmatrix} 1 \\ 2 \end{pmatrix} \mathrm{d}x \\
 &amp;=&amp;\, \int_0^1 \left( 2x^2 - 8x^2 \right)\,\textrm{d}x = -\int_0^1 6x^2 \,\textrm{d}x = \Big[ -\frac{6}{3}x^3\Big ]_0^1 = -2\end{split}\]</div>
 <ul class="simple">
 <li><p>Curved path following <span class="math notranslate nohighlight">\(y = x^2\)</span></p></li>
 </ul>
 <div class="math notranslate nohighlight">
-\[\begin{split}{\bf r}(x) = \begin{pmatrix} x \\ x^2 \end{pmatrix}$ \end{split}\]</div>
-<p>Thus <span class="math notranslate nohighlight">\({\bf G(r(}x)\)</span> will be:</p>
+\[\begin{split}{\bf r}(x) = \begin{pmatrix} x \\ x^2 \end{pmatrix}\end{split}\]</div>
+<p>Thus <span class="math notranslate nohighlight">\({\bf G}({\bf r}(x))\)</span> will be:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}{\bf G(r(}x) = \begin{pmatrix} x^3 \\ -x^4 \end{pmatrix}$ \end{split}\]</div>
+\[\begin{split}{\bf G}({\bf r}(x)) = \begin{pmatrix} x^3 \\ -x^4 \end{pmatrix}\end{split}\]</div>
 <p>and <span class="math notranslate nohighlight">\({\bf r'}(x)\)</span> is given by:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}{\bf r}(x) = \begin{pmatrix} 1 \\ 2x \end{pmatrix}$ \end{split}\]</div>
+\[\begin{split}{\bf r}'(x) = \begin{pmatrix} 1 \\ 2x \end{pmatrix}\end{split}\]</div>
 <p>so the line integral is found by:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}I &amp;=&amp;\, \int_C {\bf G}(r) \cdot \mathrm{d}{\bf r} = \int_0^1 {\bf G}({\bf r}(t)) \cdot {\bf r}(t)\,\mathrm{d}t = 
+\[\begin{split}I &amp;=&amp;\, \int_C {\bf G}(r) \cdot \mathrm{d}{\bf r} = \int_0^1 {\bf G}({\bf r}(t)) \cdot {\bf r}'(t)\,\mathrm{d}t = 
 \int_0^1 \begin{pmatrix} x^3 \\ -x^4 \end{pmatrix} \cdot \begin{pmatrix} 1 \\ 2x \end{pmatrix} \mathrm{d}x \\
-&amp;=&amp;\, \int_0^1 \left( x^3 - 2x^5 \right)\,\textrm{d}x = \int_0^1 \left(\frac{1}{4}x^4 - \frac{2}{6}x^6 \right) \,\textrm{d}x 
-= \Big[\frac{1}{4}x^4 - \frac{1}{3}x^6 \Big ]_0^1 = -\frac{1}{12}\end{split}\]</div>
+&amp;=&amp;\, \int_0^1 \left( x^3 - 2x^5 \right)\,\textrm{d}x = \Big[\frac{1}{4}x^4 - \frac{1}{3}x^6 \Big ]_0^1 = -\frac{1}{12}\end{split}\]</div>
+<ul class="simple">
+<li><p>Curved path following <span class="math notranslate nohighlight">\(y = x^{1/2}\)</span></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}{\bf r}(x) = \begin{pmatrix} x \\ x^{1/2} \end{pmatrix}\end{split}\]</div>
+<p>Thus <span class="math notranslate nohighlight">\({\bf G}({\bf r}(x))\)</span> will be:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}{\bf G}({\bf r}(x)) = \begin{pmatrix} x^{3/2} \\ -x \end{pmatrix}\end{split}\]</div>
+<p>and <span class="math notranslate nohighlight">\({\bf r'}(x)\)</span> is given by:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}{\bf r}'(x) = \begin{pmatrix} 1 \\ \frac{1}{2} x^{-1/2} \end{pmatrix}\end{split}\]</div>
+<p>so the line integral is found by:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}I &amp;=&amp;\, \int_C {\bf G}(r) \cdot \mathrm{d}{\bf r} = \int_0^1 {\bf G}({\bf r}(t)) \cdot {\bf r}'(t)\,\mathrm{d}t = 
+\int_0^1 \begin{pmatrix} x^{3/2} \\ -x \end{pmatrix} \cdot \begin{pmatrix} 1 \\ \frac{1}{2} x^{-1/2} \end{pmatrix} \mathrm{d}x \\
+&amp;=&amp;\, \int_0^1 \left( x^{3/2} - \frac{1}{2}x^{1/2} \right)\,\textrm{d}x = \Big[\frac{2}{5}x^{5/2} - \frac{1}{3}x^{3/2} \Big ]_0^1 = \frac{1}{15}
+\end{split}\]</div>
 </div>
 </div>
 
