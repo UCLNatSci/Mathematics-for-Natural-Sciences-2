@@ -137,7 +137,15 @@ $\bf r=r_0$).  The gradients are perpendicular to the contour lines and point to
 which from {numref}`scalarvectorfield` we know is a maxima.
 ```
 
-## Total Differenetial
+If the scalar field depends only on one coordindate, then we can simplify this expression for $\nabla \phi$, e.g. $\phi = \phi(r)$:
+
+```{math}
+\nabla \phi = \phi'(r) \hat{\bf r}
+```
+
+which is often called a rotationally symmetric or radial scalar field.
+
+## Total Differential
 Recall from our discussions about partial derivatives, we can also find a <em>total derivative</em> of a scalar field $\phi$:
 
 ```{math}
@@ -153,7 +161,7 @@ which clearly says what is the differential change in $\phi$ as we make some pat
 which means we can re-write the total differential in the form
 
 ```{math}
-\mathrm{d}\phi = \nabla \phi \cdot \mathrm{d}{\bf}
+\mathrm{d}\phi = \nabla \phi \cdot \mathrm{d}{\bf r}
 ```
 
 and likewise the total differential of a vector fiedl ${\bf A(r)}$ is found from:

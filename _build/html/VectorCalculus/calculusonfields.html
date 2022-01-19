@@ -125,26 +125,6 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="coordinatesystems.html">
-   Coordinate System Changes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="surfaceintegrals.html">
-   Surface Integrals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="volumeintegrals.html">
-   Volume Integrals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="vectorcalctheorems.html">
-   Vector Calculus Theorems
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/setsnotation.html">
    Set Theory
   </a>
@@ -258,8 +238,8 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#total-differenetial">
-   Total Differenetial
+  <a class="reference internal nav-link" href="#total-differential">
+   Total Differential
   </a>
  </li>
 </ul>
@@ -384,10 +364,14 @@ one dimension lower than the dimension of the problem (therefore in 3D, these wo
 <span class="math notranslate nohighlight">\(\bf r=r_0\)</span>).  The gradients are perpendicular to the contour lines and point toward the direction of the largest increase of <span class="math notranslate nohighlight">\(\phi\)</span>,
 which from <a class="reference internal" href="#scalarvectorfield"><span class="std std-numref">Fig. 21</span></a> we know is a maxima.</span><a class="headerlink" href="#scalarfieldgradient" title="Permalink to this image">¶</a></p>
 </div>
+<p>If the scalar field depends only on one coordindate, then we can simplify this expression for <span class="math notranslate nohighlight">\(\nabla \phi\)</span>, e.g. <span class="math notranslate nohighlight">\(\phi = \phi(r)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\nabla \phi = \phi'(r) \hat{\bf r}\]</div>
+<p>which is often called a rotationally symmetric or radial scalar field.</p>
 </div>
 </div>
-<div class="section" id="total-differenetial">
-<h2>Total Differenetial<a class="headerlink" href="#total-differenetial" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="total-differential">
+<h2>Total Differential<a class="headerlink" href="#total-differential" title="Permalink to this headline">¶</a></h2>
 <p>Recall from our discussions about partial derivatives, we can also find a <em>total derivative</em> of a scalar field <span class="math notranslate nohighlight">\(\phi\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\mathrm{d} \phi = \frac{\partial \phi}{\partial x}\mathrm{d}x + \frac{\partial \phi}{\partial y}\mathrm{d}y + \frac{\partial \phi}{\partial x}\mathrm{d}z\]</div>
@@ -396,7 +380,7 @@ which from <a class="reference internal" href="#scalarvectorfield"><span class="
 \[\begin{split}\mathrm{d}{\bf r} = \begin{pmatrix} \mathrm{d}x \\ \mathrm{d}y \\\mathrm{d}z \end{pmatrix} \end{split}\]</div>
 <p>which means we can re-write the total differential in the form</p>
 <div class="math notranslate nohighlight">
-\[\mathrm{d}\phi = \nabla \phi \cdot \mathrm{d}{\bf}\]</div>
+\[\mathrm{d}\phi = \nabla \phi \cdot \mathrm{d}{\bf r}\]</div>
 <p>and likewise the total differential of a vector fiedl <span class="math notranslate nohighlight">\({\bf A(r)}\)</span> is found from:</p>
 <div class="math notranslate nohighlight">
 \[\mathrm{d} {\bf A} = \frac{\partial {\bf A}}{\partial x}\mathrm{d}x + \frac{\partial {\bf A}}{\partial y}\mathrm{d}y + \frac{\partial {\bf A}}{\partial x}\mathrm{d}z\]</div>
