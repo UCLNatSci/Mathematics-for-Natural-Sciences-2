@@ -1,6 +1,6 @@
 # Multivariable Calculus
  
-## First Partial Derivatives
+### First Partial Derivatives
 The plot shown in {numref}`surf1` is of a function, $f(x,\, y)= x^3 - y^3 - 2xy + 2$, on which curves marked on the surface for lines of constant $x,\,y$.  
 
 We can consider the rate of change of the function, however since it is a function of two variables, we can see there are two possible kinds of derivative we can find:
@@ -52,7 +52,7 @@ By way of examples, we can calculate all the first partial derivatives $\partial
 \frac{\partial z}{\partial y} &=&\, \frac{2y\sin(x)}{x+y^2\sin(x)}
 ```
 
-## Second Partial Derivatives
+### Second Partial Derivatives
 The second partial derivatives with respect to $x$ and $y$ are denoted as follows:
 
 ```{math}

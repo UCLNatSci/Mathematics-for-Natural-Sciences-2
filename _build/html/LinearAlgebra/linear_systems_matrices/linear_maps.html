@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>24. Linear Transformations &#8212; Mathematics for Natural Sciences 2</title>
+    <title>13. Linear Transformations &#8212; Mathematics for Natural Sciences 2</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -55,8 +55,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="25. Inverse and Determinant" href="inverse_determinant.html" />
-    <link rel="prev" title="23. Matrices" href="matrices.html" />
+    <link rel="next" title="14. Inverse and Determinant" href="inverse_determinant.html" />
+    <link rel="prev" title="12. Matrices" href="matrices.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -135,47 +135,47 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../ProofLogic/functions.html">
-   13. Functions
+   8. Functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../ProofLogic/propositionallogic.html">
-   16. Propositional Logic
+   9. Propositional Logic
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../ProofLogic/methodsofproof.html">
-   21. Techniques of Proof
+   10. Techniques of Proof
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="echelon_form.html">
-   22. Linear Systems of Equations
+   11. Linear Systems of Equations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="matrices.html">
-   23. Matrices
+   12. Matrices
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   24. Linear Transformations
+   13. Linear Transformations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="inverse_determinant.html">
-   25. Inverse and Determinant
+   14. Inverse and Determinant
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../eigenvectors/notes.html">
-   26. Eigenvalues and Eigenvectors
+   15. Eigenvalues and Eigenvectors
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="diagonalisation.html">
-   27. Matrix Diagonalisation
+   16. Matrix Diagonalisation
   </a>
  </li>
 </ul>
@@ -251,37 +251,37 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
-   24.1. Linear Transformations
+   13.1. Linear Transformations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#matrix-transformations">
-   24.2. Matrix Transformations
+   13.2. Matrix Transformations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#geometrical-interpretation-of-matrices">
-   24.3. Geometrical Interpretation of Matrices
+   13.3. Geometrical Interpretation of Matrices
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-matrix-of-a-linear-transformations">
-   24.4. The Matrix of a Linear Transformations
+   13.4. The Matrix of a Linear Transformations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rotation-matrices-in-2d">
-   24.5. Rotation matrices in 2D
+   13.5. Rotation matrices in 2D
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#projection-matrix">
-   24.6. Projection Matrix
+   13.6. Projection Matrix
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#sequence-of-transformations">
-   24.7. Sequence of transformations
+   13.7. Sequence of transformations
   </a>
  </li>
 </ul>
@@ -296,10 +296,10 @@
               <div>
                 
   <div class="section" id="linear-transformations">
-<h1><span class="section-number">24. </span>Linear Transformations<a class="headerlink" href="#linear-transformations" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">13. </span>Linear Transformations<a class="headerlink" href="#linear-transformations" title="Permalink to this headline">¶</a></h1>
 <p>In this section we learn to understand matrices geometrically as functions, or transformations. We briefly discuss transformations in general, then specialize to matrix transformations, which are transformations that come from matrices.</p>
 <div class="section" id="id1">
-<h2><span class="section-number">24.1. </span>Linear Transformations<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">13.1. </span>Linear Transformations<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>A function is a rule that takes inputs and transforms them to outputs. For example, a function <span class="math notranslate nohighlight">\(f:\mathbb{R}\rightarrow\mathbb{R}\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[f(x)=x^2\]</div>
@@ -327,7 +327,7 @@
 </div>
 </div>
 <div class="section" id="matrix-transformations">
-<h2><span class="section-number">24.2. </span>Matrix Transformations<a class="headerlink" href="#matrix-transformations" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">13.2. </span>Matrix Transformations<a class="headerlink" href="#matrix-transformations" title="Permalink to this headline">¶</a></h2>
 <p>Now let <span class="math notranslate nohighlight">\(A\)</span> be an <span class="math notranslate nohighlight">\((m \times n)\)</span> matrix. Then <span class="math notranslate nohighlight">\(A\)</span> defines a function</p>
 <div class="math notranslate nohighlight">
 \[T:\mathbb{R}^n\rightarrow\mathbb{R}^m\]</div>
@@ -354,7 +354,7 @@ T(au) = A(au) = aAu = aT(u).
 <p>There is essentially nothing new here, beyond the notation and a slightly different way of thinking about matrix multiplication. In the next section we will see how thinking of a matrix as a transformation allows us to picture its effect geometrically.</p>
 </div>
 <div class="section" id="geometrical-interpretation-of-matrices">
-<h2><span class="section-number">24.3. </span>Geometrical Interpretation of Matrices<a class="headerlink" href="#geometrical-interpretation-of-matrices" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">13.3. </span>Geometrical Interpretation of Matrices<a class="headerlink" href="#geometrical-interpretation-of-matrices" title="Permalink to this headline">¶</a></h2>
 <p>Consider the matrix</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}A = \begin{pmatrix}-1 &amp; 0\\0 &amp; 1\end{pmatrix}\end{split}\]</div>
@@ -395,7 +395,7 @@ T(au) = A(au) = aAu = aT(u).
 </div>
 </div>
 <div class="section" id="the-matrix-of-a-linear-transformations">
-<h2><span class="section-number">24.4. </span>The Matrix of a Linear Transformations<a class="headerlink" href="#the-matrix-of-a-linear-transformations" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">13.4. </span>The Matrix of a Linear Transformations<a class="headerlink" href="#the-matrix-of-a-linear-transformations" title="Permalink to this headline">¶</a></h2>
 <p>In this section will learn that <em>all</em> linear transformations are matrix transformations - in other words, any function <span class="math notranslate nohighlight">\(T\)</span> which satisfies the linearity properties can be written as a matrix <span class="math notranslate nohighlight">\(T(x) = Ax\)</span>. Before doing so, we need the following important notation.</p>
 <div class="admonition-definition admonition">
 <p class="admonition-title">Definition</p>
@@ -439,7 +439,7 @@ T(e_2) = \begin{pmatrix}-1\\0\end{pmatrix}\end{split}\]</div>
 </div>
 </div>
 <div class="section" id="rotation-matrices-in-2d">
-<h2><span class="section-number">24.5. </span>Rotation matrices in 2D<a class="headerlink" href="#rotation-matrices-in-2d" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">13.5. </span>Rotation matrices in 2D<a class="headerlink" href="#rotation-matrices-in-2d" title="Permalink to this headline">¶</a></h2>
 <p>Suppose the linear transformation <span class="math notranslate nohighlight">\(T:\mathbb{R}^2 \rightarrow \mathbb{R}^2\)</span> corresponds to an anticlockwise rotation by an angle <span class="math notranslate nohighlight">\(\theta\)</span> around the origin. Then we can use trigonometry to determine the destination of the coordinate vectors under <span class="math notranslate nohighlight">\(T\)</span>:</p>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 684x288 with 2 Axes&gt;
@@ -457,11 +457,11 @@ T(e_2) = \begin{pmatrix}-\sin\theta\\\cos\theta\end{pmatrix}\end{split}\]</div>
 </div>
 </div>
 <div class="section" id="projection-matrix">
-<h2><span class="section-number">24.6. </span>Projection Matrix<a class="headerlink" href="#projection-matrix" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">13.6. </span>Projection Matrix<a class="headerlink" href="#projection-matrix" title="Permalink to this headline">¶</a></h2>
 <p>[TODO]</p>
 </div>
 <div class="section" id="sequence-of-transformations">
-<h2><span class="section-number">24.7. </span>Sequence of transformations<a class="headerlink" href="#sequence-of-transformations" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">13.7. </span>Sequence of transformations<a class="headerlink" href="#sequence-of-transformations" title="Permalink to this headline">¶</a></h2>
 <p>[TODO]</p>
 </div>
 </div>
@@ -500,7 +500,7 @@ T(e_2) = \begin{pmatrix}-\sin\theta\\\cos\theta\end{pmatrix}\end{split}\]</div>
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">23. </span>Matrices</p>
+                <p class="prevnext-title"><span class="section-number">12. </span>Matrices</p>
             </div>
         </a>
     </div>
@@ -508,7 +508,7 @@ T(e_2) = \begin{pmatrix}-\sin\theta\\\cos\theta\end{pmatrix}\end{split}\]</div>
         <a class="right-next" href="inverse_determinant.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">25. </span>Inverse and Determinant</p>
+                <p class="prevnext-title"><span class="section-number">14. </span>Inverse and Determinant</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

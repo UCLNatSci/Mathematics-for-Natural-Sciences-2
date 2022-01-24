@@ -135,47 +135,47 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/functions.html">
-   13. Functions
+   8. Functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/propositionallogic.html">
-   16. Propositional Logic
+   9. Propositional Logic
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/methodsofproof.html">
-   21. Techniques of Proof
+   10. Techniques of Proof
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/echelon_form.html">
-   22. Linear Systems of Equations
+   11. Linear Systems of Equations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/matrices.html">
-   23. Matrices
+   12. Matrices
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/linear_maps.html">
-   24. Linear Transformations
+   13. Linear Transformations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/inverse_determinant.html">
-   25. Inverse and Determinant
+   14. Inverse and Determinant
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/eigenvectors/notes.html">
-   26. Eigenvalues and Eigenvectors
+   15. Eigenvalues and Eigenvectors
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/diagonalisation.html">
-   27. Matrix Diagonalisation
+   16. Matrix Diagonalisation
   </a>
  </li>
 </ul>
@@ -270,11 +270,6 @@
     </a>
    </li>
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#total-differential">
-   5.4. Total Differential
-  </a>
  </li>
 </ul>
 
@@ -398,31 +393,7 @@ one dimension lower than the dimension of the problem (therefore in 3D, these wo
 <span class="math notranslate nohighlight">\(\bf r=r_0\)</span>).  The gradients are perpendicular to the contour lines and point toward the direction of the largest increase of <span class="math notranslate nohighlight">\(\phi\)</span>,
 which from <a class="reference internal" href="#scalarvectorfield"><span class="std std-numref">Fig. 5.1</span></a> we know is a maxima.</span><a class="headerlink" href="#scalarfieldgradient" title="Permalink to this image">¶</a></p>
 </div>
-<p>If the scalar field depends only on one coordindate, then we can simplify this expression for <span class="math notranslate nohighlight">\(\nabla \phi\)</span>, e.g. <span class="math notranslate nohighlight">\(\phi = \phi(r)\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[\nabla \phi = \phi'(r) \hat{\bf r}\]</div>
-<p>which is often called a rotationally symmetric or radial scalar field.</p>
 </div>
-</div>
-<div class="section" id="total-differential">
-<h2><span class="section-number">5.4. </span>Total Differential<a class="headerlink" href="#total-differential" title="Permalink to this headline">¶</a></h2>
-<p>Recall from our discussions about partial derivatives, we can also find a <em>total derivative</em> of a scalar field <span class="math notranslate nohighlight">\(\phi\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[\mathrm{d} \phi = \frac{\partial \phi}{\partial x}\mathrm{d}x + \frac{\partial \phi}{\partial y}\mathrm{d}y + \frac{\partial \phi}{\partial x}\mathrm{d}z\]</div>
-<p>which clearly says what is the differential change in <span class="math notranslate nohighlight">\(\phi\)</span> as we make some path along the field, changing <span class="math notranslate nohighlight">\(\x,\, y\, z\)</span>. If we define the <em>vectorial line element</em></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\mathrm{d}{\bf r} = \begin{pmatrix} \mathrm{d}x \\ \mathrm{d}y \\\mathrm{d}z \end{pmatrix} \end{split}\]</div>
-<p>which means we can re-write the total differential in the form</p>
-<div class="math notranslate nohighlight">
-\[\mathrm{d}\phi = \nabla \phi \cdot \mathrm{d}{\bf r}\]</div>
-<p>and likewise the total differential of a vector fiedl <span class="math notranslate nohighlight">\({\bf A(r)}\)</span> is found from:</p>
-<div class="math notranslate nohighlight">
-\[\mathrm{d} {\bf A} = \frac{\partial {\bf A}}{\partial x}\mathrm{d}x + \frac{\partial {\bf A}}{\partial y}\mathrm{d}y + \frac{\partial {\bf A}}{\partial x}\mathrm{d}z\]</div>
-<p>We can read this by considering only changes in <span class="math notranslate nohighlight">\(x\)</span> and keeping <span class="math notranslate nohighlight">\(y,\, z\)</span> cxonstant, then:</p>
-<div class="math notranslate nohighlight">
-\[\mathrm{d} {\bf A} = \frac{\partial {\bf A}}{\partial x}\mathrm{d}x \]</div>
-<p>which means <span class="math notranslate nohighlight">\(\bf A\)</span> is a vector changing by some quantifty <span class="math notranslate nohighlight">\(\mathrm{d} {\bf A}\)</span> which is parallel to the vector <span class="math notranslate nohighlight">\(\partial {\bf A}/\partial x\)</span>.  Therefore for some
-general set of changes in the <span class="math notranslate nohighlight">\(x,\, y,\, z\)</span> directions, we can break down the vectors changes in each axes direction.</p>
 </div>
 </div>
 

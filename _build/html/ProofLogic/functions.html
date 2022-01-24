@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>13. Functions &#8212; Mathematics for Natural Sciences 2</title>
+    <title>8. Functions &#8212; Mathematics for Natural Sciences 2</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -55,7 +55,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="16. Propositional Logic" href="propositionallogic.html" />
+    <link rel="next" title="9. Propositional Logic" href="propositionallogic.html" />
     <link rel="prev" title="7. Set Theory" href="setsnotation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -135,47 +135,47 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   13. Functions
+   8. Functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="propositionallogic.html">
-   16. Propositional Logic
+   9. Propositional Logic
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="methodsofproof.html">
-   21. Techniques of Proof
+   10. Techniques of Proof
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/echelon_form.html">
-   22. Linear Systems of Equations
+   11. Linear Systems of Equations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/matrices.html">
-   23. Matrices
+   12. Matrices
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/linear_maps.html">
-   24. Linear Transformations
+   13. Linear Transformations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/inverse_determinant.html">
-   25. Inverse and Determinant
+   14. Inverse and Determinant
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/eigenvectors/notes.html">
-   26. Eigenvalues and Eigenvectors
+   15. Eigenvalues and Eigenvectors
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/diagonalisation.html">
-   27. Matrix Diagonalisation
+   16. Matrix Diagonalisation
   </a>
  </li>
 </ul>
@@ -249,26 +249,19 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   13. Functions
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-of-a-function">
+   8.1. Definition of a Function
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#definition-of-a-function">
-     13.1. Definition of a Function
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#composite-functions">
-   14. Composite Functions
+   8.2. Composite Functions
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#invertibility-of-functions">
-   15. Invertibility of Functions
+   8.3. Invertibility of Functions
   </a>
  </li>
 </ul>
@@ -283,14 +276,14 @@
               <div>
                 
   <div class="section" id="functions">
-<h1><span class="section-number">13. </span>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h1>
-<p>We are probably quite used to thinking about functions when we plot graphs, such as <span class="math notranslate nohighlight">\(y = x^2\)</span> or <span class="math notranslate nohighlight">\(y = \cos(x)\)</span>, as we idealise in <a class="reference internal" href="#functionmachine"><span class="std std-numref">Fig. 13.1</span></a>.</p>
+<h1><span class="section-number">8. </span>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h1>
+<p>We are probably quite used to thinking about functions when we plot graphs, such as <span class="math notranslate nohighlight">\(y = x^2\)</span> or <span class="math notranslate nohighlight">\(y = \cos(x)\)</span>, as we idealise in <a class="reference internal" href="#functionmachine"><span class="std std-numref">Fig. 8.1</span></a>.</p>
 <div class="figure align-default" id="functionmachine">
 <img alt="../_images/functionmachine2.png" src="../_images/functionmachine2.png" />
-<p class="caption"><span class="caption-number">Fig. 13.1 </span><span class="caption-text">These are examples of a much richer mathematical structure, known as <b>Functions</b>, which we can roughly think of as a machine with inputs and outputs.</span><a class="headerlink" href="#functionmachine" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 8.1 </span><span class="caption-text">These are examples of a much richer mathematical structure, known as <b>Functions</b>, which we can roughly think of as a machine with inputs and outputs.</span><a class="headerlink" href="#functionmachine" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="definition-of-a-function">
-<h2><span class="section-number">13.1. </span>Definition of a Function<a class="headerlink" href="#definition-of-a-function" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.1. </span>Definition of a Function<a class="headerlink" href="#definition-of-a-function" title="Permalink to this headline">¶</a></h2>
 <p>To set this up in a firmer mathematical way, we can think about functions as the mapping of elements between different sets.  Lets denote the set
 <span class="math notranslate nohighlight">\(A\)</span>, which contain the elements we wish to map unique to elements in another set <span class="math notranslate nohighlight">\(B\)</span>, this mapping will be the function <span class="math notranslate nohighlight">\(f\)</span> from <span class="math notranslate nohighlight">\(A\)</span> to <span class="math notranslate nohighlight">\(B\)</span>:</p>
 <div class="math notranslate nohighlight">
@@ -341,37 +334,36 @@ denotes the set of elements of A each whose image belongs to <span class="math n
 f(b) &amp;=&amp;\, u \\
 f(c) &amp;=&amp;\, r \\
 f(d) &amp;=&amp;\, s\end{split}\]</div>
-<p>which we can represent graphically as shown in <a class="reference internal" href="#functionimage"><span class="std std-numref">Fig. 13.2</span></a>.</p>
+<p>which we can represent graphically as shown in <a class="reference internal" href="#functionimage"><span class="std std-numref">Fig. 8.2</span></a>.</p>
 <div class="figure align-default" id="functionimage">
 <img alt="../_images/FunctionImage.png" src="../_images/FunctionImage.png" />
-<p class="caption"><span class="caption-number">Fig. 13.2 </span><span class="caption-text">The image <span class="math notranslate nohighlight">\(f\)</span> is the set <span class="math notranslate nohighlight">\(\text{Im}(f) = \{r,\,s,\,u\}\)</span> and the element is <span class="math notranslate nohighlight">\(t \notin \text{Im}(f)\)</span> because <span class="math notranslate nohighlight">\(t\)</span> is not the image of any
+<p class="caption"><span class="caption-number">Fig. 8.2 </span><span class="caption-text">The image <span class="math notranslate nohighlight">\(f\)</span> is the set <span class="math notranslate nohighlight">\(\text{Im}(f) = \{r,\,s,\,u\}\)</span> and the element is <span class="math notranslate nohighlight">\(t \notin \text{Im}(f)\)</span> because <span class="math notranslate nohighlight">\(t\)</span> is not the image of any
 element of <span class="math notranslate nohighlight">\(A\)</span> under <span class="math notranslate nohighlight">\(f\)</span> - therefore any elements not mapped <em>to</em> under a function are excluded from the image of the function.</span><a class="headerlink" href="#functionimage" title="Permalink to this image">¶</a></p>
 </div>
 <p>The graph of <span class="math notranslate nohighlight">\(f\)</span> is the following set of ordered pairs:</p>
 <div class="math notranslate nohighlight">
 \[\{ (a,\,s),\,(b,\,u),\,(c,\,r),\,(d,s) \}\]</div>
 </div>
-</div>
 <div class="section" id="composite-functions">
-<h1><span class="section-number">14. </span>Composite Functions<a class="headerlink" href="#composite-functions" title="Permalink to this headline">¶</a></h1>
+<h2><span class="section-number">8.2. </span>Composite Functions<a class="headerlink" href="#composite-functions" title="Permalink to this headline">¶</a></h2>
 <p>Using the idea of mapping from one set to another, it is possible to introduce functions of functions or <b>composite functions</b>, mapping from one set to another, through
 some intermediate set.  Consider functions <span class="math notranslate nohighlight">\(f:\,A \rightarrow B\)</span> and <span class="math notranslate nohighlight">\(g:\,B \rightarrow C\)</span>, where the target set <span class="math notranslate nohighlight">\(B\)</span> of <span class="math notranslate nohighlight">\(f\)</span> is the domain of <span class="math notranslate nohighlight">\(g\)</span>.  We can call this new function
 the <b>Composition</b> of <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span>, denoted by:</p>
 <div class="math notranslate nohighlight">
 \[g \circ f \equiv g(f(a)\]</div>
-<p>where we emphasise that the composition of functions is read from right to left (and not left to right as we usually do).  We picture this in <a class="reference internal" href="#compositefunction"><span class="std std-numref">Fig. 14.1</span></a>.</p>
+<p>where we emphasise that the composition of functions is read from right to left (and not left to right as we usually do).  We picture this in <a class="reference internal" href="#compositefunction"><span class="std std-numref">Fig. 8.3</span></a>.</p>
 <div class="figure align-default" id="compositefunction">
 <img alt="../_images/compositefunction.png" src="../_images/compositefunction.png" />
-<p class="caption"><span class="caption-number">Fig. 14.1 </span><span class="caption-text">We can introduce more and more functions and same rules apply, however we can also consider the associativity of the composition of functions, given
+<p class="caption"><span class="caption-number">Fig. 8.3 </span><span class="caption-text">We can introduce more and more functions and same rules apply, however we can also consider the associativity of the composition of functions, given
 <span class="math notranslate nohighlight">\(f:\,A \rightarrow B,\,g:\, b \rightarrow C,\,h:\,c \rightarrow D\)</span>.</span><a class="headerlink" href="#compositefunction" title="Permalink to this image">¶</a></p>
 </div>
 <p>The composition law is also associative:</p>
 <div class="math notranslate nohighlight">
 \[h \circ(g \circ f) = (h \circ g) \circ f\]</div>
-<p>which we prove diagrammatically in <a class="reference internal" href="#assocompfns"><span class="std std-numref">Fig. 14.2</span></a>.</p>
+<p>which we prove diagrammatically in <a class="reference internal" href="#assocompfns"><span class="std std-numref">Fig. 8.4</span></a>.</p>
 <div class="figure align-default" id="assocompfns">
 <img alt="../_images/associativitycompositefunctions.png" src="../_images/associativitycompositefunctions.png" />
-<p class="caption"><span class="caption-number">Fig. 14.2 </span><span class="caption-text">Associativity of composite functions.</span><a class="headerlink" href="#assocompfns" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 8.4 </span><span class="caption-text">Associativity of composite functions.</span><a class="headerlink" href="#assocompfns" title="Permalink to this image">¶</a></p>
 </div>
 <p>Lets think about two simple functions:</p>
 <div class="math notranslate nohighlight">
@@ -397,7 +389,7 @@ h \circ (f \circ g) &amp;=&amp;\, \frac{2}{\left( \cos (x) \right)^2 } &amp; h \
 f \circ (g \circ h) &amp;=&amp;\, (f \circ g) \circ h = \left( \cos \left( \frac{2}{x} \right) \right)^2\end{split}\]</div>
 </div>
 <div class="section" id="invertibility-of-functions">
-<h1><span class="section-number">15. </span>Invertibility of Functions<a class="headerlink" href="#invertibility-of-functions" title="Permalink to this headline">¶</a></h1>
+<h2><span class="section-number">8.3. </span>Invertibility of Functions<a class="headerlink" href="#invertibility-of-functions" title="Permalink to this headline">¶</a></h2>
 <p>A function <span class="math notranslate nohighlight">\(f:\,A \rightarrow B\)</span> is said to be <b>one-to-one</b> or <b>Injective</b>  if different elements in the domain <span class="math notranslate nohighlight">\(A\)</span> have distinct images, i.e.</p>
 <div class="math notranslate nohighlight">
 \[f\,\text{ is one-to-one if }\,f(a) = f(a') \Rightarrow a = a'\]</div>
@@ -410,10 +402,10 @@ of some element <span class="math notranslate nohighlight">\(a \in A\)</span>, i
 \[f^{-1} \circ f = I_A \Longleftrightarrow f \circ f^{-1} = I_B\]</div>
 <p>A function <span class="math notranslate nohighlight">\(f:\,A \rightarrow B\)</span> is invertible iff <span class="math notranslate nohighlight">\(f\)</span> is both one-to-one and onto.  We say such functions are a <b>one-to-one correspondence</b>
 between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>.  This is also known as a <b>Bijection</b>.</p>
-<p>Lets consider functions <span class="math notranslate nohighlight">\(f_1:\,A \rightarrow B\)</span>, <span class="math notranslate nohighlight">\(f_2:\,B \rightarrow C\)</span>, <span class="math notranslate nohighlight">\(f_3:\,C \rightarrow D\)</span>, <span class="math notranslate nohighlight">\(f_4:\,D \rightarrow E\)</span> depicted in <a class="reference internal" href="#invertibilityoffunctions"><span class="std std-numref">Fig. 15.1</span></a></p>
+<p>Lets consider functions <span class="math notranslate nohighlight">\(f_1:\,A \rightarrow B\)</span>, <span class="math notranslate nohighlight">\(f_2:\,B \rightarrow C\)</span>, <span class="math notranslate nohighlight">\(f_3:\,C \rightarrow D\)</span>, <span class="math notranslate nohighlight">\(f_4:\,D \rightarrow E\)</span> depicted in <a class="reference internal" href="#invertibilityoffunctions"><span class="std std-numref">Fig. 8.5</span></a></p>
 <div class="figure align-default" id="invertibilityoffunctions">
 <img alt="../_images/InvertibilityOfFunctions.png" src="../_images/InvertibilityOfFunctions.png" />
-<p class="caption"><span class="caption-number">Fig. 15.1 </span><span class="caption-text">Invertibility of four functions which map elements from <span class="math notranslate nohighlight">\(A \rightarrow B \rightarrow C \rightarrow D \rightarrow E\)</span>.</span><a class="headerlink" href="#invertibilityoffunctions" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 8.5 </span><span class="caption-text">Invertibility of four functions which map elements from <span class="math notranslate nohighlight">\(A \rightarrow B \rightarrow C \rightarrow D \rightarrow E\)</span>.</span><a class="headerlink" href="#invertibilityoffunctions" title="Permalink to this image">¶</a></p>
 </div>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(f_1:\,A \rightarrow B\)</span> is one-to-one but not onto, since every element in <span class="math notranslate nohighlight">\(A\)</span> has a unique image, but element <span class="math notranslate nohighlight">\(3 \in B\)</span> does not have any image under <span class="math notranslate nohighlight">\(f_1\)</span>.</p></li>
@@ -421,6 +413,7 @@ between <span class="math notranslate nohighlight">\(A\)</span> and <span class=
 <li><p><span class="math notranslate nohighlight">\(f_3:\,C \rightarrow D\)</span> is not one-to-one but is onto since <span class="math notranslate nohighlight">\(f_3(r) = f_3(u) = v\)</span>, but every element in <span class="math notranslate nohighlight">\(D\)</span> has an image under <span class="math notranslate nohighlight">\(f_3\)</span>.</p></li>
 <li><p><span class="math notranslate nohighlight">\(f_4:\, D \rightarrow E\)</span> is neither one-to-one nor onto, since <span class="math notranslate nohighlight">\(f_4(v) = f_4(w) = z\)</span> and there are elements in <span class="math notranslate nohighlight">\(E\)</span> which are not images under <span class="math notranslate nohighlight">\(f_4\)</span>.</p></li>
 </ul>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -465,7 +458,7 @@ between <span class="math notranslate nohighlight">\(A\)</span> and <span class=
         <a class="right-next" href="propositionallogic.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">16. </span>Propositional Logic</p>
+                <p class="prevnext-title"><span class="section-number">9. </span>Propositional Logic</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

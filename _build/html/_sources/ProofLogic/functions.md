@@ -1,4 +1,4 @@
-## Functions
+# Functions
 
 We are probably quite used to thinking about functions when we plot graphs, such as $y = x^2$ or $y = \cos(x)$, as we idealise in {numref}`FunctionMachine`.
 

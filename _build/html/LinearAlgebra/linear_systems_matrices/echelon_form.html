@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>22. Linear Systems of Equations &#8212; Mathematics for Natural Sciences 2</title>
+    <title>11. Linear Systems of Equations &#8212; Mathematics for Natural Sciences 2</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -55,8 +55,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="23. Matrices" href="matrices.html" />
-    <link rel="prev" title="21. Techniques of Proof" href="../../ProofLogic/methodsofproof.html" />
+    <link rel="next" title="12. Matrices" href="matrices.html" />
+    <link rel="prev" title="10. Techniques of Proof" href="../../ProofLogic/methodsofproof.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -135,47 +135,47 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../ProofLogic/functions.html">
-   13. Functions
+   8. Functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../ProofLogic/propositionallogic.html">
-   16. Propositional Logic
+   9. Propositional Logic
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../ProofLogic/methodsofproof.html">
-   21. Techniques of Proof
+   10. Techniques of Proof
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   22. Linear Systems of Equations
+   11. Linear Systems of Equations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="matrices.html">
-   23. Matrices
+   12. Matrices
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="linear_maps.html">
-   24. Linear Transformations
+   13. Linear Transformations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="inverse_determinant.html">
-   25. Inverse and Determinant
+   14. Inverse and Determinant
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../eigenvectors/notes.html">
-   26. Eigenvalues and Eigenvectors
+   15. Eigenvalues and Eigenvectors
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="diagonalisation.html">
-   27. Matrix Diagonalisation
+   16. Matrix Diagonalisation
   </a>
  </li>
 </ul>
@@ -251,56 +251,56 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#gaussian-elimination">
-   22.1. Gaussian Elimination
+   11.1. Gaussian Elimination
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#motivation">
-     22.1.1. Motivation
+     11.1.1. Motivation
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-systematic-technique-for-solving-systems-of-equations">
-     22.1.2. A systematic technique for solving systems of equations
+     11.1.2. A systematic technique for solving systems of equations
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#generalisation">
-     22.1.3. Generalisation
+     11.1.3. Generalisation
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#application-kirchoffs-law">
-     22.1.4. Application: Kirchoff’s Law
+     11.1.4. Application: Kirchoff’s Law
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#row-echelon-form">
-     22.1.5. Row Echelon Form
+     11.1.5. Row Echelon Form
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id2">
-     22.1.6. Gaussian Elimination
+     11.1.6. Gaussian Elimination
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solutions-to-a-linear-system">
-   22.2. Solutions to a Linear System
+   11.2. Solutions to a Linear System
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#general-solution-set">
-     22.2.1. General Solution Set
+     11.2.1. General Solution Set
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solutions">
-   22.3. Solutions
+   11.3. Solutions
   </a>
  </li>
 </ul>
@@ -315,15 +315,15 @@
               <div>
                 
   <div class="section" id="linear-systems-of-equations">
-<h1><span class="section-number">22. </span>Linear Systems of Equations<a class="headerlink" href="#linear-systems-of-equations" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">11. </span>Linear Systems of Equations<a class="headerlink" href="#linear-systems-of-equations" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="gaussian-elimination">
-<h2><span class="section-number">22.1. </span>Gaussian Elimination<a class="headerlink" href="#gaussian-elimination" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.1. </span>Gaussian Elimination<a class="headerlink" href="#gaussian-elimination" title="Permalink to this headline">¶</a></h2>
 <p>The technique studied here makes solving large systems of equations (e.g. 200 equations in 200 unknowns) practical, and it can be implemented on a computer in a basic programming language. You might be surprised to learn that it is necessary to solve vast systems of linear equations as a matter of routine in many practical scientific applications.</p>
 <div class="section" id="motivation">
-<h3><span class="section-number">22.1.1. </span>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.1.1. </span>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">¶</a></h3>
 <p>Gaussian elimination is a systematic technique for solving systems of linear equations, which are of the form</p>
 <div class="amsmath math notranslate nohighlight" id="equation-4d288f7e-6afa-4a46-b27b-57d71b620e82">
-<span class="eqno">(22.1)<a class="headerlink" href="#equation-4d288f7e-6afa-4a46-b27b-57d71b620e82" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<span class="eqno">(11.1)<a class="headerlink" href="#equation-4d288f7e-6afa-4a46-b27b-57d71b620e82" title="Permalink to this equation">¶</a></span>\[\begin{align}
 a_{1,1} x_1 + a_{1,2} x_2 + a_{1,3} x_3 + \dots + a_{1,n} x_n &amp;= b_1 \\
 
    a_{2,1} x_1 + a_{2,2} x_2 + a_{2,3} x_3 + \dots + a_{2,n} x_n &amp;= b_2\\
@@ -334,7 +334,7 @@ a_{1,1} x_1 + a_{1,2} x_2 + a_{1,3} x_3 + \dots + a_{1,n} x_n &amp;= b_1 \\
 <div class="tip admonition">
 <p class="admonition-title">Example</p>
 <div class="amsmath math notranslate nohighlight" id="equation-73ef084f-cc36-4b0f-b83b-4e0c44e3cbd1">
-<span class="eqno">(22.2)<a class="headerlink" href="#equation-73ef084f-cc36-4b0f-b83b-4e0c44e3cbd1" title="Permalink to this equation">¶</a></span>\[\begin{align}4 x_1 - x_2 &amp;= 1\\ -2 x_1 + 3 x_2 &amp;= 12 \end{align}\]</div>
+<span class="eqno">(11.2)<a class="headerlink" href="#equation-73ef084f-cc36-4b0f-b83b-4e0c44e3cbd1" title="Permalink to this equation">¶</a></span>\[\begin{align}4 x_1 - x_2 &amp;= 1\\ -2 x_1 + 3 x_2 &amp;= 12 \end{align}\]</div>
 <p>Each equation here defines a line, and we are looking for a point which satisfies both equations, which means that the lines intersect.</p>
 <p>From the first line we obtain <span class="math notranslate nohighlight">\(x_2 = 4 x_1 - 1\)</span>, and by substituting this into the second line, we obtain <span class="math notranslate nohighlight">\(x = \frac{3}{2}\)</span>, <span class="math notranslate nohighlight">\(y = 5\)</span>. Two equations with two unknowns will always give a unique solution, unless the lines are parallel (and so the equations are just a scaling of each other).</p>
 <ul class="simple">
@@ -345,7 +345,7 @@ a_{1,1} x_1 + a_{1,2} x_2 + a_{1,3} x_3 + \dots + a_{1,n} x_n &amp;= b_1 \\
 </div>
 </div>
 <div class="section" id="a-systematic-technique-for-solving-systems-of-equations">
-<span id="id1"></span><h3><span class="section-number">22.1.2. </span>A systematic technique for solving systems of equations<a class="headerlink" href="#a-systematic-technique-for-solving-systems-of-equations" title="Permalink to this headline">¶</a></h3>
+<span id="id1"></span><h3><span class="section-number">11.1.2. </span>A systematic technique for solving systems of equations<a class="headerlink" href="#a-systematic-technique-for-solving-systems-of-equations" title="Permalink to this headline">¶</a></h3>
 <p>We will begin by finding a solution to the following system:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{alignat*}{5}
@@ -432,7 +432,7 @@ Repeat from Step 2 until the matrix is in upper triangular form (containing all 
 </div>
 <div class="exercise admonition" id="q_elimination">
 
-<p class="admonition-title"><span class="caption-number">Exercise 22.1 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 11.1 </span></p>
 <div class="section" id="exercise-content">
 <p>Write the following system as an augmented matrix then solve it using the Naive Gaussian elimination algorithm.</p>
 <div class="math notranslate nohighlight">
@@ -447,7 +447,7 @@ Repeat from Step 2 until the matrix is in upper triangular form (containing all 
 </div>
 </div>
 <div class="section" id="generalisation">
-<h3><span class="section-number">22.1.3. </span>Generalisation<a class="headerlink" href="#generalisation" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.1.3. </span>Generalisation<a class="headerlink" href="#generalisation" title="Permalink to this headline">¶</a></h3>
 <p>The naive algorithm introduced here can be generalised to include additional row operations. In general, the acceptable row operations that we can perform are:</p>
 <ul class="simple">
 <li><p>multiplication of any row by a constant</p></li>
@@ -504,7 +504,7 @@ r_1 - r_2 &amp; \longrightarrow &amp; (r_1)\\
 <p>We have obtained row-reduced form and the solutions for <span class="math notranslate nohighlight">\(x_1,x_2,x_3\)</span> can now be read off from the final column.</p>
 </div>
 <div class="section" id="application-kirchoffs-law">
-<h3><span class="section-number">22.1.4. </span>Application: Kirchoff’s Law<a class="headerlink" href="#application-kirchoffs-law" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.1.4. </span>Application: Kirchoff’s Law<a class="headerlink" href="#application-kirchoffs-law" title="Permalink to this headline">¶</a></h3>
 <p>In general, Gaussian elimination can be used to solve the problems obtained by applying Kirchoff’s laws. For example, see the problems given here:</p>
 <p><a class="reference external" href="https://www.intmath.com/matrices-determinants/6-matrices-linear-equations.php">https://www.intmath.com/matrices-determinants/6-matrices-linear-equations.php</a></p>
 <p>In the example below, the technique is applied to a case where the system of equations is under-determined, so a unique solution cannot be obtained.</p>
@@ -517,7 +517,7 @@ r_1 - r_2 &amp; \longrightarrow &amp; (r_1)\\
 </div>
 <p>For the system of 4 nodes shown above, this gives us four equations:</p>
 <div class="amsmath math notranslate nohighlight" id="equation-28188c51-2320-4f32-8078-471c682fb022">
-<span class="eqno">(22.3)<a class="headerlink" href="#equation-28188c51-2320-4f32-8078-471c682fb022" title="Permalink to this equation">¶</a></span>\[\begin{align}y_3&amp;=y_1+y_4\\y_1&amp;=y_2+y_5\\y_2&amp;=y_3+y_6\\y_4+y_5+y_6&amp;=0\end{align}\]</div>
+<span class="eqno">(11.3)<a class="headerlink" href="#equation-28188c51-2320-4f32-8078-471c682fb022" title="Permalink to this equation">¶</a></span>\[\begin{align}y_3&amp;=y_1+y_4\\y_1&amp;=y_2+y_5\\y_2&amp;=y_3+y_6\\y_4+y_5+y_6&amp;=0\end{align}\]</div>
 <p>The equations at each node are of the form <span class="math notranslate nohighlight">\(c_1 y_1 +c_2 y_2+\dots +c_6 y_6=d\)</span>. Written in augmented matrix form, the system is:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\left(\begin{array}{cccccc:c}1 &amp; 0 &amp; -1 &amp; 1 &amp; 0 &amp; 0 &amp;0\\-1 &amp; 1 &amp; 0 &amp; 0 &amp; 1 &amp; 0&amp;0 \\0 &amp; -1 &amp; 1 &amp; 0 &amp; 0 &amp; 1&amp;0 \\0 &amp; 0 &amp; 0 &amp; -1 &amp; -1 &amp; -1 &amp;0\\\end{array}\right)\end{split}\]</div>
@@ -533,7 +533,7 @@ Choosing <span class="math notranslate nohighlight">\((y_3,y_5,y_6)=(0,0,1)\)</s
 <p>The full solution space consists of all possible linear combinations <span class="math notranslate nohighlight">\(a s_1 + b s_2 +c s_3\)</span>.</p>
 </div>
 <div class="section" id="row-echelon-form">
-<h3><span class="section-number">22.1.5. </span>Row Echelon Form<a class="headerlink" href="#row-echelon-form" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.1.5. </span>Row Echelon Form<a class="headerlink" href="#row-echelon-form" title="Permalink to this headline">¶</a></h3>
 <p>In this section we present an algorithm for solving a linear system of equations. The system algorithm works for any linear system of equations, regardless of whether there are no, one or infinitely many solutions. It works by converting system of equations to <strong>reduced row echelon form</strong>.</p>
 <div class="admonition-definition admonition">
 <p class="admonition-title">Definition</p>
@@ -544,7 +544,7 @@ Choosing <span class="math notranslate nohighlight">\((y_3,y_5,y_6)=(0,0,1)\)</s
 <li><p>Below the first nonzero entry of a row, all entries are zero.</p></li>
 </ol>
 <div class="amsmath math notranslate nohighlight" id="equation-13e90480-f60f-4877-8956-eac4b93f5fb2">
-<span class="eqno">(22.4)<a class="headerlink" href="#equation-13e90480-f60f-4877-8956-eac4b93f5fb2" title="Permalink to this equation">¶</a></span>\[\begin{pmatrix}
+<span class="eqno">(11.4)<a class="headerlink" href="#equation-13e90480-f60f-4877-8956-eac4b93f5fb2" title="Permalink to this equation">¶</a></span>\[\begin{pmatrix}
 \boxed{\star} &amp; \star &amp;\star &amp;\star &amp;\star \\
 0     &amp; \boxed{\star} &amp;\star &amp;\star &amp;\star \\
 0     &amp;  0    &amp; 0    &amp; \boxed{\star} &amp;\star \\
@@ -558,7 +558,7 @@ Choosing <span class="math notranslate nohighlight">\((y_3,y_5,y_6)=(0,0,1)\)</s
 <li><p>Each pivot is the only nonzero entry in its column.</p></li>
 </ol>
 <div class="amsmath math notranslate nohighlight" id="equation-d6eeadce-9c73-47ee-9c82-634fc5a462db">
-<span class="eqno">(22.5)<a class="headerlink" href="#equation-d6eeadce-9c73-47ee-9c82-634fc5a462db" title="Permalink to this equation">¶</a></span>\[\begin{pmatrix}
+<span class="eqno">(11.5)<a class="headerlink" href="#equation-d6eeadce-9c73-47ee-9c82-634fc5a462db" title="Permalink to this equation">¶</a></span>\[\begin{pmatrix}
 1 &amp; 0 &amp;\star &amp; 0 &amp;\star \\
 0     &amp; 1 &amp;\star &amp;0 &amp;\star \\
 0     &amp;  0    &amp; 0    &amp; 1 &amp;\star \\
@@ -567,7 +567,7 @@ Choosing <span class="math notranslate nohighlight">\((y_3,y_5,y_6)=(0,0,1)\)</s
 </div>
 <div class="exercise admonition" id="q_row_echelon_form">
 
-<p class="admonition-title"><span class="caption-number">Exercise 22.2 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 11.2 </span></p>
 <div class="section" id="exercise-content">
 <p>Which of the following matrices are in (a) row echelon form (b) reduced row echelon formed?</p>
 <div class="math notranslate nohighlight">
@@ -598,7 +598,7 @@ Choosing <span class="math notranslate nohighlight">\((y_3,y_5,y_6)=(0,0,1)\)</s
 </div>
 </div>
 <div class="section" id="id2">
-<h3><span class="section-number">22.1.6. </span>Gaussian Elimination<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.1.6. </span>Gaussian Elimination<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <div class="admonition-row-reduction-algorithm-gaussian-elimination admonition">
 <p class="admonition-title">Row Reduction Algorithm (Gaussian Elimination)</p>
 <p><strong>Step 1</strong> If necessary, swap the 1st row with a lower one so a leftmost nonzero entry is in the 1st row.</p>
@@ -709,7 +709,7 @@ Choosing <span class="math notranslate nohighlight">\((y_3,y_5,y_6)=(0,0,1)\)</s
 </div>
 </div>
 <div class="section" id="solutions-to-a-linear-system">
-<h2><span class="section-number">22.2. </span>Solutions to a Linear System<a class="headerlink" href="#solutions-to-a-linear-system" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.2. </span>Solutions to a Linear System<a class="headerlink" href="#solutions-to-a-linear-system" title="Permalink to this headline">¶</a></h2>
 <p>The reduced row echelon form of the augmented matrix allows us to determine the solutions to the system. There are three cases:</p>
 <p>1. <strong>Every column except the last column is a pivot column</strong>. In this case, the system of equations is consistent and there is a single unique solution. For example,</p>
 <div class="math notranslate nohighlight">
@@ -738,7 +738,7 @@ Choosing <span class="math notranslate nohighlight">\((y_3,y_5,y_6)=(0,0,1)\)</s
 \end{array}\right)\end{split}\]</div>
 <p>has infinitely many solutions since columns 2 and 4 are non-pivot columns. The variables corresponding to a non-pivot column of the matrix are termed <strong>free variables</strong>. In the next section will explore how these solutions can be determined.</p>
 <div class="section" id="general-solution-set">
-<h3><span class="section-number">22.2.1. </span>General Solution Set<a class="headerlink" href="#general-solution-set" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.2.1. </span>General Solution Set<a class="headerlink" href="#general-solution-set" title="Permalink to this headline">¶</a></h3>
 <p>The following system of equations,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -854,10 +854,10 @@ x_3 &amp; {}={} &amp;       &amp;       &amp; -x_4 &amp; {}+{} &amp; 2.
 </div>
 </div>
 <div class="section" id="solutions">
-<h2><span class="section-number">22.3. </span>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.3. </span>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">¶</a></h2>
 <div class="solution admonition" id="LinearAlgebra/linear_systems_matrices/echelon_form-solution-2">
 
-<p class="admonition-title"><a class="reference internal" href="#q_elimination">Solution to Exercise 22.1</a></p>
+<p class="admonition-title"><a class="reference internal" href="#q_elimination">Solution to Exercise 11.1</a></p>
 <div class="section" id="solution-content">
 <p><strong>Gaussian elimination</strong></p>
 <div class="math notranslate nohighlight">
@@ -916,7 +916,7 @@ x - 2y + z = 0 &amp;\Rightarrow x = 2y-z = 3.
 </div>
 <div class="solution admonition" id="LinearAlgebra/linear_systems_matrices/echelon_form-solution-3">
 
-<p class="admonition-title"><a class="reference internal" href="#q_row_echelon_form">Solution to Exercise 22.2</a></p>
+<p class="admonition-title"><a class="reference internal" href="#q_row_echelon_form">Solution to Exercise 11.2</a></p>
 <div class="section" id="solution-content">
 <p>1, 4, 5, 6 are in row echelon form.</p>
 <p>1, 5 are in reduced row echelon form.</p>
@@ -959,7 +959,7 @@ x - 2y + z = 0 &amp;\Rightarrow x = 2y-z = 3.
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">21. </span>Techniques of Proof</p>
+                <p class="prevnext-title"><span class="section-number">10. </span>Techniques of Proof</p>
             </div>
         </a>
     </div>
@@ -967,7 +967,7 @@ x - 2y + z = 0 &amp;\Rightarrow x = 2y-z = 3.
         <a class="right-next" href="matrices.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">23. </span>Matrices</p>
+                <p class="prevnext-title"><span class="section-number">12. </span>Matrices</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
