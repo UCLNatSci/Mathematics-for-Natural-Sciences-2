@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vector Fields &#8212; Mathematics for Natural Sciences 2</title>
+    <title>5. Vector Fields &#8212; Mathematics for Natural Sciences 2</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -22,15 +22,16 @@
       
 
     
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
@@ -38,14 +39,11 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -53,10 +51,12 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1st Order Variations of Fields" href="divandcurl.html" />
-    <link rel="prev" title="Vectors and Vector Algebra" href="vectoralgebra.html" />
+    <link rel="next" title="6. 1st Order Variations of Fields" href="divandcurl.html" />
+    <link rel="prev" title="4. Vectors and Vector Algebra" href="vectoralgebra.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -96,52 +96,82 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="partialdifferentiation.html">
-   Multivariable Calculus
+   1. Multivariable Calculus
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="integrationprelim.html">
-   Integration Preliminaries
+   2. Integration Preliminaries
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="lineintegrals.html">
-   Line Integrals
+   3. Line Integrals
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vectoralgebra.html">
-   Vectors and Vector Algebra
+   4. Vectors and Vector Algebra
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Vector Fields
+   5. Vector Fields
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="divandcurl.html">
-   1st Order Variations of Fields
+   6. 1st Order Variations of Fields
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/setsnotation.html">
-   Set Theory
+   7. Set Theory
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/functions.html">
-   Functions
+   13. Functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/propositionallogic.html">
-   Propositional Logic
+   16. Propositional Logic
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/methodsofproof.html">
-   Techniques of Proof
+   21. Techniques of Proof
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/echelon_form.html">
+   22. Linear Systems of Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/matrices.html">
+   23. Matrices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/linear_maps.html">
+   24. Linear Transformations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/inverse_determinant.html">
+   25. Inverse and Determinant
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/eigenvectors/notes.html">
+   26. Eigenvalues and Eigenvectors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/diagonalisation.html">
+   27. Matrix Diagonalisation
   </a>
  </li>
 </ul>
@@ -217,29 +247,29 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#scalar-fields">
-   Scalar Fields
+   5.1. Scalar Fields
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
-   Vector Fields
+   5.2. Vector Fields
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#calculus-on-fields">
-   Calculus on Fields
+   5.3. Calculus on Fields
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#gradient-operator">
-     Gradient Operator
+     5.3.1. Gradient Operator
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#total-differential">
-   Total Differential
+   5.4. Total Differential
   </a>
  </li>
 </ul>
@@ -254,7 +284,7 @@
               <div>
                 
   <div class="section" id="vector-fields">
-<h1>Vector Fields<a class="headerlink" href="#vector-fields" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">5. </span>Vector Fields<a class="headerlink" href="#vector-fields" title="Permalink to this headline">¶</a></h1>
 <p>A field in a mathematical sense is some function which can be defined within some domain <span class="math notranslate nohighlight">\(D\)</span>, we will examine fields in two and three spatial dimensions,
 (but this can be extended to more later as required), therefore <span class="math notranslate nohighlight">\(D \subset \mathbb{R}^2\)</span> or <span class="math notranslate nohighlight">\(D \subset \mathbb{R}^3\)</span> respectively.  If <span class="math notranslate nohighlight">\(D\)</span> is not specified, then
 we assume the whole of the space is being used as the domain.</p>
@@ -263,7 +293,7 @@ acceleations, forces, electric and magnetic fields.</p>
 <p>One impoirtant distinction to make between fields is whether they are <b>Scalar</b>, <b>Vector</b> or some other (e.g. <b>Tensor</b> although this is beyond
 the scope of this course).</p>
 <div class="section" id="scalar-fields">
-<h2>Scalar Fields<a class="headerlink" href="#scalar-fields" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1. </span>Scalar Fields<a class="headerlink" href="#scalar-fields" title="Permalink to this headline">¶</a></h2>
 <p>A scalar field is a physical quantity which has some value (or magnitude) but contains no information about direction, at every point <span class="math notranslate nohighlight">\({\bf r} = (x, \,y, \,z)\)</span>
 within a domain. Physical examples include pressure and temperature.  Mathematically we can write this as a function <span class="math notranslate nohighlight">\(\phi\)</span> such that:</p>
 <div class="math notranslate nohighlight">
@@ -271,7 +301,7 @@ within a domain. Physical examples include pressure and temperature.  Mathematic
 {\bf r} &amp;\longrightarrow&amp;\, \phi({\bf r})\end{split}\]</div>
 </div>
 <div class="section" id="id1">
-<h2>Vector Fields<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2. </span>Vector Fields<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>A vector field A scalar field is a physical quantity which has both magnitude and direction, at every point <span class="math notranslate nohighlight">\({\bf r} = (x, \,y, \,z)\)</span> within a domain.  Physical
 examples include velocity, force, and electric and magnetic fields.  Mathematically we can write this as a function <span class="math notranslate nohighlight">\(\bf A(r)\)</span> such that:</p>
 <div class="math notranslate nohighlight">
@@ -281,10 +311,10 @@ examples include velocity, force, and electric and magnetic fields.  Mathematica
  A_y ({\bf r})\\
  A_z ({\bf r}) 
 \end{pmatrix}\end{split}\]</div>
-<p>We can picture these fields in <a class="reference internal" href="#scalarvectorfield"><span class="std std-numref">Fig. 21</span></a>, outlining the difference between scalar and vecor fields.</p>
+<p>We can picture these fields in <a class="reference internal" href="#scalarvectorfield"><span class="std std-numref">Fig. 5.1</span></a>, outlining the difference between scalar and vecor fields.</p>
 <div class="figure align-default" id="scalarvectorfield">
 <img alt="../_images/scalarvectorfield.png" src="../_images/scalarvectorfield.png" />
-<p class="caption"><span class="caption-number">Fig. 21 </span><span class="caption-text"><b> Left Pane:</b> An example of a two-dimensional scalar field, <span class="math notranslate nohighlight">\(\phi(x,\, y) = \exp(-(x^2+y^2))\)</span> (plotted in green on the <span class="math notranslate nohighlight">\(z\)</span> axis) defined
+<p class="caption"><span class="caption-number">Fig. 5.1 </span><span class="caption-text"><b> Left Pane:</b> An example of a two-dimensional scalar field, <span class="math notranslate nohighlight">\(\phi(x,\, y) = \exp(-(x^2+y^2))\)</span> (plotted in green on the <span class="math notranslate nohighlight">\(z\)</span> axis) defined
 over the domain <span class="math notranslate nohighlight">\(D\,:\,x^2 + y^2 \leq 1\)</span> (shown in red on the <span class="math notranslate nohighlight">\((x,\,y)\)</span> plane),
 <b> Center Pane:</b> Contour lines of the scalar field, showing lines of constant <span class="math notranslate nohighlight">\(\phi\)</span> in blue, within the domain <span class="math notranslate nohighlight">\(D\)</span>,
 <b> Right Pane:</b> The vector field <span class="math notranslate nohighlight">\({\bf A(r)} = \frac{1}{10}\begin{pmatrix}
@@ -294,9 +324,9 @@ over the domain <span class="math notranslate nohighlight">\(D\,:\,x^2 + y^2 \le
 </div>
 </div>
 <div class="section" id="calculus-on-fields">
-<h2>Calculus on Fields<a class="headerlink" href="#calculus-on-fields" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.3. </span>Calculus on Fields<a class="headerlink" href="#calculus-on-fields" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="gradient-operator">
-<h3>Gradient Operator<a class="headerlink" href="#gradient-operator" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.3.1. </span>Gradient Operator<a class="headerlink" href="#gradient-operator" title="Permalink to this headline">¶</a></h3>
 <p>Now that we have defined fields, which can vary according to different parameters at every point within a domain, we can begin to apply
 our toolkit of mathematical tools, here calculus.</p>
 <p>We can find the partial derivatives of fields in a similar way to functions, for example for <span class="math notranslate nohighlight">\(\phi = \exp(-(x^2+y^2)\)</span>, <span class="math notranslate nohighlight">\({\bf A(r)} = \frac{1}{10}\begin{pmatrix}
@@ -357,12 +387,12 @@ one dimension lower than the dimension of the problem (therefore in 3D, these wo
  x \\
  y
 \end{pmatrix}\end{split}\]</div>
-<p>We see that for all <span class="math notranslate nohighlight">\(x,\, y\)</span> within the domain, the vector will be directed inwards, as we see in <a class="reference internal" href="#scalarfieldgradient"><span class="std std-numref">Fig. 22</span></a>.</p>
+<p>We see that for all <span class="math notranslate nohighlight">\(x,\, y\)</span> within the domain, the vector will be directed inwards, as we see in <a class="reference internal" href="#scalarfieldgradient"><span class="std std-numref">Fig. 5.2</span></a>.</p>
 <div class="figure align-default" id="scalarfieldgradient">
 <img alt="../_images/scalarfieldgradient.png" src="../_images/scalarfieldgradient.png" />
-<p class="caption"><span class="caption-number">Fig. 22 </span><span class="caption-text">Gradients <span class="math notranslate nohighlight">\(\nabla \phi\)</span> for a scalr field <span class="math notranslate nohighlight">\(\phi(\hat{\bf r}) = \exp(-(x^2+y^2))\)</span> at a few different points along the contour plot (denoted
+<p class="caption"><span class="caption-number">Fig. 5.2 </span><span class="caption-text">Gradients <span class="math notranslate nohighlight">\(\nabla \phi\)</span> for a scalr field <span class="math notranslate nohighlight">\(\phi(\hat{\bf r}) = \exp(-(x^2+y^2))\)</span> at a few different points along the contour plot (denoted
 <span class="math notranslate nohighlight">\(\bf r=r_0\)</span>).  The gradients are perpendicular to the contour lines and point toward the direction of the largest increase of <span class="math notranslate nohighlight">\(\phi\)</span>,
-which from <a class="reference internal" href="#scalarvectorfield"><span class="std std-numref">Fig. 21</span></a> we know is a maxima.</span><a class="headerlink" href="#scalarfieldgradient" title="Permalink to this image">¶</a></p>
+which from <a class="reference internal" href="#scalarvectorfield"><span class="std std-numref">Fig. 5.1</span></a> we know is a maxima.</span><a class="headerlink" href="#scalarfieldgradient" title="Permalink to this image">¶</a></p>
 </div>
 <p>If the scalar field depends only on one coordindate, then we can simplify this expression for <span class="math notranslate nohighlight">\(\nabla \phi\)</span>, e.g. <span class="math notranslate nohighlight">\(\phi = \phi(r)\)</span>:</p>
 <div class="math notranslate nohighlight">
@@ -371,7 +401,7 @@ which from <a class="reference internal" href="#scalarvectorfield"><span class="
 </div>
 </div>
 <div class="section" id="total-differential">
-<h2>Total Differential<a class="headerlink" href="#total-differential" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.4. </span>Total Differential<a class="headerlink" href="#total-differential" title="Permalink to this headline">¶</a></h2>
 <p>Recall from our discussions about partial derivatives, we can also find a <em>total derivative</em> of a scalar field <span class="math notranslate nohighlight">\(\phi\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\mathrm{d} \phi = \frac{\partial \phi}{\partial x}\mathrm{d}x + \frac{\partial \phi}{\partial y}\mathrm{d}y + \frac{\partial \phi}{\partial x}\mathrm{d}z\]</div>
@@ -417,8 +447,8 @@ general set of changes in the <span class="math notranslate nohighlight">\(x,\, 
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="vectoralgebra.html" title="previous page">Vectors and Vector Algebra</a>
-    <a class='right-next' id="next-link" href="divandcurl.html" title="next page">1st Order Variations of Fields</a>
+    <a class='left-prev' id="prev-link" href="vectoralgebra.html" title="previous page"><span class="section-number">4. </span>Vectors and Vector Algebra</a>
+    <a class='right-next' id="next-link" href="divandcurl.html" title="next page"><span class="section-number">6. </span>1st Order Variations of Fields</a>
 
         </div>
         

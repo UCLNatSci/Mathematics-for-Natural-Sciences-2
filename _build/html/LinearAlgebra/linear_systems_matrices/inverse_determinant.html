@@ -377,23 +377,23 @@ a general proof using element notation, is given below.</p>
 <div class="section" id="linking-matrix-multiplication-and-gaussian-elimination">
 <h2><span class="section-number">25.4. </span>Linking matrix multiplication and Gaussian elimination<a class="headerlink" href="#linking-matrix-multiplication-and-gaussian-elimination" title="Permalink to this headline">¶</a></h2>
 <p>The row-reduction operations that were introduced in the section on Gaussian elimination can be implemented by matrix multiplication. The illustration here matches the example that was given in <a class="reference internal" href="echelon_form.html#id1"><span class="std std-ref">A systematic technique for solving systems of equations</span></a> for the augmented coefficient matrix:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3777d826-64a2-475c-afb5-e06cf43c64cf">
-<span class="eqno">(25.1)<a class="headerlink" href="#equation-3777d826-64a2-475c-afb5-e06cf43c64cf" title="Permalink to this equation">¶</a></span>\[\begin{equation}A = \left(\begin{array}{ccc|c}1&amp;1&amp;2&amp;2\\2&amp;3&amp;-4&amp;1\\-1&amp;1&amp;1&amp;3\end{array}\right).\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-99e6303a-6f14-46a3-8e6a-72358491cbd4">
+<span class="eqno">(25.1)<a class="headerlink" href="#equation-99e6303a-6f14-46a3-8e6a-72358491cbd4" title="Permalink to this equation">¶</a></span>\[\begin{equation}A = \left(\begin{array}{ccc|c}1&amp;1&amp;2&amp;2\\2&amp;3&amp;-4&amp;1\\-1&amp;1&amp;1&amp;3\end{array}\right).\end{equation}\]</div>
 <p>In the first step we used the row operations <span class="math notranslate nohighlight">\(r_2-2r_1\longrightarrow r_2\)</span>,   <span class="math notranslate nohighlight">\(r_3+r_1\longrightarrow r_3\)</span>, and in the second step we used the row operation <span class="math notranslate nohighlight">\(r_3-2r_2\longrightarrow r_3\)</span>. These are equivalent to the following row operation matrices:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}L_1 = \left(\begin{array}{ccc}1&amp;0&amp;0\\-2&amp;1&amp;0\\1&amp;0&amp;1\end{array}\right), \quad  L_2=\left(\begin{array}{ccc}1 &amp; 0 &amp; 0 \\0 &amp; 1 &amp; 0 \\0 &amp; -2 &amp; 1 \\\end{array}\right) \end{split}\]</div>
 <p>The composition of these two matrices puts the coefficient matrix into the upper triangular form previously obtained:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c1b8028b-2191-4ab3-a1b0-725876cbafd4">
-<span class="eqno">(25.2)<a class="headerlink" href="#equation-c1b8028b-2191-4ab3-a1b0-725876cbafd4" title="Permalink to this equation">¶</a></span>\[\begin{equation}L_2 L_1 A = \left(\begin{array}{ccc}1 &amp; 0 &amp; 0 \\0 &amp; 1 &amp; 0 \\0 &amp; -2 &amp; 1 \\\end{array}\right)\left(\begin{array}{ccc|c}1 &amp; 1 &amp; 2 &amp; 2 \\0 &amp; 1 &amp; -8 &amp; -3 \\0 &amp; 2 &amp; 3 &amp; 5 \\\end{array}\right)=\left(\begin{array}{ccc|c}1 &amp; 1 &amp; 2 &amp; 2 \\0 &amp; 1 &amp; -8 &amp; -3 \\0 &amp; 0 &amp; 19 &amp; 11 \\\end{array}\right).\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-adc266ed-c99e-43c8-9aa0-285b3ed0381b">
+<span class="eqno">(25.2)<a class="headerlink" href="#equation-adc266ed-c99e-43c8-9aa0-285b3ed0381b" title="Permalink to this equation">¶</a></span>\[\begin{equation}L_2 L_1 A = \left(\begin{array}{ccc}1 &amp; 0 &amp; 0 \\0 &amp; 1 &amp; 0 \\0 &amp; -2 &amp; 1 \\\end{array}\right)\left(\begin{array}{ccc|c}1 &amp; 1 &amp; 2 &amp; 2 \\0 &amp; 1 &amp; -8 &amp; -3 \\0 &amp; 2 &amp; 3 &amp; 5 \\\end{array}\right)=\left(\begin{array}{ccc|c}1 &amp; 1 &amp; 2 &amp; 2 \\0 &amp; 1 &amp; -8 &amp; -3 \\0 &amp; 0 &amp; 19 &amp; 11 \\\end{array}\right).\end{equation}\]</div>
 <p>The additional operations that were carried out to fully row-reduce the matrix can be captured in the following row-reduction matrices:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0f5a38f3-cc82-454d-aaca-c0bd42821193">
-<span class="eqno">(25.3)<a class="headerlink" href="#equation-0f5a38f3-cc82-454d-aaca-c0bd42821193" title="Permalink to this equation">¶</a></span>\[\begin{equation}P=\left(\begin{array}{ccc}1 &amp; 0 &amp; 0 \\0 &amp; 1 &amp; 0 \\0 &amp; 0 &amp; \frac{1}{19} \\\end{array}\right), \quad U_1=\left(\begin{array}{ccc}1 &amp; 0 &amp; -2 \\0 &amp; 1 &amp; 8 \\0 &amp; 0 &amp; 1 \\\end{array}\right), \quad U_2 = \left(\begin{array}{ccc}1 &amp; 0 &amp; -2 \\0 &amp; 1 &amp; 8 \\0 &amp; 0 &amp; 1 \\\end{array}\right)\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-2ade5a79-569d-4984-a79c-23198b2d7fb9">
+<span class="eqno">(25.3)<a class="headerlink" href="#equation-2ade5a79-569d-4984-a79c-23198b2d7fb9" title="Permalink to this equation">¶</a></span>\[\begin{equation}P=\left(\begin{array}{ccc}1 &amp; 0 &amp; 0 \\0 &amp; 1 &amp; 0 \\0 &amp; 0 &amp; \frac{1}{19} \\\end{array}\right), \quad U_1=\left(\begin{array}{ccc}1 &amp; 0 &amp; -2 \\0 &amp; 1 &amp; 8 \\0 &amp; 0 &amp; 1 \\\end{array}\right), \quad U_2 = \left(\begin{array}{ccc}1 &amp; 0 &amp; -2 \\0 &amp; 1 &amp; 8 \\0 &amp; 0 &amp; 1 \\\end{array}\right)\end{equation}\]</div>
 <p>You may verify the result:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}U_2 U_1 P L_2 L_1 A =\left(\begin{array}{ccc|c}1 &amp; 0 &amp; 0 &amp; -\frac{15}{19} \\0 &amp; 1 &amp; 0 &amp; \frac{31}{19} \\0 &amp; 0 &amp; 1 &amp; \frac{11}{19} \\\end{array}\right)\end{split}\]</div>
 <p>It is also possible to combine the row reduction operations into a single multiplication matrix:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-413c7121-f85c-45ad-8fdf-ba0df39ba950">
-<span class="eqno">(25.4)<a class="headerlink" href="#equation-413c7121-f85c-45ad-8fdf-ba0df39ba950" title="Permalink to this equation">¶</a></span>\[\begin{equation}U_2 U_1 P L_2 L_1 = \frac{1}{19}\left(\begin{array}{ccc}7 &amp; 1 &amp; -10 \\2 &amp; 3 &amp; 8 \\5 &amp; -2 &amp; 1 \\\end{array}\right)\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-231f92cf-5ceb-4c45-8230-bf90d8a41beb">
+<span class="eqno">(25.4)<a class="headerlink" href="#equation-231f92cf-5ceb-4c45-8230-bf90d8a41beb" title="Permalink to this equation">¶</a></span>\[\begin{equation}U_2 U_1 P L_2 L_1 = \frac{1}{19}\left(\begin{array}{ccc}7 &amp; 1 &amp; -10 \\2 &amp; 3 &amp; 8 \\5 &amp; -2 &amp; 1 \\\end{array}\right)\end{equation}\]</div>
 <p>Later, we will come to think of this as the inverse of the coefficient matrix.</p>
 </div>
 <div class="section" id="the-2x2-inverse">
@@ -489,8 +489,8 @@ a general proof using element notation, is given below.</p>
 <h3><span class="section-number">25.5.7. </span>Derivation of the (2x2) inverse from first principles<a class="headerlink" href="#derivation-of-the-2x2-inverse-from-first-principles" title="Permalink to this headline">¶</a></h3>
 <p>Consider the problem <span class="math notranslate nohighlight">\(A X = I\)</span>, which has solution <span class="math notranslate nohighlight">\(X=A^{-1}\)</span>. We can solve this problem applying row reduction operations (Gaussian elimination) to the augmented matrix <span class="math notranslate nohighlight">\(\biggr[\begin{array}{c|c}A&amp;I\end{array}\biggr]\)</span>.</p>
 <p>The algorithm proceeds as follows:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0017c150-28a5-4aa6-b9c5-2588dcb5f56b">
-<span class="eqno">(25.9)<a class="headerlink" href="#equation-0017c150-28a5-4aa6-b9c5-2588dcb5f56b" title="Permalink to this equation">¶</a></span>\[\begin{equation}\biggr[\begin{array}{c|c}A&amp;I\end{array}\biggr]\quad \rightarrow \quad \biggr[\begin{array}{c|c}U&amp;L\end{array}\biggr] \quad \rightarrow \quad \biggr[\begin{array}{c|c}I&amp;A^{-1}\end{array}\biggr]\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-9a54ed67-d8da-4f98-ab9d-a15bbce4c106">
+<span class="eqno">(25.9)<a class="headerlink" href="#equation-9a54ed67-d8da-4f98-ab9d-a15bbce4c106" title="Permalink to this equation">¶</a></span>\[\begin{equation}\biggr[\begin{array}{c|c}A&amp;I\end{array}\biggr]\quad \rightarrow \quad \biggr[\begin{array}{c|c}U&amp;L\end{array}\biggr] \quad \rightarrow \quad \biggr[\begin{array}{c|c}I&amp;A^{-1}\end{array}\biggr]\end{equation}\]</div>
 <p>in which <span class="math notranslate nohighlight">\(U\)</span> is an upper-diagonal matrix and <span class="math notranslate nohighlight">\(L\)</span> is a lower-diagonal matrix.</p>
 <p>For the (2x2) problem we start with the augmented matrix:</p>
 <div class="math notranslate nohighlight">
@@ -502,8 +502,8 @@ a general proof using element notation, is given below.</p>
 <li><p><span class="math notranslate nohighlight">\(\hat{r}_1=r_1-r_2 a_{12}/a_{11}\)</span></p></li>
 </ol>
 <p>We obtain</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6bc5f847-ed9d-44dd-980c-d4c22c0b45b9">
-<span class="eqno">(25.10)<a class="headerlink" href="#equation-6bc5f847-ed9d-44dd-980c-d4c22c0b45b9" title="Permalink to this equation">¶</a></span>\[\begin{equation}\left[\begin{array}{cc|cc}a_{11}&amp;a_{12}&amp;1&amp;0\\a_{21}&amp;a_{22}&amp;0&amp;1\end{array}\right] \quad \Rightarrow \quad \left[\begin{array}{cc|cc}1&amp;0&amp;\frac{a_{22}}{a_{11}a_{22}-a_{12}a_{21}}&amp;\frac{-a_{12}}{a_{11}a_{22}-a_{12}a_{21}}\\0&amp;1&amp;\frac{-a_{21}}{a_{11}a_{22}-a_{12}a_{21}}&amp;\frac{a_{11}}{a_{11}a_{22}-a_{12}a_{21}}\end{array}\right]\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-508eb368-a46b-4247-9a8f-b0728582d8b6">
+<span class="eqno">(25.10)<a class="headerlink" href="#equation-508eb368-a46b-4247-9a8f-b0728582d8b6" title="Permalink to this equation">¶</a></span>\[\begin{equation}\left[\begin{array}{cc|cc}a_{11}&amp;a_{12}&amp;1&amp;0\\a_{21}&amp;a_{22}&amp;0&amp;1\end{array}\right] \quad \Rightarrow \quad \left[\begin{array}{cc|cc}1&amp;0&amp;\frac{a_{22}}{a_{11}a_{22}-a_{12}a_{21}}&amp;\frac{-a_{12}}{a_{11}a_{22}-a_{12}a_{21}}\\0&amp;1&amp;\frac{-a_{21}}{a_{11}a_{22}-a_{12}a_{21}}&amp;\frac{a_{11}}{a_{11}a_{22}-a_{12}a_{21}}\end{array}\right]\end{equation}\]</div>
 <p>from which the following result for the inverse matrix <span class="math notranslate nohighlight">\(A^{-1}\)</span> is inferred:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}A^{-1}=\frac{1}{a_{11} a_{22}-a_{12} a_{21}}\left(\begin{array}{cc}a_{22} &amp; -a_{12} \\ -a_{22} &amp; a_{11} \end{array}\right)\end{split}\]</div>
@@ -612,8 +612,8 @@ In that case, we could dispense with the brackets, since it is equivalent to a s
 <p>3. The key here is to recognise that <span class="math notranslate nohighlight">\((A+\lambda)B\)</span> is not valid, since a scalar can’t be meaningfully added to a matrix. But by recognising that <span class="math notranslate nohighlight">\(B=IB\)</span> where I is the identity matrix, we can write</p>
 <p><span class="math notranslate nohighlight">\(AB+\lambda B=AB+\lambda IB=(A+\lambda I)B\)</span></p>
 <p>You can try it for an example. For instance, if</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9111fd1c-9976-41d1-adec-d504414aea8f">
-<span class="eqno">(25.11)<a class="headerlink" href="#equation-9111fd1c-9976-41d1-adec-d504414aea8f" title="Permalink to this equation">¶</a></span>\[\begin{equation}A=\left(\begin{array}{cc}2&amp;3\\-1&amp;4\end{array}\right), \quad B=\left(\begin{array}{cc}2&amp;-1\\1&amp;1\end{array}\right), \quad \lambda=3\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-e2825bf3-828b-4a4b-b6b2-48e72c9e9037">
+<span class="eqno">(25.11)<a class="headerlink" href="#equation-e2825bf3-828b-4a4b-b6b2-48e72c9e9037" title="Permalink to this equation">¶</a></span>\[\begin{equation}A=\left(\begin{array}{cc}2&amp;3\\-1&amp;4\end{array}\right), \quad B=\left(\begin{array}{cc}2&amp;-1\\1&amp;1\end{array}\right), \quad \lambda=3\end{equation}\]</div>
 <p>Then, <span class="math notranslate nohighlight">\(AB+\lambda B = \left(\begin{array}{cc}2&amp;3\\-1&amp;4\end{array}\right) \left(\begin{array}{cc}2&amp;-1\\1&amp;1\end{array}\right)+3\left(\begin{array}{cc}2&amp;-1\\1&amp;1\end{array}\right)= \left(\begin{array}{cc}7&amp;1\\2&amp;5\end{array}\right)+ \left(\begin{array}{cc}6&amp;-3\\3&amp;3\end{array}\right)= \left(\begin{array}{cc}13&amp;-2\\5&amp;8\end{array}\right)\)</span>
 And <span class="math notranslate nohighlight">\((A+\lambda I)B=\left(\begin{array}{cc}2+3&amp;3\\-1&amp;4+3\end{array}\right) \left(\begin{array}{cc}2&amp;-1\\1&amp;1\end{array}\right)= \left(\begin{array}{cc}13&amp;-2\\5&amp;8\end{array}\right)\)</span></p>
 <p><a class="reference internal" href="#q-matrix-inverse"><span class="std std-numref">Question 25.5.2</span></a></p>

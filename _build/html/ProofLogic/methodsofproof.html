@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Techniques of Proof &#8212; Mathematics for Natural Sciences 2</title>
+    <title>21. Techniques of Proof &#8212; Mathematics for Natural Sciences 2</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -22,15 +22,16 @@
       
 
     
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
@@ -38,14 +39,11 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -53,9 +51,12 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Propositional Logic" href="propositionallogic.html" />
+    <link rel="next" title="22. Linear Systems of Equations" href="../LinearAlgebra/linear_systems_matrices/echelon_form.html" />
+    <link rel="prev" title="16. Propositional Logic" href="propositionallogic.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -95,42 +96,82 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/partialdifferentiation.html">
-   Multivariable Calculus
+   1. Multivariable Calculus
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/integrationprelim.html">
-   Integration Preliminaries
+   2. Integration Preliminaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../VectorCalculus/lineintegrals.html">
+   3. Line Integrals
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/vectoralgebra.html">
-   Vectors and Vector Algebra
+   4. Vectors and Vector Algebra
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/calculusonfields.html">
-   Vector Fields
+   5. Vector Fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../VectorCalculus/divandcurl.html">
+   6. 1st Order Variations of Fields
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="setsnotation.html">
-   Set Theory
+   7. Set Theory
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="functions.html">
-   Functions
+   13. Functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="propositionallogic.html">
-   Propositional Logic
+   16. Propositional Logic
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Techniques of Proof
+   21. Techniques of Proof
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/echelon_form.html">
+   22. Linear Systems of Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/matrices.html">
+   23. Matrices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/linear_maps.html">
+   24. Linear Transformations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/inverse_determinant.html">
+   25. Inverse and Determinant
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/eigenvectors/notes.html">
+   26. Eigenvalues and Eigenvectors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/diagonalisation.html">
+   27. Matrix Diagonalisation
   </a>
  </li>
 </ul>
@@ -206,27 +247,27 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#proof-by-contradiction">
-   Proof by Contradiction
+   21.1. Proof by Contradiction
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#proof-by-counterexample">
-   Proof by Counterexample
+   21.2. Proof by Counterexample
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#proof-by-induction">
-   Proof by Induction
+   21.3. Proof by Induction
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#proof-by-contraposition">
-   Proof by Contraposition
+   21.4. Proof by Contraposition
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#proof-by-construction">
-   Proof By Construction
+   21.5. Proof By Construction
   </a>
  </li>
 </ul>
@@ -241,9 +282,9 @@
               <div>
                 
   <div class="section" id="techniques-of-proof">
-<h1>Techniques of Proof<a class="headerlink" href="#techniques-of-proof" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">21. </span>Techniques of Proof<a class="headerlink" href="#techniques-of-proof" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="proof-by-contradiction">
-<h2>Proof by Contradiction<a class="headerlink" href="#proof-by-contradiction" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">21.1. </span>Proof by Contradiction<a class="headerlink" href="#proof-by-contradiction" title="Permalink to this headline">¶</a></h2>
 <p>This is a form of proof that seeks to establish if the validity of a proposition by showing that by assuming the proposition is false leads to a direct contradiction.
 We can summarise the technique as:</p>
 <ol class="simple">
@@ -266,7 +307,7 @@ prime numbers from the first <span class="math notranslate nohighlight">\(p_1 = 
 there cannot be a finite number of primes and so there are an infinite number of primes. <b>QED</b></p>
 </div>
 <div class="section" id="proof-by-counterexample">
-<h2>Proof by Counterexample<a class="headerlink" href="#proof-by-counterexample" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">21.2. </span>Proof by Counterexample<a class="headerlink" href="#proof-by-counterexample" title="Permalink to this headline">¶</a></h2>
 <p>This is form of proof that disproves a proposition by giving an example which is a direct contradiction to the proposition.  This technique is often used to disprove a
 universal (or <span class="math notranslate nohighlight">\(\forall\)</span> type) statement.  We can summarise the technique as:</p>
 <ol class="simple">
@@ -282,7 +323,7 @@ We can find examples where this proof holds for both divisibility, e.g. <span cl
 proposition does not - hence the statement can be shown not be always true.  <b>QED</b></p>
 </div>
 <div class="section" id="proof-by-induction">
-<h2>Proof by Induction<a class="headerlink" href="#proof-by-induction" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">21.3. </span>Proof by Induction<a class="headerlink" href="#proof-by-induction" title="Permalink to this headline">¶</a></h2>
 <p>This is a form of proof where a proposition, which is shown to be true for an initial case and a more general case <span class="math notranslate nohighlight">\(n\)</span>, which then allows a higher general
 case <span class="math notranslate nohighlight">\(n+1\)</span> to be shown to be true.  This idea of a higher and higher steps on a proof ladder can be quite a powerful technique.  We can summarise the technique as:</p>
 <ol class="simple">
@@ -303,7 +344,7 @@ case <span class="math notranslate nohighlight">\(n+1\)</span> to be shown to be
 <p><b>QED</b></p>
 </div>
 <div class="section" id="proof-by-contraposition">
-<h2>Proof by Contraposition<a class="headerlink" href="#proof-by-contraposition" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">21.4. </span>Proof by Contraposition<a class="headerlink" href="#proof-by-contraposition" title="Permalink to this headline">¶</a></h2>
 <p>We can summarise this technique as:</p>
 <ol class="simple">
 <li><p>Given a statement <span class="math notranslate nohighlight">\(P\)</span> which leads directly to assertion <span class="math notranslate nohighlight">\(Q\)</span>, i.e.</p></li>
@@ -326,7 +367,7 @@ Lets write <span class="math notranslate nohighlight">\(x = 2a\)</span> with som
 <p>which we can see clearly is odd.  Thus when <span class="math notranslate nohighlight">\(x^2 - 6x + 5\)</span> is odd, <span class="math notranslate nohighlight">\(x\)</span> is even and therefore when <span class="math notranslate nohighlight">\(x^2 - 6x + 5\)</span> is even, <span class="math notranslate nohighlight">\(x\)</span> is odd. <b>QED</b></p>
 </div>
 <div class="section" id="proof-by-construction">
-<h2>Proof By Construction<a class="headerlink" href="#proof-by-construction" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">21.5. </span>Proof By Construction<a class="headerlink" href="#proof-by-construction" title="Permalink to this headline">¶</a></h2>
 <p>We can summarise this technique as:</p>
 <ol class="simple">
 <li><p>Given a statement <span class="math notranslate nohighlight">\(P_1\)</span>, we construct  <span class="math notranslate nohighlight">\(P_2,\,P_3,\,\dots,\,P_n\)</span> which leads to assertion <span class="math notranslate nohighlight">\(Q\)</span>,</p></li>
@@ -368,7 +409,8 @@ x(x-6) &amp;=&amp; 2a - 5\end{split}\]</div>
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="propositionallogic.html" title="previous page">Propositional Logic</a>
+    <a class='left-prev' id="prev-link" href="propositionallogic.html" title="previous page"><span class="section-number">16. </span>Propositional Logic</a>
+    <a class='right-next' id="next-link" href="../LinearAlgebra/linear_systems_matrices/echelon_form.html" title="next page"><span class="section-number">22. </span>Linear Systems of Equations</a>
 
         </div>
         
