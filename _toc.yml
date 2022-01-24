@@ -3,6 +3,8 @@
 
 format: jb-book
 root: intro
+options:
+  numbered: True
 chapters:
 - file: VectorCalculus/partialdifferentiation
 - file: VectorCalculus/integrationprelim
@@ -20,5 +22,10 @@ chapters:
 - file: ProofLogic/propositionallogic
 - file: ProofLogic/methodsofproof
 
-#- file: LinearAlgebra/linear_systems_matrices/notes
-#- file: VectorCalculus/indexnotation
+
+- file: LinearAlgebra/linear_systems_matrices/echelon_form.md
+- file: LinearAlgebra/linear_systems_matrices/matrices.md
+- file: LinearAlgebra/linear_systems_matrices/linear_maps.md
+- file: LinearAlgebra/linear_systems_matrices/inverse_determinant.md
+- file: LinearAlgebra/eigenvectors/notes.md
+- file: LinearAlgebra/linear_systems_matrices/diagonalisation.md

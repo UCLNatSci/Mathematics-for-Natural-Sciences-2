@@ -1,0 +1,509 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>24. Linear Transformations &#8212; Mathematics for Natural Sciences 2</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/_static/mystyle.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="25. Inverse and Determinant" href="inverse_determinant.html" />
+    <link rel="prev" title="23. Matrices" href="matrices.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Mathematics for Natural Sciences 2</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Welcome to NSCI0027
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../VectorCalculus/partialdifferentiation.html">
+   1. Multivariable Calculus
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../VectorCalculus/integrationprelim.html">
+   2. Integration Preliminaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../VectorCalculus/lineintegrals.html">
+   3. Line Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../VectorCalculus/vectoralgebra.html">
+   4. Vectors and Vector Algebra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../VectorCalculus/calculusonfields.html">
+   5. Vector Fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../VectorCalculus/divandcurl.html">
+   6. 1st Order Variations of Fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../ProofLogic/setsnotation.html">
+   7. Set Theory
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../ProofLogic/functions.html">
+   13. Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../ProofLogic/propositionallogic.html">
+   16. Propositional Logic
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../ProofLogic/methodsofproof.html">
+   21. Techniques of Proof
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="echelon_form.html">
+   22. Linear Systems of Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="matrices.html">
+   23. Matrices
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   24. Linear Transformations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="inverse_determinant.html">
+   25. Inverse and Determinant
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../eigenvectors/notes.html">
+   26. Eigenvalues and Eigenvectors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="diagonalisation.html">
+   27. Matrix Diagonalisation
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/LinearAlgebra/linear_systems_matrices/linear_maps.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   24.1. Linear Transformations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#matrix-transformations">
+   24.2. Matrix Transformations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#geometrical-interpretation-of-matrices">
+   24.3. Geometrical Interpretation of Matrices
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-matrix-of-a-linear-transformations">
+   24.4. The Matrix of a Linear Transformations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rotation-matrices-in-2d">
+   24.5. Rotation matrices in 2D
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#projection-matrix">
+   24.6. Projection Matrix
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sequence-of-transformations">
+   24.7. Sequence of transformations
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="linear-transformations">
+<h1><span class="section-number">24. </span>Linear Transformations<a class="headerlink" href="#linear-transformations" title="Permalink to this headline">¶</a></h1>
+<p>In this section we learn to understand matrices geometrically as functions, or transformations. We briefly discuss transformations in general, then specialize to matrix transformations, which are transformations that come from matrices.</p>
+<div class="section" id="id1">
+<h2><span class="section-number">24.1. </span>Linear Transformations<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>A function is a rule that takes inputs and transforms them to outputs. For example, a function <span class="math notranslate nohighlight">\(f:\mathbb{R}\rightarrow\mathbb{R}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[f(x)=x^2\]</div>
+<p>is a function that takes a real number <span class="math notranslate nohighlight">\(x\)</span> as input and outputs another real number, the square of the input. On the other hand, the function <span class="math notranslate nohighlight">\(g:\mathbb{R}^2\rightarrow \mathbb{R}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[g(x, y) = x^2 + y^3\]</div>
+<p>is a function which maps 2-dimensional vectors <span class="math notranslate nohighlight">\((x, y) \in \mathbb{R}^2\)</span> to real numbers.</p>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Definition</p>
+<p>Suppose  <span class="math notranslate nohighlight">\(f:\mathbb{R}^n \rightarrow \mathbb{R}^m\)</span> is a function such that</p>
+<div class="math notranslate nohighlight">
+\[f(u + v) =f(u) + f(v)\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[f(au) = af(u)\]</div>
+<p>for all <span class="math notranslate nohighlight">\(u, v \in\mathbb{R}^n\)</span> and <span class="math notranslate nohighlight">\(a\in\mathbb{R}\)</span>.</p>
+<p>Then <span class="math notranslate nohighlight">\(f\)</span> is a <strong>linear transformation</strong>.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Examples</p>
+<p>[TODO]</p>
+<p>Examples of linear transformations</p>
+<p>Examples of non-linear transformations</p>
+<p>Geometric examples.</p>
+</div>
+</div>
+<div class="section" id="matrix-transformations">
+<h2><span class="section-number">24.2. </span>Matrix Transformations<a class="headerlink" href="#matrix-transformations" title="Permalink to this headline">¶</a></h2>
+<p>Now let <span class="math notranslate nohighlight">\(A\)</span> be an <span class="math notranslate nohighlight">\((m \times n)\)</span> matrix. Then <span class="math notranslate nohighlight">\(A\)</span> defines a function</p>
+<div class="math notranslate nohighlight">
+\[T:\mathbb{R}^n\rightarrow\mathbb{R}^m\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[T(x) = Ax.\]</div>
+<p>In other words, <span class="math notranslate nohighlight">\(A\)</span> defines a function which takes a vector <span class="math notranslate nohighlight">\(x \in \mathbb{R}^n\)</span> and transforms it to a vector <span class="math notranslate nohighlight">\(Ax \in \mathbb{R}^m\)</span>. In fact, it turns out that the function defined by multiplication by a matrix is a linear transformation.</p>
+<div class="admonition-theorem admonition">
+<p class="admonition-title">Theorem</p>
+<p>If <span class="math notranslate nohighlight">\(A\)</span> is an <span class="math notranslate nohighlight">\((m \times n)\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> then the function</p>
+<div class="math notranslate nohighlight">
+\[T:\mathbb{R}^n\rightarrow\mathbb{R}^m\]</div>
+<p>defined by</p>
+<div class="math notranslate nohighlight">
+\[T(x) = Ax\]</div>
+<p>is a linear transformation which takes the vector <span class="math notranslate nohighlight">\(x \in \mathbb{R}^n\)</span> to the vector <span class="math notranslate nohighlight">\(Ax \in \mathbb{R}^m\)</span>.</p>
+</div>
+<p>The proof of this follows directly from the definitions of matrix arithmetic:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+T(u+v) = A(u+v) = Au + Av = T(u) + T(v)\\
+T(au) = A(au) = aAu = aT(u).
+\end{split}\]</div>
+<p>There is essentially nothing new here, beyond the notation and a slightly different way of thinking about matrix multiplication. In the next section we will see how thinking of a matrix as a transformation allows us to picture its effect geometrically.</p>
+</div>
+<div class="section" id="geometrical-interpretation-of-matrices">
+<h2><span class="section-number">24.3. </span>Geometrical Interpretation of Matrices<a class="headerlink" href="#geometrical-interpretation-of-matrices" title="Permalink to this headline">¶</a></h2>
+<p>Consider the matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{pmatrix}-1 &amp; 0\\0 &amp; 1\end{pmatrix}\end{split}\]</div>
+<p>which defines the linear transformation <span class="math notranslate nohighlight">\(T:\mathbb{R}^2 \rightarrow \mathbb{R}^2\)</span> defined by <span class="math notranslate nohighlight">\(T(x) = Ax\)</span>.</p>
+<p>Given a vector <span class="math notranslate nohighlight">\(x=\begin{pmatrix}x_1\\x_2\end{pmatrix}\)</span> we can consider the effect of the transformation <span class="math notranslate nohighlight">\(T\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}T(x) = A\begin{pmatrix}x_1\\x_2\end{pmatrix}=\begin{pmatrix}-1 &amp; 0\\0 &amp; 1\end{pmatrix}\begin{pmatrix}x_1\\x_2\end{pmatrix}=\begin{pmatrix}-x_1\\x_2\end{pmatrix}.\end{split}\]</div>
+<p>Multiplication by <span class="math notranslate nohighlight">\(A\)</span> negates the <span class="math notranslate nohighlight">\(x_1\)</span> co-ordinate and leaves the <span class="math notranslate nohighlight">\(x_2\)</span> co-ordinate unchanged i.e. <em>it reflects over the <span class="math notranslate nohighlight">\(x_2\)</span> axis</em>.</p>
+<p>We can illustrate this by picturing the effect of the transformation on the unit co-ordinate vectors <span class="math notranslate nohighlight">\(e_1 = \begin{pmatrix}1\\0\end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(e_2=\begin{pmatrix}0\\1\end{pmatrix}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}T(e_1) = Ae_1 =\begin{pmatrix}-1 &amp; 0\\0 &amp; 1\end{pmatrix}\begin{pmatrix}1\\0\end{pmatrix}=\begin{pmatrix}-1\\0\end{pmatrix} \end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}T(e_2) = Ae_2 = \begin{pmatrix}-1 &amp; 0\\0 &amp; 1\end{pmatrix}\begin{pmatrix}0\\1\end{pmatrix}=\begin{pmatrix}0\\1\end{pmatrix}.\end{split}\]</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/linear_transformations_2_0.png" src="../../_images/linear_transformations_2_0.png" />
+</div>
+<p>Furthermore, once we know the transformed unit vectors, we can use the linearity of the transformation to determine how <em>any</em> vector is transformed. Given a vector <span class="math notranslate nohighlight">\(x = \begin{pmatrix}x_1\\x_2\end{pmatrix}\)</span>, we can write <span class="math notranslate nohighlight">\(x\)</span> as a sum of unit co-ordinate vectors:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}x = \begin{pmatrix}x_1\\x_2\end{pmatrix} = x_1e_1 + x_2e_2\end{split}\]</div>
+<p>and use the linearity property to calculate the result</p>
+<div class="math notranslate nohighlight">
+\[T(x) = Ax = A(x_1e_1 + x_2e_2) = x_1Ae_1 + x_2Ae_2 = x_1T(e_1) + x_2T(e_2).\]</div>
+<p>For example, the vector <span class="math notranslate nohighlight">\(e_1 + e_2\)</span> is transformed to <span class="math notranslate nohighlight">\(T(e_1) + T(e_2)\)</span> so we can use this to draw the image of the unit square which has vertices <span class="math notranslate nohighlight">\(0\)</span>, <span class="math notranslate nohighlight">\(e_1\)</span>, <span class="math notranslate nohighlight">\(e_2\)</span> and <span class="math notranslate nohighlight">\(e_1 + e_2\)</span>:</p>
+<div class="cell_output docutils container">
+<img alt="../../_images/linear_transformations_3_0.png" src="../../_images/linear_transformations_3_0.png" />
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Example</p>
+<p>Determine the geometrical effect of the transformation given by the matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{pmatrix} \frac{1}{\sqrt{2}} &amp; -\frac{1}{\sqrt{2}}\\ \frac{1}{\sqrt{2}} &amp; \frac{1}{\sqrt{2}}\end{pmatrix}.\end{split}\]</div>
+<p><strong>Solution</strong></p>
+<p>TODO</p>
+</div>
+</div>
+<div class="section" id="the-matrix-of-a-linear-transformations">
+<h2><span class="section-number">24.4. </span>The Matrix of a Linear Transformations<a class="headerlink" href="#the-matrix-of-a-linear-transformations" title="Permalink to this headline">¶</a></h2>
+<p>In this section will learn that <em>all</em> linear transformations are matrix transformations - in other words, any function <span class="math notranslate nohighlight">\(T\)</span> which satisfies the linearity properties can be written as a matrix <span class="math notranslate nohighlight">\(T(x) = Ax\)</span>. Before doing so, we need the following important notation.</p>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Definition</p>
+<p>The <strong>standard coordinate vectors</strong> in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> are the <span class="math notranslate nohighlight">\(n\)</span> vectors</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}e_1 = \begin{pmatrix}1\\0\\\vdots\\0\end{pmatrix},~e_2 = \begin{pmatrix}0\\1\\\vdots\\0\end{pmatrix},\ldots,~e_n = \begin{pmatrix}0\\0\\\vdots\\1\end{pmatrix}.\end{split}\]</div>
+</div>
+<p>The standard coordinate vectors are useful because of the following property:</p>
+<p><strong>Multiplying a matrix by the standard co-ordinate vector <span class="math notranslate nohighlight">\(e_i\)</span> selects the <span class="math notranslate nohighlight">\(i\)</span>th column of the matrix</strong>.</p>
+<p>Suppose that an <span class="math notranslate nohighlight">\((m \times n)\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> is composed of the <span class="math notranslate nohighlight">\(n\)</span> column vectors <span class="math notranslate nohighlight">\(v_1, v_2, \ldots, v_n\)</span>. Then,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}| &amp; | &amp; &amp; | \\v_1 &amp; v_2 &amp; \cdots &amp; v_n\\| &amp; | &amp; &amp; |\end{pmatrix}e_i = v_i.\end{split}\]</div>
+<p>For exampl</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \\ 7 &amp; 8 &amp; 9\end{pmatrix}\begin{pmatrix}1 \\ 0 \\ 0\end{pmatrix} =\begin{pmatrix}1 \\ 4 \\ 7\end{pmatrix}.\end{split}\]</div>
+<div class="admonition-theorem admonition">
+<p class="admonition-title">Theorem</p>
+<p>Let <span class="math notranslate nohighlight">\(T:\mathbb{R}^n \rightarrow \mathbb{R}^m\)</span> be a linear transformation. Then the <span class="math notranslate nohighlight">\((m \times n)\)</span> matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{pmatrix}| &amp; | &amp; &amp; | \\T(e_1) &amp; T(e_2) &amp; \cdots &amp; T(e_n)\\| &amp; | &amp; &amp; |\end{pmatrix}\end{split}\]</div>
+<p>is the matrix corresponding to the transformation <span class="math notranslate nohighlight">\(T\)</span> and <span class="math notranslate nohighlight">\(T(x)=Ax\)</span>.</p>
+</div>
+<p>Using this theorem, we can write down the matrix of <em>any</em> linear transformation.</p>
+<div class="tip admonition">
+<p class="admonition-title">Example</p>
+<p>Determine the matrix of the linear transformation <span class="math notranslate nohighlight">\(T:\mathbb{R}^2 \rightarrow \mathbb{R}^2\)</span> corresponding to reflection across the line <span class="math notranslate nohighlight">\(x_2 = -x_1\)</span>.</p>
+<p><strong>Solution</strong></p>
+<p>First, determine the transformation of the unit coordinate vectors.</p>
+<div class="cell_output docutils container">
+<img alt="../../_images/linear_transformations_4_0.png" src="../../_images/linear_transformations_4_0.png" />
+</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}T(e_1) = \begin{pmatrix}0\\-1\end{pmatrix}\\
+T(e_2) = \begin{pmatrix}-1\\0\end{pmatrix}\end{split}\]</div>
+<p>Therefore the matrix,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{pmatrix}| &amp; |\\T(e_1) &amp; T(e_2) \\| &amp; | \end{pmatrix} = \begin{pmatrix}0 &amp; -1 \\-1 &amp;0\end{pmatrix}\end{split}\]</div>
+<p>is the matrix of the transformation <span class="math notranslate nohighlight">\(T\)</span>.</p>
+</div>
+</div>
+<div class="section" id="rotation-matrices-in-2d">
+<h2><span class="section-number">24.5. </span>Rotation matrices in 2D<a class="headerlink" href="#rotation-matrices-in-2d" title="Permalink to this headline">¶</a></h2>
+<p>Suppose the linear transformation <span class="math notranslate nohighlight">\(T:\mathbb{R}^2 \rightarrow \mathbb{R}^2\)</span> corresponds to an anticlockwise rotation by an angle <span class="math notranslate nohighlight">\(\theta\)</span> around the origin. Then we can use trigonometry to determine the destination of the coordinate vectors under <span class="math notranslate nohighlight">\(T\)</span>:</p>
+<div class="cell_output docutils container">
+<img alt="../../_images/linear_transformations_5_0.png" src="../../_images/linear_transformations_5_0.png" />
+</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}T(e_1) = \begin{pmatrix}\cos\theta\\\sin\theta\end{pmatrix}\\
+T(e_2) = \begin{pmatrix}-\sin\theta\\\cos\theta\end{pmatrix}\end{split}\]</div>
+<div class="admonition-rotation-matrix admonition">
+<p class="admonition-title">Rotation Matrix</p>
+<p>The matrix corresponding to an anticlockwise rotation by <span class="math notranslate nohighlight">\(\theta\)</span> degrees around the origin is given by:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{pmatrix}\cos\theta &amp; -\sin\theta\\\sin\theta &amp; \cos\theta\end{pmatrix}.\end{split}\]</div>
+</div>
+</div>
+<div class="section" id="projection-matrix">
+<h2><span class="section-number">24.6. </span>Projection Matrix<a class="headerlink" href="#projection-matrix" title="Permalink to this headline">¶</a></h2>
+<p>[TODO]</p>
+</div>
+<div class="section" id="sequence-of-transformations">
+<h2><span class="section-number">24.7. </span>Sequence of transformations<a class="headerlink" href="#sequence-of-transformations" title="Permalink to this headline">¶</a></h2>
+<p>[TODO]</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./LinearAlgebra\linear_systems_matrices"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="matrices.html" title="previous page"><span class="section-number">23. </span>Matrices</a>
+    <a class='right-next' id="next-link" href="inverse_determinant.html" title="next page"><span class="section-number">25. </span>Inverse and Determinant</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Natural Sciences<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
