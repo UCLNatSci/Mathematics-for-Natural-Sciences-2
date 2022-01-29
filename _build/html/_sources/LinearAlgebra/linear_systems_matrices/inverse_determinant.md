@@ -287,50 +287,6 @@ We can liken the result to the operation of getting dressed/undressed: If you pu
 
 ## Solutions to Exercises
 
-{numref}`Question %s <q_matrix_definitions>`
-
-1\. $A$ is a (3 x 2) matrix, since it has 3 rows and 2 columns.
-Matrices are nearly always given upper case letters as variable names.
-
-$\mathbf{b}$ is a (3 x 1) matrix.
-Matrices with a single column are a special case, called a column vector, and they are usually given bold lower case letters as variable names.
-To represent a bold letter by hand, we underline it like this: $\underline{b}$
-
-$c$ is a (1 x 1) matrix.
-In that case, we could dispense with the brackets, since it is equivalent to a scalar (basically just a single value).
-
-2\. The element in the second row and third column of the transpose matrix is the element in the third row and second column of the original matrix, so the result is -4.
-
-3\. The only upper-triangular matrix here is $A$. Matrix $B$ is an upper anti-triangular matrix and matrix $C$ is a lower triangular matrix
-
-{numref}`Question %s <q_matrix_arithmetic>`
-
-Matrix addition is both commutative and associative, because it is an elementwise operation and therefore has the same properties as addition of real numbers. Thus, the first two expressions give the same result:
-
-1\. and 2\. $(A+B)+C=A+(B+C)=\left(\begin{array}{cc}1-4+0 & 2+1+3 \\-1+1+4 & 0+2+2 \\3-2+1 & 1+3+1 \\\end{array}\right)=\left(\begin{array}{cc}-3 & 6 \\4 & 4 \\2 & 5 \\\end{array}\right)$
-
-3\. $A-2 B+\frac{C}{2}=\left(\begin{array}{cc}1+8+0 & 2-2+\frac{3}{2} \\-1-2+2 & 0-4+1 \\3+4+\frac{1}{2} & 1-6+\frac{1}{2} \\\end{array}\right)=\left(\begin{array}{cc}9 & \frac{3}{2} \\-1 & -3 \\\frac{15}{2} & -\frac{9}{2} \\\end{array}\right)$
-
-4\. Since $A$ and $D$ are not the same order, these two matrices cannot be added
-
-{numref}`Question %s <q_matrix_multiplication>`
-
-1\.
-
-$A B=\left(\begin{array}{cc}(3\times 2)+(1 \times-3)+(-2\times 1) & (3\times 3)+(1\times 0)+(-2\times 1) \\ (0\times 2)+(2\times -3)+(4\times 1) & (0\times 3)+(2\times 0)+(4\times 1) \end{array}\right)=\left(\begin{array}{cc}1 & 7 \\-2 & 4 \end{array}\right)$
-
-We multiplied a (2x3) matrix with a (3x2) matrix. The result is a (2x2) matrix. The two results are not the same, and do not even have the same dimensions.
-
-In general, $A B\neq B A$, even when $A$ and $B$ are square matrices. That is, matrix multiplication is NOT COMMUTATIVE.
-
-According to the definition $A B_{i,j}= \sum _k A_{i,k} B_{k,j}$, whilst $B A_{i,j}= \sum _k A_{k,j} B_{i,k}$. In the first case, the multiplied elements come from the $i^{th}$ row of $A$ and the $j^{th}$ column of B. In the second case, the multiplied elements come from the $i^{th}$ row of $B$ and the $j^{th}$ column of $A$
-
-2\. The given result cannot be calculated because the inner dimensions do not match. That is, the number of columns in the left hand matrix does not match the number of rows in the right hand matrix.
-
-3\. Since A is (2x3) and C is (3x4), the result A C is (2x4). Notice that the result C A is impossible. The element in the second row and third column is given by multiplying the second row of A and the third column of C to give $(0\times 2)+(2 \times -3)+(4 \times8)=26$.
-
-4\. $\left(\begin{array}{ccc}9 & 4 & 8 \\4 & 3 & 5 \\4 & 4 & 7 \\\end{array}\right)$
-
 
 {numref}`Question %s <q_matrix_identity>`
 

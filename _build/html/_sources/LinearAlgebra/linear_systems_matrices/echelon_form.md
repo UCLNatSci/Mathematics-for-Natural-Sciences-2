@@ -29,7 +29,6 @@ From the first line we obtain $x_2 = 4 x_1 - 1$, and by substituting this into t
 -	If they are parallel and distinct, there are no solutions because there are no points that lie on both lines.
 -	If they are parallel and coincident (same line), there are an infinite number of solutions.
 
-[TODO] rewrite this
 ```
 (gaussian-elimination)=
 ### A systematic technique for solving systems of equations
@@ -206,50 +205,9 @@ $$
 
 We have obtained row-reduced form and the solutions for $x_1,x_2,x_3$ can now be read off from the final column.
 
-### Application: Kirchoff's Law
-In general, Gaussian elimination can be used to solve the problems obtained by applying Kirchoff's laws. For example, see the problems given here:
+## Row Echelon Form
 
-https://www.intmath.com/matrices-determinants/6-matrices-linear-equations.php
-
-In the example below, the technique is applied to a case where the system of equations is under-determined, so a unique solution cannot be obtained.
-
-![](kirchoff.png)
-
-```{admonition} Kirchoff's Law
-
-Kirchoff's law states that
-
-$$\mathrm{current~in} = \mathrm{current~out}$$
-
-```
-
-For the system of 4 nodes shown above, this gives us four equations:
-
-\begin{align}y_3&=y_1+y_4\\y_1&=y_2+y_5\\y_2&=y_3+y_6\\y_4+y_5+y_6&=0\end{align}
-
-The equations at each node are of the form $c_1 y_1 +c_2 y_2+\dots +c_6 y_6=d$. Written in augmented matrix form, the system is:
-
-$$\left(\begin{array}{cccccc:c}1 & 0 & -1 & 1 & 0 & 0 &0\\-1 & 1 & 0 & 0 & 1 & 0&0 \\0 & -1 & 1 & 0 & 0 & 1&0 \\0 & 0 & 0 & -1 & -1 & -1 &0\\\end{array}\right)$$
-
-The first 6 columns are for the coefficients of $y_1,\dots y_6$ and the last column is the constant term that appears on the right hand side of the equation.
-
-Here, Gaussian elimination is applied as usual, but the complicating factor is that there are more unknowns than equations and so the system is under-determined. It has "free variables", that can be made to take any value!
-
-After applying Gaussian elimination to the pivot elements in the first and second column, we can't do anything with the third column without spoiling the progress we've made in the first two columns, so we leave that one and move on to use the fourth column as a pivot. After that, we can't make any more progress so we stop. We obtain:
-
-$$\left(\begin{array}{cccccc:c}1 & 0 & -1 & 0 & -1 & -1 & 0 \\0 & 1 & -1 & 0 & 0 & -1 & 0 \\0 & 0 & 0 & 1 & 1 & 1 & 0 \\0 & 0 & 0 & 0 & 0 & 0 & 0 \\\end{array}\right)$$
-
-The first, second, and fourth columns are the pivot columns, and the other columns are all "free" since they can be obtained from a combination of the other columns.
-
-Choosing $(y_3,y_5,y_6)=(1,0,0)$ gives the special solution $s_1:(1,1,1,0,0,0)$  
-Choosing $(y_3,y_5,y_6)=(0,1,0)$ gives the special solution $s_2:(1,0,0,-1,1,0)$  
-Choosing $(y_3,y_5,y_6)=(0,0,1)$ gives the special solution $s_3:(1,1,0,-1,0,1)$
-
-The full solution space consists of all possible linear combinations $a s_1 + b s_2 +c s_3$.
-
-### Row Echelon Form
-
-In this section we present an algorithm for solving a linear system of equations. The system algorithm works for any linear system of equations, regardless of whether there are no, one or infinitely many solutions. It works by converting system of equations to **reduced row echelon form**.
+In this section we present an algorithm for solving a linear system of equations. The system algorithm works for any linear system of equations, regardless of whether there are zero, one or infinitely many solutions. It works by converting system of equations to **reduced row echelon form**.
 
 ```{admonition} Definition
 
@@ -312,7 +270,7 @@ $$
 $$
 ```
 
-### Gaussian Elimination
+### Gaussian Elimination for Reduction to Echelon Form
 
 ```{admonition} Row Reduction Algorithm (Gaussian Elimination)
 
@@ -332,6 +290,7 @@ The matrix is now in row echelon form. To convert it to reduced row echelon form
 ```
 
 ```{admonition} Example: Gaussian Elimination
+:name: ex_gaussian_elimination
 :class: tip
 Use Gaussian elimination to reduce the following matrix to reduced row echelon form:
 
@@ -433,7 +392,23 @@ $$
 $$
 ```
 
-## Solutions to a Linear System
+```{exercise}
+:label: q_echelon_form_2
+
+<!-- https://www.math.uh.edu/~jiwenhe/math2331/lectures/sec1_2.pdf -->
+
+Use Gaussian elimination to reduce the following matrix to row echelon form and reduced row echelon form:
+
+$$
+\begin{pmatrix}
+0 & 3 & -6 & 6 & 4 & -5\\
+3 & -7 & 8 & -5 & 8 & 9\\
+3 & -9 & 12 & -9 & 6 & 15
+\end{pmatrix}$$
+
+```
+
+## Parametric Solutions to a Linear System
 
 The reduced row echelon form of the augmented matrix allows us to determine the solutions to the system. There are three cases:
 
@@ -526,81 +501,74 @@ x_3 & {}={} &  &  & t
 
 for any $t \in \mathbb{R}$.
 
-Finally, we can write the general solution in vector form:
+This is the **general solution in parametric form** of the system of equations, and $x_3$ is a **free variable**.
+
+In a later section we will see how to write this in vector form as follows:
 
 $$
 \begin{pmatrix}x_1\\x_2\\x_3\end{pmatrix} = t\begin{pmatrix}-5\\-2\\1\end{pmatrix} + \begin{pmatrix}1\\-1\\0\end{pmatrix}.
 $$
 
-This is the **general solution** of the system of equations, and $x_3$ is a **free variable**.
+**The solution set is a straight line**.
 
-```{admonition} General Solutions
+```{admonition} Parametric solution to system of linear equations
 
-Suppose we have a system of $m$ equations with $n$ unknowns. Then the general solution of a consistent system of linear equations can be written as follows:
+Suppose we have a linear system of $m$ equations in $n$ unknowns. Determine the **parameteric form** of the solution set as follows:
 
-$$v = t_1v_1 + \ldots + t_kv_k + v_0$$
-
-where $v = \begin{pmatrix}x_1\\x_2\\ \vdots \\x_n\end{pmatrix}$ is a general vector in the solution set and $v_1, \ldots, v_k$ and $v_0$ are determined from the augmented matrix in reduced row echelon form.
-
-1. Write the system as an augmented matrix.
-2. Use Gaussian elimination to reduce to reduced row echelon form with $k$ free variables.
-3. Write the corresponding system of linear equations, moving all free variables to the right hand side.
-4. Write the solution as a vector equation $v = t_1v_1 + \ldots + t_kv_k + v_0$.
+1. Write the system of as an augmented matrix.
+2. Use Gaussian elimination to reduce to reduced row echelon form.
+3. Write the corresponding system of linear equations.
+4. Move all free variables to the right hand side.
 
 ```
 
 ```{admonition} Example
-:class: tip
 
-Determine the general solution to the following system of equations, expressing the answer in vector form:
+Write the solution to the system represented by the following augmented matrix in parametric form.
 
-$$
-\begin{alignat*}{5}
--2x_1 & {}-{} & 4x_2 & {}-{} & 2x_3 & {}-{} & 10x_4 {}={} & 0\\
-2x_1 & {}+{} & 4x_2 & {}+{} & x_3 & {}+{} & 9x_4 {}={} & -2\\
-3x_1 & {}+{} & 6x_2 & {}+{} & x_3 & {}+{} & 13x_4 {}={} & -4.
-\end{alignat*}$$
+$$\left(\begin{array}{cccc|c}
+\boxed{1} & 2 & 0 & 3 & 1\\
+0 & 0 & \boxed{1} & -2 & -2
+\end{array}\right)$$
 
 **Solution**
 
-The augmented matrix is:
+The matrix is already in reduced row echelon form. The pivot variables are $x_1$ and $x_3$; the free variables are $x_2$ and $x_4$. It corresponds to the following equations:
 
-$$
-\left(
-\begin{array}{cccc|c}
--2 & -4 & -2 & -10 & 0\\
-2 & 4 & 1 & 9 & -2\\
-3 & 6 & 1 & 13 & -4
-\end{array}\right).
+$$\begin{alignat*}{4}
+x_1 & {}+{} & 2x_2 & \quad &      & {}+{} & 3x_4 & {}={} & 1\\
+    &       &      & \quad & x_3 & {}-{} & 2x_4 & {}={} & -2.
+\end{alignat*}
 $$
 
-We have already determined the reduced row echelon form in the Gaussian Elimination example above:
+Move the free variables to the right hand side to give the parametric solution:
 
-$$
-\left(
-\begin{array}{cccc|c}
-\boxed{1} & 2 & 0 & 4 & -2\\
-0 & 0 & \boxed{1} & 1 & 2\\
-0 & 0 & 0 & 0 & 0
-\end{array}\right).
-$$
-
-Write as a system of equations with the free variables $x_2$ and $x_4$ on the right hand side:
-
-$$
-\begin{alignat*}{4}
-x_1 & {}={} & -2x_2 & {}-{} & 4x_4 & {}-{} & 2\\
-x_3 & {}={} &       &       & -x_4 & {}+{} & 2.
-\end{alignat*}$$
-
-Write this in vector form:
-
-$$
-\begin{pmatrix}x_1\\x_2\\x_3\\x_4\end{pmatrix} = \begin{pmatrix}-2x_2&-4x_4&-2\\x_2&&\\&-x_4&+2\\&x_4&\end{pmatrix} = x_2\begin{pmatrix}-2\\1\\0\\0\end{pmatrix} + x_4\begin{pmatrix}-4\\0\\-1\\1\end{pmatrix} + \begin{pmatrix}-2\\0\\2\\0\end{pmatrix}
+$$\begin{alignat*}{5}
+x_1 & {}={} & -2x_2 & {}-{} & 3x_4 & {}+{} & 1\\
+x_3 & {}={} &       & {}-{} & 2x_4 & {}-{} & 2
+\end{alignat*}
 $$
 
 for any $x_2, x_4 \in \mathbb{R}$.
+
+This is the equation of a (2d) plane.
+
 ```
+
+
+
+```{exercise}
+:label: q_parametric_form
+
+The reduced row echelon form of the matrix for a linear system in four variables $x_1, x_2, x_3, x_4$ is
+
+$$\left(\begin{array}{cccc|c}1 & 0 & 0 & 3 & 2\\
+0 & 0 & 1 & 4 & -1\end{array}\right).$$
+
+1. Identify the pivot variables and free variables.
+2. Write the solution to the system in parametric form.
+```
+
 
 ## Solutions
 
@@ -668,4 +636,67 @@ The solution is $\begin{pmatrix}x\\y\\z\end{pmatrix} = \begin{pmatrix}3\\2\\1\en
 1, 4, 5, 6 are in row echelon form.
 
 1, 5 are in reduced row echelon form.
+```
+
+```{solution} q_echelon_form_2
+
+Row echelon form:
+
+$$
+\begin{pmatrix}
+3 & -9 & 12  & -9 & 6 & 15\\
+0 & 1 & -2 & 2 & 1 & -3\\
+0 & 0 & 0 & 0 & 1 & 4
+\end{pmatrix}
+$$
+
+Reduced row echelon form:
+
+$$
+\begin{pmatrix}
+1 & 0 & -2  & 3 & 0 & -24\\
+0 & 1 & -2 & 2 & 0 & -7\\
+0 & 0 & 0 & 0 & 1 & 4
+\end{pmatrix}
+$$
+
+
+```
+
+```{solution} q_parametric_form
+
+1\. The pivots are $x_1, x_3$; the free variables are $x_2, x_4$.
+
+2\. Write the system of equations:
+
+$$
+\begin{alignat*}{4}
+x_1 & \quad &     & {}+{} & 3x_4 & {}={} & 2\\
+    &       & x_3 & {}+{} & 4x_4 & {}={} & -1
+\end{alignat*}.
+$$
+
+In parametric form:
+
+$$
+\begin{alignat*}{3}
+x_1 & {}={} & 2 & {}-{} & 3x_4\\
+x_3 & {}={} & -1 & {}-{} & 4x_4
+\end{alignat*}.
+$$
+
+What happened to $x_2$? It is a free variable, but no other variable depends on it. The general solution is:
+
+$$
+\begin{pmatrix}
+x_1\\x_2\\x_3\\x_4
+\end{pmatrix}
+=
+\begin{pmatrix}
+2-3x_4\\x_2\\-1-4x_4\\x_4
+\end{pmatrix}
+$$
+
+for any values of $x_2$ and $x_4$.
+
 ```

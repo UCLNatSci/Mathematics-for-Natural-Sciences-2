@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -44,18 +44,17 @@
     <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="13. Linear Transformations" href="linear_maps.html" />
     <link rel="prev" title="11. Linear Systems of Equations" href="echelon_form.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -75,10 +74,6 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
-      
-      
       <img src="../../_static/logo.png" class="logo" alt="logo">
       
       
@@ -88,7 +83,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -156,26 +151,6 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    12. Matrices
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="linear_maps.html">
-   13. Linear Transformations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="inverse_determinant.html">
-   14. Inverse and Determinant
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../eigenvectors/notes.html">
-   15. Eigenvalues and Eigenvectors
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="diagonalisation.html">
-   16. Matrix Diagonalisation
   </a>
  </li>
 </ul>
@@ -247,7 +222,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#matrix-definitions">
@@ -262,11 +237,6 @@
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#terminology">
      12.1.2. Terminology
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#questions">
-     12.1.3. Questions
     </a>
    </li>
   </ul>
@@ -287,47 +257,43 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#q-matrix-arithmetic">
-     12.2.3. Questions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#matrix-multiplication">
-     12.2.4. Matrix multiplication
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#q-matrix-multiplication">
-     12.2.5. Questions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#application-walk-lengths">
-     12.2.6. Application: Walk lengths
+     12.2.3. Matrix multiplication
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#properties-of-matrix-multiplication">
-     12.2.7. Properties of Matrix Multiplication
+     12.2.4. Properties of Matrix Multiplication
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#solving-ax-b">
-   12.3. Solving
-   <span class="math notranslate nohighlight">
-    \(Ax = b\)
-   </span>
+  <a class="reference internal nav-link" href="#matrix-equations">
+   12.3. Matrix equations
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#solving-ax-0">
+     12.3.1. Solving
+     <span class="math notranslate nohighlight">
+      \(Ax = 0\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#solving-ax-b">
+     12.3.2. Solving
+     <span class="math notranslate nohighlight">
+      \(Ax = b\)
+     </span>
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#solving-ax-0-the-nullspace">
-   12.4. Solving
-   <span class="math notranslate nohighlight">
-    \(Ax = 0\)
-   </span>
-   : the Nullspace
+  <a class="reference internal nav-link" href="#solutions">
+   12.4. Solutions
   </a>
  </li>
 </ul>
@@ -345,7 +311,7 @@
 <h1><span class="section-number">12. </span>Matrices<a class="headerlink" href="#matrices" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="matrix-definitions">
 <h2><span class="section-number">12.1. </span>Matrix Definitions<a class="headerlink" href="#matrix-definitions" title="Permalink to this headline">¶</a></h2>
-<p>A matrix (plural: matrices) is essentially just an array (or collection) of values, arranged in rows and columns. For example, when we were solving systems of linear equations by Gaussian elimination, we formed the <strong>augmented matrix</strong> of coefficients:</p>
+<p>A matrix (plural: matrices) is essentially just an array of values, arranged in rows and columns. For example, when we were solving systems of linear equations by Gaussian elimination, we formed the <strong>augmented matrix</strong> of coefficients:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \left(
@@ -357,7 +323,7 @@
 \end{array}
 \right)
 \end{split}\]</div>
-<p>The dashed line was used to indicate that the matrix is partitioned into two sub-matrices, representing the coefficients and constant terms, respectively.</p>
+<p>The vertical line was used to indicate that the matrix is partitioned into two sub-matrices, representing the coefficients and constant terms, respectively.</p>
 <p>In general, the values contained in a matrix could represent anything, although manipulating systems of linear equations is one of the most valuable uses of matrices.</p>
 <p>The Gaussian elimination technique that we have looked at is a brute force method for solving a given set of equations, whilst matrix methods are more concerned with finding general solutions and simplifications of certain types of problems.</p>
 <div class="section" id="notation">
@@ -367,8 +333,8 @@
 <span class="eqno">(12.1)<a class="headerlink" href="#equation-square-matrix" title="Permalink to this equation">¶</a></span>\[\begin{split}\left( \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right) \qquad \left[ \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right]\end{split}\]</div>
 <p>It is important that you do not use commas to separate the elements, which is incorrect notation.</p>
 <p>Either square or round brackets can be used to denote a matrix - but you should avoid mixing notation. Other types of brackets cannot be used, so none of the expressions below are matrices. In fact, the third expression has a special meaning, as we will see later.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-697ad727-7c66-4dca-80b8-06791cace574">
-<span class="eqno">(12.2)<a class="headerlink" href="#equation-697ad727-7c66-4dca-80b8-06791cace574" title="Permalink to this equation">¶</a></span>\[\begin{align}\begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \qquad \left\{ \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right\} \qquad \left| \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right|	\end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-9e59b4bb-d864-4779-ba78-8117122aff23">
+<span class="eqno">(12.2)<a class="headerlink" href="#equation-9e59b4bb-d864-4779-ba78-8117122aff23" title="Permalink to this equation">¶</a></span>\[\begin{align}\begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \qquad \left\{ \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right\} \qquad \left| \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right|	\end{align}\]</div>
 </div>
 <div class="section" id="terminology">
 <h3><span class="section-number">12.1.2. </span>Terminology<a class="headerlink" href="#terminology" title="Permalink to this headline">¶</a></h3>
@@ -385,16 +351,17 @@
 <p>In a square matrix, two diagonals are called the <strong>main diagonal</strong> (top-left two bottom right), and the <strong>anti-diagonal</strong> (bottom-left to top-right). Square matrices for which <span class="math notranslate nohighlight">\(A_{i,j}=A_{j,i}\)</span> are called <strong>symmetric matrices</strong>.</p>
 <p>An <strong>upper-triangular matrix</strong> is a square matrix in which the elements below the main diagonal are all zero, and a <strong>lower-triangular matrix</strong> is one where the elements above the main diagonal are all zero.</p>
 <p>A <strong>diagonal matrix</strong> is one in which all of the elements are zero apart from those on the main diagonal. These type of matrices are very special, since they have “nice” properties for the purpose of matrix algebra.</p>
+<div class="exercise admonition" id="q_matrix_definitions">
+
+<p class="admonition-title"><span class="caption-number">Exercise 12.1 </span></p>
+<div class="section" id="exercise-content">
+<p>1. What is the order of each of the matrices shown?</p>
+<p><span class="math notranslate nohighlight">\(A=\left(\begin{array}{cc}0 &amp; -1 \\2 &amp; 3 \\-1 &amp; 0 \\\end{array}\right)\)</span>,   <span class="math notranslate nohighlight">\(b=\left(\begin{array}{c}1 \\2 \\3 \\\end{array}\right)\)</span>,   <span class="math notranslate nohighlight">\(c=0\)</span>.</p>
+<p>2. Given the matrix <span class="math notranslate nohighlight">\(X=\left(\begin{array}{ccc}-3 &amp; 4 &amp; 0 \\1 &amp; 1 &amp; 2 \\7 &amp; -4 &amp; 3 \\\end{array}\right)\)</span>, what element is represented by <span class="math notranslate nohighlight">\((X^T)_{2,3}\)</span> ?</p>
+<p>3. Which of the following matrices is an upper-triangular matrix?</p>
+<p><span class="math notranslate nohighlight">\(A=\left(\begin{array}{cccc}2&amp;8&amp;-1&amp;0\\0&amp;2&amp;2&amp;2\\0&amp;0&amp;1&amp;-5\\0&amp;0&amp;0&amp;3\end{array}\right)\)</span>, <span class="math notranslate nohighlight">\(B=\left(\begin{array}{cccc}1&amp;-2&amp;5&amp;2\\3&amp;6&amp;-2&amp;0\\8&amp;2&amp;0&amp;0\\-2&amp;0&amp;0&amp;0\end{array}\right)\)</span>, <span class="math notranslate nohighlight">\(C=\left(\begin{array}{ccc}6&amp;0&amp;0\\-3&amp;-4&amp;0\\2&amp;7&amp;7\end{array}\right)\)</span>.</p>
 </div>
-<div class="section" id="questions">
-<span id="q-matrix-definitions"></span><h3><span class="section-number">12.1.3. </span>Questions<a class="headerlink" href="#questions" title="Permalink to this headline">¶</a></h3>
-<ol class="simple">
-<li><p>What is the order of each of the matrices shown?
-<span class="math notranslate nohighlight">\(A=\left(\begin{array}{cc}0 &amp; -1 \\2 &amp; 3 \\-1 &amp; 0 \\\end{array}\right)\)</span>,   <span class="math notranslate nohighlight">\(\mathbf{b}=\left(\begin{array}{c}1 \\2 \\3 \\\end{array}\right)\)</span>,   <span class="math notranslate nohighlight">\(c=0\)</span></p></li>
-<li><p>Given the matrix <span class="math notranslate nohighlight">\(X=\left(\begin{array}{ccc}-3 &amp; 4 &amp; 0 \\1 &amp; 1 &amp; 2 \\7 &amp; -4 &amp; 3 \\\end{array}\right)\)</span>, what element is represented by <span class="math notranslate nohighlight">\((X^T)_{2,3}\)</span> ?</p></li>
-<li><p>Which of the following matrices is an upper-triangular matrix?
-<span class="math notranslate nohighlight">\(A=\left(\begin{array}{cccc}2&amp;8&amp;-1&amp;0\\0&amp;2&amp;2&amp;2\\0&amp;0&amp;1&amp;-5\\0&amp;0&amp;0&amp;3\end{array}\right)\)</span>, <span class="math notranslate nohighlight">\(B=\left(\begin{array}{cccc}1&amp;-2&amp;5&amp;2\\3&amp;6&amp;-2&amp;0\\8&amp;2&amp;0&amp;0\\-2&amp;0&amp;0&amp;0\end{array}\right)\)</span>, <span class="math notranslate nohighlight">\(C=\left(\begin{array}{ccc}6&amp;0&amp;0\\-3&amp;-4&amp;0\\2&amp;7&amp;7\end{array}\right)\)</span></p></li>
-</ol>
+</div>
 </div>
 </div>
 <div class="section" id="matrix-algebra">
@@ -422,9 +389,10 @@
 \[\begin{split}\left( \begin{matrix} 1 &amp; 2 \\ 3 &amp; 4 \end{matrix} \right) + 1 \end{split}\]</div>
 <p>Matrix addition can be combined with multiplication by a scalar to add multiples of one matrix to another.</p>
 <p>For example, <span class="math notranslate nohighlight">\( \left( \begin{matrix} 1 &amp; -3 \\ 3 &amp; 0 \\ 5 &amp; -7 \end{matrix} \right) - 3\left( \begin{matrix} 0 &amp; -2 \\ 1 &amp; 5 \\ -1 &amp; 3 \end{matrix} \right) = \left( \begin{matrix} 1 &amp; 3 \\ 0 &amp; -15 \\ 8 &amp; -16 \end{matrix} \right) \)</span>.</p>
-</div>
-<div class="section" id="q-matrix-arithmetic">
-<span id="id1"></span><h3><span class="section-number">12.2.3. </span>Questions<a class="headerlink" href="#q-matrix-arithmetic" title="Permalink to this headline">¶</a></h3>
+<div class="exercise admonition" id="q_matrix_arithmetic">
+
+<p class="admonition-title"><span class="caption-number">Exercise 12.2 </span></p>
+<div class="section" id="exercise-content">
 <p>Given the matrices <span class="math notranslate nohighlight">\(A=\left(\begin{array}{cc}1 &amp; 2 \\-1 &amp; 0 \\3 &amp; 1 \\\end{array}\right)\)</span>, <span class="math notranslate nohighlight">\(B=\left(\begin{array}{cc}-4 &amp; 1 \\1 &amp; 2 \\-2 &amp; 3 \\\end{array}\right)\)</span>, <span class="math notranslate nohighlight">\(C=\left(\begin{array}{cc}0 &amp; 3 \\4 &amp; 2 \\1 &amp; 1 \\\end{array}\right)\)</span>, <span class="math notranslate nohighlight">\(D=\left(\begin{array}{cc}5 &amp; 1 \\3 &amp; 2 \\\end{array}\right)\)</span>, what will be the result of the following expressions?</p>
 <ol class="simple">
 <li><p><span class="math notranslate nohighlight">\(\left(A+B\right)+C\)</span></p></li>
@@ -433,8 +401,10 @@
 <li><p><span class="math notranslate nohighlight">\(A+D\)</span></p></li>
 </ol>
 </div>
+</div>
+</div>
 <div class="section" id="matrix-multiplication">
-<h3><span class="section-number">12.2.4. </span>Matrix multiplication<a class="headerlink" href="#matrix-multiplication" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">12.2.3. </span>Matrix multiplication<a class="headerlink" href="#matrix-multiplication" title="Permalink to this headline">¶</a></h3>
 <p>To multiply two matrices together, their inner dimensions must be the same. That is, to calculate <span class="math notranslate nohighlight">\( \boldsymbol{A}\boldsymbol{B} \)</span>, the number of columns in <span class="math notranslate nohighlight">\(\boldsymbol{A}\)</span> must be the same as the number of rows in <span class="math notranslate nohighlight">\(\boldsymbol{B}\)</span>. The order of the product matrix is given by the outer dimensions of the two matrices. We can represent this result visually:</p>
 <p><img alt="Two matrices A,B can be multiplied if their inner dimensions agree. The dimensions of the result is given by the outer dimensions of AB" src="../../_images/MatrixDimensions.png" /></p>
 <div class="admonition-matrix-multiplication admonition">
@@ -445,10 +415,12 @@
 </div>
 <p>To perform matrix multiplication, we must take elements in a row on the left hand side matrix and multiply with elements in a column on the right hand side matrix. The process is illustrate graphically here for a (2 x 2 ) example:</p>
 <p><img alt="The (i,j)th element in the product AB is given by the product sum of row i from matrix A with column j of matrix B" src="../../_images/MatrixMultiplicationExpanded.png" /></p>
-</div>
-<div class="section" id="q-matrix-multiplication">
-<span id="id2"></span><h3><span class="section-number">12.2.5. </span>Questions<a class="headerlink" href="#q-matrix-multiplication" title="Permalink to this headline">¶</a></h3>
-<p>Given that <span class="math notranslate nohighlight">\(A=\left(\begin{array}{ccc}3 &amp; 1 &amp; -2 \\0 &amp; 2 &amp; 4 \\\end{array}\right)\)</span>,   <span class="math notranslate nohighlight">\(B=\left(\begin{array}{cc}2 &amp; 3 \\-3 &amp; 0 \\1 &amp; 1 \\\end{array}\right)\)</span>,   <span class="math notranslate nohighlight">\(C=\left(\begin{array}{cccc}1 &amp; -8 &amp; 2 &amp; 11 \\0 &amp; 4 &amp; -3 &amp; -7 \\6 &amp; 1 &amp; 8 &amp; 1 \\\end{array}\right)\)</span>,    <span class="math notranslate nohighlight">\(D=\left(\begin{array}{ccc}1 &amp; 2 &amp; 3 \\1 &amp; 1 &amp; 1 \\2 &amp; 0 &amp; 1 \end{array}\right)\)</span>,</p>
+<div class="exercise admonition" id="q_matrix_multiplication">
+
+<p class="admonition-title"><span class="caption-number">Exercise 12.3 </span></p>
+<div class="section" id="exercise-content">
+<p>Given that</p>
+<p><span class="math notranslate nohighlight">\(A=\left(\begin{array}{ccc}3 &amp; 1 &amp; -2 \\0 &amp; 2 &amp; 4 \\\end{array}\right)\)</span>,   <span class="math notranslate nohighlight">\(B=\left(\begin{array}{cc}2 &amp; 3 \\-3 &amp; 0 \\1 &amp; 1 \\\end{array}\right)\)</span>,   <span class="math notranslate nohighlight">\(C=\left(\begin{array}{cccc}1 &amp; -8 &amp; 2 &amp; 11 \\0 &amp; 4 &amp; -3 &amp; -7 \\6 &amp; 1 &amp; 8 &amp; 1 \\\end{array}\right)\)</span>,    <span class="math notranslate nohighlight">\(D=\left(\begin{array}{ccc}1 &amp; 2 &amp; 3 \\1 &amp; 1 &amp; 1 \\2 &amp; 0 &amp; 1 \end{array}\right)\)</span>,</p>
 <ol class="simple">
 <li><p>Calculate <span class="math notranslate nohighlight">\(AB\)</span> and <span class="math notranslate nohighlight">\(BA\)</span>. Are these results the same?</p></li>
 <li><p>Explain why the result <span class="math notranslate nohighlight">\(A\left(\begin{array}{c}1\\2\end{array}\right)\)</span> cannot be calculated.</p></li>
@@ -457,8 +429,9 @@
 <li><p>Calculate the result <span class="math notranslate nohighlight">\(D^2\)</span> (this question is a bit boring, but good practice!)</p></li>
 </ol>
 </div>
-<div class="section" id="application-walk-lengths">
-<h3><span class="section-number">12.2.6. </span>Application: Walk lengths<a class="headerlink" href="#application-walk-lengths" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="admonition-example-walk-lengths admonition">
+<p class="admonition-title">Example: Walk Lengths</p>
 <p>Consider the connected graph below, in which the vertices have been numbered 1-4:</p>
 <p><img alt="A graph with 4 connected vertices" src="../../_images/network1.png" /></p>
 <p>The graph can be represented by an adjacency matrix <span class="math notranslate nohighlight">\(A\)</span> in which element <span class="math notranslate nohighlight">\(A_{i,j}\)</span> is either 1 or 0 identifying if  vertex <span class="math notranslate nohighlight">\(i\)</span> is or is not connected to vertex <span class="math notranslate nohighlight">\(j\)</span>. For this graph we have:</p>
@@ -473,8 +446,9 @@
 <div class="math notranslate nohighlight">
 \[S^N_{i,j}=S^{N-1}_{i,1}S_{1,j}+S^{N-1}_{i,2}S_{2,j}+S^{N-1}_{i,3}S_{3,j}+S^{N-1}_{i,4}S_{4,j}\]</div>
 </div>
+</div>
 <div class="section" id="properties-of-matrix-multiplication">
-<h3><span class="section-number">12.2.7. </span>Properties of Matrix Multiplication<a class="headerlink" href="#properties-of-matrix-multiplication" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">12.2.4. </span>Properties of Matrix Multiplication<a class="headerlink" href="#properties-of-matrix-multiplication" title="Permalink to this headline">¶</a></h3>
 <p>Matrix multiplication is <strong>associative</strong>, that is</p>
 <div class="math notranslate nohighlight">
 \[A (B C)\equiv (A B)C\]</div>
@@ -498,13 +472,265 @@
 </div>
 </div>
 </div>
-<div class="section" id="solving-ax-b">
-<h2><span class="section-number">12.3. </span>Solving <span class="math notranslate nohighlight">\(Ax = b\)</span><a class="headerlink" href="#solving-ax-b" title="Permalink to this headline">¶</a></h2>
-<p>[TODO]</p>
+<div class="section" id="matrix-equations">
+<h2><span class="section-number">12.3. </span>Matrix equations<a class="headerlink" href="#matrix-equations" title="Permalink to this headline">¶</a></h2>
+<p>In this section we make the connection between matrices and linear systems of equations. Our aim is to find the general solution to the equation</p>
+<div class="math notranslate nohighlight">
+\[Ax = b\]</div>
+<p>where <span class="math notranslate nohighlight">\(A\)</span> is an <span class="math notranslate nohighlight">\((m \times n)\)</span> matrix and <span class="math notranslate nohighlight">\(b \in \mathbb{R}^m\)</span> and <span class="math notranslate nohighlight">\(x \in \mathbb{R}^n\)</span> are vectors.</p>
+<p>Such an equation is exactly equivalent to a linear system of <span class="math notranslate nohighlight">\(m\)</span> equations in <span class="math notranslate nohighlight">\(n\)</span> unknowns. For example, we can write the system</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{alignat*}{4}
+2x_1 &amp; {}+{} &amp; 3x_2 &amp; {}-{} &amp; 2x_3 &amp; {}={} &amp; 7 \\
+  x_1 &amp; {}-{} &amp; x_2 &amp; {}-{} &amp; 3x_3 &amp; {}={} &amp; 5
+\end{alignat*}\]</div>
+<p>as the matrix equation</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{pmatrix} 2 &amp; 3 &amp; -2\\
+1 &amp; -1 &amp; -3\end{pmatrix}\begin{pmatrix}x_1\\x_2\\x_3\end{pmatrix} = \begin{pmatrix}7\\5\end{pmatrix}.
+\end{split}\]</div>
+<div class="admonition-matrix-equation admonition">
+<p class="admonition-title">Matrix Equation</p>
+<p>The linear system of equations</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+a_{1,1} x_1 + a_{1,2} x_2 + a_{1,3} x_3 + \dots + a_{1,n} x_n &amp;= b_1 \\
+
+   a_{2,1} x_1 + a_{2,2} x_2 + a_{2,3} x_3 + \dots + a_{2,n} x_n &amp;= b_2\\
+                                                                     \vdots \\
+ a_{m,1} x_1 + a_{m,2} x_2 + a_{m,3} x_3 + \dots + a_{m,n} x_n &amp;= b_m
+\end{align*}\]</div>
+<p>is equivalent to the matrix equation</p>
+<div class="math notranslate nohighlight">
+\[Ax=b\]</div>
+<p>where <span class="math notranslate nohighlight">\(A=\begin{pmatrix}
+a_{1,1} &amp; \cdots &amp; a_{1,n}\\
+\vdots &amp; \ddots &amp; \vdots\\
+a_{m,1} &amp; \cdots &amp; a_{m,n}
+\end{pmatrix}\)</span>, <span class="math notranslate nohighlight">\(x=\begin{pmatrix}x_1\\ \vdots \\ x_n\end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(b=\begin{pmatrix}b_1\\ \vdots \\b_m\end{pmatrix}\)</span>.</p>
 </div>
-<div class="section" id="solving-ax-0-the-nullspace">
-<h2><span class="section-number">12.4. </span>Solving <span class="math notranslate nohighlight">\(Ax = 0\)</span>: the Nullspace<a class="headerlink" href="#solving-ax-0-the-nullspace" title="Permalink to this headline">¶</a></h2>
-<p>[TODO]</p>
+<p>This equivalence means that we can move freely between these two ways of writing and thinking about a linear system.</p>
+<div class="section" id="solving-ax-0">
+<h3><span class="section-number">12.3.1. </span>Solving <span class="math notranslate nohighlight">\(Ax = 0\)</span><a class="headerlink" href="#solving-ax-0" title="Permalink to this headline">¶</a></h3>
+<p>The equation <span class="math notranslate nohighlight">\(Ax=0\)</span> has special significance and is easier to solve than the general equation <span class="math notranslate nohighlight">\(Ax = b\)</span>.</p>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Definition</p>
+<p>An equation of the form <span class="math notranslate nohighlight">\(Ax = 0\)</span> is <strong>homogeneous</strong>.</p>
+<p>An equation of the form <span class="math notranslate nohighlight">\(Ax = b\)</span> with <span class="math notranslate nohighlight">\(b \neq 0\)</span> is <strong>inhomogeneous</strong>.</p>
+</div>
+<p>For example, given the homogeneous equation <span class="math notranslate nohighlight">\(Ax=0\)</span>, where</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A=
+\begin{pmatrix}
+1 &amp; 3 &amp; 4\\
+2 &amp; -1 &amp; 2\\
+1 &amp; 0 &amp; 1\\
+\end{pmatrix}
+\end{split}\]</div>
+<p>we can use row operations to reduce the augmented matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\left(
+\begin{array}{ccc|c}
+1 &amp; 3 &amp; 4 &amp; 0\\
+2 &amp; -1 &amp; 2 &amp; 0\\
+1 &amp; 0 &amp; 1 &amp; 0
+\end{array}
+\right)
+\end{split}\]</div>
+<p>to reduced row echelon form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\left(
+\begin{array}{ccc|c}
+1 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 1 &amp; 0
+\end{array}
+\right)
+\end{split}\]</div>
+<p>which has only the trivial solution <span class="math notranslate nohighlight">\(x=0\)</span>.</p>
+<p>Note that the augmented part of the matrix is redundant since the zeros are not affected by the row operations. <strong>It is not necessary to write an augmented matrix when solving homogeneous systems</strong>.</p>
+<div class="admonition-null-space-and-special-solutions admonition">
+<p class="admonition-title">Null space and special solutions</p>
+<p>The <strong>null space</strong> of a matrix <span class="math notranslate nohighlight">\(A\)</span> is the full solution to the equation</p>
+<div class="math notranslate nohighlight">
+\[Ax=0.\]</div>
+<p>For each free variable <span class="math notranslate nohighlight">\(x_i\)</span> in the echelon form of <span class="math notranslate nohighlight">\(A\)</span> there is a <strong>special solution</strong> <span class="math notranslate nohighlight">\(v_i\)</span> found by setting <span class="math notranslate nohighlight">\(x_i\)</span> to <span class="math notranslate nohighlight">\(1\)</span> and all other free variables to <span class="math notranslate nohighlight">\(0\)</span>.</p>
+<p>The null space is all linear combinations of the special solutions:</p>
+<div class="math notranslate nohighlight">
+\[t_1v_1 + \cdots + t_kv_k\quad \mathrm{for}\quad t_i\in\mathbb{R}.\]</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Example</p>
+<p>Solve the homogeneous equation <span class="math notranslate nohighlight">\(Ax=0\)</span> where</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{pmatrix}1 &amp; 0 &amp; -8 &amp; -7\\
+0 &amp; 1 &amp; 4 &amp; 3\\
+ 0 &amp; 0 &amp; 0 &amp; 0\end{pmatrix}.\end{split}\]</div>
+<p><strong>Solution</strong></p>
+<p>The matrix <span class="math notranslate nohighlight">\(A\)</span> is already in echelon form. The equivalent system of equations is</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{alignat*}{4}
+ x_1 &amp; \quad &amp; &amp; {}-{} &amp; 8x_3 &amp; {}-{} 7x_4 &amp; {}={} &amp; 0\\
+&amp; \quad &amp; x_2 &amp; {}+{} &amp; 4x_3 &amp; {}+{} 3x_4 &amp; {}={} &amp; 0
+ \end{alignat*}\]</div>
+<p>which can be written in parametric form:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{alignat*}{3}
+ x_1 &amp; {}={} &amp; 8x_3 &amp; {}+{} &amp; 7x_4\\
+x_2 &amp; {}={} &amp; -4x_3 &amp; {}-{} &amp; 3x_4\\
+  x_3 &amp; {}={} &amp; x_3 &amp; &amp;\\
+ x_4 &amp; {}={} &amp; &amp; &amp; x_4.
+ \end{alignat*}\]</div>
+<p>Or as a <em>vector equation</em>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}x = \begin{pmatrix}x_1\\x_2\\x_3\\x_4\end{pmatrix}
+ = x_3\begin{pmatrix}8\\-4\\1\\0\end{pmatrix}
+ + x_4\begin{pmatrix}7\\-3\\0\\1\end{pmatrix}\end{split}\]</div>
+<p>for any <span class="math notranslate nohighlight">\(x_3, x_4 \in \mathbb{R}\)</span>.</p>
+<p>The two vectors <span class="math notranslate nohighlight">\(\begin{pmatrix}8 \\-4\\ 1 \\ 0\end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(\begin{pmatrix}7 \\ -3 \\ 0\\1\end{pmatrix}\)</span> are the special solutions corresponding to the free variables <span class="math notranslate nohighlight">\(x_3\)</span> and <span class="math notranslate nohighlight">\(x_4\)</span> respectively. The solution is the set of all linear combinations of the special solutions.</p>
+<p><strong>The solution set is a plane passing through the origin</strong>.</p>
+</div>
+</div>
+<div class="section" id="solving-ax-b">
+<h3><span class="section-number">12.3.2. </span>Solving <span class="math notranslate nohighlight">\(Ax = b\)</span><a class="headerlink" href="#solving-ax-b" title="Permalink to this headline">¶</a></h3>
+<p>We now have everything we need to find the general solution to the inhomogeneous equation</p>
+<div class="math notranslate nohighlight">
+\[Ax=b\]</div>
+<div class="admonition-the-general-solution-to-ax-b admonition">
+<p class="admonition-title">The general solution to <span class="math notranslate nohighlight">\(Ax = b\)</span></p>
+<p>Let <span class="math notranslate nohighlight">\(A\)</span> be an <span class="math notranslate nohighlight">\((m \times n)\)</span> matrix and <span class="math notranslate nohighlight">\(b\)</span> a length-<span class="math notranslate nohighlight">\(m\)</span> vector. Then the general solution to</p>
+<div class="math notranslate nohighlight">
+\[Ax=b\]</div>
+<p>is</p>
+<div class="math notranslate nohighlight">
+\[x = t_1v_1 + \cdots + t_kv_k + v_0\]</div>
+<p>where <span class="math notranslate nohighlight">\(t_1, \ldots\ t_k \in \mathbb{R}\)</span> are real numbers and <span class="math notranslate nohighlight">\(v_1, \ldots, v_k\)</span> are the <span class="math notranslate nohighlight">\(k\)</span> special solutions corresponding to the <span class="math notranslate nohighlight">\(k\)</span> free variables.</p>
+<ol class="simple">
+<li><p>Form the augmented matrix <span class="math notranslate nohighlight">\(A|b\)</span>.</p></li>
+<li><p>Use Gaussian elimination to find the reduced row echelon form and determine the <span class="math notranslate nohighlight">\(k\)</span> free variables.</p></li>
+<li><p>Write the parametric form of the solution set (write the corresponding system of linear equations, moving all free variables to the right hand side.)</p></li>
+<li><p>Write the solution as a vector equation <span class="math notranslate nohighlight">\(v = t_1v_1 + \ldots + t_kv_k + v_0\)</span>.</p></li>
+</ol>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Example</p>
+<p>Determine the general solution to the following system of equations, expressing the answer in vector form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{alignat*}{5}
+-2x_1 &amp; {}-{} &amp; 4x_2 &amp; {}-{} &amp; 2x_3 &amp; {}-{} &amp; 10x_4 {}={} &amp; 0\\
+2x_1 &amp; {}+{} &amp; 4x_2 &amp; {}+{} &amp; x_3 &amp; {}+{} &amp; 9x_4 {}={} &amp; -2\\
+3x_1 &amp; {}+{} &amp; 6x_2 &amp; {}+{} &amp; x_3 &amp; {}+{} &amp; 13x_4 {}={} &amp; -4.
+\end{alignat*}\end{split}\]</div>
+<p><strong>Solution</strong></p>
+<p>The augmented matrix is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\left(
+\begin{array}{cccc|c}
+-2 &amp; -4 &amp; -2 &amp; -10 &amp; 0\\
+2 &amp; 4 &amp; 1 &amp; 9 &amp; -2\\
+3 &amp; 6 &amp; 1 &amp; 13 &amp; -4
+\end{array}\right).
+\end{split}\]</div>
+<p>We have already determined the reduced row echelon form in  <a class="reference internal" href="echelon_form.html#ex-gaussian-elimination"><span class="std std-ref">this example</span></a>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\left(
+\begin{array}{cccc|c}
+\boxed{1} &amp; 2 &amp; 0 &amp; 4 &amp; -2\\
+0 &amp; 0 &amp; \boxed{1} &amp; 1 &amp; 2\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0
+\end{array}\right).
+\end{split}\]</div>
+<p>Write as a system of equations with the free variables <span class="math notranslate nohighlight">\(x_2\)</span> and <span class="math notranslate nohighlight">\(x_4\)</span> on the right hand side:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{alignat*}{4}
+x_1 &amp; {}={} &amp; -2x_2 &amp; {}-{} &amp; 4x_4 &amp; {}-{} &amp; 2\\
+x_2 &amp; {}={} &amp; x_2\\
+x_3 &amp; {}={} &amp;       &amp;       &amp; -x_4 &amp; {}+{} &amp; 2\\
+x_4 &amp; {}={} &amp; x_4
+\end{alignat*}.\end{split}\]</div>
+<p>Write this in vector form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{pmatrix}x_1\\x_2\\x_3\\x_4\end{pmatrix} = \begin{pmatrix}-2x_2&amp;-4x_4&amp;-2\\x_2&amp;&amp;\\&amp;-x_4&amp;+2\\&amp;x_4&amp;\end{pmatrix} = x_2\begin{pmatrix}-2\\1\\0\\0\end{pmatrix} + x_4\begin{pmatrix}-4\\0\\-1\\1\end{pmatrix} + \begin{pmatrix}-2\\0\\2\\0\end{pmatrix}
+\end{split}\]</div>
+<p>for any <span class="math notranslate nohighlight">\(x_2, x_4 \in \mathbb{R}\)</span>.</p>
+</div>
+<div class="exercise admonition" id="q_solve_system">
+
+<p class="admonition-title"><span class="caption-number">Exercise 12.4 </span></p>
+<div class="section" id="exercise-content">
+<p>For the matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{pmatrix}1 &amp; 1 \\ 0 &amp; 0\end{pmatrix},\end{split}\]</div>
+<ol class="simple">
+<li><p>What are the special solution(s) to the homogeneous equation <span class="math notranslate nohighlight">\(Ax=0\)</span>?</p></li>
+<li><p>What is the null space of <span class="math notranslate nohighlight">\(A\)</span>?</p></li>
+<li><p>Find the general solution to <span class="math notranslate nohighlight">\(Ax = b\)</span>  where <span class="math notranslate nohighlight">\(b = \begin{pmatrix}5 \\ 0\end{pmatrix}\)</span>. Describe the solution geometrically.</p></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="solutions">
+<h2><span class="section-number">12.4. </span>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">¶</a></h2>
+<div class="solution admonition" id="LinearAlgebra/linear_systems_matrices/matrices-solution-4">
+
+<p class="admonition-title"><a class="reference internal" href="#q_matrix_definitions">Solution to Exercise 12.1</a></p>
+<div class="section" id="solution-content">
+<p>1. <span class="math notranslate nohighlight">\(A\)</span> is a (3 x 2) matrix, since it has 3 rows and 2 columns.
+Matrices are nearly always given upper case letters as variable names.</p>
+<p><span class="math notranslate nohighlight">\(b\)</span> is a (3 x 1) matrix.
+Matrices with a single column are a special case, called a column vector.</p>
+<p><span class="math notranslate nohighlight">\(c\)</span> is a (1 x 1) matrix.
+In that case, we could dispense with the brackets, since it is equivalent to a scalar (basically just a single value).</p>
+<p>2. The element in the second row and third column of the transpose matrix is the element in the third row and second column of the original matrix, so the result is -4.</p>
+<p>3. The only upper-triangular matrix here is <span class="math notranslate nohighlight">\(A\)</span>. Matrix <span class="math notranslate nohighlight">\(B\)</span> is an upper anti-triangular matrix and matrix <span class="math notranslate nohighlight">\(C\)</span> is a lower triangular matrix</p>
+</div>
+</div>
+<div class="solution admonition" id="LinearAlgebra/linear_systems_matrices/matrices-solution-5">
+
+<p class="admonition-title"><a class="reference internal" href="#q_matrix_arithmetic">Solution to Exercise 12.2</a></p>
+<div class="section" id="solution-content">
+<p>Matrix addition is both commutative and associative, because it is an elementwise operation and therefore has the same properties as addition of real numbers. Thus, the first two expressions give the same result:</p>
+<p>1. and 2. <span class="math notranslate nohighlight">\((A+B)+C=A+(B+C)=\left(\begin{array}{cc}1-4+0 &amp; 2+1+3 \\-1+1+4 &amp; 0+2+2 \\3-2+1 &amp; 1+3+1 \\\end{array}\right)=\left(\begin{array}{cc}-3 &amp; 6 \\4 &amp; 4 \\2 &amp; 5 \\\end{array}\right)\)</span></p>
+<p>3. <span class="math notranslate nohighlight">\(A-2 B+\frac{C}{2}=\left(\begin{array}{cc}1+8+0 &amp; 2-2+\frac{3}{2} \\-1-2+2 &amp; 0-4+1 \\3+4+\frac{1}{2} &amp; 1-6+\frac{1}{2} \\\end{array}\right)=\left(\begin{array}{cc}9 &amp; \frac{3}{2} \\-1 &amp; -3 \\\frac{15}{2} &amp; -\frac{9}{2} \\\end{array}\right)\)</span></p>
+<p>4. Since <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(D\)</span> are not the same order, these two matrices cannot be added</p>
+</div>
+</div>
+<div class="solution admonition" id="LinearAlgebra/linear_systems_matrices/matrices-solution-6">
+
+<p class="admonition-title"><a class="reference internal" href="#q_matrix_multiplication">Solution to Exercise 12.3</a></p>
+<div class="section" id="solution-content">
+<p>1.</p>
+<p><span class="math notranslate nohighlight">\(A B=\left(\begin{array}{cc}(3\times 2)+(1 \times-3)+(-2\times 1) &amp; (3\times 3)+(1\times 0)+(-2\times 1) \\ (0\times 2)+(2\times -3)+(4\times 1) &amp; (0\times 3)+(2\times 0)+(4\times 1) \end{array}\right)=\left(\begin{array}{cc}1 &amp; 7 \\-2 &amp; 4 \end{array}\right)\)</span></p>
+<p>We multiplied a (2x3) matrix with a (3x2) matrix. The result is a (2x2) matrix. The two results are not the same, and do not even have the same dimensions.</p>
+<p>In general, <span class="math notranslate nohighlight">\(A B\neq B A\)</span>, even when <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are square matrices. That is, matrix multiplication is NOT COMMUTATIVE.</p>
+<p>According to the definition <span class="math notranslate nohighlight">\(A B_{i,j}= \sum _k A_{i,k} B_{k,j}\)</span>, whilst <span class="math notranslate nohighlight">\(B A_{i,j}= \sum _k A_{k,j} B_{i,k}\)</span>. In the first case, the multiplied elements come from the <span class="math notranslate nohighlight">\(i^{th}\)</span> row of <span class="math notranslate nohighlight">\(A\)</span> and the <span class="math notranslate nohighlight">\(j^{th}\)</span> column of <span class="math notranslate nohighlight">\(B\)</span>. In the second case, the multiplied elements come from the <span class="math notranslate nohighlight">\(i^{th}\)</span> row of <span class="math notranslate nohighlight">\(B\)</span> and the <span class="math notranslate nohighlight">\(j^{th}\)</span> column of <span class="math notranslate nohighlight">\(A\)</span></p>
+<p>2. The given result cannot be calculated because the inner dimensions do not match. That is, the number of columns in the left hand matrix does not match the number of rows in the right hand matrix.</p>
+<p>3. Since <span class="math notranslate nohighlight">\(A\)</span> is (2x3) and <span class="math notranslate nohighlight">\(C\)</span> is (3x4), the result <span class="math notranslate nohighlight">\(AC\)</span> is (2x4). Notice that the result <span class="math notranslate nohighlight">\(CA\)</span> is impossible.</p>
+<p>4. The element in the second row and third column is given by multiplying the second row of <span class="math notranslate nohighlight">\(A\)</span> and the third column of <span class="math notranslate nohighlight">\(C\)</span> to give <span class="math notranslate nohighlight">\((0\times 2)+(2 \times -3)+(4 \times8)=26\)</span>.</p>
+<p>5. <span class="math notranslate nohighlight">\(\left(\begin{array}{ccc}9 &amp; 4 &amp; 8 \\4 &amp; 3 &amp; 5 \\4 &amp; 4 &amp; 7 \\\end{array}\right)\)</span></p>
+</div>
+</div>
+<div class="solution admonition" id="LinearAlgebra/linear_systems_matrices/matrices-solution-7">
+
+<p class="admonition-title"><a class="reference internal" href="#q_solve_system">Solution to Exercise 12.4</a></p>
+<div class="section" id="solution-content">
+<p>The matrix <span class="math notranslate nohighlight">\(A\)</span> is already in reduced row echelon form, and <span class="math notranslate nohighlight">\(x_1\)</span> is a pivot variable and <span class="math notranslate nohighlight">\(x_2\)</span> a free variable.</p>
+<ol class="simple">
+<li><p>There is one special solution corresponding to <span class="math notranslate nohighlight">\(x_2=1\)</span> and it is <span class="math notranslate nohighlight">\(\begin{pmatrix}x_1\\x_2\end{pmatrix}=\begin{pmatrix}-1\\1\end{pmatrix}\)</span></p></li>
+<li><p>The null space is the space of all vectors <span class="math notranslate nohighlight">\(t\begin{pmatrix}-1\\1\end{pmatrix}, t \in \mathbb{R}\)</span>.</p></li>
+<li><p>The general solution to <span class="math notranslate nohighlight">\(Ax = b\)</span> is <span class="math notranslate nohighlight">\(x = t\begin{pmatrix}-1\\1\end{pmatrix} + \begin{pmatrix}5\\0\end{pmatrix}\)</span> for <span class="math notranslate nohighlight">\(t \in \mathbb{R}\)</span> which is a straight line parallel to <span class="math notranslate nohighlight">\(\begin{pmatrix}-1\\1\end{pmatrix}\)</span> through the point <span class="math notranslate nohighlight">\(\begin{pmatrix}5\\0\end{pmatrix}\)</span>.</p></li>
+</ol>
+</div>
+</div>
 </div>
 </div>
 
@@ -531,36 +757,15 @@
               </div>
               
         
+        <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="echelon_form.html" title="previous page"><span class="section-number">11. </span>Linear Systems of Equations</a>
 
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="echelon_form.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">11. </span>Linear Systems of Equations</p>
-            </div>
-        </a>
-    </div>
-     <div id="next">
-        <a class="right-next" href="linear_maps.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">13. </span>Linear Transformations</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
-</div>
+        </div>
         
         </div>
     </div>
-    <footer class="footer">
+    <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
         

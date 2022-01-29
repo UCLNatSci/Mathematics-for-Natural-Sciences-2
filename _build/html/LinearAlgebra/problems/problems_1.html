@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Matrix Diagonalisation &#8212; Mathematics for Natural Sciences 2</title>
+    <title>Linear Algebra - Problem Sheet 1 &#8212; Mathematics for Natural Sciences 2</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,6 +51,8 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -141,12 +143,12 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="echelon_form.html">
+  <a class="reference internal" href="../linear_systems_matrices/echelon_form.html">
    11. Linear Systems of Equations
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="matrices.html">
+  <a class="reference internal" href="../linear_systems_matrices/matrices.html">
    12. Matrices
   </a>
  </li>
@@ -191,7 +193,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/LinearAlgebra/linear_systems_matrices/diagonalisation.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/LinearAlgebra/problems/problems_1.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -216,6 +218,48 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Linear Algebra - Problem Sheet 1
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-1">
+     Question 1
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-2">
+     Question 2
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-3">
+   Question 3
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-4">
+     Question 4
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#application-kirchoffs-law">
+     Application: Kirchoff’s Law
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -224,8 +268,72 @@
         
               <div>
                 
-  <div class="section" id="matrix-diagonalisation">
-<h1>Matrix Diagonalisation<a class="headerlink" href="#matrix-diagonalisation" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="linear-algebra-problem-sheet-1">
+<h1>Linear Algebra - Problem Sheet 1<a class="headerlink" href="#linear-algebra-problem-sheet-1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="question-1">
+<h2>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">¶</a></h2>
+<!---
+Strang 3.2 Q1
+-->
+<p>1. Reduce <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> to row echelon form. Which variables are free?</p>
+<p>a) <span class="math notranslate nohighlight">\(A = \begin{pmatrix}
+1 &amp; 2 &amp; 2 &amp; 4 &amp; 6\\
+1 &amp; 2 &amp; 3 &amp; 6 &amp; 9\\
+0 &amp; 0 &amp; 1 &amp; 2 &amp; 3
+\end{pmatrix}\)</span>
+b) <span class="math notranslate nohighlight">\(B = \begin{pmatrix}
+2 &amp; 4 &amp; 2\\
+0 &amp; 4 &amp; 4\\
+0 &amp; 8 &amp; 8\\
+\end{pmatrix}\)</span></p>
+<p>2. For the matrices <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>, find a special solution for each free variable. (Set the free variable to 1 and set the other free variables to 0.)</p>
+<p>3. By further row operations, find the <em>reduced</em> echelon form of <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> and calculate the nullspace of each.</p>
+<p>4. <em>True or False, with explanation</em>: The nullspace of a matrix is the same as the nullspace of its reduced echelon form.</p>
+</div>
+<div class="section" id="question-2">
+<h2>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">¶</a></h2>
+<p>Solve Ax=B.</p>
+</div>
+</div>
+<div class="section" id="question-3">
+<h1>Question 3<a class="headerlink" href="#question-3" title="Permalink to this headline">¶</a></h1>
+<p>Kirchoff’s law.</p>
+<!---
+Strang 3.2 Q32
+-->
+<div class="section" id="question-4">
+<h2>Question 4<a class="headerlink" href="#question-4" title="Permalink to this headline">¶</a></h2>
+<p>Permutation matrices.</p>
+</div>
+<div class="section" id="application-kirchoffs-law">
+<h2>Application: Kirchoff’s Law<a class="headerlink" href="#application-kirchoffs-law" title="Permalink to this headline">¶</a></h2>
+<p>In general, Gaussian elimination can be used to solve the problems obtained by applying Kirchoff’s laws. For example, see the problems given here:</p>
+<p><a class="reference external" href="https://www.intmath.com/matrices-determinants/6-matrices-linear-equations.php">https://www.intmath.com/matrices-determinants/6-matrices-linear-equations.php</a></p>
+<p>In the example below, the technique is applied to a case where the system of equations is under-determined, so a unique solution cannot be obtained.</p>
+<p><img alt="" src="LinearAlgebra/problems/kirchoff.png" /></p>
+<div class="admonition-kirchoff-s-law admonition">
+<p class="admonition-title">Kirchoff’s Law</p>
+<p>Kirchoff’s law states that</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{current~in} = \mathrm{current~out}\]</div>
+</div>
+<p>For the system of 4 nodes shown above, this gives us four equations:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-673ae801-173b-4d6f-b4fb-701f671fd965">
+<span class="eqno">()<a class="headerlink" href="#equation-673ae801-173b-4d6f-b4fb-701f671fd965" title="Permalink to this equation">¶</a></span>\[\begin{align}y_3&amp;=y_1+y_4\\y_1&amp;=y_2+y_5\\y_2&amp;=y_3+y_6\\y_4+y_5+y_6&amp;=0\end{align}\]</div>
+<p>The equations at each node are of the form <span class="math notranslate nohighlight">\(c_1 y_1 +c_2 y_2+\dots +c_6 y_6=d\)</span>. Written in augmented matrix form, the system is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left(\begin{array}{cccccc:c}1 &amp; 0 &amp; -1 &amp; 1 &amp; 0 &amp; 0 &amp;0\\-1 &amp; 1 &amp; 0 &amp; 0 &amp; 1 &amp; 0&amp;0 \\0 &amp; -1 &amp; 1 &amp; 0 &amp; 0 &amp; 1&amp;0 \\0 &amp; 0 &amp; 0 &amp; -1 &amp; -1 &amp; -1 &amp;0\\\end{array}\right)\end{split}\]</div>
+<p>The first 6 columns are for the coefficients of <span class="math notranslate nohighlight">\(y_1,\dots y_6\)</span> and the last column is the constant term that appears on the right hand side of the equation.</p>
+<p>Here, Gaussian elimination is applied as usual, but the complicating factor is that there are more unknowns than equations and so the system is under-determined. It has “free variables”, that can be made to take any value!</p>
+<p>After applying Gaussian elimination to the pivot elements in the first and second column, we can’t do anything with the third column without spoiling the progress we’ve made in the first two columns, so we leave that one and move on to use the fourth column as a pivot. After that, we can’t make any more progress so we stop. We obtain:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left(\begin{array}{cccccc:c}1 &amp; 0 &amp; -1 &amp; 0 &amp; -1 &amp; -1 &amp; 0 \\0 &amp; 1 &amp; -1 &amp; 0 &amp; 0 &amp; -1 &amp; 0 \\0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; 1 &amp; 0 \\0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\\end{array}\right)\end{split}\]</div>
+<p>The first, second, and fourth columns are the pivot columns, and the other columns are all “free” since they can be obtained from a combination of the other columns.</p>
+<p>Choosing <span class="math notranslate nohighlight">\((y_3,y_5,y_6)=(1,0,0)\)</span> gives the special solution <span class="math notranslate nohighlight">\(s_1:(1,1,1,0,0,0)\)</span><br />
+Choosing <span class="math notranslate nohighlight">\((y_3,y_5,y_6)=(0,1,0)\)</span> gives the special solution <span class="math notranslate nohighlight">\(s_2:(1,0,0,-1,1,0)\)</span><br />
+Choosing <span class="math notranslate nohighlight">\((y_3,y_5,y_6)=(0,0,1)\)</span> gives the special solution <span class="math notranslate nohighlight">\(s_3:(1,1,0,-1,0,1)\)</span></p>
+<p>The full solution space consists of all possible linear combinations <span class="math notranslate nohighlight">\(a s_1 + b s_2 +c s_3\)</span>.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -241,7 +349,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./LinearAlgebra\linear_systems_matrices"
+            path: "./LinearAlgebra\problems"
         },
         predefinedOutput: true
     }

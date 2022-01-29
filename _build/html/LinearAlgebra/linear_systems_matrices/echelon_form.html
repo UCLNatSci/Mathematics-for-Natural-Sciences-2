@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -44,15 +44,15 @@
     <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="12. Matrices" href="matrices.html" />
@@ -75,10 +75,6 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
-      
-      
       <img src="../../_static/logo.png" class="logo" alt="logo">
       
       
@@ -88,7 +84,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -156,26 +152,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="matrices.html">
    12. Matrices
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="linear_maps.html">
-   13. Linear Transformations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="inverse_determinant.html">
-   14. Inverse and Determinant
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../eigenvectors/notes.html">
-   15. Eigenvalues and Eigenvectors
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="diagonalisation.html">
-   16. Matrix Diagonalisation
   </a>
  </li>
 </ul>
@@ -247,7 +223,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#gaussian-elimination">
@@ -269,38 +245,35 @@
      11.1.3. Generalisation
     </a>
    </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#row-echelon-form">
+   11.2. Row Echelon Form
+  </a>
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#application-kirchoffs-law">
-     11.1.4. Application: Kirchoff’s Law
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#row-echelon-form">
-     11.1.5. Row Echelon Form
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     11.1.6. Gaussian Elimination
+    <a class="reference internal nav-link" href="#gaussian-elimination-for-reduction-to-echelon-form">
+     11.2.1. Gaussian Elimination for Reduction to Echelon Form
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#solutions-to-a-linear-system">
-   11.2. Solutions to a Linear System
+  <a class="reference internal nav-link" href="#parametric-solutions-to-a-linear-system">
+   11.3. Parametric Solutions to a Linear System
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#general-solution-set">
-     11.2.1. General Solution Set
+     11.3.1. General Solution Set
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solutions">
-   11.3. Solutions
+   11.4. Solutions
   </a>
  </li>
 </ul>
@@ -322,8 +295,8 @@
 <div class="section" id="motivation">
 <h3><span class="section-number">11.1.1. </span>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">¶</a></h3>
 <p>Gaussian elimination is a systematic technique for solving systems of linear equations, which are of the form</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4d288f7e-6afa-4a46-b27b-57d71b620e82">
-<span class="eqno">(11.1)<a class="headerlink" href="#equation-4d288f7e-6afa-4a46-b27b-57d71b620e82" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1a548fa7-0b1e-48a6-8f2f-b20893ef49af">
+<span class="eqno">(11.1)<a class="headerlink" href="#equation-1a548fa7-0b1e-48a6-8f2f-b20893ef49af" title="Permalink to this equation">¶</a></span>\[\begin{align}
 a_{1,1} x_1 + a_{1,2} x_2 + a_{1,3} x_3 + \dots + a_{1,n} x_n &amp;= b_1 \\
 
    a_{2,1} x_1 + a_{2,2} x_2 + a_{2,3} x_3 + \dots + a_{2,n} x_n &amp;= b_2\\
@@ -333,15 +306,14 @@ a_{1,1} x_1 + a_{1,2} x_2 + a_{1,3} x_3 + \dots + a_{1,n} x_n &amp;= b_1 \\
 <p>where <span class="math notranslate nohighlight">\(a_{i,j}\)</span> are constants. Usually there are the same number of equations as unknowns, so <span class="math notranslate nohighlight">\(m = n\)</span>.  If <span class="math notranslate nohighlight">\(m &lt; n\)</span> then the system is undetermined, if <span class="math notranslate nohighlight">\(m &gt; n\)</span>, the system is over constrained.</p>
 <div class="tip admonition">
 <p class="admonition-title">Example</p>
-<div class="amsmath math notranslate nohighlight" id="equation-73ef084f-cc36-4b0f-b83b-4e0c44e3cbd1">
-<span class="eqno">(11.2)<a class="headerlink" href="#equation-73ef084f-cc36-4b0f-b83b-4e0c44e3cbd1" title="Permalink to this equation">¶</a></span>\[\begin{align}4 x_1 - x_2 &amp;= 1\\ -2 x_1 + 3 x_2 &amp;= 12 \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-2705900b-b5ee-4bdb-8221-4c5e24f2d2b4">
+<span class="eqno">(11.2)<a class="headerlink" href="#equation-2705900b-b5ee-4bdb-8221-4c5e24f2d2b4" title="Permalink to this equation">¶</a></span>\[\begin{align}4 x_1 - x_2 &amp;= 1\\ -2 x_1 + 3 x_2 &amp;= 12 \end{align}\]</div>
 <p>Each equation here defines a line, and we are looking for a point which satisfies both equations, which means that the lines intersect.</p>
 <p>From the first line we obtain <span class="math notranslate nohighlight">\(x_2 = 4 x_1 - 1\)</span>, and by substituting this into the second line, we obtain <span class="math notranslate nohighlight">\(x = \frac{3}{2}\)</span>, <span class="math notranslate nohighlight">\(y = 5\)</span>. Two equations with two unknowns will always give a unique solution, unless the lines are parallel (and so the equations are just a scaling of each other).</p>
 <ul class="simple">
 <li><p>If they are parallel and distinct, there are no solutions because there are no points that lie on both lines.</p></li>
 <li><p>If they are parallel and coincident (same line), there are an infinite number of solutions.</p></li>
 </ul>
-<p>[TODO] rewrite this</p>
 </div>
 </div>
 <div class="section" id="a-systematic-technique-for-solving-systems-of-equations">
@@ -503,38 +475,10 @@ r_1 - r_2 &amp; \longrightarrow &amp; (r_1)\\
 \end{split}\]</div>
 <p>We have obtained row-reduced form and the solutions for <span class="math notranslate nohighlight">\(x_1,x_2,x_3\)</span> can now be read off from the final column.</p>
 </div>
-<div class="section" id="application-kirchoffs-law">
-<h3><span class="section-number">11.1.4. </span>Application: Kirchoff’s Law<a class="headerlink" href="#application-kirchoffs-law" title="Permalink to this headline">¶</a></h3>
-<p>In general, Gaussian elimination can be used to solve the problems obtained by applying Kirchoff’s laws. For example, see the problems given here:</p>
-<p><a class="reference external" href="https://www.intmath.com/matrices-determinants/6-matrices-linear-equations.php">https://www.intmath.com/matrices-determinants/6-matrices-linear-equations.php</a></p>
-<p>In the example below, the technique is applied to a case where the system of equations is under-determined, so a unique solution cannot be obtained.</p>
-<p><img alt="" src="../../_images/kirchoff.png" /></p>
-<div class="admonition-kirchoff-s-law admonition">
-<p class="admonition-title">Kirchoff’s Law</p>
-<p>Kirchoff’s law states that</p>
-<div class="math notranslate nohighlight">
-\[\mathrm{current~in} = \mathrm{current~out}\]</div>
-</div>
-<p>For the system of 4 nodes shown above, this gives us four equations:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-28188c51-2320-4f32-8078-471c682fb022">
-<span class="eqno">(11.3)<a class="headerlink" href="#equation-28188c51-2320-4f32-8078-471c682fb022" title="Permalink to this equation">¶</a></span>\[\begin{align}y_3&amp;=y_1+y_4\\y_1&amp;=y_2+y_5\\y_2&amp;=y_3+y_6\\y_4+y_5+y_6&amp;=0\end{align}\]</div>
-<p>The equations at each node are of the form <span class="math notranslate nohighlight">\(c_1 y_1 +c_2 y_2+\dots +c_6 y_6=d\)</span>. Written in augmented matrix form, the system is:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\left(\begin{array}{cccccc:c}1 &amp; 0 &amp; -1 &amp; 1 &amp; 0 &amp; 0 &amp;0\\-1 &amp; 1 &amp; 0 &amp; 0 &amp; 1 &amp; 0&amp;0 \\0 &amp; -1 &amp; 1 &amp; 0 &amp; 0 &amp; 1&amp;0 \\0 &amp; 0 &amp; 0 &amp; -1 &amp; -1 &amp; -1 &amp;0\\\end{array}\right)\end{split}\]</div>
-<p>The first 6 columns are for the coefficients of <span class="math notranslate nohighlight">\(y_1,\dots y_6\)</span> and the last column is the constant term that appears on the right hand side of the equation.</p>
-<p>Here, Gaussian elimination is applied as usual, but the complicating factor is that there are more unknowns than equations and so the system is under-determined. It has “free variables”, that can be made to take any value!</p>
-<p>After applying Gaussian elimination to the pivot elements in the first and second column, we can’t do anything with the third column without spoiling the progress we’ve made in the first two columns, so we leave that one and move on to use the fourth column as a pivot. After that, we can’t make any more progress so we stop. We obtain:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\left(\begin{array}{cccccc:c}1 &amp; 0 &amp; -1 &amp; 0 &amp; -1 &amp; -1 &amp; 0 \\0 &amp; 1 &amp; -1 &amp; 0 &amp; 0 &amp; -1 &amp; 0 \\0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; 1 &amp; 0 \\0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\\end{array}\right)\end{split}\]</div>
-<p>The first, second, and fourth columns are the pivot columns, and the other columns are all “free” since they can be obtained from a combination of the other columns.</p>
-<p>Choosing <span class="math notranslate nohighlight">\((y_3,y_5,y_6)=(1,0,0)\)</span> gives the special solution <span class="math notranslate nohighlight">\(s_1:(1,1,1,0,0,0)\)</span><br />
-Choosing <span class="math notranslate nohighlight">\((y_3,y_5,y_6)=(0,1,0)\)</span> gives the special solution <span class="math notranslate nohighlight">\(s_2:(1,0,0,-1,1,0)\)</span><br />
-Choosing <span class="math notranslate nohighlight">\((y_3,y_5,y_6)=(0,0,1)\)</span> gives the special solution <span class="math notranslate nohighlight">\(s_3:(1,1,0,-1,0,1)\)</span></p>
-<p>The full solution space consists of all possible linear combinations <span class="math notranslate nohighlight">\(a s_1 + b s_2 +c s_3\)</span>.</p>
 </div>
 <div class="section" id="row-echelon-form">
-<h3><span class="section-number">11.1.5. </span>Row Echelon Form<a class="headerlink" href="#row-echelon-form" title="Permalink to this headline">¶</a></h3>
-<p>In this section we present an algorithm for solving a linear system of equations. The system algorithm works for any linear system of equations, regardless of whether there are no, one or infinitely many solutions. It works by converting system of equations to <strong>reduced row echelon form</strong>.</p>
+<h2><span class="section-number">11.2. </span>Row Echelon Form<a class="headerlink" href="#row-echelon-form" title="Permalink to this headline">¶</a></h2>
+<p>In this section we present an algorithm for solving a linear system of equations. The system algorithm works for any linear system of equations, regardless of whether there are zero, one or infinitely many solutions. It works by converting system of equations to <strong>reduced row echelon form</strong>.</p>
 <div class="admonition-definition admonition">
 <p class="admonition-title">Definition</p>
 <p>A matrix is in <strong>row echelon form</strong> if:</p>
@@ -543,8 +487,8 @@ Choosing <span class="math notranslate nohighlight">\((y_3,y_5,y_6)=(0,0,1)\)</s
 <li><p>The first nonzero entry of a row is to the right of the first nonzero entry of the row above.</p></li>
 <li><p>Below the first nonzero entry of a row, all entries are zero.</p></li>
 </ol>
-<div class="amsmath math notranslate nohighlight" id="equation-13e90480-f60f-4877-8956-eac4b93f5fb2">
-<span class="eqno">(11.4)<a class="headerlink" href="#equation-13e90480-f60f-4877-8956-eac4b93f5fb2" title="Permalink to this equation">¶</a></span>\[\begin{pmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-c3edf925-8a40-45df-9c15-17a145f99869">
+<span class="eqno">(11.3)<a class="headerlink" href="#equation-c3edf925-8a40-45df-9c15-17a145f99869" title="Permalink to this equation">¶</a></span>\[\begin{pmatrix}
 \boxed{\star} &amp; \star &amp;\star &amp;\star &amp;\star \\
 0     &amp; \boxed{\star} &amp;\star &amp;\star &amp;\star \\
 0     &amp;  0    &amp; 0    &amp; \boxed{\star} &amp;\star \\
@@ -557,8 +501,8 @@ Choosing <span class="math notranslate nohighlight">\((y_3,y_5,y_6)=(0,0,1)\)</s
 <li><p>Each pivot is equal to 1.</p></li>
 <li><p>Each pivot is the only nonzero entry in its column.</p></li>
 </ol>
-<div class="amsmath math notranslate nohighlight" id="equation-d6eeadce-9c73-47ee-9c82-634fc5a462db">
-<span class="eqno">(11.5)<a class="headerlink" href="#equation-d6eeadce-9c73-47ee-9c82-634fc5a462db" title="Permalink to this equation">¶</a></span>\[\begin{pmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-09856983-eb04-43c9-b629-60b8301e7355">
+<span class="eqno">(11.4)<a class="headerlink" href="#equation-09856983-eb04-43c9-b629-60b8301e7355" title="Permalink to this equation">¶</a></span>\[\begin{pmatrix}
 1 &amp; 0 &amp;\star &amp; 0 &amp;\star \\
 0     &amp; 1 &amp;\star &amp;0 &amp;\star \\
 0     &amp;  0    &amp; 0    &amp; 1 &amp;\star \\
@@ -596,9 +540,8 @@ Choosing <span class="math notranslate nohighlight">\((y_3,y_5,y_6)=(0,0,1)\)</s
 \end{split}\]</div>
 </div>
 </div>
-</div>
-<div class="section" id="id2">
-<h3><span class="section-number">11.1.6. </span>Gaussian Elimination<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="gaussian-elimination-for-reduction-to-echelon-form">
+<h3><span class="section-number">11.2.1. </span>Gaussian Elimination for Reduction to Echelon Form<a class="headerlink" href="#gaussian-elimination-for-reduction-to-echelon-form" title="Permalink to this headline">¶</a></h3>
 <div class="admonition-row-reduction-algorithm-gaussian-elimination admonition">
 <p class="admonition-title">Row Reduction Algorithm (Gaussian Elimination)</p>
 <p><strong>Step 1</strong> If necessary, swap the 1st row with a lower one so a leftmost nonzero entry is in the 1st row.</p>
@@ -609,7 +552,7 @@ Choosing <span class="math notranslate nohighlight">\((y_3,y_5,y_6)=(0,0,1)\)</s
 <p><strong>Step 5</strong> Replace all rows above with multiples of the final pivot row to clear all entries above the pivot.</p>
 <p><strong>Step 6</strong> Repeat step 5 for each of the other pivot rows, working from bottom to top.</p>
 </div>
-<div class="tip admonition">
+<div class="tip admonition" id="ex-gaussian-elimination">
 <p class="admonition-title">Example: Gaussian Elimination</p>
 <p>Use Gaussian elimination to reduce the following matrix to reduced row echelon form:</p>
 <div class="math notranslate nohighlight">
@@ -706,10 +649,25 @@ Choosing <span class="math notranslate nohighlight">\((y_3,y_5,y_6)=(0,0,1)\)</s
 \end{array}
 \end{split}\]</div>
 </div>
+<div class="exercise admonition" id="q_echelon_form_2">
+
+<p class="admonition-title"><span class="caption-number">Exercise 11.3 </span></p>
+<div class="section" id="exercise-content">
+<!-- https://www.math.uh.edu/~jiwenhe/math2331/lectures/sec1_2.pdf -->
+<p>Use Gaussian elimination to reduce the following matrix to row echelon form and reduced row echelon form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{pmatrix}
+0 &amp; 3 &amp; -6 &amp; 6 &amp; 4 &amp; -5\\
+3 &amp; -7 &amp; 8 &amp; -5 &amp; 8 &amp; 9\\
+3 &amp; -9 &amp; 12 &amp; -9 &amp; 6 &amp; 15
+\end{pmatrix}\end{split}\]</div>
 </div>
 </div>
-<div class="section" id="solutions-to-a-linear-system">
-<h2><span class="section-number">11.2. </span>Solutions to a Linear System<a class="headerlink" href="#solutions-to-a-linear-system" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+<div class="section" id="parametric-solutions-to-a-linear-system">
+<h2><span class="section-number">11.3. </span>Parametric Solutions to a Linear System<a class="headerlink" href="#parametric-solutions-to-a-linear-system" title="Permalink to this headline">¶</a></h2>
 <p>The reduced row echelon form of the augmented matrix allows us to determine the solutions to the system. There are three cases:</p>
 <p>1. <strong>Every column except the last column is a pivot column</strong>. In this case, the system of equations is consistent and there is a single unique solution. For example,</p>
 <div class="math notranslate nohighlight">
@@ -738,7 +696,7 @@ Choosing <span class="math notranslate nohighlight">\((y_3,y_5,y_6)=(0,0,1)\)</s
 \end{array}\right)\end{split}\]</div>
 <p>has infinitely many solutions since columns 2 and 4 are non-pivot columns. The variables corresponding to a non-pivot column of the matrix are termed <strong>free variables</strong>. In the next section will explore how these solutions can be determined.</p>
 <div class="section" id="general-solution-set">
-<h3><span class="section-number">11.2.1. </span>General Solution Set<a class="headerlink" href="#general-solution-set" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.3.1. </span>General Solution Set<a class="headerlink" href="#general-solution-set" title="Permalink to this headline">¶</a></h3>
 <p>The following system of equations,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -787,75 +745,68 @@ x_2 &amp; {}={} &amp; -1 &amp; {}-{} &amp; 2t\\
 x_3 &amp; {}={} &amp;  &amp;  &amp; t
 \end{alignat*}\end{split}\]</div>
 <p>for any <span class="math notranslate nohighlight">\(t \in \mathbb{R}\)</span>.</p>
-<p>Finally, we can write the general solution in vector form:</p>
+<p>This is the <strong>general solution in parametric form</strong> of the system of equations, and <span class="math notranslate nohighlight">\(x_3\)</span> is a <strong>free variable</strong>.</p>
+<p>In a later section we will see how to write this in vector form as follows:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{pmatrix}x_1\\x_2\\x_3\end{pmatrix} = t\begin{pmatrix}-5\\-2\\1\end{pmatrix} + \begin{pmatrix}1\\-1\\0\end{pmatrix}.
 \end{split}\]</div>
-<p>This is the <strong>general solution</strong> of the system of equations, and <span class="math notranslate nohighlight">\(x_3\)</span> is a <strong>free variable</strong>.</p>
-<div class="admonition-general-solutions admonition">
-<p class="admonition-title">General Solutions</p>
-<p>Suppose we have a system of <span class="math notranslate nohighlight">\(m\)</span> equations with <span class="math notranslate nohighlight">\(n\)</span> unknowns. Then the general solution of a consistent system of linear equations can be written as follows:</p>
-<div class="math notranslate nohighlight">
-\[v = t_1v_1 + \ldots + t_kv_k + v_0\]</div>
-<p>where <span class="math notranslate nohighlight">\(v = \begin{pmatrix}x_1\\x_2\\ \vdots \\x_n\end{pmatrix}\)</span> is a general vector in the solution set and <span class="math notranslate nohighlight">\(v_1, \ldots, v_k\)</span> and <span class="math notranslate nohighlight">\(v_0\)</span> are determined from the augmented matrix in reduced row echelon form.</p>
+<p><strong>The solution set is a straight line</strong>.</p>
+<div class="admonition-parametric-solution-to-system-of-linear-equations admonition">
+<p class="admonition-title">Parametric solution to system of linear equations</p>
+<p>Suppose we have a linear system of <span class="math notranslate nohighlight">\(m\)</span> equations in <span class="math notranslate nohighlight">\(n\)</span> unknowns. Determine the <strong>parameteric form</strong> of the solution set as follows:</p>
 <ol class="simple">
-<li><p>Write the system as an augmented matrix.</p></li>
-<li><p>Use Gaussian elimination to reduce to reduced row echelon form with <span class="math notranslate nohighlight">\(k\)</span> free variables.</p></li>
-<li><p>Write the corresponding system of linear equations, moving all free variables to the right hand side.</p></li>
-<li><p>Write the solution as a vector equation <span class="math notranslate nohighlight">\(v = t_1v_1 + \ldots + t_kv_k + v_0\)</span>.</p></li>
+<li><p>Write the system of as an augmented matrix.</p></li>
+<li><p>Use Gaussian elimination to reduce to reduced row echelon form.</p></li>
+<li><p>Write the corresponding system of linear equations.</p></li>
+<li><p>Move all free variables to the right hand side.</p></li>
 </ol>
 </div>
-<div class="tip admonition">
+<div class="admonition-example admonition">
 <p class="admonition-title">Example</p>
-<p>Determine the general solution to the following system of equations, expressing the answer in vector form:</p>
+<p>Write the solution to the system represented by the following augmented matrix in parametric form.</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{alignat*}{5}
--2x_1 &amp; {}-{} &amp; 4x_2 &amp; {}-{} &amp; 2x_3 &amp; {}-{} &amp; 10x_4 {}={} &amp; 0\\
-2x_1 &amp; {}+{} &amp; 4x_2 &amp; {}+{} &amp; x_3 &amp; {}+{} &amp; 9x_4 {}={} &amp; -2\\
-3x_1 &amp; {}+{} &amp; 6x_2 &amp; {}+{} &amp; x_3 &amp; {}+{} &amp; 13x_4 {}={} &amp; -4.
-\end{alignat*}\end{split}\]</div>
+\[\begin{split}\left(\begin{array}{cccc|c}
+\boxed{1} &amp; 2 &amp; 0 &amp; 3 &amp; 1\\
+0 &amp; 0 &amp; \boxed{1} &amp; -2 &amp; -2
+\end{array}\right)\end{split}\]</div>
 <p><strong>Solution</strong></p>
-<p>The augmented matrix is:</p>
+<p>The matrix is already in reduced row echelon form. The pivot variables are <span class="math notranslate nohighlight">\(x_1\)</span> and <span class="math notranslate nohighlight">\(x_3\)</span>; the free variables are <span class="math notranslate nohighlight">\(x_2\)</span> and <span class="math notranslate nohighlight">\(x_4\)</span>. It corresponds to the following equations:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-\left(
-\begin{array}{cccc|c}
--2 &amp; -4 &amp; -2 &amp; -10 &amp; 0\\
-2 &amp; 4 &amp; 1 &amp; 9 &amp; -2\\
-3 &amp; 6 &amp; 1 &amp; 13 &amp; -4
-\end{array}\right).
+\[\begin{split}\begin{alignat*}{4}
+x_1 &amp; {}+{} &amp; 2x_2 &amp; \quad &amp;      &amp; {}+{} &amp; 3x_4 &amp; {}={} &amp; 1\\
+    &amp;       &amp;      &amp; \quad &amp; x_3 &amp; {}-{} &amp; 2x_4 &amp; {}={} &amp; -2.
+\end{alignat*}
 \end{split}\]</div>
-<p>We have already determined the reduced row echelon form in the Gaussian Elimination example above:</p>
+<p>Move the free variables to the right hand side to give the parametric solution:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-\left(
-\begin{array}{cccc|c}
-\boxed{1} &amp; 2 &amp; 0 &amp; 4 &amp; -2\\
-0 &amp; 0 &amp; \boxed{1} &amp; 1 &amp; 2\\
-0 &amp; 0 &amp; 0 &amp; 0 &amp; 0
-\end{array}\right).
-\end{split}\]</div>
-<p>Write as a system of equations with the free variables <span class="math notranslate nohighlight">\(x_2\)</span> and <span class="math notranslate nohighlight">\(x_4\)</span> on the right hand side:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{alignat*}{4}
-x_1 &amp; {}={} &amp; -2x_2 &amp; {}-{} &amp; 4x_4 &amp; {}-{} &amp; 2\\
-x_3 &amp; {}={} &amp;       &amp;       &amp; -x_4 &amp; {}+{} &amp; 2.
-\end{alignat*}\end{split}\]</div>
-<p>Write this in vector form:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{pmatrix}x_1\\x_2\\x_3\\x_4\end{pmatrix} = \begin{pmatrix}-2x_2&amp;-4x_4&amp;-2\\x_2&amp;&amp;\\&amp;-x_4&amp;+2\\&amp;x_4&amp;\end{pmatrix} = x_2\begin{pmatrix}-2\\1\\0\\0\end{pmatrix} + x_4\begin{pmatrix}-4\\0\\-1\\1\end{pmatrix} + \begin{pmatrix}-2\\0\\2\\0\end{pmatrix}
+\[\begin{split}\begin{alignat*}{5}
+x_1 &amp; {}={} &amp; -2x_2 &amp; {}-{} &amp; 3x_4 &amp; {}+{} &amp; 1\\
+x_3 &amp; {}={} &amp;       &amp; {}-{} &amp; 2x_4 &amp; {}-{} &amp; 2
+\end{alignat*}
 \end{split}\]</div>
 <p>for any <span class="math notranslate nohighlight">\(x_2, x_4 \in \mathbb{R}\)</span>.</p>
+<p>This is the equation of a (2d) plane.</p>
+</div>
+<div class="exercise admonition" id="q_parametric_form">
+
+<p class="admonition-title"><span class="caption-number">Exercise 11.4 </span></p>
+<div class="section" id="exercise-content">
+<p>The reduced row echelon form of the matrix for a linear system in four variables <span class="math notranslate nohighlight">\(x_1, x_2, x_3, x_4\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left(\begin{array}{cccc|c}1 &amp; 0 &amp; 0 &amp; 3 &amp; 2\\
+0 &amp; 0 &amp; 1 &amp; 4 &amp; -1\end{array}\right).\end{split}\]</div>
+<ol class="simple">
+<li><p>Identify the pivot variables and free variables.</p></li>
+<li><p>Write the solution to the system in parametric form.</p></li>
+</ol>
+</div>
 </div>
 </div>
 </div>
 <div class="section" id="solutions">
-<h2><span class="section-number">11.3. </span>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">¶</a></h2>
-<div class="solution admonition" id="LinearAlgebra/linear_systems_matrices/echelon_form-solution-2">
+<h2><span class="section-number">11.4. </span>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">¶</a></h2>
+<div class="solution admonition" id="LinearAlgebra/linear_systems_matrices/echelon_form-solution-4">
 
 <p class="admonition-title"><a class="reference internal" href="#q_elimination">Solution to Exercise 11.1</a></p>
 <div class="section" id="solution-content">
@@ -914,12 +865,71 @@ x - 2y + z = 0 &amp;\Rightarrow x = 2y-z = 3.
 <p>The solution is <span class="math notranslate nohighlight">\(\begin{pmatrix}x\\y\\z\end{pmatrix} = \begin{pmatrix}3\\2\\1\end{pmatrix}\)</span>.</p>
 </div>
 </div>
-<div class="solution admonition" id="LinearAlgebra/linear_systems_matrices/echelon_form-solution-3">
+<div class="solution admonition" id="LinearAlgebra/linear_systems_matrices/echelon_form-solution-5">
 
 <p class="admonition-title"><a class="reference internal" href="#q_row_echelon_form">Solution to Exercise 11.2</a></p>
 <div class="section" id="solution-content">
 <p>1, 4, 5, 6 are in row echelon form.</p>
 <p>1, 5 are in reduced row echelon form.</p>
+</div>
+</div>
+<div class="solution admonition" id="LinearAlgebra/linear_systems_matrices/echelon_form-solution-6">
+
+<p class="admonition-title"><a class="reference internal" href="#q_echelon_form_2">Solution to Exercise 11.3</a></p>
+<div class="section" id="solution-content">
+<p>Row echelon form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{pmatrix}
+3 &amp; -9 &amp; 12  &amp; -9 &amp; 6 &amp; 15\\
+0 &amp; 1 &amp; -2 &amp; 2 &amp; 1 &amp; -3\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 4
+\end{pmatrix}
+\end{split}\]</div>
+<p>Reduced row echelon form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{pmatrix}
+1 &amp; 0 &amp; -2  &amp; 3 &amp; 0 &amp; -24\\
+0 &amp; 1 &amp; -2 &amp; 2 &amp; 0 &amp; -7\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 4
+\end{pmatrix}
+\end{split}\]</div>
+</div>
+</div>
+<div class="solution admonition" id="LinearAlgebra/linear_systems_matrices/echelon_form-solution-7">
+
+<p class="admonition-title"><a class="reference internal" href="#q_parametric_form">Solution to Exercise 11.4</a></p>
+<div class="section" id="solution-content">
+<p>1. The pivots are <span class="math notranslate nohighlight">\(x_1, x_3\)</span>; the free variables are <span class="math notranslate nohighlight">\(x_2, x_4\)</span>.</p>
+<p>2. Write the system of equations:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{alignat*}{4}
+x_1 &amp; \quad &amp;     &amp; {}+{} &amp; 3x_4 &amp; {}={} &amp; 2\\
+    &amp;       &amp; x_3 &amp; {}+{} &amp; 4x_4 &amp; {}={} &amp; -1
+\end{alignat*}.
+\end{split}\]</div>
+<p>In parametric form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{alignat*}{3}
+x_1 &amp; {}={} &amp; 2 &amp; {}-{} &amp; 3x_4\\
+x_3 &amp; {}={} &amp; -1 &amp; {}-{} &amp; 4x_4
+\end{alignat*}.
+\end{split}\]</div>
+<p>What happened to <span class="math notranslate nohighlight">\(x_2\)</span>? It is a free variable, but no other variable depends on it. The general solution is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{pmatrix}
+x_1\\x_2\\x_3\\x_4
+\end{pmatrix}
+=
+\begin{pmatrix}
+2-3x_4\\x_2\\-1-4x_4\\x_4
+\end{pmatrix}
+\end{split}\]</div>
+<p>for any values of <span class="math notranslate nohighlight">\(x_2\)</span> and <span class="math notranslate nohighlight">\(x_4\)</span>.</p>
 </div>
 </div>
 </div>
@@ -948,36 +958,16 @@ x - 2y + z = 0 &amp;\Rightarrow x = 2y-z = 3.
               </div>
               
         
+        <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="../../ProofLogic/methodsofproof.html" title="previous page"><span class="section-number">10. </span>Techniques of Proof</a>
+    <a class='right-next' id="next-link" href="matrices.html" title="next page"><span class="section-number">12. </span>Matrices</a>
 
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="../../ProofLogic/methodsofproof.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">10. </span>Techniques of Proof</p>
-            </div>
-        </a>
-    </div>
-     <div id="next">
-        <a class="right-next" href="matrices.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">12. </span>Matrices</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
-</div>
+        </div>
         
         </div>
     </div>
-    <footer class="footer">
+    <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
         
