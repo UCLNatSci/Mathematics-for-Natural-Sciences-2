@@ -1,4 +1,4 @@
-## Techniques of Proof
+# Techniques of Proof
 
 ### Proof by Contradiction
 This is a form of proof that seeks to establish if the validity of a proposition by showing that by assuming the proposition is false leads to a direct contradiction. 

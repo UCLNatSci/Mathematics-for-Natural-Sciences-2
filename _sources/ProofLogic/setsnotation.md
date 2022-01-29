@@ -1,4 +1,4 @@
-## Set Theory
+# Set Theory
 
 Set theory is a branch of mathematics that studies collections of objects known as <b>Sets</b>.  The language of set theory, which will start to study here, can be used 
 to define almost all mathematical objects (if you are interested in what cannot be so easily defined, look up ideas such as Gödel's incompleteness theorem and Russell's Paradox).

@@ -1,4 +1,4 @@
-## Propositional Logic
+# Propositional Logic
 
 We can turn out statements about set theory into statements about propositions, in the classical logic sense of TRUE and FALSE - so called 
 <b>Propositional Logic</b>.  If you're interested in areas of logic where some of these ideas are challened, have a look at 
