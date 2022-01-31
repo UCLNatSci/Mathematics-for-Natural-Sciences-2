@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>9. Propositional Logic &#8212; Mathematics for Natural Sciences 2</title>
+    <title>11. Propositional Logic &#8212; Mathematics for Natural Sciences 2</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -44,19 +44,19 @@
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="10. Techniques of Proof" href="methodsofproof.html" />
-    <link rel="prev" title="8. Functions" href="functions.html" />
+    <link rel="next" title="12. Techniques of Proof" href="methodsofproof.html" />
+    <link rel="prev" title="10. Functions" href="functions.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -75,6 +75,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="../_static/logo.png" class="logo" alt="logo">
       
       
@@ -84,7 +88,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -125,33 +129,43 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../VectorCalculus/coordinatesystems.html">
+   7. Coordinate Systems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../VectorCalculus/surfaceintegrals.html">
+   8. Surface Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="setsnotation.html">
-   7. Set Theory
+   9. Set Theory
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="functions.html">
-   8. Functions
+   10. Functions
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   9. Propositional Logic
+   11. Propositional Logic
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="methodsofproof.html">
-   10. Techniques of Proof
+   12. Techniques of Proof
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/echelon_form.html">
-   11. Linear Systems of Equations
+   13. Linear Systems of Equations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/matrices.html">
-   12. Matrices
+   14. Matrices
   </a>
  </li>
 </ul>
@@ -223,26 +237,26 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#laws-of-the-algebra-of-propositions">
-   9.1. Laws of the Algebra of Propositions
+   11.1. Laws of the Algebra of Propositions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conditional-and-biconditional-statements">
-   9.2. Conditional and Biconditional Statements
+   11.2. Conditional and Biconditional Statements
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#arguments-and-fallacies">
-   9.3. Arguments and Fallacies
+   11.3. Arguments and Fallacies
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#logical-implications">
-   9.4. Logical Implications
+   11.4. Logical Implications
   </a>
  </li>
 </ul>
@@ -257,7 +271,7 @@
               <div>
                 
   <div class="section" id="propositional-logic">
-<h1><span class="section-number">9. </span>Propositional Logic<a class="headerlink" href="#propositional-logic" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">11. </span>Propositional Logic<a class="headerlink" href="#propositional-logic" title="Permalink to this headline">¶</a></h1>
 <p>We can turn out statements about set theory into statements about propositions, in the classical logic sense of TRUE and FALSE - so called
 <b>Propositional Logic</b>.  If you’re interested in areas of logic where some of these ideas are challened, have a look at
 <a class="reference external" href="https://doi.org/10.2307/1968621"><b>The Logic of Quantum Mechanics, by Birkhoff &amp; Von Neumann</b></a>.</p>
@@ -428,7 +442,7 @@ e.g. it is raining or isn’t raining, we can see this as a truth table that end
 </tbody>
 </table>
 <div class="section" id="laws-of-the-algebra-of-propositions">
-<h2><span class="section-number">9.1. </span>Laws of the Algebra of Propositions<a class="headerlink" href="#laws-of-the-algebra-of-propositions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.1. </span>Laws of the Algebra of Propositions<a class="headerlink" href="#laws-of-the-algebra-of-propositions" title="Permalink to this headline">¶</a></h2>
 <p>There are identity laws, i.e. using AND or OR like multiplying or adding on 1 or 0:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}p \vee F &amp;=&amp;\, p \\
@@ -467,7 +481,7 @@ p \wedge \neg p &amp;=&amp;\, F \\
 <p>which we see mirrors the algebra of sets.</p>
 </div>
 <div class="section" id="conditional-and-biconditional-statements">
-<h2><span class="section-number">9.2. </span>Conditional and Biconditional Statements<a class="headerlink" href="#conditional-and-biconditional-statements" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.2. </span>Conditional and Biconditional Statements<a class="headerlink" href="#conditional-and-biconditional-statements" title="Permalink to this headline">¶</a></h2>
 <p>Many statements in mathematics and elsewhere are of the form if a proposition <span class="math notranslate nohighlight">\(p\)</span> (called the antecedent) applies then a proposition
 <span class="math notranslate nohighlight">\(q\)</span> (called the consequent) follows, these are known as <b>Conditional</b> statements and are denoted:</p>
 <div class="math notranslate nohighlight">
@@ -574,7 +588,7 @@ and are denoted:</p>
 \[p \rightarrow q \equiv \neg p \vee q\]</div>
 </div>
 <div class="section" id="arguments-and-fallacies">
-<h2><span class="section-number">9.3. </span>Arguments and Fallacies<a class="headerlink" href="#arguments-and-fallacies" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.3. </span>Arguments and Fallacies<a class="headerlink" href="#arguments-and-fallacies" title="Permalink to this headline">¶</a></h2>
 <p>A logical argument is a situation where there are given set of propositions <span class="math notranslate nohighlight">\(\{P_1,\,P_2,\,\dots P_n\}\)</span> called <b>Premises</b> have that as a consequence
 (or yield) a proposition <span class="math notranslate nohighlight">\(Q\)</span> known as a <b>Conclusion</b>, we denote this:</p>
 <div class="math notranslate nohighlight">
@@ -647,7 +661,7 @@ but otherwise it is false.  An argument that is not true is known as a <b>fallac
 true results in <span class="math notranslate nohighlight">\(p\)</span> being false, this argument is fallacy.</p>
 </div>
 <div class="section" id="logical-implications">
-<h2><span class="section-number">9.4. </span>Logical Implications<a class="headerlink" href="#logical-implications" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.4. </span>Logical Implications<a class="headerlink" href="#logical-implications" title="Permalink to this headline">¶</a></h2>
 <p>A proposition <span class="math notranslate nohighlight">\(P(p,\,q,\,\dots)\)</span> is said to <b>Logically Imply</b> a proposition <span class="math notranslate nohighlight">\(Q(p,\,q,\,\dots)\)</span> if <span class="math notranslate nohighlight">\(Q(p,\,q,\,\dots)\)</span> is true whenever <span class="math notranslate nohighlight">\(P(p,\,q,\,\dots)\)</span> is
 true.  We denote this as:</p>
 <div class="math notranslate nohighlight">
@@ -749,16 +763,36 @@ true.  We denote this as:</p>
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="functions.html" title="previous page"><span class="section-number">8. </span>Functions</a>
-    <a class='right-next' id="next-link" href="methodsofproof.html" title="next page"><span class="section-number">10. </span>Techniques of Proof</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="functions.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title"><span class="section-number">10. </span>Functions</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="methodsofproof.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title"><span class="section-number">12. </span>Techniques of Proof</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
