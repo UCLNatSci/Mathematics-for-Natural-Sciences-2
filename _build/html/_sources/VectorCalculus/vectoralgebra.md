@@ -356,3 +356,237 @@ which is useful particularly when we want to work out results like:
 \bf \nabla \times \nabla \times A = \nabla(\nabla \cdot A) - (\nabla\cdot \nabla)A = \nabla(\nabla \cdot A) - \nabla^2 A
 ```
 which will be useful later!
+
+## Vector Lines and Planes 
+
+We can identify points in space using their position vectors, which are typically denoted by
+
+```{math}
+{\bf r} =\left(\begin{array}{c}x\\y\\z\end{array}\right)
+```
+
+This gives us two ways of writing down the equations of lines and planes:
+
+- <b>Vector Form:</b> in terms of the position vector $\bf r$,
+
+- <b>Scalar Form:</b> in terms of the coordinates $x,\, y,\, z$.
+
+In what follows, we will write the equations using both conventions. You will see that sometimes it is easier to work with 
+the scalar equations and other times it is easier to work with the vector equations.
+
+    
+
+### Equation of a line
+
+The vector equation of a line can be obtained from a known point on the line and a known vector parallel to the 
+line. Equivalently, two known points on the line can also be used to find a parallel vector.
+
+We obtain the position vector of the other points by a two step process:
+
+- first carrying from the origin to the known point
+
+- secondly carrying along the line in either direction
+
+This principle is illustrated in {numref}`positionvector`
+
+```{figure} ../figures/vector_line.gif
+---
+name: positionvector
+---
+The vector equation of a line passing through two points $P,\,Q$. The position vector $\bf r$, shown in red, describes 
+an arbitrary point on the line, it can be formed by the sum ${\bf r}={\bf r}_0+\lambda{\bf v}$.
+```
+
+An arbitrary scalar parameter $\lambda$ controls how far along the line we move, and if it is negative then the direction is reversed. The animation shows how the line is described as the parameter $\lambda$ is varied.
+
+   
+
+We can also use the vector equation to calculate the corresponding scalar equation. From the vector equation we obtain:
+
+$\left(\begin{array}{c}x \\y \\z \\\end{array}\right)=\left(\begin{array}{c}x_0 \\y_0 \\z_0 \\\end{array}\right)+\lambda \left(\begin{array}{c}v_x \\v_y \\v_z \\\end{array}\right).$	4.14
+Equating components on the left and right and rearranging in each equation for $\lambda$ then gives the result shown in the box below. Notice that the special case where $z$ is constant gives an equation of the form $y=m x+c.$
+
+    
+
+Box 4.5. Equation of a line
+
+In vector form :
+
+${\bf r}={\bf r}_0+\lambda{\bf v}$
+
+In scalar form :
+
+$\frac{x-x_0}{v_x}=\frac{y-y_0}{v_y}=\frac{z-z_0}{v_z}$
+
+where ${\bf r_0}=\left(\begin{array}{c}x_0\\y_0\\z_0\end{array}\right)$ is the position vector of a point on the line, and ${\bf v}=\left(\begin{array}{c}v_x\\v_y\\v_z\end{array}\right)$ is a vector parallel to the line.
+
+    
+
+Questions 4.4.1.
+
+1. Write down the vector equation of the line passing through points $(-2,1,3)$ and $(1,0,4)$
+
+2. Write the vector equation of the line that is parallel to ${\bf r}=\left(\begin{array}{c}1 \\2 \\3 \\\end{array}\right)+\lambda \left(\begin{array}{c}2 \\1 \\4 \\\end{array}\right)$ and passes through the point $(1,-2,3)$. Show that the point $(7,1,15)$ lies on this line.
+
+3. Show that the lines given by ${\bf r}_1=\left(\begin{array}{c}1 \\2 \\3 \\\end{array}\right)+\lambda \left(\begin{array}{c}2 \\3 \\1 \\\end{array}\right)$ and ${\bf r}_2=\left(\begin{array}{c}2 \\1 \\5 \\\end{array}\right)+\mu \left(\begin{array}{c}1 \\-1 \\1 \\\end{array}\right)$ are perpendicular.
+
+4. Find the point of intersection of the lines given by
+
+\begin{align}{\bf r}_1&=(3+2\lambda){\bf e}_x+(5+3\lambda){\bf e}_y+(1+4\lambda){\bf e}_z\\{\bf r}_2&= (1+4 \mu){\bf e}_x+(16-\mu ){\bf e}_y+(7+3\mu){\bf e}_z\end{align}
+
+5. Lines which are not parallel and do not intersect are called skew. Show that the following two lines are skew:
+
+\begin{align}{\bf r}_1&=(1+2 \lambda ) {\bf e}_x+(1+12 \lambda ) {\bf e}_y+(1+4 \lambda) {\bf e}_z\\{\bf r}_2&=(0+1\mu) {\bf e}_x+(1+\frac{15 \mu }{2}) {\bf e}_y+(2+3\mu) {\bf e}_z\end{align}
+
+6. Write down the vector equation of the lines $\frac{3 x+1}{2}=\frac{y-1}{2}=\frac{5-z}{3}$
+
+    
+
+### Equation of a plane
+
+The vector equation requires either three points (which cannot lie all on the same line), or a point and two non-parallel directions. The vector form of the equation is illustrated in the figure below.
+
+In this description we carry from the origin to the known point identified by ${\bf r}_0$ and then carry along the resultant of vectors $\lambda{\bf v}$ and $\mu{\bf w}$, which span a parallelogram within the plane.
+
+   
+
+mapping a plane using a point and two vectors
+Figure 4.10 The vector equation of a plane passing through points $P,Q,R$
+
+The position vector ${\bf r}$, shown in red, describes an arbitrary point on the plane. It can be formed by the sum ${\bf r}={\bf r}_0+\lambda{\bf v}+\mu{\bf w}$, where
+
+${\bf r}_0=\overrightarrow{OP}$ is a the position vector of one of the known points on the line,
+${\bf v}=\overrightarrow{PQ}$ and ${\bf w}=\overrightarrow{PR}$ are known vectors that points in a different directions parallel to the plane.
+The arbitrary scalar parameters $\lambda$ and $\mu$ control how far along the line we carry. The animation shows how the plane is described as the parameters are varied.
+
+    
+
+Written out in scalar form, the vector equation of a plane gives :
+
+\begin{align}\lambda v_x +\mu w_x &= x-x_0\\\lambda v_y +\mu w_y &= y-y_0\\\lambda v_z +\mu w_z &= z-z_0\end{align}
+
+In principle, we could find the scalar equation for a plane by eliminating the parameters $\lambda,\mu$ between these equations, which would lead to a relationship of the form $ax +by+cz=k$. However, we can avoid the messy algebra by obtaining the scalar equation in a different way.
+
+We can find the scalar equation of a plane if we know the position vector ${\bf r}_0$ of a point on the surface, and a vector $n$ that is normal to the surface. Then, ${\bf r}-{\bf r}_0$ lies inside the plane, so it is perpendicular to $n$.
+This gives the result shown in Box 4.6.
+
+vector (r-r0) lies in the plane and is therefore perpendicular to the surface normal
+Figure 4.11
+
+We can find the scalar equation of a plane by using a normal vector ${\bf n}$ and a position vector ${\bf r}_0$.
+We have $({\bf r}-{\bf r}_0).{\bf n}=0$.
+
+     
+
+Box 4.6
+
+The scalar equation of a plane is given by
+
+$({\bf r}-{\bf r}_0).{\bf n}=0$
+
+where ${\bf r}_0$ is the position vector of a point in the plane, and ${\bf n}$ is a vector perpendicular to the plane.
+
+Expanding out the scalar product gives
+
+$n_x x +n_y y + n_z z = k$
+
+where $k=n_x x_0 +n_y y_0 + n_z z+0.$
+
+In the case where we are given two vectors v,w lying inside the plane we can, of course, find a normal vector by making use of the vector product!
+
+So, we could write
+
+$({\bf r}-{\bf r}_0).({\bf v}\times {\bf w})=0$
+
+    
+
+Questions 4.4.2
+
+1. Find the equation of the plane through the point (3,2,7) which is perpendicular to the vector $\left(\begin{array}{c}1 \\-5 \\8 \\\end{array}\right)$. Give your answer in vector form and in scalar form.
+
+2. Find the angle between the planes $3x+4y+5z=7$ and $x+2y-2z=11$
+
+3. Find the angle between the plane $2x-3y+z=11$ and the line ${\bf r}=\left(\begin{array}{c}-1 \\3 \\0 \end{array}\right)+\lambda \left(\begin{array}{c}2 \\-1 \\5 \\\end{array}\right)$
+
+4. Find the line of intersection of the planes \begin{align}3x-y-5z&=7\\2x+3y-4z&=-2\end{align}
+
+     
+
+### Distance between a point and a line
+
+The shortest distance between a point $C$ and a line through points $A,B$ is the perpendicular distance, $d=|\overrightarrow{AC}_{\perp}|$, illustrated in the figure below. 
+
+AC can be split into components parallel and perpendicular to AB
+Figure 4.12
+
+The shortest distance from a point $C$ to a line is given by $d=|\overrightarrow{AC}_{\perp}|$, as illustrated.
+
+   
+
+This distance is equal to the height of the parallelogram spanned by vectors $\overrightarrow{AB}$ and $\overrightarrow{AC}$, so it can be found using the vector product:
+
+$d=\frac{|\overrightarrow{AB}\times\overrightarrow{AC}|}{|\overrightarrow{AB}|}$	4.15
+    
+
+Alternatively, we could use the scalar product, since
+
+$\overrightarrow{AC}=\overrightarrow{AC}_{\parallel}+\overrightarrow{AC}_{\perp}$	4.16
+in which the parallel component \overrightarrow{AC}_{\parallel} is simply the projection of $\overrightarrow{AC}$ onto $\overrightarrow{AB}$.
+
+     
+
+Example:
+
+Find the shortest distance between the point $C:(5,0,5)$ and the line that passes through the points $A:(1,1,3)$ and $B:(3,4,2)$
+
+      
+
+Using the vector product:
+
+$\overrightarrow{AB}\times\overrightarrow{AC} = \left|\begin{array}{ccc}{\bf e}_x & {\bf e}_y & {\bf e}_z\\2&3&-1\\4&-1&2\end{array}\right|=5{\bf e}_x-8{\bf e}_y-14{\bf e}_z$
+
+$d=\frac{|\overrightarrow{AB}\times\overrightarrow{AC}|}{\overrightarrow{AB}}=\sqrt{\frac{285}{14}}$
+
+   
+
+Using the scalar product:
+
+$\overrightarrow{AB}=\left(\begin{array}{c}2\\3\\-1\end{array}\right)$, $\overrightarrow{AC}=\left(\begin{array}{c}4\\-1\\-2\end{array}\right), \qquad |\overrightarrow{AC}_{\parallel}|=\overrightarrow{AC}.\frac{\overrightarrow{AB}}{|\overrightarrow{AB}|}=\frac{3}{\sqrt{14}}$
+
+$d=\sqrt{|\overrightarrow{AC}|^2-|\overrightarrow{AC}_{\parallel}|^2}=\sqrt{21-\frac{3}{14}}=\sqrt{\frac{285}{14}}$
+
+   
+
+4.4.4 Shortest distance to a plane
+
+The shortest distance between a point $P$ and a plane containing the point $A$ is the perpendicular distance, marked $d$ in the figure below.
+
+to find the shortest distance from point P to the plane through A, project AP onto the unit normal
+Figure 4.13
+
+The shortest distance from a point $P$ to a plane through $A$ is the projection of $\overrightarrow{AP}$ onto the unit normal
+
+This distance is the given by projecting vector $\overrightarrow{AP}$ onto the unit normal:
+
+$d=|\overrightarrow{AP}.\hat{{\bf n}}|$	4.17
+The shortest distance between a line and a (non-intersecting) plane, two parallel planes, or two skew lines can be found in the same way, by picking any point on each line/plane. The case of two skew lines is illustrated below.
+
+the shortest distance between two skew lines
+
+   
+
+Example:
+
+Find the shortest distance between the planes
+
+$P_1: \enspace 3x-2y+4z=12, \qquad P_2: \enspace 6x-4y+8z=8$
+
+   
+
+Solution
+
+The two planes are parallel, with normal direction is ${\bf n}=\left(\begin{array}{c}3\\-2\\4\end{array}\right)$.
+
+Pick a point on each plane. For example, on $P_1$ pick the point $A:(0,0,3)$ and on $P_2$ pick the point $B:(0,0,1)$. The distance between the two planes is therefore given by
+
+$|\overrightarrow{AB}.\hat{{\bf n}}|=\frac{|(0,0,-2).(3,2,-4)|}{\sqrt{3^2+2^2+4^2}}=\frac{8}{\sqrt{29}}$
