@@ -14,8 +14,8 @@ chapters:
 - file: VectorCalculus/divandcurl
 - file: VectorCalculus/coordinatesystems
 - file: VectorCalculus/surfaceintegrals
-#- file: VectorCalculus/volumeintegrals
-#- file: VectorCalculus/vectorcalctheorems
+- file: VectorCalculus/volumeintegrals
+- file: VectorCalculus/vectorcalctheorems
 
 - file: ProofLogic/setsnotation
 - file: ProofLogic/functions

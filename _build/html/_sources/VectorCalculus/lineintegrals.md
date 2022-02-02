@@ -47,6 +47,7 @@ I = \int_C {\bf G}(r) \cdot \mathrm{d}{\bf r} = \int_a^b {\bf G}({\bf r}(t)) \cd
 
 ```
 
+### Examples of Line Integrals
 As an example lets consider the vector field ${\bf G(r)} = \begin{pmatrix} xy\\ -y^2 \end{pmatrix}$ and look at the line integral over the points 
 $(0,\, 0) \rightarrow (1,2)$ across different paths.  Lets pick the parameter $t$ to be the $x$ coordinate, so that the path if determined by 
 $y = f(x), \, x \in [a,\, b]$ such that:
@@ -137,4 +138,18 @@ so the line integral is found by:
 I &=&\, \int_C {\bf G}(r) \cdot \mathrm{d}{\bf r} = \int_0^1 {\bf G}({\bf r}(t)) \cdot {\bf r}'(t)\,\mathrm{d}t = 
 \int_0^1 \begin{pmatrix} x^{3/2} \\ -x \end{pmatrix} \cdot \begin{pmatrix} 1 \\ \frac{1}{2} x^{-1/2} \end{pmatrix} \mathrm{d}x \\
 &=&\, \int_0^1 \left( x^{3/2} - \frac{1}{2}x^{1/2} \right)\,\textrm{d}x = \Big[\frac{2}{5}x^{5/2} - \frac{1}{3}x^{3/2} \Big ]_0^1 = \frac{1}{15}
+```
 
+## Conservative Vector Fields
+
+There is an important class of vector fields, known as <b>conservative vector fields</b>, for which line integrals do not depend on 
+which path is taken from rA to rB, and for which all loop integrals are zero.  We see that our example 
+${\bf G(r)} = xy\hat{\bf x} - y^2 \hat{\bf y}$ is not conservative since the line integrals along different paths from $(0,\, 0)$ to $(1,\,2)$ 
+gave different values.  
+
+Whist it is not possible show that for all paths ${\bf r}_A \rightarrow {\bf r}_B$. the line integral gives the same value, simply because there exist
+infinitely many possible paths. Instead we can use an equivalent definition of conservative fields:
+
+```{math}
+
+```

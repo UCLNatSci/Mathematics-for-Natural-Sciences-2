@@ -137,6 +137,34 @@ $\bf r=r_0$).  The gradients are perpendicular to the contour lines and point to
 which from {numref}`scalarvectorfield` we know is a maxima.
 ```
 
-% ## Total Differenetial
+## Total Differential
 
-% Recall from our discussions about partial derivatives, we can also find a <em>total derivative</em>
+Recall from our discussions about partial derivatives, we can also define a <em>scalar total differential</em>:
+```{math}
+\mathrm{d}\phi = \frac{\partial \phi}{\partial x} \mathrm{d} x + \frac{\partial \phi}{\partial y} \mathrm{d} y + \frac{\partial \phi}{\partial z} \mathrm{d} z
+```
+which measures the infinitesimal change of $\phi$ as we change $x, \,y,\,z$ by infinitesimal amounts $\mathrm{d}x, \,\mathrm{d}y,\, \mathrm{d}z$.  
+Likewise we can define the vectorial line element:
+```{math}
+\mathrm{d}{\bf r} = \begin{pmatrix} \mathrm{d}x \\\mathrm{d}y\\ \mathrm{d}z\end{pmatrix}
+```
+or to write in a slightly more compact notation:
+```{math}
+\mathrm{d}\phi = \nabla \phi \cdot \mathrm{d}{\bf r}
+```
+To find the <em>vector total differential</em>:
+```{math}
+\mathrm{d}{\bf A} = \frac{\partial {\bf A} }{\partial x} \mathrm{d} x + \frac{\partial {\bf A} }{\partial y} \mathrm{d} y + \frac{\partial {\bf A} }{\partial z} \mathrm{d} z
+
+```
+## Directional Derivative
+
+
+
+
+
+
+
+
+
+
