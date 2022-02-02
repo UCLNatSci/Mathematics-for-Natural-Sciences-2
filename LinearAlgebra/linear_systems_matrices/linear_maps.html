@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Linear Transformations &#8212; Mathematics for Natural Sciences 2</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/_static/mystyle.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -43,9 +43,9 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -56,7 +56,10 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -137,33 +140,43 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../../VectorCalculus/volumeintegrals.html">
+   9. Area Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../VectorCalculus/vectorcalctheorems.html">
+   11. Vector Calculus Theorems
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../../ProofLogic/setsnotation.html">
-   9. Set Theory
+   12. Set Theory
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../ProofLogic/functions.html">
-   10. Functions
+   13. Functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../ProofLogic/propositionallogic.html">
-   11. Propositional Logic
+   14. Propositional Logic
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../ProofLogic/methodsofproof.html">
-   12. Techniques of Proof
+   15. Techniques of Proof
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="echelon_form.html">
-   13. Linear Systems of Equations
+   16. Linear Systems of Equations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="matrices.html">
-   14. Matrices
+   17. Matrices
   </a>
  </li>
 </ul>
@@ -212,7 +225,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -230,7 +243,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -280,10 +293,63 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Linear Transformations</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Linear Transformations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#matrix-transformations">
+   Matrix Transformations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#geometrical-interpretation-of-matrices">
+   Geometrical Interpretation of Matrices
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-matrix-of-a-linear-transformations">
+   The Matrix of a Linear Transformations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rotation-matrices-in-2d">
+   Rotation matrices in 2D
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#projection-matrix">
+   Projection Matrix
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sequence-of-transformations">
+   Sequence of transformations
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
-  <div class="section" id="linear-transformations">
+  <div class="tex2jax_ignore mathjax_ignore section" id="linear-transformations">
 <h1>Linear Transformations<a class="headerlink" href="#linear-transformations" title="Permalink to this headline">¶</a></h1>
 <p>In this section we learn to understand matrices geometrically as functions, or transformations. We briefly discuss transformations in general, then specialize to matrix transformations, which are transformations that come from matrices.</p>
 <div class="section" id="id1">
@@ -357,9 +423,7 @@ T(au) = A(au) = aAu = aT(u).
 <div class="math notranslate nohighlight">
 \[\begin{split}T(e_2) = Ae_2 = \begin{pmatrix}-1 &amp; 0\\0 &amp; 1\end{pmatrix}\begin{pmatrix}0\\1\end{pmatrix}=\begin{pmatrix}0\\1\end{pmatrix}.\end{split}\]</div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 684x288 with 2 Axes&gt;
-</pre></div>
-</div>
+<img alt="../../_images/linear_transformations_2_0.png" src="../../_images/linear_transformations_2_0.png" />
 </div>
 <p>Furthermore, once we know the transformed unit vectors, we can use the linearity of the transformation to determine how <em>any</em> vector is transformed. Given a vector <span class="math notranslate nohighlight">\(x = \begin{pmatrix}x_1\\x_2\end{pmatrix}\)</span>, we can write <span class="math notranslate nohighlight">\(x\)</span> as a sum of unit co-ordinate vectors:</p>
 <div class="math notranslate nohighlight">
@@ -369,9 +433,7 @@ T(au) = A(au) = aAu = aT(u).
 \[T(x) = Ax = A(x_1e_1 + x_2e_2) = x_1Ae_1 + x_2Ae_2 = x_1T(e_1) + x_2T(e_2).\]</div>
 <p>For example, the vector <span class="math notranslate nohighlight">\(e_1 + e_2\)</span> is transformed to <span class="math notranslate nohighlight">\(T(e_1) + T(e_2)\)</span> so we can use this to draw the image of the unit square which has vertices <span class="math notranslate nohighlight">\(0\)</span>, <span class="math notranslate nohighlight">\(e_1\)</span>, <span class="math notranslate nohighlight">\(e_2\)</span> and <span class="math notranslate nohighlight">\(e_1 + e_2\)</span>:</p>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 684x288 with 2 Axes&gt;
-</pre></div>
-</div>
+<img alt="../../_images/linear_transformations_3_0.png" src="../../_images/linear_transformations_3_0.png" />
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Example</p>
@@ -413,9 +475,7 @@ T(au) = A(au) = aAu = aT(u).
 <p><strong>Solution</strong></p>
 <p>First, determine the transformation of the unit coordinate vectors.</p>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 684x288 with 2 Axes&gt;
-</pre></div>
-</div>
+<img alt="../../_images/linear_transformations_4_0.png" src="../../_images/linear_transformations_4_0.png" />
 </div>
 <div class="math notranslate nohighlight">
 \[\begin{split}T(e_1) = \begin{pmatrix}0\\-1\end{pmatrix}\\
@@ -430,9 +490,7 @@ T(e_2) = \begin{pmatrix}-1\\0\end{pmatrix}\end{split}\]</div>
 <h2>Rotation matrices in 2D<a class="headerlink" href="#rotation-matrices-in-2d" title="Permalink to this headline">¶</a></h2>
 <p>Suppose the linear transformation <span class="math notranslate nohighlight">\(T:\mathbb{R}^2 \rightarrow \mathbb{R}^2\)</span> corresponds to an anticlockwise rotation by an angle <span class="math notranslate nohighlight">\(\theta\)</span> around the origin. Then we can use trigonometry to determine the destination of the coordinate vectors under <span class="math notranslate nohighlight">\(T\)</span>:</p>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 684x288 with 2 Axes&gt;
-</pre></div>
-</div>
+<img alt="../../_images/linear_transformations_5_0.png" src="../../_images/linear_transformations_5_0.png" />
 </div>
 <div class="math notranslate nohighlight">
 \[\begin{split}T(e_1) = \begin{pmatrix}\cos\theta\\\sin\theta\end{pmatrix}\\
@@ -476,36 +534,28 @@ T(e_2) = \begin{pmatrix}-\sin\theta\\\cos\theta\end{pmatrix}\end{split}\]</div>
 
               </div>
               
-        
             
-
-
-
-<div class='prev-next-bottom'>
-    
-
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Natural Sciences<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By Natural Sciences<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>
