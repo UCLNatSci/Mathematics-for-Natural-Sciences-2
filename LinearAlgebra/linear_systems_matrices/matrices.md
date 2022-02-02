@@ -488,9 +488,29 @@ Matrix addition is both commutative and associative, because it is an elementwis
 
 1\.
 
-$A B=\left(\begin{array}{cc}(3\times 2)+(1 \times-3)+(-2\times 1) & (3\times 3)+(1\times 0)+(-2\times 1) \\ (0\times 2)+(2\times -3)+(4\times 1) & (0\times 3)+(2\times 0)+(4\times 1) \end{array}\right)=\left(\begin{array}{cc}1 & 7 \\-2 & 4 \end{array}\right)$
+$$
+\begin{align*}
+A B&=\begin{pmatrix}3 & 1&-2\\0 &2&4\end{pmatrix}\begin{pmatrix}2 & 3\\-3 &0\\1&1\end{pmatrix}\\
+&=\left(\begin{array}{cc}(3\times 2)+(1 \times-3)+(-2\times 1) & (3\times 3)+(1\times 0)+(-2\times 1) \\ (0\times 2)+(2\times -3)+(4\times 1) & (0\times 3)+(2\times 0)+(4\times 1) \end{array}\right)\\
+&=\left(\begin{array}{cc}1 & 7 \\-2 & 4 \end{array}\right)
+\end{align*}
+$$
 
-We multiplied a (2x3) matrix with a (3x2) matrix. The result is a (2x2) matrix. The two results are not the same, and do not even have the same dimensions.
+We multiplied a (2x3) matrix with a (3x2) matrix. The result is a (2x2) matrix.
+
+$$
+\begin{align*}
+BA &= \begin{pmatrix}2 & 3\\-3 &0\\1&1\end{pmatrix}\begin{pmatrix}3 & 1&-2\\0 &2&4\end{pmatrix}\\
+&=\begin{pmatrix}(2\times 3) +(3 \times 0) & (2 \times 1) + (3 \times 2) & (2 \times -2) + (3\times 4)\\
+(-3\times 3) + (0\times 0) & (-3 \times 1) + (0 \times 2) & (-3 \times -2)+ (0 \times 4)\\
+(1 \times 3) + (1 \times 0) & (1 \times 1) + (1 \times 2) & (1 \times -2) + (1 \times 4)\end{pmatrix}\\
+&=\begin{pmatrix}6&8&8\\-9&-3&6\\3&3&2\end{pmatrix}
+\end{align*}
+$$
+
+We multiplied a (3x2) matrix with a (2x3) matrix. The result is a (3x3) matrix.
+
+The two results are not the same, and do not even have the same dimensions.
 
 In general, $A B\neq B A$, even when $A$ and $B$ are square matrices. That is, matrix multiplication is NOT COMMUTATIVE.
 

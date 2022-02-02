@@ -150,9 +150,9 @@ $$
 
 ### Generalisation
 The naive algorithm introduced here can be generalised to include additional row operations. In general, the acceptable row operations that we can perform are:
--	multiplication of any row by a constant
--	addition of (a multiple of) any row to any other
--	swapping any two rows
+-	multiplication of any row by a constant (e.g. $\frac{1}{2}r_1 \rightarrow r_1$)
+-	addition of (a multiple of) any row to any other (e.g. $r_2 + 2r_1 \rightarrow r_2$)
+-	swapping any two rows (e.g. $r_1 \leftrightarrow r_2$)
 
 It is often possible to apply these steps creatively to get a result with greater efficiency than using the naive algorithm described above.
 
