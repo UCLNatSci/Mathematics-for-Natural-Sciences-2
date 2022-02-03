@@ -263,6 +263,13 @@
   <a class="reference internal nav-link" href="#proof-by-construction">
    12.5. Proof By Construction
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#number-theory-types-of-construction">
+     12.5.1. Number Theory Types of Construction
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -375,6 +382,54 @@ Lets write <span class="math notranslate nohighlight">\(x = 2a\)</span> with som
 x^2 - 6x &amp;=&amp; 2a - 5 \\
 x(x-6) &amp;=&amp; 2a - 5\end{split}\]</div>
 <p>Since the RHS is clearly odd by construction, this means the LHS is odd.  Given that ODD <span class="math notranslate nohighlight">\(\times\)</span> ODD = ODD, then given <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(x-6\)</span> differ by an even numbers, <span class="math notranslate nohighlight">\(x\)</span> must be an odd number. <b>QED</b></p>
+<div class="section" id="number-theory-types-of-construction">
+<h3><span class="section-number">12.5.1. </span>Number Theory Types of Construction<a class="headerlink" href="#number-theory-types-of-construction" title="Permalink to this headline">¶</a></h3>
+<p>Sometimes instead of directly proving a proposition, we can construct facts about the proposition which the lead to the answer.  This is often employed
+when we have to prove some facts about numbers, for example lets try to prove that:</p>
+<div class="math notranslate nohighlight">
+\[a^5 = 10m + a,\quad {a,\,m,} \in \mathbb{Z}\]</div>
+<p>We could argue that this can be proved by induction, with proposition</p>
+<div class="math notranslate nohighlight">
+\[P_a: a^5 = 10m + a,\, a,\,m \in \mathbb{Z}\]</div>
+<p>and given the starting cases:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}1^5 &amp;=&amp;\, 1 = 10(0) + 1 \\
+2^5 &amp;=&amp;\, 32 = 10(3) + 2 \\
+3^5 &amp;=&amp;\, 243 = 10(24) + 3\end{split}\]</div>
+<p>which works and therefore to shown the proposition true, we need to work out <span class="math notranslate nohighlight">\((a+1)^5\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}(a+1)^5 &amp;=&amp;\, a^5 + 5a^4 + 10a^3 + 10a^2 + 5a + 1 \\
+&amp;=&amp;\, 10m + a + 10a^3 + 10a^2 + 5a^4 + 5a + 1 \\
+&amp;=&amp;\, 10(m + a^2 + a^4) + 5a(1 + a^3) + a + 1 \end{split}\]</div>
+<p>and we can then argue that <span class="math notranslate nohighlight">\(\forall \,a \in \mathbb{Z},\, a(a^3+1)\)</span> is an EVEN number - if <span class="math notranslate nohighlight">\(a\)</span> is ODD then <span class="math notranslate nohighlight">\(a^3+1\)</span> is EVEN and so <span class="math notranslate nohighlight">\(a(a^3+1)\)</span> is EVEN
+and likewise if <span class="math notranslate nohighlight">\(a\)</span> is EVEN, <span class="math notranslate nohighlight">\(a(a^3+1)\)</span> is EVEN, hence we have:</p>
+<div class="math notranslate nohighlight">
+\[(a+1)^5 = 10m' + a + 1,\quad a,\,m' \in \mathbb{Z}\]</div>
+<p>which is <span class="math notranslate nohighlight">\(P_a\Bigg|_{a \rightarrow a+1}\)</span> and hence proven.</p>
+<p>However lets explore the numbers a little deeper here, lets start with what happens if we square the first 10 natural numbers:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}1 &amp;\rightarrow&amp;\, 1\\
+2 &amp;\rightarrow&amp;\, 4\\
+3 &amp;\rightarrow&amp;\, 9\\
+4 &amp;\rightarrow&amp;\, 16\\
+5 &amp;\rightarrow&amp;\, 25\\
+6 &amp;\rightarrow&amp;\, 36\\
+7 &amp;\rightarrow&amp;\, 49\\
+8 &amp;\rightarrow&amp;\, 64\\
+9 &amp;\rightarrow&amp;\, 81\\
+10 &amp;\rightarrow&amp;\, 10\end{split}\]</div>
+<p>We notice that the last digit of the square numbers is always one of <span class="math notranslate nohighlight">\({0,\, 1,\, 4,\, 5,\, 6,\, 9}\)</span>, the digits <span class="math notranslate nohighlight">\({2,\, 3,\, 7,\, 8}\)</span> never
+enter in to this.  Likewise we could keep going to cube numbers and quartic powers etc, but lets just think about what happens when we take
+numbers to higher an higher powers and what that last digit does, as outlined in <a class="reference internal" href="#cycliclastdigits"><span class="std std-numref">Fig. 12.1</span></a>.</p>
+<div class="figure align-default" id="cycliclastdigits">
+<img alt="../_images/cycliclastdigits.png" src="../_images/cycliclastdigits.png" />
+<p class="caption"><span class="caption-number">Fig. 12.1 </span><span class="caption-text">The effect of higher and higher powers on the last digit of an integer.</span><a class="headerlink" href="#cycliclastdigits" title="Permalink to this image">¶</a></p>
+</div>
+<p>We see that some digits under increasing integer powers return back to the same digit immediately (e.g. <span class="math notranslate nohighlight">\(6 \rightarrow 6\)</span>), others take
+another digit first (e.g. <span class="math notranslate nohighlight">\(9 \rightarrow 1 \rightarrow 9\)</span>) and some go through up to four other digits (e.g. <span class="math notranslate nohighlight">\(2 \rightarrow 4 \rightarrow 8 \rightarrow 6 \rightarrow 2\)</span>),
+therefore for <em>any</em> digit, to guarantee the digit has returned we must raise the power to five, that’s why <span class="math notranslate nohighlight">\(a^5\)</span> will have a righthand digit
+equal to <span class="math notranslate nohighlight">\(a\)</span> plus another number that has a factor of ten, shifting it along to the higher digits.</p>
+</div>
 </div>
 </div>
 
