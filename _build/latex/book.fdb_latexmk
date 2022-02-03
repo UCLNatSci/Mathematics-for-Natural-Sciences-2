@@ -1,7 +1,0 @@
-# Fdb version 3
-["pdflatex"] 0 "book.tex" "book.pdf" "book" 0
-  "book.aux" 1643576577 32 3985256e7290058c681f74d7a3565a19 ""
-  "book.tex" 0 -1 0 ""
-  (generated)
-  "book.log"
-  "book.pdf"

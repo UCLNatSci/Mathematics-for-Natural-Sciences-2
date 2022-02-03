@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Linear Transformations &#8212; Mathematics for Natural Sciences 2</title>
+    <title>18. Linear Transformations &#8212; Mathematics for Natural Sciences 2</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -55,6 +55,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="19. Inverse and Determinant" href="inverse_determinant.html" />
+    <link rel="prev" title="17. Matrices" href="matrices.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -98,7 +100,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/partialdifferentiation.html">
    1. Multivariable Calculus
@@ -179,6 +181,16 @@
    17. Matrices
   </a>
  </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   18. Linear Transformations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="inverse_determinant.html">
+   19. Inverse and Determinant
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -252,37 +264,37 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
-   Linear Transformations
+   18.1. Linear Transformations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#matrix-transformations">
-   Matrix Transformations
+   18.2. Matrix Transformations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#geometrical-interpretation-of-matrices">
-   Geometrical Interpretation of Matrices
+   18.3. Geometrical Interpretation of Matrices
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-matrix-of-a-linear-transformations">
-   The Matrix of a Linear Transformations
+  <a class="reference internal nav-link" href="#the-matrix-of-a-linear-transformation">
+   18.4. The Matrix of a Linear Transformation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rotation-matrices-in-2d">
-   Rotation matrices in 2D
+   18.5. Rotation matrices in 2D
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#projection-matrix">
-   Projection Matrix
+   18.6. Projection Matrix
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sequence-of-transformations">
-   Sequence of transformations
+  <a class="reference internal nav-link" href="#composition-of-linear-transformations">
+   18.7. Composition of Linear Transformations
   </a>
  </li>
 </ul>
@@ -307,37 +319,37 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
-   Linear Transformations
+   18.1. Linear Transformations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#matrix-transformations">
-   Matrix Transformations
+   18.2. Matrix Transformations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#geometrical-interpretation-of-matrices">
-   Geometrical Interpretation of Matrices
+   18.3. Geometrical Interpretation of Matrices
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-matrix-of-a-linear-transformations">
-   The Matrix of a Linear Transformations
+  <a class="reference internal nav-link" href="#the-matrix-of-a-linear-transformation">
+   18.4. The Matrix of a Linear Transformation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rotation-matrices-in-2d">
-   Rotation matrices in 2D
+   18.5. Rotation matrices in 2D
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#projection-matrix">
-   Projection Matrix
+   18.6. Projection Matrix
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sequence-of-transformations">
-   Sequence of transformations
+  <a class="reference internal nav-link" href="#composition-of-linear-transformations">
+   18.7. Composition of Linear Transformations
   </a>
  </li>
 </ul>
@@ -350,10 +362,10 @@
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="linear-transformations">
-<h1>Linear Transformations<a class="headerlink" href="#linear-transformations" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">18. </span>Linear Transformations<a class="headerlink" href="#linear-transformations" title="Permalink to this headline">¶</a></h1>
 <p>In this section we learn to understand matrices geometrically as functions, or transformations. We briefly discuss transformations in general, then specialize to matrix transformations, which are transformations that come from matrices.</p>
 <div class="section" id="id1">
-<h2>Linear Transformations<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">18.1. </span>Linear Transformations<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>A function is a rule that takes inputs and transforms them to outputs. For example, a function <span class="math notranslate nohighlight">\(f:\mathbb{R}\rightarrow\mathbb{R}\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[f(x)=x^2\]</div>
@@ -361,6 +373,9 @@
 <div class="math notranslate nohighlight">
 \[g(x, y) = x^2 + y^3\]</div>
 <p>is a function which maps 2-dimensional vectors <span class="math notranslate nohighlight">\((x, y) \in \mathbb{R}^2\)</span> to real numbers.</p>
+<p>Functions can also be defined geometrically. For example, the following are valid function definitions:</p>
+<p><span class="math notranslate nohighlight">\(R_\theta:\mathbb{R}^2\rightarrow\mathbb{R}^2\)</span> corresponding to a <span class="math notranslate nohighlight">\(\theta\)</span> anticlockwise rotation around the origin.</p>
+<p><span class="math notranslate nohighlight">\(U:\mathbb{R}^2\rightarrow\mathbb{R}^2\)</span> corresponding to a translation by the vector <span class="math notranslate nohighlight">\(\begin{pmatrix}1\\-1\end{pmatrix}\)</span>.</p>
 <div class="admonition-definition admonition">
 <p class="admonition-title">Definition</p>
 <p>Suppose  <span class="math notranslate nohighlight">\(f:\mathbb{R}^n \rightarrow \mathbb{R}^m\)</span> is a function such that</p>
@@ -372,16 +387,52 @@
 <p>for all <span class="math notranslate nohighlight">\(u, v \in\mathbb{R}^n\)</span> and <span class="math notranslate nohighlight">\(a\in\mathbb{R}\)</span>.</p>
 <p>Then <span class="math notranslate nohighlight">\(f\)</span> is a <strong>linear transformation</strong>.</p>
 </div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>In mathematics, the words <strong>function</strong>, <strong>map</strong> and <strong>transformation</strong> can be used interchangeably. So ‘linear function’,
+‘linear map’ and ‘linear transformation’ all have the same meaning.</p>
+<p>In practice, we often prefer the word ‘transformation’ when we want to emphasise the geometrical nature of a function.</p>
+</div>
+<p>You can think of this definition as <em>the transformation of any linear combination of vectors is the same as the linear combination of the transformed vectors</em>.</p>
+<p>Rotation is an example of a linear transformation:</p>
+<ul class="simple">
+<li><p>We can add vectors <span class="math notranslate nohighlight">\(u\)</span> and <span class="math notranslate nohighlight">\(v\)</span> and then rotate, or we can rotate <span class="math notranslate nohighlight">\(u\)</span> and <span class="math notranslate nohighlight">\(v\)</span> and then add, as illustrated in <a class="reference internal" href="#linear-transformation"><span class="std std-numref">Fig. 18.1</span></a>.</p></li>
+<li><p>We can scale <span class="math notranslate nohighlight">\(u\)</span> and then rotate, or we can rotate <span class="math notranslate nohighlight">\(u\)</span> and then scale.</p></li>
+</ul>
+<div class="figure align-default" id="linear-transformation">
+<a class="reference internal image-reference" href="../../_images/linT.gif"><img alt="../../_images/linT.gif" src="../../_images/linT.gif" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 18.1 </span><span class="caption-text">The parallelogram rule for vector addition shows that <span class="math notranslate nohighlight">\(R_\theta(u + v) = R_\theta(u) + R_\theta(v)\)</span>.</span><a class="headerlink" href="#linear-transformation" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition-properties-of-linear-transformations admonition">
+<p class="admonition-title">Properties of Linear transformations</p>
+<p>If <span class="math notranslate nohighlight">\(T:\mathbb{R}^n \rightarrow \mathbb{R}^m\)</span> is a linear transformation, then</p>
+<div class="math notranslate nohighlight">
+\[T(0) = 0\]</div>
+<p>and for any vectors <span class="math notranslate nohighlight">\(v_1,\ldots,v_k \in \mathbb{R}^n\)</span> and scalars <span class="math notranslate nohighlight">\(a_1,\ldots a_k \in \mathbb{R}\)</span></p>
+<div class="math notranslate nohighlight">
+\[T(a_1v_1 + \cdots + a_kv_k) = a_1T(v_1) + \cdots + a_kT(v_k).\]</div>
+</div>
+<p>The first property <span class="math notranslate nohighlight">\(T(0)=0\)</span> follows from the second part of the definition of linearity. Note that here <span class="math notranslate nohighlight">\(0\)</span> represents a <em>vector</em> and we geometrically we can think of this as saying that a linear transformation takes the origin to the origin.</p>
 <div class="tip admonition">
-<p class="admonition-title">Examples</p>
-<p>[TODO]</p>
-<p>Examples of linear transformations</p>
-<p>Examples of non-linear transformations</p>
-<p>Geometric examples.</p>
+<p class="admonition-title">Example</p>
+<p><strong>1. A non-linear transformation</strong></p>
+<p>The transformation <span class="math notranslate nohighlight">\(T:\mathbb{R} \rightarrow \mathbb{R}\)</span> defined by <span class="math notranslate nohighlight">\(T(x) = x + 1\)</span> is <em>not</em> a linear transformation.</p>
+<p>We can easily prove this by showing that <span class="math notranslate nohighlight">\(T\)</span> fails to fix the origin:</p>
+<div class="math notranslate nohighlight">
+\[T(0) = 0 + 1 = 1 \neq 0.\]</div>
+<p>Therefore <span class="math notranslate nohighlight">\(T\)</span> is not a linear transformation, even though the graph of <span class="math notranslate nohighlight">\(T(x)\)</span> is a straight line.</p>
+<p><strong>2. A linear transformation</strong></p>
+<p>Suppose <span class="math notranslate nohighlight">\(U:\mathbb{R}^2 \rightarrow \mathbb{R}^2\)</span> be defined by <span class="math notranslate nohighlight">\(U(x) = 2x\)</span>.</p>
+<p><span class="math notranslate nohighlight">\(U\)</span> is a <strong>dilation</strong> which doubles the size of every vector. We show that this is a linear transformation by checking the definition. Let <span class="math notranslate nohighlight">\(u, v \in \mathbb{R}^2\)</span> and <span class="math notranslate nohighlight">\(a \in \mathbb{R}\)</span>. Then</p>
+<div class="math notranslate nohighlight">
+\[U(u + v) = 2(u+v) = 2u + 2v = T(u) + T(v)\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[U(au) = 2au=a2u = aT(u).\]</div>
 </div>
 </div>
 <div class="section" id="matrix-transformations">
-<h2>Matrix Transformations<a class="headerlink" href="#matrix-transformations" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">18.2. </span>Matrix Transformations<a class="headerlink" href="#matrix-transformations" title="Permalink to this headline">¶</a></h2>
 <p>Now let <span class="math notranslate nohighlight">\(A\)</span> be an <span class="math notranslate nohighlight">\((m \times n)\)</span> matrix. Then <span class="math notranslate nohighlight">\(A\)</span> defines a function</p>
 <div class="math notranslate nohighlight">
 \[T:\mathbb{R}^n\rightarrow\mathbb{R}^m\]</div>
@@ -408,7 +459,7 @@ T(au) = A(au) = aAu = aT(u).
 <p>There is essentially nothing new here, beyond the notation and a slightly different way of thinking about matrix multiplication. In the next section we will see how thinking of a matrix as a transformation allows us to picture its effect geometrically.</p>
 </div>
 <div class="section" id="geometrical-interpretation-of-matrices">
-<h2>Geometrical Interpretation of Matrices<a class="headerlink" href="#geometrical-interpretation-of-matrices" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">18.3. </span>Geometrical Interpretation of Matrices<a class="headerlink" href="#geometrical-interpretation-of-matrices" title="Permalink to this headline">¶</a></h2>
 <p>Consider the matrix</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}A = \begin{pmatrix}-1 &amp; 0\\0 &amp; 1\end{pmatrix}\end{split}\]</div>
@@ -441,11 +492,19 @@ T(au) = A(au) = aAu = aT(u).
 <div class="math notranslate nohighlight">
 \[\begin{split}A = \begin{pmatrix} \frac{1}{\sqrt{2}} &amp; -\frac{1}{\sqrt{2}}\\ \frac{1}{\sqrt{2}} &amp; \frac{1}{\sqrt{2}}\end{pmatrix}.\end{split}\]</div>
 <p><strong>Solution</strong></p>
-<p>TODO</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}Ae_1 &amp;= \begin{pmatrix}\frac{1}{\sqrt{2}} &amp; -\frac{1}{\sqrt{2}}\\\frac{1}{\sqrt{2}}&amp; \frac{1}{\sqrt{2}}\end{pmatrix}\begin{pmatrix}1\\0\end{pmatrix} = \begin{pmatrix}\frac{1}{\sqrt{2}} \\\frac{1}{\sqrt{2}}\end{pmatrix}\\
+Ae_2 &amp;= \begin{pmatrix}\frac{1}{\sqrt{2}} &amp; -\frac{1}{\sqrt{2}}\\\frac{1}{\sqrt{2}}&amp; \frac{1}{\sqrt{2}}\end{pmatrix}\begin{pmatrix}0\\1\end{pmatrix} = \begin{pmatrix}-\frac{1}{\sqrt{2}} \\\frac{1}{\sqrt{2}}\end{pmatrix}
+\end{align*}
+\end{split}\]</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/linear_transformations_6_0.png" src="../../_images/linear_transformations_6_0.png" />
+</div>
+<p><span class="math notranslate nohighlight">\(A\)</span> represent a rotation anticlockwise by <span class="math notranslate nohighlight">\(\pi/4\)</span>.</p>
 </div>
 </div>
-<div class="section" id="the-matrix-of-a-linear-transformations">
-<h2>The Matrix of a Linear Transformations<a class="headerlink" href="#the-matrix-of-a-linear-transformations" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-matrix-of-a-linear-transformation">
+<h2><span class="section-number">18.4. </span>The Matrix of a Linear Transformation<a class="headerlink" href="#the-matrix-of-a-linear-transformation" title="Permalink to this headline">¶</a></h2>
 <p>In this section will learn that <em>all</em> linear transformations are matrix transformations - in other words, any function <span class="math notranslate nohighlight">\(T\)</span> which satisfies the linearity properties can be written as a matrix <span class="math notranslate nohighlight">\(T(x) = Ax\)</span>. Before doing so, we need the following important notation.</p>
 <div class="admonition-definition admonition">
 <p class="admonition-title">Definition</p>
@@ -458,7 +517,7 @@ T(au) = A(au) = aAu = aT(u).
 <p>Suppose that an <span class="math notranslate nohighlight">\((m \times n)\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> is composed of the <span class="math notranslate nohighlight">\(n\)</span> column vectors <span class="math notranslate nohighlight">\(v_1, v_2, \ldots, v_n\)</span>. Then,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{pmatrix}| &amp; | &amp; &amp; | \\v_1 &amp; v_2 &amp; \cdots &amp; v_n\\| &amp; | &amp; &amp; |\end{pmatrix}e_i = v_i.\end{split}\]</div>
-<p>For exampl</p>
+<p>For example,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{pmatrix}1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \\ 7 &amp; 8 &amp; 9\end{pmatrix}\begin{pmatrix}1 \\ 0 \\ 0\end{pmatrix} =\begin{pmatrix}1 \\ 4 \\ 7\end{pmatrix}.\end{split}\]</div>
 <div class="admonition-theorem admonition">
@@ -487,7 +546,7 @@ T(e_2) = \begin{pmatrix}-1\\0\end{pmatrix}\end{split}\]</div>
 </div>
 </div>
 <div class="section" id="rotation-matrices-in-2d">
-<h2>Rotation matrices in 2D<a class="headerlink" href="#rotation-matrices-in-2d" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">18.5. </span>Rotation matrices in 2D<a class="headerlink" href="#rotation-matrices-in-2d" title="Permalink to this headline">¶</a></h2>
 <p>Suppose the linear transformation <span class="math notranslate nohighlight">\(T:\mathbb{R}^2 \rightarrow \mathbb{R}^2\)</span> corresponds to an anticlockwise rotation by an angle <span class="math notranslate nohighlight">\(\theta\)</span> around the origin. Then we can use trigonometry to determine the destination of the coordinate vectors under <span class="math notranslate nohighlight">\(T\)</span>:</p>
 <div class="cell_output docutils container">
 <img alt="../../_images/linear_transformations_5_0.png" src="../../_images/linear_transformations_5_0.png" />
@@ -503,11 +562,11 @@ T(e_2) = \begin{pmatrix}-\sin\theta\\\cos\theta\end{pmatrix}\end{split}\]</div>
 </div>
 </div>
 <div class="section" id="projection-matrix">
-<h2>Projection Matrix<a class="headerlink" href="#projection-matrix" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">18.6. </span>Projection Matrix<a class="headerlink" href="#projection-matrix" title="Permalink to this headline">¶</a></h2>
 <p>[TODO]</p>
 </div>
-<div class="section" id="sequence-of-transformations">
-<h2>Sequence of transformations<a class="headerlink" href="#sequence-of-transformations" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="composition-of-linear-transformations">
+<h2><span class="section-number">18.7. </span>Composition of Linear Transformations<a class="headerlink" href="#composition-of-linear-transformations" title="Permalink to this headline">¶</a></h2>
 <p>[TODO]</p>
 </div>
 </div>
@@ -536,7 +595,21 @@ T(e_2) = \begin{pmatrix}-\sin\theta\\\cos\theta\end{pmatrix}\end{split}\]</div>
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="matrices.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">17. </span>Matrices</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="inverse_determinant.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">19. </span>Inverse and Determinant</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             
         </div>

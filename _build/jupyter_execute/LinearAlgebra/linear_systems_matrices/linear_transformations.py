@@ -133,6 +133,41 @@ ax2.text(.2, -0.3, "$\cos\\theta$", fontsize=12)
 glue("la_fig_4", fig, display=False)
 
 
+# In[6]:
+
+
+fig, (ax1, ax2) = make_axes()
+
+plot_vector(ax1, 1, 0)
+add_text(ax1, 0.7, -0.4, "$e_1$")
+plot_vector(ax1, 0, 1)
+add_text(ax1, -0.5, 0.9, "$e_2$")
+
+theta = np.pi/4
+ct = np.cos(theta)
+st = np.sin(theta)
+
+plot_vector(ax2, ct, st)
+add_text(ax2, -.9, .9, "$T(e_2)$")
+plot_vector(ax2, -st, ct)
+add_text(ax2, 0.5, 0.9, "$T(e_1)$")
+
+
+ax2.plot([0, ct], [0, 0], lw=2, ls=":", color="black")
+ax2.plot([ct, ct], [0, st], lw=2, ls=":", color="black")
+
+ax2.plot([0, -st], [0, 0], lw=2, ls=":", color="black")
+ax2.plot([-st, -st], [0, ct], lw=2, ls=":", color="black")
+
+ax2.text(0.8, 0.3, "$\\frac{1}{\\sqrt{2}}$", fontsize=12)
+ax2.text(-1.1, 0.3, "$\\frac{1}{\\sqrt{2}}$", fontsize=12)
+
+ax2.text(-.5, -0.3, "$\\frac{1}{\\sqrt{2}}$", fontsize=12)
+ax2.text(.2, -0.3, "$\\frac{1}{\\sqrt{2}}$", fontsize=12)
+
+glue("la_fig_5", fig, display=False)
+
+
 # In[ ]:
 
 

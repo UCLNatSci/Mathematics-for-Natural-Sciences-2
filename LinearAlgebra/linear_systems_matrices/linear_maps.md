@@ -14,6 +14,12 @@ $$g(x, y) = x^2 + y^3$$
 
 is a function which maps 2-dimensional vectors $(x, y) \in \mathbb{R}^2$ to real numbers.
 
+Functions can also be defined geometrically. For example, the following are valid function definitions:
+
+$R_\theta:\mathbb{R}^2\rightarrow\mathbb{R}^2$ corresponding to a $\theta$ anticlockwise rotation around the origin.
+
+$U:\mathbb{R}^2\rightarrow\mathbb{R}^2$ corresponding to a translation by the vector $\begin{pmatrix}1\\-1\end{pmatrix}$.
+
 ```{admonition} Definition
 
 Suppose  $f:\mathbb{R}^n \rightarrow \mathbb{R}^m$ is a function such that
@@ -29,15 +35,65 @@ for all $u, v \in\mathbb{R}^n$ and $a\in\mathbb{R}$.
 Then $f$ is a **linear transformation**.
 ```
 
-```{admonition} Examples
+```{attention}
+In mathematics, the words **function**, **map** and **transformation** can be used interchangeably. So 'linear function',
+'linear map' and 'linear transformation' all have the same meaning.
+
+In practice, we often prefer the word 'transformation' when we want to emphasise the geometrical nature of a function.
+```
+
+You can think of this definition as *the transformation of any linear combination of vectors is the same as the linear combination of the transformed vectors*.
+
+Rotation is an example of a linear transformation:
+
+- We can add vectors $u$ and $v$ and then rotate, or we can rotate $u$ and $v$ and then add, as illustrated in {numref}`linear_transformation`.
+- We can scale $u$ and then rotate, or we can rotate $u$ and then scale.
+
+```{figure} linT.gif
+---
+height: 300px
+name: linear_transformation
+---
+The parallelogram rule for vector addition shows that $R_\theta(u + v) = R_\theta(u) + R_\theta(v)$.
+```
+
+```{admonition} Properties of Linear transformations
+
+If $T:\mathbb{R}^n \rightarrow \mathbb{R}^m$ is a linear transformation, then
+
+$$T(0) = 0$$
+
+and for any vectors $v_1,\ldots,v_k \in \mathbb{R}^n$ and scalars $a_1,\ldots a_k \in \mathbb{R}$
+
+$$T(a_1v_1 + \cdots + a_kv_k) = a_1T(v_1) + \cdots + a_kT(v_k).$$
+```
+
+The first property $T(0)=0$ follows from the second part of the definition of linearity. Note that here $0$ represents a *vector* and we geometrically we can think of this as saying that a linear transformation takes the origin to the origin.
+
+```{admonition} Example
 :class: tip
-[TODO]
 
-Examples of linear transformations
+**1\. A non-linear transformation**
 
-Examples of non-linear transformations
+The transformation $T:\mathbb{R} \rightarrow \mathbb{R}$ defined by $T(x) = x + 1$ is *not* a linear transformation.
 
-Geometric examples.
+We can easily prove this by showing that $T$ fails to fix the origin:
+
+$$T(0) = 0 + 1 = 1 \neq 0.$$
+
+Therefore $T$ is not a linear transformation, even though the graph of $T(x)$ is a straight line.
+
+**2\. A linear transformation**
+
+Suppose $U:\mathbb{R}^2 \rightarrow \mathbb{R}^2$ be defined by $U(x) = 2x$.
+
+$U$ is a **dilation** which doubles the size of every vector. We show that this is a linear transformation by checking the definition. Let $u, v \in \mathbb{R}^2$ and $a \in \mathbb{R}$. Then
+
+$$U(u + v) = 2(u+v) = 2u + 2v = T(u) + T(v)$$
+
+and
+
+$$U(au) = 2au=a2u = aT(u).$$
 ```
 
 ## Matrix Transformations
@@ -72,7 +128,6 @@ T(au) = A(au) = aAu = aT(u).
 $$
 
 There is essentially nothing new here, beyond the notation and a slightly different way of thinking about matrix multiplication. In the next section we will see how thinking of a matrix as a transformation allows us to picture its effect geometrically.
-
 
 ## Geometrical Interpretation of Matrices
 
@@ -110,7 +165,7 @@ For example, the vector $e_1 + e_2$ is transformed to $T(e_1) + T(e_2)$ so we ca
 ```{glue:} la_fig_2
 ```
 
-```{admonition} Example
+:::{admonition} Example
 :class: tip
 Determine the geometrical effect of the transformation given by the matrix
 
@@ -118,11 +173,18 @@ $$A = \begin{pmatrix} \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}}\\ \frac{1}{\sqrt{
 
 **Solution**
 
-TODO
+$$\begin{align*}Ae_1 &= \begin{pmatrix}\frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}}\\\frac{1}{\sqrt{2}}& \frac{1}{\sqrt{2}}\end{pmatrix}\begin{pmatrix}1\\0\end{pmatrix} = \begin{pmatrix}\frac{1}{\sqrt{2}} \\\frac{1}{\sqrt{2}}\end{pmatrix}\\
+Ae_2 &= \begin{pmatrix}\frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}}\\\frac{1}{\sqrt{2}}& \frac{1}{\sqrt{2}}\end{pmatrix}\begin{pmatrix}0\\1\end{pmatrix} = \begin{pmatrix}-\frac{1}{\sqrt{2}} \\\frac{1}{\sqrt{2}}\end{pmatrix}
+\end{align*}
+$$
 
+```{glue:} la_fig_5
 ```
 
-## The Matrix of a Linear Transformations
+$A$ represent a rotation anticlockwise by $\pi/4$.
+:::
+
+## The Matrix of a Linear Transformation
 
 In this section will learn that *all* linear transformations are matrix transformations - in other words, any function $T$ which satisfies the linearity properties can be written as a matrix $T(x) = Ax$. Before doing so, we need the following important notation.
 
@@ -140,7 +202,7 @@ Suppose that an $(m \times n)$ matrix $A$ is composed of the $n$ column vectors 
 
 $$\begin{pmatrix}| & | & & | \\v_1 & v_2 & \cdots & v_n\\| & | & & |\end{pmatrix}e_i = v_i.$$
 
-For exampl
+For example,
 
 $$\begin{pmatrix}1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9\end{pmatrix}\begin{pmatrix}1 \\ 0 \\ 0\end{pmatrix} =\begin{pmatrix}1 \\ 4 \\ 7\end{pmatrix}.$$
 
@@ -199,6 +261,6 @@ $$A = \begin{pmatrix}\cos\theta & -\sin\theta\\\sin\theta & \cos\theta\end{pmatr
 
 [TODO]
 
-## Sequence of transformations
+## Composition of Linear Transformations
 
 [TODO]
