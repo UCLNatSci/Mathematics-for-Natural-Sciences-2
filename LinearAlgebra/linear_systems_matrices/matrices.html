@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>17. Matrices &#8212; Mathematics for Natural Sciences 2</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/_static/mystyle.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -43,9 +43,9 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -57,10 +57,7 @@
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="prev" title="16. Linear Systems of Equations" href="echelon_form.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
+    <meta name="docsearch:language" content="en" />
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -111,23 +108,23 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../VectorCalculus/lineintegrals.html">
-   3. Line Integrals
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/vectoralgebra.html">
-   4. Vectors and Vector Algebra
+   3. Vectors and Vector Algebra
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/calculusonfields.html">
-   5. Vector Fields
+   4. Vector Fields
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/divandcurl.html">
-   6. Variations of Fields
+   5. Variations of Fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../VectorCalculus/lineintegrals.html">
+   6. Line Integrals
   </a>
  </li>
  <li class="toctree-l1">
@@ -226,7 +223,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -244,7 +241,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+        <div class="d-none d-md-block col-md-2 bd-toc show">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -331,100 +328,10 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Matrices</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#matrix-definitions">
-   17.1. Matrix Definitions
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#notation">
-     17.1.1. Notation
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#terminology">
-     17.1.2. Terminology
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#matrix-algebra">
-   17.2. Matrix algebra
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#multiplication-by-a-scalar">
-     17.2.1. Multiplication by a scalar
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#addition">
-     17.2.2. Addition
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#matrix-multiplication">
-     17.2.3. Matrix multiplication
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#properties-of-matrix-multiplication">
-     17.2.4. Properties of Matrix Multiplication
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#matrix-equations">
-   17.3. Matrix equations
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#solving-ax-0">
-     17.3.1. Solving
-     <span class="math notranslate nohighlight">
-      \(Ax = 0\)
-     </span>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#solving-ax-b">
-     17.3.2. Solving
-     <span class="math notranslate nohighlight">
-      \(Ax = b\)
-     </span>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#solutions">
-   17.4. Solutions
-  </a>
- </li>
-</ul>
-
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
+        
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="matrices">
+  <div class="section" id="matrices">
 <h1><span class="section-number">17. </span>Matrices<a class="headerlink" href="#matrices" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="matrix-definitions">
 <h2><span class="section-number">17.1. </span>Matrix Definitions<a class="headerlink" href="#matrix-definitions" title="Permalink to this headline">¶</a></h2>
@@ -450,8 +357,8 @@
 <span class="eqno">(17.1)<a class="headerlink" href="#equation-square-matrix" title="Permalink to this equation">¶</a></span>\[\begin{split}\left( \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right) \qquad \left[ \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right]\end{split}\]</div>
 <p>It is important that you do not use commas to separate the elements, which is incorrect notation.</p>
 <p>Either square or round brackets can be used to denote a matrix - but you should avoid mixing notation. Other types of brackets cannot be used, so none of the expressions below are matrices. In fact, the third expression has a special meaning, as we will see later.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-37513528-5c27-4a8e-8124-d56ea71c2df3">
-<span class="eqno">(17.2)<a class="headerlink" href="#equation-37513528-5c27-4a8e-8124-d56ea71c2df3" title="Permalink to this equation">¶</a></span>\[\begin{align}\begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \qquad \left\{ \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right\} \qquad \left| \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right|	\end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-33389987-ad20-4cd9-a3fb-ea794648d9d6">
+<span class="eqno">(17.2)<a class="headerlink" href="#equation-33389987-ad20-4cd9-a3fb-ea794648d9d6" title="Permalink to this equation">¶</a></span>\[\begin{align}\begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \qquad \left\{ \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right\} \qquad \left| \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right|	\end{align}\]</div>
 </div>
 <div class="section" id="terminology">
 <h3><span class="section-number">17.1.2. </span>Terminology<a class="headerlink" href="#terminology" title="Permalink to this headline">¶</a></h3>
@@ -523,7 +430,7 @@
 <div class="section" id="matrix-multiplication">
 <h3><span class="section-number">17.2.3. </span>Matrix multiplication<a class="headerlink" href="#matrix-multiplication" title="Permalink to this headline">¶</a></h3>
 <p>To multiply two matrices together, their inner dimensions must be the same. That is, to calculate <span class="math notranslate nohighlight">\( \boldsymbol{A}\boldsymbol{B} \)</span>, the number of columns in <span class="math notranslate nohighlight">\(\boldsymbol{A}\)</span> must be the same as the number of rows in <span class="math notranslate nohighlight">\(\boldsymbol{B}\)</span>. The order of the product matrix is given by the outer dimensions of the two matrices. We can represent this result visually:</p>
-<p><img alt="Two matrices A,B can be multiplied if their inner dimensions agree. The dimensions of the result is given by the outer dimensions of AB" src="../../_images/MatrixDimensions.png" /></p>
+<p><img alt="Two matrices A,B can be multiplied if their inner dimensions agree. The dimensions of the result is given by the outer dimensions of AB" src="LinearAlgebra/linear_systems_matrices/MatrixDimensions.png" /></p>
 <div class="admonition-matrix-multiplication admonition">
 <p class="admonition-title">Matrix Multiplication</p>
 <p>Given a <span class="math notranslate nohighlight">\((p × r)\)</span> matrix <span class="math notranslate nohighlight">\(\boldsymbol{A}\)</span> and a <span class="math notranslate nohighlight">\((r × q)\)</span> matrix <span class="math notranslate nohighlight">\(\boldsymbol{B}\)</span>, the matrix product <span class="math notranslate nohighlight">\(\boldsymbol{A\,B}\)</span> defines a <span class="math notranslate nohighlight">\((p × q)\)</span> matrix, whose elements are given by</p>
@@ -531,7 +438,7 @@
 \[ \left(A B\right)_{i,j} = \sum_k  A_{i,k} B_{k,j} \]</div>
 </div>
 <p>To perform matrix multiplication, we must take elements in a row on the left hand side matrix and multiply with elements in a column on the right hand side matrix. The process is illustrate graphically here for a (2 x 2 ) example:</p>
-<p><img alt="The (i,j)th element in the product AB is given by the product sum of row i from matrix A with column j of matrix B" src="../../_images/MatrixMultiplicationExpanded.png" /></p>
+<p><img alt="The (i,j)th element in the product AB is given by the product sum of row i from matrix A with column j of matrix B" src="LinearAlgebra/linear_systems_matrices/MatrixMultiplicationExpanded.png" /></p>
 <div class="exercise admonition" id="q_matrix_multiplication">
 
 <p class="admonition-title"><span class="caption-number">Exercise 17.3 </span></p>
@@ -550,7 +457,7 @@
 <div class="admonition-example-walk-lengths admonition">
 <p class="admonition-title">Example: Walk Lengths</p>
 <p>Consider the connected graph below, in which the vertices have been numbered 1-4:</p>
-<p><img alt="A graph with 4 connected vertices" src="../../_images/network1.png" /></p>
+<p><img alt="A graph with 4 connected vertices" src="LinearAlgebra/linear_systems_matrices/network1.png" /></p>
 <p>The graph can be represented by an adjacency matrix <span class="math notranslate nohighlight">\(A\)</span> in which element <span class="math notranslate nohighlight">\(A_{i,j}\)</span> is either 1 or 0 identifying if  vertex <span class="math notranslate nohighlight">\(i\)</span> is or is not connected to vertex <span class="math notranslate nohighlight">\(j\)</span>. For this graph we have:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}A=\left(\begin{array}{cccc}0 &amp; 1 &amp; 1 &amp; 0 \\1 &amp; 0 &amp; 1 &amp; 1 \\1 &amp; 1 &amp; 0 &amp; 1 \\0 &amp; 1 &amp; 1 &amp; 0 \\\end{array}\right)\end{split}\]</div>
@@ -892,35 +799,45 @@ BA &amp;= \begin{pmatrix}2 &amp; 3\\-3 &amp;0\\1&amp;1\end{pmatrix}\begin{pmatri
 
               </div>
               
+        
             
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="echelon_form.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">16. </span>Linear Systems of Equations</p>
-        </div>
-    </a>
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="echelon_form.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title"><span class="section-number">16. </span>Linear Systems of Equations</p>
+            </div>
+        </a>
+    </div>
+
 </div>
-            
+        
         </div>
     </div>
     <footer class="footer">
-  <p>
-    
-      By Natural Sciences<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
+    <div class="container">
+      <p>
+        
+          By Natural Sciences<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
+  
   </body>
 </html>
