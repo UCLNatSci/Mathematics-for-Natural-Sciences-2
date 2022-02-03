@@ -113,22 +113,32 @@ x(x-6) &=& 2a - 5
 Since the RHS is clearly odd by construction, this means the LHS is odd.  Given that ODD $\times$ ODD = ODD, then given $x$ and $x-6$ differ by an even numbers, $x$ must be an odd number. <b>QED</b> 
 
 
-### Number theory types of construction
+### Number Theory Types of Construction
 Sometimes instead of directly proving a proposition, we can construct facts about the proposition which the lead to the answer.  This is often employed 
 when we have to prove some facts about numbers, for example lets try to prove that:
 ```{math}
-a^5 = 10m + a,\, {a,\,n} \in \mathbb{Z}
+a^5 = 10m + a,\quad {a,\,m,} \in \mathbb{Z}
 ```
-We could argue that this can be proved by induction, with proposition $P_a: a^5 = 10m + a$ thus if we work out $(a+1)^5$:
+We could argue that this can be proved by induction, with proposition 
+```{math}
+P_a: a^5 = 10m + a,\, a,\,m \in \mathbb{Z}
+```
+and given the starting cases: 
+```{math}
+1^5 &=&\, 1 = 10(0) + 1 \\
+2^5 &=&\, 32 = 10(3) + 2 \\
+3^5 &=&\, 243 = 10(24) + 3
+```
+which works and therefore to shown the proposition true, we need to work out $(a+1)^5$:
 ```{math}
 (a+1)^5 &=&\, a^5 + 5a^4 + 10a^3 + 10a^2 + 5a + 1 \\
 &=&\, 10m + a + 10a^3 + 10a^2 + 5a^4 + 5a + 1 \\
 &=&\, 10(m + a^2 + a^4) + 5a(1 + a^3) + a + 1 
 ```
-and we can then argue that $\forall \,a \in \mathbb{Z},\, a(a^3+1)$ is an EVEN number (if $a$ is ODD then $a^3+1$ is EVEN and so $a(a^3+1)$ is EVEN 
-and likewise if $a$ is EVEN, $a(a^3+1)$ is EVEN), hence we have:
+and we can then argue that $\forall \,a \in \mathbb{Z},\, a(a^3+1)$ is an EVEN number - if $a$ is ODD then $a^3+1$ is EVEN and so $a(a^3+1)$ is EVEN 
+and likewise if $a$ is EVEN, $a(a^3+1)$ is EVEN, hence we have:
 ```{math}
-(a+1)^5 = 10m' + a + 1
+(a+1)^5 = 10m' + a + 1,\quad a,\,m' \in \mathbb{Z}
 ```
 which is $P_a\Bigg|_{a \rightarrow a+1}$ and hence proven.  
 
