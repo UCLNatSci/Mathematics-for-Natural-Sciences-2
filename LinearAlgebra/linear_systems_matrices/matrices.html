@@ -55,6 +55,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="18. Linear Transformations" href="linear_maps.html" />
     <link rel="prev" title="16. Linear Systems of Equations" href="echelon_form.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -108,23 +109,23 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../../VectorCalculus/lineintegrals.html">
+   3. Line Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/vectoralgebra.html">
-   3. Vectors and Vector Algebra
+   4. Vectors and Vector Algebra
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/calculusonfields.html">
-   4. Vector Fields
+   5. Vector Fields
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/divandcurl.html">
-   5. Variations of Fields
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../VectorCalculus/lineintegrals.html">
-   6. Line Integrals
+   6. Variations of Fields
   </a>
  </li>
  <li class="toctree-l1">
@@ -175,6 +176,16 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    17. Matrices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="linear_maps.html">
+   18. Linear Transformations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="inverse_determinant.html">
+   19. Inverse and Determinant
   </a>
  </li>
 </ul>
@@ -357,8 +368,8 @@
 <span class="eqno">(17.1)<a class="headerlink" href="#equation-square-matrix" title="Permalink to this equation">¶</a></span>\[\begin{split}\left( \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right) \qquad \left[ \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right]\end{split}\]</div>
 <p>It is important that you do not use commas to separate the elements, which is incorrect notation.</p>
 <p>Either square or round brackets can be used to denote a matrix - but you should avoid mixing notation. Other types of brackets cannot be used, so none of the expressions below are matrices. In fact, the third expression has a special meaning, as we will see later.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-44081057-c657-4864-9b06-5fad800ed728">
-<span class="eqno">(17.2)<a class="headerlink" href="#equation-44081057-c657-4864-9b06-5fad800ed728" title="Permalink to this equation">¶</a></span>\[\begin{align}\begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \qquad \left\{ \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right\} \qquad \left| \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right|	\end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-73b5df92-53fe-4608-80cf-97fc598fe73b">
+<span class="eqno">(17.2)<a class="headerlink" href="#equation-73b5df92-53fe-4608-80cf-97fc598fe73b" title="Permalink to this equation">¶</a></span>\[\begin{align}\begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \qquad \left\{ \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right\} \qquad \left| \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right|	\end{align}\]</div>
 </div>
 <div class="section" id="terminology">
 <h3><span class="section-number">17.1.2. </span>Terminology<a class="headerlink" href="#terminology" title="Permalink to this headline">¶</a></h3>
@@ -430,7 +441,7 @@
 <div class="section" id="matrix-multiplication">
 <h3><span class="section-number">17.2.3. </span>Matrix multiplication<a class="headerlink" href="#matrix-multiplication" title="Permalink to this headline">¶</a></h3>
 <p>To multiply two matrices together, their inner dimensions must be the same. That is, to calculate <span class="math notranslate nohighlight">\( \boldsymbol{A}\boldsymbol{B} \)</span>, the number of columns in <span class="math notranslate nohighlight">\(\boldsymbol{A}\)</span> must be the same as the number of rows in <span class="math notranslate nohighlight">\(\boldsymbol{B}\)</span>. The order of the product matrix is given by the outer dimensions of the two matrices. We can represent this result visually:</p>
-<p><img alt="Two matrices A,B can be multiplied if their inner dimensions agree. The dimensions of the result is given by the outer dimensions of AB" src="LinearAlgebra/linear_systems_matrices/MatrixDimensions.png" /></p>
+<p><img alt="Two matrices A,B can be multiplied if their inner dimensions agree. The dimensions of the result is given by the outer dimensions of AB" src="../../_images/MatrixDimensions.png" /></p>
 <div class="admonition-matrix-multiplication admonition">
 <p class="admonition-title">Matrix Multiplication</p>
 <p>Given a <span class="math notranslate nohighlight">\((p × r)\)</span> matrix <span class="math notranslate nohighlight">\(\boldsymbol{A}\)</span> and a <span class="math notranslate nohighlight">\((r × q)\)</span> matrix <span class="math notranslate nohighlight">\(\boldsymbol{B}\)</span>, the matrix product <span class="math notranslate nohighlight">\(\boldsymbol{A\,B}\)</span> defines a <span class="math notranslate nohighlight">\((p × q)\)</span> matrix, whose elements are given by</p>
@@ -438,7 +449,7 @@
 \[ \left(A B\right)_{i,j} = \sum_k  A_{i,k} B_{k,j} \]</div>
 </div>
 <p>To perform matrix multiplication, we must take elements in a row on the left hand side matrix and multiply with elements in a column on the right hand side matrix. The process is illustrate graphically here for a (2 x 2 ) example:</p>
-<p><img alt="The (i,j)th element in the product AB is given by the product sum of row i from matrix A with column j of matrix B" src="LinearAlgebra/linear_systems_matrices/MatrixMultiplicationExpanded.png" /></p>
+<p><img alt="The (i,j)th element in the product AB is given by the product sum of row i from matrix A with column j of matrix B" src="../../_images/MatrixMultiplicationExpanded.png" /></p>
 <div class="exercise admonition" id="q_matrix_multiplication">
 
 <p class="admonition-title"><span class="caption-number">Exercise 17.3 </span></p>
@@ -457,7 +468,7 @@
 <div class="admonition-example-walk-lengths admonition">
 <p class="admonition-title">Example: Walk Lengths</p>
 <p>Consider the connected graph below, in which the vertices have been numbered 1-4:</p>
-<p><img alt="A graph with 4 connected vertices" src="LinearAlgebra/linear_systems_matrices/network1.png" /></p>
+<p><img alt="A graph with 4 connected vertices" src="../../_images/network1.png" /></p>
 <p>The graph can be represented by an adjacency matrix <span class="math notranslate nohighlight">\(A\)</span> in which element <span class="math notranslate nohighlight">\(A_{i,j}\)</span> is either 1 or 0 identifying if  vertex <span class="math notranslate nohighlight">\(i\)</span> is or is not connected to vertex <span class="math notranslate nohighlight">\(j\)</span>. For this graph we have:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}A=\left(\begin{array}{cccc}0 &amp; 1 &amp; 1 &amp; 0 \\1 &amp; 0 &amp; 1 &amp; 1 \\1 &amp; 1 &amp; 0 &amp; 1 \\0 &amp; 1 &amp; 1 &amp; 0 \\\end{array}\right)\end{split}\]</div>
@@ -815,6 +826,15 @@ BA &amp;= \begin{pmatrix}2 &amp; 3\\-3 &amp;0\\1&amp;1\end{pmatrix}\begin{pmatri
             </div>
         </a>
     </div>
+     <div id="next">
+        <a class="right-next" href="linear_maps.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title"><span class="section-number">18. </span>Linear Transformations</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
 
 </div>
         

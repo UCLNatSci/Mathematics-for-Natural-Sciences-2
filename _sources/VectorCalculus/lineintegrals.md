@@ -48,12 +48,9 @@ I = \int_C {\bf G}(r) \cdot \mathrm{d}{\bf r} = \int_a^b {\bf G}({\bf r}(t)) \cd
 ```
 
 ### Examples of Line Integrals
-As an example lets consider the vector field:
-```{math}
-{\bf G(r)} = \begin{pmatrix} xy\\ -y^2 \end{pmatrix}
-```
-and look at the line integral over the points $(0,\, 0) \rightarrow (1,2)$ across different paths.  Lets pick the parameter $t$ to be the 
-$x$ coordinate, so that the path if determined by $y = f(x), \, x \in [a,\, b]$ such that:
+As an example lets consider the vector field ${\bf G(r)} = \begin{pmatrix} xy\\ -y^2 \end{pmatrix}$ and look at the line integral over the points 
+$(0,\, 0) \rightarrow (1,2)$ across different paths.  Lets pick the parameter $t$ to be the $x$ coordinate, so that the path if determined by 
+$y = f(x), \, x \in [a,\, b]$ such that:
 
 ```{math}
 {\bf r}(x) = \begin{pmatrix} x \\ f(x) \end{pmatrix}
@@ -147,63 +144,12 @@ I &=&\, \int_C {\bf G}(r) \cdot \mathrm{d}{\bf r} = \int_0^1 {\bf G}({\bf r}(t))
 
 There is an important class of vector fields, known as <b>conservative vector fields</b>, for which line integrals do not depend on 
 which path is taken from rA to rB, and for which all loop integrals are zero.  We see that our example 
-```{math}
-{\bf G(r)} = xy\hat{\bf x} - y^2 \hat{\bf y}
-```
-is not conservative since the line integrals along different paths from $(0,\, 0)$ to $(1,\,2)$ gave different values.  
+${\bf G(r)} = xy\hat{\bf x} - y^2 \hat{\bf y}$ is not conservative since the line integrals along different paths from $(0,\, 0)$ to $(1,\,2)$ 
+gave different values.  
 
 Whist it is not possible show that for all paths ${\bf r}_A \rightarrow {\bf r}_B$. the line integral gives the same value, simply because there exist
 infinitely many possible paths. Instead we can use an equivalent definition of conservative fields:
 
 ```{math}
-\text{Vector Field}\,{\bf G(r)}\,\text{is conservative} \Longleftrightarrow \exists\, \text{Scalar Field}\,\phi({\bf r}),\, 
-\text{s.t.}\,{\bf G} = \nabla \phi
+
 ```
-
-To show that a vector field which satisfies this condition is conservative, lets think about a line integral taken along a path 
-${\bf r}_A \rightarrow {\bf r}_B$, which we have parameterised by the $t \in [a,\, b]$, where ${\bf}(t=a) = {\bf r}_A$ and ${\bf}(t=b) = {\bf r}_B$
-```{math}
-I &=&\, \int_C {\bf G(r)}\cdot \mathrm{d}{\bf r} = \int_{t=a}^{t=b} {\bf G(r)}\cdot {\bf r}'(t) \mathrm{d}t\\
-&=&\, \int_{t=a}^{t=b} (\nabla \phi({\bf r}(t)))\cdot {\bf r}'(t) \mathrm{d}t
-```
-However using the fact that the total differential $\mathrm{d}\phi = \nabla \phi \cdot \mathrm{d}{\bf r}$, 
-then $\mathrm{d}\phi/\mathrm{d}t = \nabla \phi \cdot \mathrm{d}{\bf r}'$ and thus:
-```{math}
-I &=&\, \int_{t=a}^{t=b} \frac{\mathrm{d}}{\mathrm{d}t}\phi({\bf r}(t)) \mathrm{d}t  \\
-&=&\, \Bigg[ \phi({\bf r}(t)) \Bigg]_{t=a}^{t=b} = \phi({\bf r_B}) - \phi({\bf r_A})
-```
-which means that the details of the line integral only depend on the start and finish of the contour, not the path taken.  Likewise if we have a 
-conservative vector field and a closed loop integral, then ${\bf r_A} = \bf{r_B}$ and so the integral becomes zero.
-
-For a three dimensional vector field defined on a domain that is <em>simply connected</em> (that is contains no holes) there exists another 
-equivalent definition of conservativeness:
-```{math}
-\text{Vector Field}\,{\bf G(r)}\,\text{is conservative} \Longleftrightarrow \nabla \times {\bf G} = 0
-```
-
-An example, is the vector ${\bf G(r)} = 2xy \hat{\bf x} + (x^2 - 2y)\hat{\bf y} + \hat{\bf z}$ is conservative?
-
-Since G is defined on the entire three-dimensional space $\mathbb{R}^3$, we can make use the curl criterion, hence
-```{math}
-\nabla \times {\bf G} &=&\,
-\begin{pmatrix} \partial_y G_z - \partial_z G_y \\ \partial_z G_x - \partial_x G_y \\ \partial_y G_x - \partial_x G_y\end{pmatrix}\\
-&=&\, \begin{pmatrix} 0 - 0 \\ 0 - 0 \\ 2x - 2x\end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix}
-```
-Hence since the curl of $\bf G$ is zero, $\bf G$ is a conservative vector field, so it must be possible to find a potential $\phi({\bf r})$ such 
-that ${\bf G} = \nabla \phi$.  This means that:
-
-- $\partial_x \phi = 2xy$
-- $\partial_x \phi = x^2-2y$
-- $\partial_x \phi = 1$
-
-Integrating each of these in turn we find that:
-
-- $\phi = x^2y + f(y,\,z)$
-- $\phi = x^2y - y^2 + g(x,\,z)$
-- $\phi = z + h(z,\,y)$
-
-Since these all need to be consistent, we find that 
-```{math}
-\phi(x,\,y,\,z) = x^2y - y^2 + z + C
-```
-up to an additive constant $C \in \mathbb{C}$.  We notice that for the line integral this constant drops out of the calculation anyway.
