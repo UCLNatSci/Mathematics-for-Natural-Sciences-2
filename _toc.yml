@@ -8,14 +8,14 @@ options:
 chapters:
 - file: VectorCalculus/partialdifferentiation
 - file: VectorCalculus/integrationprelim
-- file: VectorCalculus/lineintegrals
 - file: VectorCalculus/vectoralgebra
 - file: VectorCalculus/calculusonfields
 - file: VectorCalculus/divandcurl
+- file: VectorCalculus/lineintegrals
 - file: VectorCalculus/coordinatesystems
 - file: VectorCalculus/surfaceintegrals
-- file: VectorCalculus/volumeintegrals
-- file: VectorCalculus/vectorcalctheorems
+#- file: VectorCalculus/volumeintegrals
+#- file: VectorCalculus/vectorcalctheorems
 
 - file: ProofLogic/setsnotation
 - file: ProofLogic/functions
@@ -25,8 +25,8 @@ chapters:
 
 - file: LinearAlgebra/linear_systems_matrices/echelon_form.md
 - file: LinearAlgebra/linear_systems_matrices/matrices.md
-- file: LinearAlgebra/linear_systems_matrices/linear_maps.md
-- file: LinearAlgebra/linear_systems_matrices/inverse_determinant.md
+#- file: LinearAlgebra/linear_systems_matrices/linear_maps.md
+#- file: LinearAlgebra/linear_systems_matrices/inverse_determinant.md
 #- file: LinearAlgebra/eigenvectors/notes.md
 #- file: LinearAlgebra/linear_systems_matrices/diagonalisation.md
 
