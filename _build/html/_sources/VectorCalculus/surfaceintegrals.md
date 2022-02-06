@@ -39,8 +39,10 @@ to $S$) will be summed over in the integral.
 
 ## Calculating Surface Integrals
 
-Similar to line integrals, we must parameterise the surface $S$ in order for this integral to be possible, so we will pick $S = S({\bf r})$ with ${\bf r} = {\bf r}(s,\, t)$ with $s \in[s_{min,\, s_{max}],\, t \in [t_{min,\, t_{max}]$.  
-This means that if we move from 2D parametrisation to a surface parameterisation, we can find infinitesimal changes $\mathrm{d}s,\, \mathrm{d}t$ that make up the $\mathrm{d}S$ on the surface.  We can then 
+Similar to line integrals, we must parameterise the surface $S$ in order for this integral to be possible, so we will pick 
+$S = S({\bf r})$ with ${\bf r} = {\bf r}(s,\, t)$ with $s \in[s_{min},\, s_{max}],\, t \in [t_{min},\, t_{max}]$.  
+This means that if we move from 2D parametrisation to a surface parameterisation, we can find infinitesimal changes 
+$\mathrm{d}s,\, \mathrm{d}t$ that make up the $\mathrm{d}S$ on the surface.  We can then 
 define vectors $\bf u,\, v$ which live on the surface:
 ```{math}
 \mathrm{d}{\bf u} &=&\,\frac{\partial {\bf r}}{\partial s}\,\mathrm{d}s \\
