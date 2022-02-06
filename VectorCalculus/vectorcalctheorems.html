@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>11. Vector Calculus Theorems &#8212; Mathematics for Natural Sciences 2</title>
+    <title>9. Vector Calculus Theorems &#8212; Mathematics for Natural Sciences 2</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -43,7 +43,9 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -53,13 +55,10 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="12. Set Theory" href="../ProofLogic/setsnotation.html" />
-    <link rel="prev" title="9. Area Integrals" href="volumeintegrals.html" />
+    <link rel="next" title="10. Set Theory" href="../ProofLogic/setsnotation.html" />
+    <link rel="prev" title="8. Surface Integrals" href="surfaceintegrals.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
+    <meta name="docsearch:language" content="en" />
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -139,54 +138,49 @@
    8. Surface Integrals
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="volumeintegrals.html">
-   9. Area Integrals
-  </a>
- </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   11. Vector Calculus Theorems
+   9. Vector Calculus Theorems
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/setsnotation.html">
-   12. Set Theory
+   10. Set Theory
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/functions.html">
-   13. Functions
+   11. Functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/propositionallogic.html">
-   14. Propositional Logic
+   12. Propositional Logic
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/methodsofproof.html">
-   15. Techniques of Proof
+   13. Techniques of Proof
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/echelon_form.html">
-   16. Linear Systems of Equations
+   14. Linear Systems of Equations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/matrices.html">
-   17. Matrices
+   15. Matrices
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/linear_maps.html">
-   18. Linear Transformations
+   16. Linear Transformations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/inverse_determinant.html">
-   19. Inverse and Determinant
+   17. Inverse and Determinant
   </a>
  </li>
 </ul>
@@ -235,7 +229,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -253,7 +247,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+        <div class="d-none d-md-block col-md-2 bd-toc show">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -262,13 +256,15 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#gauss-divergence-theorem">
-   11.1. (Gauss-)Divergence Theorem
+   9.1. (Gauss-)Divergence Theorem
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#kelvin-stokes-theorem">
-   11.2. (Kelvin-)Stoke’s Theorem
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#divergence-theorem-example">
+     9.1.1. Divergence Theorem Example
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -278,44 +274,61 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Vector Calculus Theorems</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#gauss-divergence-theorem">
-   11.1. (Gauss-)Divergence Theorem
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#kelvin-stokes-theorem">
-   11.2. (Kelvin-)Stoke’s Theorem
-  </a>
- </li>
-</ul>
-
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
+        
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="vector-calculus-theorems">
-<h1><span class="section-number">11. </span>Vector Calculus Theorems<a class="headerlink" href="#vector-calculus-theorems" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="vector-calculus-theorems">
+<h1><span class="section-number">9. </span>Vector Calculus Theorems<a class="headerlink" href="#vector-calculus-theorems" title="Permalink to this headline">¶</a></h1>
+<p>Although the ideas in vector calculus seem quite distinct, area, surface and volume integrals as well as the gradient, divergence and curl, it turns out
+that they are connected together thanks to a couple of quite important theorems.  These can in some cases simplify a calculation that we are aiming to
+do and/or give us a better intution about a system.</p>
 <div class="section" id="gauss-divergence-theorem">
-<h2><span class="section-number">11.1. </span>(Gauss-)Divergence Theorem<a class="headerlink" href="#gauss-divergence-theorem" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.1. </span>(Gauss-)Divergence Theorem<a class="headerlink" href="#gauss-divergence-theorem" title="Permalink to this headline">¶</a></h2>
+<p>Lets think about a closed surface <span class="math notranslate nohighlight">\(S\)</span> in a space, this surface area therefore encloses a volume <span class="math notranslate nohighlight">\(V\)</span>, i.e. it forms the boundary <span class="math notranslate nohighlight">\(S = \partial V\)</span> (not
+to be confused with taking some partial derivative!), as depicated in <a class="reference internal" href="#gaussdivergence"><span class="std std-numref">Fig. 9.1</span></a>.</p>
+<div class="figure align-default" id="gaussdivergence">
+<img alt="../_images/gaussdivergence.png" src="../_images/gaussdivergence.png" />
+<p class="caption"><span class="caption-number">Fig. 9.1 </span><span class="caption-text">Vectorial surface-area element <span class="math notranslate nohighlight">\(\mathrm{d}{\bf S}\)</span> of a closed surface <span class="math notranslate nohighlight">\(S = \partial V\)</span>, with the convention that
+<span class="math notranslate nohighlight">\(\mathrm{d}{\bf S} = \hat{\bf b} \mathrm{D}S\)</span> points outwards.</span><a class="headerlink" href="#gaussdivergence" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="kelvin-stokes-theorem">
-<h2><span class="section-number">11.2. </span>(Kelvin-)Stoke’s Theorem<a class="headerlink" href="#kelvin-stokes-theorem" title="Permalink to this headline">¶</a></h2>
+<p>Thinking about a vector field <span class="math notranslate nohighlight">\({\bf G}({\bf r})\)</span> through the closed surface <span class="math notranslate nohighlight">\(S\)</span>, one thing we can do is count the flux from the surface intregral:</p>
+<div class="math notranslate nohighlight">
+\[\int_S {\bf G}({\bf r})\cdot \mathrm{d}{\bf S}\]</div>
+<p>We can see that if the field is uniform, say <span class="math notranslate nohighlight">\(\nabla \cdot {\bf G} = 0\)</span>, then this net flux will zero (all incoming vectors = all out going vectors),
+however if there is a divergence in the enclosed volume <span class="math notranslate nohighlight">\(\nabla \cdot {\bf G} \neq 0\)</span>, then there would be a net flux through the surface (with the sign of the flux being related to the sign ofthe divergence).<br />
+This result gives us the <b>Divergence Theorem</b>:</p>
+<div class="math notranslate nohighlight">
+\[\int_S {\bf G}({\bf r})\cdot \mathrm{d}{\bf S} = \int_V \left(\nabla \cdot G\right)\,\mathrm{d}V\]</div>
+<div class="section" id="divergence-theorem-example">
+<h3><span class="section-number">9.1.1. </span>Divergence Theorem Example<a class="headerlink" href="#divergence-theorem-example" title="Permalink to this headline">¶</a></h3>
+<p>Lets start with an example, for the vector field:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}{\bf G}({\bf r}) = \begin{pmatrix} x^2 \\ y \\ z \end{pmatrix}\end{split}\]</div>
+<p>over a cubic volume, centered on the origin, with corners <span class="math notranslate nohighlight">\((\pm 1,\, \pm 1,\, \pm 1)\)</span>, as depicted in <a class="reference internal" href="#divergencecube"><span class="std std-numref">Fig. 9.2</span></a></p>
+<div class="figure align-default" id="divergencecube">
+<img alt="../_images/divergencecube.png" src="../_images/divergencecube.png" />
+<p class="caption"><span class="caption-number">Fig. 9.2 </span><span class="caption-text">An example cubic surface around some vector field divergence.</span><a class="headerlink" href="#divergencecube" title="Permalink to this image">¶</a></p>
+</div>
+<p>If we compute the surface integral:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}I = \int_{S = \partial V} {\bf G}({\bf r})\cdot \mathrm{d}{\bf S} &amp;=&amp; 
+\int_{-1}^1 \,\mathrm{d}y\,\int_{-1}^1\,\mathrm{d}z \,\begin{pmatrix} 1 \\ y \\ z \end{pmatrix} \cdot \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix} 
+ + \int_{-1}^1 \,\mathrm{d}y\,\int_{-1}^1\,\mathrm{d}z \,\begin{pmatrix} 1 \\ y \\ z \end{pmatrix} \cdot \begin{pmatrix} - \\ 0\\ 0 \end{pmatrix}  \\ 
+&amp;+&amp; 
+\int_{-1}^1 \,\mathrm{d}x\,\int_{-1}^1\,\mathrm{d}z \,\begin{pmatrix} x^2 \\ 1 \\ z \end{pmatrix} \cdot \begin{pmatrix} x^2 \\ 1 \\ 0 \end{pmatrix} 
+ + \int_{-1}^1 \,\mathrm{d}y\,\int_{-1}^1\,\mathrm{d}z \,\begin{pmatrix} x^2 \\ -1 \\ z \end{pmatrix} \cdot \begin{pmatrix} x^2 \\ -1 \\ 0 \end{pmatrix}  \\ 
+ &amp;+&amp; 
+ \int_{-1}^1 \,\mathrm{d}x\,\int_{-1}^1\,\mathrm{d}y \,\begin{pmatrix} x^2 \\ y \\ 1 \end{pmatrix} \cdot \begin{pmatrix} x^2 \\ y \\ 1 \end{pmatrix} 
+ + \int_{-1}^1 \,\mathrm{d}x\,\int_{-1}^1\,\mathrm{d}y \,\begin{pmatrix} x^2 \\ y \\ -1 \end{pmatrix} \cdot \begin{pmatrix} x^2 \\ y \\ -1 \end{pmatrix}  \\ 
+ &amp;=&amp; 
+ 2 \int_{-1}^1 \,\mathrm{d}x\,\int_{-1}^1\,\mathrm{d}z + \int_{-1}^1 \,\mathrm{d}x\,\int_{-1}^1\,\mathrm{d}y  = 16\end{split}\]</div>
+<p>A little long! However using the Gauss’s ivergnece theorem:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\nabla \cdot {\bf G} &amp;=&amp; 2x + 2\\ 
+I &amp; &amp;\int_{V} (\nabla \cdot {\bf G})\,\mathrm{d}V = \int_{-1}^1\,\mathrm{d}x\, \int_{-1}^1\,\mathrm{d}y\, \int_{-1}^1\,\mathrm{d}z (2x + 2)\\
+&amp;=&amp; 4\int_{-1}^1\,(2x+2)\,\mathrm{d}x = 4\Bigg[x^2 + 2x\Bigg]_{-1}^1 = 16\end{split}\]</div>
+<p>In agreement with the previous result and whole lot easier to do!</p>
+</div>
 </div>
 </div>
 
@@ -341,42 +354,54 @@
 
               </div>
               
+        
             
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="volumeintegrals.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">9. </span>Area Integrals</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="../ProofLogic/setsnotation.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">12. </span>Set Theory</p>
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="surfaceintegrals.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title"><span class="section-number">8. </span>Surface Integrals</p>
+            </div>
+        </a>
     </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+     <div id="next">
+        <a class="right-next" href="../ProofLogic/setsnotation.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title"><span class="section-number">10. </span>Set Theory</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
 </div>
-            
+        
         </div>
     </div>
     <footer class="footer">
-  <p>
-    
-      By Natural Sciences<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
+    <div class="container">
+      <p>
+        
+          By Natural Sciences<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
+  
   </body>
 </html>
