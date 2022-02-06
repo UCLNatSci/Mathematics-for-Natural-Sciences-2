@@ -55,7 +55,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="9. Area Integrals" href="volumeintegrals.html" />
+    <link rel="next" title="9. Vector Calculus Theorems" href="vectorcalctheorems.html" />
     <link rel="prev" title="7. Coordinate Systems" href="coordinatesystems.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -139,53 +139,48 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="volumeintegrals.html">
-   9. Area Integrals
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="vectorcalctheorems.html">
-   11. Vector Calculus Theorems
+   9. Vector Calculus Theorems
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/setsnotation.html">
-   12. Set Theory
+   10. Set Theory
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/functions.html">
-   13. Functions
+   11. Functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/propositionallogic.html">
-   14. Propositional Logic
+   12. Propositional Logic
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/methodsofproof.html">
-   15. Techniques of Proof
+   13. Techniques of Proof
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/echelon_form.html">
-   16. Linear Systems of Equations
+   14. Linear Systems of Equations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/matrices.html">
-   17. Matrices
+   15. Matrices
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/linear_maps.html">
-   18. Linear Transformations
+   16. Linear Transformations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/inverse_determinant.html">
-   19. Inverse and Determinant
+   17. Inverse and Determinant
   </a>
  </li>
 </ul>
@@ -362,12 +357,12 @@ Thus the surface has a coordinate vector of the form:</p>
 \[\mathrm{d}{S} = \left(\sqrt{\left(\frac{\partial z}{\partial x}\right)^2 + \left(\frac{\partial z}{\partial y}\right)^2 + 1}\right)\,\mathrm{d}x\,\mathrm{d}y\]</div>
 <p>Lets see this for <span class="math notranslate nohighlight">\(x^2 + y^2 + z^2 = 9\)</span>, thus <span class="math notranslate nohighlight">\(z = \sqrt{9 - x^2 - y^2}\)</span>, lets consider the surface area over the range <span class="math notranslate nohighlight">\(x \in [0,\,3],\, y \in [0,\, 3]\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\int \int \mathrm{d}S &amp;=&amp;\, \int_0^3\,\mathrm{d}x\,\int_0^3\,\mathrm{d}y\,\left(\sqrt{\left(\frac{\partial z}{\partial x}\right)^2 + \left(\frac{\partial z}{\partial y}\right)^2 + 1}\right) \\
+\[\begin{split}\iint \mathrm{d}S &amp;=&amp;\, \int_0^3\,\mathrm{d}x\,\int_0^3\,\mathrm{d}y\,\left(\sqrt{\left(\frac{\partial z}{\partial x}\right)^2 + \left(\frac{\partial z}{\partial y}\right)^2 + 1}\right) \\
 &amp;=&amp; \, \int_0^3\,\mathrm{d}x\,\int_0^3\,\mathrm{d}y\,\left(\sqrt{ 1 + \frac{x}{\sqrt{9 - x^2 - y^2}} + \frac{y}{\sqrt{9 - x^2 - y^2}} }\right) \\
 &amp;=&amp; \, \int_0^3\,\mathrm{d}x\,\int_0^3\,\mathrm{d}y\,\frac{3}{\sqrt{9 - x^2 - y^2}}\end{split}\]</div>
 <p>If we use a change of variable, <span class="math notranslate nohighlight">\(x = \sqrt{9-y^2}\sin(\varphi) \Rightarrow \mathrm{d}x = \sqrt{9-y^2}\cos(\varphi)\,\mathrm{d}\varphi\)</span> and therefore we have:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\int \int \mathrm{d}S &amp;=&amp;\, \int_0^{\pi/2}\,\mathrm{d}\varphi \int_0^3 \,\mathrm{d}y \\
+\[\begin{split}\iint \mathrm{d}S &amp;=&amp;\, \int_0^{\pi/2}\,\mathrm{d}\varphi \int_0^3 \,\mathrm{d}y \\
 &amp;=&amp;\, \frac{9\pi}{2}\end{split}\]</div>
 <p>which corresponds to <span class="math notranslate nohighlight">\(\frac{1}{8}\)</span> of the full sphere’s surface area <span class="math notranslate nohighlight">\(36\pi\)</span>, as expected.</p>
 </div>
@@ -413,10 +408,10 @@ Thus the surface has a coordinate vector of the form:</p>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="volumeintegrals.html" title="next page">
+        <a class="right-next" href="vectorcalctheorems.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">9. </span>Area Integrals</p>
+                <p class="prevnext-title"><span class="section-number">9. </span>Vector Calculus Theorems</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

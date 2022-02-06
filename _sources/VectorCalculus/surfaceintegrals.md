@@ -113,13 +113,13 @@ $I = \int f\,\mathrm{d}S$, with:
 
 Lets see this for $x^2 + y^2 + z^2 = 9$, thus $z = \sqrt{9 - x^2 - y^2}$, lets consider the surface area over the range $x \in [0,\,3],\, y \in [0,\, 3]$:
 ```{math}
-\int \int \mathrm{d}S &=&\, \int_0^3\,\mathrm{d}x\,\int_0^3\,\mathrm{d}y\,\left(\sqrt{\left(\frac{\partial z}{\partial x}\right)^2 + \left(\frac{\partial z}{\partial y}\right)^2 + 1}\right) \\
+\iint \mathrm{d}S &=&\, \int_0^3\,\mathrm{d}x\,\int_0^3\,\mathrm{d}y\,\left(\sqrt{\left(\frac{\partial z}{\partial x}\right)^2 + \left(\frac{\partial z}{\partial y}\right)^2 + 1}\right) \\
 &=& \, \int_0^3\,\mathrm{d}x\,\int_0^3\,\mathrm{d}y\,\left(\sqrt{ 1 + \frac{x}{\sqrt{9 - x^2 - y^2}} + \frac{y}{\sqrt{9 - x^2 - y^2}} }\right) \\
 &=& \, \int_0^3\,\mathrm{d}x\,\int_0^3\,\mathrm{d}y\,\frac{3}{\sqrt{9 - x^2 - y^2}}
 ```
 If we use a change of variable, $x = \sqrt{9-y^2}\sin(\varphi) \Rightarrow \mathrm{d}x = \sqrt{9-y^2}\cos(\varphi)\,\mathrm{d}\varphi$ and therefore we have:
 ```{math}
-\int \int \mathrm{d}S &=&\, \int_0^{\pi/2}\,\mathrm{d}\varphi \int_0^3 \,\mathrm{d}y \\
+\iint \mathrm{d}S &=&\, \int_0^{\pi/2}\,\mathrm{d}\varphi \int_0^3 \,\mathrm{d}y \\
 &=&\, \frac{9\pi}{2}
 ```
 which corresponds to $\frac{1}{8}$ of the full sphere's surface area $36\pi$, as expected.
