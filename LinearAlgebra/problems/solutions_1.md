@@ -30,12 +30,12 @@ r_3 - r_1 & \longrightarrow & (r_3)
 \end{pmatrix}\\
 \begin{array}{ccr}
  & & (r_1)\\
- r_2 - 2r_3 & \longrightarrow & (r_2)\\
+ r_2 - r_3 & \longrightarrow & (r_2)\\
  & & (r_3)
 \end{array}
 &
 \begin{pmatrix}
-1 & 0 & -3 & 0 & -3 & 1\\
+1 & 0 & -1 & 0 & -3 & 1\\
 0 & 1 & 2 & 0 & -1 & 0\\
 0 & 0 & 0 & 1 & 1 & 0
 \end{pmatrix}
@@ -46,7 +46,7 @@ Write the pivot variables in terms of the free variables to find the general sol
 
 $$
 \begin{align*}
-x_1 &= 3x_3 + 5x_5 + 1\\
+x_1 &= x_3 + 3x_5 + 1\\
 x_2 &= -2x_3 + x_5\\
 x_4 &= -x_5
 \end{align*}
@@ -70,7 +70,7 @@ This is the equation of a plane in $\mathbb{R}^5$ parallel to $\begin{pmatrix}1\
 
 1\.
 
- $A$: $\begin{pmatrix}1 & 2 & 0 & 0 & 0\\0 & 0 & 1 & 2 & 3\\0 & 0 & 0 & 0 &\end{pmatrix}$. $x_2, x_4$ and $x_5$ are free variables.
+ $A$: $\begin{pmatrix}1 & 2 & 0 & 0 & 0\\0 & 0 & 1 & 2 & 3\\0 & 0 & 0 & 0 &0\end{pmatrix}$. $x_2, x_4$ and $x_5$ are free variables.
 
  $B$: $\begin{pmatrix}1 & 0 & -1 \\0 & 1 & 1\\0 & 0 & 0 &\end{pmatrix}$. $x_3$ is a free variable.
 
@@ -104,7 +104,8 @@ $B$: $t\begin{pmatrix}1\\-1\\1\end{pmatrix}, t \in \mathbb{R}$.
 
 1\. For the system of 4 nodes, this gives us four equations:
 
-$$\begin{align*}y_3&=y_1+y_4\\y_1&=y_2+y_5\\y_2&=y_3+y_6\\y_4+y_5+y_6&=0\end{align*}.$$
+$$\begin{align*}
+y_3&=y_1+y_4\\y_1&=y_2+y_5\\y_2&=y_3+y_6\\y_4+y_5+y_6&=0\end{align*}.$$
 
 2\. Written in augmented matrix form, the system is:
 
@@ -283,7 +284,7 @@ $$
 \begin{align*}
 a + 3c &= a + 2b\\
 b + 3d &= 3a + 4b\\
-2a + 4d &= c + 2d\\
+2a + 4c &= c + 2d\\
 2b + 4d &= 3c + 4d
 \end{align*}
 $$
@@ -347,3 +348,45 @@ $$C = \begin{pmatrix}0 & 0 \\ 1 & 0\end{pmatrix}.$$
 
 
 ## Question 6
+
+1\.
+
+$$\begin{align*}
+E_1M &= \begin{pmatrix}1 & 0 & 0\\2 & 1 &0\\0 & 0 & 1\end{pmatrix}\begin{pmatrix}1 & 0 & 2\\-2 & 0 & -3\\
+0 & 2 & 0\end{pmatrix}\\
+&= \begin{pmatrix}1 & 0 & 2\\0 & 0 & 1\\0 & 2 & 0\end{pmatrix}
+\end{align*}$$
+
+2\.
+
+$$\begin{align*}E_2 &= \begin{pmatrix}1 & 0 & 0 \\0 & 0 & 1\\ 0 & 1 & 0\end{pmatrix}.\\
+E_2(E_1M) &=\begin{pmatrix}1 & 0 & 0 \\0 & 0 & 1\\ 0 & 1 & 0\end{pmatrix}\begin{pmatrix}1 & 0 & 2\\0 & 0 & 1\\0 & 2 & 0\end{pmatrix}\\
+&=\begin{pmatrix}1 & 0 & 2\\0 & 2 & 0\\0 & 0 & 1\end{pmatrix}.
+\end{align*}$$
+
+3\.
+
+Next two elementary row operations are $r_2 \rightarrow \frac{1}{2}r_2$:
+
+$$E_3 = \begin{pmatrix}1 & 0 & 0 \\0 & \frac{1}{2} & 0\\ 0 & 0 & 1\end{pmatrix}$$
+
+and $r_1 \rightarrow r_1 - 2r_3$:
+
+$$E_4 = \begin{pmatrix}1 & 0 & -2 \\0 & 1 & 0\\ 0 & 0 & 1\end{pmatrix}.$$
+
+4\.
+
+$$\begin{align*}A &= E_4E_3E_2E_1\\
+&= \begin{pmatrix}1 & 0 & -2 \\0 & 1 & 0\\ 0 & 0 & 1\end{pmatrix}\begin{pmatrix}1 & 0 & 0 \\0 & \frac{1}{2} & 0\\ 0 & 0 & 1\end{pmatrix}\begin{pmatrix}1 & 0 & 0 \\0 & 0 & 1\\ 0 & 1 & 0\end{pmatrix}\begin{pmatrix}1 & 0 & 0\\2 & 1 &0\\0 & 0 & 1\end{pmatrix}\\
+&=\begin{pmatrix}-3 & -2 & 0 \\0 & 0 & \frac{1}{2}\\ 2 & 1 & 0\end{pmatrix}.
+\end{align*}$$
+
+Because of associativity of matrix multiplication, we know that $E_4(E_3(E_2(E_1M))) = (E_4(E_3(E_2(E_1))))M$. In fact we can bracket the multiplication any way we wish, and arrive at the same value of the matrix $A$.
+
+5\. Left multiplication by the matrix $A$ has the effect of performing the four elementary row operations.
+
+$$\begin{align*}
+AMx &= Ab\\
+\begin{pmatrix}1 & 0 & 0\\ 0 & 1 & 0\\ 0 & 0 & 1\end{pmatrix}x &= \begin{pmatrix}-3 & -2 & 0 \\0 & 0 & \frac{1}{2}\\ 2 & 1 & 0\end{pmatrix}\begin{pmatrix}4\\2\\-1\end{pmatrix}\\
+x &= \begin{pmatrix}-16\\-\frac{1}{2}\\10\end{pmatrix} .
+\end{align*}$$

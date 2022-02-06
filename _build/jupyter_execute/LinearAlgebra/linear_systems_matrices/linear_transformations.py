@@ -168,6 +168,50 @@ ax2.text(.2, -0.3, "$\\frac{1}{\\sqrt{2}}$", fontsize=12)
 glue("la_fig_5", fig, display=False)
 
 
+# In[7]:
+
+
+def make_3_axes():
+    
+    fig, axes = plt.subplots(1, 3, figsize=(10,2.7))
+    fig.subplots_adjust(wspace=0.5)
+    fig.text(0.36, 0.5, "$A$", fontsize=20, ha="center")
+    fig.text(0.36, 0.4, "$\longrightarrow$", fontsize=30, ha="center")
+    
+    fig.text(0.65, 0.5, "$A^{-1}$", fontsize=20, ha="center")
+    fig.text(0.65, 0.4, "$\longrightarrow$", fontsize=30, ha="center")
+    for ax in axes:
+        ax.set_xlim(-2, 2)
+        ax.set_ylim(-2, 2)
+        ax.set_xticks([-2, -1, 0, 1, 2])
+        ax.set_yticks([-2, -1, 0, 1, 2])
+        ax.grid()
+        ax.set_axisbelow(True)
+    
+    return fig, axes
+
+
+# In[8]:
+
+
+fig, (ax1, ax2, ax3) = make_3_axes()
+
+plot_vector(ax1, 1, 0)
+add_text(ax1, 0.7, -0.5, "$e_1$")
+plot_vector(ax1, 0, 1)
+add_text(ax1, -0.6, 0.9, "$e_2$")
+plot_vector(ax2, -1, 0)
+add_text(ax2, -1, -0.5, "$Ae_2$")
+plot_vector(ax2,0, 1)
+add_text(ax2, 0.1, 0.8, "$Ae_1$")
+plot_vector(ax3, 1, 0)
+add_text(ax3, 0.3, -0.5, "$A^{-1}Ae_1$")
+plot_vector(ax3,0, 1)
+add_text(ax3, -1.8, 0.8, "$A^{-1}Ae_2$")
+
+glue("la_fig_6", fig, display=False)
+
+
 # In[ ]:
 
 

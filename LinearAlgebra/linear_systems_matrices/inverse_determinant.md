@@ -1,68 +1,75 @@
 # Inverse and Determinant
 
-### Transpose Property
+## Inverse Functions
 
-The following result is true in general (provided that $A$ and $B$ can be multiplied). Have a go at proving it for the case where $A$ and $B$ are both (2x2) matrices.
-a general proof using element notation, is given below.
+The inverse of a function $f$ is a function which 'undoes' the action of $f$. In other words if $g$ is an inverse of $f$ then $g(f(x)) = x$ for all values of $x$ in the domain of $f$ and $f(g(y)) = y$ for all values of $y$ in the domain of $g$.
 
-$$(A B)^T=B^T A^T $$
+If $g$ is the inverse of $f$ then we write $g = f^{-1}$.
 
-**Proof**
+```{figure} inverse.png
+---
+height: 300px
+name: inverse
+---
+The inverse of a function $f$ is the function $f^{-1}$ for which $f^{-1}(f(x)) = x$ and $f(f^{-1}(y)) = y$.
+```
 
-$$(A B)^T{}_{i,j}=(A B)_{j,i}=\sum _k A_{j,k} B_{k,i}=\sum _k A^T{}_{k,j} B^T{}_{i,k}=\sum _k B^T{}_{i,k} A^T{}_{k,j} =(B^T A^T{})_{i,j}$$
+```{exercise}
+:label: q_inverse_functions
 
-### The identity matrix
+For each of the functions below, state whether it has an inverse and if so write it down.
 
-The identity matrix In is the unique $(n \times n)$ matrix which has the property
+1. $f:\mathbb{R} \rightarrow \mathbb{R}$, $f(x) = x^2$.
+2. $g:\mathbb{R}^+ \rightarrow \mathbb{R}^+$, $g(x) = x^2$, where $\mathbb{R}^+$ is the set of positive real numbers.
+3. $h:\mathbb{R}^2 \rightarrow \mathbb{R}$, $h(x, y) = x + y$.
 
-$$\boldsymbol{I}_n \boldsymbol{A} = \boldsymbol{A} \boldsymbol{I}_n = \boldsymbol{A } $$
+```
 
-where $\boldsymbol{A}$ is also a $(n \times n)$ matrix. Thus, the identity matrix plays the same role in matrix multiplication as the number 1 does for multiplication of real numbers. It is possible to extend the definition to include the concept of a ‘left-identity’ and a ‘right-identity’ for matrices that are non-square, but it will not be necessary for our purposes.
+## Matrix Inverses
 
-It should be clear that the identity matrix needs to be the same dimensions as $\boldsymbol{A}$:
+Since a matrix represents a linear transformation, which is a function, we can consider if a matrix has an inverse. For example, consider the $(2 \times 2)$ matrix $R_{\pi/2}$ which represents a $\pi/2$ anticlockwise rotation about the origin:
 
-$$ \begin{matrix} \boldsymbol{I} & \boldsymbol{A} &=& \boldsymbol{A} & \boldsymbol{I}\\ (? ×?) & (n × n) && (n × n) & (? ×?) \end{matrix} $$
+$$R_{\pi/2} = \begin{pmatrix}0 & -1 \\1 & 0\end{pmatrix}.$$
 
-We usually drop the subscript $n$ when working with the identity matrix, because the order can be inferred.
-(q_matrix_identity)=
-### Questions
+Its inverse is a $\pi/2$ *clockwise* rotation about the origin, represented by the following matrix:
 
-1. What matrix satisfies the definition for $\boldsymbol{I}_2$?
-2. What matrix satisfies the definition for $\boldsymbol{I}_3$?
-3. Can you factorise $AB+\lambda B$ where $\lambda$ is a scalar and $A,B$ are square matrices?
+$$R_{3\pi/2} = \begin{pmatrix}0 & 1 \\-1 & 0\end{pmatrix}.$$
 
+In general, if $A$ is an $n \times n$ matrix and $B$ is its inverse, then $B$ is also an $(n \times n)$ matrix which satisfies
 
-### Linking matrix multiplication and Gaussian elimination
+$$ABx = x$$
 
-The row-reduction operations that were introduced in the section on Gaussian elimination can be implemented by matrix multiplication. The illustration here matches the example that was given in {ref}`gaussian-elimination` for the augmented coefficient matrix:
+for all $x \in \mathbb{R}^n$.
 
-\begin{equation}A = \left(\begin{array}{ccc|c}1&1&2&2\\2&3&-4&1\\-1&1&1&3\end{array}\right).\end{equation}
+In other words, $AB$ is a matrix which leaves $x$ unchanged. The only matrix which leaves $x$ unchanged is the identity matrix $I$, and so we have the following definition of the inverse matrix.
 
-In the first step we used the row operations $r_2-2r_1\longrightarrow r_2$,   $r_3+r_1\longrightarrow r_3$, and in the second step we used the row operation $r_3-2r_2\longrightarrow r_3$. These are equivalent to the following row operation matrices:
+```{admonition} Definition
 
-$$L_1 = \left(\begin{array}{ccc}1&0&0\\-2&1&0\\1&0&1\end{array}\right), \quad  L_2=\left(\begin{array}{ccc}1 & 0 & 0 \\0 & 1 & 0 \\0 & -2 & 1 \\\end{array}\right) $$
+Let $A$ be an $(n \times n)$ square matrix. If there is an $(n \times n)$ matrix $B$ such that
 
-The composition of these two matrices puts the coefficient matrix into the upper triangular form previously obtained:
+$$AB = BA = I_n$$
 
-\begin{equation}L_2 L_1 A = \left(\begin{array}{ccc}1 & 0 & 0 \\0 & 1 & 0 \\0 & -2 & 1 \\\end{array}\right)\left(\begin{array}{ccc|c}1 & 1 & 2 & 2 \\0 & 1 & -8 & -3 \\0 & 2 & 3 & 5 \\\end{array}\right)=\left(\begin{array}{ccc|c}1 & 1 & 2 & 2 \\0 & 1 & -8 & -3 \\0 & 0 & 19 & 11 \\\end{array}\right).\end{equation}
+then $A$ is **invertible** and $B$ is the **inverse** of A.
 
-The additional operations that were carried out to fully row-reduce the matrix can be captured in the following row-reduction matrices:
+We write $B = A^{-1}$.
+```
 
-\begin{equation}P=\left(\begin{array}{ccc}1 & 0 & 0 \\0 & 1 & 0 \\0 & 0 & \frac{1}{19} \\\end{array}\right), \quad U_1=\left(\begin{array}{ccc}1 & 0 & -2 \\0 & 1 & 8 \\0 & 0 & 1 \\\end{array}\right), \quad U_2 = \left(\begin{array}{ccc}1 & 0 & -2 \\0 & 1 & 8 \\0 & 0 & 1 \\\end{array}\right)\end{equation}
+```{glue:figure} la_fig_6
+:figwidth: 600px
+:name: "inverse_transformation"
 
-You may verify the result:
+If the matrix $A = R_{\pi/2}$ is a $\pi/2$ anticlockwise rotation about the origin then its inverse $A^{-1} = R_{3\pi/2}$ is a $\pi/2$ clockwise rotation about the origin. The matrix $A^{-1}A = I$ represents the identity transformation.
+```
 
-$$U_2 U_1 P L_2 L_1 A =\left(\begin{array}{ccc|c}1 & 0 & 0 & -\frac{15}{19} \\0 & 1 & 0 & \frac{31}{19} \\0 & 0 & 1 & \frac{11}{19} \\\end{array}\right)$$
+```{exercise}
+:label: q_matrix_inverse_1
 
-It is also possible to combine the row reduction operations into a single multiplication matrix:
+1. Show that $R_{3\pi/2}$ is the inverse of $R_{\pi/2}$.
+2. What is the inverse of the matrix $R_{\theta}$ representing an anticlockwise rotation about the origin by $\theta$? Calculate $R_{\theta}R_{\theta}^{-1}$ and show that it equals the identity matrix.
+3. Given that $C X D = E$, write down the solution for $X$ explicitly in terms of inverse matrices $C^{-1}$ and $D^{-1}$.
+```
 
-\begin{equation}U_2 U_1 P L_2 L_1 = \frac{1}{19}\left(\begin{array}{ccc}7 & 1 & -10 \\2 & 3 & 8 \\5 & -2 & 1 \\\end{array}\right)\end{equation}.
-
-Later, we will come to think of this as the inverse of the coefficient matrix.
-
-## The (2x2) inverse
-
-### Concept and definition
+## Solving Matrix Equations
 
 Suppose that we are given the definitions below and asked to compute the result for $B$ :
 
@@ -71,19 +78,6 @@ $$A=\left(\begin{array}{cc}1 & 2 \\2 & 1 \end{array}\right), \quad A B=\left(\be
 If this was ordinary scalar algebra, then $B$ would be given by $\frac{AB}{A}$, but we have not defined the concept of division for matrices. Indeed, we should recognise a difficulty in doing so, since matrix multiplication is not commutative. The problems $Q X = P$ and $X Q=P$ do not generally have the same solution, and so the expression $X=\frac{P}{Q}$ would be ambiguous.
 
 The difficulty could be addressed by introducing separate concepts of "left-division" and "right-division", and some authors have done exactly this. However, a more fundamental approach is to abandon the idea of division for matrices altogether, and consider what it means for matrix multiplication to be invertible.
-
-The inverse of an operation should somehow take us back to where we started. Specifically, we require that the inverse matrix $A^{-1}$ satisfies the definition given below. We restrict the definition to the inverse of a square matrix, because the inverse of a non-square matrix is generally not well defined.
-
-```{admonition} The Inverse Matrix
-
-For a given $(n\times n)$ matrix $A$, the inverse matrix $A^{-1}$ is the $(n\times n)$ matrix which satisfies the result
-
-$$A A^{-1} = A^{-1}A=I$$
-
-where $I$ is the identity matrix.
-
-Thus, if we multiply a result by matrix $A$ then to get back to where we started we can multiply by $A^{-1}$
-```
 
 To illustrate the use of the inverse matrix, we multiply each side of the equation for $A B$ in {eq}`a_ab` by $A^{-1}$ as follows:
 
@@ -101,22 +95,14 @@ Thus, the result for $B$ can be determined by performing a matrix multiplication
 
 ```{admonition} Solving $AX=B$ and $XA=B$
 
-In general, we can show that:
+Let $A$ be an invertible $(n \times n)$ square matrix and $B$ an ($n \times m)$ matrix. Then
 
 $A X = B$ has solution $X=A^{-1}B $
 
-$X A = B$ has solution $X=B A^{-1}$
-
-(provided that the inverse exists and can be determined).
-
-These two results are broadly equivalent to the definitions of left and right division that are used by some authors.
+$X A = B$ has solution $X=B A^{-1}$.
 ```
-(q_matrix_inverse)=
-### Questions
 
-Given that $C X D = E$, write down the solution for $X$ explicitly in terms of inverse matrices $C^{-1}$ and $D^{-1}$.
-
-### Calculating the (2x2) inverse
+## Calculating the (2x2) inverse
 
 The (2x2) matrix that satisfies the definition $A A^{-1} = A^{-1}A=I$ is outlined in the box below. In section 3.6 we will examine how the result may be derived from first principles, but for now you may simply verify the claim by checking the result of the products $A A^{-1}$ and $A^{-1}A$.
 
@@ -136,49 +122,72 @@ $$\mathrm{adj}(A)=\left(\begin{array}{cc}a_{22} & -a_{12} \\-a_{21} & a_{11} \en
 
 Note that $\text{det}(A)$ is a scalar quantity.
 
-$\text{det}(A)$ s referred to as the determinant of $A$. For a (2x2) matrix, the determinant is given by subtracting the product of the anti-diagonal elements from the product of the leading diagonal elements.  
+$\text{det}(A)$ s referred to as the **determinant** of $A$. For a (2x2) matrix, the determinant is given by subtracting the product of the anti-diagonal elements from the product of the leading diagonal elements.  
 
-$\text{adj}(A)$ is known as the adjugate matrix. For a (2x2) matrix, the adjugate is given by swapping the diagonal elements and multiplying the anti-diagonal elements by -1.
+$\text{adj}(A)$ is known as the **adjugate matrix**. For a (2x2) matrix, the adjugate is given by swapping the diagonal elements and multiplying the anti-diagonal elements by -1.
 
 Notice the special notation $|A|$ that is used to denote the determinant of $A$.
 ```
-(q_twobytwo_inverse)=
-### Questions
+
+```{exercise}
+:label: q_twobytwo_inverse
 
 1\. 	Calculate the determinant of the matrix $M=\left(\begin{array}{cc}2 & -1 \\3 & 4 \end{array}\right)$.
 
-2\. 	Write the equations below in the form $A\mathbf{x}=\mathbf{b}$:
+2\. 	Write the equations below in the form $Ax=b$:
 \begin{align*}
 2x-3y&=1\\
 3x-2y&=2
 \end{align*}
 
-Calculate the coefficient matrix $A$ and hence obtain the solution for $\mathbf{x}$
+Calculate the coefficient matrix $A$ and hence obtain the solution for $x$
 
 3\.	Solve the problem given in {eq}`a_ab` to find B.
 
-### What it means if $det(A)=0$
+```
+
+## What it means if $\det(A)=0$
 
 The value of the determinant can be used to infer whether a given linear system has a unique solution. If the determinant is zero then the matrix $A$ is not **invertible** and the problem will not have a unique solution.
-
 
 To illustrate, we will consider two examples of a system of two equations in two unknowns:
 
 $$\begin{array}{c}2 x-3 y&=1 \\9 y-6 x&=3 \end{array}$$ (inconsistent_1)
 $$\begin{array}{c}2 x-3 y&=1 \\9 y-6 x&=-3 \end{array}$$ (inconsistent_2)
 
-Both sets of equations can be written in the form $A \mathbf{x} =\mathbf{b}$, where $A=\left(\begin{array}{cc}2 & -3 \\-6 & 9 \end{array}\right)$. In that case, $\det(A)=18-18=0$, which means that the inverse matrix cannot be calculated and the problems do not have a unique solution for $\underline{x}$.
+Both sets of equations can be written in the form $Ax=b$, where $A=\left(\begin{array}{cc}2 & -3 \\-6 & 9 \end{array}\right)$. In that case, $\det(A)=18-18=0$, which means that the inverse matrix cannot be calculated and the problems do not have a unique solution for $x$.
 
 The two equations in {eq}`inconsistent_1` are inconsistent, and so there is no solution, whilst the two equations in {eq}`inconsistent_2` have an infinite number of solutions satisfying $y=\frac{2}{3}x-\frac{1}{3}$.
 
-You can also think about this problem graphically. In general, the determinant of a (2x2) matrix $A$ is zero if and only if the second row is a constant multiple of the first row. For a problem of the form $A\underline{x}=\underline{b}$, this means that the two lines have the same gradient. Either the equations represent distinct parallel lines, with no common points, or they represent the same line, with all points in common. In this example, both lines have gradient 2/3.
+You can also think about this problem graphically. In general, the determinant of a (2x2) matrix $A$ is zero if and only if the second row is a constant multiple of the first row. For a problem of the form $Ax=b$, this means that the two lines have the same gradient. Either the equations represent distinct parallel lines, with no common points, or they represent the same line, with all points in common. In this example, both lines have gradient 2/3.
 
-(q_dodgy_proof)=
-### Questions
+This brings us to an important theorem which ties together a lot of the ideas we have studied so far.
 
-What is wrong with the following "proof" ?
+```{admonition} Invertible Matrix Theorem
 
-Assume $A,B$ are two matrices of the same order, with $AB=\underline{\underline{0}}$ and $A\neq\underline{\underline{0}}$. Then, $A^{−1}AB=A^{−1}\underline{\underline{0}} \Rightarrow B=\underline{\underline{0}}$
+Let $A$ be an $(n \times n)$ matrix. Then the following statements are equivalent:
+
+1. $A$ is invertible.
+2. $\mathrm{det}(A) \neq 0$.
+3. $A$ has $n$ pivots.
+4. The null space of $A$ is 0.
+5. $Ax=b$ has a unique solution for every $b \in \mathbb{R}^n$.
+
+```
+
+```{exercise}
+:label: q_invertible_matrix_theorem
+
+Let
+
+$$A = \begin{pmatrix}1 & 0 & 1\\
+0 & 1 & 0\\
+1 & 1 & 1\end{pmatrix}.$$
+
+1. What is the null space of $A$ ?
+2. Is $A$ is Invertible?
+3. What is $\mathrm{det}(A)$?
+```
 
 ### Derivation of the (2x2) inverse from first principles
 
@@ -211,8 +220,6 @@ The steps that were carried out here were purely algebraic manipulations, and so
 
 ## The (3x3) inverse
 
-### The (3x3) determinant
-
 We can extend the method used in the previous section to calculate the inverse of higher order matrices. For example, you could have a go at calculating the inverse of a general (3x3) matrix by Gaussian elimination. The algebra would get very tedious.
 
 However, given the systematic nature of Gaussian elimination, you may not be surprised that there is a pattern that can be spotted, which allows the inverse to be calculated by a recursive method. The result is given in the box below.
@@ -242,11 +249,11 @@ $$A=\left(\begin{array}{ccc}3 & -2 & 4 \\2 & -2 & 3 \\5 & -1 & 7 \end{array}\rig
 
 Then, we have the following cofactors:
 
-$$C_{1,1}=(-1)^{1+1}\left|\begin{array}{cc}-2&3\\-1&7\end{array}\right|=-11, \quad C_{1,2}=(-1)^{1+2}\left|\begin{array}{cc}2&3\\5&7\end{array}\right|=1, \quad C_{1,3}=(-1)^{1+3}\left|\begin{array}{cc}2&-2\\5&-1\end{array}\right|=8,$$
+$${\scriptsize C_{1,1}=(-1)^{1+1}\left|\begin{array}{cc}-2&3\\-1&7\end{array}\right|=-11, \quad C_{1,2}=(-1)^{1+2}\left|\begin{array}{cc}2&3\\5&7\end{array}\right|=1, \quad C_{1,3}=(-1)^{1+3}\left|\begin{array}{cc}2&-2\\5&-1\end{array}\right|=8,}$$
 
-$$C_{2,1}=(-1)^{2+1}\left|\begin{array}{cc}-2&4\\-1&7\end{array}\right|=10, \quad C_{2,2}=(-1)^{2+2}\left|\begin{array}{cc}3&4\\5&7\end{array}\right|=1, \quad C_{2,3}=(-1)^{2+3}\left|\begin{array}{cc}3&-2\\5&-1\end{array}\right|=-7,$$
+$${\scriptsize C_{2,1}=(-1)^{2+1}\left|\begin{array}{cc}-2&4\\-1&7\end{array}\right|=10, \quad C_{2,2}=(-1)^{2+2}\left|\begin{array}{cc}3&4\\5&7\end{array}\right|=1, \quad C_{2,3}=(-1)^{2+3}\left|\begin{array}{cc}3&-2\\5&-1\end{array}\right|=-7,}$$
 
-$$C_{3,1}=(-1)^{3+1}\left|\begin{array}{cc}-2&4\\-2&3\end{array}\right|=2, \quad C_{3,2}=(-1)^{3+2}\left|\begin{array}{cc}3&4\\2&3\end{array}\right|=-1, \quad C_{3,3}=(-1)^{3+3}\left|\begin{array}{cc}3&-2\\2&-2\end{array}\right|=-2,$$
+$${\scriptsize C_{3,1}=(-1)^{3+1}\left|\begin{array}{cc}-2&4\\-2&3\end{array}\right|=2, \quad C_{3,2}=(-1)^{3+2}\left|\begin{array}{cc}3&4\\2&3\end{array}\right|=-1, \quad C_{3,3}=(-1)^{3+3}\left|\begin{array}{cc}3&-2\\2&-2\end{array}\right|=-2.}$$
 
 We can find the determinant by expansion of any row or column.
 
@@ -262,16 +269,23 @@ The inverse matrix is given by
 
 $A^{-1}=\frac{-1}{3}\left(\begin{array}{ccc}-11&10&2\\1&1&-1\\8&-7&-2\end{array}\right)$
 
-```{admonition} Examples
-|class: tip
-You can use the following app to generate random (3x3) matrices to practice finding the inverse, and check your answers using the solutions given.
+```{exercise}
+:label: three_by_three_inverse
 
-https://www.wolframcloud.com/obj/ucqssjm/Published/33inverse
+Calculate the inverse of the matrices $A$ and $B$. Check your answer by checking that $A^{-1}A=I$ and $B^{-1}B=I$.
+
+1\.
+
+$$A = \begin{pmatrix}3&0&2\\2&0&-2\\
+0&1&1\end{pmatrix}$$
+
+2\.
+
+$$B = \begin{pmatrix}0&4&1\\0&2&1\\
+1&1&1\end{pmatrix}$$
 ```
 
-
-
-### The inverse of the matrix product
+## Inverse of the Matrix Product
 
 By associativity of matrix multiplication,
 
@@ -285,66 +299,92 @@ This result satisfies the "common sense" idea (seen in function composition) tha
 
 We can liken the result to the operation of getting dressed/undressed: If you put your socks on before your shoes, you have to take your shoes off before you can remove your socks!
 
-## Solutions to Exercises
+### Linking matrix multiplication and Gaussian elimination
+
+The row-reduction operations that were introduced in the section on Gaussian elimination can be implemented by matrix multiplication. The illustration here matches the example that was given in {ref}`gaussian-elimination` for the augmented coefficient matrix:
+
+\begin{equation}A = \left(\begin{array}{ccc|c}1&1&2&2\\2&3&-4&1\\-1&1&1&3\end{array}\right).\end{equation}
+
+In the first step we used the row operations $r_2-2r_1\longrightarrow r_2$,   $r_3+r_1\longrightarrow r_3$, and in the second step we used the row operation $r_3-2r_2\longrightarrow r_3$. These are equivalent to the following row operation matrices:
+
+$$L_1 = \left(\begin{array}{ccc}1&0&0\\-2&1&0\\1&0&1\end{array}\right), \quad  L_2=\left(\begin{array}{ccc}1 & 0 & 0 \\0 & 1 & 0 \\0 & -2 & 1 \\\end{array}\right) $$
+
+The composition of these two matrices puts the coefficient matrix into the upper triangular form previously obtained:
+
+\begin{equation}L_2 L_1 A = \left(\begin{array}{ccc}1 & 0 & 0 \\0 & 1 & 0 \\0 & -2 & 1 \\\end{array}\right)\left(\begin{array}{ccc|c}1 & 1 & 2 & 2 \\0 & 1 & -8 & -3 \\0 & 2 & 3 & 5 \\\end{array}\right)=\left(\begin{array}{ccc|c}1 & 1 & 2 & 2 \\0 & 1 & -8 & -3 \\0 & 0 & 19 & 11 \\\end{array}\right).\end{equation}
+
+The additional operations that were carried out to fully row-reduce the matrix can be captured in the following row-reduction matrices:
+
+\begin{equation}P=\left(\begin{array}{ccc}1 & 0 & 0 \\0 & 1 & 0 \\0 & 0 & \frac{1}{19} \\\end{array}\right), \quad U_1=\left(\begin{array}{ccc}1 & 0 & -2 \\0 & 1 & 8 \\0 & 0 & 1 \\\end{array}\right), \quad U_2 = \left(\begin{array}{ccc}1 & 0 & -2 \\0 & 1 & 8 \\0 & 0 & 1 \\\end{array}\right)\end{equation}
+
+You may verify the result:
+
+$$U_2 U_1 P L_2 L_1 A =\left(\begin{array}{ccc|c}1 & 0 & 0 & -\frac{15}{19} \\0 & 1 & 0 & \frac{31}{19} \\0 & 0 & 1 & \frac{11}{19} \\\end{array}\right)$$
+
+It is also possible to combine the row reduction operations into a single multiplication matrix:
+
+\begin{equation}U_2 U_1 P L_2 L_1 = \frac{1}{19}\left(\begin{array}{ccc}7 & 1 & -10 \\2 & 3 & 8 \\5 & -2 & 1 \\\end{array}\right)\end{equation}.
+
+Later, we will come to think of this as the inverse of the coefficient matrix.
+
+## Transpose Property
+
+The following result is true in general (provided that $A$ and $B$ can be multiplied). Have a go at proving it for the case where $A$ and $B$ are both (2x2) matrices.
+a general proof using element notation, is given below.
+
+$$(A B)^T=B^T A^T $$
+
+**Proof**
+
+$$(A B)^T{}_{i,j}=(A B)_{j,i}=\sum _k A_{j,k} B_{k,i}=\sum _k A^T{}_{k,j} B^T{}_{i,k}=\sum _k B^T{}_{i,k} A^T{}_{k,j} =(B^T A^T{})_{i,j}$$
+
+## Solutions
+
+```{solution} q_inverse_functions
+
+1. $f$ does not have an inverse because for any negative number $y$ there is no $x$ such that $f(x) = y$.
+2. $g$ has an inverse and $g^{-1}(x) = +\sqrt{x}$.
+3. $h$ does not have an inverse. To prove this, suppose $k$ is the inverse of $h$. Then $h(0, 0) = 0$ so we must have $k(0) = (0, 0)$. But also $h(1, -1) = 0$ so we must also have $k(0) = (1, -1)$. In general, any function which is not one-to-one (*injective*) does not have an inverse.
+
+```
+
+```{solution} q_matrix_inverse_1
+
+1\.
+
+$$
+R_{\pi/2}R_{3\pi/2} = \begin{pmatrix}0 & -1 \\1 & 0\end{pmatrix}\begin{pmatrix}0 & 1 \\-1 & 0\end{pmatrix} = \begin{pmatrix}1 & 0\\0&1\end{pmatrix}.$$
+$$
+R_{3\pi/2}R_{\pi/2} = \begin{pmatrix}0 & 1 \\-1 & 0\end{pmatrix}\begin{pmatrix}0 & -1 \\1 & 0\end{pmatrix} = \begin{pmatrix}1 & 0\\0&1\end{pmatrix}.$$
 
 
-{numref}`Question %s <q_matrix_identity>`
+2\.
 
-1\. Your first guess might be just a lot of number 1's:
+$$R_{\theta}^{-1} = R_{-\theta} = \begin{pmatrix}\cos\theta & \sin\theta\\-\sin\theta & \cos\theta\end{pmatrix}.$$
 
-$ \left( \begin{matrix} 1 & 1 \\ 1 & 1 \end{matrix} \right) $
+$$\begin{align*}
+R_{\theta}R_{\theta}^{-1} &=  \begin{pmatrix}\cos\theta & -\sin\theta\\\sin\theta & \cos\theta\end{pmatrix}\begin{pmatrix}\cos\theta & \sin\theta\\-\sin\theta & \cos\theta\end{pmatrix}\\
+ &=\begin{pmatrix}\cos^2\theta + \sin^2\theta & -\cos\theta\sin\theta + \sin\theta\cos\theta\\ \sin\theta\cos\theta-\cos\theta\sin\theta & \sin^2\theta + \cos^2\theta \end{pmatrix}\\
+ &=\begin{pmatrix}1 & 0\\0&1 \end{pmatrix}.
+\end{align*}$$
 
-but this instead produces:
+Similarly,
 
-$ \left( \begin{matrix} 1 & 1 \\ 1 & 1 \end{matrix} \right) \left(\begin{matrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{matrix} \right) = \left(\begin{matrix} a_{11} + a_{21} & a_{12} + a_{22} \\ a_{11} + a_{21} & a_{12} + a_{22} \end{matrix} \right) \neq \left(\begin{matrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{matrix} \right) $
+$$
+R_{\theta}^{-1} R_{\theta} = \begin{pmatrix}1 & 0\\0&1 \end{pmatrix}.
+$$
 
-The (2x2) matrix which satisfies the Identity matrices definition is given by
-
-$ \left( \begin{matrix} 1 & 0 \\ 0 & 1 \end{matrix} \right) $
-
-Check by yourself that this the results in
-
-$ \left(\begin{matrix} 1 & 0 \\ 0 & 1 \end{matrix} \right) \left(\begin{matrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{matrix} \right) = \left(\begin{matrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{matrix} \right) \left(\begin{matrix} 1 & 0 \\ 0 & 1 \end{matrix} \right) = \left(\begin{matrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{matrix} \right) $
-
-2\. To arrive at the general result for any dimension, we will use the definition of matrix multiplication. We require that
-
-$ (A I)_{i,j} = (I A)_{i,j} = A_{i,j} $
-
-and in summation notation this means that
-
-$ \sum_k A_{i,k} I_{k,j} = \sum_k I_{i,k} A_{k,j} = A_{i,j}$
-
-The definition is satisfied if (and only if)
-
-$ I_{k,j} = \left\{ \begin{array}{ll} 1 & \text{if} &k = j \\ 0& \text{if} &k \neq j \\ \end{array} \right. $
-
-So, all entries of the identity matrix are 0, except where the row and column numbers are the same - we call this the leading diagonal.
-
-The $(3 × 3)$ identity matrix $\boldsymbol{I}_3$ therefore is:
-
-$ \left( \begin{matrix} 1 & 0 & 0\\ 0 & 1 &0 \\ 0 & 0 & 1\end{matrix} \right) $
-
-3\. The key here is to recognise that $(A+\lambda)B$ is not valid, since a scalar can't be meaningfully added to a matrix. But by recognising that $B=IB$ where I is the identity matrix, we can write
-
-$AB+\lambda B=AB+\lambda IB=(A+\lambda I)B$
-
-You can try it for an example. For instance, if
-\begin{equation}A=\left(\begin{array}{cc}2&3\\-1&4\end{array}\right), \quad B=\left(\begin{array}{cc}2&-1\\1&1\end{array}\right), \quad \lambda=3\end{equation}
-Then, $AB+\lambda B = \left(\begin{array}{cc}2&3\\-1&4\end{array}\right) \left(\begin{array}{cc}2&-1\\1&1\end{array}\right)+3\left(\begin{array}{cc}2&-1\\1&1\end{array}\right)= \left(\begin{array}{cc}7&1\\2&5\end{array}\right)+ \left(\begin{array}{cc}6&-3\\3&3\end{array}\right)= \left(\begin{array}{cc}13&-2\\5&8\end{array}\right)$
-And $(A+\lambda I)B=\left(\begin{array}{cc}2+3&3\\-1&4+3\end{array}\right) \left(\begin{array}{cc}2&-1\\1&1\end{array}\right)= \left(\begin{array}{cc}13&-2\\5&8\end{array}\right)$
-
-
-
-{numref}`Question %s <q_matrix_inverse>`
+3\.
 
 We left multiply by $C^{-1}$ and right multiply by $D^{-1}$ to obtain $X=C^{-1} E D^{-1}$.
 If you wrote down any other answer then it is incorrect!
 
+```
 
-{numref}`Question %s <q_twobytwo_inverse>`
+
+```{solution} q_twobytwo_inverse
 
 1\. $\det  M=(2*4)-(-1*3)=11$
-
 
 2\. We have $A=\left(\begin{array}{cc}2 & -3 \\3 & -2 \end{array}\right)$, $\mathbf{x}=\left(\begin{array}{c}x\\y\end{array}\right)$,   $b=\left(\begin{array}{c}1 \\2 \end{array}\right)$
 
@@ -352,11 +392,20 @@ $A^{-1}=\frac{1}{9-4}\left(\begin{array}{cc}-2 & 3 \\-3 & 2 \end{array}\right)$ 
 
 That is, $x=4/5$, $y=1/5$. (Check it!)
 
-
 3\. $B=A^{-1}\left(\begin{array}{cc}5 & 3 \\4 & 3 \end{array}\right)=-\frac{1}{3} \left(\begin{array}{cc}1 & -2 \\-2 & 1 \end{array}\right) \left(\begin{array}{cc}5 & 3 \\4 & 3 \end{array}\right)=-\frac{1}{3} \left(\begin{array}{cc}5-8 & 3-6 \\4-10 & 3-6 \end{array}\right)=\left(\begin{array}{cc} 1 & 1 \\2 & 1 \\\end{array}\right)$
 
-{numref}`Question %s <q_dodgy_proof>`
+```
 
-The argument fails if $\det(A)=0$, because in that case matrix $A$ is not invertible. For instance, in the case where
 
-$A=\left(\begin{array}{cc}1&2\\2&4\end{array}\right)$ and $B=\left(\begin{array}{cc}8 & 4 \\-4 & -2 \\\end{array}\right)$, we obtain $AB=\left(\begin{array}{cc}0&0\\0&0\end{array}\right)$.
+```{solution} q_invertible_matrix_theorem
+
+Reduce $A$ to echelon form:
+
+$$\begin{pmatrix}1 & 0 & 1\\
+0 & 1 & 0\\
+0 & 0 & 0\end{pmatrix}.$$
+
+1. The null space $A$ is $t\begin{pmatrix}-1\\0\\1\end{pmatrix}, t \in \mathbb{R}$.
+2. $A$ is not invertible. By the invertible matrix theorem a matrix is invertible if and only if its null space is not zero.
+3. By the invertible matrix theorem, $\det(A)=0$.
+```
