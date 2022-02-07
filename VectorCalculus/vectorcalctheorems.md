@@ -140,4 +140,58 @@ hence:
 ```
 which is the desired result.
 
-% ## (Kelvin-)Stoke's Theorem
+## (Kelvin-)Stoke's Theorem
+
+Stokes's theorem states that the loop integral of a vector field ${\bf G}({\bf r})$ around the boundary $C = \partial S$ of an open surface $S$ is 
+equal to the flux of the curl of the vector field, $\nabla \times {\bf G}({\bf r})$ through the surface;
+```{math}
+\oint_{C = \partial S} {\bf G}({\bf r}) \cdot \mathrm{d}{\bf r} = \iint_{S} \Bigg(\nabla \times {\bf G}\Bigg)\cdot\mathrm{d}{\bf S}
+```
+where the orientation of this closed contour is given by the right hand rule, as depicted in {numref}`stokesRHrule`:
+
+```{figure} ../figures/stokesRHrule.png
+---
+name: stokesRHrule
+---
+The relevant orientation of the closed contour used in Stoke's theorem.
+```
+
+### Stoke's Theorem Example
+Lets look at an example, with the vector field ${\bf G}({\bf r}) = \begin{pmatrix y \\ -z \\ -x^2 \end{pmatrix}$ over a closed path around the 
+origin, which we depict in {numref}`contourexample`:
+
+```{figure} ../figures/contourexample.png
+---
+name: contourexample
+---
+Closed contour around the origin - note that this contour bounds an area that is the quarter of a unit circle centered on the origin.
+```
+
+The parameterisation of the line integral will not change its result (nor should the starting point for a loop integral), so we will start 
+at the origin and parameterise the three sections of the contour $C_1,\,C_2,\, C_3$ using $t$, with $t \in [0,\,1]$ along each piece:
+```{math}
+C_1: {\bf r}(t) &=&\, \begin{pmatrix} 0 \\ t \\ 0 \end{pmatrix} \Rightarrow {\bf G}({\bf r}) = \begin{pmatrix} t \\ 0 \\ 0 \end{pmatrix}, \quad {\bf r'}(t) = \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}\\
+C_2: {\bf r}(t) &=&\, \begin{pmatrix} 0 \\ \cos(\pi t/2) \\ \sin(\pi t/2) \end{pmatrix} \Rightarrow {\bf G}({\bf r}) = \begin{pmatrix} \cos(\pi t/2) \\ -\sin(\pi t/2) \\ 0 \end{pmatrix}, \quad {\bf r'}(t) = \begin{pmatrix} 0 \\ -\frac{\pi}{2}\sin(\pi t/2) \\ \frac{\pi}{2}\cos(\pi t/2) \end{pmatrix}\\
+C_3: {\bf r}(t) &=&\, \begin{pmatrix} 0 \\ 0 \\ 1-t \end{pmatrix} \Rightarrow {\bf G}({\bf r}) = \begin{pmatrix} 0 \\ -(1-t) \\ 0 \end{pmatrix}, \quad {\bf r'}(t) = \begin{pmatrix} 0 \\ 0 \\ -1 \end{pmatrix}
+```
+Therefore we can calculate the line integral:
+```{math}
+I &=&\, \int_C {\bf G}({\bf r})\cdot \mathrm{d}{\bf r} = \int_0^1 {\bf G}({\bf r})\cdot {\bf r'}\,\mathrm{d}t\\
+&=&\, \int_0^1  \begin{pmatrix} t \\ 0 \\ 0 \end{pmatrix} \cdot \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}\,\mathrm{d}t + 
+\int_0^1  \begin{pmatrix} \cos(\pi t/2) \\ -\sin(\pi t/2) \\ 0 \end{pmatrix}\cdot \begin{pmatrix} 0 \\ -\frac{\pi}{2}\sin(\pi t/2) \\ \frac{\pi}{2}\cos(\pi t/2) \end{pmatrix}\,\mathrm{d}t + 
+\int_0^1  \begin{pmatrix} 0 \\ -(1-t) \\ 0 \end{pmatrix} \cdot\begin{pmatrix} 0 \\ 0 \\ -1 \end{pmatrix}\,\mathrm{d}t\\
+&=&\, \frac{\pi}{2}\int_0^1\sin^2(\pi t/2)\,\mathrm{d}t = \frac{\pi}{4}\int_0^1\Bigg (1-\cos(\pi t)\Bigg)\,\mathrm{d}t = \frac{\pi}{4}\Bigg[t - \frac{1}{\pi}\sin(\pi t)\Bigg]_0^1 =\frac{\pi}{4}
+```
+
+Using Stoke's theorem, we are free to find formally <em>any</em> surface which would be bounded by the contour - however clearly the easiest to work 
+with is the area of the quarter circle, sitting on the $y-z$ plane.  To make sure the orientation of the contour matches with the 
+right hand rule, we have $\mathrm{d}{\bf S} = \mathrm{d}y\,\mathrm{d}z\,\hat{\bf x}$, therefore:
+```{math}
+I &=&\, \iint_S\Bigg( \nabla \times {\bf G}\Bigg)\cdot\mathrm{d}{\bf S} \\
+\nabla \times {\bf G} &=&\, \begin{pmatrix} 1\\ 2x\\ -1\end{pmatrix}\\ 
+I &=&\, \iint_S \begin{pmatrix} 1\\ 2x\\ -1\end{pmatrix}\cdot \begin{pmatrix} 1\\ 0\\ 0\end{pmatrix}\,\mathrm{d}y\,\mathrm{d}z\\
+&=&\,\iint_S \,\mathrm{d}y,\,\mathrm{d}z = \frac{1}{4}\pi 1^2 = \frac{\pi}{4}
+```
+Therefore for quite a lot less work, we find the same result!
+
+### A Sketch of a Proof
