@@ -119,7 +119,7 @@ Lets see this for $x^2 + y^2 + z^2 = 9$, thus $z = \sqrt{9 - x^2 - y^2}$, lets c
 ```
 If we use a change of variable, $x = \sqrt{9-y^2}\sin(\varphi) \Rightarrow \mathrm{d}x = \sqrt{9-y^2}\cos(\varphi)\,\mathrm{d}\varphi$ and therefore we have:
 ```{math}
-\iint \mathrm{d}S &=&\, \int_0^{\pi/2}\,\mathrm{d}\varphi \int_0^3 \,\mathrm{d}y \\
+\iint \mathrm{d}S &=&\, 3\int_0^{\pi/2}\,\mathrm{d}\varphi \int_0^3 \,\mathrm{d}y \\
 &=&\, \frac{9\pi}{2}
 ```
 which corresponds to $\frac{1}{8}$ of the full sphere's surface area $36\pi$, as expected.

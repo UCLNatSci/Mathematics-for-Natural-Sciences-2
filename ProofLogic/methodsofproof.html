@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>13. Techniques of Proof &#8212; Mathematics for Natural Sciences 2</title>
+    <title>14. Techniques of Proof &#8212; Mathematics for Natural Sciences 2</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -55,8 +55,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="14. Linear Systems of Equations" href="../LinearAlgebra/linear_systems_matrices/echelon_form.html" />
-    <link rel="prev" title="12. Propositional Logic" href="propositionallogic.html" />
+    <link rel="next" title="15. Linear Systems of Equations" href="../LinearAlgebra/linear_systems_matrices/echelon_form.html" />
+    <link rel="prev" title="13. Propositional Logic" href="propositionallogic.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -134,53 +134,58 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../VectorCalculus/volumeintegrals.html">
+   8. Multidimensional Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/surfaceintegrals.html">
-   8. Surface Integrals
+   9. Surface Integrals
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/vectorcalctheorems.html">
-   9. Vector Calculus Theorems
+   10. Vector Calculus Theorems
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="setsnotation.html">
-   10. Set Theory
+   11. Set Theory
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="functions.html">
-   11. Functions
+   12. Functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="propositionallogic.html">
-   12. Propositional Logic
+   13. Propositional Logic
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   13. Techniques of Proof
+   14. Techniques of Proof
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/echelon_form.html">
-   14. Linear Systems of Equations
+   15. Linear Systems of Equations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/matrices.html">
-   15. Matrices
+   16. Matrices
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/linear_maps.html">
-   16. Linear Transformations
+   17. Linear Transformations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/inverse_determinant.html">
-   17. Inverse and Determinant
+   18. Inverse and Determinant
   </a>
  </li>
 </ul>
@@ -256,32 +261,32 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#proof-by-contradiction">
-   13.1. Proof by Contradiction
+   14.1. Proof by Contradiction
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#proof-by-counterexample">
-   13.2. Proof by Counterexample
+   14.2. Proof by Counterexample
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#proof-by-induction">
-   13.3. Proof by Induction
+   14.3. Proof by Induction
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#proof-by-contraposition">
-   13.4. Proof by Contraposition
+   14.4. Proof by Contraposition
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#proof-by-construction">
-   13.5. Proof By Construction
+   14.5. Proof By Construction
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#number-theory-types-of-construction">
-     13.5.1. Number Theory Types of Construction
+     14.5.1. Number Theory Types of Construction
     </a>
    </li>
   </ul>
@@ -298,9 +303,9 @@
               <div>
                 
   <div class="section" id="techniques-of-proof">
-<h1><span class="section-number">13. </span>Techniques of Proof<a class="headerlink" href="#techniques-of-proof" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">14. </span>Techniques of Proof<a class="headerlink" href="#techniques-of-proof" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="proof-by-contradiction">
-<h2><span class="section-number">13.1. </span>Proof by Contradiction<a class="headerlink" href="#proof-by-contradiction" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">14.1. </span>Proof by Contradiction<a class="headerlink" href="#proof-by-contradiction" title="Permalink to this headline">¶</a></h2>
 <p>This is a form of proof that seeks to establish if the validity of a proposition by showing that by assuming the proposition is false leads to a direct contradiction.
 We can summarise the technique as:</p>
 <ol class="simple">
@@ -323,7 +328,7 @@ prime numbers from the first <span class="math notranslate nohighlight">\(p_1 = 
 there cannot be a finite number of primes and so there are an infinite number of primes. <b>QED</b></p>
 </div>
 <div class="section" id="proof-by-counterexample">
-<h2><span class="section-number">13.2. </span>Proof by Counterexample<a class="headerlink" href="#proof-by-counterexample" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">14.2. </span>Proof by Counterexample<a class="headerlink" href="#proof-by-counterexample" title="Permalink to this headline">¶</a></h2>
 <p>This is form of proof that disproves a proposition by giving an example which is a direct contradiction to the proposition.  This technique is often used to disprove a
 universal (or <span class="math notranslate nohighlight">\(\forall\)</span> type) statement.  We can summarise the technique as:</p>
 <ol class="simple">
@@ -339,7 +344,7 @@ We can find examples where this proof holds for both divisibility, e.g. <span cl
 proposition does not - hence the statement can be shown not be always true.  <b>QED</b></p>
 </div>
 <div class="section" id="proof-by-induction">
-<h2><span class="section-number">13.3. </span>Proof by Induction<a class="headerlink" href="#proof-by-induction" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">14.3. </span>Proof by Induction<a class="headerlink" href="#proof-by-induction" title="Permalink to this headline">¶</a></h2>
 <p>This is a form of proof where a proposition, which is shown to be true for an initial case and a more general case <span class="math notranslate nohighlight">\(n\)</span>, which then allows a higher general
 case <span class="math notranslate nohighlight">\(n+1\)</span> to be shown to be true.  This idea of a higher and higher steps on a proof ladder can be quite a powerful technique.  We can summarise the technique as:</p>
 <ol class="simple">
@@ -360,7 +365,7 @@ case <span class="math notranslate nohighlight">\(n+1\)</span> to be shown to be
 <p><b>QED</b></p>
 </div>
 <div class="section" id="proof-by-contraposition">
-<h2><span class="section-number">13.4. </span>Proof by Contraposition<a class="headerlink" href="#proof-by-contraposition" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">14.4. </span>Proof by Contraposition<a class="headerlink" href="#proof-by-contraposition" title="Permalink to this headline">¶</a></h2>
 <p>We can summarise this technique as:</p>
 <ol class="simple">
 <li><p>Given a statement <span class="math notranslate nohighlight">\(P\)</span> which leads directly to assertion <span class="math notranslate nohighlight">\(Q\)</span>, i.e.</p></li>
@@ -383,7 +388,7 @@ Lets write <span class="math notranslate nohighlight">\(x = 2a\)</span> with som
 <p>which we can see clearly is odd.  Thus when <span class="math notranslate nohighlight">\(x^2 - 6x + 5\)</span> is odd, <span class="math notranslate nohighlight">\(x\)</span> is even and therefore when <span class="math notranslate nohighlight">\(x^2 - 6x + 5\)</span> is even, <span class="math notranslate nohighlight">\(x\)</span> is odd. <b>QED</b></p>
 </div>
 <div class="section" id="proof-by-construction">
-<h2><span class="section-number">13.5. </span>Proof By Construction<a class="headerlink" href="#proof-by-construction" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">14.5. </span>Proof By Construction<a class="headerlink" href="#proof-by-construction" title="Permalink to this headline">¶</a></h2>
 <p>We can summarise this technique as:</p>
 <ol class="simple">
 <li><p>Given a statement <span class="math notranslate nohighlight">\(P_1\)</span>, we construct  <span class="math notranslate nohighlight">\(P_2,\,P_3,\,\dots,\,P_n\)</span> which leads to assertion <span class="math notranslate nohighlight">\(Q\)</span>,</p></li>
@@ -398,7 +403,7 @@ x^2 - 6x &amp;=&amp; 2a - 5 \\
 x(x-6) &amp;=&amp; 2a - 5\end{split}\]</div>
 <p>Since the RHS is clearly odd by construction, this means the LHS is odd.  Given that ODD <span class="math notranslate nohighlight">\(\times\)</span> ODD = ODD, then given <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(x-6\)</span> differ by an even numbers, <span class="math notranslate nohighlight">\(x\)</span> must be an odd number. <b>QED</b></p>
 <div class="section" id="number-theory-types-of-construction">
-<h3><span class="section-number">13.5.1. </span>Number Theory Types of Construction<a class="headerlink" href="#number-theory-types-of-construction" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">14.5.1. </span>Number Theory Types of Construction<a class="headerlink" href="#number-theory-types-of-construction" title="Permalink to this headline">¶</a></h3>
 <p>Sometimes instead of directly proving a proposition, we can construct facts about the proposition which the lead to the answer.  This is often employed
 when we have to prove some facts about numbers, for example lets try to prove that:</p>
 <div class="math notranslate nohighlight">
@@ -435,10 +440,10 @@ and likewise if <span class="math notranslate nohighlight">\(a\)</span> is EVEN,
 10 &amp;\rightarrow&amp;\, 10\end{split}\]</div>
 <p>We notice that the last digit of the square numbers is always one of <span class="math notranslate nohighlight">\({0,\, 1,\, 4,\, 5,\, 6,\, 9}\)</span>, the digits <span class="math notranslate nohighlight">\({2,\, 3,\, 7,\, 8}\)</span> never
 enter in to this.  Likewise we could keep going to cube numbers and quartic powers etc, but lets just think about what happens when we take
-numbers to higher an higher powers and what that last digit does, as outlined in <a class="reference internal" href="#cycliclastdigits"><span class="std std-numref">Fig. 13.1</span></a>.</p>
+numbers to higher an higher powers and what that last digit does, as outlined in <a class="reference internal" href="#cycliclastdigits"><span class="std std-numref">Fig. 14.1</span></a>.</p>
 <div class="figure align-default" id="cycliclastdigits">
 <img alt="../_images/cycliclastdigits.png" src="../_images/cycliclastdigits.png" />
-<p class="caption"><span class="caption-number">Fig. 13.1 </span><span class="caption-text">The effect of higher and higher powers on the last digit of an integer.</span><a class="headerlink" href="#cycliclastdigits" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 14.1 </span><span class="caption-text">The effect of higher and higher powers on the last digit of an integer.</span><a class="headerlink" href="#cycliclastdigits" title="Permalink to this image">¶</a></p>
 </div>
 <p>We see that some digits under increasing integer powers return back to the same digit immediately (e.g. <span class="math notranslate nohighlight">\(6 \rightarrow 6\)</span>), others take
 another digit first (e.g. <span class="math notranslate nohighlight">\(9 \rightarrow 1 \rightarrow 9\)</span>) and some go through up to four other digits (e.g. <span class="math notranslate nohighlight">\(2 \rightarrow 4 \rightarrow 8 \rightarrow 6 \rightarrow 2\)</span>),
@@ -482,7 +487,7 @@ equal to <span class="math notranslate nohighlight">\(a\)</span> plus another nu
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">12. </span>Propositional Logic</p>
+                <p class="prevnext-title"><span class="section-number">13. </span>Propositional Logic</p>
             </div>
         </a>
     </div>
@@ -490,7 +495,7 @@ equal to <span class="math notranslate nohighlight">\(a\)</span> plus another nu
         <a class="right-next" href="../LinearAlgebra/linear_systems_matrices/echelon_form.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">14. </span>Linear Systems of Equations</p>
+                <p class="prevnext-title"><span class="section-number">15. </span>Linear Systems of Equations</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
