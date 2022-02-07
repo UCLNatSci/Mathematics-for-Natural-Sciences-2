@@ -101,9 +101,9 @@ $$U(au) = 2au=a2u = aT(u).$$
 
 Which of the following functions are linear transformations?
 
-1\. $T:\mathbb{R}^3\rightarrow\mathbb{R}^2$,
+1\. $T:\mathbb{R}^2\rightarrow\mathbb{R}^2$,
 
-$$T(x) = x + \begin{pmatrix}1\\2\\3\end{pmatrix}.$$
+$$T(x) = x + \begin{pmatrix}1\\2\end{pmatrix}.$$
 
 2\. $f:\mathbb{R}\rightarrow\mathbb{R}$,
 
