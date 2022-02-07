@@ -102,7 +102,7 @@ We see that this is now a vector field, which we can resolve in the $\hat{\bf u}
 \hat{\bf u} \cdot \nabla \phi
 ```
 
-which is our directional derivative of $\phi$ in the $\hat{\bf u}$ direction, which we often write as $\nabla_{\hat{\bf u}} \phi$.  
+which is our <b>directional derivative</b> of $\phi$ in the $\hat{\bf u}$ direction, which we often write as $\nabla_{\hat{\bf u}} \phi$.  
 
 Looking at this expression further:
 
@@ -132,18 +132,53 @@ We see that for all $x,\, y$ within the domain, the vector will be directed inwa
 ---
 name: scalarfieldgradient
 ---
-Gradients $\nabla \phi$ for a scalr field $\phi(\hat{\bf r}) = \exp(-(x^2+y^2))$ at a few different points along the contour plot (denoted 
+Gradients $\nabla \phi$ for a scalar field $\phi({\bf r}) = \exp(-(x^2+y^2))$ at a few different points along the contour plot (denoted 
 $\bf r=r_0$).  The gradients are perpendicular to the contour lines and point toward the direction of the largest increase of $\phi$, 
 which from {numref}`scalarvectorfield` we know is a maxima.
 ```
 
+The gradient of $\phi(x,\,y,\,z)$ will therefore be perpendicular to the surface $\phi=c$, and we can use this to find the tangent plane 
+to the surface at a given point.  The gradient of $z = z(x,\,y)$ will be perpendicular to the contours of $z$, projected in the $(x,\,y)$ plane, 
+as illustrated in {numref}`quiver`.
+
+```{figure} ../figures/quiver.png
+---
+name: quiver
+---
+A contour plot of the surface $z = x^3−y^3−2xy+2$, together with the gradient field given by $\nabla z = (3x^2−2y,\,−3y^2−2x,\,0)$.
+```
+
+We can always take some surface $z = z(x,\,y)$ and convert it into a scalar field $\phi$ with some surface normal ${\bf n} = \nabla \phi$, for instance
+$z = x^3−y^3−2xy+2$ means we can write $\phi = x^3−y^3−2xy+2 - z$ and therefore:
+```{math}
+{\bf n} = \nabla \phi = \begin{pmatrix} 3x^2 - 2y \\ -3y^2 - 2xz \\ -1 \end{pmatrix}
+```
+
+If we want to find the equation of the resulting tangent surface at a given point, say $(1,\,1,\,0)$, then we know that the scalar products of all vectors 
+$\begin{pmatrix} x\\y\\z \end{pmatrix}$ on the tangent surface with the surface normal must agree, hence:
+```{math}
+{\bf n}\cdot \begin{pmatrix} 1\\1\\0 \end{pmatrix} = {\bf n}\cdot \begin{pmatrix} 1\\1\\0 \end{pmatrix} \Rightarrow x - 5y - z  =-4
+```
+
+Another example would be to find the gradient of the function $f(x,\,y,\,z) = xyz$ at the point $(−2,\,3,\,4)$ and also find the directional 
+derivative of this function in the direction ${\bf v} = (3, \,-4, \,12)$.   We can find $\nabla f$:
+
+```{math}
+\nabla f = (yz,\,xz,\, xy) \Rightarrow \nabla f\Bigg|_{(−2,\,3,\,4)} = (12,\, -8,\, -6)
+```
+and therefore the directional derivative is given by:
+```{math}
+\frac{1}{|{\bf v}|}{\bf v} \cdot \nabla f\Bigg|_{(−2,\,3,\,4)} \Rightarrow 
+\frac{1}{\sqrt{3^2 + 4^2 + 12^2}} (3, \,-4, \,12)\cdot (12,\, -8,\, -6) = -\frac{4}{13}
+```
+  
 ## Total Differential
 
 Recall from our discussions about partial derivatives, we can also define a <em>scalar total differential</em>:
 ```{math}
 \mathrm{d}\phi = \frac{\partial \phi}{\partial x} \mathrm{d} x + \frac{\partial \phi}{\partial y} \mathrm{d} y + \frac{\partial \phi}{\partial z} \mathrm{d} z
 ```
-which measures the infinitesimal change of $\phi$ as we change $x, \,y,\,z$ by infinitesimal amounts $\mathrm{d}x, \,\mathrm{d}y,\, \mathrm{d}z$.  
+which measures the infinitesimal change of  $\phi$ as we change $x, \,y,\,z$ by infinitesimal amounts $\mathrm{d}x, \,\mathrm{d}y,\, \mathrm{d}z$.  
 Likewise we can define the vectorial line element:
 ```{math}
 \mathrm{d}{\bf r} = \begin{pmatrix} \mathrm{d}x \\\mathrm{d}y\\ \mathrm{d}z\end{pmatrix}
@@ -157,11 +192,6 @@ To find the <em>vector total differential</em>:
 \mathrm{d}{\bf A} = \frac{\partial {\bf A} }{\partial x} \mathrm{d} x + \frac{\partial {\bf A} }{\partial y} \mathrm{d} y + \frac{\partial {\bf A} }{\partial z} \mathrm{d} z
 
 ```
-## Directional Derivative
-
-
-
-
 
 
 

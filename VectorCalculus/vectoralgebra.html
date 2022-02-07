@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>4. Vectors and Vector Algebra &#8212; Mathematics for Natural Sciences 2</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -43,9 +43,9 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -58,10 +58,7 @@
     <link rel="next" title="5. Vector Fields" href="calculusonfields.html" />
     <link rel="prev" title="3. Line Integrals" href="lineintegrals.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
+    <meta name="docsearch:language" content="en" />
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -237,7 +234,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -255,7 +252,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+        <div class="d-none d-md-block col-md-2 bd-toc show">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -340,17 +337,22 @@
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#equation-of-a-line">
-     4.7.1. Equation of a line
+     4.7.1. Equation of a Line
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#equation-of-a-plane">
-     4.7.2. Equation of a plane
+     4.7.2. Equation of a Plane
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#distance-between-a-point-and-a-line">
-     4.7.3. Distance between a point and a line
+     4.7.3. Distance between a Point and a Line
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#shortest-distance-to-a-plane">
+     4.7.4. Shortest Distance to a Plane
     </a>
    </li>
   </ul>
@@ -363,121 +365,10 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Vectors and Vector Algebra</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#addition-and-scaling-of-vectors">
-   4.1. Addition and Scaling of Vectors
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#magnitude-of-a-vector">
-   4.2. Magnitude of a Vector
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#normalised-vectors">
-   4.3. Normalised Vectors
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#scalar-product-dot-product">
-   4.4. Scalar Product / Dot Product
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#geometric-definiton">
-     4.4.1. Geometric Definiton
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#algebraic-definition">
-     4.4.2. Algebraic Definition
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#properties-of-the-dot-product">
-     4.4.3. Properties of the Dot Product
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#vector-product-cross-product">
-   4.5. Vector Product / Cross Product
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#geometric-definition">
-     4.5.1. Geometric Definition
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     4.5.2. Algebraic Definition
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#triple-vector-products">
-   4.6. Triple Vector Products
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#triple-scalar-product">
-     4.6.1. Triple Scalar Product
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#triple-vector-product">
-     4.6.2. Triple Vector Product
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#vector-lines-and-planes">
-   4.7. Vector Lines and Planes
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#equation-of-a-line">
-     4.7.1. Equation of a line
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#equation-of-a-plane">
-     4.7.2. Equation of a plane
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#distance-between-a-point-and-a-line">
-     4.7.3. Distance between a point and a line
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
+        
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="vectors-and-vector-algebra">
+  <div class="section" id="vectors-and-vector-algebra">
 <h1><span class="section-number">4. </span>Vectors and Vector Algebra<a class="headerlink" href="#vectors-and-vector-algebra" title="Permalink to this headline">¶</a></h1>
 <p>We can think of vectors at their heart as directions being given to get between two points in space.  If we have to move in one, two or three dimensions, along spatially flat or curved surfaces,
 we can attempt to give directions.  At the heart of a any vector system are the <b>basis vectors</b>, these give us the funadmental possible directions within a vector space, which any vector can be
@@ -782,7 +673,7 @@ the answer is zero:</p>
 <p>In what follows, we will write the equations using both conventions. You will see that sometimes it is easier to work with
 the scalar equations and other times it is easier to work with the vector equations.</p>
 <div class="section" id="equation-of-a-line">
-<h3><span class="section-number">4.7.1. </span>Equation of a line<a class="headerlink" href="#equation-of-a-line" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.7.1. </span>Equation of a Line<a class="headerlink" href="#equation-of-a-line" title="Permalink to this headline">¶</a></h3>
 <p>The vector equation of a line can be obtained from a known point on the line and a known vector parallel to the
 line. Equivalently, two known points on the line can also be used to find a parallel vector.</p>
 <p>We obtain the position vector of the other points by a two step process:</p>
@@ -799,10 +690,10 @@ an arbitrary point on the line, it can be formed by the sum <span class="math no
 <p>An arbitrary scalar parameter <span class="math notranslate nohighlight">\(\lambda\)</span> controls how far along the line we move, and if it is negative then the direction is reversed.
 The animation shows how the line is described as the parameter <span class="math notranslate nohighlight">\(\lambda\)</span> is varied.</p>
 <p>We can also use the vector equation to calculate the corresponding scalar equation. From the vector equation we obtain:</p>
-<div class="highlight-math notranslate"><div class="highlight"><pre><span></span>\left(\begin{array}{c}x \\y \\z \\\end{array}\right)=\left(\begin{array}{c}x_0 \\y_0 \\z_0 \\\end{array}\right) + 
-\lambda \left(\begin{array}{c}v_x \\v_y \\v_z \\\end{array}\right)
-</pre></div>
-</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix} x \\y \\z \end{pmatrix} =
+\begin{pmatrix} x_0 \\y_0 \\z_0 \end{pmatrix} + 
+\lambda \begin{pmatrix} v_x \\v_y \\v_z \end{pmatrix}\end{split}\]</div>
 <p>Equating components on the left and right and rearranging in each equation for <span class="math notranslate nohighlight">\(\lambda\)</span> then gives the result in vector form :</p>
 <div class="math notranslate nohighlight">
 \[{\bf r}={\bf r}_0+\lambda{\bf v}\]</div>
@@ -812,75 +703,129 @@ The animation shows how the line is described as the parameter <span class="math
 <p>where <span class="math notranslate nohighlight">\({\bf r_0}=\begin{pmatrix} x_0\\y_0\\z_0\end{pmatrix}\)</span> is the position vector of a point on the line, and
 <span class="math notranslate nohighlight">\({\bf v}=\begin{pmatrix}  v_x\\v_y\\v_z\end{pmatrix}\)</span> is a vector parallel to the line.  Notice that the special case where <span class="math notranslate nohighlight">\(z\)</span> is constant
 gives an equation of the form <span class="math notranslate nohighlight">\(y = m x+c\)</span></p>
+<p>As an example, we can wfind the vector equation of the lines <span class="math notranslate nohighlight">\(\frac{3x+1}{2} = \frac{y−1}{2} = \frac{5−z}{3}\)</span>, by setting each of these to
+equal some constant <span class="math notranslate nohighlight">\(\lambda\)</span>, hence:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}x &amp;=&amp;\, \frac{1}{3}(2\lambda-1) = -\frac{1}{3} + \frac{2}{3}\lambda \\
+y &amp;=&amp;\, 1 + 2\lambda \\
+z &amp;=&amp;\, -(3\lambda -5) = 5 - 3 \lambda\end{split}\]</div>
+<p>and therefore the vector equation is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}{\bf r} = \begin{pmatrix} -1/3\\1\\5\end{pmatrix} + \lambda \begin{pmatrix} 2/30\\2\\-3\end{pmatrix}\end{split}\]</div>
 </div>
 <div class="section" id="equation-of-a-plane">
-<h3><span class="section-number">4.7.2. </span>Equation of a plane<a class="headerlink" href="#equation-of-a-plane" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.7.2. </span>Equation of a Plane<a class="headerlink" href="#equation-of-a-plane" title="Permalink to this headline">¶</a></h3>
 <p>The vector equation requires either three points (which cannot lie all on the same line), or a point and two non-parallel directions. The vector
-form of the equation is illustrated in {numref}</p>
+form of the equation is illustrated in <a class="reference internal" href="#vectorplane"><span class="std std-numref">Fig. 4.7</span></a>.</p>
 <p>In this description we carry from the origin to the known point identified by <span class="math notranslate nohighlight">\({\bf r}_0\)</span> and then carry along the resultant of
 vectors <span class="math notranslate nohighlight">\(\lambda{\bf v}\)</span> and <span class="math notranslate nohighlight">\(\mu{\bf w}\)</span>, which span a parallelogram within the plane.</p>
-<p>mapping a plane using a point and two vectors
-Figure 4.10 The vector equation of a plane passing through points <span class="math notranslate nohighlight">\(P,Q,R\)</span></p>
-<p>The position vector <span class="math notranslate nohighlight">\({\bf r}\)</span>, shown in red, describes an arbitrary point on the plane. It can be formed by the sum <span class="math notranslate nohighlight">\({\bf r}={\bf r}_0+\lambda{\bf v}+\mu{\bf w}\)</span>, where</p>
-<p><span class="math notranslate nohighlight">\({\bf r}_0=\overrightarrow{OP}\)</span> is a the position vector of one of the known points on the line,
-<span class="math notranslate nohighlight">\({\bf v}=\overrightarrow{PQ}\)</span> and <span class="math notranslate nohighlight">\({\bf w}=\overrightarrow{PR}\)</span> are known vectors that points in a different directions parallel to the plane.
-The arbitrary scalar parameters <span class="math notranslate nohighlight">\(\lambda\)</span> and <span class="math notranslate nohighlight">\(\mu\)</span> control how far along the line we carry. The animation shows how the plane is described as the parameters are varied.</p>
+<div class="figure align-default" id="vectorplane">
+<img alt="../_images/vector-plane.gif" src="../_images/vector-plane.gif" />
+<p class="caption"><span class="caption-number">Fig. 4.7 </span><span class="caption-text">The position vector <span class="math notranslate nohighlight">\({\bf r}\)</span>, shown in red, describes an arbitrary point on the plane. It can be formed by the
+sum <span class="math notranslate nohighlight">\({\bf r}={\bf r}_0+\lambda{\bf v}+\mu{\bf w}\)</span>, where <span class="math notranslate nohighlight">\({\bf r}_0=\overrightarrow{OP}\)</span> is a the position vector of one of the known points
+on the line,<span class="math notranslate nohighlight">\({\bf v}=\overrightarrow{PQ}\)</span> and <span class="math notranslate nohighlight">\({\bf w}=\overrightarrow{PR}\)</span> are known vectors that points in a different directions
+parallel to the plane. The arbitrary scalar parameters <span class="math notranslate nohighlight">\(\lambda\)</span> and <span class="math notranslate nohighlight">\(\mu\)</span> control how far along the line we carry. The animation shows how
+the plane is described as the parameters are varied.</span><a class="headerlink" href="#vectorplane" title="Permalink to this image">¶</a></p>
+</div>
 <p>Written out in scalar form, the vector equation of a plane gives :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f39ce272-96d9-4a7f-8c4e-b82e3c8cbe93">
-<span class="eqno">(4.1)<a class="headerlink" href="#equation-f39ce272-96d9-4a7f-8c4e-b82e3c8cbe93" title="Permalink to this equation">¶</a></span>\[\begin{align}\lambda v_x +\mu w_x &amp;= x-x_0\\\lambda v_y +\mu w_y &amp;= y-y_0\\\lambda v_z +\mu w_z &amp;= z-z_0\end{align}\]</div>
-<p>In principle, we could find the scalar equation for a plane by eliminating the parameters <span class="math notranslate nohighlight">\(\lambda,\mu\)</span> between these equations, which would lead to a relationship of the form <span class="math notranslate nohighlight">\(ax +by+cz=k\)</span>. However, we can avoid the messy algebra by obtaining the scalar equation in a different way.</p>
-<p>We can find the scalar equation of a plane if we know the position vector <span class="math notranslate nohighlight">\({\bf r}_0\)</span> of a point on the surface, and a vector <span class="math notranslate nohighlight">\(n\)</span> that is normal to the surface. Then, <span class="math notranslate nohighlight">\({\bf r}-{\bf r}_0\)</span> lies inside the plane, so it is perpendicular to <span class="math notranslate nohighlight">\(n\)</span>.
-This gives the result shown in Box 4.6.</p>
-<p>vector (r-r0) lies in the plane and is therefore perpendicular to the surface normal
-Figure 4.11</p>
-<p>We can find the scalar equation of a plane by using a normal vector <span class="math notranslate nohighlight">\({\bf n}\)</span> and a position vector <span class="math notranslate nohighlight">\({\bf r}_0\)</span>.
-We have <span class="math notranslate nohighlight">\(({\bf r}-{\bf r}_0).{\bf n}=0\)</span>.</p>
-<p>Box 4.6</p>
-<p>The scalar equation of a plane is given by</p>
-<p><span class="math notranslate nohighlight">\(({\bf r}-{\bf r}_0).{\bf n}=0\)</span></p>
-<p>where <span class="math notranslate nohighlight">\({\bf r}_0\)</span> is the position vector of a point in the plane, and <span class="math notranslate nohighlight">\({\bf n}\)</span> is a vector perpendicular to the plane.</p>
-<p>Expanding out the scalar product gives</p>
-<p><span class="math notranslate nohighlight">\(n_x x +n_y y + n_z z = k\)</span></p>
-<p>where <span class="math notranslate nohighlight">\(k=n_x x_0 +n_y y_0 + n_z z+0.\)</span></p>
-<p>In the case where we are given two vectors v,w lying inside the plane we can, of course, find a normal vector by making use of the vector product!</p>
-<p>So, we could write</p>
-<p><span class="math notranslate nohighlight">\(({\bf r}-{\bf r}_0).({\bf v}\times {\bf w})=0\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\lambda v_x +\mu w_x &amp;=&amp;\, x-x_0\\
+\lambda v_y +\mu w_y &amp;=&amp;\, y-y_0\\
+\lambda v_z +\mu w_z &amp;=&amp;\, z-z_0\end{split}\]</div>
+<p>In principle, we could find the scalar equation for a plane by eliminating the parameters <span class="math notranslate nohighlight">\(\lambda,\mu\)</span> between these equations, which would
+lead to a relationship of the form <span class="math notranslate nohighlight">\(ax +by+cz=k\)</span>. However, we can avoid the messy algebra by obtaining the scalar equation in a different way.</p>
+<p>We can find the scalar equation of a plane if we know the position vector <span class="math notranslate nohighlight">\(\bf r_0\)</span> of a point on the surface, and a vector <span class="math notranslate nohighlight">\(n\)</span> that is normal
+to the surface. Then, <span class="math notranslate nohighlight">\({\bf r}-{\bf r}_0\)</span> lies inside the plane, so it is perpendicular to <span class="math notranslate nohighlight">\(n\)</span>.</p>
+<p>This gives the result that the scalar equation of a plane is given by:</p>
+<div class="math notranslate nohighlight">
+\[({\bf r}-{\bf r}_0)\cdot{\bf n}=0\]</div>
+<p>where <span class="math notranslate nohighlight">\({\bf r}_0\)</span> is the position vector of a point in the plane, and <span class="math notranslate nohighlight">\({\bf n}\)</span> is a vector perpendicular to the plane.  We see this depicted
+in <a class="reference internal" href="#scalarplane"><span class="std std-numref">Fig. 4.8</span></a>.</p>
+<div class="figure align-default" id="scalarplane">
+<img alt="../_images/scalar-plane.png" src="../_images/scalar-plane.png" />
+<p class="caption"><span class="caption-number">Fig. 4.8 </span><span class="caption-text">We can find the scalar equation of a plane by using a normal vector <span class="math notranslate nohighlight">\({\bf n}\)</span> and a position vector <span class="math notranslate nohighlight">\({\bf r}_0\)</span>.
+We have <span class="math notranslate nohighlight">\(({\bf r}-{\bf r}_0)\cdot{\bf n}=0\)</span>.</span><a class="headerlink" href="#scalarplane" title="Permalink to this image">¶</a></p>
+</div>
+<p>Expanding out the scalar product gives:</p>
+<div class="math notranslate nohighlight">
+\[n_x x +n_y y + n_z z = k\]</div>
+<p>where <span class="math notranslate nohighlight">\(k=n_x x_0 +n_y y_0 + n_z z+0\)</span></p>
+<p>In the case where we are given two vectors <span class="math notranslate nohighlight">\(v,\,w\)</span> lying inside the plane we can, of course, find a normal vector by making use of the vector product!</p>
+<p>So, we could write:</p>
+<div class="math notranslate nohighlight">
+\[({\bf r}-{\bf r}_0)\cdot({\bf v}\times {\bf w})=0\]</div>
+<p>By way of an example, lets find the equation of the plane through the point <span class="math notranslate nohighlight">\((3,\,2,\,7)\)</span> which is perpendicular to the vector
+<span class="math notranslate nohighlight">\(\begin{pmatrix} 1\\-5\\8\end{pmatrix}\)</span>.</p>
+<p>In the scalar form we have:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix} x-3\\y-2\\z-7\end{pmatrix}\cdot \begin{pmatrix} 1 \\-5\\8\end{pmatrix} = 0\end{split}\]</div>
+<p>which gives <span class="math notranslate nohighlight">\(x - 5y + 8z = 49\)</span></p>
+<p>Equally in the cector form, first we must find two vectors which lie in the plane - we can use our scalar equation to find these,
+e.g. <span class="math notranslate nohighlight">\((1,\,0,\,6)\)</span> and <span class="math notranslate nohighlight">\(0,\,1,\,27/4)\)</span>, thus we can find the vectors:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}{\bf v_1} &amp;=&amp;\, \begin{pmatrix} x-3 \\ y-2 \\ z-7 \end{pmatrix}\Bigg|_{(1,\,0,\,6)} = \begin{pmatrix} -2 \\ -2 \\ -1\end{pmatrix}\\
+{\bf v_2} &amp;=&amp;\, \begin{pmatrix} x-3 \\ y-2 \\ z-7 \end{pmatrix}\Bigg|_{(0,\,1,\,27/4)} = \begin{pmatrix} -3 \\ -1 \\ -1/4 \end{pmatrix}\end{split}\]</div>
+<p>and therefore we have:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}{\bf r} = \lambda\begin{pmatrix} -2\\-2\\-1 \end{pmatrix} + \mu\begin{pmatrix} -3\\-1\\-1/4\end{pmatrix} + \begin{pmatrix} 1\\-5\\8\end{pmatrix}\end{split}\]</div>
+<p>which is just one of an infinite number of solutions!</p>
 </div>
 <div class="section" id="distance-between-a-point-and-a-line">
-<h3><span class="section-number">4.7.3. </span>Distance between a point and a line<a class="headerlink" href="#distance-between-a-point-and-a-line" title="Permalink to this headline">¶</a></h3>
-<p>The shortest distance between a point <span class="math notranslate nohighlight">\(C\)</span> and a line through points <span class="math notranslate nohighlight">\(A,B\)</span> is the perpendicular distance, <span class="math notranslate nohighlight">\(d=|\overrightarrow{AC}_{\perp}|\)</span>, illustrated in the figure below.</p>
-<p>AC can be split into components parallel and perpendicular to AB
-Figure 4.12</p>
-<p>The shortest distance from a point <span class="math notranslate nohighlight">\(C\)</span> to a line is given by <span class="math notranslate nohighlight">\(d=|\overrightarrow{AC}_{\perp}|\)</span>, as illustrated.</p>
-<p>This distance is equal to the height of the parallelogram spanned by vectors <span class="math notranslate nohighlight">\(\overrightarrow{AB}\)</span> and <span class="math notranslate nohighlight">\(\overrightarrow{AC}\)</span>, so it can be found using the vector product:</p>
-<p><span class="math notranslate nohighlight">\(d=\frac{|\overrightarrow{AB}\times\overrightarrow{AC}|}{|\overrightarrow{AB}|}\)</span>	4.15</p>
+<h3><span class="section-number">4.7.3. </span>Distance between a Point and a Line<a class="headerlink" href="#distance-between-a-point-and-a-line" title="Permalink to this headline">¶</a></h3>
+<p>The shortest distance between a point <span class="math notranslate nohighlight">\(C\)</span> and a line through points <span class="math notranslate nohighlight">\(A,B\)</span> is the perpendicular distance,
+<span class="math notranslate nohighlight">\(d=|\overrightarrow{AC}_{\perp}|\)</span>, illustrated in <a class="reference internal" href="#pointline"><span class="std std-numref">Fig. 4.9</span></a></p>
+<div class="figure align-default" id="pointline">
+<img alt="../_images/point_line.png" src="../_images/point_line.png" />
+<p class="caption"><span class="caption-number">Fig. 4.9 </span><span class="caption-text">The shortest distance from a point <span class="math notranslate nohighlight">\(C\)</span> to a line is given by <span class="math notranslate nohighlight">\(d=|\overrightarrow{AC}_{\perp}|\)</span>.</span><a class="headerlink" href="#pointline" title="Permalink to this image">¶</a></p>
+</div>
+<p>This distance is equal to the height of the parallelogram spanned by vectors <span class="math notranslate nohighlight">\(\overrightarrow{AB}\)</span> and <span class="math notranslate nohighlight">\(\overrightarrow{AC}\)</span>, so
+it can be found using the vector product:</p>
+<div class="math notranslate nohighlight">
+\[d=\frac{|\overrightarrow{AB}\times\overrightarrow{AC}|}{|\overrightarrow{AB}|}\]</div>
 <p>Alternatively, we could use the scalar product, since</p>
-<p><span class="math notranslate nohighlight">\(\overrightarrow{AC}=\overrightarrow{AC}_{\parallel}+\overrightarrow{AC}_{\perp}\)</span>	4.16
-in which the parallel component \overrightarrow{AC}_{\parallel} is simply the projection of <span class="math notranslate nohighlight">\(\overrightarrow{AC}\)</span> onto <span class="math notranslate nohighlight">\(\overrightarrow{AB}\)</span>.</p>
-<p>Example:</p>
-<p>Find the shortest distance between the point <span class="math notranslate nohighlight">\(C:(5,0,5)\)</span> and the line that passes through the points <span class="math notranslate nohighlight">\(A:(1,1,3)\)</span> and <span class="math notranslate nohighlight">\(B:(3,4,2)\)</span></p>
-<p>Using the vector product:</p>
-<p><span class="math notranslate nohighlight">\(\overrightarrow{AB}\times\overrightarrow{AC} = \left|\begin{array}{ccc}{\bf e}_x &amp; {\bf e}_y &amp; {\bf e}_z\\2&amp;3&amp;-1\\4&amp;-1&amp;2\end{array}\right|=5{\bf e}_x-8{\bf e}_y-14{\bf e}_z\)</span></p>
-<p><span class="math notranslate nohighlight">\(d=\frac{|\overrightarrow{AB}\times\overrightarrow{AC}|}{\overrightarrow{AB}}=\sqrt{\frac{285}{14}}\)</span></p>
-<p>Using the scalar product:</p>
-<p><span class="math notranslate nohighlight">\(\overrightarrow{AB}=\left(\begin{array}{c}2\\3\\-1\end{array}\right)\)</span>, <span class="math notranslate nohighlight">\(\overrightarrow{AC}=\left(\begin{array}{c}4\\-1\\-2\end{array}\right), \qquad |\overrightarrow{AC}_{\parallel}|=\overrightarrow{AC}.\frac{\overrightarrow{AB}}{|\overrightarrow{AB}|}=\frac{3}{\sqrt{14}}\)</span></p>
-<p><span class="math notranslate nohighlight">\(d=\sqrt{|\overrightarrow{AC}|^2-|\overrightarrow{AC}_{\parallel}|^2}=\sqrt{21-\frac{3}{14}}=\sqrt{\frac{285}{14}}\)</span></p>
-<p>4.4.4 Shortest distance to a plane</p>
-<p>The shortest distance between a point <span class="math notranslate nohighlight">\(P\)</span> and a plane containing the point <span class="math notranslate nohighlight">\(A\)</span> is the perpendicular distance, marked <span class="math notranslate nohighlight">\(d\)</span> in the figure below.</p>
-<p>to find the shortest distance from point P to the plane through A, project AP onto the unit normal
-Figure 4.13</p>
-<p>The shortest distance from a point <span class="math notranslate nohighlight">\(P\)</span> to a plane through <span class="math notranslate nohighlight">\(A\)</span> is the projection of <span class="math notranslate nohighlight">\(\overrightarrow{AP}\)</span> onto the unit normal</p>
+<div class="math notranslate nohighlight">
+\[\overrightarrow{AC}=\overrightarrow{AC}_{\parallel}+\overrightarrow{AC}_{\perp}\]</div>
+<p>in which the parallel component <span class="math notranslate nohighlight">\(\overrightarrow{AC}_{\parallel}\)</span> is simply the projection of <span class="math notranslate nohighlight">\(\overrightarrow{AC}\)</span> onto <span class="math notranslate nohighlight">\(\overrightarrow{AB}\)</span>.</p>
+<p>An example would be to find the shortest distance between the point <span class="math notranslate nohighlight">\(C:(5,0,5)\)</span> and the line that passes through the points <span class="math notranslate nohighlight">\(A:(1,1,3)\)</span> and
+<span class="math notranslate nohighlight">\(B:(3,4,2)\)</span>.  By using the vector product:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\overrightarrow{AB}\times\overrightarrow{AC} &amp;=&amp;\, \begin{vmatrix}\hat{\bf x} &amp; \hat{\bf y} &amp; \hat{\bf z}\\2&amp;3&amp;-1\\4&amp;-1&amp;2\end{vmatrix} =
+ 5\hat{\bf x} - 8\hat{\bf y} - 14\hat{\bf z} \\
+d &amp;=&amp;\, \frac{|\overrightarrow{AB}\times\overrightarrow{AC}|}{\overrightarrow{AB}}=\sqrt{\frac{285}{14}}\end{split}\]</div>
+<p>Or by using the scalar product:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\overrightarrow{AB} &amp;=&amp;\, \begin{pmatrix}2\\3\\-1\end{pmatrix}\\
+\overrightarrow{AC} &amp;=&amp;\, \begin{pmatrix}4\\-1\\-2\end{pmatrix} \\
+|\overrightarrow{AC}_{\parallel}| &amp;=&amp;\, \overrightarrow{AC}.\frac{\overrightarrow{AB}}{|\overrightarrow{AB}|}=\frac{3}{\sqrt{14}}
+d &amp;=&amp;\, \sqrt{|\overrightarrow{AC}|^2-|\overrightarrow{AC}_{\parallel}|^2}=\sqrt{21-\frac{3}{14}}=\sqrt{\frac{285}{14}}\end{split}\]</div>
+</div>
+<div class="section" id="shortest-distance-to-a-plane">
+<h3><span class="section-number">4.7.4. </span>Shortest Distance to a Plane<a class="headerlink" href="#shortest-distance-to-a-plane" title="Permalink to this headline">¶</a></h3>
+<p>The shortest distance between a point <span class="math notranslate nohighlight">\(P\)</span> and a plane containing the point <span class="math notranslate nohighlight">\(A\)</span> is the perpendicular distance, marked <span class="math notranslate nohighlight">\(d\)</span> in <a class="reference internal" href="#pointplane"><span class="std std-numref">Fig. 4.10</span></a></p>
+<div class="figure align-default" id="pointplane">
+<img alt="../_images/point_plane.png" src="../_images/point_plane.png" />
+<p class="caption"><span class="caption-number">Fig. 4.10 </span><span class="caption-text">The shortest distance from a point <span class="math notranslate nohighlight">\(P\)</span> to a plane through <span class="math notranslate nohighlight">\(A\)</span> is the projection of <span class="math notranslate nohighlight">\(\overrightarrow{AP}\)</span> onto the unit normal</span><a class="headerlink" href="#pointplane" title="Permalink to this image">¶</a></p>
+</div>
 <p>This distance is the given by projecting vector <span class="math notranslate nohighlight">\(\overrightarrow{AP}\)</span> onto the unit normal:</p>
-<p><span class="math notranslate nohighlight">\(d=|\overrightarrow{AP}.\hat{{\bf n}}|\)</span>	4.17
-The shortest distance between a line and a (non-intersecting) plane, two parallel planes, or two skew lines can be found in the same way, by picking any point on each line/plane. The case of two skew lines is illustrated below.</p>
-<p>the shortest distance between two skew lines</p>
-<p>Example:</p>
-<p>Find the shortest distance between the planes</p>
-<p><span class="math notranslate nohighlight">\(P_1: \enspace 3x-2y+4z=12, \qquad P_2: \enspace 6x-4y+8z=8\)</span></p>
-<p>Solution</p>
-<p>The two planes are parallel, with normal direction is <span class="math notranslate nohighlight">\({\bf n}=\left(\begin{array}{c}3\\-2\\4\end{array}\right)\)</span>.</p>
-<p>Pick a point on each plane. For example, on <span class="math notranslate nohighlight">\(P_1\)</span> pick the point <span class="math notranslate nohighlight">\(A:(0,0,3)\)</span> and on <span class="math notranslate nohighlight">\(P_2\)</span> pick the point <span class="math notranslate nohighlight">\(B:(0,0,1)\)</span>. The distance between the two planes is therefore given by</p>
-<p><span class="math notranslate nohighlight">\(|\overrightarrow{AB}.\hat{{\bf n}}|=\frac{|(0,0,-2).(3,2,-4)|}{\sqrt{3^2+2^2+4^2}}=\frac{8}{\sqrt{29}}\)</span></p>
+<div class="math notranslate nohighlight">
+\[d=|\overrightarrow{AP}.\hat{{\bf n}}|\]</div>
+<p>The shortest distance between a line and a (non-intersecting) plane, two parallel planes, or two skew lines can be found in the same way,
+by picking any point on each line/plane. The case of two skew lines is illustrated in <a class="reference internal" href="#skews"><span class="std std-numref">Fig. 4.11</span></a></p>
+<div class="figure align-default" id="skews">
+<img alt="../_images/skews.png" src="../_images/skews.png" />
+<p class="caption"><span class="caption-number">Fig. 4.11 </span><span class="caption-text">The shortest distance between two skew lines illustrated.</span><a class="headerlink" href="#skews" title="Permalink to this image">¶</a></p>
+</div>
+<p>An example here would be to find the shortest distance between the planes:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}P_1:&amp;&amp;\, 3x-2y+4z=12 \\
+P_2:&amp;&amp;\, 6x-4y+8z=8\end{split}\]</div>
+<p>Given that the two planes are parallel, with normal direction</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}{\bf n}=\left(\begin{array}{c}3\\-2\\4\end{array}\right)\end{split}\]</div>
+<p>We have to pick a point on each plane - For example, on <span class="math notranslate nohighlight">\(P_1\)</span> lets pick the point <span class="math notranslate nohighlight">\(A:(0,0,3)\)</span> and on <span class="math notranslate nohighlight">\(P_2\)</span> lets pick the point <span class="math notranslate nohighlight">\(B:(0,0,1)\)</span>.
+The distance between the two planes is therefore given by:</p>
+<div class="math notranslate nohighlight">
+\[|\overrightarrow{AB}.\hat{{\bf n}}|=\frac{|(0,0,-2).(3,2,-4)|}{\sqrt{3^2+2^2+4^2}}=\frac{8}{\sqrt{29}}\]</div>
 </div>
 </div>
 </div>
@@ -907,42 +852,54 @@ The shortest distance between a line and a (non-intersecting) plane, two paralle
 
               </div>
               
+        
             
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="lineintegrals.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">3. </span>Line Integrals</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="calculusonfields.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5. </span>Vector Fields</p>
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="lineintegrals.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title"><span class="section-number">3. </span>Line Integrals</p>
+            </div>
+        </a>
     </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+     <div id="next">
+        <a class="right-next" href="calculusonfields.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title"><span class="section-number">5. </span>Vector Fields</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
 </div>
-            
+        
         </div>
     </div>
     <footer class="footer">
-  <p>
-    
-      By Natural Sciences<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
+    <div class="container">
+      <p>
+        
+          By Natural Sciences<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
+  
   </body>
 </html>
