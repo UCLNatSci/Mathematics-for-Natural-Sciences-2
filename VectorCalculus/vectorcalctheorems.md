@@ -6,7 +6,7 @@ do and/or give us a better intution about a system.
 
 ## (Gauss-)Divergence Theorem
 Lets think about a closed surface $S$ in a space, this surface area therefore encloses a volume $V$, i.e. it forms the boundary $S = \partial V$ (not 
-to be confused with taking some partial derivative!), as depicated in {numref}`gaussdivergence`.
+to be confused with taking some partial derivative!), as depicted in {numref}`gaussdivergence`.
 
 ```{figure} ../figures/gaussdivergence.png
 ---
@@ -157,8 +157,8 @@ The relevant orientation of the closed contour used in Stoke's theorem.
 ```
 
 ### Stoke's Theorem Example
-Lets look at an example, with the vector field ${\bf G}({\bf r}) = \begin{pmatrix y \\ -z \\ -x^2 \end{pmatrix}$ over a closed path around the 
-origin, which we depict in {numref}`contourexample`:
+Lets look at an example, with the vector field ${\bf G}({\bf r}) = \begin{pmatrix} y \\ -z \\ -x^2 \end{pmatrix}$ over a closed path around a 
+circular arc around the origin, which we depict in {numref}`contourexample`:
 
 ```{figure} ../figures/contourexample.png
 ---
@@ -195,3 +195,53 @@ I &=&\, \iint_S \begin{pmatrix} 1\\ 2x\\ -1\end{pmatrix}\cdot \begin{pmatrix} 1\
 Therefore for quite a lot less work, we find the same result!
 
 ### A Sketch of a Proof
+
+Lets consider a vectorial surface area element $\mathrm{d}{\bf S} = \mathrm{d}x\,\mathrm{d}y\,\hat{\bf z}$, as depicted 
+in {numref}`infinitesimalcontour`:
+
+```{figure} ../figures/infinitesimalcontour.png
+---
+name: infinitesimalcontour
+---
+Closed infinitesimal contour around some point ${\bf r}$.
+```
+
+We can therefore find the loop integral of a vector field ${\bf G}({\bf r})$ around this contour as:
+
+```{math}
+
+dI &=&\, {\bf G}\left({\bf r} - \frac{1}{2}\mathrm{d}y\,\hat{\bf y} \right)\cdot \hat{\bf x}\,\mathrm{d}x 
++ {\bf G}\left({\bf r} + \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)\cdot \hat{\bf y}\,\mathrm{d}y \\
+&+&\,  {\bf G}\left({\bf r} + \frac{1}{2}\mathrm{d}y\,\hat{\bf y} \right)\cdot (-\hat{\bf x})\,\mathrm{d}x 
++ {\bf G}\left({\bf r} + \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)\cdot (-\hat{\bf y})\,\mathrm{d}y \\
+&=&\, \left[G_x \left({\bf r} - \frac{1}{2}\mathrm{d}y\,\hat{\bf y} \right) 
+- G_x\left({\bf r} + \frac{1}{2}\mathrm{d}y\,\hat{\bf y} \right) \right]\,\mathrm{d}x 
++ \left[ G_y\left({\bf r} + \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right) - G_y\left({\bf r} 
+- \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)\right]\,\mathrm{d}y
+```
+
+Taking a Taylor expansion around ${\bf G}({\bf r})$, we find:
+```{math}
+&=&\, -\partial_y G_x({\bf r})\,\mathrm{d}x\,\mathrm{d}y + \partial_x G_y({\bf r})\,\mathrm{d}x\,\mathrm{d}y \\
+&=&\, \Bigg(\nabla \times {\bf G}\Bigg)_z\,\mathrm{d}x\,\mathrm{d}y = \Bigg(\nabla \times {\bf G}\Bigg)\cdot \hat{\bf z}\,\mathrm{d}x\,\mathrm{d}y\\
+&=&\, \Bigg(\nabla \times {\bf G}\Bigg)\cdot\mathrm{d}{\bf S}
+```
+
+Which if we integrate up, we find $I = \iint_S (\nabla \times {\bf G})\cdot \mathrm{d}{\bf S}$.  Thinking carefully these loop integrals however, 
+if we sum up infinitesimal areas (plaquettes if you will), then along the surface neighbouring areas will have cancellation occuring, as depicted in
+{numref}`neighbouringcontours`:
+
+```{figure} ../figures/neighbouringcontours.png
+---
+name: neighbouringcontours
+---
+Neighbouring infinitesimal contours along some surface, we find that there will be a net cancellation occuring along shared sides.
+```
+
+This means that the only interbal contributions to summing up these loop integrals will be those along the boundary, hence:
+
+```{math}
+\int_S\,\mathrm{d}I = \int_{C=\partial S}{\bf G}\cdot \mathrm{d}{\bf r} = \iint_S (\nabla \times {\bf G})\cdot \mathrm{d}{\bf S}
+```
+
+which is the desired result.

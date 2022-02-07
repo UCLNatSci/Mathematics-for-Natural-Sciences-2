@@ -1,10 +1,10 @@
 {
   "LinearAlgebra\\linear_systems_matrices\\linear_transformations": {
-    "la_fig_3": {
+    "la_fig_2": {
       "output_type": "display_data",
       "metadata": {
         "scrapbook": {
-          "name": "la_fig_3",
+          "name": "la_fig_2",
           "mime_prefix": "application/papermill.record/"
         }
       },
@@ -12,11 +12,11 @@
         "application/papermill.record/text/plain": "<Figure size 684x288 with 2 Axes>"
       }
     },
-    "la_fig_4": {
+    "la_fig_3": {
       "output_type": "display_data",
       "metadata": {
         "scrapbook": {
-          "name": "la_fig_4",
+          "name": "la_fig_3",
           "mime_prefix": "application/papermill.record/"
         }
       },
@@ -36,6 +36,18 @@
         "application/papermill.record/text/plain": "<Figure size 684x288 with 2 Axes>"
       }
     },
+    "la_fig_4": {
+      "output_type": "display_data",
+      "metadata": {
+        "scrapbook": {
+          "name": "la_fig_4",
+          "mime_prefix": "application/papermill.record/"
+        }
+      },
+      "data": {
+        "application/papermill.record/text/plain": "<Figure size 684x288 with 2 Axes>"
+      }
+    },
     "la_fig_6": {
       "output_type": "display_data",
       "metadata": {
@@ -46,18 +58,6 @@
       },
       "data": {
         "application/papermill.record/text/plain": "<Figure size 720x194.4 with 3 Axes>"
-      }
-    },
-    "la_fig_2": {
-      "output_type": "display_data",
-      "metadata": {
-        "scrapbook": {
-          "name": "la_fig_2",
-          "mime_prefix": "application/papermill.record/"
-        }
-      },
-      "data": {
-        "application/papermill.record/text/plain": "<Figure size 684x288 with 2 Axes>"
       }
     },
     "la_fig_1": {
