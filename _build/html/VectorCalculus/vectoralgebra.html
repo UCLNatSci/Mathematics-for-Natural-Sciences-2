@@ -134,53 +134,58 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="volumeintegrals.html">
+   8. Multidimensional Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="surfaceintegrals.html">
-   8. Surface Integrals
+   9. Surface Integrals
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vectorcalctheorems.html">
-   9. Vector Calculus Theorems
+   10. Vector Calculus Theorems
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/setsnotation.html">
-   10. Set Theory
+   11. Set Theory
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/functions.html">
-   11. Functions
+   12. Functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/propositionallogic.html">
-   12. Propositional Logic
+   13. Propositional Logic
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/methodsofproof.html">
-   13. Techniques of Proof
+   14. Techniques of Proof
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/echelon_form.html">
-   14. Linear Systems of Equations
+   15. Linear Systems of Equations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/matrices.html">
-   15. Matrices
+   16. Matrices
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/linear_maps.html">
-   16. Linear Transformations
+   17. Linear Transformations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/inverse_determinant.html">
-   17. Inverse and Determinant
+   18. Inverse and Determinant
   </a>
  </li>
 </ul>
@@ -677,38 +682,29 @@ line. Equivalently, two known points on the line can also be used to find a para
 <p class="caption"><span class="caption-number">Fig. 4.6 </span><span class="caption-text">The vector equation of a line passing through two points <span class="math notranslate nohighlight">\(P,\,Q\)</span>. The position vector <span class="math notranslate nohighlight">\(\bf r\)</span>, shown in red, describes
 an arbitrary point on the line, it can be formed by the sum <span class="math notranslate nohighlight">\({\bf r}={\bf r}_0+\lambda{\bf v}\)</span>.</span><a class="headerlink" href="#positionvector" title="Permalink to this image">¶</a></p>
 </div>
-<p>An arbitrary scalar parameter <span class="math notranslate nohighlight">\(\lambda\)</span> controls how far along the line we move, and if it is negative then the direction is reversed. The animation shows how the line is described as the parameter <span class="math notranslate nohighlight">\(\lambda\)</span> is varied.</p>
+<p>An arbitrary scalar parameter <span class="math notranslate nohighlight">\(\lambda\)</span> controls how far along the line we move, and if it is negative then the direction is reversed.
+The animation shows how the line is described as the parameter <span class="math notranslate nohighlight">\(\lambda\)</span> is varied.</p>
 <p>We can also use the vector equation to calculate the corresponding scalar equation. From the vector equation we obtain:</p>
-<p><span class="math notranslate nohighlight">\(\left(\begin{array}{c}x \\y \\z \\\end{array}\right)=\left(\begin{array}{c}x_0 \\y_0 \\z_0 \\\end{array}\right)+\lambda \left(\begin{array}{c}v_x \\v_y \\v_z \\\end{array}\right).\)</span>	4.14
-Equating components on the left and right and rearranging in each equation for <span class="math notranslate nohighlight">\(\lambda\)</span> then gives the result shown in the box below. Notice that the special case where <span class="math notranslate nohighlight">\(z\)</span> is constant gives an equation of the form <span class="math notranslate nohighlight">\(y=m x+c.\)</span></p>
-<p>Box 4.5. Equation of a line</p>
-<p>In vector form :</p>
-<p><span class="math notranslate nohighlight">\({\bf r}={\bf r}_0+\lambda{\bf v}\)</span></p>
-<p>In scalar form :</p>
-<p><span class="math notranslate nohighlight">\(\frac{x-x_0}{v_x}=\frac{y-y_0}{v_y}=\frac{z-z_0}{v_z}\)</span></p>
-<p>where <span class="math notranslate nohighlight">\({\bf r_0}=\left(\begin{array}{c}x_0\\y_0\\z_0\end{array}\right)\)</span> is the position vector of a point on the line, and <span class="math notranslate nohighlight">\({\bf v}=\left(\begin{array}{c}v_x\\v_y\\v_z\end{array}\right)\)</span> is a vector parallel to the line.</p>
-<p>Questions 4.4.1.</p>
-<ol class="simple">
-<li><p>Write down the vector equation of the line passing through points <span class="math notranslate nohighlight">\((-2,1,3)\)</span> and <span class="math notranslate nohighlight">\((1,0,4)\)</span></p></li>
-<li><p>Write the vector equation of the line that is parallel to <span class="math notranslate nohighlight">\({\bf r}=\left(\begin{array}{c}1 \\2 \\3 \\\end{array}\right)+\lambda \left(\begin{array}{c}2 \\1 \\4 \\\end{array}\right)\)</span> and passes through the point <span class="math notranslate nohighlight">\((1,-2,3)\)</span>. Show that the point <span class="math notranslate nohighlight">\((7,1,15)\)</span> lies on this line.</p></li>
-<li><p>Show that the lines given by <span class="math notranslate nohighlight">\({\bf r}_1=\left(\begin{array}{c}1 \\2 \\3 \\\end{array}\right)+\lambda \left(\begin{array}{c}2 \\3 \\1 \\\end{array}\right)\)</span> and <span class="math notranslate nohighlight">\({\bf r}_2=\left(\begin{array}{c}2 \\1 \\5 \\\end{array}\right)+\mu \left(\begin{array}{c}1 \\-1 \\1 \\\end{array}\right)\)</span> are perpendicular.</p></li>
-<li><p>Find the point of intersection of the lines given by</p></li>
-</ol>
-<div class="amsmath math notranslate nohighlight" id="equation-85142e0d-0c3d-42cf-984f-5c8187a652bd">
-<span class="eqno">(4.1)<a class="headerlink" href="#equation-85142e0d-0c3d-42cf-984f-5c8187a652bd" title="Permalink to this equation">¶</a></span>\[\begin{align}{\bf r}_1&amp;=(3+2\lambda){\bf e}_x+(5+3\lambda){\bf e}_y+(1+4\lambda){\bf e}_z\\{\bf r}_2&amp;= (1+4 \mu){\bf e}_x+(16-\mu ){\bf e}_y+(7+3\mu){\bf e}_z\end{align}\]</div>
-<ol class="simple">
-<li><p>Lines which are not parallel and do not intersect are called skew. Show that the following two lines are skew:</p></li>
-</ol>
-<div class="amsmath math notranslate nohighlight" id="equation-8a38e05c-f13e-425e-a407-de57f434f155">
-<span class="eqno">(4.2)<a class="headerlink" href="#equation-8a38e05c-f13e-425e-a407-de57f434f155" title="Permalink to this equation">¶</a></span>\[\begin{align}{\bf r}_1&amp;=(1+2 \lambda ) {\bf e}_x+(1+12 \lambda ) {\bf e}_y+(1+4 \lambda) {\bf e}_z\\{\bf r}_2&amp;=(0+1\mu) {\bf e}_x+(1+\frac{15 \mu }{2}) {\bf e}_y+(2+3\mu) {\bf e}_z\end{align}\]</div>
-<ol class="simple">
-<li><p>Write down the vector equation of the lines <span class="math notranslate nohighlight">\(\frac{3 x+1}{2}=\frac{y-1}{2}=\frac{5-z}{3}\)</span></p></li>
-</ol>
+<div class="highlight-math notranslate"><div class="highlight"><pre><span></span>\left(\begin{array}{c}x \\y \\z \\\end{array}\right)=\left(\begin{array}{c}x_0 \\y_0 \\z_0 \\\end{array}\right) + 
+\lambda \left(\begin{array}{c}v_x \\v_y \\v_z \\\end{array}\right)
+</pre></div>
+</div>
+<p>Equating components on the left and right and rearranging in each equation for <span class="math notranslate nohighlight">\(\lambda\)</span> then gives the result in vector form :</p>
+<div class="math notranslate nohighlight">
+\[{\bf r}={\bf r}_0+\lambda{\bf v}\]</div>
+<p>or in scalar form:</p>
+<div class="math notranslate nohighlight">
+\[\frac{x-x_0}{v_x}=\frac{y-y_0}{v_y}=\frac{z-z_0}{v_z}\]</div>
+<p>where <span class="math notranslate nohighlight">\({\bf r_0}=\begin{pmatrix} x_0\\y_0\\z_0\end{pmatrix}\)</span> is the position vector of a point on the line, and
+<span class="math notranslate nohighlight">\({\bf v}=\begin{pmatrix}  v_x\\v_y\\v_z\end{pmatrix}\)</span> is a vector parallel to the line.  Notice that the special case where <span class="math notranslate nohighlight">\(z\)</span> is constant
+gives an equation of the form <span class="math notranslate nohighlight">\(y = m x+c\)</span></p>
 </div>
 <div class="section" id="equation-of-a-plane">
 <h3><span class="section-number">4.7.2. </span>Equation of a plane<a class="headerlink" href="#equation-of-a-plane" title="Permalink to this headline">¶</a></h3>
-<p>The vector equation requires either three points (which cannot lie all on the same line), or a point and two non-parallel directions. The vector form of the equation is illustrated in the figure below.</p>
-<p>In this description we carry from the origin to the known point identified by <span class="math notranslate nohighlight">\({\bf r}_0\)</span> and then carry along the resultant of vectors <span class="math notranslate nohighlight">\(\lambda{\bf v}\)</span> and <span class="math notranslate nohighlight">\(\mu{\bf w}\)</span>, which span a parallelogram within the plane.</p>
+<p>The vector equation requires either three points (which cannot lie all on the same line), or a point and two non-parallel directions. The vector
+form of the equation is illustrated in {numref}</p>
+<p>In this description we carry from the origin to the known point identified by <span class="math notranslate nohighlight">\({\bf r}_0\)</span> and then carry along the resultant of
+vectors <span class="math notranslate nohighlight">\(\lambda{\bf v}\)</span> and <span class="math notranslate nohighlight">\(\mu{\bf w}\)</span>, which span a parallelogram within the plane.</p>
 <p>mapping a plane using a point and two vectors
 Figure 4.10 The vector equation of a plane passing through points <span class="math notranslate nohighlight">\(P,Q,R\)</span></p>
 <p>The position vector <span class="math notranslate nohighlight">\({\bf r}\)</span>, shown in red, describes an arbitrary point on the plane. It can be formed by the sum <span class="math notranslate nohighlight">\({\bf r}={\bf r}_0+\lambda{\bf v}+\mu{\bf w}\)</span>, where</p>
@@ -716,8 +712,8 @@ Figure 4.10 The vector equation of a plane passing through points <span class="m
 <span class="math notranslate nohighlight">\({\bf v}=\overrightarrow{PQ}\)</span> and <span class="math notranslate nohighlight">\({\bf w}=\overrightarrow{PR}\)</span> are known vectors that points in a different directions parallel to the plane.
 The arbitrary scalar parameters <span class="math notranslate nohighlight">\(\lambda\)</span> and <span class="math notranslate nohighlight">\(\mu\)</span> control how far along the line we carry. The animation shows how the plane is described as the parameters are varied.</p>
 <p>Written out in scalar form, the vector equation of a plane gives :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-101002a9-0efa-488a-826d-9f3719f4cd6f">
-<span class="eqno">(4.3)<a class="headerlink" href="#equation-101002a9-0efa-488a-826d-9f3719f4cd6f" title="Permalink to this equation">¶</a></span>\[\begin{align}\lambda v_x +\mu w_x &amp;= x-x_0\\\lambda v_y +\mu w_y &amp;= y-y_0\\\lambda v_z +\mu w_z &amp;= z-z_0\end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-98c3eb9f-4d8b-42fa-b5b5-fcd472b7eaf7">
+<span class="eqno">(4.1)<a class="headerlink" href="#equation-98c3eb9f-4d8b-42fa-b5b5-fcd472b7eaf7" title="Permalink to this equation">¶</a></span>\[\begin{align}\lambda v_x +\mu w_x &amp;= x-x_0\\\lambda v_y +\mu w_y &amp;= y-y_0\\\lambda v_z +\mu w_z &amp;= z-z_0\end{align}\]</div>
 <p>In principle, we could find the scalar equation for a plane by eliminating the parameters <span class="math notranslate nohighlight">\(\lambda,\mu\)</span> between these equations, which would lead to a relationship of the form <span class="math notranslate nohighlight">\(ax +by+cz=k\)</span>. However, we can avoid the messy algebra by obtaining the scalar equation in a different way.</p>
 <p>We can find the scalar equation of a plane if we know the position vector <span class="math notranslate nohighlight">\({\bf r}_0\)</span> of a point on the surface, and a vector <span class="math notranslate nohighlight">\(n\)</span> that is normal to the surface. Then, <span class="math notranslate nohighlight">\({\bf r}-{\bf r}_0\)</span> lies inside the plane, so it is perpendicular to <span class="math notranslate nohighlight">\(n\)</span>.
 This gives the result shown in Box 4.6.</p>
@@ -735,13 +731,6 @@ We have <span class="math notranslate nohighlight">\(({\bf r}-{\bf r}_0).{\bf n}
 <p>In the case where we are given two vectors v,w lying inside the plane we can, of course, find a normal vector by making use of the vector product!</p>
 <p>So, we could write</p>
 <p><span class="math notranslate nohighlight">\(({\bf r}-{\bf r}_0).({\bf v}\times {\bf w})=0\)</span></p>
-<p>Questions 4.4.2</p>
-<ol class="simple">
-<li><p>Find the equation of the plane through the point (3,2,7) which is perpendicular to the vector <span class="math notranslate nohighlight">\(\left(\begin{array}{c}1 \\-5 \\8 \\\end{array}\right)\)</span>. Give your answer in vector form and in scalar form.</p></li>
-<li><p>Find the angle between the planes <span class="math notranslate nohighlight">\(3x+4y+5z=7\)</span> and <span class="math notranslate nohighlight">\(x+2y-2z=11\)</span></p></li>
-<li><p>Find the angle between the plane <span class="math notranslate nohighlight">\(2x-3y+z=11\)</span> and the line <span class="math notranslate nohighlight">\({\bf r}=\left(\begin{array}{c}-1 \\3 \\0 \end{array}\right)+\lambda \left(\begin{array}{c}2 \\-1 \\5 \\\end{array}\right)\)</span></p></li>
-<li><p>Find the line of intersection of the planes \begin{align}3x-y-5z&amp;=7\2x+3y-4z&amp;=-2\end{align}</p></li>
-</ol>
 </div>
 <div class="section" id="distance-between-a-point-and-a-line">
 <h3><span class="section-number">4.7.3. </span>Distance between a point and a line<a class="headerlink" href="#distance-between-a-point-and-a-line" title="Permalink to this headline">¶</a></h3>

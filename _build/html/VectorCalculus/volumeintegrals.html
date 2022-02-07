@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Multidimensional Integrals &#8212; Mathematics for Natural Sciences 2</title>
+    <title>8. Multidimensional Integrals &#8212; Mathematics for Natural Sciences 2</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -44,6 +44,8 @@
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -53,6 +55,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="9. Surface Integrals" href="surfaceintegrals.html" />
+    <link rel="prev" title="7. Coordinate Systems" href="coordinatesystems.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -93,7 +97,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="partialdifferentiation.html">
    1. Multivariable Calculus
@@ -129,54 +133,59 @@
    7. Coordinate Systems
   </a>
  </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   8. Multidimensional Integrals
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="surfaceintegrals.html">
-   8. Surface Integrals
+   9. Surface Integrals
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vectorcalctheorems.html">
-   9. Vector Calculus Theorems
+   10. Vector Calculus Theorems
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/setsnotation.html">
-   10. Set Theory
+   11. Set Theory
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/functions.html">
-   11. Functions
+   12. Functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/propositionallogic.html">
-   12. Propositional Logic
+   13. Propositional Logic
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/methodsofproof.html">
-   13. Techniques of Proof
+   14. Techniques of Proof
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/echelon_form.html">
-   14. Linear Systems of Equations
+   15. Linear Systems of Equations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/matrices.html">
-   15. Matrices
+   16. Matrices
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/linear_maps.html">
-   16. Linear Transformations
+   17. Linear Transformations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/inverse_determinant.html">
-   17. Inverse and Determinant
+   18. Inverse and Determinant
   </a>
  </li>
 </ul>
@@ -252,17 +261,24 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#area-integrals">
-   Area Integrals
+   8.1. Area Integrals
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#area-integral-examples">
+     8.1.1. Area Integral Examples
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#volume-integrals">
-   Volume Integrals
+   8.2. Volume Integrals
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#cartesian">
-   Cartesian
+  <a class="reference internal nav-link" href="#volume-integral-examples">
+   8.3. Volume Integral Examples
   </a>
  </li>
 </ul>
@@ -277,16 +293,51 @@
               <div>
                 
   <div class="section" id="multidimensional-integrals">
-<h1>Multidimensional Integrals<a class="headerlink" href="#multidimensional-integrals" title="Permalink to this headline">¶</a></h1>
-<p>Although we are used to find the area under a curve from the</p>
+<h1><span class="section-number">8. </span>Multidimensional Integrals<a class="headerlink" href="#multidimensional-integrals" title="Permalink to this headline">¶</a></h1>
+<p>Although we are used to find the area under a curve from the integral of a function <span class="math notranslate nohighlight">\(f(x)\)</span> over some limits <span class="math notranslate nohighlight">\(x \in [a,\, b]\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[A = \int_a^b f(x)\,\mathrm{d}x\]</div>
+<p>if we had some area described by a function <span class="math notranslate nohighlight">\(f(x,\,y)\)</span> we could try to find the area contained within this 2D shape.  Likewise if we have some
+function <span class="math notranslate nohighlight">\(f(x,\,y,\,z)\)</span> describing some shape in 3D space, we could aim to find the total volume contained in this shape.  We think of these
+as multidimensional integals as extending integral calculus to multivariables, akin to partial differentiation extending differential calculus
+to multivaribles.</p>
 <div class="section" id="area-integrals">
-<h2>Area Integrals<a class="headerlink" href="#area-integrals" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.1. </span>Area Integrals<a class="headerlink" href="#area-integrals" title="Permalink to this headline">¶</a></h2>
+<p>Formally we can think of some scalar field <span class="math notranslate nohighlight">\(\phi({\bf r})\)</span> which has as inputs <span class="math notranslate nohighlight">\(\bf r\)</span> which is some 2D position vector, which allows us to define:</p>
+<div class="math notranslate nohighlight">
+\[A = \int_A \phi({\bf r})\,\mathrm{d}A \]</div>
+<p>Conceptually we can think of <span class="math notranslate nohighlight">\(\mathrm{d}A\)</span> just like we do for the one variable case of integration, breaking up a shape into infintesimal blocks
+which we then sum up over the integral, as depicted in <a class="reference internal" href="#infinitesimalarea"><span class="std std-numref">Fig. 8.1</span></a>:</p>
+<div class="figure align-default" id="infinitesimalarea">
+<img alt="../_images/infinitesimalarea.png" src="../_images/infinitesimalarea.png" />
+<p class="caption"><span class="caption-number">Fig. 8.1 </span><span class="caption-text">Division of a 2-dimensional area A into infinitesimal area elements <span class="math notranslate nohighlight">\(\mathrm{d}A\)</span>.</span><a class="headerlink" href="#infinitesimalarea" title="Permalink to this image">¶</a></p>
+</div>
+<p>An area integral is a <b>double integral</b>, because we have to perform integrals over both the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> variables. When integrating over
+one variable, the other is held constant - akin to how we do partial differentiation too.</p>
+<div class="math notranslate nohighlight">
+\[I = \int_A \phi({\bf r})\,\mathrm{d}A = \iint_A\phi({\bf r})\,\mathrm{d}x\,\mathrm{d}y\]</div>
+<p>Note that an important special case is <span class="math notranslate nohighlight">\(\phi = 1\)</span>,
+where the area integral is equal to the total area, <span class="math notranslate nohighlight">\(A = \int_A \,\mathrm{d}A\)</span>.  Otherwise what we are finding is an area weighed by the function
+<span class="math notranslate nohighlight">\(\phi\)</span> - if <span class="math notranslate nohighlight">\(\phi(x,\,y)\)</span> describes a function plotted on the <span class="math notranslate nohighlight">\(z\)</span> axis, then the value of <span class="math notranslate nohighlight">\(\phi\)</span> in each infinitesimal box will be what is summed
+up by this area integral.</p>
+<p>The order of the integration can however sometimes matter - this becomes important if the limits of each of the integals depends on one of the other
+variables (this can happen as when the integration is done, all the other variables are considered constant).</p>
+<div class="section" id="area-integral-examples">
+<h3><span class="section-number">8.1.1. </span>Area Integral Examples<a class="headerlink" href="#area-integral-examples" title="Permalink to this headline">¶</a></h3>
+</div>
 </div>
 <div class="section" id="volume-integrals">
-<h2>Volume Integrals<a class="headerlink" href="#volume-integrals" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.2. </span>Volume Integrals<a class="headerlink" href="#volume-integrals" title="Permalink to this headline">¶</a></h2>
+<p>The concept of an area integral can be extended to volume integrals. The integration region is now a volume having some shape. The integration
+egion is divided up into volume elements <span class="math notranslate nohighlight">\(\mathrm{d}V\)</span>, and the function to be integrated <span class="math notranslate nohighlight">\(\phi({\bf r})\)</span> has a value in each element. Conceptually,
+the integral is the sum of all the contributions <span class="math notranslate nohighlight">\(\phi({\bf r])\,\mathrm{d}V\)</span> over all the elements, in the limit where the volume elements become
+infinitesimally small.  In Cartesian coordinates, the volume element is simply <span class="math notranslate nohighlight">\(\mathrm{d}V = \mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z\)</span>, and the volume
+integral can be expressed as a <b>triple integral</b> over x, y and z:</p>
+<div class="math notranslate nohighlight">
+\[I = \int_V \phi({\bf r})\,\mathrm{d}V = \iiint_V \phi(x,\,y,\,z)\,\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z\]</div>
 </div>
-<div class="section" id="cartesian">
-<h2>Cartesian<a class="headerlink" href="#cartesian" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="volume-integral-examples">
+<h2><span class="section-number">8.3. </span>Volume Integral Examples<a class="headerlink" href="#volume-integral-examples" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -319,6 +370,24 @@
 
 <div class='prev-next-bottom'>
     
+    <div id="prev">
+        <a class="left-prev" href="coordinatesystems.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title"><span class="section-number">7. </span>Coordinate Systems</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="surfaceintegrals.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title"><span class="section-number">9. </span>Surface Integrals</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
 
 </div>
         

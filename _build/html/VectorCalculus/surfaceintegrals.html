@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>8. Surface Integrals &#8212; Mathematics for Natural Sciences 2</title>
+    <title>9. Surface Integrals &#8212; Mathematics for Natural Sciences 2</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -55,8 +55,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="9. Vector Calculus Theorems" href="vectorcalctheorems.html" />
-    <link rel="prev" title="7. Coordinate Systems" href="coordinatesystems.html" />
+    <link rel="next" title="10. Vector Calculus Theorems" href="vectorcalctheorems.html" />
+    <link rel="prev" title="8. Multidimensional Integrals" href="volumeintegrals.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -133,54 +133,59 @@
    7. Coordinate Systems
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="volumeintegrals.html">
+   8. Multidimensional Integrals
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   8. Surface Integrals
+   9. Surface Integrals
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vectorcalctheorems.html">
-   9. Vector Calculus Theorems
+   10. Vector Calculus Theorems
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/setsnotation.html">
-   10. Set Theory
+   11. Set Theory
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/functions.html">
-   11. Functions
+   12. Functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/propositionallogic.html">
-   12. Propositional Logic
+   13. Propositional Logic
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ProofLogic/methodsofproof.html">
-   13. Techniques of Proof
+   14. Techniques of Proof
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/echelon_form.html">
-   14. Linear Systems of Equations
+   15. Linear Systems of Equations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/matrices.html">
-   15. Matrices
+   16. Matrices
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/linear_maps.html">
-   16. Linear Transformations
+   17. Linear Transformations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/inverse_determinant.html">
-   17. Inverse and Determinant
+   18. Inverse and Determinant
   </a>
  </li>
 </ul>
@@ -256,12 +261,12 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#calculating-surface-integrals">
-   8.1. Calculating Surface Integrals
+   9.1. Calculating Surface Integrals
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#examples">
-     8.1.1. Examples
+     9.1.1. Examples
     </a>
    </li>
   </ul>
@@ -278,7 +283,7 @@
               <div>
                 
   <div class="section" id="surface-integrals">
-<h1><span class="section-number">8. </span>Surface Integrals<a class="headerlink" href="#surface-integrals" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">9. </span>Surface Integrals<a class="headerlink" href="#surface-integrals" title="Permalink to this headline">¶</a></h1>
 <p>Now that we are happy with flat area and volume integrals, we can turn our attention to surfaces that are not flat, if we can break up the surface into area elements <span class="math notranslate nohighlight">\(\mathrm{d}A\)</span> and then
 integrate over the whole surface, we can use all the same techniques described so far to think about this.  It is typical to define here an area vector <span class="math notranslate nohighlight">\({\bf A}\)</span> which points outwards from a
 surface and is in the normal direction to it:</p>
@@ -287,10 +292,10 @@ surface and is in the normal direction to it:</p>
 <p>although sometimes for a curves surface we will use the letter <span class="math notranslate nohighlight">\(S\)</span> for the surface normal.  We can write the inifinitesimal area element as:</p>
 <div class="math notranslate nohighlight">
 \[\mathrm{d}{\bf S} = \hat{\bf n} \,\mathrm{d}S\]</div>
-<p>and this is depicted in <a class="reference internal" href="#surfacenormal"><span class="std std-numref">Fig. 8.1</span></a>.</p>
+<p>and this is depicted in <a class="reference internal" href="#surfacenormal"><span class="std std-numref">Fig. 9.1</span></a>.</p>
 <div class="figure align-default" id="surfacenormal">
 <img alt="../_images/surfacenormal.png" src="../_images/surfacenormal.png" />
-<p class="caption"><span class="caption-number">Fig. 8.1 </span><span class="caption-text">Some general surfece surface <span class="math notranslate nohighlight">\(S\)</span> with an infinitesimal surface element <span class="math notranslate nohighlight">\(\mathrm{d}{\bf S}\)</span>.</span><a class="headerlink" href="#surfacenormal" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 9.1 </span><span class="caption-text">Some general surfece surface <span class="math notranslate nohighlight">\(S\)</span> with an infinitesimal surface element <span class="math notranslate nohighlight">\(\mathrm{d}{\bf S}\)</span>.</span><a class="headerlink" href="#surfacenormal" title="Permalink to this image">¶</a></p>
 </div>
 <p>For any scalar field <span class="math notranslate nohighlight">\(f(r) = f(x,\, y,\, z)\)</span> that is defined on all the points of
 the surface <span class="math notranslate nohighlight">\(S\)</span> we can define the <b>Surface Integral</b> as:</p>
@@ -303,7 +308,7 @@ given by:</p>
 <p>We define this quantity as the <b>flux</b> of the vector field <span class="math notranslate nohighlight">\(\bf G\)</span> crossing the surface <span class="math notranslate nohighlight">\(S\)</span>.  Clearly as this has a scalar product, only the components parallel to <span class="math notranslate nohighlight">\(\hat{\bf n}\)</span> (perpendicular
 to <span class="math notranslate nohighlight">\(S\)</span>) will be summed over in the integral.</p>
 <div class="section" id="calculating-surface-integrals">
-<h2><span class="section-number">8.1. </span>Calculating Surface Integrals<a class="headerlink" href="#calculating-surface-integrals" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.1. </span>Calculating Surface Integrals<a class="headerlink" href="#calculating-surface-integrals" title="Permalink to this headline">¶</a></h2>
 <p>Similar to line integrals, we must parameterise the surface <span class="math notranslate nohighlight">\(S\)</span> in order for this integral to be possible, so we will pick
 <span class="math notranslate nohighlight">\(S = S({\bf r})\)</span> with <span class="math notranslate nohighlight">\({\bf r} = {\bf r}(s,\, t)\)</span> with <span class="math notranslate nohighlight">\(s \in[s_{min},\, s_{max}],\, t \in [t_{min},\, t_{max}]\)</span>.<br />
 This means that if we move from 2D parametrisation to a surface parameterisation, we can find infinitesimal changes
@@ -320,7 +325,7 @@ define vectors <span class="math notranslate nohighlight">\(\bf u,\, v\)</span> 
 \[\begin{split}I_f &amp;=&amp;\, \int_{s_{min}}^{s_{max}} \,\mathrm{d}s\,\int_{t_{min}}^{t_{max}} \, \mathrm{d}t\,f({\bf r}(s,\,t)\,\left| \frac{\partial {\bf r}}{\partial s} \times \frac{\partial {\bf r}}{\partial t} \right|\\
 I_{\bf G} &amp;=&amp;\, \int_{s_{min}}^{s_{max}} \,\mathrm{d}s\,\int_{t_{min}}^{t_{max}} \, \mathrm{d}t\,{\bf G}({\bf r}(s,\,t))\cdot\left(\frac{\partial {\bf r}}{\partial s} \times \frac{\partial {\bf r}}{\partial t} \right)\end{split}\]</div>
 <div class="section" id="examples">
-<h3><span class="section-number">8.1.1. </span>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.1.1. </span>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
 <p>An example, finding the surface area of a sphere with radius <span class="math notranslate nohighlight">\(R\)</span>, the most natural choice of <span class="math notranslate nohighlight">\(s,\,t\)</span> here would be angles <span class="math notranslate nohighlight">\(\theta,\, \phi\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}{\bf r}(\theta,\,\phi) = \begin{pmatrix} R\sin(\theta)\cos(\phi) \\ R \sin(\theta)\sin(\phi)\\ R \cos(\theta)\end{pmatrix}\end{split}\]</div>
@@ -362,7 +367,7 @@ Thus the surface has a coordinate vector of the form:</p>
 &amp;=&amp; \, \int_0^3\,\mathrm{d}x\,\int_0^3\,\mathrm{d}y\,\frac{3}{\sqrt{9 - x^2 - y^2}}\end{split}\]</div>
 <p>If we use a change of variable, <span class="math notranslate nohighlight">\(x = \sqrt{9-y^2}\sin(\varphi) \Rightarrow \mathrm{d}x = \sqrt{9-y^2}\cos(\varphi)\,\mathrm{d}\varphi\)</span> and therefore we have:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\iint \mathrm{d}S &amp;=&amp;\, \int_0^{\pi/2}\,\mathrm{d}\varphi \int_0^3 \,\mathrm{d}y \\
+\[\begin{split}\iint \mathrm{d}S &amp;=&amp;\, 3\int_0^{\pi/2}\,\mathrm{d}\varphi \int_0^3 \,\mathrm{d}y \\
 &amp;=&amp;\, \frac{9\pi}{2}\end{split}\]</div>
 <p>which corresponds to <span class="math notranslate nohighlight">\(\frac{1}{8}\)</span> of the full sphere’s surface area <span class="math notranslate nohighlight">\(36\pi\)</span>, as expected.</p>
 </div>
@@ -399,11 +404,11 @@ Thus the surface has a coordinate vector of the form:</p>
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="coordinatesystems.html" title="previous page">
+        <a class="left-prev" href="volumeintegrals.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">7. </span>Coordinate Systems</p>
+                <p class="prevnext-title"><span class="section-number">8. </span>Multidimensional Integrals</p>
             </div>
         </a>
     </div>
@@ -411,7 +416,7 @@ Thus the surface has a coordinate vector of the form:</p>
         <a class="right-next" href="vectorcalctheorems.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">9. </span>Vector Calculus Theorems</p>
+                <p class="prevnext-title"><span class="section-number">10. </span>Vector Calculus Theorems</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

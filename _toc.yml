@@ -13,8 +13,8 @@ chapters:
 - file: VectorCalculus/calculusonfields
 - file: VectorCalculus/divandcurl
 - file: VectorCalculus/coordinatesystems
+- file: VectorCalculus/volumeintegrals
 - file: VectorCalculus/surfaceintegrals
-# - file: VectorCalculus/volumeintegrals
 - file: VectorCalculus/vectorcalctheorems
 
 - file: ProofLogic/setsnotation

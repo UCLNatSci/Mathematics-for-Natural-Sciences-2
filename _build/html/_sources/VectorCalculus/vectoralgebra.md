@@ -397,56 +397,40 @@ The vector equation of a line passing through two points $P,\,Q$. The position v
 an arbitrary point on the line, it can be formed by the sum ${\bf r}={\bf r}_0+\lambda{\bf v}$.
 ```
 
-An arbitrary scalar parameter $\lambda$ controls how far along the line we move, and if it is negative then the direction is reversed. The animation shows how the line is described as the parameter $\lambda$ is varied.
-
-   
+An arbitrary scalar parameter $\lambda$ controls how far along the line we move, and if it is negative then the direction is reversed. 
+The animation shows how the line is described as the parameter $\lambda$ is varied.
 
 We can also use the vector equation to calculate the corresponding scalar equation. From the vector equation we obtain:
 
-$\left(\begin{array}{c}x \\y \\z \\\end{array}\right)=\left(\begin{array}{c}x_0 \\y_0 \\z_0 \\\end{array}\right)+\lambda \left(\begin{array}{c}v_x \\v_y \\v_z \\\end{array}\right).$	4.14
-Equating components on the left and right and rearranging in each equation for $\lambda$ then gives the result shown in the box below. Notice that the special case where $z$ is constant gives an equation of the form $y=m x+c.$
+```math
+\left(\begin{array}{c}x \\y \\z \\\end{array}\right)=\left(\begin{array}{c}x_0 \\y_0 \\z_0 \\\end{array}\right) + 
+\lambda \left(\begin{array}{c}v_x \\v_y \\v_z \\\end{array}\right)
+```
+Equating components on the left and right and rearranging in each equation for $\lambda$ then gives the result in vector form :
 
-    
+```{math} {\bf r}={\bf r}_0+\lambda{\bf v}
+```
 
-Box 4.5. Equation of a line
+or in scalar form:
 
-In vector form :
+```{math}
+\frac{x-x_0}{v_x}=\frac{y-y_0}{v_y}=\frac{z-z_0}{v_z}
+```
 
-${\bf r}={\bf r}_0+\lambda{\bf v}$
-
-In scalar form :
-
-$\frac{x-x_0}{v_x}=\frac{y-y_0}{v_y}=\frac{z-z_0}{v_z}$
-
-where ${\bf r_0}=\left(\begin{array}{c}x_0\\y_0\\z_0\end{array}\right)$ is the position vector of a point on the line, and ${\bf v}=\left(\begin{array}{c}v_x\\v_y\\v_z\end{array}\right)$ is a vector parallel to the line.
-
-    
-
-Questions 4.4.1.
-
-1. Write down the vector equation of the line passing through points $(-2,1,3)$ and $(1,0,4)$
-
-2. Write the vector equation of the line that is parallel to ${\bf r}=\left(\begin{array}{c}1 \\2 \\3 \\\end{array}\right)+\lambda \left(\begin{array}{c}2 \\1 \\4 \\\end{array}\right)$ and passes through the point $(1,-2,3)$. Show that the point $(7,1,15)$ lies on this line.
-
-3. Show that the lines given by ${\bf r}_1=\left(\begin{array}{c}1 \\2 \\3 \\\end{array}\right)+\lambda \left(\begin{array}{c}2 \\3 \\1 \\\end{array}\right)$ and ${\bf r}_2=\left(\begin{array}{c}2 \\1 \\5 \\\end{array}\right)+\mu \left(\begin{array}{c}1 \\-1 \\1 \\\end{array}\right)$ are perpendicular.
-
-4. Find the point of intersection of the lines given by
-
-\begin{align}{\bf r}_1&=(3+2\lambda){\bf e}_x+(5+3\lambda){\bf e}_y+(1+4\lambda){\bf e}_z\\{\bf r}_2&= (1+4 \mu){\bf e}_x+(16-\mu ){\bf e}_y+(7+3\mu){\bf e}_z\end{align}
-
-5. Lines which are not parallel and do not intersect are called skew. Show that the following two lines are skew:
-
-\begin{align}{\bf r}_1&=(1+2 \lambda ) {\bf e}_x+(1+12 \lambda ) {\bf e}_y+(1+4 \lambda) {\bf e}_z\\{\bf r}_2&=(0+1\mu) {\bf e}_x+(1+\frac{15 \mu }{2}) {\bf e}_y+(2+3\mu) {\bf e}_z\end{align}
-
-6. Write down the vector equation of the lines $\frac{3 x+1}{2}=\frac{y-1}{2}=\frac{5-z}{3}$
+where ${\bf r_0}=\begin{pmatrix} x_0\\y_0\\z_0\end{pmatrix}$ is the position vector of a point on the line, and 
+${\bf v}=\begin{pmatrix}  v_x\\v_y\\v_z\end{pmatrix}$ is a vector parallel to the line.  Notice that the special case where $z$ is constant 
+gives an equation of the form $y = m x+c$
 
     
 
 ### Equation of a plane
 
-The vector equation requires either three points (which cannot lie all on the same line), or a point and two non-parallel directions. The vector form of the equation is illustrated in the figure below.
+The vector equation requires either three points (which cannot lie all on the same line), or a point and two non-parallel directions. The vector 
+form of the equation is illustrated in {numref}
 
-In this description we carry from the origin to the known point identified by ${\bf r}_0$ and then carry along the resultant of vectors $\lambda{\bf v}$ and $\mu{\bf w}$, which span a parallelogram within the plane.
+
+In this description we carry from the origin to the known point identified by ${\bf r}_0$ and then carry along the resultant of 
+vectors $\lambda{\bf v}$ and $\mu{\bf w}$, which span a parallelogram within the plane.
 
    
 
@@ -497,19 +481,6 @@ In the case where we are given two vectors v,w lying inside the plane we can, of
 So, we could write
 
 $({\bf r}-{\bf r}_0).({\bf v}\times {\bf w})=0$
-
-    
-
-Questions 4.4.2
-
-1. Find the equation of the plane through the point (3,2,7) which is perpendicular to the vector $\left(\begin{array}{c}1 \\-5 \\8 \\\end{array}\right)$. Give your answer in vector form and in scalar form.
-
-2. Find the angle between the planes $3x+4y+5z=7$ and $x+2y-2z=11$
-
-3. Find the angle between the plane $2x-3y+z=11$ and the line ${\bf r}=\left(\begin{array}{c}-1 \\3 \\0 \end{array}\right)+\lambda \left(\begin{array}{c}2 \\-1 \\5 \\\end{array}\right)$
-
-4. Find the line of intersection of the planes \begin{align}3x-y-5z&=7\\2x+3y-4z&=-2\end{align}
-
      
 
 ### Distance between a point and a line
