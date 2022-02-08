@@ -329,8 +329,8 @@
 <div class="section" id="motivation">
 <h3><span class="section-number">15.1.1. </span>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">¶</a></h3>
 <p>Gaussian elimination is a systematic technique for solving systems of linear equations, which are of the form</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d73adfc2-7089-4a80-b2c2-d0c8111e9f98">
-<span class="eqno">(15.1)<a class="headerlink" href="#equation-d73adfc2-7089-4a80-b2c2-d0c8111e9f98" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-67451bb1-299b-457a-bc61-2ca4745bac1b">
+<span class="eqno">(15.1)<a class="headerlink" href="#equation-67451bb1-299b-457a-bc61-2ca4745bac1b" title="Permalink to this equation">¶</a></span>\[\begin{align}
 a_{1,1} x_1 + a_{1,2} x_2 + a_{1,3} x_3 + \dots + a_{1,n} x_n &amp;= b_1 \\
 
    a_{2,1} x_1 + a_{2,2} x_2 + a_{2,3} x_3 + \dots + a_{2,n} x_n &amp;= b_2\\
@@ -340,8 +340,8 @@ a_{1,1} x_1 + a_{1,2} x_2 + a_{1,3} x_3 + \dots + a_{1,n} x_n &amp;= b_1 \\
 <p>where <span class="math notranslate nohighlight">\(a_{i,j}\)</span> are constants. Usually there are the same number of equations as unknowns, so <span class="math notranslate nohighlight">\(m = n\)</span>.  If <span class="math notranslate nohighlight">\(m &lt; n\)</span> then the system is undetermined, if <span class="math notranslate nohighlight">\(m &gt; n\)</span>, the system is over constrained.</p>
 <div class="tip admonition">
 <p class="admonition-title">Example</p>
-<div class="amsmath math notranslate nohighlight" id="equation-58cef181-d568-4f86-b3ce-f720dc94af94">
-<span class="eqno">(15.2)<a class="headerlink" href="#equation-58cef181-d568-4f86-b3ce-f720dc94af94" title="Permalink to this equation">¶</a></span>\[\begin{align}4 x_1 - x_2 &amp;= 1\\ -2 x_1 + 3 x_2 &amp;= 12 \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-43cc2eb9-623f-4aed-a276-d493777bebeb">
+<span class="eqno">(15.2)<a class="headerlink" href="#equation-43cc2eb9-623f-4aed-a276-d493777bebeb" title="Permalink to this equation">¶</a></span>\[\begin{align}4 x_1 - x_2 &amp;= 1\\ -2 x_1 + 3 x_2 &amp;= 12 \end{align}\]</div>
 <p>Each equation here defines a line, and we are looking for a point which satisfies both equations, which means that the lines intersect.</p>
 <p>From the first line we obtain <span class="math notranslate nohighlight">\(x_2 = 4 x_1 - 1\)</span>, and by substituting this into the second line, we obtain <span class="math notranslate nohighlight">\(x = \frac{3}{2}\)</span>, <span class="math notranslate nohighlight">\(y = 5\)</span>. Two equations with two unknowns will always give a unique solution, unless the lines are parallel (and so the equations are just a scaling of each other).</p>
 <ul class="simple">
@@ -521,8 +521,8 @@ r_1 - r_2 &amp; \longrightarrow &amp; (r_1)\\
 <li><p>The first nonzero entry of a row is to the right of the first nonzero entry of the row above.</p></li>
 <li><p>Below the first nonzero entry of a row, all entries are zero.</p></li>
 </ol>
-<div class="amsmath math notranslate nohighlight" id="equation-363290d1-0b25-4fc9-9fee-fcfd9d8da86b">
-<span class="eqno">(15.3)<a class="headerlink" href="#equation-363290d1-0b25-4fc9-9fee-fcfd9d8da86b" title="Permalink to this equation">¶</a></span>\[\begin{pmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-2cda3099-f5d2-4563-b52d-fe5c8508876a">
+<span class="eqno">(15.3)<a class="headerlink" href="#equation-2cda3099-f5d2-4563-b52d-fe5c8508876a" title="Permalink to this equation">¶</a></span>\[\begin{pmatrix}
 \boxed{\star} &amp; \star &amp;\star &amp;\star &amp;\star \\
 0     &amp; \boxed{\star} &amp;\star &amp;\star &amp;\star \\
 0     &amp;  0    &amp; 0    &amp; \boxed{\star} &amp;\star \\
@@ -535,8 +535,8 @@ r_1 - r_2 &amp; \longrightarrow &amp; (r_1)\\
 <li><p>Each pivot is equal to 1.</p></li>
 <li><p>Each pivot is the only nonzero entry in its column.</p></li>
 </ol>
-<div class="amsmath math notranslate nohighlight" id="equation-ae697227-5ce4-4c78-99f4-e0fd87e4f074">
-<span class="eqno">(15.4)<a class="headerlink" href="#equation-ae697227-5ce4-4c78-99f4-e0fd87e4f074" title="Permalink to this equation">¶</a></span>\[\begin{pmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-71538e8b-a00f-43da-89b5-fe70bc6aff99">
+<span class="eqno">(15.4)<a class="headerlink" href="#equation-71538e8b-a00f-43da-89b5-fe70bc6aff99" title="Permalink to this equation">¶</a></span>\[\begin{pmatrix}
 1 &amp; 0 &amp;\star &amp; 0 &amp;\star \\
 0     &amp; 1 &amp;\star &amp;0 &amp;\star \\
 0     &amp;  0    &amp; 0    &amp; 1 &amp;\star \\
