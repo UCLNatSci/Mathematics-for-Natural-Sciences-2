@@ -168,7 +168,11 @@ $$T(e_1) = Ae_1 =\begin{pmatrix}-1 & 0\\0 & 1\end{pmatrix}\begin{pmatrix}1\\0\en
 
 $$T(e_2) = Ae_2 = \begin{pmatrix}-1 & 0\\0 & 1\end{pmatrix}\begin{pmatrix}0\\1\end{pmatrix}=\begin{pmatrix}0\\1\end{pmatrix}.$$
 
-```{glue:} la_fig_1
+```{figure} linear_transformations_2_0.png
+---
+height: 300px
+name: la_fig_1
+---
 ```
 
 Furthermore, once we know the transformed unit vectors, we can use the linearity of the transformation to determine how *any* vector is transformed. Given a vector $x = \begin{pmatrix}x_1\\x_2\end{pmatrix}$, we can write $x$ as a sum of unit co-ordinate vectors:
@@ -181,7 +185,11 @@ $$T(x) = Ax = A(x_1e_1 + x_2e_2) = x_1Ae_1 + x_2Ae_2 = x_1T(e_1) + x_2T(e_2).$$
 
 For example, the vector $e_1 + e_2$ is transformed to $T(e_1) + T(e_2)$ so we can use this to draw the image of the unit square which has vertices $0$, $e_1$, $e_2$ and $e_1 + e_2$:
 
-```{glue:} la_fig_2
+```{figure} linear_transformations_3_0.png
+---
+height: 300px
+name: la_fig_2
+---
 ```
 
 :::{admonition} Example
@@ -197,7 +205,11 @@ Ae_2 &= \begin{pmatrix}\frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}}\\\frac{1}{\sqrt{
 \end{align*}
 $$
 
-```{glue:} la_fig_5
+```{figure} linear_transformations_6_0.png
+---
+height: 300px
+name: la_fig_5
+---
 ```
 
 $A$ represent a rotation anticlockwise by $\pi/4$.
@@ -257,7 +269,11 @@ Determine the matrix of the linear transformation $T:\mathbb{R}^2 \rightarrow \m
 
 First, determine the transformation of the unit coordinate vectors.
 
-```{glue:} la_fig_3
+```{figure} linear_transformations_4_0.png
+---
+height: 300px
+name: la_fig_3
+---
 ```
 
 $$T(e_1) = \begin{pmatrix}0\\-1\end{pmatrix}\\
@@ -284,7 +300,11 @@ is the matrix of the transformation $T$.
 
 Suppose the linear transformation $T:\mathbb{R}^2 \rightarrow \mathbb{R}^2$ corresponds to an anticlockwise rotation by an angle $\theta$ around the origin. Then we can use trigonometry to determine the destination of the coordinate vectors under $T$:
 
-```{glue:} la_fig_4
+```{figure} linear_transformations_5_0.png
+---
+height: 300px
+name: la_fig_4
+---
 ```
 
 $$T(e_1) = \begin{pmatrix}\cos\theta\\\sin\theta\end{pmatrix}\\

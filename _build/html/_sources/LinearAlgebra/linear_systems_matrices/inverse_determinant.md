@@ -54,10 +54,11 @@ then $A$ is **invertible** and $B$ is the **inverse** of A.
 We write $B = A^{-1}$.
 ```
 
-```{glue:figure} la_fig_6
-:figwidth: 600px
-:name: "inverse_transformation"
-
+```{figure} linear_transformations_8_0.png
+---
+width: 600px
+name: inverse_transformation
+---
 If the matrix $A = R_{\pi/2}$ is a $\pi/2$ anticlockwise rotation about the origin then its inverse $A^{-1} = R_{3\pi/2}$ is a $\pi/2$ clockwise rotation about the origin. The matrix $A^{-1}A = I$ represents the identity transformation.
 ```
 
