@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>8. Multidimensional Integrals &#8212; Mathematics for Natural Sciences 2</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -43,9 +43,9 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -58,10 +58,7 @@
     <link rel="next" title="9. Surface Integrals" href="surfaceintegrals.html" />
     <link rel="prev" title="7. Coordinate Systems" href="coordinatesystems.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
+    <meta name="docsearch:language" content="en" />
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -237,7 +234,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -255,7 +252,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+        <div class="d-none d-md-block col-md-2 bd-toc show">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -278,11 +275,13 @@
   <a class="reference internal nav-link" href="#volume-integrals">
    8.2. Volume Integrals
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#volume-integral-examples">
-   8.3. Volume Integral Examples
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#volume-integral-examples">
+     8.2.1. Volume Integral Examples
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -292,50 +291,10 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Multidimensional Integrals</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#area-integrals">
-   8.1. Area Integrals
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#area-integral-examples">
-     8.1.1. Area Integral Examples
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#volume-integrals">
-   8.2. Volume Integrals
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#volume-integral-examples">
-   8.3. Volume Integral Examples
-  </a>
- </li>
-</ul>
-
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
+        
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="multidimensional-integrals">
+  <div class="section" id="multidimensional-integrals">
 <h1><span class="section-number">8. </span>Multidimensional Integrals<a class="headerlink" href="#multidimensional-integrals" title="Permalink to this headline">¶</a></h1>
 <p>Although we are used to find the area under a curve from the integral of a function <span class="math notranslate nohighlight">\(f(x)\)</span> over some limits <span class="math notranslate nohighlight">\(x \in [a,\, b]\)</span>:</p>
 <div class="math notranslate nohighlight">
@@ -359,28 +318,90 @@ which we then sum up over the integral, as depicted in <a class="reference inter
 one variable, the other is held constant - akin to how we do partial differentiation too.</p>
 <div class="math notranslate nohighlight">
 \[I = \int_A \phi({\bf r})\,\mathrm{d}A = \iint_A\phi({\bf r})\,\mathrm{d}x\,\mathrm{d}y\]</div>
-<p>Note that an important special case is <span class="math notranslate nohighlight">\(\phi = 1\)</span>,
-where the area integral is equal to the total area, <span class="math notranslate nohighlight">\(A = \int_A \,\mathrm{d}A\)</span>.  Otherwise what we are finding is an area weighed by the function
-<span class="math notranslate nohighlight">\(\phi\)</span> - if <span class="math notranslate nohighlight">\(\phi(x,\,y)\)</span> describes a function plotted on the <span class="math notranslate nohighlight">\(z\)</span> axis, then the value of <span class="math notranslate nohighlight">\(\phi\)</span> in each infinitesimal box will be what is summed
-up by this area integral.</p>
+<p>Note that an important special case is <span class="math notranslate nohighlight">\(\phi = 1\)</span>, where the area integral is equal to the total area, <span class="math notranslate nohighlight">\(A = \int_A \,\mathrm{d}A\)</span>.<br />
+Otherwise what we are finding is an area weighed by the function <span class="math notranslate nohighlight">\(\phi\)</span> - if <span class="math notranslate nohighlight">\(\phi(x,\,y)\)</span> describes a function plotted on the <span class="math notranslate nohighlight">\(z\)</span> axis,
+then the value of <span class="math notranslate nohighlight">\(\phi\)</span> in each infinitesimal box will be what is summedup by this area integral.</p>
 <p>The order of the integration can however sometimes matter - this becomes important if the limits of each of the integals depends on one of the other
 variables (this can happen as when the integration is done, all the other variables are considered constant).</p>
 <div class="section" id="area-integral-examples">
 <h3><span class="section-number">8.1.1. </span>Area Integral Examples<a class="headerlink" href="#area-integral-examples" title="Permalink to this headline">¶</a></h3>
+<p>Lets think about a flat 2D sheet with some density <span class="math notranslate nohighlight">\(\sigma(x,\,y)\)</span> (mass per unit area), as depcited in <a class="reference internal" href="#areaintegral"><span class="std std-numref">Fig. 8.2</span></a>,</p>
+<div class="figure align-default" id="areaintegral">
+<img alt="../_images/areaintegral.png" src="../_images/areaintegral.png" />
+<p class="caption"><span class="caption-number">Fig. 8.2 </span><span class="caption-text">Rectangular plate with some density <span class="math notranslate nohighlight">\(\sigma(x,\,y)\)</span>.</span><a class="headerlink" href="#areaintegral" title="Permalink to this image">¶</a></p>
+</div>
+<p>The total mass of the plate will be given by:</p>
+<div class="math notranslate nohighlight">
+\[M = \iint_A\sigma({\bf{r})\,\mathrm{d}A = \int_0^a\,\int_0^b\,\sigma(x,\,y)\,\mathrm{d}x\,\mathrm{d}y  
+= \int_0^a\,\mathrm{d}x\,\int_0^b\,\mathrm{d}y\,\sigma(x,\,y)\]</div>
+<p>where we use the final notation for brevity and ease of expression - it does not mean not to include the <span class="math notranslate nohighlight">\(\sigma\)</span> term in the evaluation of the integrals.</p>
+<ul class="simple">
+<li><p>If the rectangular plate has a uniform density, then <span class="math notranslate nohighlight">\(\sigma\)</span> is just a constant and we find:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[M = \sigma\,\int0^a\,\mathrm{d}x\,\int_0^b\,\mathrm{d}y = \sigma\,a\,b = \sigma \,A\]</div>
+<ul class="simple">
+<li><p>If the rectangular plate has a uniform density, then we need to evaluate the integrals in turn, e.g. for <span class="math notranslate nohighlight">\(\sigma(x,\, y) = y^2 + xy\)</span>, we can
+calculate the <span class="math notranslate nohighlight">\(y\)</span> integral first:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[M = \int_0^a\,\mathrm{d}x\,\int_0^b\,\mathrm{d}y\,(y^2 + xy) = \int_0^a\,\Bigg[\frac{1}{2}xy^2 + \frac{1}{3}y^3\Bigg]_0^b\,\mathrm{d}x = 
+\int_0^a\,\left(\frac{1}{2}x b^2 + \frac{1}{3}b^3\right)\,\mathrm{d}x\]</div>
+<p>This is now reduced the 2D integral to a 1D integral, which we can evaluate:</p>
+<div class="math notranslate nohighlight">
+\[M = \left[\frac{1}{4}x^2 b^2 + \frac{1}{3}b^3x\right]_0^a = \frac{1}{4}a^2b^2 + \frac{1}{3}ab^3\]</div>
+<p>If we reverse the order integration however, starting from the <span class="math notranslate nohighlight">\(x\)</span> integral, we find:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}M &amp;=&amp;\, \int_0^a\,\mathrm{d}x\,\int_0^b\,\mathrm{d}y\,(y^2 + xy) = \int_0^b\,\Bigg[\frac{1}{2}x^2y + xy^2\Bigg]_0^a\,\mathrm{d}y = 
+\int_0^a\,\left(\frac{1}{2}y a^2 + ay^2\right)\,\mathrm{d}y \\
+&amp;=&amp; \left[\frac{1}{4}y^2 a^2 + \frac{1}{3}ay^3\right]_0^a = \frac{1}{4}a^2b^2 + \frac{1}{3}ab^3\end{split}\]</div>
+<p>So we see in this case, the order of integration does not matter.</p>
+<p>Lets look a more involved example, <span class="math notranslate nohighlight">\(f(x,\,y) = x^2 + 2xy\)</span> and we are interested in an area over a triangle, as depicted in <a class="reference internal" href="#areaintegraltriangle"><span class="std std-numref">Fig. 8.3</span></a>:</p>
+<div class="figure align-default" id="areaintegraltriangle">
+<img alt="../_images/areaintegraltriangle.png" src="../_images/areaintegraltriangle.png" />
+<p class="caption"><span class="caption-number">Fig. 8.3 </span><span class="caption-text">Triangular area with some function <span class="math notranslate nohighlight">\(f(x,\,y) = x^2 + 2xy\)</span> defined over it.</span><a class="headerlink" href="#areaintegraltriangle" title="Permalink to this image">¶</a></p>
+</div>
+<p>We see here that the limits of the two integrals cannot both be constant - upper limit of the <span class="math notranslate nohighlight">\(y\)</span> integral will change depending on the value of <span class="math notranslate nohighlight">\(x\)</span>
+(or vice-versa), hence <span class="math notranslate nohighlight">\(x \in[0,\, 1]\)</span> and <span class="math notranslate nohighlight">\(y \in [0,\, 1-x]\)</span> is one way to think about this area:</p>
+<div class="math notranslate nohighlight">
+\[I = \iint f(x,\,y)\,\mathrm{d}A = \int_0^1\,\mathrm{d}x\,\int_0^{1-x}\,\mathrm{d}y\,(x^2 + 2xy)\]</div>
+<p>Now that there is some function of <span class="math notranslate nohighlight">\(x\)</span> in the limit, this says evaluate the <span class="math notranslate nohighlight">\(y\)</span> integral first and the <span class="math notranslate nohighlight">\(x\)</span> integral last:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}I &amp;=&amp;\, \int_0^1\,\mathrm{d}x\,\Bigg[x^2y + xy^2\Bigg]_0^{1-x}  = \int_0^1\,\mathrm{d}x\,\Bigg[x^2(1-x) + x(1-x)^2\Bigg] \\
+&amp;=&amp;\, \int_0^1\,\mathrm{d}x\,(x-x^2) = \Bigg[\frac{1}{2}x^2 - \frac{1}{3}x^3 \Bigg]_0^1 = \frac{1}{6}\end{split}\]</div>
+<p>We can also switch round the integration, but choosing to have <span class="math notranslate nohighlight">\(y \in [0,\, 1],\, x \in [0,\, 1-y]\)</span>, which means that:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}I &amp;=&amp;\, \int_0^{1-y}\,\mathrm{d}x\,\int_0^{1}\,\mathrm{d}y\,(x^2 + 2xy) = \int_0^1\,\mathrm{d}y\,\Bigg[\frac{1}{3}x^3 + x^2y\Bigg]_0^{1-y}  \\
+&amp;=&amp;\, \int_0^1\,\mathrm{d}y\,\Bigg[\frac{1}{3}(1-y)^3 + y(1-y)^2\Bigg] = \int_0^1\,\mathrm{d}y\,\left(\frac{2}{3}y^3 - y^2 + \frac{1}{3}\right) 
+= \Bigg[\frac{1}{6}y^4 - \frac{1}{3}y^3 +\frac{1}{3}y\Bigg]_0^1 = \frac{1}{6}\end{split}\]</div>
+<p>A final example looks at a trickier set of limits, lets try and calculate the integral <span class="math notranslate nohighlight">\(I = \iint_A x^2y\,\mathrm{d}A\)</span> for an area composed of
+a rectangle and a semi-circle, as depicted in <a class="reference internal" href="#areaintegralsemicircle"><span class="std std-numref">Fig. 8.4</span></a>:</p>
+<div class="figure align-default" id="areaintegralsemicircle">
+<img alt="../_images/areaintegralsemicircle.png" src="../_images/areaintegralsemicircle.png" />
+<p class="caption"><span class="caption-number">Fig. 8.4 </span><span class="caption-text">Area shown as a shaded region composed of a rectangle and a half circle.</span><a class="headerlink" href="#areaintegralsemicircle" title="Permalink to this image">¶</a></p>
+</div>
+<p>If we pick <span class="math notranslate nohighlight">\(x \in [-1,\,1]\)</span>, then the <span class="math notranslate nohighlight">\(y\)</span> limits should be between the lower limit <span class="math notranslate nohighlight">\(y = -1\)</span> and the upper limit at the semi-circle edge.<br />
+Given that <span class="math notranslate nohighlight">\(x^2 + y^2 = 1\)</span> is the equation of this line, then <span class="math notranslate nohighlight">\(y = \sqrt{1-x^2}\)</span>, hence <span class="math notranslate nohighlight">\(y \in [-1,\, \sqrt{1-x^2}]\)</span>, so the area is found by:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}I &amp;=&amp;\, \int_{-1}^1 \,\mathrm{d}x\,\int_{-1}^{\sqrt{1-x^2}}x^2y\,\mathrm{d}y = 
+\int_{-1}^1\Bigg[\frac{1}{2}x^2y^2\Bigg]_{-1}^{\sqrt{1-x^2}} \,\mathrm{d}x\\
+&amp;=&amp;\, \frac{1}{2}\int_{-1}^1\left(x^2(1-x^2) - x^2\right) \,\mathrm{d}x = -\frac{1}{2}\int_{-1}^1 x^4\,\mathrm{d}x = -\frac{1}{5}\end{split}\]</div>
+<p>We could do this integral the other way round, but this is quite a bit tricker!</p>
+<p>In fact the choice of coordinates we choose will not change the value of the integral either, as we will see later.</p>
 </div>
 </div>
 <div class="section" id="volume-integrals">
 <h2><span class="section-number">8.2. </span>Volume Integrals<a class="headerlink" href="#volume-integrals" title="Permalink to this headline">¶</a></h2>
 <p>The concept of an area integral can be extended to volume integrals. The integration region is now a volume having some shape. The integration
 egion is divided up into volume elements <span class="math notranslate nohighlight">\(\mathrm{d}V\)</span>, and the function to be integrated <span class="math notranslate nohighlight">\(\phi({\bf r})\)</span> has a value in each element. Conceptually,
-the integral is the sum of all the contributions <span class="math notranslate nohighlight">\(\phi({\bf r])\,\mathrm{d}V\)</span> over all the elements, in the limit where the volume elements become
+the integral is the sum of all the contributions <span class="math notranslate nohighlight">\(\phi({\bf r})\,\mathrm{d}V\)</span> over all the elements, in the limit where the volume elements become
 infinitesimally small.  In Cartesian coordinates, the volume element is simply <span class="math notranslate nohighlight">\(\mathrm{d}V = \mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z\)</span>, and the volume
-integral can be expressed as a <b>triple integral</b> over x, y and z:</p>
+integral can be expressed as a <b>triple integral</b> over <span class="math notranslate nohighlight">\(x, \,y,\, z\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[I = \int_V \phi({\bf r})\,\mathrm{d}V = \iiint_V \phi(x,\,y,\,z)\,\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z\]</div>
-</div>
 <div class="section" id="volume-integral-examples">
-<h2><span class="section-number">8.3. </span>Volume Integral Examples<a class="headerlink" href="#volume-integral-examples" title="Permalink to this headline">¶</a></h2>
+<h3><span class="section-number">8.2.1. </span>Volume Integral Examples<a class="headerlink" href="#volume-integral-examples" title="Permalink to this headline">¶</a></h3>
+</div>
 </div>
 </div>
 
@@ -406,42 +427,54 @@ integral can be expressed as a <b>triple integral</b> over x, y and z:</p>
 
               </div>
               
+        
             
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="coordinatesystems.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">7. </span>Coordinate Systems</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="surfaceintegrals.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">9. </span>Surface Integrals</p>
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="coordinatesystems.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title"><span class="section-number">7. </span>Coordinate Systems</p>
+            </div>
+        </a>
     </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+     <div id="next">
+        <a class="right-next" href="surfaceintegrals.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title"><span class="section-number">9. </span>Surface Integrals</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
 </div>
-            
+        
         </div>
     </div>
     <footer class="footer">
-  <p>
-    
-      By Natural Sciences<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
+    <div class="container">
+      <p>
+        
+          By Natural Sciences<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
+  
   </body>
 </html>
