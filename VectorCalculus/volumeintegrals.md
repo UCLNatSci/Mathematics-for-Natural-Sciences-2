@@ -224,7 +224,7 @@ V &=&\, \iiint\,\mathrm{d}V = \int_0^R r\,\mathrm{d}r\,\int_0^{2\pi}\,\mathrm{d}
 ```
 as expected.
 
-A more complciated example would be to find the volume integral of $f(x,\,y) = x^2y$ over a tetrahedral volume, bounded by the $x-y$, $y-z$ and $x-z$ axes 
+A more complicated example would be to find the volume integral of $f(x,\,y) = x^2y$ over a tetrahedral volume, bounded by the $x-y$, $y-z$ and $x-z$ axes 
 as well as $x + y+ z = 1$, since all the bounding surfaces are symmetric in $x,\, y,\, z$, there is no initial preference in integration order, 
 however the integrand does not contain $z$ so this is likely to be the easiest initial integral to compute, therefore:
 
