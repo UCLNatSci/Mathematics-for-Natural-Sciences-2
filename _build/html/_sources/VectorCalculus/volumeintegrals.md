@@ -187,3 +187,61 @@ V &=&\, \iiint\,\mathrm{d}V = \int_{-1}^1\,\mathrm{d}x\,\int_{-1}^1\,\mathrm{d}y
 &=&\, 2\int_{-1}^1\,\mathrm{d}x\,\Bigg(x^2 + \frac{2}{3} \Bigg)\\
 &=&\, 2\Bigg[\frac{1}{3}x^3 +\frac{2}{3}x\Bigg]_{-1}^1 = 4
 ```
+
+If we wanted to find the volume of a sphere of radius $R$, we could calculate this using cartesian coordinates, where 
+$x \in [-R,\, R]$ and then akin to the circle area in 2D $y \in[-\sqrt{R^2 - x^2},\,-\sqrt{R^2 - x^2}]$ and finally to elevate this 
+to a volume in 3D $z \in[-\sqrt{R^2 - x^2 - y^2},\,-\sqrt{R^2 - x^2 - y^2}]$
+
+```{math}
+V = \iiint\,\mathrm{d}V = \int_{-R}^R \,\mathrm{d}y\,\int_{-\sqrt{R^2 - x^2}}^{\sqrt{R^2 - x^2}}\,
+\mathrm{d}y\,\int_{-\sqrt{R^2 - x^2-y^2}}^{\sqrt{R^2 - x^2-y^2}} \,\mathrm{d}z
+```
+truely a nightmare to solve!  
+
+Instead lets switch to spherical polar coordinates, with $r \in[0, \,R],\, \theta \in [0,\,\pi],\, \phi \in [0,\, 2\pi]$:
+
+```{math}
+V &=&\, \iiint\,\mathrm{d}V = \int_0^R r^2\,\mathrm{d}r\,\int_0^\pi\sin(\theta)\,\mathrm{d}\theta\,\int_0^{2\pi}\,\mathrm{d}\phi \\
+&=&\, 4\pi\Bigg[\frac{1}{3}r^3\Bigg]_0^R = \frac{4}{3}\pi R^3
+```
+as expected.
+
+Likewise we could find the volume of a cylinder with radius $R$ and height $H$ (recall this could be done through a solid of revolution type 
+calculation, but here we aim to think about 3D axes), in Cartesian coordinates this would take the form of $x \in [-R,\, R]$ then in 2D 
+the circular cross section would be found through $y \in [-\sqrt{R^2 - x^2},\,\sqrt{R^2 - x^2}]$ and then the height $z \in [0,\, H]$, giving:
+
+```{math}
+V = \iiint\,\mathrm{d}V = \int_{-R}^R \,\mathrm{d}y\,\int_{-\sqrt{R^2 - x^2}}^{\sqrt{R^2 - x^2}}\,
+\mathrm{d}y\,\int_{0}^{H} \,\mathrm{d}z
+```
+still not a great integral to compute, an integration variable chagne would be required.  
+
+In cylindrical polar coordinates however, $r \in[0, R], \theta \in [0,\, 2\pi],\, z \in [0,\, H]$:
+
+```{math}
+V &=&\, \iiint\,\mathrm{d}V = \int_0^R r\,\mathrm{d}r\,\int_0^{2\pi}\,\mathrm{d}\theta\,\int_0^{H}\,\mathrm{d}z \\
+&=&\, 2\pi H \Bigg[\frac{1}{2}r^2\Bigg]_0^R = \pi R^2 H
+```
+as expected.
+
+A more complciated example would be to find the volume integral of $f(x,\,y) = x^2y$ over a tetrahedral volume, bounded by the $x-y$, $y-z$ and $x-z$ axes 
+as well as $x + y+ z = 1$, since all the bounding surfaces are symmetric in $x,\, y,\, z$, there is no initial preference in integration order, 
+however the integrand does not contain $z$ so this is likely to be the easiest initial integral to compute, therefore:
+
+```{math}
+I = \iiint\,\mathrm{d}V\,x^2y 
+```
+
+with $x = 0, \,y = 0,\, z = 0$ up to the plane $x + y + z = 1$.  Therefore in the $z$ plane the limits are $z \in[0,\, 1 - x - y]$ and likewise in the 
+$y$ plane the limits would be $y \in [0,\, 1-x]$ (since $z=0$ along this plane), hence along with $x \in[0,\, 1]$:
+
+```{math}
+I &=&\, \int_0^1\,\mathrm{d}x\,\int_0^{1-x}\,\mathrm{d}y\,\int_0^{1-x-y}x^2y\,\mathrm{d}z \\
+&=&\, \int_0^1\,\mathrm{d}x\,\int_0^{1-x}\,\mathrm{d}y\Bigg[x^2yz \Bigg]_0^{1-x-y}\\
+&=&\, \int_0^1\,\mathrm{d}x\,\int_0^{1-x}\,\mathrm{d}y\left(x^2y(1-x-y)\right)\\
+&=&\, \int_0^1\,\mathrm{d}x\,\int_0^{1-x}\left(x^2y-x^3y-x^2y^2\right)\,\mathrm{d}y\\
+&=&\, \int_0^1\,\mathrm{d}x\,\int_0^{1-x}\Bigg[\frac{1}{2}x^2y^2-\frac{1}{2}x^3y^2-\frac{1}{3}x^2y^3\Bigg]_0^{1-x}\\
+&=&\, \frac{1}{6}\int_0^1\left(x^2 - 3x^3 + 3x^4 - x^5\right)\,\mathrm{d}x \\
+&=&\, \frac{1}{6}\Bigg[\frac{1}{3}x^3 - \frac{3}{4}x^4 + \frac{3}{5}x^5 - \frac{1}{6}x^6\Bigg]_0^{1}= \frac{1}{360}
+
+```

@@ -421,9 +421,7 @@ C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\function_base.py:128: Runtim
   stop  = asanyarray(stop)  * 1.0
 C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\function_base.py:134: RuntimeWarning: divide by zero encountered in double_scalars
   delta = stop - start
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\function_base.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\function_base.py:141: RuntimeWarning: divide by zero encountered in double_scalars
   step = delta / div
 C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\_methods.py:56: RuntimeWarning: divide by zero encountered in reduce
   return umr_any(a, axis, dtype, out, keepdims)
@@ -473,7 +471,9 @@ C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\colors.py:588: RuntimeWarnin
   xa[xa &lt; 0] = self._i_under
 C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\fromnumeric.py:87: RuntimeWarning: divide by zero encountered in reduce
   return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\figure.py:321: RuntimeWarning: divide by zero encountered in isfinite
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\figure.py:321: RuntimeWarning: divide by zero encountered in isfinite
   if not np.isfinite(figsize).all() or (np.array(figsize) &lt; 0).any():
 C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\_methods.py:62: RuntimeWarning: divide by zero encountered in reduce
   return umr_all(a, axis, dtype, out, keepdims)
@@ -679,9 +679,7 @@ C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:2870: RuntimeW
   return a - rtol &lt;= val &lt;= b + rtol
 C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:2870: RuntimeWarning: divide by zero encountered in less_equal
   return a - rtol &lt;= val &lt;= b + rtol
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\text.py:360: RuntimeWarning: divide by zero encountered in double_scalars
+C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\text.py:360: RuntimeWarning: divide by zero encountered in double_scalars
   width = xmax - xmin
 C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\text.py:361: RuntimeWarning: divide by zero encountered in double_scalars
   height = ymax - ymin
@@ -701,7 +699,9 @@ C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:2589: RuntimeW
   self._mtx = np.array([[x_scale, 0.0    , (-inl*x_scale)],
 C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:2590: RuntimeWarning: divide by zero encountered in double_scalars
   [0.0    , y_scale, (-inb*y_scale)],
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:635: RuntimeWarning: divide by zero encountered in add
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:635: RuntimeWarning: divide by zero encountered in add
   return Bbox(self._points + (tx, ty))
 C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\text.py:689: RuntimeWarning: divide by zero encountered in isfinite
   if not np.isfinite(posx) or not np.isfinite(posy):
@@ -711,7 +711,9 @@ C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\text.py:710: RuntimeWarning:
   y = y + posy
 C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\text.py:712: RuntimeWarning: divide by zero encountered in double_scalars
   y = canvash - y
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\axis.py:2076: RuntimeWarning: divide by zero encountered in double_scalars
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\axis.py:2076: RuntimeWarning: divide by zero encountered in double_scalars
   (x, bottom - self.labelpad * self.figure.dpi / 72)
 C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\axis.py:2108: RuntimeWarning: divide by zero encountered in double_scalars
   y = bottom - self.OFFSETTEXTPAD * self.figure.dpi / 72
@@ -839,11 +841,11 @@ C:\Users\Ali\anaconda3\lib\site-packages\numpy\lib\arraysetops.py:432: RuntimeWa
   mask = aux[1:] == aux[:-1]
 C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\path.py:594: RuntimeWarning: divide by zero encountered in not_equal
   xys = self.vertices[self.codes != Path.CLOSEPOLY]
+C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\figure.py:2521: RuntimeWarning: divide by zero encountered in isfinite
+  if (np.isfinite(b.width) and np.isfinite(b.height)
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\figure.py:2521: RuntimeWarning: divide by zero encountered in isfinite
-  if (np.isfinite(b.width) and np.isfinite(b.height)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\tight_bbox.py:65: RuntimeWarning: divide by zero encountered in double_scalars
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\tight_bbox.py:65: RuntimeWarning: divide by zero encountered in double_scalars
   w1, h1 = fig.bbox.width * dpi_scale, fig.bbox.height * dpi_scale
 C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\tight_bbox.py:71: RuntimeWarning: divide by zero encountered in double_scalars
   fig.patch.set_bounds(x0 / w1, y0 / h1,
@@ -863,7 +865,7 @@ C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\backends\backend_agg.py:212:
   y = round(y + yo + yd)
 </pre></div>
 </div>
-<img alt="_images/notebooks_2_4.png" src="_images/notebooks_2_4.png" />
+<img alt="_images/notebooks_2_5.png" src="_images/notebooks_2_5.png" />
 </div>
 </div>
 <p>There is a lot more that you can do with outputs (such as including interactive outputs)
