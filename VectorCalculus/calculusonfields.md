@@ -154,10 +154,11 @@ $z = x^3−y^3−2xy+2$ means we can write $\phi = x^3−y^3−2xy+2 - z$ and th
 {\bf n} = \nabla \phi = \begin{pmatrix} 3x^2 - 2y \\ -3y^2 - 2xz \\ -1 \end{pmatrix}
 ```
 
-If we want to find the equation of the resulting tangent surface at a given point, say $(1,\,1,\,0)$, then we know that the scalar products of all vectors 
+If we want to find the equation of the resulting tangent surface at a given point, say $A:(1,\,1,\,0)$, then we know that the scalar products of all vectors 
 $\begin{pmatrix} x\\y\\z \end{pmatrix}$ on the tangent surface with the surface normal must agree, hence:
 ```{math}
-{\bf n}\cdot \begin{pmatrix} 1\\1\\0 \end{pmatrix} = {\bf n}\cdot \begin{pmatrix} 1\\1\\0 \end{pmatrix} \Rightarrow x - 5y - z  =-4
+{\bf n}_A &=&\, \begin{pmatrix} 3-2\\-3-2\\0 \end{pmatrix} = \begin{pmatrix} 1\\-5\\0 \end{pmatrix} \\
+{\bf n}_A\cdot \begin{pmatrix} x\\y\\z \end{pmatrix} &=&\, {\bf n}_A\cdot \begin{pmatrix} 1\\1\\0 \end{pmatrix} \Rightarrow x - 5y - z  =-4
 ```
 
 Another example would be to find the gradient of the function $f(x,\,y,\,z) = xyz$ at the point $(−2,\,3,\,4)$ and also find the directional 
