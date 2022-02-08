@@ -135,8 +135,30 @@ I &=&\, \int_{-1}^1 \,\mathrm{d}x\,\int_{-1}^{\sqrt{1-x^2}}x^2y\,\mathrm{d}y =
 
 We could do this integral the other way round, but this is quite a bit tricker!
 
-In fact the choice of coordinates we choose will not change the value of the integral either, as we will see later.
+In fact the choice of coordinates we choose will not change the value of the integral either, lets look at doing these sorts of integral in polar 
+coordinates, given $y^2 + x^2 = R^2$ for $y \geq 0$, as depicted in {numref}`semicircle`:
 
+```{figure} ../figures/semicircle.png
+---
+name: semicircle
+---
+Area shown as a shaded region composed of a half circle.
+```
+
+In Cartesian coordinates to find this area we would need to do:
+```{math}
+A = \iint \,\mathrm{d}x\,\mathrm{d}y = \int_{-R}^R\,\mathrm{d}x\,\int_0^{\sqrt{R^2 -x^2}}\,\mathrm{d}y = \int_{-R}^R\sqrt{R^2 - x^2}\,\mathrm{d}x
+```
+
+which will then require an integral substitution to solve, quite a pain!
+
+In polar coodinates this becomes:
+
+```{math}
+A = \iint\,r\mathrm{d}r\,\mathrm{d}\theta = \int_0^R\,r\mathrm{d}r\,\int_0^{\pi}\,\mathrm{d}\theta = 
+\pi\Bigg[\frac{1}{2}r^2\Bigg]_0^\pi = \frac{1}{2}\pi R^2
+```
+which makes the result we expect!
 
 
 ## Volume Integrals
@@ -152,3 +174,16 @@ I = \int_V \phi({\bf r})\,\mathrm{d}V = \iiint_V \phi(x,\,y,\,z)\,\mathrm{d}x\,\
 ```
 
 ### Volume Integral Examples
+
+Lets think about volume integrals in Cartesian coordinates first, to calculate the volume integral of the function 
+$f(x,\, y,\, z) = \frac{1}{2} \left(x^2 + y^2 + z^2\right)$ over a cube whose 8 corners are at the points $(\pm 1,\, \pm 1,\, \pm 1)$:
+
+```{math}
+V &=&\, \iiint\,\mathrm{d}V = \int_{-1}^1\,\mathrm{d}x\,\int_{-1}^1\,\mathrm{d}y\,\int_{-1}^1\,\mathrm{d}z\,
+\left[\frac{1}{2} \left(x^2 + y^2 + z^2\right)\right]\\
+&=&\, \frac{1}{2}\int_{-1}^1\,\mathrm{d}x\,\int_{-1}^1\,\mathrm{d}y\,\Bigg[x^2z + y^2z +\frac{1}{3}z^3\Bigg]_{-1}^1\\
+&=&\, \int_{-1}^1\,\mathrm{d}x\,\int_{-1}^1\,\mathrm{d}y\,\Bigg(x^2 + y^2 +\frac{1}{3}\Bigg)\\
+&=&\, \int_{-1}^1\,\mathrm{d}x\,\Bigg[x^2y + \frac{1}{3}y^3 +\frac{1}{3}y\Bigg]_{-1}^1\\
+&=&\, 2\int_{-1}^1\,\mathrm{d}x\,\Bigg(x^2 + \frac{2}{3} \Bigg)\\
+&=&\, 2\Bigg[\frac{1}{3}x^3 +\frac{2}{3}x\Bigg]_{-1}^1 = 4
+```
