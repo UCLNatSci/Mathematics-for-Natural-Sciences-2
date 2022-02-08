@@ -185,10 +185,13 @@ I &=&\, \int_C {\bf G}({\bf r})\cdot \mathrm{d}{\bf r} = \int_0^1 {\bf G}({\bf r
 
 Using Stoke's theorem, we are free to find formally <em>any</em> surface which would be bounded by the contour - however clearly the easiest to work 
 with is the area of the quarter circle, sitting on the $y-z$ plane.  To make sure the orientation of the contour matches with the 
-right hand rule, we have $\mathrm{d}{\bf S} = \mathrm{d}y\,\mathrm{d}z\,\hat{\bf x}$, therefore:
+right hand rule, we have $\mathrm{d}{\bf S} = \mathrm{d}y\,\mathrm{d}z\,\hat{\bf x}$, therefore given that 
+```{math}
+\nabla \times {\bf G} = \begin{pmatrix} 1\\ 2x\\ -1\end{pmatrix}
+```
+we can find:
 ```{math}
 I &=&\, \iint_S\Bigg( \nabla \times {\bf G}\Bigg)\cdot\mathrm{d}{\bf S} \\
-\nabla \times {\bf G} &=&\, \begin{pmatrix} 1\\ 2x\\ -1\end{pmatrix}\\ 
 I &=&\, \iint_S \begin{pmatrix} 1\\ 2x\\ -1\end{pmatrix}\cdot \begin{pmatrix} 1\\ 0\\ 0\end{pmatrix}\,\mathrm{d}y\,\mathrm{d}z\\
 &=&\,\iint_S \,\mathrm{d}y,\,\mathrm{d}z = \frac{1}{4}\pi 1^2 = \frac{\pi}{4}
 ```

@@ -440,10 +440,12 @@ C_3: {\bf r}(t) &amp;=&amp;\, \begin{pmatrix} 0 \\ 0 \\ 1-t \end{pmatrix} \Right
 &amp;=&amp;\, \frac{\pi}{2}\int_0^1\sin^2(\pi t/2)\,\mathrm{d}t = \frac{\pi}{4}\int_0^1\Bigg (1-\cos(\pi t)\Bigg)\,\mathrm{d}t = \frac{\pi}{4}\Bigg[t - \frac{1}{\pi}\sin(\pi t)\Bigg]_0^1 =\frac{\pi}{4}\end{split}\]</div>
 <p>Using Stoke’s theorem, we are free to find formally <em>any</em> surface which would be bounded by the contour - however clearly the easiest to work
 with is the area of the quarter circle, sitting on the <span class="math notranslate nohighlight">\(y-z\)</span> plane.  To make sure the orientation of the contour matches with the
-right hand rule, we have <span class="math notranslate nohighlight">\(\mathrm{d}{\bf S} = \mathrm{d}y\,\mathrm{d}z\,\hat{\bf x}\)</span>, therefore:</p>
+right hand rule, we have <span class="math notranslate nohighlight">\(\mathrm{d}{\bf S} = \mathrm{d}y\,\mathrm{d}z\,\hat{\bf x}\)</span>, therefore given that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\nabla \times {\bf G} = \begin{pmatrix} 1\\ 2x\\ -1\end{pmatrix}\end{split}\]</div>
+<p>we can find:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}I &amp;=&amp;\, \iint_S\Bigg( \nabla \times {\bf G}\Bigg)\cdot\mathrm{d}{\bf S} \\
-\nabla \times {\bf G} &amp;=&amp;\, \begin{pmatrix} 1\\ 2x\\ -1\end{pmatrix}\\ 
 I &amp;=&amp;\, \iint_S \begin{pmatrix} 1\\ 2x\\ -1\end{pmatrix}\cdot \begin{pmatrix} 1\\ 0\\ 0\end{pmatrix}\,\mathrm{d}y\,\mathrm{d}z\\
 &amp;=&amp;\,\iint_S \,\mathrm{d}y,\,\mathrm{d}z = \frac{1}{4}\pi 1^2 = \frac{\pi}{4}\end{split}\]</div>
 <p>Therefore for quite a lot less work, we find the same result!</p>
