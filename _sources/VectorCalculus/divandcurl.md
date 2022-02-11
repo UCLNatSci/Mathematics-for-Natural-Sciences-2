@@ -22,8 +22,8 @@ which is also a differential operator, waiting to act on another term, which we 
 Lets see the effect of this on two vector fields ${\bf A_1(r)} = \begin{pmatrix} x \\ y \\ 0\end{pmatrix}, \,{\bf A_2(r)} = \begin{pmatrix} y \\ -x \\ 0\end{pmatrix}$:
 
 ```{math}
-\nabla \cdot {\bf A_1} &=&\, \partial_x\, x + \partial_y\, y + \partial_z\, 0 = 2 \\
-\nabla \cdot {\bf A_2} &=&\, \partial_x\, y - \partial_y\, x + \partial_z\, 0 = 0 
+\nabla \cdot {\bf A_1} &=  \partial_x\, x + \partial_y\, y + \partial_z\, 0 = 2 \\
+\nabla \cdot {\bf A_2} &=  \partial_x\, y - \partial_y\, x + \partial_z\, 0 = 0 
 ```
 which we can visualise in {numref}`div`.
 
@@ -50,8 +50,8 @@ which is know as the <b>Curl</b> or <b>Rotation</b> of the vector field $\bf A(r
 To see the effects of these, lets consider again ${\bf A_1(r)} = \begin{pmatrix} x \\ y \\ 0\end{pmatrix}, \,{\bf A_2(r)} = \begin{pmatrix} y \\ -x \\ 0\end{pmatrix}$:
 
 ```{math}
-\nabla \times {\bf A_1} &=&\, \begin{pmatrix} \partial_y\, 0 + \partial_z\, x \\ \partial_z\, y - \partial_x\, 0 \\ \partial_x\, y - \partial_y\, x  \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix} \\
-\nabla \times {\bf A_2} &=&\, \begin{pmatrix} \partial_y\, 0 + \partial_z\, x \\ \partial_z\, y - \partial_x\, 0 \\ \partial_x\, x + \partial_y\, y  \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ 2 \end{pmatrix}
+\nabla \times {\bf A_1} &=  \begin{pmatrix} \partial_y\, 0 + \partial_z\, x \\ \partial_z\, y - \partial_x\, 0 \\ \partial_x\, y - \partial_y\, x  \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix} \\
+\nabla \times {\bf A_2} &=  \begin{pmatrix} \partial_y\, 0 + \partial_z\, x \\ \partial_z\, y - \partial_x\, 0 \\ \partial_x\, x + \partial_y\, y  \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ 2 \end{pmatrix}
 ```
 
 which we can visualise in {numref}`curl`.  
@@ -84,11 +84,11 @@ The effect of adding a divergence (curl free) field to a curl (divergence free) 
 
 We can use the product rule as well as the rules following scalar and vector products to find a vareity of vector calculus relations:
 ```{math}
-\nabla(\phi\,\psi) &=&\, \psi(\nabla \phi) + \phi(\nabla \psi)\\
-\nabla \cdot(\phi {\bf A}) &=&\, (\nabla \phi)\cdot {\bf A} + \phi(\nabla \cdot {\bf A})\\
-\nabla \times(\phi {\bf A}) &=&\, (\nabla \phi)\times {\bf A} + \phi(\nabla \times {\bf A})\\
-\nabla \cdot ({\bf A \times B}) &=&\, (\nabla \times {\bf A})\cdot {\bf B} - {\bf A}(\nabla \times\cdot {\bf B})\\
-\nabla \times ({\bf A \times B}) &=&\, (\nabla \cdot {\bf B} + {\bf B}\cdot \nabla)\,{\bf A} - (\nabla \cdot {\bf A}+ {\bf A}\cdot \nabla)\,{\bf B}
+\nabla(\phi\,\psi) &=  \psi(\nabla \phi) + \phi(\nabla \psi)\\
+\nabla \cdot(\phi {\bf A}) &=  (\nabla \phi)\cdot {\bf A} + \phi(\nabla \cdot {\bf A})\\
+\nabla \times(\phi {\bf A}) &=  (\nabla \phi)\times {\bf A} + \phi(\nabla \times {\bf A})\\
+\nabla \cdot ({\bf A \times B}) &=  (\nabla \times {\bf A})\cdot {\bf B} - {\bf A}(\nabla \times\cdot {\bf B})\\
+\nabla \times ({\bf A \times B}) &=  (\nabla \cdot {\bf B} + {\bf B}\cdot \nabla)\,{\bf A} - (\nabla \cdot {\bf A}+ {\bf A}\cdot \nabla)\,{\bf B}
 ```
 
 ## 2nd Order Variations of Fields

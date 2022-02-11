@@ -57,9 +57,9 @@ I = \int_{S = \partial V} {\bf G}({\bf r})\cdot \mathrm{d}{\bf S} &=& \,
 
 A little long! However using the Gauss's divergence theorem:
 ```{math}
-\nabla \cdot {\bf G} &=&\, 2x + 2\\ 
-I &=&\, \int_{V} (\nabla \cdot {\bf G})\,\mathrm{d}V = \int_{-1}^1\,\mathrm{d}x\, \int_{-1}^1\,\mathrm{d}y\, \int_{-1}^1\,\mathrm{d}z (2x + 2)\\
-&=&\, 4\int_{-1}^1\,(2x+2)\,\mathrm{d}x = 4\Bigg[x^2 + 2x\Bigg]_{-1}^1 = 16
+\nabla \cdot {\bf G} &=  2x + 2\\ 
+I &=  \int_{V} (\nabla \cdot {\bf G})\,\mathrm{d}V = \int_{-1}^1\,\mathrm{d}x\, \int_{-1}^1\,\mathrm{d}y\, \int_{-1}^1\,\mathrm{d}z (2x + 2)\\
+&=  4\int_{-1}^1\,(2x+2)\,\mathrm{d}x = 4\Bigg[x^2 + 2x\Bigg]_{-1}^1 = 16
 ```
 
 In agreement with the previous result and whole lot easier to do!
@@ -80,7 +80,7 @@ volume element $\mathrm{d}V = \mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z$:
 
 ```{math}
 :label: divtheoremproof
-\mathrm{d}F &=&\, {\bf G}\left({\bf r} + \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)\cdot \hat{\bf x}\,\mathrm{d}y\,\mathrm{d}z 
+\mathrm{d}F &=  {\bf G}\left({\bf r} + \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)\cdot \hat{\bf x}\,\mathrm{d}y\,\mathrm{d}z 
 + {\bf G}\left({\bf r} - \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)\cdot (-\hat{\bf x})\,\mathrm{d}y\,\mathrm{d}z\\
 &+&\, {\bf G}\left({\bf r} + \frac{1}{2}\mathrm{d}y\,\hat{\bf y} \right)\cdot \hat{\bf y}\,\mathrm{d}x\,\mathrm{d}z 
 + {\bf G}\left({\bf r} - \frac{1}{2}\mathrm{d}x\,\hat{\bf y} \right)\cdot (-\hat{\bf y})\,\mathrm{d}x\,\mathrm{d}z\\
@@ -92,14 +92,14 @@ The first line of {eq}`divtheoremproof` reduces to:
 ```{math}
 &&\, \left[{\bf G}\left({\bf r} + \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)\cdot \hat{\bf x}
 + {\bf G}\left({\bf r} - \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)\cdot (-\hat{\bf x})\right]\,\mathrm{d}y\,\mathrm{d}z\\
-&=&\, \left[G_x\left({\bf r} + \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)
+&=  \left[G_x\left({\bf r} + \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)
 - G_x\left({\bf r} - \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)\right]\,\mathrm{d}y\,\mathrm{d}z\\
 ```
 If we do a Taylor expansion of each vector field, around $G_x({\bf r})$:
 ```{math}
-&=&\, \left[G_x({\bf r}) + \frac{1}{2}\partial_x G_x({\bf r})\,\mathrm{d}x 
+&=  \left[G_x({\bf r}) + \frac{1}{2}\partial_x G_x({\bf r})\,\mathrm{d}x 
 - \left(G_x({\bf r}) - \frac{1}{2}\partial_x G_x({\bf r})\,\mathrm{d}x \right)\right]\,\mathrm{d}y\,\mathrm{d}z\\
-&=&\, \partial_x G_x \,\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z
+&=  \partial_x G_x \,\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z
 ```
 
 We can do similar for the second and third lines of {eq}`divtheoremproof` to find the result:
@@ -170,18 +170,19 @@ Closed contour around the origin - note that this contour bounds an area that is
 The parameterisation of the line integral will not change its result (nor should the starting point for a loop integral), so we will start 
 at the origin and parameterise the three sections of the contour $C_1,\,C_2,\, C_3$ using $t$, with $t \in [0,\,1]$ along each piece:
 ```{math}
-C_1: {\bf r}(t) &=&\, \begin{pmatrix} 0 \\ t \\ 0 \end{pmatrix} \Rightarrow {\bf G}({\bf r}) = \begin{pmatrix} t \\ 0 \\ 0 \end{pmatrix}, \quad {\bf r'}(t) = \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}\\
-C_2: {\bf r}(t) &=&\, \begin{pmatrix} 0 \\ \cos(\pi t/2) \\ \sin(\pi t/2) \end{pmatrix} \Rightarrow {\bf G}({\bf r}) = \begin{pmatrix} \cos(\pi t/2) \\ -\sin(\pi t/2) \\ 0 \end{pmatrix}, \quad {\bf r'}(t) = \begin{pmatrix} 0 \\ -\frac{\pi}{2}\sin(\pi t/2) \\ \frac{\pi}{2}\cos(\pi t/2) \end{pmatrix}\\
-C_3: {\bf r}(t) &=&\, \begin{pmatrix} 0 \\ 0 \\ 1-t \end{pmatrix} \Rightarrow {\bf G}({\bf r}) = \begin{pmatrix} 0 \\ -(1-t) \\ 0 \end{pmatrix}, \quad {\bf r'}(t) = \begin{pmatrix} 0 \\ 0 \\ -1 \end{pmatrix}
+C_1: {\bf r}(t) &=  \begin{pmatrix} 0 \\ t \\ 0 \end{pmatrix} \Rightarrow {\bf G}({\bf r}) = \begin{pmatrix} t \\ 0 \\ 0 \end{pmatrix}, \quad {\bf r'}(t) = \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}\\
+C_2: {\bf r}(t) &=  \begin{pmatrix} 0 \\ \cos(\pi t/2) \\ \sin(\pi t/2) \end{pmatrix} \Rightarrow {\bf G}({\bf r}) = \begin{pmatrix} \cos(\pi t/2) \\ -\sin(\pi t/2) \\ 0 \end{pmatrix}, \quad {\bf r'}(t) = \begin{pmatrix} 0 \\ -\frac{\pi}{2}\sin(\pi t/2) \\ \frac{\pi}{2}\cos(\pi t/2) \end{pmatrix}\\
+C_3: {\bf r}(t) &=  \begin{pmatrix} 0 \\ 0 \\ 1-t \end{pmatrix} \Rightarrow {\bf G}({\bf r}) = \begin{pmatrix} 0 \\ -(1-t) \\ 0 \end{pmatrix}, \quad {\bf r'}(t) = \begin{pmatrix} 0 \\ 0 \\ -1 \end{pmatrix}
 ```
 Therefore we can calculate the line integral:
 ```{math}
-I &=&\, \int_C {\bf G}({\bf r})\cdot \mathrm{d}{\bf r} = \int_0^1 {\bf G}({\bf r})\cdot {\bf r'}\,\mathrm{d}t\\
-&=&\, \int_0^1  \begin{pmatrix} t \\ 0 \\ 0 \end{pmatrix} \cdot \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}\,\mathrm{d}t + 
+I &=  \int_C {\bf G}({\bf r})\cdot \mathrm{d}{\bf r} = \int_0^1 {\bf G}({\bf r})\cdot {\bf r'}\,\mathrm{d}t\\
+&=  \int_0^1  \begin{pmatrix} t \\ 0 \\ 0 \end{pmatrix} \cdot \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}\,\mathrm{d}t + 
 \int_0^1  \begin{pmatrix} \cos(\pi t/2) \\ -\sin(\pi t/2) \\ 0 \end{pmatrix}\cdot \begin{pmatrix} 0 \\ -\frac{\pi}{2}\sin(\pi t/2) \\ \frac{\pi}{2}\cos(\pi t/2) \end{pmatrix}\,\mathrm{d}t + 
 \int_0^1  \begin{pmatrix} 0 \\ -(1-t) \\ 0 \end{pmatrix} \cdot\begin{pmatrix} 0 \\ 0 \\ -1 \end{pmatrix}\,\mathrm{d}t\\
-&=&\, \frac{\pi}{2}\int_0^1\sin^2(\pi t/2)\,\mathrm{d}t = \frac{\pi}{4}\int_0^1\Bigg (1-\cos(\pi t)\Bigg)\,\mathrm{d}t = \frac{\pi}{4}\Bigg[t - \frac{1}{\pi}\sin(\pi t)\Bigg]_0^1 =\frac{\pi}{4}
+&=  \frac{\pi}{2}\int_0^1\sin^2(\pi t/2)\,\mathrm{d}t = \frac{\pi}{4}\int_0^1\Bigg (1-\cos(\pi t)\Bigg)\,\mathrm{d}t = \frac{\pi}{4}\Bigg[t - \frac{1}{\pi}\sin(\pi t)\Bigg]_0^1 =\frac{\pi}{4}
 ```
+
 
 Using Stoke's theorem, we are free to find formally <em>any</em> surface which would be bounded by the contour - however clearly the easiest to work 
 with is the area of the quarter circle, sitting on the $y-z$ plane.  To make sure the orientation of the contour matches with the 
@@ -191,9 +192,9 @@ right hand rule, we have $\mathrm{d}{\bf S} = \mathrm{d}y\,\mathrm{d}z\,\hat{\bf
 ```
 we can find:
 ```{math}
-I &=&\, \iint_S\Bigg( \nabla \times {\bf G}\Bigg)\cdot\mathrm{d}{\bf S} \\
-I &=&\, \iint_S \begin{pmatrix} 1\\ 2x\\ -1\end{pmatrix}\cdot \begin{pmatrix} 1\\ 0\\ 0\end{pmatrix}\,\mathrm{d}y\,\mathrm{d}z\\
-&=&\,\iint_S \,\mathrm{d}y\,\mathrm{d}z = \frac{1}{4}\pi 1^2 = \frac{\pi}{4}
+I &=  \iint_S\Bigg( \nabla \times {\bf G}\Bigg)\cdot\mathrm{d}{\bf S} \\
+I &=  \iint_S \begin{pmatrix} 1\\ 2x\\ -1\end{pmatrix}\cdot \begin{pmatrix} 1\\ 0\\ 0\end{pmatrix}\,\mathrm{d}y\,\mathrm{d}z\\
+&= \iint_S \,\mathrm{d}y\,\mathrm{d}z = \frac{1}{4}\pi 1^2 = \frac{\pi}{4}
 ```
 Therefore for quite a lot less work, we find the same result!
 
@@ -213,11 +214,11 @@ We can therefore find the loop integral of a vector field ${\bf G}({\bf r})$ aro
 
 ```{math}
 
-dI &=&\, {\bf G}\left({\bf r} - \frac{1}{2}\mathrm{d}y\,\hat{\bf y} \right)\cdot \hat{\bf x}\,\mathrm{d}x 
+dI &=  {\bf G}\left({\bf r} - \frac{1}{2}\mathrm{d}y\,\hat{\bf y} \right)\cdot \hat{\bf x}\,\mathrm{d}x 
 + {\bf G}\left({\bf r} + \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)\cdot \hat{\bf y}\,\mathrm{d}y \\
 &+&\,  {\bf G}\left({\bf r} + \frac{1}{2}\mathrm{d}y\,\hat{\bf y} \right)\cdot (-\hat{\bf x})\,\mathrm{d}x 
 + {\bf G}\left({\bf r} + \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)\cdot (-\hat{\bf y})\,\mathrm{d}y \\
-&=&\, \left[G_x \left({\bf r} - \frac{1}{2}\mathrm{d}y\,\hat{\bf y} \right) 
+&=  \left[G_x \left({\bf r} - \frac{1}{2}\mathrm{d}y\,\hat{\bf y} \right) 
 - G_x\left({\bf r} + \frac{1}{2}\mathrm{d}y\,\hat{\bf y} \right) \right]\,\mathrm{d}x 
 + \left[ G_y\left({\bf r} + \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right) - G_y\left({\bf r} 
 - \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)\right]\,\mathrm{d}y
@@ -225,9 +226,9 @@ dI &=&\, {\bf G}\left({\bf r} - \frac{1}{2}\mathrm{d}y\,\hat{\bf y} \right)\cdot
 
 Taking a Taylor expansion around ${\bf G}({\bf r})$, we find:
 ```{math}
-&=&\, -\partial_y G_x({\bf r})\,\mathrm{d}x\,\mathrm{d}y + \partial_x G_y({\bf r})\,\mathrm{d}x\,\mathrm{d}y \\
-&=&\, \Bigg(\nabla \times {\bf G}\Bigg)_z\,\mathrm{d}x\,\mathrm{d}y = \Bigg(\nabla \times {\bf G}\Bigg)\cdot \hat{\bf z}\,\mathrm{d}x\,\mathrm{d}y\\
-&=&\, \Bigg(\nabla \times {\bf G}\Bigg)\cdot\mathrm{d}{\bf S}
+&=  -\partial_y G_x({\bf r})\,\mathrm{d}x\,\mathrm{d}y + \partial_x G_y({\bf r})\,\mathrm{d}x\,\mathrm{d}y \\
+&=  \Bigg(\nabla \times {\bf G}\Bigg)_z\,\mathrm{d}x\,\mathrm{d}y = \Bigg(\nabla \times {\bf G}\Bigg)\cdot \hat{\bf z}\,\mathrm{d}x\,\mathrm{d}y\\
+&=  \Bigg(\nabla \times {\bf G}\Bigg)\cdot\mathrm{d}{\bf S}
 ```
 
 Which if we integrate up, we find $I = \iint_S (\nabla \times {\bf G})\cdot \mathrm{d}{\bf S}$.  Thinking carefully these loop integrals however, 

@@ -347,8 +347,8 @@ process in <a class="reference internal" href="#arclength"><span class="std std-
 <p>We might also have a function which is parameterised <span class="math notranslate nohighlight">\(y = y(t),\, x=x(t)\)</span>, it is also possible to find an expression for the path length, taking the limit of
 <span class="math notranslate nohighlight">\(\Delta t \rightarrow 0\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\Delta s &amp;=&amp;\, \Delta t\,\sqrt{\left(\frac{\Delta x}{\Delta t}\right)^2 + \left(\frac{\Delta y}{\Delta t}\right)^2} \\
-\Rightarrow \mathrm{d}s &amp;=&amp;\, \mathrm{d}t\, \sqrt{\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)^2 + \left(\frac{\mathrm{d}y}{\mathrm{d}t}\right)^2}\end{split}\]</div>
+\[\begin{split}\Delta s &amp;=  \Delta t\,\sqrt{\left(\frac{\Delta x}{\Delta t}\right)^2 + \left(\frac{\Delta y}{\Delta t}\right)^2} \\
+\Rightarrow \mathrm{d}s &amp;=  \mathrm{d}t\, \sqrt{\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)^2 + \left(\frac{\mathrm{d}y}{\mathrm{d}t}\right)^2}\end{split}\]</div>
 <p>An example here would be a circle, parameterised by <span class="math notranslate nohighlight">\(x = R\cos(t),\, y = R\sin(t)\)</span>, over the range <span class="math notranslate nohighlight">\(t \in [0,\, 2\pi)\)</span>, giving
 <span class="math notranslate nohighlight">\(\mathrm{d}x/\mathrm{d}t = -R\sin(t),\, \mathrm{d}y/\mathrm{d}t = R\cos(t)\)</span> and therefore:</p>
 <div class="math notranslate nohighlight">
@@ -384,9 +384,9 @@ path length over the <span class="math notranslate nohighlight">\(y\)</span> axi
 <p>which matches the expression we expect and explains where this factor of <span class="math notranslate nohighlight">\(1/3\)</span> comes from!</p>
 <p>Likewise we can look at the surface area of this cone,  <span class="math notranslate nohighlight">\(y = R x / h \rightarrow \mathrm{d}y/\mathrm{d}x = R / h\)</span> over the range <span class="math notranslate nohighlight">\(x \in [0,\, h]\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}A_x &amp;=&amp;\, \int_0^h 2\pi\,\frac{R x}{h}\,\sqrt{1 + \left(\frac{R}{h}\right)^2}\,\mathrm{d}x \\
-&amp;=&amp;\, 2\pi \frac{R}{h}\sqrt{1 + \left(\frac{R}{h}\right)^2}\Bigg[ \frac{1}{2}x^2\Bigg]_0^h \\
-&amp;=&amp;\, \pi R h\sqrt{1 + \left(\frac{R}{h}\right)^2} = \pi R\sqrt{h^2 + R^2}\end{split}\]</div>
+\[\begin{split}A_x &amp;=  \int_0^h 2\pi\,\frac{R x}{h}\,\sqrt{1 + \left(\frac{R}{h}\right)^2}\,\mathrm{d}x \\
+&amp;=  2\pi \frac{R}{h}\sqrt{1 + \left(\frac{R}{h}\right)^2}\Bigg[ \frac{1}{2}x^2\Bigg]_0^h \\
+&amp;=  \pi R h\sqrt{1 + \left(\frac{R}{h}\right)^2} = \pi R\sqrt{h^2 + R^2}\end{split}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\sqrt{h^2 + R^2}\)</span> is the slant length.</p>
 <div class="figure align-default" id="cone">
 <img alt="../_images/cone.png" src="../_images/cone.png" />
@@ -394,10 +394,10 @@ path length over the <span class="math notranslate nohighlight">\(y\)</span> axi
 </div>
 <p>Likewise if we have parametrised expressions <span class="math notranslate nohighlight">\(x = x(t),\, y = y(t)\)</span>, over the range <span class="math notranslate nohighlight">\(t \in [t_1,\, t_2]\)</span> then these expressions become:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}V_x &amp;=&amp;\, \int_{t_1}^{t_2} \pi\,y^2\,\frac{\mathrm{d}x}{\mathrm{d}t}\,\mathrm{d}t \\
-V_y &amp;=&amp;\, \int_{t_1}^{t_2} \pi\,x^2\,\frac{\mathrm{d}y}{\mathrm{d}t}\,\mathrm{d}t \\
-A_x &amp;=&amp;\, \int_{t_1}^{t_2} 2\pi\,y\,\sqrt{\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)^2 + \left(\frac{\mathrm{d}y}{\mathrm{d}t}\right)^2}\,\mathrm{d}t \\
-A_y &amp;=&amp;\, \int_{t_1}^{t_2} 2\pi\,x\,\sqrt{\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)^2 + \left(\frac{\mathrm{d}y}{\mathrm{d}t}\right)^2}\,\mathrm{d}t\end{split}\]</div>
+\[\begin{split}V_x &amp;=  \int_{t_1}^{t_2} \pi\,y^2\,\frac{\mathrm{d}x}{\mathrm{d}t}\,\mathrm{d}t \\
+V_y &amp;=  \int_{t_1}^{t_2} \pi\,x^2\,\frac{\mathrm{d}y}{\mathrm{d}t}\,\mathrm{d}t \\
+A_x &amp;=  \int_{t_1}^{t_2} 2\pi\,y\,\sqrt{\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)^2 + \left(\frac{\mathrm{d}y}{\mathrm{d}t}\right)^2}\,\mathrm{d}t \\
+A_y &amp;=  \int_{t_1}^{t_2} 2\pi\,x\,\sqrt{\left(\frac{\mathrm{d}x}{\mathrm{d}t}\right)^2 + \left(\frac{\mathrm{d}y}{\mathrm{d}t}\right)^2}\,\mathrm{d}t\end{split}\]</div>
 </div>
 </div>
 

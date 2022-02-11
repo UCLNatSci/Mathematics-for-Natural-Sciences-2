@@ -112,28 +112,28 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="lineintegrals.html">
-   3. Line Integrals
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="vectoralgebra.html">
-   4. Vectors and Vector Algebra
+   3. Vectors and Vector Algebra
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="calculusonfields.html">
-   5. Vector Fields
+   4. Vector Fields
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="divandcurl.html">
-   6. Variations of Fields
+   5. Variations of Fields
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="coordinatesystems.html">
-   7. Coordinate Systems
+   6. Coordinate Systems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lineintegrals.html">
+   7. Line Integrals
   </a>
  </li>
  <li class="toctree-l1">
@@ -268,8 +268,16 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#examples">
-     9.1.1. Examples
+    <a class="reference internal nav-link" href="#example-sphere">
+     9.1.1. Example - Sphere
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-of-the-form-z-x-y">
+     9.1.2. Example of the form
+     <span class="math notranslate nohighlight">
+      \(z = (x,\, y)\)
+     </span>
     </a>
    </li>
   </ul>
@@ -300,8 +308,16 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#examples">
-     9.1.1. Examples
+    <a class="reference internal nav-link" href="#example-sphere">
+     9.1.1. Example - Sphere
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-of-the-form-z-x-y">
+     9.1.2. Example of the form
+     <span class="math notranslate nohighlight">
+      \(z = (x,\, y)\)
+     </span>
     </a>
    </li>
   </ul>
@@ -348,26 +364,26 @@ This means that if we move from 2D parametrisation to a surface parameterisation
 <span class="math notranslate nohighlight">\(\mathrm{d}s,\, \mathrm{d}t\)</span> that make up the <span class="math notranslate nohighlight">\(\mathrm{d}S\)</span> on the surface.  We can then
 define vectors <span class="math notranslate nohighlight">\(\bf u,\, v\)</span> which live on the surface:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\mathrm{d}{\bf u} &amp;=&amp;\,\frac{\partial {\bf r}}{\partial s}\,\mathrm{d}s \\
-\mathrm{d}{\bf v} &amp;=&amp;\,\frac{\partial {\bf r}}{\partial t}\,\mathrm{d}t\end{split}\]</div>
+\[\begin{split}\mathrm{d}{\bf u} &amp;= \frac{\partial {\bf r}}{\partial s}\,\mathrm{d}s \\
+\mathrm{d}{\bf v} &amp;= \frac{\partial {\bf r}}{\partial t}\,\mathrm{d}t\end{split}\]</div>
 <p>and the final step is to find a cross product, this will produce the normal area vector, hence:</p>
 <div class="math notranslate nohighlight">
 \[\mathrm{d}{\bf S} = \mathrm{d}{\bf u} \times \mathrm{d}{\bf v} = \left(\frac{\partial {\bf r}}{\partial s} \times \frac{\partial {\bf r}}{\partial t} \right)\,\mathrm{d}s\,\mathrm{d}t\]</div>
 <p>This means that in order to actually calculate the surface integrals we will need:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}I_f &amp;=&amp;\, \int_{s_{min}}^{s_{max}} \,\mathrm{d}s\,\int_{t_{min}}^{t_{max}} \, \mathrm{d}t\,f({\bf r}(s,\,t)\,\left| \frac{\partial {\bf r}}{\partial s} \times \frac{\partial {\bf r}}{\partial t} \right|\\
-I_{\bf G} &amp;=&amp;\, \int_{s_{min}}^{s_{max}} \,\mathrm{d}s\,\int_{t_{min}}^{t_{max}} \, \mathrm{d}t\,{\bf G}({\bf r}(s,\,t))\cdot\left(\frac{\partial {\bf r}}{\partial s} \times \frac{\partial {\bf r}}{\partial t} \right)\end{split}\]</div>
-<div class="section" id="examples">
-<h3><span class="section-number">9.1.1. </span>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+\[\begin{split}I_f &amp;=  \int_{s_{min}}^{s_{max}} \,\mathrm{d}s\,\int_{t_{min}}^{t_{max}} \, \mathrm{d}t\,f({\bf r}(s,\,t)\,\left| \frac{\partial {\bf r}}{\partial s} \times \frac{\partial {\bf r}}{\partial t} \right|\\
+I_{\bf G} &amp;=  \int_{s_{min}}^{s_{max}} \,\mathrm{d}s\,\int_{t_{min}}^{t_{max}} \, \mathrm{d}t\,{\bf G}({\bf r}(s,\,t))\cdot\left(\frac{\partial {\bf r}}{\partial s} \times \frac{\partial {\bf r}}{\partial t} \right)\end{split}\]</div>
+<div class="section" id="example-sphere">
+<h3><span class="section-number">9.1.1. </span>Example - Sphere<a class="headerlink" href="#example-sphere" title="Permalink to this headline">¶</a></h3>
 <p>An example, finding the surface area of a sphere with radius <span class="math notranslate nohighlight">\(R\)</span>, the most natural choice of <span class="math notranslate nohighlight">\(s,\,t\)</span> here would be angles <span class="math notranslate nohighlight">\(\theta,\, \phi\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}{\bf r}(\theta,\,\phi) = \begin{pmatrix} R\sin(\theta)\cos(\phi) \\ R \sin(\theta)\sin(\phi)\\ R \cos(\theta)\end{pmatrix}\end{split}\]</div>
 <p>hence we can calculate <span class="math notranslate nohighlight">\(\mathrm{d}{\bf S}\)</span> here:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\mathrm{d}{\bf S} &amp;=&amp;\, \left(\frac{\partial {\bf r}}{\partial \theta} \times \frac{\partial {\bf r}}{\partial \phi}\right)\,\mathrm{d}\theta\,\mathrm{d}\phi\\
-&amp;=&amp;\, R^2\begin{pmatrix} \cos(\theta)\cos(\phi) \\ \cos(\theta)\sin(\phi)\\ -\sin(\theta)\end{pmatrix} \times \begin{pmatrix} -\sin(\theta)\sin(\phi) \\ \sin(\theta)\cos(\phi)\\ 0 \end{pmatrix} \,\mathrm{d}\theta\,\mathrm{d}\phi\\
-&amp;=&amp; \, R^2 \begin{pmatrix} \sin^2(\theta) \cos(\phi) \\ \sin^2(\theta)\sin(\phi)\\ \sin(\theta) \cos(\theta)\end{pmatrix} \,\mathrm{d}\theta\,\mathrm{d}\phi \\
-&amp;=&amp; \, R^2 \begin{pmatrix} \sin(\theta) \cos(\phi) \\ \sin(\theta)\sin(\phi)\\ \cos(\theta)\end{pmatrix} \,\sin(\theta)\mathrm{d}\theta\,\mathrm{d}\phi \\\end{split}\]</div>
+\[\begin{split}\mathrm{d}{\bf S} &amp;=  \left(\frac{\partial {\bf r}}{\partial \theta} \times \frac{\partial {\bf r}}{\partial \phi}\right)\,\mathrm{d}\theta\,\mathrm{d}\phi\\
+&amp;=  R^2\begin{pmatrix} \cos(\theta)\cos(\phi) \\ \cos(\theta)\sin(\phi)\\ -\sin(\theta)\end{pmatrix} \times \begin{pmatrix} -\sin(\theta)\sin(\phi) \\ \sin(\theta)\cos(\phi)\\ 0 \end{pmatrix} \,\mathrm{d}\theta\,\mathrm{d}\phi\\
+&amp;=  R^2 \begin{pmatrix} \sin^2(\theta) \cos(\phi) \\ \sin^2(\theta)\sin(\phi)\\ \sin(\theta) \cos(\theta)\end{pmatrix} \,\mathrm{d}\theta\,\mathrm{d}\phi \\
+&amp;=  R^2 \begin{pmatrix} \sin(\theta) \cos(\phi) \\ \sin(\theta)\sin(\phi)\\ \cos(\theta)\end{pmatrix} \,\sin(\theta)\mathrm{d}\theta\,\mathrm{d}\phi \\\end{split}\]</div>
 <p>We can then recall that the radial vector for spherical polar coordinates has the form:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\hat{\bf r} = \begin{pmatrix} \sin(\theta) \cos(\phi) \\ \sin(\theta)\sin(\phi)\\ \cos(\theta)\end{pmatrix}\end{split}\]</div>
@@ -379,6 +395,9 @@ we have <span class="math notranslate nohighlight">\(\hat{\theta} \times \hat{\p
 <p>Thus the surface area integral takes the form:</p>
 <div class="math notranslate nohighlight">
 \[A = \int_A \mathrm{d}S = \int_A |\mathrm{d}{\bf S}| = R^2 \int_0^{2\pi}\,\mathrm{d}\phi\,\int_0^\pi\,\sin(\theta)\,\mathrm{d}\theta = 2\pi R^2\Big[-\cos(\theta)\Big]_0^{\pi} = 4\pi R^2\]</div>
+</div>
+<div class="section" id="example-of-the-form-z-x-y">
+<h3><span class="section-number">9.1.2. </span>Example of the form <span class="math notranslate nohighlight">\(z = (x,\, y)\)</span><a class="headerlink" href="#example-of-the-form-z-x-y" title="Permalink to this headline">¶</a></h3>
 <p>A different sort of example is where the coordinates <span class="math notranslate nohighlight">\(x,\, y\)</span> are defined as terms of <span class="math notranslate nohighlight">\(z\)</span>, say <span class="math notranslate nohighlight">\(x^2 + y^2 + z^2 = R^2\)</span>, which would describe the upper half of a sphere (recall the lower half would be
 with the negative root).  Here we have <span class="math notranslate nohighlight">\(z = z(x,\,y)\)</span>, thus the parametirisation of thesurface is just in terms of <span class="math notranslate nohighlight">\(x,\,y\)</span> (a little like doing a line integral only in terms of <span class="math notranslate nohighlight">\(x\)</span>).<br />
 Thus the surface has a coordinate vector of the form:</p>
@@ -386,22 +405,22 @@ Thus the surface has a coordinate vector of the form:</p>
 \[\begin{split}{\bf r}(x,\,y) = \begin{pmatrix} x \\ y \\ z(x,\, y) \end{pmatrix}\end{split}\]</div>
 <p>meaning that the infinitemsimal surface vector element is given by:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\mathrm{d}{\bf S} &amp;=&amp;\, \left(\frac{\partial {\bf r}}{\partial x} \times \frac{\partial {\bf r}}{\partial y}\right)\,\mathrm{d}x\,\mathrm{d}y \\
-&amp;=&amp;\, \begin{pmatrix} 1 \\ 0 \\ \partial z/\partial x \end{pmatrix} \times \begin{pmatrix} 0 \\ 1 \\ \partial z/\partial y  \end{pmatrix}\,\mathrm{d}x\,\mathrm{d}y \\
-&amp;=&amp;\, \begin{pmatrix} -\partial z/\partial x \\ -\partial z/\partial y \\ 1  \end{pmatrix}\,\mathrm{d}x\,\mathrm{d}y\end{split}\]</div>
+\[\begin{split}\mathrm{d}{\bf S} &amp;=  \left(\frac{\partial {\bf r}}{\partial x} \times \frac{\partial {\bf r}}{\partial y}\right)\,\mathrm{d}x\,\mathrm{d}y \\
+&amp;=  \begin{pmatrix} 1 \\ 0 \\ \partial z/\partial x \end{pmatrix} \times \begin{pmatrix} 0 \\ 1 \\ \partial z/\partial y  \end{pmatrix}\,\mathrm{d}x\,\mathrm{d}y \\
+&amp;=  \begin{pmatrix} -\partial z/\partial x \\ -\partial z/\partial y \\ 1  \end{pmatrix}\,\mathrm{d}x\,\mathrm{d}y\end{split}\]</div>
 <p>Which means to solve this problem either we use this result with the scalar product of a vectof field <span class="math notranslate nohighlight">\(\bf G\)</span>, <span class="math notranslate nohighlight">\(I = \int {\bf G(r)}\cdot \mathrm{d}{\bf S}\)</span>.  For a scalar field we have
 <span class="math notranslate nohighlight">\(I = \int f\,\mathrm{d}S\)</span>, with:</p>
 <div class="math notranslate nohighlight">
 \[\mathrm{d}{S} = \left(\sqrt{\left(\frac{\partial z}{\partial x}\right)^2 + \left(\frac{\partial z}{\partial y}\right)^2 + 1}\right)\,\mathrm{d}x\,\mathrm{d}y\]</div>
 <p>Lets see this for <span class="math notranslate nohighlight">\(x^2 + y^2 + z^2 = 9\)</span>, thus <span class="math notranslate nohighlight">\(z = \sqrt{9 - x^2 - y^2}\)</span>, lets consider the surface area over the range <span class="math notranslate nohighlight">\(x \in [0,\,3],\, y \in [0,\, 3]\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\iint \mathrm{d}S &amp;=&amp;\, \int_0^3\,\mathrm{d}x\,\int_0^3\,\mathrm{d}y\,\left(\sqrt{\left(\frac{\partial z}{\partial x}\right)^2 + \left(\frac{\partial z}{\partial y}\right)^2 + 1}\right) \\
-&amp;=&amp; \, \int_0^3\,\mathrm{d}x\,\int_0^3\,\mathrm{d}y\,\left(\sqrt{ 1 + \frac{x}{\sqrt{9 - x^2 - y^2}} + \frac{y}{\sqrt{9 - x^2 - y^2}} }\right) \\
-&amp;=&amp; \, \int_0^3\,\mathrm{d}x\,\int_0^3\,\mathrm{d}y\,\frac{3}{\sqrt{9 - x^2 - y^2}}\end{split}\]</div>
+\[\begin{split}\iint \mathrm{d}S &amp;=  \int_0^3\,\mathrm{d}x\,\int_0^3\,\mathrm{d}y\,\left(\sqrt{\left(\frac{\partial z}{\partial x}\right)^2 + \left(\frac{\partial z}{\partial y}\right)^2 + 1}\right) \\
+&amp;=  \int_0^3\,\mathrm{d}x\,\int_0^3\,\mathrm{d}y\,\left(\sqrt{ 1 + \frac{x}{\sqrt{9 - x^2 - y^2}} + \frac{y}{\sqrt{9 - x^2 - y^2}} }\right) \\
+&amp;=  \int_0^3\,\mathrm{d}x\,\int_0^3\,\mathrm{d}y\,\frac{3}{\sqrt{9 - x^2 - y^2}}\end{split}\]</div>
 <p>If we use a change of variable, <span class="math notranslate nohighlight">\(x = \sqrt{9-y^2}\sin(\varphi) \Rightarrow \mathrm{d}x = \sqrt{9-y^2}\cos(\varphi)\,\mathrm{d}\varphi\)</span> and therefore we have:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\iint \mathrm{d}S &amp;=&amp;\, 3\int_0^{\pi/2}\,\mathrm{d}\varphi \int_0^3 \,\mathrm{d}y \\
-&amp;=&amp;\, \frac{9\pi}{2}\end{split}\]</div>
+\[\begin{split}\iint \mathrm{d}S &amp;=  3\int_0^{\pi/2}\,\mathrm{d}\varphi \int_0^3 \,\mathrm{d}y \\
+&amp;=  \frac{9\pi}{2}\end{split}\]</div>
 <p>which corresponds to <span class="math notranslate nohighlight">\(\frac{1}{8}\)</span> of the full sphere’s surface area <span class="math notranslate nohighlight">\(36\pi\)</span>, as expected.</p>
 </div>
 </div>

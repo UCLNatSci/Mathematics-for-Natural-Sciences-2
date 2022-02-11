@@ -26,9 +26,9 @@ In the Cartesian coordinate system, in three dimensions the basis vectors are gi
 and when we switch to different coordinate systems, we will consider how these change.  Note that a variety of different letters are employed for the Cartessian system:
 ```{math}
 
-\hat{\bf x} &=&\, {\bf e_x} = \vec{x} = \hat{\bf i}\\
-\hat{\bf y} &=&\, {\bf e_y} = \vec{y} = \hat{\bf j}\\
-\hat{\bf z} &=&\, {\bf e_z} = \vec{z} = \hat{\bf k}
+\hat{\bf x} &=  {\bf e_x} = \vec{x} = \hat{\bf i}\\
+\hat{\bf y} &=  {\bf e_y} = \vec{y} = \hat{\bf j}\\
+\hat{\bf z} &=  {\bf e_z} = \vec{z} = \hat{\bf k}
 ```
 To see how these visually fit together, see {numref}`CartCoords`.  We note that all the coordinates meet at right angles and that we have defined <em>right handed axes</em>.
 
@@ -61,12 +61,12 @@ Breakdown of vector $\bf a = a_x \,\hat{\bf x} + a_y \,\hat{\bf y} + a_z \,\hat{
 
 As an example we can define two vectors $\bf v_1,\, v_2$
 ```{math}
-{\bf v}_1 &=&\, \begin{pmatrix}
+{\bf v}_1 &=  \begin{pmatrix}
  3 \\
  4 \\
  12 
 \end{pmatrix} = 3\hat{\bf x} + 4\hat{\bf y} + 12\hat{\bf z}\\
-{\bf v}_2 &=&\, \begin{pmatrix}
+{\bf v}_2 &=  \begin{pmatrix}
  5 \\
  12 \\
  13 
@@ -75,7 +75,7 @@ As an example we can define two vectors $\bf v_1,\, v_2$
 Then we can add or sutract these vectors:
 
 ```{math}
-{\bf v}_1 + {\bf v}_2  &=&\, \begin{pmatrix}
+{\bf v}_1 + {\bf v}_2  &=  \begin{pmatrix}
  3 \\
  4 \\
  12 
@@ -88,7 +88,7 @@ Then we can add or sutract these vectors:
  16 \\
  25 
 \end{pmatrix} = 8\hat{\bf x} + 16\hat{\bf y} + 25\hat{\bf z}\\
-{\bf v}_2 - {\bf v}_1  &=&\, \begin{pmatrix}
+{\bf v}_2 - {\bf v}_1  &=  \begin{pmatrix}
  5 \\
  12 \\
  13 
@@ -106,7 +106,7 @@ Then we can add or sutract these vectors:
 ```
 Likewise we can scale each of the vectors and then proceed to add them:
 ```{math}
-2{\bf v}_1 + 3{\bf v}_2  &=&\,  2\begin{pmatrix}
+2{\bf v}_1 + 3{\bf v}_2  &=   2\begin{pmatrix}
  3 \\
  4 \\
  12 
@@ -184,12 +184,12 @@ We can also find the magntiude of a vector from $\bf A \cdot A = |A|^2 $.
 ### Algebraic Definition
 There is another perspective on the scalar product, which is for two vectors with components:
 ```{math}
-{\bf A} &=&\, a_x\,\hat{\bf x} + a_y\,\hat{\bf y} + a_z\,\hat{\bf z} = \begin{pmatrix}
+{\bf A} &=  a_x\,\hat{\bf x} + a_y\,\hat{\bf y} + a_z\,\hat{\bf z} = \begin{pmatrix}
  a_x \\
  a_y \\
  a_z 
 \end{pmatrix} \\
-{\bf B} &=&\, b_x\,\hat{\bf x} + b_y\,\hat{\bf y} + b_z\,\hat{\bf z} = \begin{pmatrix}
+{\bf B} &=  b_x\,\hat{\bf x} + b_y\,\hat{\bf y} + b_z\,\hat{\bf z} = \begin{pmatrix}
  b_x \\
  b_y \\
  b_z 
@@ -225,9 +225,9 @@ Two non-zero vectors $\bf a,\, b$ are orthogonal if and only if $\bf a \cdot b =
 Unsurprisingly we can also make a vector product that results in a vector, rather than a scalar.  This <b>Vector Product</b>, also known as the <b>Cross Product</b>,
 can be constructed from the basis vectors:
 ```{math}
-\hat{\bf x} \times \hat{\bf y} &=&\, \hat{\bf z} \\
-\hat{\bf y} \times \hat{\bf z} &=&\, \hat{\bf x} \\
-\hat{\bf z} \times \hat{\bf x} &=&\, \hat{\bf y} 
+\hat{\bf x} \times \hat{\bf y} &=  \hat{\bf z} \\
+\hat{\bf y} \times \hat{\bf z} &=  \hat{\bf x} \\
+\hat{\bf z} \times \hat{\bf x} &=  \hat{\bf y} 
 ```
 In general however we write the cross product between two vectors as a new vector, normal to the other two (following the right hand rule), as depicted in 
 {numref}`VectorProduct`.
@@ -301,7 +301,7 @@ Finding the cross product can also be found using a matrix determinant:
 which by the cofactor method along the first row produces:
 
 ```{math}
- \mathbf{a}\times\mathbf{b} &=&\, \begin{vmatrix}
+ \mathbf{a}\times\mathbf{b} &=  \begin{vmatrix}
  a_y & a_z \\
  b_y & b_z
 \end{vmatrix}\hat{\bf x} - \begin{vmatrix}
@@ -311,7 +311,7 @@ which by the cofactor method along the first row produces:
  a_x & a_y 
  b_x & b_y 
 \end{vmatrix}\hat{\bf z} \\
-&=&\, (a_y\,b_z - a_z\,b_y)\hat{\bf x} - (a_x\,b_z - a_x\,b_z)\hat{\bf y} + (a_x\,b_y - a_y\,b_x)\hat{\bf z} 
+&=  (a_y\,b_z - a_z\,b_y)\hat{\bf x} - (a_x\,b_z - a_x\,b_z)\hat{\bf y} + (a_x\,b_y - a_y\,b_x)\hat{\bf z} 
 ```
 which we find are equivalent definitions.
 
@@ -426,9 +426,9 @@ As an example, we can wfind the vector equation of the lines $\frac{3x+1}{2} = \
 equal some constant $\lambda$, hence:
 
 ```{math}
-x &=&\, \frac{1}{3}(2\lambda-1) = -\frac{1}{3} + \frac{2}{3}\lambda \\
-y &=&\, 1 + 2\lambda \\
-z &=&\, -(3\lambda -5) = 5 - 3 \lambda
+x &=  \frac{1}{3}(2\lambda-1) = -\frac{1}{3} + \frac{2}{3}\lambda \\
+y &=  1 + 2\lambda \\
+z &=  -(3\lambda -5) = 5 - 3 \lambda
 ```
 and therefore the vector equation is:
 ```{math}
@@ -461,9 +461,9 @@ the plane is described as the parameters are varied.
 Written out in scalar form, the vector equation of a plane gives :
 
 ```{math}
-\lambda v_x +\mu w_x &=&\, x-x_0\\
-\lambda v_y +\mu w_y &=&\, y-y_0\\
-\lambda v_z +\mu w_z &=&\, z-z_0
+\lambda v_x +\mu w_x &=  x-x_0\\
+\lambda v_y +\mu w_y &=  y-y_0\\
+\lambda v_z +\mu w_z &=  z-z_0
 ```
 
 In principle, we could find the scalar equation for a plane by eliminating the parameters $\lambda,\mu$ between these equations, which would 
@@ -519,8 +519,8 @@ which gives $x - 5y + 8z = 49$
 Equally in the cector form, first we must find two vectors which lie in the plane - we can use our scalar equation to find these, 
 e.g. $(1,\,0,\,6)$ and $0,\,1,\,27/4)$, thus we can find the vectors:
 ```{math}
-{\bf v_1} &=&\, \begin{pmatrix} x-3 \\ y-2 \\ z-7 \end{pmatrix}\Bigg|_{(1,\,0,\,6)} = \begin{pmatrix} -2 \\ -2 \\ -1\end{pmatrix}\\
-{\bf v_2} &=&\, \begin{pmatrix} x-3 \\ y-2 \\ z-7 \end{pmatrix}\Bigg|_{(0,\,1,\,27/4)} = \begin{pmatrix} -3 \\ -1 \\ -1/4 \end{pmatrix}
+{\bf v_1} &=  \begin{pmatrix} x-3 \\ y-2 \\ z-7 \end{pmatrix}\Bigg|_{(1,\,0,\,6)} = \begin{pmatrix} -2 \\ -2 \\ -1\end{pmatrix}\\
+{\bf v_2} &=  \begin{pmatrix} x-3 \\ y-2 \\ z-7 \end{pmatrix}\Bigg|_{(0,\,1,\,27/4)} = \begin{pmatrix} -3 \\ -1 \\ -1/4 \end{pmatrix}
 ```
 
 and therefore we have:
@@ -560,18 +560,18 @@ An example would be to find the shortest distance between the point $C:(5,0,5)$ 
 $B:(3,4,2)$.  By using the vector product:
 
 ```{math}
-\overrightarrow{AB}\times\overrightarrow{AC} &=&\, \begin{vmatrix}\hat{\bf x} & \hat{\bf y} & \hat{\bf z}\\2&3&-1\\4&-1&2\end{vmatrix} =
+\overrightarrow{AB}\times\overrightarrow{AC} &=  \begin{vmatrix}\hat{\bf x} & \hat{\bf y} & \hat{\bf z}\\2&3&-1\\4&-1&2\end{vmatrix} =
  5\hat{\bf x} - 8\hat{\bf y} - 14\hat{\bf z} \\
-d &=&\, \frac{|\overrightarrow{AB}\times\overrightarrow{AC}|}{\overrightarrow{AB}}=\sqrt{\frac{285}{14}}
+d &=  \frac{|\overrightarrow{AB}\times\overrightarrow{AC}|}{\overrightarrow{AB}}=\sqrt{\frac{285}{14}}
 ```
 
 Or by using the scalar product:
 
 ```{math}
-\overrightarrow{AB} &=&\, \begin{pmatrix}2\\3\\-1\end{pmatrix}\\
-\overrightarrow{AC} &=&\, \begin{pmatrix}4\\-1\\-2\end{pmatrix} \\
-|\overrightarrow{AC}_{\parallel}| &=&\, \overrightarrow{AC}.\frac{\overrightarrow{AB}}{|\overrightarrow{AB}|}=\frac{3}{\sqrt{14}}
-d &=&\, \sqrt{|\overrightarrow{AC}|^2-|\overrightarrow{AC}_{\parallel}|^2}=\sqrt{21-\frac{3}{14}}=\sqrt{\frac{285}{14}}
+\overrightarrow{AB} &=  \begin{pmatrix}2\\3\\-1\end{pmatrix}\\
+\overrightarrow{AC} &=  \begin{pmatrix}4\\-1\\-2\end{pmatrix} \\
+|\overrightarrow{AC}_{\parallel}| &=  \overrightarrow{AC}.\frac{\overrightarrow{AB}}{|\overrightarrow{AB}|}=\frac{3}{\sqrt{14}}
+d &=  \sqrt{|\overrightarrow{AC}|^2-|\overrightarrow{AC}_{\parallel}|^2}=\sqrt{21-\frac{3}{14}}=\sqrt{\frac{285}{14}}
 ```
 
    
