@@ -193,7 +193,7 @@ we can find:
 ```{math}
 I &=&\, \iint_S\Bigg( \nabla \times {\bf G}\Bigg)\cdot\mathrm{d}{\bf S} \\
 I &=&\, \iint_S \begin{pmatrix} 1\\ 2x\\ -1\end{pmatrix}\cdot \begin{pmatrix} 1\\ 0\\ 0\end{pmatrix}\,\mathrm{d}y\,\mathrm{d}z\\
-&=&\,\iint_S \,\mathrm{d}y,\,\mathrm{d}z = \frac{1}{4}\pi 1^2 = \frac{\pi}{4}
+&=&\,\iint_S \,\mathrm{d}y\,\mathrm{d}z = \frac{1}{4}\pi 1^2 = \frac{\pi}{4}
 ```
 Therefore for quite a lot less work, we find the same result!
 

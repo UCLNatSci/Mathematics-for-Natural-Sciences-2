@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>17. Linear Transformations &#8212; Mathematics for Natural Sciences 2</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -33,21 +33,21 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/_static/mystyle.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -58,7 +58,10 @@
     <link rel="next" title="18. Inverse and Determinant" href="inverse_determinant.html" />
     <link rel="prev" title="16. Matrices" href="matrices.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -234,7 +237,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -252,7 +255,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -307,10 +310,68 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Linear Transformations</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   17.1. Linear Transformations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#matrix-transformations">
+   17.2. Matrix Transformations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#geometrical-interpretation-of-matrices">
+   17.3. Geometrical Interpretation of Matrices
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-matrix-of-a-linear-transformation">
+   17.4. The Matrix of a Linear Transformation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rotation-matrices-in-2d">
+   17.5. Rotation matrices in 2D
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-identity-matrix">
+   17.6. The identity matrix
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#composition-of-linear-transformations">
+   17.7. Composition of Linear Transformations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solutions">
+   17.8. Solutions
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
-  <div class="section" id="linear-transformations">
+  <div class="tex2jax_ignore mathjax_ignore section" id="linear-transformations">
 <h1><span class="section-number">17. </span>Linear Transformations<a class="headerlink" href="#linear-transformations" title="Permalink to this headline">¶</a></h1>
 <p>In this section we learn to understand matrices geometrically as functions, or transformations. We briefly discuss transformations in general, then specialize to matrix transformations, which are transformations that come from matrices.</p>
 <div class="section" id="id1">
@@ -618,7 +679,7 @@ A &amp;=
 <h2><span class="section-number">17.8. </span>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">¶</a></h2>
 <div class="solution admonition" id="LinearAlgebra/linear_systems_matrices/linear_maps-solution-5">
 
-<p class="admonition-title"><a class="reference internal" href="#q_linear_transformations">Solution to Exercise 17.1</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="#q_linear_transformations"> Exercise 17.1</a></p>
 <div class="section" id="solution-content">
 <p>1. and 2. Non-linear.</p>
 <p>3. Linear.</p>
@@ -626,7 +687,7 @@ A &amp;=
 </div>
 <div class="solution admonition" id="LinearAlgebra/linear_systems_matrices/linear_maps-solution-6">
 
-<p class="admonition-title"><a class="reference internal" href="#q_geometrical_description">Solution to Exercise 17.2</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="#q_geometrical_description"> Exercise 17.2</a></p>
 <div class="section" id="solution-content">
 <p>1. <span class="math notranslate nohighlight">\(A = \begin{pmatrix}\frac{1}{\sqrt{2}}&amp;\frac{1}{\sqrt{2}}\\\frac{1}{\sqrt{2}}&amp;\frac{1}{\sqrt{2}}\end{pmatrix}\)</span></p>
 <p><span class="math notranslate nohighlight">\(A\)</span> <em>projects</em> vectors onto the line <span class="math notranslate nohighlight">\(y=x\)</span>.</p>
@@ -638,7 +699,7 @@ A &amp;=
 </div>
 <div class="solution admonition" id="LinearAlgebra/linear_systems_matrices/linear_maps-solution-7">
 
-<p class="admonition-title"><a class="reference internal" href="#q_transformation_matrix">Solution to Exercise 17.3</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="#q_transformation_matrix"> Exercise 17.3</a></p>
 <div class="section" id="solution-content">
 <p>1. The transformation of the basis vectors, shown in the graphic below is:</p>
 <div class="math notranslate nohighlight">
@@ -670,7 +731,7 @@ A &amp;=
 </div>
 <div class="solution admonition" id="LinearAlgebra/linear_systems_matrices/linear_maps-solution-8">
 
-<p class="admonition-title"><a class="reference internal" href="#q_matrix_identity">Solution to Exercise 17.4</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="#q_matrix_identity"> Exercise 17.4</a></p>
 <div class="section" id="solution-content">
 <ol class="simple">
 <li><p><span class="math notranslate nohighlight">\(I\begin{pmatrix}1 &amp; 2\\3 &amp; 4\end{pmatrix}=\begin{pmatrix}1 &amp; 2\\3 &amp; 4\end{pmatrix}I = \begin{pmatrix}1 &amp; 2\\3 &amp; 4\end{pmatrix}\)</span>.</p></li>
@@ -680,7 +741,7 @@ A &amp;=
 </div>
 <div class="solution admonition" id="LinearAlgebra/linear_systems_matrices/linear_maps-solution-9">
 
-<p class="admonition-title"><a class="reference internal" href="#q_transformation_composition">Solution to Exercise 17.5</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="#q_transformation_composition"> Exercise 17.5</a></p>
 <div class="section" id="solution-content">
 <p>We can describe this transformation as a rotation by <span class="math notranslate nohighlight">\(\theta\)</span> followed by a scale 2 stretch parallel to the <span class="math notranslate nohighlight">\(x\)</span>-axis followed by a rotation by <span class="math notranslate nohighlight">\(-\theta\)</span>.</p>
 <div class="math notranslate nohighlight">
@@ -718,54 +779,42 @@ A &amp;=\begin{pmatrix}\cos\theta&amp;-\sin\theta\\\sin\theta&amp;\cos\theta\end
 
               </div>
               
-        
             
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="matrices.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">16. </span>Matrices</p>
-            </div>
-        </a>
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="matrices.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">16. </span>Matrices</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="inverse_determinant.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">18. </span>Inverse and Determinant</p>
     </div>
-     <div id="next">
-        <a class="right-next" href="inverse_determinant.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">18. </span>Inverse and Determinant</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Natural Sciences<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By Natural Sciences<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>
