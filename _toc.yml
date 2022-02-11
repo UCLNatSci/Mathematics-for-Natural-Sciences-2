@@ -8,11 +8,11 @@ options:
 chapters:
 - file: VectorCalculus/partialdifferentiation
 - file: VectorCalculus/integrationprelim
-- file: VectorCalculus/lineintegrals
 - file: VectorCalculus/vectoralgebra
 - file: VectorCalculus/calculusonfields
 - file: VectorCalculus/divandcurl
 - file: VectorCalculus/coordinatesystems
+- file: VectorCalculus/lineintegrals
 - file: VectorCalculus/volumeintegrals
 - file: VectorCalculus/surfaceintegrals
 - file: VectorCalculus/vectorcalctheorems

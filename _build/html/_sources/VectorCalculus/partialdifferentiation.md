@@ -11,8 +11,8 @@ We can consider the rate of change of the function, however since it is a functi
 
 We call these <b>partial derivatives</b>, denoted here by:
 ```{math}
-\frac{\partial f}{\partial x} &=&\,  3x^2 - 2y \quad \textrm{(holding $y$ constant and differentiating with respect to $x$)}\\
-\frac{\partial f}{\partial y} &=&\, -3y^2 - 2x \quad \textrm{(holding $x$ constant and differentiating with respect to $y$)}
+\frac{\partial f}{\partial x} &=   3x^2 - 2y \quad \textrm{(holding $y$ constant and differentiating with respect to $x$)}\\
+\frac{\partial f}{\partial y} &=  -3y^2 - 2x \quad \textrm{(holding $x$ constant and differentiating with respect to $y$)}
 ```
 note that the notation $\partial$ is distinct from the $\mathrm{d}$ used for one variable calculus.  It is <em>partial</em> because we 
 consider only variations in one of the two variables here.  The results show the local rate of change parallel to each axis at a point $(x,\,y)$.
@@ -26,8 +26,8 @@ A plot of the function $f(x,\, y) = x^3 - y^3 - 2xy + 2$, along with lines of co
 
 Just like the one variable derivative, there is a limit definition for partial derivatives for a function $f = f(x,\,y)$:
 ```{math}
-\frac{\partial f}{\partial x} &=&\, \lim_{\Delta x \rightarrow 0} \left[\frac{f(x + \Delta x,\, y) - f(x,\, y)}{\Delta x} \right]\\
-\frac{\partial f}{\partial y} &=&\, \lim_{\Delta x \rightarrow 0} \left[\frac{f(x,\, y + \Delta y) - f(x,\, y)}{\Delta y} \right]
+\frac{\partial f}{\partial x} &=  \lim_{\Delta x \rightarrow 0} \left[\frac{f(x + \Delta x,\, y) - f(x,\, y)}{\Delta x} \right]\\
+\frac{\partial f}{\partial y} &=  \lim_{\Delta x \rightarrow 0} \left[\frac{f(x,\, y + \Delta y) - f(x,\, y)}{\Delta y} \right]
 ```
 
 By way of examples, we can calculate all the first partial derivatives $\partial/\partial x,\, \partial/\partial y$ for the following functions:
@@ -35,36 +35,36 @@ By way of examples, we can calculate all the first partial derivatives $\partial
 - $f(x,\,y) = 3x^3 y^2 + 2 y $
 
 ```{math}
-\frac{\partial f}{\partial x} &=&\, x^2 y^2, \\
-\frac{\partial f}{\partial y} &=&\, 6x^3 y+2
+\frac{\partial f}{\partial x} &=  x^2 y^2, \\
+\frac{\partial f}{\partial y} &=  6x^3 y+2
 ```
 
 - $f(x,\,y) = x^2 \ln(3x+y)$ 
 
 ```{math}
-\frac{\partial f}{\partial x} &=&\, 2x\ln(3x+y) + \frac{3x^2}{3x+y}, \\
-\frac{\partial f}{\partial y} &=&\, \frac{x^2}{3x+y}
+\frac{\partial f}{\partial x} &=  2x\ln(3x+y) + \frac{3x^2}{3x+y}, \\
+\frac{\partial f}{\partial y} &=  \frac{x^2}{3x+y}
 ```
 
 - $z(x,\,y) = \ln(x+y^2\sin(x))$
 ```{math}
-\frac{\partial z}{\partial x} &=&\, \frac{1+y^2\cos(x)}{x+y^2\sin(x)}, \\
-\frac{\partial z}{\partial y} &=&\, \frac{2y\sin(x)}{x+y^2\sin(x)}
+\frac{\partial z}{\partial x} &=  \frac{1+y^2\cos(x)}{x+y^2\sin(x)}, \\
+\frac{\partial z}{\partial y} &=  \frac{2y\sin(x)}{x+y^2\sin(x)}
 ```
 
 ### Second Partial Derivatives
 The second partial derivatives with respect to $x$ and $y$ are denoted as follows:
 
 ```{math}
-\frac{\partial^2 f}{\partial x^2} &=&\, \frac{\partial}{\partial x}\left(\frac{\partial f}{\partial x}\right), \\
-\frac{\partial^2 f}{\partial y^2} &=&\, \frac{\partial}{\partial y}\left(\frac{\partial f}{\partial y}\right)
+\frac{\partial^2 f}{\partial x^2} &=  \frac{\partial}{\partial x}\left(\frac{\partial f}{\partial x}\right), \\
+\frac{\partial^2 f}{\partial y^2} &=  \frac{\partial}{\partial y}\left(\frac{\partial f}{\partial y}\right)
 ```
 
 The notation can also be extended to <b>mixed second partial derivative</b>, where we take the $x$ and the $y$ partial derivative:
 
 ```{math}
-\frac{\partial^2 f}{\partial y \,\partial x} &=&\, \frac{\partial}{\partial y}\left(\frac{\partial f}{\partial x}\right), \\
-\frac{\partial^2 f}{\partial x\, \partial y} &=&\, \frac{\partial}{\partial x}\left(\frac{\partial f}{\partial y}\right)
+\frac{\partial^2 f}{\partial y \,\partial x} &=  \frac{\partial}{\partial y}\left(\frac{\partial f}{\partial x}\right), \\
+\frac{\partial^2 f}{\partial x\, \partial y} &=  \frac{\partial}{\partial x}\left(\frac{\partial f}{\partial y}\right)
 ```
 Notice that we work from the inside out, as with function composition and matrix multiplication.  For any well behaved, differntiable and continuous function, 
 these two expressions are <em>always</em> equal.  The proof of this result (called Schwarz's theorem) is quite involved and is beyond the scope of this course.
@@ -112,8 +112,8 @@ f_x=\frac{\partial f}{\partial x}, &\quad&\, f_y=\frac{\partial f}{\partial y}, 
 For mixed derivatives the order or subscripts is from left to right:
 
 ```{math}
-f_{xy} &=&\, (f_x)_y = \frac{\partial^2 f}{\partial y\, \partial x}, \\
-f_{yx} &=&\, (f_y)_x = \frac{\partial^2 f}{\partial x\, \partial y}
+f_{xy} &=  (f_x)_y = \frac{\partial^2 f}{\partial y\, \partial x}, \\
+f_{yx} &=  (f_y)_x = \frac{\partial^2 f}{\partial x\, \partial y}
 ```
 
 You will likely come across yet more alternative notations in the literature, another common one being:
@@ -165,8 +165,8 @@ using the limit definition of the derivative and from this we obtain the multiva
 If $f = f(x,\, y)$ where $x=x(u,\, v)$ and $y=y(u,\, v)$ then:
 
 ```{math}
-\frac{\partial f}{\partial u} &=&\, \frac{\partial f}{\partial x}\frac{\partial x}{\partial u} + \frac{\partial f}{\partial y}\frac{\partial y}{\partial u}\\
-\frac{\partial f}{\partial v} &=&\, \frac{\partial f}{\partial x}\frac{\partial x}{\partial v} + \frac{\partial f}{\partial y}\frac{\partial y}{\partial v}
+\frac{\partial f}{\partial u} &=  \frac{\partial f}{\partial x}\frac{\partial x}{\partial u} + \frac{\partial f}{\partial y}\frac{\partial y}{\partial u}\\
+\frac{\partial f}{\partial v} &=  \frac{\partial f}{\partial x}\frac{\partial x}{\partial v} + \frac{\partial f}{\partial y}\frac{\partial y}{\partial v}
 ```
 
 Many student's first go at encountering this rule often think that it "can't be right", because replacing the partial derivatives with differences gives:
@@ -181,12 +181,12 @@ On the left-hand side it means changes in $f$ dues to variations in both $x$ and
 is held constant. Written formally:
 
 ```{math}
-\frac{\partial f}{\partial u} &=&\, \lim_{\Delta u\rightarrow 0}\frac{f(x(u+\Delta u,v),y(u+\Delta u,v))-f(x(u,v),y(u,v))}{\Delta u}, \\
-\frac{\partial f}{\partial x} &=&\, \lim_{\Delta x\rightarrow 0}\frac{f(x+\Delta x,y)-f(x,v)}{\Delta x}
+\frac{\partial f}{\partial u} &=  \lim_{\Delta u\rightarrow 0}\frac{f(x(u+\Delta u,v),y(u+\Delta u,v))-f(x(u,v),y(u,v))}{\Delta u}, \\
+\frac{\partial f}{\partial x} &=  \lim_{\Delta x\rightarrow 0}\frac{f(x+\Delta x,y)-f(x,v)}{\Delta x}
 =\lim_{\Delta u\rightarrow 0}\frac{f(x(u+\Delta u,v),y(u,v))-f(x(u,v),y(u,v))}{\Delta u}
 ```
 
-The lseson here is - <em>it is dangerous to treat partial derivatives as fractions!</em>
+The lesson here is - <em>it is dangerous to treat partial derivatives as fractions!</em>
 
 ## Dependency Trees
 The multivariate chain rule can be illustrated as a dependency tree, in {numref}`dependency1`, where we examine $f(x,\, y)$ with $x = x(u,\, v)$ and $y = y(u,\, v)$:
@@ -216,15 +216,15 @@ f_v = f_x\, x_v + f_y\, y_v
 ```
 meaning that:
 ```{math}
-f_x &=&\, 2xy, \\
-f_y &=&\, x^2+2y \\
+f_x &=  2xy, \\
+f_y &=  x^2+2y \\
 x_u=1, &\quad&\, x_v=1, \\
 y_u=1, &\quad&\, y_v=-1
 ```
 Putting these results together:
 ```{math}
-f_u = f_x\, x_u + f_y\, y_u &=&\, 2xy+(x^2+2y) = 2(u+v)(u-v)+(u+v)^2+2(u-v)\\
-f_v = f_x\, x_v + f_y\, y_v &=&\, 2xy-(x^2+2y) = 2(u+v)(u-v)-(u+v)^2-2(u-v)
+f_u = f_x\, x_u + f_y\, y_u &=  2xy+(x^2+2y) = 2(u+v)(u-v)+(u+v)^2+2(u-v)\\
+f_v = f_x\, x_v + f_y\, y_v &=  2xy-(x^2+2y) = 2(u+v)(u-v)-(u+v)^2-2(u-v)
 ```
 
 We can also use techniques to simplify calculating more complicated derivatives, for example for the function: 
@@ -281,15 +281,15 @@ A(x,\, y)\,\mathrm{d}x + B(x,\, y)\,\mathrm{d}y = 0
 where we have taken:
 
 ```{math}
-A &=&\, y\cos{x}+\sin{y}+y \\
-B &=&\, \sin{x}+x\cos{y}+x
+A &=  y\cos{x}+\sin{y}+y \\
+B &=  \sin{x}+x\cos{y}+x
 ```
 
 Then if we examine the conditions:
 ```{math}
-\frac{\partial A}{\partial y} &=&\, \cos{x} + \cos{y} + 1\\
-\frac{\partial B}{\partial x} &=&\, \cos{x} + \cos{y} + 1\\
-\Rightarrow \frac{\partial A}{\partial y} &=&\, \frac{\partial B}{\partial x}
+\frac{\partial A}{\partial y} &=  \cos{x} + \cos{y} + 1\\
+\frac{\partial B}{\partial x} &=  \cos{x} + \cos{y} + 1\\
+\Rightarrow \frac{\partial A}{\partial y} &=  \frac{\partial B}{\partial x}
 ```
 and therefore the expression is exact.
 
@@ -305,15 +305,15 @@ We can rewrite this in the form:
 ```
 and if we let:
 ```{math}
-A &=&\, y\cos{x} + \sin{y} + y = \frac{\partial F}{\partial x}, \\
-B &=&\, \sin{x} + x\cos{y} + x = \frac{\partial F}{\partial y}
+A &=  y\cos{x} + \sin{y} + y = \frac{\partial F}{\partial x}, \\
+B &=  \sin{x} + x\cos{y} + x = \frac{\partial F}{\partial y}
 ```
 where $F(x,\,y)$ is to be determined.
 
 By integrating $A$ w.r.t. $x$ and $B$ w.r.t $y$ we obtain:
 ```{math}
-F &=&\, y\sin{x} + x\sin{y} + xy + F_1(y)\\
-F &=&\, y\sin{x} + x\sin{y} + xy + F_2(x)
+F &=  y\sin{x} + x\sin{y} + xy + F_1(y)\\
+F &=  y\sin{x} + x\sin{y} + xy + F_2(x)
 ```
 
 where we introduced the arbitrary functions $F_1,\, F_2$.  For consistency we require that $F_1(y) = F_2(x) = \mathrm{const.}$, this 
@@ -353,8 +353,8 @@ $f$ is zero in any direction.
 As an example, lets think again about the function in {numref}`surf1`, $f(x,\, y) = x^3 - y^3 - 2xy + 2$ can be found by solving $f_x = f_y = 0$ simultaneously:
 
 ```{math}
-3y^2+2x&=&\,0\\
-3x^2-2y&=&\,0
+3y^2+2x&= 0\\
+3x^2-2y&= 0
 ```
 
 In general, it may be very difficult (or impossible!) to solve nonlinear equations by hand, and so we would need to resort to numerical methods. In this case, 
@@ -456,8 +456,6 @@ This can have a few different outcomes:
 - If $\det(H(x_0,\,y_0))<0$ then the point is a saddle.
 - If $\det(H(x_0,\,y_0))=0$ then the test is inconclusive and further analysis is needed.
   
-
-Example 2:
 
 Lets classify the stationary points of the function $f=x^3-y^3-2xy+2$, we already found that the stationary points are located at $(0,0,2)$ and 
 $\left(-\frac{2}{3},\frac{2}{3},\frac{62}{27}\right)$.

@@ -409,13 +409,31 @@ case <span class="math notranslate nohighlight">\(n+1\)</span> to be shown to be
 <div class="math notranslate nohighlight">
 \[S_n = 1 + 2 + \dots + n = \frac{n(n+1)}{2}\]</div>
 <p><b>Proof:</b>
-<span class="math notranslate nohighlight">\(S_1 = \frac{1(2)}{2} = 1\)</span> which is true, <span class="math notranslate nohighlight">\(S_2 = \frac{2(3)}{2} = 3\)</span> which is also true. Assuming that <span class="math notranslate nohighlight">\(S_n\)</span> is true, we need to see if we can prove <span class="math notranslate nohighlight">\(S_{n+1} = \frac{(n+1)(n+2)}{2}\)</span>:</p>
+<span class="math notranslate nohighlight">\(S_1 = 1(2)/2 = 1\)</span> which is true,
+<span class="math notranslate nohighlight">\(S_2 = 2(3)/2 = 3\)</span> which is also true.</p>
+<p>Assuming that <span class="math notranslate nohighlight">\(S_n\)</span> is true, we need to see if we
+can prove <span class="math notranslate nohighlight">\(S_{n+1} = (n+1)(n+2)/2\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}S_{n+1} &amp;=&amp;\, 1 + 2 + \dots + n + n+1 = S_{n} + n+1 \\ 
-&amp;=&amp;\, \frac{n(n+1)}{2} + n+1 \\ 
-&amp;=&amp;\, \frac{n(n+1) + 2(n+1)}{2} \\ 
-&amp;=&amp;\, \frac{(n+1)(n+2)}{2}\end{split}\]</div>
+\[\begin{split}S_{n+1} &amp;= 1 + 2 + \dots + n + n+1 = S_{n} + n+1 \\ 
+&amp;= \frac{n(n+1)}{2} + n+1 \\ 
+&amp;= \frac{n(n+1) + 2(n+1)}{2} \\ 
+&amp;= \frac{(n+1)(n+2)}{2}\end{split}\]</div>
 <p><b>QED</b></p>
+<p>Another example would be to:</p>
+<p><b>Statement:</b> Prove that</p>
+<div class="math notranslate nohighlight">
+\[f(n) = 6^n + 4^{2n+1},\, n \in \mathbb{N}\]</div>
+<p>is always a multiple of 10.</p>
+<p><b>Proof:</b>
+If we take <span class="math notranslate nohighlight">\(P_n: \quad 6^n + 4^{2n+1} = 10k,\, \{k,\,n\}\in \mathbb{N}\)</span>, then examining:</p>
+<p><span class="math notranslate nohighlight">\(P_1: \quad 6^1 + 4^3 = 64 + 6 = 70 = 7(10)\)</span></p>
+<p><span class="math notranslate nohighlight">\(P_2:\quad 6^2 + 4^5 = 26 + 1024 = 1050 = 105(10)\)</span></p>
+<p>Thus proven for the first couple of cases, now we assume that <span class="math notranslate nohighlight">\(P_n\)</span> is true and look to <span class="math notranslate nohighlight">\(P_{n+1}\)</span>, can we argue if this is true:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}P_{n+1}:\quad 6^{n+1} + 4^{2n+2+1} &amp;= 6^{n+1} + 4^{2n+3}\\
+6\left(6^n\right) + 4^2\left(4^{2n+1}\right) &amp;= 6\left(6^n + 4^{2n+1}\right) + 10\left(4^{2n+1} \right)\\
+&amp;= 6(10k) + 10 \left(4^{2n+1} \right) = 10\left[6k + \left(4^{2n+1} \right)\right] = 10k',\, k' \in \mathbb{N}\end{split}\]</div>
+<p>and therefore we have shown that <span class="math notranslate nohighlight">\(P_{n+1}\)</span> is also true.</p>
 </div>
 <div class="section" id="proof-by-contraposition">
 <h2><span class="section-number">14.4. </span>Proof by Contraposition<a class="headerlink" href="#proof-by-contraposition" title="Permalink to this headline">¶</a></h2>
@@ -426,19 +444,28 @@ case <span class="math notranslate nohighlight">\(n+1\)</span> to be shown to be
 <div class="math notranslate nohighlight">
 \[P \rightarrow Q \]</div>
 <ol class="simple">
-<li><p>First order tells us that the negation of statement <span class="math notranslate nohighlight">\(Q\)</span>, i.e. <span class="math notranslate nohighlight">\(\neg Q\)</span> leads directly to the negation of assertion <span class="math notranslate nohighlight">\(P\)</span>, i.e. <span class="math notranslate nohighlight">\(\neg P\)</span>,</p></li>
+<li><p>First order logic tells us that the negation of statement <span class="math notranslate nohighlight">\(Q\)</span>, i.e. <span class="math notranslate nohighlight">\(\neg Q\)</span> leads directly to the negation of assertion <span class="math notranslate nohighlight">\(P\)</span>, i.e. <span class="math notranslate nohighlight">\(\neg P\)</span>,</p></li>
 </ol>
 <div class="math notranslate nohighlight">
 \[\neg Q \rightarrow \neg P\]</div>
 <p>By way of an example, consider this classic proof:</p>
-<p><b>Statement:</b> Prove that for <span class="math notranslate nohighlight">\(x \in \mathbb{R}\)</span>, if the function <span class="math notranslate nohighlight">\(x^2 - 6x + 5\)</span> is even, then <span class="math notranslate nohighlight">\(x\)</span> is odd.</p>
-<p><b>Proof:</b> Suppose <span class="math notranslate nohighlight">\(x \in \mathbb{R}\)</span> is even, when we need to show <span class="math notranslate nohighlight">\(x^2 - 6x + 5\)</span> is odd.<br />
+<p><b>Statement:</b> Prove that for <span class="math notranslate nohighlight">\(x \in \mathbb{R}\)</span>, if the function <span class="math notranslate nohighlight">\(x^2 - 6x + 5\)</span> is EVEN, then <span class="math notranslate nohighlight">\(x\)</span> is ODD.</p>
+<p>Thus here <span class="math notranslate nohighlight">\(P\)</span> is <span class="math notranslate nohighlight">\(x^2 - 6x + 5 = 2k,\, x \in \mathbb{R},\, k \in \mathbb{Z}\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> is <span class="math notranslate nohighlight">\(x = 2a+1,\, a \in \mathbb{Z}\)</span>.</p>
+<p><b>Proof:</b> <span class="math notranslate nohighlight">\(\neg Q\)</span> here is assume <span class="math notranslate nohighlight">\(x \in \mathbb{R}\)</span> is EVEN, and <span class="math notranslate nohighlight">\(\neq P\)</span> here is <span class="math notranslate nohighlight">\(x^2 - 6x + 5\)</span> being ODD.<br />
 Lets write <span class="math notranslate nohighlight">\(x = 2a\)</span> with some <span class="math notranslate nohighlight">\(a \in \mathbb{Z}\)</span>, then we find that:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}x^2 - 6x + 5 &amp;=&amp; (2a)^2 - 6(2a) + 5 \\
-&amp;=&amp; 4a^2 - 12a + 5 \\
-&amp;=&amp; 2(2a^2 - 6a + 2) + 1\end{split}\]</div>
-<p>which we can see clearly is odd.  Thus when <span class="math notranslate nohighlight">\(x^2 - 6x + 5\)</span> is odd, <span class="math notranslate nohighlight">\(x\)</span> is even and therefore when <span class="math notranslate nohighlight">\(x^2 - 6x + 5\)</span> is even, <span class="math notranslate nohighlight">\(x\)</span> is odd. <b>QED</b></p>
+\[\begin{split}x^2 - 6x + 5 &amp;= (2a)^2 - 6(2a) + 5 \\
+&amp;= 4a^2 - 12a + 5 \\
+&amp;= 2(2a^2 - 6a + 2) + 1\end{split}\]</div>
+<p>which we can see clearly is ODD.  Thus <span class="math notranslate nohighlight">\(\neg Q \Rightarrow \neq P\)</span> and so <span class="math notranslate nohighlight">\(P \Rightarrow Q\)</span> - i.e. when <span class="math notranslate nohighlight">\(x\)</span> is EVEN, <span class="math notranslate nohighlight">\(x^2 - 6x + 5\)</span> is ODD
+and therefore when <span class="math notranslate nohighlight">\(x^2 - 6x + 5\)</span> is EVEN, <span class="math notranslate nohighlight">\(x\)</span> is ODD. <b>QED</b></p>
+<p>Another example would be:</p>
+<p><b>Statement:</b> Prove that if <span class="math notranslate nohighlight">\(n^2\)</span> is EVEN, then <span class="math notranslate nohighlight">\(n\)</span> is EVEN, for all <span class="math notranslate nohighlight">\(n \in \mathbb{Z}\)</span>.</p>
+<p>Thus here <span class="math notranslate nohighlight">\(P\)</span> is <span class="math notranslate nohighlight">\(n^2 = 2k,\, k \in \mathbb{Z}\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> is <span class="math notranslate nohighlight">\(n = 2a,\, a \in \mathbb{Z}\)</span>.</p>
+<p><b>Proof:</b> <span class="math notranslate nohighlight">\(\neg Q\)</span> here is <span class="math notranslate nohighlight">\(n\)</span> is ODD, i.e. <span class="math notranslate nohighlight">\(n = 2a + 1,\, n \in \mathbb{N}\)</span>, then:</p>
+<div class="math notranslate nohighlight">
+\[n^2 = (2a + 1)^2 = 4a^2 + 4a + 1 = 2(2a^2 + 2a) + 1 = 2k'+1,\, k' \in \mathbb{N}\]</div>
+<p>which is clearly an EVEN number plus one, which is ODD - hence <span class="math notranslate nohighlight">\(\neg Q \Rightarrow \neg P\)</span> and so <span class="math notranslate nohighlight">\(P \Rightarrow Q\)</span>, i.e. if <span class="math notranslate nohighlight">\(n^2\)</span> is EVEN, then <span class="math notranslate nohighlight">\(n\)</span> is EVEN.</p>
 </div>
 <div class="section" id="proof-by-construction">
 <h2><span class="section-number">14.5. </span>Proof By Construction<a class="headerlink" href="#proof-by-construction" title="Permalink to this headline">¶</a></h2>
@@ -448,13 +475,21 @@ Lets write <span class="math notranslate nohighlight">\(x = 2a\)</span> with som
 </ol>
 <div class="math notranslate nohighlight">
 \[    \{P_1,\,P_2,\,P_3,\,\dots,\,P_n\} \vdash Q\]</div>
-<p><b>Statement:</b> Prove that for <span class="math notranslate nohighlight">\(x \in \mathbb{R}\)</span>, if the function <span class="math notranslate nohighlight">\(x^2 - 6x + 5\)</span> is even, then <span class="math notranslate nohighlight">\(x\)</span> is odd.</p>
-<p><b>Proof:</b> For <span class="math notranslate nohighlight">\(x \in \mathbb{R}\)</span>, lets write <span class="math notranslate nohighlight">\(x^2 - 6x + 5 = 2a\)</span> with some <span class="math notranslate nohighlight">\(a \in \mathbb{N}\)</span>, so that <span class="math notranslate nohighlight">\(x^2 - 6x + 5\)</span> is even, then we find that:</p>
+<p><b>Statement:</b> Prove that for <span class="math notranslate nohighlight">\(x \in \mathbb{R}\)</span>, if the function <span class="math notranslate nohighlight">\(x^2 - 6x + 5\)</span> is EVEN, then <span class="math notranslate nohighlight">\(x\)</span> is ODD.</p>
+<p><b>Proof:</b> For <span class="math notranslate nohighlight">\(x \in \mathbb{R}\)</span>, lets write <span class="math notranslate nohighlight">\(x^2 - 6x + 5 = 2a\)</span> with some <span class="math notranslate nohighlight">\(a \in \mathbb{N}\)</span>, so that <span class="math notranslate nohighlight">\(x^2 - 6x + 5\)</span> is EVEN, then we find that:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}x^2 - 6x + 5 &amp;=&amp; 2a  \\
-x^2 - 6x &amp;=&amp; 2a - 5 \\
-x(x-6) &amp;=&amp; 2a - 5\end{split}\]</div>
-<p>Since the RHS is clearly odd by construction, this means the LHS is odd.  Given that ODD <span class="math notranslate nohighlight">\(\times\)</span> ODD = ODD, then given <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(x-6\)</span> differ by an even numbers, <span class="math notranslate nohighlight">\(x\)</span> must be an odd number. <b>QED</b></p>
+\[\begin{split}x^2 - 6x + 5 &amp;= 2a  \\
+x^2 - 6x &amp;= 2a - 5 \\
+x(x-6) &amp;= 2a - 5\end{split}\]</div>
+<p>Since the RHS is clearly ODD by construction, this means the LHS is ODD.  Given that ODD <span class="math notranslate nohighlight">\(\times\)</span> ODD = ODD, then given <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(x-6\)</span> differ by an EVEN numbers, <span class="math notranslate nohighlight">\(x\)</span> must be an ODD number. <b>QED</b></p>
+<p>Another example of this technique would be to:</p>
+<p><b>Statement:</b> Prove that for <span class="math notranslate nohighlight">\(n \in \mathbb{Z}\)</span>, <span class="math notranslate nohighlight">\(n^3 - n\)</span> is always a multiple of 6.</p>
+<p><b>Proof:</b> Examining this function:</p>
+<div class="math notranslate nohighlight">
+\[f(n) = n^3 - n = n(n^2-1) = n(n+1)(n-1)\]</div>
+<p>Since every second number has to be an even number, the worst case scenario is one of <span class="math notranslate nohighlight">\(n-1,\, n,\, n+1\)</span> is EVEN and in the best case scenario two of <span class="math notranslate nohighlight">\(n-1,\, n,\, n+1\)</span> is EVEN.
+Likewise is every third number has to be a multiple of 3, one of <span class="math notranslate nohighlight">\(n-1,\, n,\, n+1\)</span> has to be multiple of 3.</p>
+<p>Hence <span class="math notranslate nohighlight">\(f(n) = (n-1)(n)(n+1)\)</span> carries both factors of 2 and 3, therefore <span class="math notranslate nohighlight">\(f(n)\)</span> is always divisible by 6 if <span class="math notranslate nohighlight">\(n \mathbb{Z}\)</span>.</p>
 <div class="section" id="number-theory-types-of-construction">
 <h3><span class="section-number">14.5.1. </span>Number Theory Types of Construction<a class="headerlink" href="#number-theory-types-of-construction" title="Permalink to this headline">¶</a></h3>
 <p>Sometimes instead of directly proving a proposition, we can construct facts about the proposition which the lead to the answer.  This is often employed
@@ -466,14 +501,14 @@ when we have to prove some facts about numbers, for example lets try to prove th
 \[P_a: a^5 = 10m + a,\, a,\,m \in \mathbb{Z}\]</div>
 <p>and given the starting cases:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}1^5 &amp;=&amp;\, 1 = 10(0) + 1 \\
-2^5 &amp;=&amp;\, 32 = 10(3) + 2 \\
-3^5 &amp;=&amp;\, 243 = 10(24) + 3\end{split}\]</div>
+\[\begin{split}1^5 &amp;= 1 = 10(0) + 1 \\
+2^5 &amp;= 32 = 10(3) + 2 \\
+3^5 &amp;= 243 = 10(24) + 3\end{split}\]</div>
 <p>which works and therefore to shown the proposition true, we need to work out <span class="math notranslate nohighlight">\((a+1)^5\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}(a+1)^5 &amp;=&amp;\, a^5 + 5a^4 + 10a^3 + 10a^2 + 5a + 1 \\
-&amp;=&amp;\, 10m + a + 10a^3 + 10a^2 + 5a^4 + 5a + 1 \\
-&amp;=&amp;\, 10(m + a^2 + a^4) + 5a(1 + a^3) + a + 1 \end{split}\]</div>
+\[\begin{split}(a+1)^5 &amp;= a^5 + 5a^4 + 10a^3 + 10a^2 + 5a + 1 \\
+&amp;= 10m + a + 10a^3 + 10a^2 + 5a^4 + 5a + 1 \\
+&amp;= 10(m + a^2 + a^4) + 5a(1 + a^3) + a + 1 \end{split}\]</div>
 <p>and we can then argue that <span class="math notranslate nohighlight">\(\forall \,a \in \mathbb{Z},\, a(a^3+1)\)</span> is an EVEN number - if <span class="math notranslate nohighlight">\(a\)</span> is ODD then <span class="math notranslate nohighlight">\(a^3+1\)</span> is EVEN and so <span class="math notranslate nohighlight">\(a(a^3+1)\)</span> is EVEN
 and likewise if <span class="math notranslate nohighlight">\(a\)</span> is EVEN, <span class="math notranslate nohighlight">\(a(a^3+1)\)</span> is EVEN, hence we have:</p>
 <div class="math notranslate nohighlight">
@@ -481,27 +516,35 @@ and likewise if <span class="math notranslate nohighlight">\(a\)</span> is EVEN,
 <p>which is <span class="math notranslate nohighlight">\(P_a\Bigg|_{a \rightarrow a+1}\)</span> and hence proven.</p>
 <p>However lets explore the numbers a little deeper here, lets start with what happens if we square the first 10 natural numbers:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}1 &amp;\rightarrow&amp;\, 1\\
-2 &amp;\rightarrow&amp;\, 4\\
-3 &amp;\rightarrow&amp;\, 9\\
-4 &amp;\rightarrow&amp;\, 16\\
-5 &amp;\rightarrow&amp;\, 25\\
-6 &amp;\rightarrow&amp;\, 36\\
-7 &amp;\rightarrow&amp;\, 49\\
-8 &amp;\rightarrow&amp;\, 64\\
-9 &amp;\rightarrow&amp;\, 81\\
-10 &amp;\rightarrow&amp;\, 10\end{split}\]</div>
-<p>We notice that the last digit of the square numbers is always one of <span class="math notranslate nohighlight">\({0,\, 1,\, 4,\, 5,\, 6,\, 9}\)</span>, the digits <span class="math notranslate nohighlight">\({2,\, 3,\, 7,\, 8}\)</span> never
+\[\begin{split}n &amp;\rightarrow  n^2\\
+1 &amp;\rightarrow  1\\
+2 &amp;\rightarrow  4\\
+3 &amp;\rightarrow  9\\
+4 &amp;\rightarrow  16\\
+5 &amp;\rightarrow  25\\
+6 &amp;\rightarrow  36\\
+7 &amp;\rightarrow  49\\
+8 &amp;\rightarrow  64\\
+9 &amp;\rightarrow  81\\
+10 &amp;\rightarrow  100\end{split}\]</div>
+<p>We notice that the last digit of the square numbers is always one of <span class="math notranslate nohighlight">\(\{0,\, 1,\, 4,\, 5,\, 6,\, 9\}\)</span>, the digits <span class="math notranslate nohighlight">\(\{2,\, 3,\, 7,\, 8\}\)</span> never
 enter in to this.  Likewise we could keep going to cube numbers and quartic powers etc, but lets just think about what happens when we take
-numbers to higher an higher powers and what that last digit does, as outlined in <a class="reference internal" href="#cycliclastdigits"><span class="std std-numref">Fig. 14.1</span></a>.</p>
+numbers to higher and higher powers - the last digit changes in a predictable way, as outlined in <a class="reference internal" href="#cycliclastdigits"><span class="std std-numref">Fig. 14.1</span></a>.</p>
 <div class="figure align-default" id="cycliclastdigits">
 <img alt="../_images/cycliclastdigits.png" src="../_images/cycliclastdigits.png" />
 <p class="caption"><span class="caption-number">Fig. 14.1 </span><span class="caption-text">The effect of higher and higher powers on the last digit of an integer.</span><a class="headerlink" href="#cycliclastdigits" title="Permalink to this image">¶</a></p>
 </div>
 <p>We see that some digits under increasing integer powers return back to the same digit immediately (e.g. <span class="math notranslate nohighlight">\(6 \rightarrow 6\)</span>), others take
-another digit first (e.g. <span class="math notranslate nohighlight">\(9 \rightarrow 1 \rightarrow 9\)</span>) and some go through up to four other digits (e.g. <span class="math notranslate nohighlight">\(2 \rightarrow 4 \rightarrow 8 \rightarrow 6 \rightarrow 2\)</span>),
-therefore for <em>any</em> digit, to guarantee the digit has returned we must raise the power to five, that’s why <span class="math notranslate nohighlight">\(a^5\)</span> will have a righthand digit
-equal to <span class="math notranslate nohighlight">\(a\)</span> plus another number that has a factor of ten, shifting it along to the higher digits.</p>
+another digit first (e.g. <span class="math notranslate nohighlight">\(9 \rightarrow 1 \rightarrow 9\)</span>) and some go through up to four other digits
+(e.g. <span class="math notranslate nohighlight">\(2 \rightarrow 4 \rightarrow 8 \rightarrow 6 \rightarrow 2\)</span>), therefore for <em>any</em> digit, to guarantee the digit has
+returned we must raise the power to five, that’s why <span class="math notranslate nohighlight">\(a^5\)</span> will have a righthand digit equal to <span class="math notranslate nohighlight">\(a\)</span> plus another number that has a factor of
+ten, shifting it along to the higher digits.</p>
+<p>Another example of using this technique would be to prove that:</p>
+<div class="math notranslate nohighlight">
+\[f(n) = 6^n + 4^{2n+1},\, n \in \mathbb{N}\]</div>
+<p>is a multiple of 10.</p>
+<p>Using the last digits powers in <a class="reference internal" href="#cycliclastdigits"><span class="std std-numref">Fig. 14.1</span></a> for 4 and 6, we see that <span class="math notranslate nohighlight">\(4^{2n+1}\)</span> will always be a number ending in a 4 and the numebr <span class="math notranslate nohighlight">\(6^n\)</span> will always end in
+a 6, then the final digit of this number will always end in a 0 - this is therefore ALWAYS a multiple of 10 - hence proven!</p>
 </div>
 </div>
 </div>

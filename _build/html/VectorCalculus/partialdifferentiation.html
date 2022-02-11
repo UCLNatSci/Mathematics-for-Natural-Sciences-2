@@ -421,8 +421,8 @@
 </ul>
 <p>We call these <b>partial derivatives</b>, denoted here by:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\frac{\partial f}{\partial x} &amp;=&amp;\,  3x^2 - 2y \quad \textrm{(holding $y$ constant and differentiating with respect to $x$)}\\
-\frac{\partial f}{\partial y} &amp;=&amp;\, -3y^2 - 2x \quad \textrm{(holding $x$ constant and differentiating with respect to $y$)}\end{split}\]</div>
+\[\begin{split}\frac{\partial f}{\partial x} &amp;=   3x^2 - 2y \quad \textrm{(holding $y$ constant and differentiating with respect to $x$)}\\
+\frac{\partial f}{\partial y} &amp;=  -3y^2 - 2x \quad \textrm{(holding $x$ constant and differentiating with respect to $y$)}\end{split}\]</div>
 <p>note that the notation <span class="math notranslate nohighlight">\(\partial\)</span> is distinct from the <span class="math notranslate nohighlight">\(\mathrm{d}\)</span> used for one variable calculus.  It is <em>partial</em> because we
 consider only variations in one of the two variables here.  The results show the local rate of change parallel to each axis at a point <span class="math notranslate nohighlight">\((x,\,y)\)</span>.</p>
 <div class="figure align-default" id="surf1">
@@ -431,38 +431,38 @@ consider only variations in one of the two variables here.  The results show the
 </div>
 <p>Just like the one variable derivative, there is a limit definition for partial derivatives for a function <span class="math notranslate nohighlight">\(f = f(x,\,y)\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\frac{\partial f}{\partial x} &amp;=&amp;\, \lim_{\Delta x \rightarrow 0} \left[\frac{f(x + \Delta x,\, y) - f(x,\, y)}{\Delta x} \right]\\
-\frac{\partial f}{\partial y} &amp;=&amp;\, \lim_{\Delta x \rightarrow 0} \left[\frac{f(x,\, y + \Delta y) - f(x,\, y)}{\Delta y} \right]\end{split}\]</div>
+\[\begin{split}\frac{\partial f}{\partial x} &amp;=  \lim_{\Delta x \rightarrow 0} \left[\frac{f(x + \Delta x,\, y) - f(x,\, y)}{\Delta x} \right]\\
+\frac{\partial f}{\partial y} &amp;=  \lim_{\Delta x \rightarrow 0} \left[\frac{f(x,\, y + \Delta y) - f(x,\, y)}{\Delta y} \right]\end{split}\]</div>
 <p>By way of examples, we can calculate all the first partial derivatives <span class="math notranslate nohighlight">\(\partial/\partial x,\, \partial/\partial y\)</span> for the following functions:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(f(x,\,y) = 3x^3 y^2 + 2 y \)</span></p></li>
 </ul>
 <div class="math notranslate nohighlight">
-\[\begin{split}\frac{\partial f}{\partial x} &amp;=&amp;\, x^2 y^2, \\
-\frac{\partial f}{\partial y} &amp;=&amp;\, 6x^3 y+2\end{split}\]</div>
+\[\begin{split}\frac{\partial f}{\partial x} &amp;=  x^2 y^2, \\
+\frac{\partial f}{\partial y} &amp;=  6x^3 y+2\end{split}\]</div>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(f(x,\,y) = x^2 \ln(3x+y)\)</span></p></li>
 </ul>
 <div class="math notranslate nohighlight">
-\[\begin{split}\frac{\partial f}{\partial x} &amp;=&amp;\, 2x\ln(3x+y) + \frac{3x^2}{3x+y}, \\
-\frac{\partial f}{\partial y} &amp;=&amp;\, \frac{x^2}{3x+y}\end{split}\]</div>
+\[\begin{split}\frac{\partial f}{\partial x} &amp;=  2x\ln(3x+y) + \frac{3x^2}{3x+y}, \\
+\frac{\partial f}{\partial y} &amp;=  \frac{x^2}{3x+y}\end{split}\]</div>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(z(x,\,y) = \ln(x+y^2\sin(x))\)</span></p></li>
 </ul>
 <div class="math notranslate nohighlight">
-\[\begin{split}\frac{\partial z}{\partial x} &amp;=&amp;\, \frac{1+y^2\cos(x)}{x+y^2\sin(x)}, \\
-\frac{\partial z}{\partial y} &amp;=&amp;\, \frac{2y\sin(x)}{x+y^2\sin(x)}\end{split}\]</div>
+\[\begin{split}\frac{\partial z}{\partial x} &amp;=  \frac{1+y^2\cos(x)}{x+y^2\sin(x)}, \\
+\frac{\partial z}{\partial y} &amp;=  \frac{2y\sin(x)}{x+y^2\sin(x)}\end{split}\]</div>
 </div>
 <div class="section" id="second-partial-derivatives">
 <h2><span class="section-number">1.2. </span>Second Partial Derivatives<a class="headerlink" href="#second-partial-derivatives" title="Permalink to this headline">¶</a></h2>
 <p>The second partial derivatives with respect to <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> are denoted as follows:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\frac{\partial^2 f}{\partial x^2} &amp;=&amp;\, \frac{\partial}{\partial x}\left(\frac{\partial f}{\partial x}\right), \\
-\frac{\partial^2 f}{\partial y^2} &amp;=&amp;\, \frac{\partial}{\partial y}\left(\frac{\partial f}{\partial y}\right)\end{split}\]</div>
+\[\begin{split}\frac{\partial^2 f}{\partial x^2} &amp;=  \frac{\partial}{\partial x}\left(\frac{\partial f}{\partial x}\right), \\
+\frac{\partial^2 f}{\partial y^2} &amp;=  \frac{\partial}{\partial y}\left(\frac{\partial f}{\partial y}\right)\end{split}\]</div>
 <p>The notation can also be extended to <b>mixed second partial derivative</b>, where we take the <span class="math notranslate nohighlight">\(x\)</span> and the <span class="math notranslate nohighlight">\(y\)</span> partial derivative:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\frac{\partial^2 f}{\partial y \,\partial x} &amp;=&amp;\, \frac{\partial}{\partial y}\left(\frac{\partial f}{\partial x}\right), \\
-\frac{\partial^2 f}{\partial x\, \partial y} &amp;=&amp;\, \frac{\partial}{\partial x}\left(\frac{\partial f}{\partial y}\right)\end{split}\]</div>
+\[\begin{split}\frac{\partial^2 f}{\partial y \,\partial x} &amp;=  \frac{\partial}{\partial y}\left(\frac{\partial f}{\partial x}\right), \\
+\frac{\partial^2 f}{\partial x\, \partial y} &amp;=  \frac{\partial}{\partial x}\left(\frac{\partial f}{\partial y}\right)\end{split}\]</div>
 <p>Notice that we work from the inside out, as with function composition and matrix multiplication.  For any well behaved, differntiable and continuous function,
 these two expressions are <em>always</em> equal.  The proof of this result (called Schwarz’s theorem) is quite involved and is beyond the scope of this course.</p>
 <p>As an example, lets calculate all second partial derivatives of the function <span class="math notranslate nohighlight">\(f(x,y)=3x^3y^2+2y\)</span></p>
@@ -501,8 +501,8 @@ perform differentiation first and only substitute in the values in the very last
 \quad f_{xx}=\frac{\partial^2 f}{\partial x^2} &amp;\quad&amp;\, f_{yy}=\frac{\partial^2 f}{\partial y^2}\end{split}\]</div>
 <p>For mixed derivatives the order or subscripts is from left to right:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}f_{xy} &amp;=&amp;\, (f_x)_y = \frac{\partial^2 f}{\partial y\, \partial x}, \\
-f_{yx} &amp;=&amp;\, (f_y)_x = \frac{\partial^2 f}{\partial x\, \partial y}\end{split}\]</div>
+\[\begin{split}f_{xy} &amp;=  (f_x)_y = \frac{\partial^2 f}{\partial y\, \partial x}, \\
+f_{yx} &amp;=  (f_y)_x = \frac{\partial^2 f}{\partial x\, \partial y}\end{split}\]</div>
 <p>You will likely come across yet more alternative notations in the literature, another common one being:</p>
 <div class="math notranslate nohighlight">
 \[D_x=\frac{\partial}{\partial x}\]</div>
@@ -532,8 +532,8 @@ due to variables <span class="math notranslate nohighlight">\(u\)</span> and <sp
 using the limit definition of the derivative and from this we obtain the multivariable chain rule.</p>
 <p>If <span class="math notranslate nohighlight">\(f = f(x,\, y)\)</span> where <span class="math notranslate nohighlight">\(x=x(u,\, v)\)</span> and <span class="math notranslate nohighlight">\(y=y(u,\, v)\)</span> then:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\frac{\partial f}{\partial u} &amp;=&amp;\, \frac{\partial f}{\partial x}\frac{\partial x}{\partial u} + \frac{\partial f}{\partial y}\frac{\partial y}{\partial u}\\
-\frac{\partial f}{\partial v} &amp;=&amp;\, \frac{\partial f}{\partial x}\frac{\partial x}{\partial v} + \frac{\partial f}{\partial y}\frac{\partial y}{\partial v}\end{split}\]</div>
+\[\begin{split}\frac{\partial f}{\partial u} &amp;=  \frac{\partial f}{\partial x}\frac{\partial x}{\partial u} + \frac{\partial f}{\partial y}\frac{\partial y}{\partial u}\\
+\frac{\partial f}{\partial v} &amp;=  \frac{\partial f}{\partial x}\frac{\partial x}{\partial v} + \frac{\partial f}{\partial y}\frac{\partial y}{\partial v}\end{split}\]</div>
 <p>Many student’s first go at encountering this rule often think that it “can’t be right”, because replacing the partial derivatives with differences gives:</p>
 <div class="math notranslate nohighlight">
 \[\Delta f = \frac{\Delta f}{\Delta x}\Delta x + \frac{\Delta f}{\Delta y}\Delta y\]</div>
@@ -541,10 +541,10 @@ using the limit definition of the derivative and from this we obtain the multiva
 <p>On the left-hand side it means changes in <span class="math notranslate nohighlight">\(f\)</span> dues to variations in both <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>, whilst in <span class="math notranslate nohighlight">\(f_x\)</span> and <span class="math notranslate nohighlight">\(f_y\)</span> the changes are due to only one of these variables, whilst the other
 is held constant. Written formally:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\frac{\partial f}{\partial u} &amp;=&amp;\, \lim_{\Delta u\rightarrow 0}\frac{f(x(u+\Delta u,v),y(u+\Delta u,v))-f(x(u,v),y(u,v))}{\Delta u}, \\
-\frac{\partial f}{\partial x} &amp;=&amp;\, \lim_{\Delta x\rightarrow 0}\frac{f(x+\Delta x,y)-f(x,v)}{\Delta x}
+\[\begin{split}\frac{\partial f}{\partial u} &amp;=  \lim_{\Delta u\rightarrow 0}\frac{f(x(u+\Delta u,v),y(u+\Delta u,v))-f(x(u,v),y(u,v))}{\Delta u}, \\
+\frac{\partial f}{\partial x} &amp;=  \lim_{\Delta x\rightarrow 0}\frac{f(x+\Delta x,y)-f(x,v)}{\Delta x}
 =\lim_{\Delta u\rightarrow 0}\frac{f(x(u+\Delta u,v),y(u,v))-f(x(u,v),y(u,v))}{\Delta u}\end{split}\]</div>
-<p>The lseson here is - <em>it is dangerous to treat partial derivatives as fractions!</em></p>
+<p>The lesson here is - <em>it is dangerous to treat partial derivatives as fractions!</em></p>
 </div>
 <div class="section" id="dependency-trees">
 <h2><span class="section-number">1.6. </span>Dependency Trees<a class="headerlink" href="#dependency-trees" title="Permalink to this headline">¶</a></h2>
@@ -565,14 +565,14 @@ is held constant. Written formally:</p>
 f_v = f_x\, x_v + f_y\, y_v\end{split}\]</div>
 <p>meaning that:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}f_x &amp;=&amp;\, 2xy, \\
-f_y &amp;=&amp;\, x^2+2y \\
+\[\begin{split}f_x &amp;=  2xy, \\
+f_y &amp;=  x^2+2y \\
 x_u=1, &amp;\quad&amp;\, x_v=1, \\
 y_u=1, &amp;\quad&amp;\, y_v=-1\end{split}\]</div>
 <p>Putting these results together:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}f_u = f_x\, x_u + f_y\, y_u &amp;=&amp;\, 2xy+(x^2+2y) = 2(u+v)(u-v)+(u+v)^2+2(u-v)\\
-f_v = f_x\, x_v + f_y\, y_v &amp;=&amp;\, 2xy-(x^2+2y) = 2(u+v)(u-v)-(u+v)^2-2(u-v)\end{split}\]</div>
+\[\begin{split}f_u = f_x\, x_u + f_y\, y_u &amp;=  2xy+(x^2+2y) = 2(u+v)(u-v)+(u+v)^2+2(u-v)\\
+f_v = f_x\, x_v + f_y\, y_v &amp;=  2xy-(x^2+2y) = 2(u+v)(u-v)-(u+v)^2-2(u-v)\end{split}\]</div>
 <p>We can also use techniques to simplify calculating more complicated derivatives, for example for the function:</p>
 <div class="math notranslate nohighlight">
 \[f(x,\, y) = \sin\left(x^2+2xy\right)+(x-y)^2\]</div>
@@ -606,13 +606,13 @@ may be asked to verify if a differential expression is exact by testing this con
 \[A(x,\, y)\,\mathrm{d}x + B(x,\, y)\,\mathrm{d}y = 0\]</div>
 <p>where we have taken:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}A &amp;=&amp;\, y\cos{x}+\sin{y}+y \\
-B &amp;=&amp;\, \sin{x}+x\cos{y}+x\end{split}\]</div>
+\[\begin{split}A &amp;=  y\cos{x}+\sin{y}+y \\
+B &amp;=  \sin{x}+x\cos{y}+x\end{split}\]</div>
 <p>Then if we examine the conditions:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\frac{\partial A}{\partial y} &amp;=&amp;\, \cos{x} + \cos{y} + 1\\
-\frac{\partial B}{\partial x} &amp;=&amp;\, \cos{x} + \cos{y} + 1\\
-\Rightarrow \frac{\partial A}{\partial y} &amp;=&amp;\, \frac{\partial B}{\partial x}\end{split}\]</div>
+\[\begin{split}\frac{\partial A}{\partial y} &amp;=  \cos{x} + \cos{y} + 1\\
+\frac{\partial B}{\partial x} &amp;=  \cos{x} + \cos{y} + 1\\
+\Rightarrow \frac{\partial A}{\partial y} &amp;=  \frac{\partial B}{\partial x}\end{split}\]</div>
 <p>and therefore the expression is exact.</p>
 <div class="section" id="solving-1st-order-odes">
 <h3><span class="section-number">1.7.1. </span>Solving 1st order ODEs *<a class="headerlink" href="#solving-1st-order-odes" title="Permalink to this headline">¶</a></h3>
@@ -624,13 +624,13 @@ B &amp;=&amp;\, \sin{x}+x\cos{y}+x\end{split}\]</div>
 \[\begin{split}(y\cos{x} + \sin{y} + y)\,\mathrm{d}x + (\sin{x} + x\cos{y} + x)\,\mathrm{d}y = 0\\\end{split}\]</div>
 <p>and if we let:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}A &amp;=&amp;\, y\cos{x} + \sin{y} + y = \frac{\partial F}{\partial x}, \\
-B &amp;=&amp;\, \sin{x} + x\cos{y} + x = \frac{\partial F}{\partial y}\end{split}\]</div>
+\[\begin{split}A &amp;=  y\cos{x} + \sin{y} + y = \frac{\partial F}{\partial x}, \\
+B &amp;=  \sin{x} + x\cos{y} + x = \frac{\partial F}{\partial y}\end{split}\]</div>
 <p>where <span class="math notranslate nohighlight">\(F(x,\,y)\)</span> is to be determined.</p>
 <p>By integrating <span class="math notranslate nohighlight">\(A\)</span> w.r.t. <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(B\)</span> w.r.t <span class="math notranslate nohighlight">\(y\)</span> we obtain:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}F &amp;=&amp;\, y\sin{x} + x\sin{y} + xy + F_1(y)\\
-F &amp;=&amp;\, y\sin{x} + x\sin{y} + xy + F_2(x)\end{split}\]</div>
+\[\begin{split}F &amp;=  y\sin{x} + x\sin{y} + xy + F_1(y)\\
+F &amp;=  y\sin{x} + x\sin{y} + xy + F_2(x)\end{split}\]</div>
 <p>where we introduced the arbitrary functions <span class="math notranslate nohighlight">\(F_1,\, F_2\)</span>.  For consistency we require that <span class="math notranslate nohighlight">\(F_1(y) = F_2(x) = \mathrm{const.}\)</span>, this
 allows us to write the given ODE as:</p>
 <div class="math notranslate nohighlight">
@@ -658,8 +658,8 @@ allows us to write the given ODE as:</p>
 <span class="math notranslate nohighlight">\(f\)</span> is zero in any direction.</p>
 <p>As an example, lets think again about the function in <a class="reference internal" href="#surf1"><span class="std std-numref">Fig. 1.1</span></a>, <span class="math notranslate nohighlight">\(f(x,\, y) = x^3 - y^3 - 2xy + 2\)</span> can be found by solving <span class="math notranslate nohighlight">\(f_x = f_y = 0\)</span> simultaneously:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}3y^2+2x&amp;=&amp;\,0\\
-3x^2-2y&amp;=&amp;\,0\end{split}\]</div>
+\[\begin{split}3y^2+2x&amp;= 0\\
+3x^2-2y&amp;= 0\end{split}\]</div>
 <p>In general, it may be very difficult (or impossible!) to solve nonlinear equations by hand, and so we would need to resort to numerical methods. In this case,
 however, we can proceed by rearranging one of the equations to substitute into the other, to obtain</p>
 <div class="math notranslate nohighlight">
@@ -732,7 +732,6 @@ f_{yx}&amp;f_{yy}
 <li><p>If <span class="math notranslate nohighlight">\(\det(H(x_0,\,y_0))&lt;0\)</span> then the point is a saddle.</p></li>
 <li><p>If <span class="math notranslate nohighlight">\(\det(H(x_0,\,y_0))=0\)</span> then the test is inconclusive and further analysis is needed.</p></li>
 </ul>
-<p>Example 2:</p>
 <p>Lets classify the stationary points of the function <span class="math notranslate nohighlight">\(f=x^3-y^3-2xy+2\)</span>, we already found that the stationary points are located at <span class="math notranslate nohighlight">\((0,0,2)\)</span> and
 <span class="math notranslate nohighlight">\(\left(-\frac{2}{3},\frac{2}{3},\frac{62}{27}\right)\)</span>.</p>
 <p>Calculating the Hessian determinant components <span class="math notranslate nohighlight">\(f_{xx}=6x, \quad f_{yy}=-6y, \quad f_{xy}=f_{yx}=-2\)</span> and therefore:</p>

@@ -81,25 +81,25 @@ e.g. it is raining or isn't raining, we can see this as a truth table that ends 
 ## Laws of the Algebra of Propositions
 There are identity laws, i.e. using AND or OR like multiplying or adding on 1 or 0:
 ```{math}
-p \vee F &=&\, p \\
-p \wedge F &=&\, F \\
-p \wedge T &=&\, p \\
-p \vee T &=&\, T
+p \vee F &= p \\
+p \wedge F &= F \\
+p \wedge T &= p \\
+p \vee T &= T
 ```
 Associative laws, i.e. does the position of the brackets matter:
 ```{math}
-(p \vee q) \vee r &=&\,  p \vee (q \vee r)\\
-(p \wedge q) \wedge r &=&\,  p \wedge (q \wedge r)
+(p \vee q) \vee r &=  p \vee (q \vee r)\\
+(p \wedge q) \wedge r &=  p \wedge (q \wedge r)
 ```
 Commutative laws, i.e. does the order of operations matter:
 ```{math}
-p \vee q &=&\, q \vee p \\
-p \wedge q &=&\, q \wedge p
+p \vee q &= q \vee p \\
+p \wedge q &= q \wedge p
 ```
 Distributive laws, i.e. does the operation in a bracket expand out:
 ```{math}
-p \vee (q \wedge r) &=&\, (p\vee q) \wedge (p \wedge r)\\
-p \wedge (q \vee r) &=&\, (p\wedge q) \vee (p \wedge r)
+p \vee (q \wedge r) &= (p\vee q) \wedge (p \wedge r)\\
+p \wedge (q \vee r) &= (p\wedge q) \vee (p \wedge r)
 ```
 Involution laws, i.e. is the inverse of the inverse return to the original state:
 ```{math}
@@ -107,20 +107,20 @@ Involution laws, i.e. is the inverse of the inverse return to the original state
 ```
 Idempotent laws, i.e. it's everything or nothing:
 ```{math}
-p \vee p &=&\, p \\
-p \wedge p &=&\, p
+p \vee p &= p \\
+p \wedge p &= p
 ```
 Complement laws, i.e. does everything add up together or subtract to zero:
 ```{math}
-p \vee \neg p &=&\, T \\
-p \wedge \neg p &=&\, F \\
-\neg T &=&\, F \\
-\neg F &=&\, T
+p \vee \neg p &= T \\
+p \wedge \neg p &= F \\
+\neg T &= F \\
+\neg F &= T
 ```
 And finally DeMorgan's laws, which refer to overall inverse relations:
 ```{math}
-\neg(p \vee q) &=&\, \neg p \wedge \neg q \\
-\neg(p \wedge q) &=&\, \neg p \vee \neg q
+\neg(p \vee q) &= \neg p \wedge \neg q \\
+\neg(p \wedge q) &= \neg p \vee \neg q
 ```
 which we see mirrors the algebra of sets.
 
@@ -208,6 +208,23 @@ We should consider the truth table for all the premises and see if they can be s
 
 Since in the first line the case of the two premises being simultaneously true results in $p$ being true and in the third line the case of the two premises being 
 true results in $p$ being false, this argument is false.
+
+Another example of this would be:
+
+```{math}
+\{q,\, p \longleftrightarrow q\} \vdash q
+```
+
+Examining the truth table here:
+
+|$p$ | $q$ | $p \longleftrightarrow q$ |
+|---|---|---|
+| T | T | T |
+| T | F | F |
+| F | T | F |
+| F | F | T |
+
+Thus from line 1, all the premises are true results in $p$ true and there are no other times when all the premises are true, thus this argument is true.
 
 ## Logical Implications
 A proposition $P(p,\,q,\,\dots)$ is said to <b>Logically Imply</b> a proposition $Q(p,\,q,\,\dots)$ if $Q(p,\,q,\,\dots)$ is true whenever $P(p,\,q,\,\dots)$ is 

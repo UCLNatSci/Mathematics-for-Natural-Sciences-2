@@ -58,13 +58,13 @@ We can find the partial derivatives of fields in a similar way to functions, for
  y^2
 \end{pmatrix}$:
 ```{math}
-\partial_x \phi &=&\, -2x\,\exp(-(x^2+y^2) \\
-\partial_y \phi &=&\, -2y\,\exp(-(x^2+y^2) \\
-\partial_x {\bf A(r)} &=&\, \frac{1}{10}\begin{pmatrix}
+\partial_x \phi &=  -2x\,\exp(-(x^2+y^2) \\
+\partial_y \phi &=  -2y\,\exp(-(x^2+y^2) \\
+\partial_x {\bf A(r)} &=  \frac{1}{10}\begin{pmatrix}
  1\\
  0
 \end{pmatrix} \\
-\partial_y {\bf A(r)} &=&\, \frac{1}{10}\begin{pmatrix}
+\partial_y {\bf A(r)} &=  \frac{1}{10}\begin{pmatrix}
  0\\
  2y
 \end{pmatrix} 
@@ -157,8 +157,8 @@ $z = x^3−y^3−2xy+2$ means we can write $\phi = x^3−y^3−2xy+2 - z$ and th
 If we want to find the equation of the resulting tangent surface at a given point, say $A:(1,\,1,\,0)$, then we know that the scalar products of all vectors 
 $\begin{pmatrix} x\\y\\z \end{pmatrix}$ on the tangent surface with the surface normal must agree, hence:
 ```{math}
-{\bf n}_A &=&\, \begin{pmatrix} 3-2\\-3-2\\0 \end{pmatrix} = \begin{pmatrix} 1\\-5\\0 \end{pmatrix} \\
-{\bf n}_A\cdot \begin{pmatrix} x\\y\\z \end{pmatrix} &=&\, {\bf n}_A\cdot \begin{pmatrix} 1\\1\\0 \end{pmatrix} \Rightarrow x - 5y - z  =-4
+{\bf n}_A &=  \begin{pmatrix} 3-2\\-3-2\\0 \end{pmatrix} = \begin{pmatrix} 1\\-5\\0 \end{pmatrix} \\
+{\bf n}_A\cdot \begin{pmatrix} x\\y\\z \end{pmatrix} &=  {\bf n}_A\cdot \begin{pmatrix} 1\\1\\0 \end{pmatrix} \Rightarrow x - 5y - z  =-4
 ```
 
 Another example would be to find the gradient of the function $f(x,\,y,\,z) = xyz$ at the point $(−2,\,3,\,4)$ and also find the directional 

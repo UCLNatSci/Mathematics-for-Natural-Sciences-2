@@ -30,7 +30,7 @@ we need to parametrise the path, lets say with some variable $t$:
 
 ```{math}
 t &\rightarrow&\, {\bf r}(t) \\
-[a\, b] &\rightarrow&\, \mathbb{R}^3
+[a,\, b] &\rightarrow&\, \mathbb{R}^3
 ```
 
 which means the path runs ${\bf r_A} = {\bf r}(a) \rightarrow {\bf r_B} = {\bf r}(b)$.  Looking at the line element:
@@ -84,9 +84,9 @@ and ${\bf r'}(x)$ is given by:
 so the line integral is found by:
 
 ```{math}
-I &=&\, \int_C {\bf G}(r) \cdot \mathrm{d}{\bf r} = \int_0^1 {\bf G}({\bf r}(t)) \cdot {\bf r}'(t)\,\mathrm{d}t = 
+I &=  \int_C {\bf G}(r) \cdot \mathrm{d}{\bf r} = \int_0^1 {\bf G}({\bf r}(t)) \cdot {\bf r}'(t)\,\mathrm{d}t = 
 \int_0^1 \begin{pmatrix} 2x^2 \\ -4x^2 \end{pmatrix} \cdot \begin{pmatrix} 1 \\ 2 \end{pmatrix} \mathrm{d}x \\
-&=&\, \int_0^1 \left( 2x^2 - 8x^2 \right)\,\textrm{d}x = -\int_0^1 6x^2 \,\textrm{d}x = \Big[ -\frac{6}{3}x^3\Big ]_0^1 = -2
+&=  \int_0^1 \left( 2x^2 - 8x^2 \right)\,\textrm{d}x = -\int_0^1 6x^2 \,\textrm{d}x = \Big[ -\frac{6}{3}x^3\Big ]_0^1 = -2
 ```
 
 - Curved path following $y = x^2$
@@ -111,9 +111,9 @@ and ${\bf r'}(x)$ is given by:
 so the line integral is found by:
 
 ```{math}
-I &=&\, \int_C {\bf G}(r) \cdot \mathrm{d}{\bf r} = \int_0^1 {\bf G}({\bf r}(t)) \cdot {\bf r}'(t)\,\mathrm{d}t = 
+I &=  \int_C {\bf G}(r) \cdot \mathrm{d}{\bf r} = \int_0^1 {\bf G}({\bf r}(t)) \cdot {\bf r}'(t)\,\mathrm{d}t = 
 \int_0^1 \begin{pmatrix} x^3 \\ -x^4 \end{pmatrix} \cdot \begin{pmatrix} 1 \\ 2x \end{pmatrix} \mathrm{d}x \\
-&=&\, \int_0^1 \left( x^3 - 2x^5 \right)\,\textrm{d}x = \Big[\frac{1}{4}x^4 - \frac{1}{3}x^6 \Big ]_0^1 = -\frac{1}{12}
+&=  \int_0^1 \left( x^3 - 2x^5 \right)\,\textrm{d}x = \Big[\frac{1}{4}x^4 - \frac{1}{3}x^6 \Big ]_0^1 = -\frac{1}{12}
 ```
 
 - Curved path following $y = x^{1/2}$
@@ -138,9 +138,9 @@ and ${\bf r'}(x)$ is given by:
 so the line integral is found by:
 
 ```{math}
-I &=&\, \int_C {\bf G}(r) \cdot \mathrm{d}{\bf r} = \int_0^1 {\bf G}({\bf r}(t)) \cdot {\bf r}'(t)\,\mathrm{d}t = 
+I &=  \int_C {\bf G}(r) \cdot \mathrm{d}{\bf r} = \int_0^1 {\bf G}({\bf r}(t)) \cdot {\bf r}'(t)\,\mathrm{d}t = 
 \int_0^1 \begin{pmatrix} x^{3/2} \\ -x \end{pmatrix} \cdot \begin{pmatrix} 1 \\ \frac{1}{2} x^{-1/2} \end{pmatrix} \mathrm{d}x \\
-&=&\, \int_0^1 \left( x^{3/2} - \frac{1}{2}x^{1/2} \right)\,\textrm{d}x = \Big[\frac{2}{5}x^{5/2} - \frac{1}{3}x^{3/2} \Big ]_0^1 = \frac{1}{15}
+&=  \int_0^1 \left( x^{3/2} - \frac{1}{2}x^{1/2} \right)\,\textrm{d}x = \Big[\frac{2}{5}x^{5/2} - \frac{1}{3}x^{3/2} \Big ]_0^1 = \frac{1}{15}
 ```
 
 ## Conservative Vector Fields
@@ -163,14 +163,14 @@ infinitely many possible paths. Instead we can use an equivalent definition of c
 To show that a vector field which satisfies this condition is conservative, lets think about a line integral taken along a path 
 ${\bf r}_A \rightarrow {\bf r}_B$, which we have parameterised by the $t \in [a,\, b]$, where ${\bf}(t=a) = {\bf r}_A$ and ${\bf}(t=b) = {\bf r}_B$
 ```{math}
-I &=&\, \int_C {\bf G(r)}\cdot \mathrm{d}{\bf r} = \int_{t=a}^{t=b} {\bf G(r)}\cdot {\bf r}'(t) \mathrm{d}t\\
-&=&\, \int_{t=a}^{t=b} (\nabla \phi({\bf r}(t)))\cdot {\bf r}'(t) \mathrm{d}t
+I &=  \int_C {\bf G(r)}\cdot \mathrm{d}{\bf r} = \int_{t=a}^{t=b} {\bf G(r)}\cdot {\bf r}'(t) \mathrm{d}t\\
+&=  \int_{t=a}^{t=b} (\nabla \phi({\bf r}(t)))\cdot {\bf r}'(t) \mathrm{d}t
 ```
 However using the fact that the total differential $\mathrm{d}\phi = \nabla \phi \cdot \mathrm{d}{\bf r}$, 
 then $\mathrm{d}\phi/\mathrm{d}t = \nabla \phi \cdot \mathrm{d}{\bf r}'$ and thus:
 ```{math}
-I &=&\, \int_{t=a}^{t=b} \frac{\mathrm{d}}{\mathrm{d}t}\phi({\bf r}(t)) \mathrm{d}t  \\
-&=&\, \Bigg[ \phi({\bf r}(t)) \Bigg]_{t=a}^{t=b} = \phi({\bf r_B}) - \phi({\bf r_A})
+I &=  \int_{t=a}^{t=b} \frac{\mathrm{d}}{\mathrm{d}t}\phi({\bf r}(t)) \mathrm{d}t  \\
+&=  \Bigg[ \phi({\bf r}(t)) \Bigg]_{t=a}^{t=b} = \phi({\bf r_B}) - \phi({\bf r_A})
 ```
 which means that the details of the line integral only depend on the start and finish of the contour, not the path taken.  Likewise if we have a 
 conservative vector field and a closed loop integral, then ${\bf r_A} = \bf{r_B}$ and so the integral becomes zero.
@@ -185,9 +185,9 @@ An example, is the vector ${\bf G(r)} = 2xy \hat{\bf x} + (x^2 - 2y)\hat{\bf y} 
 
 Since G is defined on the entire three-dimensional space $\mathbb{R}^3$, we can make use the curl criterion, hence
 ```{math}
-\nabla \times {\bf G} &=&\,
+\nabla \times {\bf G} &= 
 \begin{pmatrix} \partial_y G_z - \partial_z G_y \\ \partial_z G_x - \partial_x G_y \\ \partial_y G_x - \partial_x G_y\end{pmatrix}\\
-&=&\, \begin{pmatrix} 0 - 0 \\ 0 - 0 \\ 2x - 2x\end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix}
+&=  \begin{pmatrix} 0 - 0 \\ 0 - 0 \\ 2x - 2x\end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix}
 ```
 Hence since the curl of $\bf G$ is zero, $\bf G$ is a conservative vector field, so it must be possible to find a potential $\phi({\bf r})$ such 
 that ${\bf G} = \nabla \phi$.  This means that:

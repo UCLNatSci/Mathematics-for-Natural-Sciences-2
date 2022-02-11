@@ -49,10 +49,10 @@ $\theta \in (-\pi,\,\pi]$ is used instead.
 
 In doing so we can rewrite the coordinate vector and find the infinitesimal changes:
 ```{math}
-{\bf r} &=&\, \begin{pmatrix} r \cos(\theta) \\ r \sin(\theta)  \end{pmatrix}  \\ \Rightarrow \mathrm{d}{\bf r} &=& 
+{\bf r} &=  \begin{pmatrix} r \cos(\theta) \\ r \sin(\theta)  \end{pmatrix}  \\ \Rightarrow \mathrm{d}{\bf r} &=& 
  \begin{pmatrix} \mathrm{d}r \cos(\theta) - r \sin(\theta)\mathrm{d}\theta \\ \mathrm{d}r \sin(\theta) + r \cos(\theta) \mathrm{d}\theta \end{pmatrix}\\
- &=&\, \begin{pmatrix} \cos(\theta) \\ \sin(\theta)\end{pmatrix}\mathrm{d}r + \begin{pmatrix} -\sin(\theta) \\ \cos(\theta) \end{pmatrix}r\mathrm{d}\theta\\
- &=&\, \hat{\bf r} \mathrm{d}r + \hat{\bf \theta} \mathrm{d}\theta
+ &=  \begin{pmatrix} \cos(\theta) \\ \sin(\theta)\end{pmatrix}\mathrm{d}r + \begin{pmatrix} -\sin(\theta) \\ \cos(\theta) \end{pmatrix}r\mathrm{d}\theta\\
+ &=  \hat{\bf r} \mathrm{d}r + \hat{\bf \theta} \mathrm{d}\theta
 ```
 where we have defined unit vectors for the $r,\,\theta$ directions.  We can see these illustrated in 
 {numref}`polaraxes`, where the $\hat{\bf r},\, \hat{\bf \theta}$ coordinates can we see to be perpendicular 
@@ -86,18 +86,18 @@ Here we see that the coordindates can take any value in $x \in (\infty,\, \infty
 
 We can write any vector in 3D as:
 ```{math}
-{\bf v} &=&\,  v_x\begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix} + v_y\begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix} + 
+{\bf v} &=   v_x\begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix} + v_y\begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix} + 
 v_z\begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}\\
-&=&\, v_x\hat{\bf x} + v_y\hat{\bf y} + v_z\hat{\bf z}
+&=  v_x\hat{\bf x} + v_y\hat{\bf y} + v_z\hat{\bf z}
 ```
 where we have clarified the basis vectors.  Note that these satisfy the following properties;:
 ```{math}
 :label: vectorproperties
-|\hat{\bf x }| &=&\, |\hat{\bf y }| = |\hat{\bf z }| = 1\\
-\hat{\bf x} \cdot \hat{\bf y} &=&\, \hat{\bf x} \cdot \hat{\bf y} = \hat{\bf x} \cdot \hat{\bf y} = 0 \\
-\hat{\bf x} \cdot \hat{\bf y} &=&\, \hat{\bf z} \\
-\hat{\bf y} \cdot \hat{\bf z} &=&\, \hat{\bf x} \\
-\hat{\bf z} \cdot \hat{\bf x} &=&\, \hat{\bf y} 
+|\hat{\bf x }| &=  |\hat{\bf y }| = |\hat{\bf z }| = 1\\
+\hat{\bf x} \cdot \hat{\bf y} &=  \hat{\bf x} \cdot \hat{\bf y} = \hat{\bf x} \cdot \hat{\bf y} = 0 \\
+\hat{\bf x} \cdot \hat{\bf y} &=  \hat{\bf z} \\
+\hat{\bf y} \cdot \hat{\bf z} &=  \hat{\bf x} \\
+\hat{\bf z} \cdot \hat{\bf x} &=  \hat{\bf y} 
 ```
 
 Another way to represent this is using a coordinate vector ${\bf r}$:
@@ -120,9 +120,9 @@ In three dimensions, we can continute a switch to polar coordinates, with one le
 describing the three spatial dimensions $x,\,y,\ z$:
 
 ```{math}
-x &=&\, r \cos(\theta)\sin(\phi) \\
-y &=&\, r \sin(\theta)\cos(\phi) \\
-z &=&\, r \cos(\phi)
+x &=  r \cos(\theta)\sin(\phi) \\
+y &=  r \sin(\theta)\cos(\phi) \\
+z &=  r \cos(\phi)
 ```
 
 which we see illustrated in {numref}`sphericalpolarmaths`.  
@@ -139,12 +139,12 @@ and <b>Azimuthal</b> components (respectively), we further project on to the $x,
 We can then write the infinitesimal changes in the coordinate vector $\bf r$ as:
 
 ```{math}
-{\bf r} &=&\, \begin{pmatrix} r \cos(\theta)\sin(\phi) \\r \sin(\theta)\cos(\phi) \\ r \cos(\phi)  \end{pmatrix}  \\ 
+{\bf r} &=  \begin{pmatrix} r \cos(\theta)\sin(\phi) \\r \sin(\theta)\cos(\phi) \\ r \cos(\phi)  \end{pmatrix}  \\ 
 \Rightarrow \mathrm{d}{\bf r} &=&  \begin{pmatrix} 
 \mathrm{d}r \cos(\theta)\sin(\phi) - r \sin(\theta)\sin(\phi) \mathrm{d}\theta + r \cos(\theta)\cos(\phi) \mathrm{d}\phi\\ 
 \mathrm{d}r \sin(\theta)\sin(\phi) + r \cos(\theta)\sin(\phi) \mathrm{d}\theta + r \sin(\theta) \cos(\phi)\mathrm{d}\phi \\ 
 \mathrm{d}r \cos(\phi) - r \sin(\phi)\mathrm{d}\phi 
-\end{pmatrix} \\ &=&\,  \begin{pmatrix} 
+\end{pmatrix} \\ &=   \begin{pmatrix} 
 \cos(\theta)\sin(\phi) \\ 
 \sin(\theta)\sin(\phi) \\ 
 \cos(\phi) 
@@ -158,7 +158,7 @@ We can then write the infinitesimal changes in the coordinate vector $\bf r$ as:
 -\sin(\theta) \\ 
  \cos(\theta)\\ 
 0\end{pmatrix} r\sin(\phi)\mathrm{d}\theta \\
- &=&\, \hat{\bf r} \mathrm{d}r + \hat{\bf \phi}r\mathrm{d}\phi + \hat{\bf \theta} r\sin(\phi)\mathrm{d}\theta
+ &=  \hat{\bf r} \mathrm{d}r + \hat{\bf \phi}r\mathrm{d}\phi + \hat{\bf \theta} r\sin(\phi)\mathrm{d}\theta
 ```
 
 Each coordinate here has a range, $r \in [0,\, \infty)$, whereas the two angles here have $\theta \in [0,\, 2\pi),\, \phi \in [0,\, \pi)$.  
@@ -185,12 +185,12 @@ illustrated in {numref}`sphericalpolarphysics`.  In this system the azimuthal an
 remains the same.  
 
 ```{math}
-{\bf r} &=&\, \begin{pmatrix} r \cos(\phi)\sin(\theta ) \\r \sin(\phi)\cos(\theta ) \\ r \cos(\theta )  \end{pmatrix}  \\ 
+{\bf r} &=  \begin{pmatrix} r \cos(\phi)\sin(\theta ) \\r \sin(\phi)\cos(\theta ) \\ r \cos(\theta )  \end{pmatrix}  \\ 
 \Rightarrow \mathrm{d}{\bf r} &=&  \begin{pmatrix} 
 \mathrm{d}r \cos(\phi)\sin(\theta ) - r \sin(\phi)\sin(\theta ) \mathrm{d}\phi + r \cos(\phi)\cos(\theta ) \mathrm{d}\theta \\ 
 \mathrm{d}r \sin(\phi)\sin(\theta ) + r \cos(\phi)\sin(\theta ) \mathrm{d}\phi + r \sin(\phi) \cos(\theta )\mathrm{d}\theta  \\ 
 \mathrm{d}r \cos(\theta ) - r \sin(\theta )\mathrm{d}\theta  
-\end{pmatrix} \\ &=&\,  \begin{pmatrix} 
+\end{pmatrix} \\ &=   \begin{pmatrix} 
 \cos(\phi)\sin(\theta ) \\ 
 \sin(\phi)\sin(\theta ) \\ 
 \cos(\theta ) 
@@ -204,7 +204,7 @@ remains the same.
 -\sin(\phi) \\ 
  \cos(\phi)\\ 
 0\end{pmatrix} r\sin(\theta )\mathrm{d}\phi \\x`
- &=&\, \hat{\bf r} \mathrm{d}r + \hat{\bf \theta }r\mathrm{d}\theta  + \hat{\bf \phi} r\sin(\theta )\mathrm{d}\phi
+ &=  \hat{\bf r} \mathrm{d}r + \hat{\bf \theta }r\mathrm{d}\theta  + \hat{\bf \phi} r\sin(\theta )\mathrm{d}\phi
 ```
 
 ```{figure} ../figures/sphericalpolarphysics.png
@@ -229,9 +229,9 @@ Notice that either form here has the polar angle appearing in the $\sin$ term
 Sometimes it makes more sense to combine the rotation symmetry of polar coordinates with the rectilinear nature of 3D Cartesian coodiantes, 
 which results in a cylindrical coordinate system.  Thus was have coordinate transforms of the form:
 ```{math}
-x &=&\, r \cos(\theta)\\
-y &=&\, r \sin(\theta)\\
-z &=&\, z
+x &=  r \cos(\theta)\\
+y &=  r \sin(\theta)\\
+z &=  z
 ```
 
 ```{figure} ../figures/cylindricalaxes.png
@@ -249,12 +249,12 @@ variable relabelling.
 To find the infinitesimal changes in the coordinates here we find:
 
 ```{math}
-{\bf r} &=&\, \begin{pmatrix} r \cos(\theta) \\r \sin(\theta) \\ z \end{pmatrix}  \\ 
+{\bf r} &=  \begin{pmatrix} r \cos(\theta) \\r \sin(\theta) \\ z \end{pmatrix}  \\ 
 \Rightarrow \mathrm{d}{\bf r} &=&  \begin{pmatrix} 
 \mathrm{d}r \cos(\theta)  - r \sin(\theta) \mathrm{d}\theta \\ 
 \mathrm{d}r \sin(\theta) + r \cos(\theta) \mathrm{d}\theta  \\ 
 \mathrm{d}z
-\end{pmatrix} \\ &=&\,  \begin{pmatrix} 
+\end{pmatrix} \\ &=   \begin{pmatrix} 
 \cos(\theta) \\ 
 \sin(\theta) \\ 
 0
@@ -268,7 +268,7 @@ To find the infinitesimal changes in the coordinates here we find:
 0 \\ 
 0\\ 
 1\end{pmatrix}\mathrm{d}z \\
- &=&\, \hat{\bf r} \mathrm{d}r + \hat{\bf \theta }r\mathrm{d}\theta  + \hat{\bf z} \mathrm{d}z
+ &=  \hat{\bf r} \mathrm{d}r + \hat{\bf \theta }r\mathrm{d}\theta  + \hat{\bf z} \mathrm{d}z
 ```
 
 and therefore the volume element $\mathrm{d}V$ is given by:

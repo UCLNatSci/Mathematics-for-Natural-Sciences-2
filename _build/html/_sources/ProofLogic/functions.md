@@ -57,10 +57,10 @@ Finally we can define the <b>Graph</b> of a function $f:\,A \rightarrow B$ as th
 
 A function $f$ is defined from a set $A = \{a,\,b,\,c,\,d\}$ into a set $B = \{r,\,s,\,t,\,u\}$. with a mapping:
 ```{math}
-f(a) &=&\, s \\
-f(b) &=&\, u \\
-f(c) &=&\, r \\
-f(d) &=&\, s
+f(a) &= s \\
+f(b) &= u \\
+f(c) &= r \\
+f(d) &= s
 ```
 which we can represent graphically as shown in {numref}`FunctionImage`.
 ```{figure} ../figures/FunctionImage.png
@@ -107,13 +107,13 @@ Associativity of composite functions.
 
 Lets think about two simple functions:
 ```{math}
-f(x) &=&\, x^2\\
-g(x) &=&\,\ \cos(x)
+f(x) &= x^2\\
+g(x) &= \cos(x)
 ```
 We can composite these functions by writing:
 ```{math}
-f(g(x)) = (f \circ g)(x) &=&\, (\cos(x))^2 \\
-g(f(x)) = (g \circ f)(x) &=&\, \cos(x^2)
+f(g(x)) &= (f \circ g)(x) &= (\cos(x))^2 \\
+g(f(x)) &= (g \circ f)(x) &= \cos(x^2)
 ```
 where we notice that in general $f(g(x)) \neq g(f(x))$.  These composite functions can be built up by looking at the function on the <em>furthest right</em> and 
 then adding more functions on to the <em>left hand side</em>.  Suppose we introduce a third function:
@@ -122,15 +122,15 @@ h(x) = \frac{2}{x}
 ```
 then the six different functional compositions would be:
 ```{math}
-f \circ (g \circ h) &=&\, \left( \cos \left( \frac{2}{x} \right) \right)^2 & f \circ (h \circ g) = \left( \frac{2}{\cos(x)} \right)^2 \\ 
-g \circ (h \circ f) &=&\, \cos \left( \frac{2}{x^2} \right) & g \circ (f \circ h) = \cos \left( \left( \frac{2}{x}\right)^2  \right) \\ 
-h \circ (f \circ g) &=&\, \frac{2}{\left( \cos (x) \right)^2 } & h \circ (g \circ f) = \frac{2}{\cos(x^2)}
+f \circ (g \circ h) &= \left( \cos \left( \frac{2}{x} \right) \right)^2 & f \circ (h \circ g) = \left( \frac{2}{\cos(x)} \right)^2 \\ 
+g \circ (h \circ f) &= \cos \left( \frac{2}{x^2} \right) & g \circ (f \circ h) = \cos \left( \left( \frac{2}{x}\right)^2  \right) \\ 
+h \circ (f \circ g) &= \frac{2}{\left( \cos (x) \right)^2 } & h \circ (g \circ f) = \frac{2}{\cos(x^2)}
 ```
 and we see that the associativity of these composites can be shown to be true:
 ```{math}
- f\circ g &=&\, (\cos(x))^2\\
- g \circ h &=&\, \cos\left(\frac{2}{x}\right) \\ 
-f \circ (g \circ h) &=&\, (f \circ g) \circ h = \left( \cos \left( \frac{2}{x} \right) \right)^2
+ f\circ g &= (\cos(x))^2\\
+ g \circ h &= \cos\left(\frac{2}{x}\right) \\ 
+f \circ (g \circ h) &= (f \circ g) \circ h = \left( \cos \left( \frac{2}{x} \right) \right)^2
 ```
 
 ## Invertibility of Functions

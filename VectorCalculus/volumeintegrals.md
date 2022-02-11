@@ -79,7 +79,7 @@ M = \left[\frac{1}{4}x^2 b^2 + \frac{1}{3}b^3x\right]_0^a = \frac{1}{4}a^2b^2 + 
 
 If we reverse the order integration however, starting from the $x$ integral, we find:
 ```{math}
-M &=&\, \int_0^a\,\mathrm{d}x\,\int_0^b\,\mathrm{d}y\,(y^2 + xy) = \int_0^b\,\Bigg[\frac{1}{2}x^2y + xy^2\Bigg]_0^a\,\mathrm{d}y = 
+M &=  \int_0^a\,\mathrm{d}x\,\int_0^b\,\mathrm{d}y\,(y^2 + xy) = \int_0^b\,\Bigg[\frac{1}{2}x^2y + xy^2\Bigg]_0^a\,\mathrm{d}y = 
 \int_0^a\,\left(\frac{1}{2}y a^2 + ay^2\right)\,\mathrm{d}y \\
 &=& \left[\frac{1}{4}y^2 a^2 + \frac{1}{3}ay^3\right]_0^a = \frac{1}{4}a^2b^2 + \frac{1}{3}ab^3
 ```
@@ -104,13 +104,13 @@ I = \iint f(x,\,y)\,\mathrm{d}A = \int_0^1\,\mathrm{d}x\,\int_0^{1-x}\,\mathrm{d
 Now that there is some function of $x$ in the limit, this says evaluate the $y$ integral first and the $x$ integral last:
 
 ```{math}
-I &=&\, \int_0^1\,\mathrm{d}x\,\Bigg[x^2y + xy^2\Bigg]_0^{1-x}  = \int_0^1\,\mathrm{d}x\,\Bigg[x^2(1-x) + x(1-x)^2\Bigg] \\
-&=&\, \int_0^1\,\mathrm{d}x\,(x-x^2) = \Bigg[\frac{1}{2}x^2 - \frac{1}{3}x^3 \Bigg]_0^1 = \frac{1}{6}
+I &=  \int_0^1\,\mathrm{d}x\,\Bigg[x^2y + xy^2\Bigg]_0^{1-x}  = \int_0^1\,\mathrm{d}x\,\Bigg[x^2(1-x) + x(1-x)^2\Bigg] \\
+&=  \int_0^1\,\mathrm{d}x\,(x-x^2) = \Bigg[\frac{1}{2}x^2 - \frac{1}{3}x^3 \Bigg]_0^1 = \frac{1}{6}
 ```
 We can also switch round the integration, but choosing to have $y \in [0,\, 1],\, x \in [0,\, 1-y]$, which means that:
 ```{math}
-I &=&\, \int_0^{1-y}\,\mathrm{d}x\,\int_0^{1}\,\mathrm{d}y\,(x^2 + 2xy) = \int_0^1\,\mathrm{d}y\,\Bigg[\frac{1}{3}x^3 + x^2y\Bigg]_0^{1-y}  \\
-&=&\, \int_0^1\,\mathrm{d}y\,\Bigg[\frac{1}{3}(1-y)^3 + y(1-y)^2\Bigg] = \int_0^1\,\mathrm{d}y\,\left(\frac{2}{3}y^3 - y^2 + \frac{1}{3}\right) 
+I &=  \int_0^{1-y}\,\mathrm{d}x\,\int_0^{1}\,\mathrm{d}y\,(x^2 + 2xy) = \int_0^1\,\mathrm{d}y\,\Bigg[\frac{1}{3}x^3 + x^2y\Bigg]_0^{1-y}  \\
+&=  \int_0^1\,\mathrm{d}y\,\Bigg[\frac{1}{3}(1-y)^3 + y(1-y)^2\Bigg] = \int_0^1\,\mathrm{d}y\,\left(\frac{2}{3}y^3 - y^2 + \frac{1}{3}\right) 
 = \Bigg[\frac{1}{6}y^4 - \frac{1}{3}y^3 +\frac{1}{3}y\Bigg]_0^1 = \frac{1}{6}
 ```
 
@@ -128,9 +128,9 @@ If we pick $x \in [-1,\,1]$, then the $y$ limits should be between the lower lim
 Given that $x^2 + y^2 = 1$ is the equation of this line, then $y = \sqrt{1-x^2}$, hence $y \in [-1,\, \sqrt{1-x^2}]$, so the area is found by:
 
 ```{math}
-I &=&\, \int_{-1}^1 \,\mathrm{d}x\,\int_{-1}^{\sqrt{1-x^2}}x^2y\,\mathrm{d}y = 
+I &=  \int_{-1}^1 \,\mathrm{d}x\,\int_{-1}^{\sqrt{1-x^2}}x^2y\,\mathrm{d}y = 
 \int_{-1}^1\Bigg[\frac{1}{2}x^2y^2\Bigg]_{-1}^{\sqrt{1-x^2}} \,\mathrm{d}x\\
-&=&\, \frac{1}{2}\int_{-1}^1\left(x^2(1-x^2) - x^2\right) \,\mathrm{d}x = -\frac{1}{2}\int_{-1}^1 x^4\,\mathrm{d}x = -\frac{1}{5}
+&=  \frac{1}{2}\int_{-1}^1\left(x^2(1-x^2) - x^2\right) \,\mathrm{d}x = -\frac{1}{2}\int_{-1}^1 x^4\,\mathrm{d}x = -\frac{1}{5}
 ```
 
 We could do this integral the other way round, but this is quite a bit tricker!
@@ -179,13 +179,13 @@ Lets think about volume integrals in Cartesian coordinates first, to calculate t
 $f(x,\, y,\, z) = \frac{1}{2} \left(x^2 + y^2 + z^2\right)$ over a cube whose 8 corners are at the points $(\pm 1,\, \pm 1,\, \pm 1)$:
 
 ```{math}
-V &=&\, \iiint\,\mathrm{d}V = \int_{-1}^1\,\mathrm{d}x\,\int_{-1}^1\,\mathrm{d}y\,\int_{-1}^1\,\mathrm{d}z\,
+V &=  \iiint\,\mathrm{d}V = \int_{-1}^1\,\mathrm{d}x\,\int_{-1}^1\,\mathrm{d}y\,\int_{-1}^1\,\mathrm{d}z\,
 \left[\frac{1}{2} \left(x^2 + y^2 + z^2\right)\right]\\
-&=&\, \frac{1}{2}\int_{-1}^1\,\mathrm{d}x\,\int_{-1}^1\,\mathrm{d}y\,\Bigg[x^2z + y^2z +\frac{1}{3}z^3\Bigg]_{-1}^1\\
-&=&\, \int_{-1}^1\,\mathrm{d}x\,\int_{-1}^1\,\mathrm{d}y\,\Bigg(x^2 + y^2 +\frac{1}{3}\Bigg)\\
-&=&\, \int_{-1}^1\,\mathrm{d}x\,\Bigg[x^2y + \frac{1}{3}y^3 +\frac{1}{3}y\Bigg]_{-1}^1\\
-&=&\, 2\int_{-1}^1\,\mathrm{d}x\,\Bigg(x^2 + \frac{2}{3} \Bigg)\\
-&=&\, 2\Bigg[\frac{1}{3}x^3 +\frac{2}{3}x\Bigg]_{-1}^1 = 4
+&=  \frac{1}{2}\int_{-1}^1\,\mathrm{d}x\,\int_{-1}^1\,\mathrm{d}y\,\Bigg[x^2z + y^2z +\frac{1}{3}z^3\Bigg]_{-1}^1\\
+&=  \int_{-1}^1\,\mathrm{d}x\,\int_{-1}^1\,\mathrm{d}y\,\Bigg(x^2 + y^2 +\frac{1}{3}\Bigg)\\
+&=  \int_{-1}^1\,\mathrm{d}x\,\Bigg[x^2y + \frac{1}{3}y^3 +\frac{1}{3}y\Bigg]_{-1}^1\\
+&=  2\int_{-1}^1\,\mathrm{d}x\,\Bigg(x^2 + \frac{2}{3} \Bigg)\\
+&=  2\Bigg[\frac{1}{3}x^3 +\frac{2}{3}x\Bigg]_{-1}^1 = 4
 ```
 
 If we wanted to find the volume of a sphere of radius $R$, we could calculate this using cartesian coordinates, where 
@@ -201,8 +201,8 @@ truely a nightmare to solve!
 Instead lets switch to spherical polar coordinates, with $r \in[0, \,R],\, \theta \in [0,\,\pi],\, \phi \in [0,\, 2\pi]$:
 
 ```{math}
-V &=&\, \iiint\,\mathrm{d}V = \int_0^R r^2\,\mathrm{d}r\,\int_0^\pi\sin(\theta)\,\mathrm{d}\theta\,\int_0^{2\pi}\,\mathrm{d}\phi \\
-&=&\, 4\pi\Bigg[\frac{1}{3}r^3\Bigg]_0^R = \frac{4}{3}\pi R^3
+V &=  \iiint\,\mathrm{d}V = \int_0^R r^2\,\mathrm{d}r\,\int_0^\pi\sin(\theta)\,\mathrm{d}\theta\,\int_0^{2\pi}\,\mathrm{d}\phi \\
+&=  4\pi\Bigg[\frac{1}{3}r^3\Bigg]_0^R = \frac{4}{3}\pi R^3
 ```
 as expected.
 
@@ -219,8 +219,8 @@ still not a great integral to compute, an integration variable chagne would be r
 In cylindrical polar coordinates however, $r \in[0, R], \theta \in [0,\, 2\pi],\, z \in [0,\, H]$:
 
 ```{math}
-V &=&\, \iiint\,\mathrm{d}V = \int_0^R r\,\mathrm{d}r\,\int_0^{2\pi}\,\mathrm{d}\theta\,\int_0^{H}\,\mathrm{d}z \\
-&=&\, 2\pi H \Bigg[\frac{1}{2}r^2\Bigg]_0^R = \pi R^2 H
+V &=  \iiint\,\mathrm{d}V = \int_0^R r\,\mathrm{d}r\,\int_0^{2\pi}\,\mathrm{d}\theta\,\int_0^{H}\,\mathrm{d}z \\
+&=  2\pi H \Bigg[\frac{1}{2}r^2\Bigg]_0^R = \pi R^2 H
 ```
 as expected.
 
@@ -236,12 +236,12 @@ with $x = 0, \,y = 0,\, z = 0$ up to the plane $x + y + z = 1$.  Therefore in th
 $y$ plane the limits would be $y \in [0,\, 1-x]$ (since $z=0$ along this plane), hence along with $x \in[0,\, 1]$:
 
 ```{math}
-I &=&\, \int_0^1\,\mathrm{d}x\,\int_0^{1-x}\,\mathrm{d}y\,\int_0^{1-x-y}x^2y\,\mathrm{d}z \\
-&=&\, \int_0^1\,\mathrm{d}x\,\int_0^{1-x}\,\mathrm{d}y\Bigg[x^2yz \Bigg]_0^{1-x-y}\\
-&=&\, \int_0^1\,\mathrm{d}x\,\int_0^{1-x}\,\mathrm{d}y\left(x^2y(1-x-y)\right)\\
-&=&\, \int_0^1\,\mathrm{d}x\,\int_0^{1-x}\left(x^2y-x^3y-x^2y^2\right)\,\mathrm{d}y\\
-&=&\, \int_0^1\,\mathrm{d}x\,\int_0^{1-x}\Bigg[\frac{1}{2}x^2y^2-\frac{1}{2}x^3y^2-\frac{1}{3}x^2y^3\Bigg]_0^{1-x}\\
-&=&\, \frac{1}{6}\int_0^1\left(x^2 - 3x^3 + 3x^4 - x^5\right)\,\mathrm{d}x \\
-&=&\, \frac{1}{6}\Bigg[\frac{1}{3}x^3 - \frac{3}{4}x^4 + \frac{3}{5}x^5 - \frac{1}{6}x^6\Bigg]_0^{1}= \frac{1}{360}
+I &=  \int_0^1\,\mathrm{d}x\,\int_0^{1-x}\,\mathrm{d}y\,\int_0^{1-x-y}x^2y\,\mathrm{d}z \\
+&=  \int_0^1\,\mathrm{d}x\,\int_0^{1-x}\,\mathrm{d}y\Bigg[x^2yz \Bigg]_0^{1-x-y}\\
+&=  \int_0^1\,\mathrm{d}x\,\int_0^{1-x}\,\mathrm{d}y\left(x^2y(1-x-y)\right)\\
+&=  \int_0^1\,\mathrm{d}x\,\int_0^{1-x}\left(x^2y-x^3y-x^2y^2\right)\,\mathrm{d}y\\
+&=  \int_0^1\,\mathrm{d}x\,\int_0^{1-x}\Bigg[\frac{1}{2}x^2y^2-\frac{1}{2}x^3y^2-\frac{1}{3}x^2y^3\Bigg]_0^{1-x}\\
+&=  \frac{1}{6}\int_0^1\left(x^2 - 3x^3 + 3x^4 - x^5\right)\,\mathrm{d}x \\
+&=  \frac{1}{6}\Bigg[\frac{1}{3}x^3 - \frac{3}{4}x^4 + \frac{3}{5}x^5 - \frac{1}{6}x^6\Bigg]_0^{1}= \frac{1}{360}
 
 ```

@@ -45,13 +45,13 @@ Additionally we can build up structure with some more advanced operations on set
 There are two basic ways to define a set:
 - <b>List / Tabular Form</b>, where we list the members of the set in any order.  For example, the set of all the vowels and consonants:
 ```{math}
-    V &=& \{a,\,e,\,i\,o,\,u\} \\
-    C &=& \{b,\,c,\,d,\,f,\,g,\,h,\,j,\,k,\,l,\,m,\,n,\,p,\,q,\,r,\,s,\,t,\,v,\,w,\,x,\,y,\,z\}
+    V &= \{a,\,e,\,i\,o,\,u\} \\
+    C &= \{b,\,c,\,d,\,f,\,g,\,h,\,j,\,k,\,l,\,m,\,n,\,p,\,q,\,r,\,s,\,t,\,v,\,w,\,x,\,y,\,z\}
 ```
 or the set of the Natural number and Integers:
 ```{math}
-    \mathbb{N} &=& \{1,\,2,\,3,\dots \} \\
-    \mathbb{Z} &=& \{ \dots,\,-3,\,-2,\,-1,\,0,\,1,\,2,\,3,\,\dots \}
+    \mathbb{N} &= \{1,\,2,\,3,\dots \} \\
+    \mathbb{Z} &= \{ \dots,\,-3,\,-2,\,-1,\,0,\,1,\,2,\,3,\,\dots \}
 ```
     
 - <b>Set-Builder Form / Property Method</b>, 
@@ -62,8 +62,8 @@ where we state the properties which characterise the <b>elements</b> of a set, i
 which we read is <u>"The set $A$, defined by elements $x$, such that $x$ is an integer"</u>.  There are many ways to write out such a statement, the simplest is 
 to use the wider notation of set theory.   For example, the set of Rational numbers or Complex numbers:
 ```{math}
-    \mathbb{Q} &=& \left\{ \frac{m}{n} \,\,\middle|\,\, m,\,n \in  \mathbb{Z}\right\} \\
-    \mathbb{C} &=& \left\{ a + i\,b \,\,\middle|\,\, a,\,b\in \mathbb{R},\, i^2 = -1\right\}
+    \mathbb{Q} &= \left\{ \frac{m}{n} \,\,\middle|\,\, m,\,n \in  \mathbb{Z}\right\} \\
+    \mathbb{C} &= \left\{ a + i\,b \,\,\middle|\,\, a,\,b\in \mathbb{R},\, i^2 = -1\right\}
 ```
 
 ## Venn Diagrams
@@ -72,9 +72,9 @@ after him in Clapham, South London!), which are an easy to see how different set
 
 Considering our example of sets $A,\,B,\,\mathbb{U}$:
 ```{math}
-\mathbb{U} &=& \{ 1,\,2,\,3,\,4,\,5,\,6,\,7\}\\
-A &=& \{1,\,2,\,3,\,4\}\\
-B &=& \{3,\,4,\,5\}
+\mathbb{U} &= \{ 1,\,2,\,3,\,4,\,5,\,6,\,7\}\\
+A &= \{1,\,2,\,3,\,4\}\\
+B &= \{3,\,4,\,5\}
 ```
 this could be represented by the Venn diagram in {numref}`Venn1`.  
 ```{figure} ../figures/Venn1.png
@@ -93,8 +93,8 @@ A \cap B = \{ 3,\,4\}
 ```
 For the difference between the sets, 
 ```{math}
-(A\cup B) \setminus B &=& \{ 1,\,2\} \\
-(A\cup B) \setminus A &=& \{ 5\} 
+(A\cup B) \setminus B &= \{ 1,\,2\} \\
+(A\cup B) \setminus A &= \{ 5\} 
 ```
 these could be represented by Venn diagrams, such as that seen in {numref}`Venn2`.
 ```{figure} ../figures/Venn2.png
@@ -105,10 +105,10 @@ Venn diagram depicting sets $A$, $B$, $A \cup A$, $| \cap B$ and $(A\cup B) \set
 ```
 and likewise the complement
 ```{math}
-\neg A &=& \{5,\,6,\,7\} \\
-\neg B &=& \{1,\,2,\,6,\,7\} \\
-\neg (A \cup B) &=& \{6,\,7\}\\
-\neg (A \cap B) &=& \{1,\,2,\,5,\,6,\,7\} 
+\neg A &= \{5,\,6,\,7\} \\
+\neg B &= \{1,\,2,\,6,\,7\} \\
+\neg (A \cup B) &= \{6,\,7\}\\
+\neg (A \cap B) &= \{1,\,2,\,5,\,6,\,7\} 
 ```
 these could be represented by Venn diagrams with appropriate shading.   
 
@@ -116,25 +116,25 @@ these could be represented by Venn diagrams with appropriate shading.
 Sets follow a specific algebra, which we can deduce by following the logical principles outlined previously. There are identity laws, i.e. can we 
 use AND or OR like multiplying or adding on 1 or 0:
 ```{math}
-A \cup \varnothing &=& A \\
-A \cap \varnothing &=& \varnothing \\
-A \cap \mathbb{U} &=& A \\
-A \cup \mathbb{U} &=& \mathbb{U}
+A \cup \varnothing &= A \\
+A \cap \varnothing &= \varnothing \\
+A \cap \mathbb{U} &= A \\
+A \cup \mathbb{U} &= \mathbb{U}
 ```
 Associative laws, i.e. does the position of the brackets matter:
 ```{math}
-(A \cup B) \cup C &=&  A \cup (B \cup C)\\
-(A \cap B) \cap C &=&  A \cap (B \cap C)
+(A \cup B) \cup C &=  A \cup (B \cup C)\\
+(A \cap B) \cap C &=  A \cap (B \cap C)
 ```
 Commutative laws, i.e. does the order of operations matter:
 ```{math}
-A \cup B &=& B \cup A \\
-A \cap B &=& B \cap A
+A \cup B &= B \cup A \\
+A \cap B &= B \cap A
 ```
 Distributive laws, i.e. does the operation in a bracket expand out:
 ```{math}
-A \cup (B \cap C) &=& (A\cup B) \cap (A \cup C)\\
-A \cap (B \cup C) &=& (A\cap B) \cup (A \cap C)
+A \cup (B \cap C) &= (A\cup B) \cap (A \cup C)\\
+A \cap (B \cup C) &= (A\cap B) \cup (A \cap C)
 ```
 Involution laws, i.e. is the inverse of the inverse return to the original state:
 ```{math}
@@ -142,20 +142,20 @@ Involution laws, i.e. is the inverse of the inverse return to the original state
 ```
 Idempotent laws, i.e. it's everything or nothing:
 ```{math}
-A \cup A &=& A \\
-A \cap A &=& A
+A \cup A &= A \\
+A \cap A &= A
 ```
 Complement laws, i.e. does everything add up together or subtract to zero:
 ```{math}
-A \cup \neg A &=& \mathbb{U} \\
-A \cap \neg A &=& \varnothing \\
-\neg \mathbb{U} &=& \varnothing \\
-\neg \varnothing &=& \mathbb{U}
+A \cup \neg A &= \mathbb{U} \\
+A \cap \neg A &= \varnothing \\
+\neg \mathbb{U} &= \varnothing \\
+\neg \varnothing &= \mathbb{U}
 ```
 And finally DeMorgan's laws, which refer to overall inverse relations:
 ```{math}
-\neg(A \cup B) &=& \neg A \cap \neg B \\
-\neg(A \cap B) &=& \neg A \cup \neg B
+\neg(A \cup B) &= \neg A \cap \neg B \\
+\neg(A \cap B) &= \neg A \cup \neg B
 ```
 
 ## Counting Sets
@@ -182,7 +182,7 @@ n(A\setminus B) = n(A) - n(A \cap B)
 ```
 We can also extend these statement to many sets, suppose $A,\,B,\,C$ are finite sets:
 ```{math}
-n(A \cup B \cup C) &=& n(A) + n(B) + n(C) \\ &-&  n(A\cap B) - n(A\cap C) - n(B \cap C) \\ &+&  n(A \cap B \cap C)
+n(A \cup B \cup C) &= n(A) + n(B) + n(C) \\ &-&  n(A\cap B) - n(A\cap C) - n(B \cap C) \\ &+&  n(A \cap B \cap C)
 ```
 where we need to remove the double counting, but in doing so we loose the triple counting, so we need to re-add this total intersection at the end.  
 

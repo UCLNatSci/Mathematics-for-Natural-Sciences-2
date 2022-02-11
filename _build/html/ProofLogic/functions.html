@@ -376,10 +376,10 @@ denotes the set of elements of A each whose image belongs to <span class="math n
 \[\text{Graph of }\,f = \{(a,\,b)\,:\, a \in A,\,b = f(a)\}\]</div>
 <p>A function <span class="math notranslate nohighlight">\(f\)</span> is defined from a set <span class="math notranslate nohighlight">\(A = \{a,\,b,\,c,\,d\}\)</span> into a set <span class="math notranslate nohighlight">\(B = \{r,\,s,\,t,\,u\}\)</span>. with a mapping:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}f(a) &amp;=&amp;\, s \\
-f(b) &amp;=&amp;\, u \\
-f(c) &amp;=&amp;\, r \\
-f(d) &amp;=&amp;\, s\end{split}\]</div>
+\[\begin{split}f(a) &amp;= s \\
+f(b) &amp;= u \\
+f(c) &amp;= r \\
+f(d) &amp;= s\end{split}\]</div>
 <p>which we can represent graphically as shown in <a class="reference internal" href="#functionimage"><span class="std std-numref">Fig. 12.2</span></a>.</p>
 <div class="figure align-default" id="functionimage">
 <img alt="../_images/FunctionImage.png" src="../_images/FunctionImage.png" />
@@ -413,26 +413,26 @@ the <b>Composition</b> of <span class="math notranslate nohighlight">\(f\)</span
 </div>
 <p>Lets think about two simple functions:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}f(x) &amp;=&amp;\, x^2\\
-g(x) &amp;=&amp;\,\ \cos(x)\end{split}\]</div>
+\[\begin{split}f(x) &amp;= x^2\\
+g(x) &amp;= \cos(x)\end{split}\]</div>
 <p>We can composite these functions by writing:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}f(g(x)) = (f \circ g)(x) &amp;=&amp;\, (\cos(x))^2 \\
-g(f(x)) = (g \circ f)(x) &amp;=&amp;\, \cos(x^2)\end{split}\]</div>
+\[\begin{split}f(g(x)) &amp;= (f \circ g)(x) &amp;= (\cos(x))^2 \\
+g(f(x)) &amp;= (g \circ f)(x) &amp;= \cos(x^2)\end{split}\]</div>
 <p>where we notice that in general <span class="math notranslate nohighlight">\(f(g(x)) \neq g(f(x))\)</span>.  These composite functions can be built up by looking at the function on the <em>furthest right</em> and
 then adding more functions on to the <em>left hand side</em>.  Suppose we introduce a third function:</p>
 <div class="math notranslate nohighlight">
 \[h(x) = \frac{2}{x}\]</div>
 <p>then the six different functional compositions would be:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}f \circ (g \circ h) &amp;=&amp;\, \left( \cos \left( \frac{2}{x} \right) \right)^2 &amp; f \circ (h \circ g) = \left( \frac{2}{\cos(x)} \right)^2 \\ 
-g \circ (h \circ f) &amp;=&amp;\, \cos \left( \frac{2}{x^2} \right) &amp; g \circ (f \circ h) = \cos \left( \left( \frac{2}{x}\right)^2  \right) \\ 
-h \circ (f \circ g) &amp;=&amp;\, \frac{2}{\left( \cos (x) \right)^2 } &amp; h \circ (g \circ f) = \frac{2}{\cos(x^2)}\end{split}\]</div>
+\[\begin{split}f \circ (g \circ h) &amp;= \left( \cos \left( \frac{2}{x} \right) \right)^2 &amp; f \circ (h \circ g) = \left( \frac{2}{\cos(x)} \right)^2 \\ 
+g \circ (h \circ f) &amp;= \cos \left( \frac{2}{x^2} \right) &amp; g \circ (f \circ h) = \cos \left( \left( \frac{2}{x}\right)^2  \right) \\ 
+h \circ (f \circ g) &amp;= \frac{2}{\left( \cos (x) \right)^2 } &amp; h \circ (g \circ f) = \frac{2}{\cos(x^2)}\end{split}\]</div>
 <p>and we see that the associativity of these composites can be shown to be true:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} f\circ g &amp;=&amp;\, (\cos(x))^2\\
- g \circ h &amp;=&amp;\, \cos\left(\frac{2}{x}\right) \\ 
-f \circ (g \circ h) &amp;=&amp;\, (f \circ g) \circ h = \left( \cos \left( \frac{2}{x} \right) \right)^2\end{split}\]</div>
+\[\begin{split} f\circ g &amp;= (\cos(x))^2\\
+ g \circ h &amp;= \cos\left(\frac{2}{x}\right) \\ 
+f \circ (g \circ h) &amp;= (f \circ g) \circ h = \left( \cos \left( \frac{2}{x} \right) \right)^2\end{split}\]</div>
 </div>
 <div class="section" id="invertibility-of-functions">
 <h2><span class="section-number">12.3. </span>Invertibility of Functions<a class="headerlink" href="#invertibility-of-functions" title="Permalink to this headline">¶</a></h2>
