@@ -207,7 +207,7 @@ We should consider the truth table for all the premises and see if they can be s
 
 
 Since in the first line the case of the two premises being simultaneously true results in $p$ being true and in the third line the case of the two premises being 
-true results in $p$ being false, this argument is fallacy.
+true results in $p$ being false, this argument is false.
 
 ## Logical Implications
 A proposition $P(p,\,q,\,\dots)$ is said to <b>Logically Imply</b> a proposition $Q(p,\,q,\,\dots)$ if $Q(p,\,q,\,\dots)$ is true whenever $P(p,\,q,\,\dots)$ is 
