@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -35,17 +35,19 @@
     
   <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -108,28 +110,28 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../VectorCalculus/lineintegrals.html">
-   3. Line Integrals
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/vectoralgebra.html">
-   4. Vectors and Vector Algebra
+   3. Vectors and Vector Algebra
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/calculusonfields.html">
-   5. Vector Fields
+   4. Vector Fields
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/divandcurl.html">
-   6. Variations of Fields
+   5. Variations of Fields
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/coordinatesystems.html">
-   7. Coordinate Systems
+   6. Coordinate Systems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../VectorCalculus/lineintegrals.html">
+   7. Line Integrals
   </a>
  </li>
  <li class="toctree-l1">
@@ -183,8 +185,18 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="inverse_determinant.html">
-   18. Inverse and Determinant
+  <a class="reference internal" href="inverses.html">
+   18. Inverses
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="determinants.html">
+   19. Determinants
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../eigenvectors/notes.html">
+   20. Eigenvalues and Eigenvectors
   </a>
  </li>
 </ul>
@@ -253,6 +265,29 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#diagonalisation">
+   Diagonalisation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#complex-eigenvalues">
+   Complex Eigenvalues
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#application-e-g-stochastic-matrices">
+   Application E.g. Stochastic Matrices
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -265,6 +300,29 @@
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#diagonalisation">
+   Diagonalisation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#complex-eigenvalues">
+   Complex Eigenvalues
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#application-e-g-stochastic-matrices">
+   Application E.g. Stochastic Matrices
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -273,6 +331,62 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="matrix-diagonalisation">
 <h1>Matrix Diagonalisation<a class="headerlink" href="#matrix-diagonalisation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="diagonalisation">
+<h2>Diagonalisation<a class="headerlink" href="#diagonalisation" title="Permalink to this headline">¶</a></h2>
+<p>Recall that a diagonal matrix is a square matrix with zeros everywhere except the main diagonal. Multiplying a vector by a diagonal matrix <span class="math notranslate nohighlight">\(D\)</span> is easy. Just multiply each entry of the vector by the the element in the corresponding position of the diagonal matrix:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}d_{1}&amp;0&amp;\cdots&amp;0\\0&amp;d_{2}&amp;\cdots&amp;0\\\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\0&amp;0&amp;\cdots&amp;d_{n}\end{pmatrix}\begin{pmatrix}x_1\\x_2\\\vdots\\x_n\end{pmatrix} = \begin{pmatrix}d_{1}x_1\\d_{2}x_2\\\vdots\\d_{n}x_n\end{pmatrix}.\end{split}\]</div>
+<p>The diagonal entries of <span class="math notranslate nohighlight">\(D\)</span> act separately on each of the components of the vector <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p>In fact, for diagonal matrices we immediately have the eigenvalues and eigenvectors! The eigenvalues are the diagonal entries <span class="math notranslate nohighlight">\(d_i\)</span> and the eigenvectors are the standard coordinate vectors <span class="math notranslate nohighlight">\(e_i\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[De_i = d_ie_i.\]</div>
+<p>Multiplying by a diagonal matrix is easy because any vector is a linear sum of coordinate vectors.</p>
+<p>What about general (non-diagonal) square matrices? If <span class="math notranslate nohighlight">\(x\)</span> is an eigenvector of a square matrix <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(\lambda\)</span> its eigenvalue, then we have</p>
+<div class="math notranslate nohighlight">
+\[Ax = \lambda x.\]</div>
+<p>If <span class="math notranslate nohighlight">\(x\)</span> is an eigenvector, <span class="math notranslate nohighlight">\(A\)</span> behaves like a diagonal matrix where the diagonal entries are the eigenvalues! In fact, in may cases it turns out that we can use the eigenvectors to express <span class="math notranslate nohighlight">\(A\)</span> as a diagonal matrix.</p>
+<div class="admonition-matrix-diagonalisation admonition">
+<p class="admonition-title">Matrix Diagonalisation</p>
+<p>Let <span class="math notranslate nohighlight">\(A\)</span> be an <span class="math notranslate nohighlight">\((n \times n)\)</span> matrix with <span class="math notranslate nohighlight">\(n\)</span> eigenvectors <span class="math notranslate nohighlight">\(x_i\)</span> and corresponding eigenvalues <span class="math notranslate nohighlight">\(\lambda_i\)</span>. Let</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}X = \begin{pmatrix}|&amp;&amp;|\\x_1&amp;\cdots&amp;x_n\\|&amp;&amp;|\end{pmatrix}\end{split}\]</div>
+<p>be the matrix of eigenvectors and</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\Lambda = \begin{pmatrix}\lambda_1 &amp;&amp;\\&amp;\ddots&amp;\\&amp;&amp;\lambda_n\end{pmatrix} \end{split}\]</div>
+<p>the matrix of eigenvalues. If <span class="math notranslate nohighlight">\(X\)</span> is invertible, then</p>
+<div class="math notranslate nohighlight">
+\[X^{-1}AX = \Lambda.\]</div>
+</div>
+<p>Note that we use capital lambda <span class="math notranslate nohighlight">\(\Lambda\)</span> to represent the matrix of eigenvalues.</p>
+<p>To see why the above result is true, let us write the equation <span class="math notranslate nohighlight">\(X^{-1}AX=\Lambda\)</span> slightly differently:</p>
+<div class="math notranslate nohighlight">
+\[AX = X\Lambda.\]</div>
+<p>Then the left hand side <span class="math notranslate nohighlight">\(AX\)</span> is <span class="math notranslate nohighlight">\(A\)</span> times the eigenvectors:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}AX = A\begin{pmatrix}|&amp;&amp;|\\x_1&amp;\cdots&amp;x_n\\|&amp;&amp;|\end{pmatrix} = \begin{pmatrix}|&amp;&amp;|\\\lambda_1x_1&amp;\cdots&amp;\lambda_nx_n\\|&amp;&amp;|\end{pmatrix}\end{split}\]</div>
+<p>because <span class="math notranslate nohighlight">\(Ax_i= \lambda_ix_i\)</span>.</p>
+<p>Whereas right hand side <span class="math notranslate nohighlight">\(X\Lambda\)</span> is the eigenvectors times the eigenvalues:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}X\Lambda = \begin{pmatrix}|&amp;&amp;|\\x_1&amp;\cdots&amp;x_n\\|&amp;&amp;|\end{pmatrix}\begin{pmatrix}\lambda_1 &amp;&amp;\\&amp;\ddots&amp;\\&amp;&amp;\lambda_n\end{pmatrix} = \begin{pmatrix}|&amp;&amp;|\\\lambda_1x_1&amp;\cdots&amp;\lambda_nx_n\\|&amp;&amp;|\end{pmatrix}.\end{split}\]</div>
+<p>Thus we see that <span class="math notranslate nohighlight">\(AX=X\Lambda\)</span>.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<ol class="simple">
+<li><p>Diagonalisation only works if we have <span class="math notranslate nohighlight">\(n\)</span> different (linearly independent) eigenvectors so that <span class="math notranslate nohighlight">\(X\)</span> is invertible. Not every <span class="math notranslate nohighlight">\((n \times n)\)</span> matrix has <span class="math notranslate nohighlight">\(n\)</span> linearly independent eigenvectors, so not all matrices are diagonalisable.</p></li>
+<li><p>The eigenvectors in <span class="math notranslate nohighlight">\(X\)</span> must be written in the same order as the eigenvalues in <span class="math notranslate nohighlight">\(\Lambda\)</span>.</p></li>
+<li><p>Diagonalisation is not unique, because eigenvectors are not unique. If we multiply an eigenvector by a constant, we get another eigenvector and therefore another eigenvector matrix <span class="math notranslate nohighlight">\(X\)</span>.</p></li>
+<li><p>The eigenvalue matrix <span class="math notranslate nohighlight">\(\Lambda\)</span> <em>is</em> unique (up to order).</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="complex-eigenvalues">
+<h2>Complex Eigenvalues<a class="headerlink" href="#complex-eigenvalues" title="Permalink to this headline">¶</a></h2>
+<p>[TODO]</p>
+</div>
+<div class="section" id="application-e-g-stochastic-matrices">
+<h2>Application E.g. Stochastic Matrices<a class="headerlink" href="#application-e-g-stochastic-matrices" title="Permalink to this headline">¶</a></h2>
+<p>[TODO]</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">

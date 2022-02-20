@@ -212,6 +212,54 @@ add_text(ax3, -1.8, 0.8, "$A^{-1}Ae_2$")
 glue("la_fig_6", fig, display=False)
 
 
+# In[9]:
+
+
+
+import matplotlib.patches as patches
+
+fig, axes = plt.subplots(1, 2, figsize=(9.5,4))
+fig.subplots_adjust(wspace=0.5)
+fig.text(0.5, 0.5, "$A$", fontsize=20, ha="center")
+fig.text(0.5, 0.4, "$\longrightarrow$", fontsize=30, ha="center")
+for ax in axes:
+    ax.axis('off')
+    ax.set_xlim(-0.1, 2.5)
+    ax.set_ylim(-0.1, 2.5)
+    ax.set_axisbelow(True)
+
+ax1, ax2 = axes
+x = [0,0,2,2]
+y = [0,2,2,0]
+ax1.add_patch(patches.Polygon(xy=list(zip(x,y)), fill=True, color="silver"))
+plot_vector(ax1, 2, 0)
+plot_vector(ax1, 0, 2)
+ax1.text(1, 1, "area = $1$", fontsize=24, ha="center", va="center")
+
+
+x = [0,0.5,2.5,2]
+y = [0,2,2.5,0.5]
+ax2.add_patch(patches.Polygon(xy=list(zip(x,y)), fill=True, color="silver"))
+plot_vector(ax2, 2, 0.5)
+plot_vector(ax2, 0.5, 2)
+ax2.text(1.2, 1.2, "area = \n$\mathrm{det}(A)$", fontsize=24, ha="center", va="center")
+
+
+glue("la_fig_7", fig, display=False)
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
 # In[ ]:
 
 

@@ -1,4 +1,4 @@
-# Inverse and Determinant
+# Inverses
 
 ## Inverse Functions
 
