@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -35,19 +35,19 @@
     
   <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -56,7 +56,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="9. Surface Integrals" href="surfaceintegrals.html" />
-    <link rel="prev" title="7. Coordinate Systems" href="coordinatesystems.html" />
+    <link rel="prev" title="7. Line Integrals" href="lineintegrals.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -112,28 +112,28 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="lineintegrals.html">
-   3. Line Integrals
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="vectoralgebra.html">
-   4. Vectors and Vector Algebra
+   3. Vectors and Vector Algebra
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="calculusonfields.html">
-   5. Vector Fields
+   4. Vector Fields
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="divandcurl.html">
-   6. Variations of Fields
+   5. Variations of Fields
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="coordinatesystems.html">
-   7. Coordinate Systems
+   6. Coordinate Systems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lineintegrals.html">
+   7. Line Integrals
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -187,8 +187,18 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/inverse_determinant.html">
-   18. Inverse and Determinant
+  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/inverses.html">
+   18. Inverses
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/determinants.html">
+   19. Determinants
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/eigenvectors/notes.html">
+   20. Eigenvalues and Eigenvectors
   </a>
  </li>
 </ul>
@@ -539,11 +549,11 @@ however the integrand does not contain <span class="math notranslate nohighlight
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="coordinatesystems.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="lineintegrals.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">7. </span>Coordinate Systems</p>
+            <p class="prev-next-title"><span class="section-number">7. </span>Line Integrals</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="surfaceintegrals.html" title="next page">

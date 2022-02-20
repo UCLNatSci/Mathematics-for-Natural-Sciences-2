@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -35,19 +35,19 @@
     
   <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -112,28 +112,28 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../VectorCalculus/lineintegrals.html">
-   3. Line Integrals
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/vectoralgebra.html">
-   4. Vectors and Vector Algebra
+   3. Vectors and Vector Algebra
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/calculusonfields.html">
-   5. Vector Fields
+   4. Vector Fields
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/divandcurl.html">
-   6. Variations of Fields
+   5. Variations of Fields
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../VectorCalculus/coordinatesystems.html">
-   7. Coordinate Systems
+   6. Coordinate Systems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../VectorCalculus/lineintegrals.html">
+   7. Line Integrals
   </a>
  </li>
  <li class="toctree-l1">
@@ -187,8 +187,18 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="inverse_determinant.html">
-   18. Inverse and Determinant
+  <a class="reference internal" href="inverses.html">
+   18. Inverses
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="determinants.html">
+   19. Determinants
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../eigenvectors/notes.html">
+   20. Eigenvalues and Eigenvectors
   </a>
  </li>
 </ul>
@@ -461,8 +471,8 @@
 <span class="eqno">(16.1)<a class="headerlink" href="#equation-square-matrix" title="Permalink to this equation">¶</a></span>\[\begin{split}\left( \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right) \qquad \left[ \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right]\end{split}\]</div>
 <p>It is important that you do not use commas to separate the elements, which is incorrect notation.</p>
 <p>Either square or round brackets can be used to denote a matrix - but you should avoid mixing notation. Other types of brackets cannot be used, so none of the expressions below are matrices. In fact, the third expression has a special meaning, as we will see later.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b09e2aec-4a15-42e1-acd3-2931c1be916a">
-<span class="eqno">(16.2)<a class="headerlink" href="#equation-b09e2aec-4a15-42e1-acd3-2931c1be916a" title="Permalink to this equation">¶</a></span>\[\begin{align}\begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \qquad \left\{ \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right\} \qquad \left| \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right|	\end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-e19c30c0-4a2d-4009-83ab-afc1cf823db6">
+<span class="eqno">(16.2)<a class="headerlink" href="#equation-e19c30c0-4a2d-4009-83ab-afc1cf823db6" title="Permalink to this equation">¶</a></span>\[\begin{align}\begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \qquad \left\{ \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right\} \qquad \left| \begin{matrix} 1 &amp; -3 \\ 2 &amp; -1 \end{matrix} \right|	\end{align}\]</div>
 </div>
 <div class="section" id="terminology">
 <h3><span class="section-number">16.1.2. </span>Terminology<a class="headerlink" href="#terminology" title="Permalink to this headline">¶</a></h3>
@@ -810,7 +820,7 @@ x_4 &amp; {}={} &amp; x_4
 <h2><span class="section-number">16.4. </span>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">¶</a></h2>
 <div class="solution admonition" id="LinearAlgebra/linear_systems_matrices/matrices-solution-4">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#q_matrix_definitions"> Exercise 16.1</a></p>
+<p class="admonition-title"><a class="reference internal" href="#q_matrix_definitions">Solution to Exercise 16.1</a></p>
 <div class="section" id="solution-content">
 <p>1. <span class="math notranslate nohighlight">\(A\)</span> is a (3 x 2) matrix, since it has 3 rows and 2 columns.
 Matrices are nearly always given upper case letters as variable names.</p>
@@ -824,7 +834,7 @@ In that case, we could dispense with the brackets, since it is equivalent to a s
 </div>
 <div class="solution admonition" id="LinearAlgebra/linear_systems_matrices/matrices-solution-5">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#q_matrix_arithmetic"> Exercise 16.2</a></p>
+<p class="admonition-title"><a class="reference internal" href="#q_matrix_arithmetic">Solution to Exercise 16.2</a></p>
 <div class="section" id="solution-content">
 <p>Matrix addition is both commutative and associative, because it is an elementwise operation and therefore has the same properties as addition of real numbers. Thus, the first two expressions give the same result:</p>
 <p>1. and 2. <span class="math notranslate nohighlight">\((A+B)+C=A+(B+C)=\left(\begin{array}{cc}1-4+0 &amp; 2+1+3 \\-1+1+4 &amp; 0+2+2 \\3-2+1 &amp; 1+3+1 \\\end{array}\right)=\left(\begin{array}{cc}-3 &amp; 6 \\4 &amp; 4 \\2 &amp; 5 \\\end{array}\right)\)</span></p>
@@ -834,7 +844,7 @@ In that case, we could dispense with the brackets, since it is equivalent to a s
 </div>
 <div class="solution admonition" id="LinearAlgebra/linear_systems_matrices/matrices-solution-6">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#q_matrix_multiplication"> Exercise 16.3</a></p>
+<p class="admonition-title"><a class="reference internal" href="#q_matrix_multiplication">Solution to Exercise 16.3</a></p>
 <div class="section" id="solution-content">
 <p>1.</p>
 <div class="math notranslate nohighlight">
@@ -868,7 +878,7 @@ BA &amp;= \begin{pmatrix}2 &amp; 3\\-3 &amp;0\\1&amp;1\end{pmatrix}\begin{pmatri
 </div>
 <div class="solution admonition" id="LinearAlgebra/linear_systems_matrices/matrices-solution-7">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#q_solve_system"> Exercise 16.4</a></p>
+<p class="admonition-title"><a class="reference internal" href="#q_solve_system">Solution to Exercise 16.4</a></p>
 <div class="section" id="solution-content">
 <p>The matrix <span class="math notranslate nohighlight">\(A\)</span> is already in reduced row echelon form, and <span class="math notranslate nohighlight">\(x_1\)</span> is a pivot variable and <span class="math notranslate nohighlight">\(x_2\)</span> a free variable.</p>
 <ol class="simple">
