@@ -6,10 +6,10 @@ Define $K_n$ to be the matrix with $2$s on the main diagonal and $-1$s on the su
 
 $$K_4 = \begin{pmatrix}2&-1&0&0\\-1&2&-1&0\\0&-1&2&-1\\ 0&0&-1&2\end{pmatrix}.$$
 
-Show that $\det(K_n) = n + 1$:
+Show that $\det(K_n) = n + 1$ using the following two different methods:
 
-1. Using row operations to reduce the matrix to a triangular matrix.
-2. Using the cofactor formula.
+1. Using row operations to reduce the matrix to a triangular matrix [the first row operation is $r_2\rightarrow r_2+\frac{1}{2}r_1$ which leaves $r_2 = (0, \frac{3}{2}, -1, 0, \ldots$). Continue the row operations and spot the pattern].
+2. Using the cofactor formula [start by writing $\det(K_n)$ in terms of $\det(K_{n-1})$ and $\det(K_{n-2})$]
 
 ## 3 x 3 Inverse Question
 

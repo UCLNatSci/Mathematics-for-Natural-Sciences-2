@@ -129,10 +129,10 @@
 <p>Define <span class="math notranslate nohighlight">\(K_n\)</span> to be the matrix with <span class="math notranslate nohighlight">\(2\)</span>s on the main diagonal and <span class="math notranslate nohighlight">\(-1\)</span>s on the subdiagonal and superdiagonal. <span class="math notranslate nohighlight">\(K_4\)</span> is shown below:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}K_4 = \begin{pmatrix}2&amp;-1&amp;0&amp;0\\-1&amp;2&amp;-1&amp;0\\0&amp;-1&amp;2&amp;-1\\ 0&amp;0&amp;-1&amp;2\end{pmatrix}.\end{split}\]</div>
-<p>Show that <span class="math notranslate nohighlight">\(\det(K_n) = n + 1\)</span>:</p>
+<p>Show that <span class="math notranslate nohighlight">\(\det(K_n) = n + 1\)</span> using the following two different methods:</p>
 <ol class="simple">
-<li><p>Using row operations to reduce the matrix to a triangular matrix.</p></li>
-<li><p>Using the cofactor formula.</p></li>
+<li><p>Using row operations to reduce the matrix to a triangular matrix [the first row operation is <span class="math notranslate nohighlight">\(r_2\rightarrow r_2+\frac{1}{2}r_1\)</span> which leaves <span class="math notranslate nohighlight">\(r_2 = (0, \frac{3}{2}, -1, 0, \ldots\)</span>). Continue the row operations and spot the pattern].</p></li>
+<li><p>Using the cofactor formula [start by writing <span class="math notranslate nohighlight">\(\det(K_n)\)</span> in terms of <span class="math notranslate nohighlight">\(\det(K_{n-1})\)</span> and <span class="math notranslate nohighlight">\(\det(K_{n-2})\)</span>]</p></li>
 </ol>
 </div>
 <div class="section" id="x-3-inverse-question">
