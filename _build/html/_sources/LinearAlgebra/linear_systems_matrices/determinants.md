@@ -314,8 +314,8 @@ Expand the $(4\times 4)$ matrix along the second row:
 
 $$\begin{align*}
 \begin{vmatrix}1&0&1&1\\1&0&0&0\\0&1&1&1\\0&1&0&1\end{vmatrix} &= -1\begin{vmatrix}0&1&1\\1&1&1\\1&0&1\end{vmatrix}\\
-&= -1\left(-1\begin{vmatrix}1&1&\\1&1\end{vmatrix}+\begin{vmatrix}1&1&\\1&0\end{vmatrix}\right)\\
-&= -1(-1)\\
+&= -1\left(-1\begin{vmatrix}1&1\\0&1\end{vmatrix}+\begin{vmatrix}1&1\\1&1\end{vmatrix}\right)\\
+&= -1(-1+0)\\
 &= 1
 \end{align*}$$  
 ```

@@ -6,7 +6,7 @@ Define $K_n$ to be the matrix with $2$s on the main diagonal and $-1$s on the su
 
 $$K_4 = \begin{pmatrix}2&-1&0&0\\-1&2&-1&0\\0&-1&2&-1\\ 0&0&-1&2\end{pmatrix}.$$
 
-Show that $\det(K_n) = n + 1$ by:
+Show that $\det(K_n) = n + 1$:
 
 1. Using row operations to reduce the matrix to a triangular matrix.
 2. Using the cofactor formula.
