@@ -586,7 +586,7 @@
 \[\begin{split}\begin{vmatrix}1&amp;1&amp;1\\1&amp;2&amp;2\\1&amp;2&amp;3\end{vmatrix}=\begin{vmatrix}1&amp;1&amp;1\\0&amp;1&amp;1\\0&amp;1&amp;2\end{vmatrix}=\begin{vmatrix}1&amp;1&amp;1\\0&amp;1&amp;1\\0&amp;0&amp;1\end{vmatrix} = 1.\end{split}\]</div>
 <p>The first equality is because subracting <span class="math notranslate nohighlight">\(r_1\)</span> from <span class="math notranslate nohighlight">\(r_2\)</span> and <span class="math notranslate nohighlight">\(r_3\)</span> does not affect the determinant (property 4). The second equality is because subracting <span class="math notranslate nohighlight">\(r_2\)</span> from <span class="math notranslate nohighlight">\(r_3\)</span> does not affect the determinant (also property 4). The third equality is because the deterimant of a triangular matrix is the product of its diagonal entries (property 7).</p>
 <p>2.</p>
-<p><span class="math notranslate nohighlight">\(\det(2) = \left(\det(B)^4\right) = \frac{1}{2^4}\)</span>. By property 3, we can factor out <span class="math notranslate nohighlight">\(2\)</span> from each row four times.</p>
+<p><span class="math notranslate nohighlight">\(\det(2B) = 2^4\left(\det(B)\right) = 8\)</span>. By property 3, we can factor out <span class="math notranslate nohighlight">\(2\)</span> from each row four times.</p>
 <p><span class="math notranslate nohighlight">\(\det(-B) = (-1)^4\det(B) = \frac{1}{2}\)</span> also by property 3 and factoring out <span class="math notranslate nohighlight">\(-1\)</span> from each row four times.</p>
 <p><span class="math notranslate nohighlight">\(\det(B^2) = \det(BB) = \det(B)\det(B) = \det(B)^2 = \frac{1}{4}\)</span> using property 9.</p>
 <p><span class="math notranslate nohighlight">\(\det(B^{-1}) = 1/\det(B) = 2\)</span> since <span class="math notranslate nohighlight">\(B^{-1}B = I \implies \det(B^{-1})\det(B) = 1\)</span> by property 9 and property 1.</p>
@@ -600,8 +600,8 @@
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}
 \begin{vmatrix}1&amp;0&amp;1&amp;1\\1&amp;0&amp;0&amp;0\\0&amp;1&amp;1&amp;1\\0&amp;1&amp;0&amp;1\end{vmatrix} &amp;= -1\begin{vmatrix}0&amp;1&amp;1\\1&amp;1&amp;1\\1&amp;0&amp;1\end{vmatrix}\\
-&amp;= -1\left(-1\begin{vmatrix}1&amp;1&amp;\\1&amp;1\end{vmatrix}+\begin{vmatrix}1&amp;1&amp;\\1&amp;0\end{vmatrix}\right)\\
-&amp;= -1(-1)\\
+&amp;= -1\left(-1\begin{vmatrix}1&amp;1\\0&amp;1\end{vmatrix}+\begin{vmatrix}1&amp;1\\1&amp;1\end{vmatrix}\right)\\
+&amp;= -1(-1+0)\\
 &amp;= 1
 \end{align*}\end{split}\]</div>
 </div>

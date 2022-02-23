@@ -298,7 +298,7 @@ The first equality is because subracting $r_1$ from $r_2$ and $r_3$ does not aff
 
 2\.
 
-$\det(2) = \left(\det(B)^4\right) = \frac{1}{2^4}$. By property 3, we can factor out $2$ from each row four times.
+$\det(2B) = 2^4\left(\det(B)\right) = 8$. By property 3, we can factor out $2$ from each row four times.
 
 $\det(-B) = (-1)^4\det(B) = \frac{1}{2}$ also by property 3 and factoring out $-1$ from each row four times.
 
@@ -314,8 +314,8 @@ Expand the $(4\times 4)$ matrix along the second row:
 
 $$\begin{align*}
 \begin{vmatrix}1&0&1&1\\1&0&0&0\\0&1&1&1\\0&1&0&1\end{vmatrix} &= -1\begin{vmatrix}0&1&1\\1&1&1\\1&0&1\end{vmatrix}\\
-&= -1\left(-1\begin{vmatrix}1&1&\\1&1\end{vmatrix}+\begin{vmatrix}1&1&\\1&0\end{vmatrix}\right)\\
-&= -1(-1)\\
+&= -1\left(-1\begin{vmatrix}1&1\\0&1\end{vmatrix}+\begin{vmatrix}1&1\\1&1\end{vmatrix}\right)\\
+&= -1(-1+0)\\
 &= 1
 \end{align*}$$  
 ```

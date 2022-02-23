@@ -1,25 +1,36 @@
 # Linear Algebra Problems 3
 
-## Determinant Question
-
-Define $K_n$ to be the matrix with $2$s on the main diagonal and $-1$s on the subdiagonal and superdiagonal. $K_4$ is shown below:
-
-$$K_4 = \begin{pmatrix}2&-1&0&0\\-1&2&-1&0\\0&-1&2&-1\\ 0&0&-1&2\end{pmatrix}.$$
-
-Show that $\det(K_n) = n + 1$ by:
-
-1. Using row operations to reduce the matrix to a triangular matrix.
-2. Using the cofactor formula.
-
-## 3 x 3 Inverse Question
-
-[TODO]
-
-## Invertible Matrix Theorem Question
-
-[TODO]
-
 ## Question 1
+
+Use row operations to verify the $3$ by $3$ 'Vandermonde determinant'
+
+$$\begin{vmatrix}1 & a & a^2\\1 & b & b^2\\1 & c & c^2\end{vmatrix} = (b-a)(c-a)(c-b).$$
+
+## Question 2
+
+<!-- Strang Linear Algebra and its Applications Ch4 Q29 -->
+
+A box has edges from $(0,0,0)$ to $(3,1,1)$, $(1,3,1)$ and $(1,1,3)$. Find its volume and find the area of each parallelogram face.
+
+## Question 3
+
+<!-- https://metric.ma.ic.ac.uk/metric_public/matrices/eigenvalues_and_eigenvectors/eigenvalues2.html -->
+
+Let
+
+$$M = \begin{pmatrix}2 &−2& 4 \\−4 &1 &2 \\2 &2& 5\end{pmatrix}.$$
+
+1. Show that $\lambda_1=3$ is an eigenvalue and find its corresponding eigenspace.
+2. Find the other two eigenvalues and their corresponding eigenspaces.
+3. What is the geometrical effect of $M$ on vectors in $\mathbb{R}^3$?
+
+## Question 4
+
+Find the null space and all four eigenvalues and corresponding eigenvectors for the following matrices:
+
+$A = \begin{pmatrix}1&1&1&1\\1&1&1&1\\1&1&1&1\\1&1&1&1\end{pmatrix}$ and $B = \begin{pmatrix}0&1&0&1\\1&0&1&0\\0&1&0&1\\1&0&1&0\end{pmatrix}$.
+
+## Question 5
 
 <!-- https://www.sheffield.ac.uk/polopoly_fs/1.892866!/file/eignval_eignvec_basics_HELM.pdf -->
 
@@ -32,31 +43,21 @@ If $\lambda_1, \ldots, \lambda_n$ are the eigenvalues of a matrix $A$, prove the
 5. The matrix $A^2$ has eigenvalues $\lambda_1^2, \ldots, \lambda_n^2$.
 6. The matrix $A^k$ where $k \in \mathbb{N}$ has eigenvalues has eigenvalues $\lambda_1^k, \ldots, \lambda_n^k$.
 
-## Question 2
+## Question 6
 
-<!-- Yutsumura 719 -->
-
-Let $A$ be the matrix given by
-
-$$A = \begin{pmatrix}-2 & 0 & 1\\-5 & 3 & a\\4 & -2 & -1\end{pmatrix}$$
-
-for some $a \in \mathbb{R}$. Find all values of $a$ which guarantee that $A$ has eigenvalues $0, 3$ and $-3$.
-
-## Question 3
-
-<!-- yutsumura 630 -->
+<!-- Strang Linear Algebra and its Applications Ch5 Q23 -->
 
 Let
 
-$$A = \begin{pmatrix}a&-b\\b&a\end{pmatrix}$$
+$$u = \begin{pmatrix}\frac{1}{6}\\\frac{1}{6}\\\frac{3}{6}\\\frac{5}{6}\end{pmatrix}.$$
 
-where $a, b \in \mathbb{R}$ and $b \neq 0$.
+1. Calculate the $4 \times 4$ matrix $P = u^Tu$.
+2. Without further calculation, explain how you know that $P$ is not invertible.
+3. Show that $u$ is an eigenvector of $P$ and calculate its eigenvalue.
+4. If $v$ is perpendicular to $u$ show that $Pv = 0$.
+5. Find three independent eigenvectors of $P$ with eigenvalue $\lambda = 0$
 
-1. Find all eigenvalues of $A$.
-2. Find the eigenspace corresponding to each eigenvalue.
-3. Diagonalise the matrix $A$ by finding an invertible matrix $S$ and diagonal matrix $D$ such that $S^{-1}AS=D$.
-
-## Question 4
+## Question 7
 
 <!-- yutsumura 593 -->
 
@@ -69,21 +70,16 @@ where $\times$ represents the vector (cross) product.
 1. Show that $T:\mathbb{R}^3\rightarrow \mathbb{R}^3$ is a linear transformation.
 2. Determine the eigenvalues and eigenvectors of $T$.
 
-## Question 5
 
-<!-- yutsumura 583 -->
+## Question 8
 
-Consider the matrix
+1. Write down the matrix for an anticlockwise $\pi/2$ rotation around the origin.
 
-$$A = \begin{pmatrix}a&b-a\\0&b\end{pmatrix}$$
+2. Calculate the characteristic polynomial and solve it to find two complex-valued eigenvalues.
 
-where $a, b \in \mathbb{C}$.
+3. Find the two corresponding complex-valued eigenvectors.
 
-1. Find the eigenvalues and eigenvectors of $A$.
-2. Diagonalise $A$.
-3. Compute and simplify $A^k$ where $k\in\mathbb{N}$.
-
-## Question 6
+## Question 9
 
 <!-- yutsumura 550 -->
 
@@ -97,14 +93,26 @@ for some $\theta \in \mathbb{R}$.
 2. Find the eigenvalues of $A$.
 3. Determine the corresponding eigenvectors.
 
-## Question 7
+## Question 10
 
-<!-- yutsumura 485 -->
+Define $K_n$ to be the matrix with $2$s on the main diagonal and $-1$s on the subdiagonal and superdiagonal. $K_4$ is shown below:
 
-Let
+$$K_4 = \begin{pmatrix}2&-1&0&0\\-1&2&-1&0\\0&-1&2&-1\\ 0&0&-1&2\end{pmatrix}.$$
 
-$A=\begin{pmatrix}1&-14&4\\-1&6&-2\\-2&24&-7\end{pmatrix}$ and $v = \begin{pmatrix}4\\-1\\-7\end{pmatrix}$.
+Show that $\det(K_n) = n + 1$ using the following two different methods:
 
-1. Show that $-1, 0$ and $1$ are eigenvalues of $A$.
-2. Determine the corresponding eigenspaces.
-3. Calculate $A^{10}$.
+1. Using row operations to reduce the matrix to a triangular matrix [the first row operation is $r_2\rightarrow r_2+\frac{1}{2}r_1$ which leaves $r_2 = (0, \frac{3}{2}, -1, 0, \ldots$). Continue the row operations and spot the pattern].
+2. Using the cofactor formula [start by writing $\det(K_n)$ in terms of $\det(K_{n-1})$ and $\det(K_{n-2})$]
+
+## Question 11
+
+Find $(2 \times 2)$ matrices with
+
+1. Two distinct eigenvalues and two independent eigenvectors.
+2. Two distinct eigenvalues but only one independent eigenvector.
+3. A single eigenvalue and two independent eigenvectors.
+4. A single eigenvalue with one independent eigenvector.
+
+[Two vectors are dependent if they are multiples of each other.]
+
+[One of these is impossible! Which, and why?]
