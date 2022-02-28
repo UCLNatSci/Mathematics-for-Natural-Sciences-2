@@ -14,11 +14,13 @@ A box has edges from $(0,0,0)$ to $(3,1,1)$, $(1,3,1)$ and $(1,1,3)$. Find its v
 
 ## Question 3
 
+*[Corrected 24/02/22]*.
+
 <!-- https://metric.ma.ic.ac.uk/metric_public/matrices/eigenvalues_and_eigenvectors/eigenvalues2.html -->
 
 Let
 
-$$M = \begin{pmatrix}2 &−2& 4 \\−4 &1 &2 \\2 &2& 5\end{pmatrix}.$$
+$$M = \begin{pmatrix}-2 &−2& 4 \\−4 &1 &2 \\2 &2& 5\end{pmatrix}.$$
 
 1. Show that $\lambda_1=3$ is an eigenvalue and find its corresponding eigenspace.
 2. Find the other two eigenvalues and their corresponding eigenspaces.
@@ -45,13 +47,14 @@ If $\lambda_1, \ldots, \lambda_n$ are the eigenvalues of a matrix $A$, prove the
 
 ## Question 6
 
+*[Correction 24/02/22: $P = \sout{u^Tu}5 uu^T$*.
 <!-- Strang Linear Algebra and its Applications Ch5 Q23 -->
 
 Let
 
 $$u = \begin{pmatrix}\frac{1}{6}\\\frac{1}{6}\\\frac{3}{6}\\\frac{5}{6}\end{pmatrix}.$$
 
-1. Calculate the $4 \times 4$ matrix $P = u^Tu$.
+1. Calculate the $4 \times 4$ matrix $P = uu^T$.
 2. Without further calculation, explain how you know that $P$ is not invertible.
 3. Show that $u$ is an eigenvector of $P$ and calculate its eigenvalue.
 4. If $v$ is perpendicular to $u$ show that $Pv = 0$.
@@ -61,7 +64,7 @@ $$u = \begin{pmatrix}\frac{1}{6}\\\frac{1}{6}\\\frac{3}{6}\\\frac{5}{6}\end{pmat
 
 <!-- yutsumura 593 -->
 
-Given a nonzero vector $v_0 \in \mathbb{R}$ we define a function $T:\mathbb{R}^3 \rightarrow \mathbb{R}^3$ by
+Given a nonzero vector $v_0 \in \mathbb{R}^3$ we define a function $T:\mathbb{R}^3 \rightarrow \mathbb{R}^3$ by
 
 $$T(x) = v_0 \times x$$
 
