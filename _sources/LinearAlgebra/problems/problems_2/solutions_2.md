@@ -91,7 +91,7 @@ $$
 :align: center
 ```
 
-$A$ represents a projection onto the plane $t_1\begin{pmatrix}1\\1\\0\end{pmatrix} + t_2\begin{pmatrix}0\\0\\1\end{pmatrix}$ followed by a stretch $\times \sqrt{2}$ along the line $t_1\begin{pmatrix}1\\1\\0\end{pmatrix}$.
+$A$ represents a projection onto the plane $t_1\begin{pmatrix}1\\-1\\0\end{pmatrix} + t_2\begin{pmatrix}0\\0\\1\end{pmatrix}$ followed by a stretch $\times \sqrt{2}$ along the line $t_1\begin{pmatrix}1\\-1\\0\end{pmatrix}$.
 
 ## Question 3
 

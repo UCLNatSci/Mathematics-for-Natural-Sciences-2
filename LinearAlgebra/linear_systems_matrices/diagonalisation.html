@@ -31,7 +31,6 @@
     <link rel="stylesheet" type="text/css" href="../../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/_static/mystyle.css" />
     
   <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
@@ -318,8 +317,25 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#complex-eigenvalues">
+   21.8. Complex Eigenvalues
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rotations-in-2d">
+     21.8.1. Rotations in 2D
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#trace-and-determinant">
+   21.9. Trace and Determinant
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solutions-to-exercises">
-   21.8. Solutions to Exercises
+   21.10. Solutions to Exercises
   </a>
  </li>
 </ul>
@@ -384,8 +400,25 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#complex-eigenvalues">
+   21.8. Complex Eigenvalues
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rotations-in-2d">
+     21.8.1. Rotations in 2D
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#trace-and-determinant">
+   21.9. Trace and Determinant
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solutions-to-exercises">
-   21.8. Solutions to Exercises
+   21.10. Solutions to Exercises
   </a>
  </li>
 </ul>
@@ -644,9 +677,106 @@ A^3 &amp; = X\Lambda^2X^{-1}X\Lambda X^{-1} = X\Lambda^3X^{-1}\end{align*}\end{s
 \[\begin{split}A^k = X\Lambda^k X^{-1} = X\begin{pmatrix}\lambda_1^k&amp;&amp;\\&amp;\ddots&amp;\\&amp;&amp;\lambda_n^k \end{pmatrix}X^{-1}.\end{split}\]</div>
 </div>
 </div>
+<div class="section" id="complex-eigenvalues">
+<h2><span class="section-number">21.8. </span>Complex Eigenvalues<a class="headerlink" href="#complex-eigenvalues" title="Permalink to this headline">¶</a></h2>
+<p>We have seen that from a square matrix <span class="math notranslate nohighlight">\(A\)</span> we can calculate the characteristic polynomial <span class="math notranslate nohighlight">\(f(\lambda)\)</span>. For an <span class="math notranslate nohighlight">\((n \times n)\)</span> matrix the polynomial is degree <span class="math notranslate nohighlight">\(n\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[f(\lambda) = \lambda^n + a_{n-1}\lambda^{n-1} + \cdots + a_1\lambda + a_0\]</div>
+<p>where <span class="math notranslate nohighlight">\(a_i\)</span> are real numbers.</p>
+<p>By the fundamental theorem of algebra, <span class="math notranslate nohighlight">\(f(\lambda)\)</span> can be factorised into <span class="math notranslate nohighlight">\(n\)</span> factors <span class="math notranslate nohighlight">\(\lambda - \lambda_i\)</span> (some of which may be repeated):</p>
+<div class="math notranslate nohighlight">
+\[f(\lambda) = (\lambda - \lambda_1)(\lambda - \lambda_2) \cdots (\lambda - \lambda_n).\]</div>
+<p>The roots <span class="math notranslate nohighlight">\(\lambda_i\)</span> are the eigenvalues of the matrix.</p>
+<p>In this section we consider the case where some of the roots are not real numbers.</p>
+<div class="section" id="rotations-in-2d">
+<h3><span class="section-number">21.8.1. </span>Rotations in 2D<a class="headerlink" href="#rotations-in-2d" title="Permalink to this headline">¶</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(A\)</span> be the matrix of an anticlockwise rotation <span class="math notranslate nohighlight">\(\pi/2\)</span> around the origin:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{pmatrix}0&amp;-1\\1&amp;0\end{pmatrix}.\end{split}\]</div>
+<p>The characteristic polynomials is <span class="math notranslate nohighlight">\(\det(A-\lambda I)\)</span> which equals</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{vmatrix}-\lambda&amp;-1\\1&amp;-\lambda\end{vmatrix} = \lambda^2+1.\end{split}\]</div>
+<p>The polynomial <span class="math notranslate nohighlight">\(\lambda^2+1\)</span> does not have real roots. Its roots are <span class="math notranslate nohighlight">\(\pm i\)</span> where <span class="math notranslate nohighlight">\(i\)</span> is the imaginary number <span class="math notranslate nohighlight">\(\sqrt{-1}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\lambda^2+1 = (\lambda+i)(\lambda-i)\]</div>
+<p>resulting in two complex eigenvalues <span class="math notranslate nohighlight">\(\lambda_1 = i\)</span> and <span class="math notranslate nohighlight">\(\lambda_2= -i\)</span>.</p>
+<p>We also find that the eigenvectors contain the imaginary number <span class="math notranslate nohighlight">\(i\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A - \lambda_1I = \begin{pmatrix}-i&amp;-1\\1&amp;-i\end{pmatrix} \underrightarrow{\mathrm{~RREF~}} \begin{pmatrix}1&amp;-i\\0&amp;0\end{pmatrix}\end{split}\]</div>
+<p>and hence the eigenvector corresponding to the eigenvalue <span class="math notranslate nohighlight">\(\lambda_1 = i\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}v_1 = \begin{pmatrix}i\\1\end{pmatrix}.\end{split}\]</div>
+<p>Likewise the eigenspace corresponding to the eigenvalue <span class="math notranslate nohighlight">\(\lambda_2 = -i\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}v_2 = \begin{pmatrix}-i\\1\end{pmatrix}.\end{split}\]</div>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<p>Find the eigenvalues of an anticlockwise rotation by an angle <span class="math notranslate nohighlight">\(\theta\)</span>.</p>
+<p><strong>Solution</strong></p>
+<p>The matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{pmatrix}\cos\theta&amp;-\sin\theta\\\sin\theta&amp;\cos\theta\end{pmatrix}\end{split}\]</div>
+<p>represents an anticlockwise rotation by an angle <span class="math notranslate nohighlight">\(\theta\)</span>. The characteristic polynomial <span class="math notranslate nohighlight">\(f(\lambda)\)</span> is given by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}\det(A-\lambda I) &amp;= \begin{vmatrix}\cos\theta-\lambda&amp;-\sin\theta\\\sin\theta&amp;\cos\theta-\lambda\end{vmatrix}\\
+&amp;= (\cos\theta - \lambda)^2+\sin^2\theta.\end{align*}\end{split}\]</div>
+<p>Setting this to zero and solving for <span class="math notranslate nohighlight">\(\lambda\)</span> gives eigenvalues</p>
+<div class="math notranslate nohighlight">
+\[\lambda = \cos\theta\pm i\sin\theta = e^{\pm i\theta}.\]</div>
+</div>
+<div class="exercise admonition" id="q_complex_eigenvector">
+
+<p class="admonition-title"><span class="caption-number">Exercise 21.4 </span></p>
+<div class="section" id="exercise-content">
+<p>Find the complex eigenvectors corresponding to the two complex eigenvalues of</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{pmatrix}\cos\theta&amp;-\sin\theta\\\sin\theta&amp;\cos\theta\end{pmatrix}.\end{split}\]</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="trace-and-determinant">
+<h2><span class="section-number">21.9. </span>Trace and Determinant<a class="headerlink" href="#trace-and-determinant" title="Permalink to this headline">¶</a></h2>
+<p>Calculating eigenvalues is (in general) a difficult problem. However, in some cases we can use some ‘tricks’ to help find them.</p>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Definition</p>
+<p>The <strong>trace</strong> of a matrix is the sum of the diagonal entries. Given a matrix <span class="math notranslate nohighlight">\(A\)</span> with entries <span class="math notranslate nohighlight">\(a_{ij}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{tr}(A) = a_{11} + \cdots +a_{nn}.\]</div>
+</div>
+<div class="admonition-theorem admonition">
+<p class="admonition-title">Theorem</p>
+<p>Let <span class="math notranslate nohighlight">\(A\)</span> be an <span class="math notranslate nohighlight">\((n \times n)\)</span> matrix with eigenvalues <span class="math notranslate nohighlight">\(\lambda_1, \ldots, \lambda_n\)</span>. Then</p>
+<div class="math notranslate nohighlight">
+\[\lambda_1 + \cdots + \lambda_n = \mathrm{tr}(A)\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\lambda_1\lambda_2 \cdots \lambda_n = \det(A).\]</div>
+<p>The sum of the eigenvalues is the sum of the diagonal entries of <span class="math notranslate nohighlight">\(A\)</span>. The product of the eigenvalues is the determinant of <span class="math notranslate nohighlight">\(A\)</span>.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Example</p>
+<p>Calculate the determinant of the matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{pmatrix}1&amp;1&amp;1\\1&amp;1&amp;1\\1&amp;1&amp;1\end{pmatrix}.\end{split}\]</div>
+<p><strong>Solution</strong></p>
+<p>This matrix is clearly not invertible, and so has zero determinant and at least one zero eigenvalue.</p>
+<p>In fact there are two independent eigenvectors in the zero eigenspace (check this!). This means that we have <span class="math notranslate nohighlight">\(\lambda_1=\lambda_2=0\)</span>. To find the third eigenvalue, use the identity</p>
+<div class="math notranslate nohighlight">
+\[\lambda_1 + \lambda_2 + \lambda_3 = \mathrm{tr}(A)\]</div>
+<p>to determine that <span class="math notranslate nohighlight">\(\lambda_3=3\)</span>.</p>
+</div>
+<div class="exercise admonition" id="diagonal_eigenvalues">
+
+<p class="admonition-title"><span class="caption-number">Exercise 21.5 </span></p>
+<div class="section" id="exercise-content">
+<p>Show that the eigenvalues of a triangular matrix are its diagonal entries.</p>
+</div>
+</div>
+</div>
 <div class="section" id="solutions-to-exercises">
-<h2><span class="section-number">21.8. </span>Solutions to Exercises<a class="headerlink" href="#solutions-to-exercises" title="Permalink to this headline">¶</a></h2>
-<div class="solution admonition" id="LinearAlgebra/linear_systems_matrices/diagonalisation-solution-3">
+<h2><span class="section-number">21.10. </span>Solutions to Exercises<a class="headerlink" href="#solutions-to-exercises" title="Permalink to this headline">¶</a></h2>
+<div class="solution admonition" id="LinearAlgebra/linear_systems_matrices/diagonalisation-solution-5">
 
 <p class="admonition-title"><a class="reference internal" href="#diagonalise_2_by_2">Solution to Exercise 21.1</a></p>
 <div class="section" id="solution-content">
@@ -676,7 +806,7 @@ A^3 &amp; = X\Lambda^2X^{-1}X\Lambda X^{-1} = X\Lambda^3X^{-1}\end{align*}\end{s
 \[\begin{split}A = X\Lambda X^{-1} = \begin{pmatrix}-1&amp;1\\1&amp;1\end{pmatrix}\begin{pmatrix}-1&amp;0\\0&amp;2\end{pmatrix}\begin{pmatrix}-\frac{1}{2}&amp;\frac{1}{2}\\\frac{1}{2}&amp;\frac{1}{2}\end{pmatrix}.\end{split}\]</div>
 </div>
 </div>
-<div class="solution admonition" id="LinearAlgebra/linear_systems_matrices/diagonalisation-solution-4">
+<div class="solution admonition" id="LinearAlgebra/linear_systems_matrices/diagonalisation-solution-6">
 
 <p class="admonition-title"><a class="reference internal" href="#q_diagonalise_matrix">Solution to Exercise 21.3</a></p>
 <div class="section" id="solution-content">
