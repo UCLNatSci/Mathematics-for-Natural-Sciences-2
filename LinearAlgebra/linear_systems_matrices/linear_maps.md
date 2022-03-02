@@ -436,7 +436,7 @@ $$\left(\begin{array}{c}1 \\0 \\\end{array}\right)\mapsto\left(\begin{array}{c}\
 width: 500px
 name: reflection
 ---
-reflection of basis vectors in the line $y=\mathrm{cos}(\theta)x$.
+reflection of basis vectors in the line $y=\mathrm{tan}(\theta)x$.
 ```
 
 and so the transformation matrix is $T=\left(\begin{array}{cc}\cos 2\theta & \sin 2\theta \\ \sin 2\theta & -\cos 2 \theta \end{array}\right)$

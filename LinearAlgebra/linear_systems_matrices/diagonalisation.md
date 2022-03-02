@@ -320,6 +320,129 @@ $$A^k = X\Lambda^k X^{-1} = X\begin{pmatrix}\lambda_1^k&&\\&\ddots&\\&&\lambda_n
 
 ```
 
+## Complex Eigenvalues
+
+We have seen that from a square matrix $A$ we can calculate the characteristic polynomial $f(\lambda)$. For an $(n \times n)$ matrix the polynomial is degree $n$:
+
+$$f(\lambda) = \lambda^n + a_{n-1}\lambda^{n-1} + \cdots + a_1\lambda + a_0$$
+
+where $a_i$ are real numbers.
+
+By the fundamental theorem of algebra, $f(\lambda)$ can be factorised into $n$ factors $\lambda - \lambda_i$ (some of which may be repeated):
+
+$$f(\lambda) = (\lambda - \lambda_1)(\lambda - \lambda_2) \cdots (\lambda - \lambda_n).$$
+
+The roots $\lambda_i$ are the eigenvalues of the matrix.
+
+In this section we consider the case where some of the roots are not real numbers.
+
+### Rotations in 2D
+
+Let $A$ be the matrix of an anticlockwise rotation $\pi/2$ around the origin:
+
+$$A = \begin{pmatrix}0&-1\\1&0\end{pmatrix}.$$
+
+The characteristic polynomials is $\det(A-\lambda I)$ which equals
+
+$$\begin{vmatrix}-\lambda&-1\\1&-\lambda\end{vmatrix} = \lambda^2+1.$$
+
+The polynomial $\lambda^2+1$ does not have real roots. Its roots are $\pm i$ where $i$ is the imaginary number $\sqrt{-1}$:
+
+$$\lambda^2+1 = (\lambda+i)(\lambda-i)$$
+
+resulting in two complex eigenvalues $\lambda_1 = i$ and $\lambda_2= -i$.
+
+We also find that the eigenvectors contain the imaginary number $i$:
+
+$$A - \lambda_1I = \begin{pmatrix}-i&-1\\1&-i\end{pmatrix} \underrightarrow{\mathrm{~RREF~}} \begin{pmatrix}1&-i\\0&0\end{pmatrix}$$
+
+and hence the eigenvector corresponding to the eigenvalue $\lambda_1 = i$ is
+
+$$v_1 = \begin{pmatrix}i\\1\end{pmatrix}.$$
+
+Likewise the eigenspace corresponding to the eigenvalue $\lambda_2 = -i$ is
+
+$$v_2 = \begin{pmatrix}-i\\1\end{pmatrix}.$$
+
+```{admonition} Example
+
+Find the eigenvalues of an anticlockwise rotation by an angle $\theta$.
+
+**Solution**
+
+The matrix
+
+$$A = \begin{pmatrix}\cos\theta&-\sin\theta\\\sin\theta&\cos\theta\end{pmatrix}$$
+
+represents an anticlockwise rotation by an angle $\theta$. The characteristic polynomial $f(\lambda)$ is given by
+
+$$\begin{align*}\det(A-\lambda I) &= \begin{vmatrix}\cos\theta-\lambda&-\sin\theta\\\sin\theta&\cos\theta-\lambda\end{vmatrix}\\
+&= (\cos\theta - \lambda)^2+\sin^2\theta.\end{align*}$$
+
+Setting this to zero and solving for $\lambda$ gives eigenvalues
+
+$$\lambda = \cos\theta\pm i\sin\theta = e^{\pm i\theta}.$$
+
+```
+
+```{exercise}
+:label: q_complex_eigenvector
+
+Find the complex eigenvectors corresponding to the two complex eigenvalues of
+
+$$A = \begin{pmatrix}\cos\theta&-\sin\theta\\\sin\theta&\cos\theta\end{pmatrix}.$$
+
+```
+
+## Trace and Determinant
+
+Calculating eigenvalues is (in general) a difficult problem. However, in some cases we can use some 'tricks' to help find them.
+
+```{admonition} Definition
+
+The **trace** of a matrix is the sum of the diagonal entries. Given a matrix $A$ with entries $a_{ij}$:
+
+$$\mathrm{tr}(A) = a_{11} + \cdots +a_{nn}.$$
+```
+
+```{admonition} Theorem
+
+Let $A$ be an $(n \times n)$ matrix with eigenvalues $\lambda_1, \ldots, \lambda_n$. Then
+
+$$\lambda_1 + \cdots + \lambda_n = \mathrm{tr}(A)$$
+
+and
+
+$$\lambda_1\lambda_2 \cdots \lambda_n = \det(A).$$
+
+The sum of the eigenvalues is the sum of the diagonal entries of $A$. The product of the eigenvalues is the determinant of $A$.
+```
+
+```{admonition} Example
+:class: tip
+Calculate the determinant of the matrix
+
+$$A = \begin{pmatrix}1&1&1\\1&1&1\\1&1&1\end{pmatrix}.$$
+
+**Solution**
+
+This matrix is clearly not invertible, and so has zero determinant and at least one zero eigenvalue.
+
+In fact there are two independent eigenvectors in the zero eigenspace (check this!). This means that we have $\lambda_1=\lambda_2=0$. To find the third eigenvalue, use the identity
+
+$$\lambda_1 + \lambda_2 + \lambda_3 = \mathrm{tr}(A)$$
+
+to determine that $\lambda_3=3$.
+
+```
+
+```{exercise}
+:label: diagonal_eigenvalues
+
+Show that the eigenvalues of a triangular matrix are its diagonal entries.
+```
+
+
 ## Solutions to Exercises
 
 ```{solution} diagonalise_2_by_2

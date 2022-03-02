@@ -49,7 +49,7 @@ parse:
 
 sphinx:
   config:
-    html_css_files:
-      - "_static/mystyle.css"
+    # html_css_files:
+    #   - "_static/mystyle.css"
   extra_extensions:
     - sphinx_exercise
