@@ -40,8 +40,8 @@ $(x,\,y) \rightarrow (r,\, \theta)$ coordinates, but always preserve having two 
 
 With coordinate transforms given by:
 ```{math}
-x = r \cos(\theta) &\quad& r^2 = x^2 + y^2 \\
-y = r \sin(\theta) &\quad& \tan(\theta) = \frac{y}{x}
+x &= r \cos(\theta) &\quad& r^2 = x^2 + y^2 \\
+y &= r \sin(\theta) &\quad& \tan(\theta) = \frac{y}{x}
 ```
 We can see that the coordinates ranges here are $r \in [0,\, \infty)$ and $\theta \in [0,\,2\pi)$, although sometimes the range 
 $\theta \in (-\pi,\,\pi]$ is used instead.
@@ -49,7 +49,7 @@ $\theta \in (-\pi,\,\pi]$ is used instead.
 
 In doing so we can rewrite the coordinate vector and find the infinitesimal changes:
 ```{math}
-{\bf r} &=  \begin{pmatrix} r \cos(\theta) \\ r \sin(\theta)  \end{pmatrix}  \\ \Rightarrow \mathrm{d}{\bf r} &=& 
+{\bf r} &=  \begin{pmatrix} r \cos(\theta) \\ r \sin(\theta)  \end{pmatrix}  \\ \Rightarrow \mathrm{d}{\bf r} &= 
  \begin{pmatrix} \mathrm{d}r \cos(\theta) - r \sin(\theta)\mathrm{d}\theta \\ \mathrm{d}r \sin(\theta) + r \cos(\theta) \mathrm{d}\theta \end{pmatrix}\\
  &=  \begin{pmatrix} \cos(\theta) \\ \sin(\theta)\end{pmatrix}\mathrm{d}r + \begin{pmatrix} -\sin(\theta) \\ \cos(\theta) \end{pmatrix}r\mathrm{d}\theta\\
  &=  \hat{\bf r} \mathrm{d}r + \hat{\bf \theta} \mathrm{d}\theta
@@ -121,7 +121,7 @@ describing the three spatial dimensions $x,\,y,\ z$:
 
 ```{math}
 x &=  r \cos(\theta)\sin(\phi) \\
-y &=  r \sin(\theta)\cos(\phi) \\
+y &=  r \sin(\theta)\sin(\phi) \\
 z &=  r \cos(\phi)
 ```
 
@@ -139,8 +139,8 @@ and <b>Azimuthal</b> components (respectively), we further project on to the $x,
 We can then write the infinitesimal changes in the coordinate vector $\bf r$ as:
 
 ```{math}
-{\bf r} &=  \begin{pmatrix} r \cos(\theta)\sin(\phi) \\r \sin(\theta)\cos(\phi) \\ r \cos(\phi)  \end{pmatrix}  \\ 
-\Rightarrow \mathrm{d}{\bf r} &=&  \begin{pmatrix} 
+{\bf r} &=  \begin{pmatrix} r \cos(\theta)\sin(\phi) \\r \sin(\theta)\sin(\phi) \\ r \cos(\phi)  \end{pmatrix}  \\ 
+\Rightarrow \mathrm{d}{\bf r} &=  \begin{pmatrix} 
 \mathrm{d}r \cos(\theta)\sin(\phi) - r \sin(\theta)\sin(\phi) \mathrm{d}\theta + r \cos(\theta)\cos(\phi) \mathrm{d}\phi\\ 
 \mathrm{d}r \sin(\theta)\sin(\phi) + r \cos(\theta)\sin(\phi) \mathrm{d}\theta + r \sin(\theta) \cos(\phi)\mathrm{d}\phi \\ 
 \mathrm{d}r \cos(\phi) - r \sin(\phi)\mathrm{d}\phi 
@@ -158,7 +158,7 @@ We can then write the infinitesimal changes in the coordinate vector $\bf r$ as:
 -\sin(\theta) \\ 
  \cos(\theta)\\ 
 0\end{pmatrix} r\sin(\phi)\mathrm{d}\theta \\
- &=  \hat{\bf r} \mathrm{d}r + \hat{\bf \phi}r\mathrm{d}\phi + \hat{\bf \theta} r\sin(\phi)\mathrm{d}\theta
+ &=  \hat{\bf r} \,\mathrm{d}r + \hat{\bf \phi}\,r\,\mathrm{d}\phi + \hat{\bf \theta} \,r\,\sin(\phi)\,\mathrm{d}\theta
 ```
 
 Each coordinate here has a range, $r \in [0,\, \infty)$, whereas the two angles here have $\theta \in [0,\, 2\pi),\, \phi \in [0,\, \pi)$.  
@@ -185,8 +185,8 @@ illustrated in {numref}`sphericalpolarphysics`.  In this system the azimuthal an
 remains the same.  
 
 ```{math}
-{\bf r} &=  \begin{pmatrix} r \cos(\phi)\sin(\theta ) \\r \sin(\phi)\cos(\theta ) \\ r \cos(\theta )  \end{pmatrix}  \\ 
-\Rightarrow \mathrm{d}{\bf r} &=&  \begin{pmatrix} 
+{\bf r} &=  \begin{pmatrix} r \cos(\phi)\sin(\theta ) \\r \sin(\phi)\sin(\theta ) \\ r \cos(\theta )  \end{pmatrix}  \\ 
+\Rightarrow \mathrm{d}{\bf r} &=  \begin{pmatrix} 
 \mathrm{d}r \cos(\phi)\sin(\theta ) - r \sin(\phi)\sin(\theta ) \mathrm{d}\phi + r \cos(\phi)\cos(\theta ) \mathrm{d}\theta \\ 
 \mathrm{d}r \sin(\phi)\sin(\theta ) + r \cos(\phi)\sin(\theta ) \mathrm{d}\phi + r \sin(\phi) \cos(\theta )\mathrm{d}\theta  \\ 
 \mathrm{d}r \cos(\theta ) - r \sin(\theta )\mathrm{d}\theta  
@@ -250,7 +250,7 @@ To find the infinitesimal changes in the coordinates here we find:
 
 ```{math}
 {\bf r} &=  \begin{pmatrix} r \cos(\theta) \\r \sin(\theta) \\ z \end{pmatrix}  \\ 
-\Rightarrow \mathrm{d}{\bf r} &=&  \begin{pmatrix} 
+\Rightarrow \mathrm{d}{\bf r} &=  \begin{pmatrix} 
 \mathrm{d}r \cos(\theta)  - r \sin(\theta) \mathrm{d}\theta \\ 
 \mathrm{d}r \sin(\theta) + r \cos(\theta) \mathrm{d}\theta  \\ 
 \mathrm{d}z
