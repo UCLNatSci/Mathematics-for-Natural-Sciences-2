@@ -44,7 +44,7 @@
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -353,7 +353,7 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="multidimensional-integrals">
+  <div class="section" id="multidimensional-integrals">
 <h1><span class="section-number">8. </span>Multidimensional Integrals<a class="headerlink" href="#multidimensional-integrals" title="Permalink to this headline">¶</a></h1>
 <p>Although we are used to find the area under a curve from the integral of a function <span class="math notranslate nohighlight">\(f(x)\)</span> over some limits <span class="math notranslate nohighlight">\(x \in [a,\, b]\)</span>:</p>
 <div class="math notranslate nohighlight">
@@ -391,8 +391,7 @@ variables (this can happen as when the integration is done, all the other variab
 </div>
 <p>The total mass of the plate will be given by:</p>
 <div class="math notranslate nohighlight">
-\[M = \iint_A\sigma({\bf{r})\,\mathrm{d}A = \int_0^a\,\int_0^b\,\sigma(x,\,y)\,\mathrm{d}x\,\mathrm{d}y  
-= \int_0^a\,\mathrm{d}x\,\int_0^b\,\mathrm{d}y\,\sigma(x,\,y)\]</div>
+\[M = \iint_A\sigma(\bf{r})\,\mathrm{d}A = \int_0^a\,\int_0^b\,\sigma(x,\,y)\,\mathrm{d}x\,\mathrm{d}y = \int_0^a\,\mathrm{d}x\,\int_0^b\,\mathrm{d}y\,\sigma(x,\,y)\]</div>
 <p>where we use the final notation for brevity and ease of expression - it does not mean not to include the <span class="math notranslate nohighlight">\(\sigma\)</span> term in the evaluation of the integrals.</p>
 <ul class="simple">
 <li><p>If the rectangular plate has a uniform density, then <span class="math notranslate nohighlight">\(\sigma\)</span> is just a constant and we find:</p></li>
@@ -413,7 +412,7 @@ calculate the <span class="math notranslate nohighlight">\(y\)</span> integral f
 <div class="math notranslate nohighlight">
 \[\begin{split}M &amp;=  \int_0^a\,\mathrm{d}x\,\int_0^b\,\mathrm{d}y\,(y^2 + xy) = \int_0^b\,\Bigg[\frac{1}{2}x^2y + xy^2\Bigg]_0^a\,\mathrm{d}y = 
 \int_0^a\,\left(\frac{1}{2}y a^2 + ay^2\right)\,\mathrm{d}y \\
-&amp;=&amp; \left[\frac{1}{4}y^2 a^2 + \frac{1}{3}ay^3\right]_0^a = \frac{1}{4}a^2b^2 + \frac{1}{3}ab^3\end{split}\]</div>
+&amp;= \left[\frac{1}{4}y^2 a^2 + \frac{1}{3}ay^3\right]_0^a = \frac{1}{4}a^2b^2 + \frac{1}{3}ab^3\end{split}\]</div>
 <p>So we see in this case, the order of integration does not matter.</p>
 <p>Lets look a more involved example, <span class="math notranslate nohighlight">\(f(x,\,y) = x^2 + 2xy\)</span> and we are interested in an area over a triangle, as depicted in <a class="reference internal" href="#areaintegraltriangle"><span class="std std-numref">Fig. 8.3</span></a>:</p>
 <div class="figure align-default" id="areaintegraltriangle">

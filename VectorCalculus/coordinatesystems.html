@@ -44,7 +44,7 @@
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -355,7 +355,7 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="coordinate-systems">
+  <div class="section" id="coordinate-systems">
 <h1><span class="section-number">6. </span>Coordinate Systems<a class="headerlink" href="#coordinate-systems" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="cartesian-coordinates-2d">
 <h2><span class="section-number">6.1. </span>Cartesian Coordinates (2D)<a class="headerlink" href="#cartesian-coordinates-2d" title="Permalink to this headline">¶</a></h2>
@@ -386,13 +386,13 @@ vector:</p>
 </div>
 <p>With coordinate transforms given by:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}x = r \cos(\theta) &amp;\quad&amp; r^2 = x^2 + y^2 \\
-y = r \sin(\theta) &amp;\quad&amp; \tan(\theta) = \frac{y}{x}\end{split}\]</div>
+\[\begin{split}x &amp;= r \cos(\theta) &amp;\quad&amp; r^2 = x^2 + y^2 \\
+y &amp;= r \sin(\theta) &amp;\quad&amp; \tan(\theta) = \frac{y}{x}\end{split}\]</div>
 <p>We can see that the coordinates ranges here are <span class="math notranslate nohighlight">\(r \in [0,\, \infty)\)</span> and <span class="math notranslate nohighlight">\(\theta \in [0,\,2\pi)\)</span>, although sometimes the range
 <span class="math notranslate nohighlight">\(\theta \in (-\pi,\,\pi]\)</span> is used instead.</p>
 <p>In doing so we can rewrite the coordinate vector and find the infinitesimal changes:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}{\bf r} &amp;=  \begin{pmatrix} r \cos(\theta) \\ r \sin(\theta)  \end{pmatrix}  \\ \Rightarrow \mathrm{d}{\bf r} &amp;=&amp; 
+\[\begin{split}{\bf r} &amp;=  \begin{pmatrix} r \cos(\theta) \\ r \sin(\theta)  \end{pmatrix}  \\ \Rightarrow \mathrm{d}{\bf r} &amp;= 
  \begin{pmatrix} \mathrm{d}r \cos(\theta) - r \sin(\theta)\mathrm{d}\theta \\ \mathrm{d}r \sin(\theta) + r \cos(\theta) \mathrm{d}\theta \end{pmatrix}\\
  &amp;=  \begin{pmatrix} \cos(\theta) \\ \sin(\theta)\end{pmatrix}\mathrm{d}r + \begin{pmatrix} -\sin(\theta) \\ \cos(\theta) \end{pmatrix}r\mathrm{d}\theta\\
  &amp;=  \hat{\bf r} \mathrm{d}r + \hat{\bf \theta} \mathrm{d}\theta\end{split}\]</div>
@@ -444,7 +444,7 @@ v_z\begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}\\
 describing the three spatial dimensions <span class="math notranslate nohighlight">\(x,\,y,\ z\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}x &amp;=  r \cos(\theta)\sin(\phi) \\
-y &amp;=  r \sin(\theta)\cos(\phi) \\
+y &amp;=  r \sin(\theta)\sin(\phi) \\
 z &amp;=  r \cos(\phi)\end{split}\]</div>
 <p>which we see illustrated in <a class="reference internal" href="#sphericalpolarmaths"><span class="std std-numref">Fig. 6.5</span></a>.</p>
 <div class="figure align-default" id="sphericalpolarmaths">
@@ -455,8 +455,8 @@ and <b>Azimuthal</b> components (respectively), we further project on to the <sp
 </div>
 <p>We can then write the infinitesimal changes in the coordinate vector <span class="math notranslate nohighlight">\(\bf r\)</span> as:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}{\bf r} &amp;=  \begin{pmatrix} r \cos(\theta)\sin(\phi) \\r \sin(\theta)\cos(\phi) \\ r \cos(\phi)  \end{pmatrix}  \\ 
-\Rightarrow \mathrm{d}{\bf r} &amp;=&amp;  \begin{pmatrix} 
+\[\begin{split}{\bf r} &amp;=  \begin{pmatrix} r \cos(\theta)\sin(\phi) \\r \sin(\theta)\sin(\phi) \\ r \cos(\phi)  \end{pmatrix}  \\ 
+\Rightarrow \mathrm{d}{\bf r} &amp;=  \begin{pmatrix} 
 \mathrm{d}r \cos(\theta)\sin(\phi) - r \sin(\theta)\sin(\phi) \mathrm{d}\theta + r \cos(\theta)\cos(\phi) \mathrm{d}\phi\\ 
 \mathrm{d}r \sin(\theta)\sin(\phi) + r \cos(\theta)\sin(\phi) \mathrm{d}\theta + r \sin(\theta) \cos(\phi)\mathrm{d}\phi \\ 
 \mathrm{d}r \cos(\phi) - r \sin(\phi)\mathrm{d}\phi 
@@ -474,7 +474,7 @@ and <b>Azimuthal</b> components (respectively), we further project on to the <sp
 -\sin(\theta) \\ 
  \cos(\theta)\\ 
 0\end{pmatrix} r\sin(\phi)\mathrm{d}\theta \\
- &amp;=  \hat{\bf r} \mathrm{d}r + \hat{\bf \phi}r\mathrm{d}\phi + \hat{\bf \theta} r\sin(\phi)\mathrm{d}\theta\end{split}\]</div>
+ &amp;=  \hat{\bf r} \,\mathrm{d}r + \hat{\bf \phi}\,r\,\mathrm{d}\phi + \hat{\bf \theta} \,r\,\sin(\phi)\,\mathrm{d}\theta\end{split}\]</div>
 <p>Each coordinate here has a range, <span class="math notranslate nohighlight">\(r \in [0,\, \infty)\)</span>, whereas the two angles here have <span class="math notranslate nohighlight">\(\theta \in [0,\, 2\pi),\, \phi \in [0,\, \pi)\)</span>.</p>
 <p>In this convention, the volume element <span class="math notranslate nohighlight">\(\mathrm{d}V\)</span> is given by:</p>
 <div class="math notranslate nohighlight">
@@ -491,8 +491,8 @@ this would trace out a semi-circle, which when rotated around the equator  (i.e.
 illustrated in <a class="reference internal" href="#sphericalpolarphysics"><span class="std std-numref">Fig. 6.7</span></a>.  In this system the azimuthal angle is switched with the polar angle, but the physical intutition
 remains the same.</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}{\bf r} &amp;=  \begin{pmatrix} r \cos(\phi)\sin(\theta ) \\r \sin(\phi)\cos(\theta ) \\ r \cos(\theta )  \end{pmatrix}  \\ 
-\Rightarrow \mathrm{d}{\bf r} &amp;=&amp;  \begin{pmatrix} 
+\[\begin{split}{\bf r} &amp;=  \begin{pmatrix} r \cos(\phi)\sin(\theta ) \\r \sin(\phi)\sin(\theta ) \\ r \cos(\theta )  \end{pmatrix}  \\ 
+\Rightarrow \mathrm{d}{\bf r} &amp;=  \begin{pmatrix} 
 \mathrm{d}r \cos(\phi)\sin(\theta ) - r \sin(\phi)\sin(\theta ) \mathrm{d}\phi + r \cos(\phi)\cos(\theta ) \mathrm{d}\theta \\ 
 \mathrm{d}r \sin(\phi)\sin(\theta ) + r \cos(\phi)\sin(\theta ) \mathrm{d}\phi + r \sin(\phi) \cos(\theta )\mathrm{d}\theta  \\ 
 \mathrm{d}r \cos(\theta ) - r \sin(\theta )\mathrm{d}\theta  
@@ -541,7 +541,7 @@ variable relabelling.</p>
 <p>To find the infinitesimal changes in the coordinates here we find:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}{\bf r} &amp;=  \begin{pmatrix} r \cos(\theta) \\r \sin(\theta) \\ z \end{pmatrix}  \\ 
-\Rightarrow \mathrm{d}{\bf r} &amp;=&amp;  \begin{pmatrix} 
+\Rightarrow \mathrm{d}{\bf r} &amp;=  \begin{pmatrix} 
 \mathrm{d}r \cos(\theta)  - r \sin(\theta) \mathrm{d}\theta \\ 
 \mathrm{d}r \sin(\theta) + r \cos(\theta) \mathrm{d}\theta  \\ 
 \mathrm{d}z

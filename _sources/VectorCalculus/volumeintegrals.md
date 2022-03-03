@@ -54,8 +54,7 @@ Rectangular plate with some density $\sigma(x,\,y)$.
 The total mass of the plate will be given by:
 
 ```{math}
-M = \iint_A\sigma({\bf{r})\,\mathrm{d}A = \int_0^a\,\int_0^b\,\sigma(x,\,y)\,\mathrm{d}x\,\mathrm{d}y  
-= \int_0^a\,\mathrm{d}x\,\int_0^b\,\mathrm{d}y\,\sigma(x,\,y)
+M = \iint_A\sigma(\bf{r})\,\mathrm{d}A = \int_0^a\,\int_0^b\,\sigma(x,\,y)\,\mathrm{d}x\,\mathrm{d}y = \int_0^a\,\mathrm{d}x\,\int_0^b\,\mathrm{d}y\,\sigma(x,\,y)
 ```
 where we use the final notation for brevity and ease of expression - it does not mean not to include the $\sigma$ term in the evaluation of the integrals. 
 
@@ -81,7 +80,7 @@ If we reverse the order integration however, starting from the $x$ integral, we 
 ```{math}
 M &=  \int_0^a\,\mathrm{d}x\,\int_0^b\,\mathrm{d}y\,(y^2 + xy) = \int_0^b\,\Bigg[\frac{1}{2}x^2y + xy^2\Bigg]_0^a\,\mathrm{d}y = 
 \int_0^a\,\left(\frac{1}{2}y a^2 + ay^2\right)\,\mathrm{d}y \\
-&=& \left[\frac{1}{4}y^2 a^2 + \frac{1}{3}ay^3\right]_0^a = \frac{1}{4}a^2b^2 + \frac{1}{3}ab^3
+&= \left[\frac{1}{4}y^2 a^2 + \frac{1}{3}ay^3\right]_0^a = \frac{1}{4}a^2b^2 + \frac{1}{3}ab^3
 ```
 So we see in this case, the order of integration does not matter.
 
