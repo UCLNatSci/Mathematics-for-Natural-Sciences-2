@@ -32,3 +32,6 @@ chapters:
 - file: LinearAlgebra/linear_systems_matrices/diagonalisation.md
 
 #- file: LinearAlgebra/problems/problems_1.md
+
+- file: DynamicalSystems/phase_portrait.md
+- file: DynamicalSystems/linearclassify.md
