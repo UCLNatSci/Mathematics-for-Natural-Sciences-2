@@ -7,6 +7,7 @@
 # 
 # We train ourselves to understand the behaviour from looking at the phase plane, because we can often construct the phase plane even when there is no exact solution.
 # 
+# (motv-exam)=
 # ## A motivating example in 1D
 # Consider the following ODE, subject to the given initial condition
 # 
@@ -116,6 +117,7 @@ glue("allee_fig", fig, display=False)
 # ```
 # ````
 # 
+# (undamp-pend)=
 # ## A motivating example in 2D
 # 
 # We now consider the equation of motion for a simple pendulum, which is given by the following nonlinear second order ODE in which the term with coefficient $k$ represents frictional effects, and the term with coefficient $\omega^2$ represents the weight of the pendulum.
@@ -241,7 +243,7 @@ plt.figure(figsize=(10,5))
 #define the vector field values at each point
 k=0.4
 (U,V)=(Y,-np.sin(X)-k*Y)        
-plt.title('The simple pendulum with no damping')
+plt.title('The simple pendulum with damping')
 plt.streamplot(X,Y,U,V,arrowsize=2)
 
 plt.show()
@@ -301,11 +303,12 @@ plt.show()
 # ## Exercise
 # 
 # ```{exercise}
+# :label: ex-222
 # The following system is a model of glycolysis, in which $s$ represents the concentration of F6P (fructose-6-phosphate) and $p$ represents the concentration of ADP (adenosine diphosphate):
 # 
 # \begin{align*}
-# \dot{s}&=v_0 - c s p^2\\
-# \dot{p}&=c s p^2 - k p
+# \dot{p}&=c s p^2 - k p\\
+# \dot{s}&=v_0 - c s p^2
 # \end{align*}
 # 
 # Produce a phase portrait for this system for the case where $v_0=1$, $k=1$, $c=1.1$, illustrating the behaviour of the solution in the vicinity the equilibrium point.
@@ -314,3 +317,81 @@ plt.show()
 # 
 # Also try changing the value of $c$ to 0.9. How do the trajectories in the vicinity of the stationary point change?
 # ```
+
+# In[8]:
+
+
+from myst_nb import glue
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.integrate import odeint
+
+def glyco(X,t,v0,c,k):
+  dpdt = c*X[1]*X[0]**2 - k*X[0]
+  dsdt = v0 - c*X[1]*X[0]**2
+  return [dpdt,dsdt]
+
+t = np.linspace(0,100,10000)
+v0=1; k=1;
+
+fig,ax=plt.subplots(1,2,figsize=(10,6))
+
+X = odeint(glyco,[2,2],t,args=(v0,1.1,k))
+ax[0].plot(X[:,0],X[:,1],'r')
+ax[0].set_title('c=1.1')
+
+X = odeint(glyco,[2,2],t,args=(v0,0.9,k))
+ax[1].plot(X[:,0],X[:,1],'r')
+
+X = odeint(glyco,[1.01,1.12],t,args=(v0,0.9,k))
+ax[1].plot(X[:,0],X[:,1],'b')
+
+ax[1].set_title('c=0.9')
+glue("glyco_fig", fig, display=False)
+
+
+# ````{toggle}
+# 
+# **Solution:**
+# 
+# It is a little easier to see the behaviour clearly by plotting trajectories rather than streamlines. There is a stationary point at
+# 
+# \begin{equation*}(p,s)=\left(\frac{v_0}{k},\frac{k^2}{c v_0}\right)\end{equation*}
+# 
+# * For $c=1.1$ the equilibrium point is a stable centre. The red trajectory spirals in towards the equilibrium point.
+# * For $c=0.9$ the equilibrium point is unstable. The blue trajectory spirals out away from the equilibrium point.
+# 
+# For $c=0.9$ we see that the solution approaches a closed cycle from initial conditions inside (blue) and outside (red). This is called a *limit cycle*.
+# 
+# ```{code}
+# def glyco(X,t,v0,c,k):
+#   dpdt = c*X[1]*X[0]**2 - k*X[0]
+#   dsdt = v0 - c*X[1]*X[0]**2
+#   return [dpdt,dsdt]
+# 
+# t = np.linspace(0,100,10000)
+# v0=1; k=1;
+# 
+# fig,ax=plt.subplots(1,2,figsize=(10,6))
+# 
+# X = odeint(glyco,[2,2],t,args=(v0,1.1,k))
+# ax[0].plot(X[:,0],X[:,1],'r')
+# ax[0].set_title('c=1.1')
+# 
+# X = odeint(glyco,[2,2],t,args=(v0,0.9,k))
+# ax[1].plot(X[:,0],X[:,1],'r')
+# 
+# X = odeint(glyco,[1.01,1.12],t,args=(v0,0.9,k))
+# ax[1].plot(X[:,0],X[:,1],'b')
+# 
+# ax[1].set_title('c=0.9')
+# plt.show()
+# ```
+# 
+# 
+# ```{glue:} glyco_fig
+# ```
+# 
+# We see that the nature of the equilibrium point depends on parameter $c$, when the other parameters are kept fixed. We will see in a later chapter that the qualitative behaviour of systems can be highly sensitive to small changes in parameter values.
+# 
+# ````

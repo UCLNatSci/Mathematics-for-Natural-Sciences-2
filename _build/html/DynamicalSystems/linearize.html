@@ -1,0 +1,736 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>24. Bifurcation analysis &#8212; Mathematics for Natural Sciences 2</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="23. Linear differential equations" href="linearclassify.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Mathematics for Natural Sciences 2</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Welcome to NSCI0027
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../VectorCalculus/partialdifferentiation.html">
+   1. Multivariable Calculus
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../VectorCalculus/integrationprelim.html">
+   2. Integration Preliminaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../VectorCalculus/vectoralgebra.html">
+   3. Vectors and Vector Algebra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../VectorCalculus/calculusonfields.html">
+   4. Vector Fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../VectorCalculus/divandcurl.html">
+   5. Variations of Fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../VectorCalculus/coordinatesystems.html">
+   6. Coordinate Systems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../VectorCalculus/lineintegrals.html">
+   7. Line Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../VectorCalculus/volumeintegrals.html">
+   8. Multidimensional Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../VectorCalculus/surfaceintegrals.html">
+   9. Surface Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../VectorCalculus/vectorcalctheorems.html">
+   10. Vector Calculus Theorems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ProofLogic/setsnotation.html">
+   11. Set Theory
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ProofLogic/functions.html">
+   12. Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ProofLogic/propositionallogic.html">
+   13. Propositional Logic
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ProofLogic/methodsofproof.html">
+   14. Techniques of Proof
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/echelon_form.html">
+   15. Linear Systems of Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/matrices.html">
+   16. Matrices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/linear_maps.html">
+   17. Linear Transformations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/inverses.html">
+   18. Inverses
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/determinants.html">
+   19. Determinants
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/eigenvectors/notes.html">
+   20. Eigenvalues and Eigenvectors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinearAlgebra/linear_systems_matrices/diagonalisation.html">
+   21. Matrix Diagonalisation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="phase_portrait.html">
+   22. The phase portrait
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="linearclassify.html">
+   23. Linear differential equations
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   24. Bifurcation analysis
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/DynamicalSystems/linearize.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#linearisation">
+   24.1. Linearisation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-nonlinear-pendulum">
+     24.1.1. Example: Nonlinear pendulum
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#differential-equations-with-a-parameter">
+   24.2. Differential equations with a parameter
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-a-pitchfork-bifurcation">
+     24.2.1. Example: A pitchfork bifurcation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classifying-bifurcations">
+   24.3. Classifying bifurcations
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pitchfork-bifurcation">
+     24.3.1. Pitchfork bifurcation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#saddle-node-bifurcation">
+     24.3.2. Saddle node bifurcation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#transcritical-bifurcation">
+     24.3.3. Transcritical bifurcation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hopf-bifurcation">
+     24.3.4. Hopf bifurcation
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="bifurcation-analysis">
+<h1><span class="section-number">24. </span>Bifurcation analysis<a class="headerlink" href="#bifurcation-analysis" title="Permalink to this headline">¶</a></h1>
+<p>In this section we will start to examine systems with more than one equilibrium point. We will also allow that the systems may contain parameters and we will consider how the number of equilibrium points and their stability changes as parameter values are varied.</p>
+<p>To assist our analysis we will introduce an analytic method for classifying equilibrium points of nonlinear systems (linearisation). We will also introduce the idea of a <em>bifurcation diagram</em> as a way of representing our findings.</p>
+<div class="section" id="linearisation">
+<h2><span class="section-number">24.1. </span>Linearisation<a class="headerlink" href="#linearisation" title="Permalink to this headline">¶</a></h2>
+<p>We now consider a general first order coupled autonomous system involving two dependent variables. The problem may be written in the following form, in which the arbitrary functions <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> may be nonlinear:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-31d1ee7c-c073-4c6f-93e5-d66aa431f8a8">
+<span class="eqno">(24.1)<a class="headerlink" href="#equation-31d1ee7c-c073-4c6f-93e5-d66aa431f8a8" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\dot{x} &amp; = f(x,y)\\
+\dot{y} &amp; = g(x,y)
+\end{align}\]</div>
+<p>We will assume that the system has an equilibrium point <span class="math notranslate nohighlight">\((x_0,y_0)\)</span> satisfying</p>
+<div class="amsmath math notranslate nohighlight" id="equation-511d89e7-5d05-460c-adb8-9b7b53d9b9a4">
+<span class="eqno">(24.2)<a class="headerlink" href="#equation-511d89e7-5d05-460c-adb8-9b7b53d9b9a4" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+f(x_0,y_0)=g(x_0,y_0)=0.
+\end{equation}\]</div>
+<div class="theorem admonition">
+<p class="admonition-title">Finding equilibria</p>
+<p>It is not always possible to find all equilibrium points by hand if <span class="math notranslate nohighlight">\(f,g\)</span> are not both simple algebraic functions. In such cases a numerical root-finding algorithm such as Newton-Raphson or bisection algorithm could be employed.</p>
+</div>
+<p>To examine the nature of the equilibrium point, we will expand the functions <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> using Taylor series centred at <span class="math notranslate nohighlight">\((x_0,y_0)\)</span>. Since we are interested in the behaviour of solution trajectories in the neighbourhood of the point, we can linearise the expansion:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-3d1e9b43-4851-4774-baeb-c5660bc2d044">
+<span class="eqno">(24.3)<a class="headerlink" href="#equation-3d1e9b43-4851-4774-baeb-c5660bc2d044" title="Permalink to this equation">¶</a></span>\[\begin{align}
+f(x,y) &amp; = f(x_0,y_0) +(x-x_0)\frac{\partial f}{\partial x}\biggr|_{(x_0,y_0)}+(y-y_0)\frac{\partial f}{\partial y}\biggr|_{(x_0,y_0)}+\dots\\
+g(x,y) &amp; = g(x_0,y_0) +(x-x_0)\frac{\partial g}{\partial x}\biggr|_{(x_0,y_0)}+(y-y_0)\frac{\partial g}{\partial y}\biggr|_{(x_0,y_0)}+\dots\\
+\end{align}\]</div>
+<p>We can further simplify by making the variable substitution <span class="math notranslate nohighlight">\(X=(x-x_0)\)</span>, <span class="math notranslate nohighlight">\(Y=(y-y_0)\)</span> to obtain</p>
+<div class="amsmath math notranslate nohighlight" id="equation-4ac89703-62de-420b-a317-e67090465d36">
+<span class="eqno">(24.4)<a class="headerlink" href="#equation-4ac89703-62de-420b-a317-e67090465d36" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\dot{X} &amp;= X\frac{\partial f}{\partial x}\biggr|_{(x_0,y_0)}+Y\frac{\partial f}{\partial y}\biggr|_{(x_0,y_0)}\\
+\dot{Y} &amp;= X\frac{\partial g}{\partial x}\biggr|_{(x_0,y_0)}+Y\frac{\partial g}{\partial y}\biggr|_{(x_0,y_0)}
+\end{align}\]</div>
+<p>This is a first order linear system in two unknowns, with equilibrium point at <span class="math notranslate nohighlight">\((X,Y)=(0,0)\)</span>. We can write it in matrix form, just as we did in the previous chapters:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-6d2b100d-0c87-4a0c-a700-43728279606f">
+<span class="eqno">(24.5)<a class="headerlink" href="#equation-6d2b100d-0c87-4a0c-a700-43728279606f" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\frac{\mathrm{d}}{\mathrm{d}t}\begin{bmatrix}X\\Y\end{bmatrix} = J(x_0,y_0)\begin{bmatrix}X\\Y\end{bmatrix}, \qquad J(x_0,y_0)= \begin{bmatrix}\frac{\partial f}{\partial x} &amp; \frac{\partial f}{\partial y}\\ \frac{\partial g}{\partial x} &amp; \frac{\partial g}{\partial y}\end{bmatrix}_{(x_0,y_0)}
+\end{equation}\]</div>
+<p>The coefficient matrix <span class="math notranslate nohighlight">\(J(x,y)\)</span> is called the Jacobian. Finding the eigenvalues and eigenvectors of the Jacobian at the stationary point tells us its stability and allows us to plot the shape of the solution trajectories.</p>
+<div class="section" id="example-nonlinear-pendulum">
+<h3><span class="section-number">24.1.1. </span>Example: Nonlinear pendulum<a class="headerlink" href="#example-nonlinear-pendulum" title="Permalink to this headline">¶</a></h3>
+<p>Recall the equation for the undamped pendulum that was given in the <a class="reference internal" href="phase_portrait.html#undamp-pend"><span class="std std-numref">Section 22.2</span></a> :</p>
+<div class="amsmath math notranslate nohighlight" id="equation-0ec646d4-535b-4dc9-94da-c833bee62195">
+<span class="eqno">(24.6)<a class="headerlink" href="#equation-0ec646d4-535b-4dc9-94da-c833bee62195" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\dot{x} &amp; = y &amp;&amp; =f(x,y)\\
+\dot{y} &amp; = -\omega^2 \sin(x) &amp;&amp; =g(x,y)
+\end{align}\]</div>
+<p>Equilibrium points:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-adc8b243-d64a-4fb2-9ee6-943b48887ad3">
+<span class="eqno">(24.7)<a class="headerlink" href="#equation-adc8b243-d64a-4fb2-9ee6-943b48887ad3" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+f=g=0 \qquad \Rightarrow \quad x=n\pi, \ n\in\mathbb{Z}
+\end{equation}\]</div>
+<p>Evaluate the Jacobian:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-a4869153-eb62-450a-a710-504dd9186f1c">
+<span class="eqno">(24.8)<a class="headerlink" href="#equation-a4869153-eb62-450a-a710-504dd9186f1c" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+J(x,y) = \begin{bmatrix}\frac{\partial f}{\partial x} &amp; \frac{\partial f}{\partial y}\\ \frac{\partial g}{\partial x} &amp; \frac{\partial g}{\partial y}\end{bmatrix} = \begin{bmatrix}0 &amp; 1\\ -\omega^2\cos(x) &amp; 0\end{bmatrix}
+\end{equation}\]</div>
+<p>We can separate treatment of the equilibrium points according to even and odd <span class="math notranslate nohighlight">\(n\)</span>.</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-6 docutils">
+<div class="card w-100 border-2 docutils">
+<div class="card-header docutils">
+<p class="card-text">At <span class="math notranslate nohighlight">\(x=n\pi\)</span> (<span class="math notranslate nohighlight">\(n\)</span> even)</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text"><span class="math notranslate nohighlight">\(J(2m\pi,0) = \begin{bmatrix}0 &amp; 1\\-\omega^2 &amp; 0 \end{bmatrix}\)</span></p>
+<p class="card-text">Eigenvalues: <span class="math notranslate nohighlight">\(\lambda=\pm i\omega\)</span> (centres)</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-6 docutils">
+<div class="card w-100 border-2 docutils">
+<div class="card-header docutils">
+<p class="card-text">At <span class="math notranslate nohighlight">\(x=n\pi\)</span> (<span class="math notranslate nohighlight">\(n\)</span> odd)</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text"><span class="math notranslate nohighlight">\(J((2m+1)\pi,0) = \begin{bmatrix}0 &amp; 1\\\omega^2 &amp; 0 \end{bmatrix}\)</span></p>
+<p class="card-text">Eigenvalues: <span class="math notranslate nohighlight">\(\lambda=\pm \omega\)</span> (saddles)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>This agrees with the results we found earlier by plotting the vector field and solution trajectories.</p>
+<div class="exercise admonition" id="DynamicalSystems/linearize-exercise-0">
+<p class="admonition-title"><span class="caption-number">Exercise 24.1 </span> </p>
+<div class="section" id="exercise-content">
+<p>The equation of motion for the damped pendulum is given by</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\dot{x}&amp; = y\\
+\dot{y} &amp; = -\omega^2 \sin(x)-ky \\
+\end{align*}\]</div>
+<p>Find and classify the equilibrium points, using the linearisation technique.</p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><strong>Solution</strong></p>
+<p>The equilibrium points are at <span class="math notranslate nohighlight">\(x=n\pi\)</span>, as for the stable case.</p>
+<p>For <span class="math notranslate nohighlight">\(n\)</span> even the eigenvalues are <span class="math notranslate nohighlight">\(\lambda=-k\pm  i\sqrt{\omega^2-k^2}\)</span> (stable spirals)</p>
+<p>For <span class="math notranslate nohighlight">\(n\)</span> odd the eigenvalues are <span class="math notranslate nohighlight">\(\lambda=-k\pm \sqrt{k^2+\omega^2}\)</span> (saddles)</p>
+</div>
+</div>
+</div>
+<div class="section" id="differential-equations-with-a-parameter">
+<h2><span class="section-number">24.2. </span>Differential equations with a parameter<a class="headerlink" href="#differential-equations-with-a-parameter" title="Permalink to this headline">¶</a></h2>
+<p>We now consider an example of a system featuring a parameter. We looked at some examples of this sort in previous exercises by trying a few different parameter values. For example,</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="phase_portrait.html#ex-222"><span class="std std-numref">Exercise 22.2</span></a> featured parameters <span class="math notranslate nohighlight">\(c,k\)</span></p></li>
+<li><p><a class="reference internal" href="linearclassify.html#ex-235"><span class="std std-numref">Exercise 23.5</span></a> featured parameter <span class="math notranslate nohighlight">\(c\)</span></p></li>
+</ul>
+<p>We will now attempt to sytematically study the location and nature of any equilibria for different parameter values.</p>
+<div class="section" id="example-a-pitchfork-bifurcation">
+<h3><span class="section-number">24.2.1. </span>Example: A pitchfork bifurcation<a class="headerlink" href="#example-a-pitchfork-bifurcation" title="Permalink to this headline">¶</a></h3>
+<p>To illustrate the approach, let us consider the following system that features parameter <span class="math notranslate nohighlight">\(\mu\)</span> :</p>
+<div class="amsmath math notranslate nohighlight" id="equation-c73cb574-d4aa-40a9-b67e-24f1a82c80d6">
+<span class="eqno">(24.9)<a class="headerlink" href="#equation-c73cb574-d4aa-40a9-b67e-24f1a82c80d6" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\dot{x} &amp;=y &amp;&amp;=f(x,y)\\
+\dot{y}&amp;=\mu x - y - x^3-x^2 y &amp;&amp;=g(x,y)
+\end{align}\]</div>
+<p>Equilibrium points are found at <span class="math notranslate nohighlight">\((0,0)\)</span>, <span class="math notranslate nohighlight">\((\pm\sqrt{\mu},0)\)</span>, with the latter points existing only for <span class="math notranslate nohighlight">\(\mu\geq 0\)</span>. To classify the equilibrium points we use the Jacobian, which is given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-e839060b-6399-4882-96a8-f47525a3c1db">
+<span class="eqno">(24.10)<a class="headerlink" href="#equation-e839060b-6399-4882-96a8-f47525a3c1db" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+J(x,y)=\begin{bmatrix}0 &amp; 1\\ \mu-3x^2-2xy &amp; -1-x^2\end{bmatrix}
+\end{equation}\]</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-6 docutils">
+<div class="card w-100 border-2 docutils">
+<div class="card-header docutils">
+<p class="card-text">At <span class="math notranslate nohighlight">\((0,0)\)</span> the eigenvalues are</p>
+</div>
+<div class="card-body docutils">
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\lambda = \frac{1\pm \sqrt{1+4\mu}}{2}
+\end{equation*}\]</div>
+<p class="card-text">This equilibrium point is:</p>
+<ul class="simple">
+<li><p class="card-text">stable spiral for <span class="math notranslate nohighlight">\(\mu&lt;-1/4\)</span></p></li>
+<li><p class="card-text">stable inflected node at <span class="math notranslate nohighlight">\(\mu=-1/4\)</span></p></li>
+<li><p class="card-text">stable node for <span class="math notranslate nohighlight">\(-1/4&lt;\mu&lt;0\)</span></p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="d-flex col-6 docutils">
+<div class="card w-100 border-2 docutils">
+<div class="card-header docutils">
+<p class="card-text">At <span class="math notranslate nohighlight">\((\pm\sqrt{\mu},0)\)</span> the eigenvalues are</p>
+</div>
+<div class="card-body docutils">
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\lambda =\frac{-(1+\mu)\pm \sqrt{\mu^2-6\mu+1}}{2}
+\end{equation*}\]</div>
+<p class="card-text">This equilibrium point is:</p>
+<ul class="simple">
+<li><p class="card-text">stable node for <span class="math notranslate nohighlight">\(0&lt;\mu&lt;3-2\sqrt{2}\)</span></p></li>
+<li><p class="card-text">stable inflected node for <span class="math notranslate nohighlight">\(\mu=3\pm2\sqrt{2}\)</span></p></li>
+<li><p class="card-text">stable spiral for <span class="math notranslate nohighlight">\(3-2\sqrt{2}&lt;\mu&lt;3+2\sqrt{2}\)</span></p></li>
+<li><p class="card-text">stable node for <span class="math notranslate nohighlight">\(\mu&gt;2+2\sqrt{2}\)</span></p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>This information can be represented on a bifurcation diagram, in which we represent the parameter <span class="math notranslate nohighlight">\(\mu\)</span> on the horizontal axis and the <span class="math notranslate nohighlight">\(x\)</span>-location of the equilibrium point(s) on the vertical axis. A solid line is used to represent a stable equilibrium and a dashed line is used to represent an unstable equilibrium.</p>
+<div class="figure align-default" id="pitchfork">
+<img alt="../_images/pitchfork1.png" src="../_images/pitchfork1.png" />
+</div>
+<p>At <span class="math notranslate nohighlight">\(\mu=0\)</span> the stable equilibrium at <span class="math notranslate nohighlight">\(x=0\)</span> becomes unstable and from it emerges two stable equilibria. This type of bifurcation is called a “pitchfork bifurcation”.</p>
+<div class="theorem admonition">
+<p class="admonition-title">Bifurcation</p>
+<p>A <em>bifurcation</em> of an equilibrium point is a change in the number or stability of equilibrium points in a differential equation as a parameter changes its value.</p>
+</div>
+</div>
+</div>
+<div class="section" id="classifying-bifurcations">
+<h2><span class="section-number">24.3. </span>Classifying bifurcations<a class="headerlink" href="#classifying-bifurcations" title="Permalink to this headline">¶</a></h2>
+<p>In this subsection we will look at some of the most commonly encountered types of bifurcation. The example systems used to illustrate feature only a single dependent variable, so we do not need to use the Jacobian to classify. We can simply consider the direction of the change vectors either side of any equilibrium points, as we did in <a class="reference internal" href="phase_portrait.html#motv-exam"><span class="std std-numref">Section 22.1</span></a>.</p>
+<div class="section" id="pitchfork-bifurcation">
+<h3><span class="section-number">24.3.1. </span>Pitchfork bifurcation<a class="headerlink" href="#pitchfork-bifurcation" title="Permalink to this headline">¶</a></h3>
+<p>A pitchfork bifurcation occurs when a system transitions from one equilibrium point to three.</p>
+<ul class="simple">
+<li><p>In a supercritical pitchfork bifurcation the transition to three points occurs as the parameter value is increased.</p></li>
+<li><p>In a subcritical pitchfork bifurcation the transition to three points occurs as the parameter value is decreased.</p></li>
+</ul>
+<p>Illustrations of both types are shown below. In these examples the parameter <span class="math notranslate nohighlight">\(\mu\)</span> is shown on the horizontal axis and the equilibrium point is shown on the vertical axis.</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-6 docutils">
+<div class="card w-100 border-2 docutils">
+<div class="card-header docutils">
+<p class="card-text"><strong>Supercritical case</strong></p>
+</div>
+<div class="card-body docutils">
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\dot{x}=\mu x -x^3
+\end{equation*}\]</div>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../_images/pitchfork2.png"><img alt="../_images/pitchfork2.png" src="../_images/pitchfork2.png" style="width: 216.0px; height: 216.0px;" /></a>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-6 docutils">
+<div class="card w-100 border-2 docutils">
+<div class="card-header docutils">
+<p class="card-text"><strong>Subcritical case</strong></p>
+</div>
+<div class="card-body docutils">
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\dot{x}=\mu x +x^3
+\end{equation*}\]</div>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../_images/pitchfork3.png"><img alt="../_images/pitchfork3.png" src="../_images/pitchfork3.png" style="width: 216.0px; height: 216.0px;" /></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="exercise admonition" id="DynamicalSystems/linearize-exercise-1">
+<p class="admonition-title"><span class="caption-number">Exercise 24.2 </span> </p>
+<div class="section" id="exercise-content">
+<p>Pick one of the two examples above and sketch change vectors on the diagram.</p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><strong>Solution:</strong></p>
+<p>The plot below is for the case <span class="math notranslate nohighlight">\(\dot{x}=\mu x +x^3\)</span></p>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../_images/pitchfork4.png"><img alt="../_images/pitchfork4.png" src="../_images/pitchfork4.png" style="width: 216.0px; height: 216.0px;" /></a>
+</div>
+<p>For example, consider that for <span class="math notranslate nohighlight">\(\mu&lt;0\)</span> the shape of the change function is as shown below. The change function is positive for <span class="math notranslate nohighlight">\(-\sqrt{\mu}&lt;x&lt;0\)</span>, negative <span class="math notranslate nohighlight">\(x&lt;-\sqrt{\mu}\)</span>, etc.</p>
+<div class="figure align-default">
+<img alt="../_images/schematic.png" src="../_images/schematic.png" />
+</div>
+</div>
+</div>
+<div class="section" id="saddle-node-bifurcation">
+<h3><span class="section-number">24.3.2. </span>Saddle node bifurcation<a class="headerlink" href="#saddle-node-bifurcation" title="Permalink to this headline">¶</a></h3>
+<p>A saddle node bifurcation or fold bifurcation occurs when two equilibrium points coalesce and annihilate each other. The supercritical and subcritical cases are shown below.</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-6 docutils">
+<div class="card w-100 border-2 docutils">
+<div class="card-header docutils">
+<p class="card-text"><strong>Supercritical case</strong></p>
+</div>
+<div class="card-body docutils">
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\dot{x} = \mu -x^2
+\end{equation*}\]</div>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../_images/saddlenode2.png"><img alt="../_images/saddlenode2.png" src="../_images/saddlenode2.png" style="width: 216.0px; height: 216.0px;" /></a>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-6 docutils">
+<div class="card w-100 border-2 docutils">
+<div class="card-header docutils">
+<p class="card-text"><strong>Subcritical case</strong></p>
+</div>
+<div class="card-body docutils">
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\dot{x} = \mu +x^2
+\end{equation*}\]</div>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../_images/saddlenode3.png"><img alt="../_images/saddlenode3.png" src="../_images/saddlenode3.png" style="width: 216.0px; height: 216.0px;" /></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="exercise admonition" id="DynamicalSystems/linearize-exercise-2">
+<p class="admonition-title"><span class="caption-number">Exercise 24.3 </span> </p>
+<div class="section" id="exercise-content">
+<p>Show that the following two-dimensional problem has a saddle-node bifurcation at <span class="math notranslate nohighlight">\(\mu=0\)</span>:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\dot{x}&amp;=\mu-x^2\\
+\dot{y}&amp;=-y
+\end{align*}\]</div>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><strong>Solution</strong></p>
+<p>Equilibrium points <span class="math notranslate nohighlight">\((\pm\sqrt{\mu},0)\)</span>, for <span class="math notranslate nohighlight">\(\mu\geq 0\)</span></p>
+<p>Jacobian: <span class="math notranslate nohighlight">\(\begin{bmatrix}-2x &amp; 0\\0&amp;-1\end{bmatrix}\)</span></p>
+<p>Eigenvalues: <span class="math notranslate nohighlight">\(\lambda=-1,\mp\sqrt{\mu}\)</span></p>
+<p>The point <span class="math notranslate nohighlight">\((0,-\sqrt{\mu})\)</span> is a saddle node</p>
+<p>The point <span class="math notranslate nohighlight">\((0,\sqrt{\mu})\)</span> is a stable node</p>
+</div>
+</div>
+<div class="section" id="transcritical-bifurcation">
+<h3><span class="section-number">24.3.3. </span>Transcritical bifurcation<a class="headerlink" href="#transcritical-bifurcation" title="Permalink to this headline">¶</a></h3>
+<p>A transcritical bifurcation is characterised by a system with one stable equilibrium point and one unstable equilibrium point, which exchange stability when they collide.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-43caea44-226b-4336-8970-4d15fbe04067">
+<span class="eqno">(24.11)<a class="headerlink" href="#equation-43caea44-226b-4336-8970-4d15fbe04067" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\dot{x}=\mu x - x^2
+\end{equation}\]</div>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../_images/transcritical2.png"><img alt="../_images/transcritical2.png" src="../_images/transcritical2.png" style="width: 216.0px; height: 216.0px;" /></a>
+</div>
+</div>
+<div class="section" id="hopf-bifurcation">
+<h3><span class="section-number">24.3.4. </span>Hopf bifurcation<a class="headerlink" href="#hopf-bifurcation" title="Permalink to this headline">¶</a></h3>
+<p>A Hopf bifurcation occurs when a parameter in the system creates a change from a stable equilibrium point to an unstable equilibrium point together with a periodic solution that takes the form of a <em>limit cycle</em>. We have already seen illustrated examples of limit cycles in in <a class="reference internal" href="phase_portrait.html#ex-222"><span class="std std-numref">Exercise 22.2</span></a> and <a class="reference internal" href="linearclassify.html#ex-235"><span class="std std-numref">Exercise 23.5</span></a>.</p>
+<p>Again, we can distinguish between a supercritical and subritical Hopf bifurcation.</p>
+<div class="exercise admonition" id="DynamicalSystems/linearize-exercise-3">
+<p class="admonition-title"><span class="caption-number">Exercise 24.4 </span> </p>
+<div class="section" id="exercise-content">
+<p>For the glycolysis problem introduced in <a class="reference internal" href="phase_portrait.html#ex-222"><span class="std std-numref">Exercise 22.2</span></a>, with <span class="math notranslate nohighlight">\(k=v_0=1\)</span>, show that there is an equilibrium point at
+<span class="math notranslate nohighlight">\((s,p)=(1/c,1)\)</span>. Find the eigenvalues and show that decreasing the parameter past <span class="math notranslate nohighlight">\(c=1\)</span> creates a subcrtical Hopf bifurcation.</p>
+</div>
+</div>
+<div class="exercise admonition" id="DynamicalSystems/linearize-exercise-4">
+<p class="admonition-title"><span class="caption-number">Exercise 24.5 </span> </p>
+<div class="section" id="exercise-content">
+<p>Find the eigenvalues of the Rayleigh problem introduced in <a class="reference internal" href="linearclassify.html#ex-235"><span class="std std-numref">Exercise 23.5</span></a>. Show that a Hopf bifurcation occurs at <span class="math notranslate nohighlight">\(c=0\)</span>. Is this a supercritical or a subcritical bifurcation?</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./DynamicalSystems"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="linearclassify.html" title="previous page"><span class="section-number">23. </span>Linear differential equations</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Natural Sciences<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

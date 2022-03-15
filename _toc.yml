@@ -35,3 +35,4 @@ chapters:
 
 - file: DynamicalSystems/phase_portrait.md
 - file: DynamicalSystems/linearclassify.md
+- file: DynamicalSystems/linearize.md
