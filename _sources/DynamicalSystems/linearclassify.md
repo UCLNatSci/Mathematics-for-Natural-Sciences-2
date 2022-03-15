@@ -367,7 +367,7 @@ In the case where the eigenvalues are purely imaginary, the solution oscillates 
 \dot{y} & =-4x
 \end{align}
 ```
-Eigenvalues : $\lambda=1\pm 3i$
+Eigenvalues : $=\pm 2i$
 
 
 ```{code-cell}
@@ -486,6 +486,7 @@ The derivations here were done for linear systems, but in the next chapter we wi
 
 
 ```{exercise}
+:label: ex-235
 The Rayleigh model is given by
 
 \begin{align*}
@@ -493,11 +494,111 @@ The Rayleigh model is given by
 \dot{v}&=-x-c(v^3-v)
 \end{align*}
 
-Produce a phase portrait for this system for some different values pf the constant $c$. Try values that are negative, positive and zero. How does the character of the equilibrium point change?
+Produce a phase portrait for this system for some different values of the constant $c$. Try values that are negative, positive and zero. How does the character of the equilibrium point change?
 ```
 
 
-## Equlibrium points in $n$ dimensions
+```{code-cell} ipython3
+:tags: [remove-cell]
+
+from myst_nb import glue
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.integrate import odeint
+
+fig,ax=plt.subplots(2,2,figsize=(10,10),)
+
+x = np.linspace(-2,2,1000)
+y = np.linspace(-2,2,1000)
+[X,Y] = np.meshgrid(x,y)
+
+c=-1
+(U,V)=(Y,-X-c*(Y**3-Y))
+start=[[0.5,0.5],[1,1]]
+ax[0,0].streamplot(X,Y,U,V,start_points=start,density=20,arrowsize=2)
+ax[0,0].set_title('c=-1')
+
+c=0
+(U,V)=(Y,-X-c*(Y**3-Y))
+start=[[0.5,0.5],[1,1]]
+ax[0,1].streamplot(X,Y,U,V,start_points=start,density=20,arrowsize=2)
+ax[0,1].set_title('c=0')
+
+c=1
+(U,V)=(Y,-X-c*(Y**3-Y))
+start=[[0.5,0.5],[1,1]]
+ax[1,0].streamplot(X,Y,U,V,start_points=start,density=20,arrowsize=2,maxlength=10.0)
+ax[1,0].set_title('c=1')
+
+
+c=2.1
+(U,V)=(Y,-X-c*(Y**3-Y))
+start=[[0.5,0.5],[-0.5,-0.5],[0.5,-0.5],[-0.5,0.5],[1,1]]
+ax[1,1].streamplot(X,Y,U,V,start_points=start,density=20,arrowsize=2,maxlength=10.0)
+ax[1,1].set_title('c=2.1')
+glue("rayl_fig", fig, display=False)
+```
+
+````{toggle}
+
+**Solution:**
+
+There is an equilibrium point at $(0,0)$. Some illustrative phase portraits are shown below.
+
+* For $c<-2$ it is a stable node
+* For $-2<c<0$ it is a stable spiral
+* For $0<c<2$ it is an unstable spiral
+* For $c>2$ it is an unstable node
+
+The critical values where the equilibrium point changes type are:
+* When $c=-2$ it is a stable inflected node
+* When $c=0$ it is a centre
+* When $c=2$ it is an unstable inflected node
+
+```{code}
+fig,ax=plt.subplots(2,2,figsize=(10,10),)
+
+x = np.linspace(-2,2,1000)
+y = np.linspace(-2,2,1000)
+[X,Y] = np.meshgrid(x,y)
+
+c=-1
+(U,V)=(Y,-X-c*(Y**3-Y))
+start=[[0.5,0.5],[1,1]]
+ax[0,0].streamplot(X,Y,U,V,start_points=start,density=20,arrowsize=2)
+ax[0,0].set_title('c=-1')
+
+c=0
+(U,V)=(Y,-X-c*(Y**3-Y))
+start=[[0.5,0.5],[1,1]]
+ax[0,1].streamplot(X,Y,U,V,start_points=start,density=20,arrowsize=2)
+ax[0,1].set_title('c=0')
+
+c=1
+(U,V)=(Y,-X-c*(Y**3-Y))
+start=[[0.5,0.5],[1,1]]
+ax[1,0].streamplot(X,Y,U,V,start_points=start,density=20,arrowsize=2,maxlength=10.0)
+ax[1,0].set_title('c=1')
+
+
+c=2.1
+(U,V)=(Y,-X-c*(Y**3-Y))
+start=[[0.5,0.5],[-0.5,-0.5],[0.5,-0.5],[-0.5,0.5],[1,1]]
+ax[1,1].streamplot(X,Y,U,V,start_points=start,density=20,arrowsize=2,maxlength=10.0)
+ax[1,1].set_title('c=3')
+plt.show()
+```
+
+```{glue:} rayl_fig
+```
+
+Notice also that there is a limit cycle, which is unstable for $c<0$ and stable for $c>0$.
+
+````
+
+
+
+## Equilibrium points in $n$ dimensions
 
 Equilibrium points in $n$ dimensions are composed of the 1d and 2d  types that we have considered - i.e. nodes,spirals and centres. For example, consider the following system, which has an equilibrium point at the origin
 
@@ -522,8 +623,8 @@ from numpy import linalg as la
 M=np.array([[3,-9,8],[7,-4,-4],[-5,4,1]])
 k, v = la.eig(M)
 
-for i in range(2):
-  print(k[i])
+for i in k:
+  print(i)
 ```
 
 Hence, the equilibrium point combines the 2d behaviour of a stable centre with the 1d behaviour of a stable node.

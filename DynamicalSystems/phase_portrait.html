@@ -209,6 +209,11 @@
    23. Linear differential equations
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="linearize.html">
+   24. Bifurcation analysis
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -348,7 +353,7 @@
 <p>In this section, we introduce the phase portrait representation of an autonomous ODE. This is a plot of the solution <em>state space</em>, illustrating the location of any equilibrium points and selected trajectories. We usually do not need to solve the ODE to obtain the phase portrait.</p>
 <p>We train ourselves to understand the behaviour from looking at the phase plane, because we can often construct the phase plane even when there is no exact solution.</p>
 <div class="section" id="a-motivating-example-in-1d">
-<h2><span class="section-number">22.1. </span>A motivating example in 1D<a class="headerlink" href="#a-motivating-example-in-1d" title="Permalink to this headline">¶</a></h2>
+<span id="motv-exam"></span><h2><span class="section-number">22.1. </span>A motivating example in 1D<a class="headerlink" href="#a-motivating-example-in-1d" title="Permalink to this headline">¶</a></h2>
 <p>Consider the following ODE, subject to the given initial condition</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
@@ -399,7 +404,7 @@ x'=rx\left(1-\frac{x}{k}\right)\left(\frac{x}{a}-1\right)
 </div>
 </div>
 <div class="section" id="a-motivating-example-in-2d">
-<h2><span class="section-number">22.2. </span>A motivating example in 2D<a class="headerlink" href="#a-motivating-example-in-2d" title="Permalink to this headline">¶</a></h2>
+<span id="undamp-pend"></span><h2><span class="section-number">22.2. </span>A motivating example in 2D<a class="headerlink" href="#a-motivating-example-in-2d" title="Permalink to this headline">¶</a></h2>
 <p>We now consider the equation of motion for a simple pendulum, which is given by the following nonlinear second order ODE in which the term with coefficient <span class="math notranslate nohighlight">\(k\)</span> represents frictional effects, and the term with coefficient <span class="math notranslate nohighlight">\(\omega^2\)</span> represents the weight of the pendulum.</p>
 <div class="math notranslate nohighlight">
 \[\ddot{x}+k\dot{x}+\omega^2\sin(x)=0\]</div>
@@ -492,8 +497,8 @@ x'=rx\left(1-\frac{x}{k}\right)\left(\frac{x}{a}-1\right)
 </div>
 </div>
 <p>We can immediately locate and classify the equilibrium points. To satisfy the conditions <span class="math notranslate nohighlight">\(\dot{x}=\dot{y}=0\)</span>, we have</p>
-<div class="amsmath math notranslate nohighlight" id="equation-cf40d278-2a29-45a6-b1dd-8889a98cdd7f">
-<span class="eqno">(22.1)<a class="headerlink" href="#equation-cf40d278-2a29-45a6-b1dd-8889a98cdd7f" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-745c7f8a-d963-4437-9f16-4da8687ca9cb">
+<span class="eqno">(22.1)<a class="headerlink" href="#equation-745c7f8a-d963-4437-9f16-4da8687ca9cb" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 x=n\pi, \quad y=0, \qquad n\in\mathbb{Z}.
 \end{equation}\]</div>
 <p><strong>Stationary point at <span class="math notranslate nohighlight">\((0,0)\)</span></strong></p>
@@ -515,7 +520,7 @@ x=n\pi, \quad y=0, \qquad n\in\mathbb{Z}.
 <span class="c1">#define the vector field values at each point</span>
 <span class="n">k</span><span class="o">=</span><span class="mf">0.4</span>
 <span class="p">(</span><span class="n">U</span><span class="p">,</span><span class="n">V</span><span class="p">)</span><span class="o">=</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">X</span><span class="p">)</span><span class="o">-</span><span class="n">k</span><span class="o">*</span><span class="n">Y</span><span class="p">)</span>        
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;The simple pendulum with no damping&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;The simple pendulum with damping&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">streamplot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="n">U</span><span class="p">,</span><span class="n">V</span><span class="p">,</span><span class="n">arrowsize</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -579,19 +584,58 @@ x=n\pi, \quad y=0, \qquad n\in\mathbb{Z}.
 </div>
 <div class="section" id="exercise">
 <h2><span class="section-number">22.4. </span>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h2>
-<div class="exercise admonition" id="DynamicalSystems/phase_portrait-exercise-1">
+<div class="exercise admonition" id="ex-222">
 <p class="admonition-title"><span class="caption-number">Exercise 22.2 </span> </p>
 <div class="section" id="exercise-content">
 <p>The following system is a model of glycolysis, in which <span class="math notranslate nohighlight">\(s\)</span> represents the concentration of F6P (fructose-6-phosphate) and <span class="math notranslate nohighlight">\(p\)</span> represents the concentration of ADP (adenosine diphosphate):</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-\dot{s}&amp;=v_0 - c s p^2\\
-\dot{p}&amp;=c s p^2 - k p
+\dot{p}&amp;=c s p^2 - k p\\
+\dot{s}&amp;=v_0 - c s p^2
 \end{align*}\]</div>
 <p>Produce a phase portrait for this system for the case where <span class="math notranslate nohighlight">\(v_0=1\)</span>, <span class="math notranslate nohighlight">\(k=1\)</span>, <span class="math notranslate nohighlight">\(c=1.1\)</span>, illustrating the behaviour of the solution in the vicinity the equilibrium point.</p>
 <p>Try illustrating the behaviour by plotting the vector field and also by plotting some solution trajectories for different initial conditions.</p>
 <p>Also try changing the value of <span class="math notranslate nohighlight">\(c\)</span> to 0.9. How do the trajectories in the vicinity of the stationary point change?</p>
 </div>
+</div>
+<div class="toggle docutils container">
+<p><strong>Solution:</strong></p>
+<p>It is a little easier to see the behaviour clearly by plotting trajectories rather than streamlines. There is a stationary point at</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}(p,s)=\left(\frac{v_0}{k},\frac{k^2}{c v_0}\right)\end{equation*}\]</div>
+<ul class="simple">
+<li><p>For <span class="math notranslate nohighlight">\(c=1.1\)</span> the equilibrium point is a stable centre. The red trajectory spirals in towards the equilibrium point.</p></li>
+<li><p>For <span class="math notranslate nohighlight">\(c=0.9\)</span> the equilibrium point is unstable. The blue trajectory spirals out away from the equilibrium point.</p></li>
+</ul>
+<p>For <span class="math notranslate nohighlight">\(c=0.9\)</span> we see that the solution approaches a closed cycle from initial conditions inside (blue) and outside (red). This is called a <em>limit cycle</em>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">glyco</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">v0</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">k</span><span class="p">):</span>
+  <span class="n">dpdt</span> <span class="o">=</span> <span class="n">c</span><span class="o">*</span><span class="n">X</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">k</span><span class="o">*</span><span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+  <span class="n">dsdt</span> <span class="o">=</span> <span class="n">v0</span> <span class="o">-</span> <span class="n">c</span><span class="o">*</span><span class="n">X</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span>
+  <span class="k">return</span> <span class="p">[</span><span class="n">dpdt</span><span class="p">,</span><span class="n">dsdt</span><span class="p">]</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">10000</span><span class="p">)</span>
+<span class="n">v0</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+
+<span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">odeint</span><span class="p">(</span><span class="n">glyco</span><span class="p">,[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span><span class="n">t</span><span class="p">,</span><span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">v0</span><span class="p">,</span><span class="mf">1.1</span><span class="p">,</span><span class="n">k</span><span class="p">))</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">X</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;c=1.1&#39;</span><span class="p">)</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">odeint</span><span class="p">(</span><span class="n">glyco</span><span class="p">,[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span><span class="n">t</span><span class="p">,</span><span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">v0</span><span class="p">,</span><span class="mf">0.9</span><span class="p">,</span><span class="n">k</span><span class="p">))</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">X</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">odeint</span><span class="p">(</span><span class="n">glyco</span><span class="p">,[</span><span class="mf">1.01</span><span class="p">,</span><span class="mf">1.12</span><span class="p">],</span><span class="n">t</span><span class="p">,</span><span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">v0</span><span class="p">,</span><span class="mf">0.9</span><span class="p">,</span><span class="n">k</span><span class="p">))</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">X</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;c=0.9&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/phase_portrait_15_0.png" src="../_images/phase_portrait_15_0.png" />
+</div>
+<p>We see that the nature of the equilibrium point depends on parameter <span class="math notranslate nohighlight">\(c\)</span>, when the other parameters are kept fixed. We will see in a later chapter that the qualitative behaviour of systems can be highly sensitive to small changes in parameter values.</p>
 </div>
 </div>
 </div>
