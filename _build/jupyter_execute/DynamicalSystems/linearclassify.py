@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Linear differential equations
+# # Linear systems
 # 
 # Now, we will start to build up some theory. To do this, we will revert to the simplest general class of 2D problem, which consists of a pair of coupled, linear differential equations. We will consider a system of the form
 # 

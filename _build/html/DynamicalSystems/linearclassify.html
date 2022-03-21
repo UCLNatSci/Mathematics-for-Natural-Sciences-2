@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>23. Linear differential equations &#8212; Mathematics for Natural Sciences 2</title>
+    <title>23. Linear systems &#8212; Mathematics for Natural Sciences 2</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -206,7 +206,7 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   23. Linear differential equations
+   23. Linear systems
   </a>
  </li>
  <li class="toctree-l1">
@@ -428,17 +428,17 @@
         
               <div>
                 
-  <div class="section" id="linear-differential-equations">
-<h1><span class="section-number">23. </span>Linear differential equations<a class="headerlink" href="#linear-differential-equations" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="linear-systems">
+<h1><span class="section-number">23. </span>Linear systems<a class="headerlink" href="#linear-systems" title="Permalink to this headline">¶</a></h1>
 <p>Now, we will start to build up some theory. To do this, we will revert to the simplest general class of 2D problem, which consists of a pair of coupled, linear differential equations. We will consider a system of the form</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2aebab00-24ba-4bbf-9ef0-9af607a67703">
-<span class="eqno">(23.1)<a class="headerlink" href="#equation-2aebab00-24ba-4bbf-9ef0-9af607a67703" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f18315dd-ba46-45b0-ad26-4db0f17a576d">
+<span class="eqno">(23.1)<a class="headerlink" href="#equation-f18315dd-ba46-45b0-ad26-4db0f17a576d" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \dot{x}&amp;=a_{11}x + a_{12}y,\\
 \dot{y}&amp;=a_{21}x + a_{22}y.
 \end{align}\]</div>
 <p>The equation can be written in matrix form as follows:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0d963134-abd0-435c-a4bb-2e29810f5268">
-<span class="eqno">(23.2)<a class="headerlink" href="#equation-0d963134-abd0-435c-a4bb-2e29810f5268" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-96e92488-212d-4a9a-ba50-bab07df4f43e">
+<span class="eqno">(23.2)<a class="headerlink" href="#equation-96e92488-212d-4a9a-ba50-bab07df4f43e" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \begin{bmatrix}\dot{x}\\\dot{y}\end{bmatrix}=\begin{bmatrix}a_{11} &amp; a_{12}\\a_{21}&amp;a_{22}\end{bmatrix}\begin{bmatrix}x\\y\end{bmatrix}.
 \end{equation}\]</div>
 <p>Recalling the ansatz for systems of this type, we may take <span class="math notranslate nohighlight">\((x,y)=(x_0 e^{\lambda t},y_0 e^{\lambda t})\)</span>, and by substituting into the ODE we obtain</p>
@@ -614,18 +614,18 @@ According to the relationship <span class="math notranslate nohighlight">\(A\und
 <div class="section" id="real-repeated-eigenvalues-lambda">
 <h2><span class="section-number">23.2. </span>Real repeated eigenvalues <span class="math notranslate nohighlight">\(\lambda\)</span><a class="headerlink" href="#real-repeated-eigenvalues-lambda" title="Permalink to this headline">¶</a></h2>
 <p>If the eigenvalue problem has repeated roots <span class="math notranslate nohighlight">\(\lambda\)</span> corresponding to eigenvector <span class="math notranslate nohighlight">\(\underline{v}_1\)</span> then we need to find a second linearly independent solution. We may Try the following ansatz</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c1d8c6b4-4609-4dda-add5-8b19272bfe6c">
-<span class="eqno">(23.4)<a class="headerlink" href="#equation-c1d8c6b4-4609-4dda-add5-8b19272bfe6c" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-efe4f080-eeb2-4879-ac88-3864dd21b2c1">
+<span class="eqno">(23.4)<a class="headerlink" href="#equation-efe4f080-eeb2-4879-ac88-3864dd21b2c1" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \underline{x}=e^{\lambda t}(t\underline{v}_1+\underline{v}_2).
 \end{equation}\]</div>
 <p>Substituting into the problem <span class="math notranslate nohighlight">\(\underline{x}^{\prime}=A\underline{x}\)</span> we find this is a solution if</p>
-<div class="amsmath math notranslate nohighlight" id="equation-dbade526-caaf-4cf5-80eb-700f9076314a">
-<span class="eqno">(23.5)<a class="headerlink" href="#equation-dbade526-caaf-4cf5-80eb-700f9076314a" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-4c407254-8928-4787-9b00-8f9853f65fcf">
+<span class="eqno">(23.5)<a class="headerlink" href="#equation-4c407254-8928-4787-9b00-8f9853f65fcf" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 (A+\lambda I)\underline{v}_2=\underline{v}_1
 \end{equation}\]</div>
 <p>Thus, the general solution is of the form</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8b0365d4-bf86-4b0c-82bc-406371c156a2">
-<span class="eqno">(23.6)<a class="headerlink" href="#equation-8b0365d4-bf86-4b0c-82bc-406371c156a2" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-5fd6faf5-01e8-477e-a828-d4adf8f0d404">
+<span class="eqno">(23.6)<a class="headerlink" href="#equation-5fd6faf5-01e8-477e-a828-d4adf8f0d404" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \underline{x}=c_1\underline{v}_1e^{\lambda t}+c_2e^{\lambda t}(t\underline{v}_1+\underline{v}_2)
 \end{equation}\]</div>
 <p>For large <span class="math notranslate nohighlight">\(t\)</span> the term <span class="math notranslate nohighlight">\(t\underline{v}_1e^{\lambda t}\)</span> dominates and the solution ends up parallel to the eigenvector <span class="math notranslate nohighlight">\(\underline{v}_1\)</span></p>
