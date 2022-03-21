@@ -93,7 +93,7 @@ The equation of motion for the damped pendulum is given by
 \dot{y} & = -\omega^2 \sin(x)-ky \\
 \end{align*}
 
-Find and classify the equilibrium points, using the linearisation technique.
+Find and classify the equilibrium points, using the linearisation technique. You may assume that $k,\omega$ are both positive.
 ```
 
 ```{toggle}
@@ -101,9 +101,15 @@ Find and classify the equilibrium points, using the linearisation technique.
 
 The equilibrium points are at $x=n\pi$, as for the stable case.
 
-For $n$ even the eigenvalues are $\lambda=-k\pm  i\sqrt{\omega^2-k^2}$ (stable spirals)
+For $n$ even the eigenvalues are $\lambda=\frac{1}{2}\left(-k\pm \sqrt{k^2-4\omega^2}\right)$
 
-For $n$ odd the eigenvalues are $\lambda=-k\pm \sqrt{k^2+\omega^2}$ (saddles)
+For $n$ odd the eigenvalues are $\lambda=\frac{1}{2}\left(-k\pm \sqrt{k^2+4\omega^2}\right)$
+
+Since $\sqrt{k^2+4\omega^2}>k$ $\forall\omega\neq 0$, the odd nodes are always saddles. The classification of the even nodes depends on the value of $k$, with $k=2\omega$ being a critical value.
+
+* For $k<2\omega$ (underdamped), the points are stable spirals
+* For $k>2\omega$ (overdamped), the points are stable nodes
+
 ```
 
 ## Differential equations with a parameter

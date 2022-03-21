@@ -224,21 +224,21 @@ Eigenvalues and corresponding eigenvectors:
 
 If the eigenvalue problem has repeated roots $\lambda$ corresponding to eigenvector $\underline{v}_1$ then we need to find a second linearly independent solution. We may Try the following ansatz
 
-```{math}
-\underline{x}=e^{\lambda_1 t}(t\underline{v}_1+\underline{v}_2).
-```
+\begin{equation}
+\underline{x}=e^{\lambda t}(t\underline{v}_1+\underline{v}_2).
+\end{equation}
 
 Substituting into the problem $\underline{x}^{\prime}=A\underline{x}$ we find this is a solution if
 
-```{math}
-(A_\lambda I)\underline{v}_2=\underline{v}_1
-```
+\begin{equation}
+(A+\lambda I)\underline{v}_2=\underline{v}_1
+\end{equation}
 
 Thus, the general solution is of the form
 
-```{math}
-\underline{x}=c_1\underline{v}_1e^{\lambda t}+c_2e^{\lambda_1 t}(t\underline{v}_1+\underline{v}_2)
-```
+\begin{equation}
+\underline{x}=c_1\underline{v}_1e^{\lambda t}+c_2e^{\lambda t}(t\underline{v}_1+\underline{v}_2)
+\end{equation}
 
 For large $t$ the term $t\underline{v}_1e^{\lambda t}$ dominates and the solution ends up parallel to the eigenvector $\underline{v}_1$
 
@@ -432,7 +432,7 @@ plt.show()
 ```{math}
 \begin{align}
 \dot{x} &= x-3y\\
-\dot{y} & =3x+y
+\dot{y} & =5x-2y
 \end{align}
 ```
 
