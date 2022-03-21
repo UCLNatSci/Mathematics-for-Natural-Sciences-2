@@ -55,7 +55,7 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="23. Linear differential equations" href="linearclassify.html" />
+    <link rel="prev" title="23. Linear systems" href="linearclassify.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -205,7 +205,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="linearclassify.html">
-   23. Linear differential equations
+   23. Linear systems
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -353,14 +353,14 @@
 <div class="section" id="linearisation">
 <h2><span class="section-number">24.1. </span>Linearisation<a class="headerlink" href="#linearisation" title="Permalink to this headline">¶</a></h2>
 <p>We now consider a general first order coupled autonomous system involving two dependent variables. The problem may be written in the following form, in which the arbitrary functions <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> may be nonlinear:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0ccea862-e8e8-4c16-a0e5-93b753dffcac">
-<span class="eqno">(24.1)<a class="headerlink" href="#equation-0ccea862-e8e8-4c16-a0e5-93b753dffcac" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-2222029e-a22b-4f1d-ae6e-04f473885cae">
+<span class="eqno">(24.1)<a class="headerlink" href="#equation-2222029e-a22b-4f1d-ae6e-04f473885cae" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \dot{x} &amp; = f(x,y)\\
 \dot{y} &amp; = g(x,y)
 \end{align}\]</div>
 <p>We will assume that the system has an equilibrium point <span class="math notranslate nohighlight">\((x_0,y_0)\)</span> satisfying</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2c7df6aa-ac13-4a4a-8798-6fbb760ca181">
-<span class="eqno">(24.2)<a class="headerlink" href="#equation-2c7df6aa-ac13-4a4a-8798-6fbb760ca181" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-db02ee44-ba8e-474e-a343-96b4767ee7e1">
+<span class="eqno">(24.2)<a class="headerlink" href="#equation-db02ee44-ba8e-474e-a343-96b4767ee7e1" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 f(x_0,y_0)=g(x_0,y_0)=0.
 \end{equation}\]</div>
 <div class="theorem admonition">
@@ -368,39 +368,39 @@ f(x_0,y_0)=g(x_0,y_0)=0.
 <p>It is not always possible to find all equilibrium points by hand if <span class="math notranslate nohighlight">\(f,g\)</span> are not both simple algebraic functions. In such cases a numerical root-finding algorithm such as Newton-Raphson or bisection algorithm could be employed.</p>
 </div>
 <p>To examine the nature of the equilibrium point, we will expand the functions <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> using Taylor series centred at <span class="math notranslate nohighlight">\((x_0,y_0)\)</span>. Since we are interested in the behaviour of solution trajectories in the neighbourhood of the point, we can linearise the expansion:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9a53eb62-e61e-457a-93a5-60f7f0b500d7">
-<span class="eqno">(24.3)<a class="headerlink" href="#equation-9a53eb62-e61e-457a-93a5-60f7f0b500d7" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-41fe81fb-444c-416f-ba79-a3e471aff678">
+<span class="eqno">(24.3)<a class="headerlink" href="#equation-41fe81fb-444c-416f-ba79-a3e471aff678" title="Permalink to this equation">¶</a></span>\[\begin{align}
 f(x,y) &amp; = f(x_0,y_0) +(x-x_0)\frac{\partial f}{\partial x}\biggr|_{(x_0,y_0)}+(y-y_0)\frac{\partial f}{\partial y}\biggr|_{(x_0,y_0)}+\dots\\
 g(x,y) &amp; = g(x_0,y_0) +(x-x_0)\frac{\partial g}{\partial x}\biggr|_{(x_0,y_0)}+(y-y_0)\frac{\partial g}{\partial y}\biggr|_{(x_0,y_0)}+\dots\\
 \end{align}\]</div>
 <p>We can further simplify by making the variable substitution <span class="math notranslate nohighlight">\(X=(x-x_0)\)</span>, <span class="math notranslate nohighlight">\(Y=(y-y_0)\)</span> to obtain</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6dea11ba-5553-4042-98e5-dd2b5ef23530">
-<span class="eqno">(24.4)<a class="headerlink" href="#equation-6dea11ba-5553-4042-98e5-dd2b5ef23530" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-888ab396-a021-400d-ae92-8f42e1681079">
+<span class="eqno">(24.4)<a class="headerlink" href="#equation-888ab396-a021-400d-ae92-8f42e1681079" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \dot{X} &amp;= X\frac{\partial f}{\partial x}\biggr|_{(x_0,y_0)}+Y\frac{\partial f}{\partial y}\biggr|_{(x_0,y_0)}\\
 \dot{Y} &amp;= X\frac{\partial g}{\partial x}\biggr|_{(x_0,y_0)}+Y\frac{\partial g}{\partial y}\biggr|_{(x_0,y_0)}
 \end{align}\]</div>
 <p>This is a first order linear system in two unknowns, with equilibrium point at <span class="math notranslate nohighlight">\((X,Y)=(0,0)\)</span>. We can write it in matrix form, just as we did in the previous chapters:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0b761121-b3d0-4988-b0e4-e39b5a6280fe">
-<span class="eqno">(24.5)<a class="headerlink" href="#equation-0b761121-b3d0-4988-b0e4-e39b5a6280fe" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-5d596536-dd31-4c78-8e40-0d85135063a1">
+<span class="eqno">(24.5)<a class="headerlink" href="#equation-5d596536-dd31-4c78-8e40-0d85135063a1" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \frac{\mathrm{d}}{\mathrm{d}t}\begin{bmatrix}X\\Y\end{bmatrix} = J(x_0,y_0)\begin{bmatrix}X\\Y\end{bmatrix}, \qquad J(x_0,y_0)= \begin{bmatrix}\frac{\partial f}{\partial x} &amp; \frac{\partial f}{\partial y}\\ \frac{\partial g}{\partial x} &amp; \frac{\partial g}{\partial y}\end{bmatrix}_{(x_0,y_0)}
 \end{equation}\]</div>
 <p>The coefficient matrix <span class="math notranslate nohighlight">\(J(x,y)\)</span> is called the Jacobian. Finding the eigenvalues and eigenvectors of the Jacobian at the stationary point tells us its stability and allows us to plot the shape of the solution trajectories.</p>
 <div class="section" id="example-nonlinear-pendulum">
 <h3><span class="section-number">24.1.1. </span>Example: Nonlinear pendulum<a class="headerlink" href="#example-nonlinear-pendulum" title="Permalink to this headline">¶</a></h3>
 <p>Recall the equation for the undamped pendulum that was given in the <a class="reference internal" href="phase_portrait.html#undamp-pend"><span class="std std-numref">Section 22.2</span></a> :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bd3347bd-c659-4124-b7d3-c05548202fce">
-<span class="eqno">(24.6)<a class="headerlink" href="#equation-bd3347bd-c659-4124-b7d3-c05548202fce" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e4d2e8eb-a8fa-4849-96fd-a83b7027565e">
+<span class="eqno">(24.6)<a class="headerlink" href="#equation-e4d2e8eb-a8fa-4849-96fd-a83b7027565e" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \dot{x} &amp; = y &amp;&amp; =f(x,y)\\
 \dot{y} &amp; = -\omega^2 \sin(x) &amp;&amp; =g(x,y)
 \end{align}\]</div>
 <p>Equilibrium points:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-de1fdd57-05b0-42ae-b648-8b84da9cbf1c">
-<span class="eqno">(24.7)<a class="headerlink" href="#equation-de1fdd57-05b0-42ae-b648-8b84da9cbf1c" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-c6b58834-7b99-4ad4-9a7e-5b1b92ddf8a9">
+<span class="eqno">(24.7)<a class="headerlink" href="#equation-c6b58834-7b99-4ad4-9a7e-5b1b92ddf8a9" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 f=g=0 \qquad \Rightarrow \quad x=n\pi, \ n\in\mathbb{Z}
 \end{equation}\]</div>
 <p>Evaluate the Jacobian:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b0bb499f-007d-4101-9192-d3b1462ca910">
-<span class="eqno">(24.8)<a class="headerlink" href="#equation-b0bb499f-007d-4101-9192-d3b1462ca910" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-23f168c1-b2b2-49ce-b312-8e8da3e6f3c1">
+<span class="eqno">(24.8)<a class="headerlink" href="#equation-23f168c1-b2b2-49ce-b312-8e8da3e6f3c1" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 J(x,y) = \begin{bmatrix}\frac{\partial f}{\partial x} &amp; \frac{\partial f}{\partial y}\\ \frac{\partial g}{\partial x} &amp; \frac{\partial g}{\partial y}\end{bmatrix} = \begin{bmatrix}0 &amp; 1\\ -\omega^2\cos(x) &amp; 0\end{bmatrix}
 \end{equation}\]</div>
 <p>We can separate treatment of the equilibrium points according to even and odd <span class="math notranslate nohighlight">\(n\)</span>.</p>
@@ -467,14 +467,14 @@ J(x,y) = \begin{bmatrix}\frac{\partial f}{\partial x} &amp; \frac{\partial f}{\p
 <div class="section" id="example-a-pitchfork-bifurcation">
 <h3><span class="section-number">24.2.1. </span>Example: A pitchfork bifurcation<a class="headerlink" href="#example-a-pitchfork-bifurcation" title="Permalink to this headline">¶</a></h3>
 <p>To illustrate the approach, let us consider the following system that features parameter <span class="math notranslate nohighlight">\(\mu\)</span> :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-674a184d-4148-4b86-96d2-198a393e5b43">
-<span class="eqno">(24.9)<a class="headerlink" href="#equation-674a184d-4148-4b86-96d2-198a393e5b43" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-846e8802-28f8-4af8-a868-07f2de6f1d33">
+<span class="eqno">(24.9)<a class="headerlink" href="#equation-846e8802-28f8-4af8-a868-07f2de6f1d33" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \dot{x} &amp;=y &amp;&amp;=f(x,y)\\
 \dot{y}&amp;=\mu x - y - x^3-x^2 y &amp;&amp;=g(x,y)
 \end{align}\]</div>
 <p>Equilibrium points are found at <span class="math notranslate nohighlight">\((0,0)\)</span>, <span class="math notranslate nohighlight">\((\pm\sqrt{\mu},0)\)</span>, with the latter points existing only for <span class="math notranslate nohighlight">\(\mu\geq 0\)</span>. To classify the equilibrium points we use the Jacobian, which is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-04508016-7d4e-4ea7-9618-ad435142c423">
-<span class="eqno">(24.10)<a class="headerlink" href="#equation-04508016-7d4e-4ea7-9618-ad435142c423" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-b26317a9-81dd-47b6-8069-6f3bc7ff236a">
+<span class="eqno">(24.10)<a class="headerlink" href="#equation-b26317a9-81dd-47b6-8069-6f3bc7ff236a" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 J(x,y)=\begin{bmatrix}0 &amp; 1\\ \mu-3x^2-2xy &amp; -1-x^2\end{bmatrix}
 \end{equation}\]</div>
 <div class="sphinx-bs container pb-4 docutils">
@@ -658,8 +658,8 @@ J(x,y)=\begin{bmatrix}0 &amp; 1\\ \mu-3x^2-2xy &amp; -1-x^2\end{bmatrix}
 <div class="section" id="transcritical-bifurcation">
 <h3><span class="section-number">24.3.3. </span>Transcritical bifurcation<a class="headerlink" href="#transcritical-bifurcation" title="Permalink to this headline">¶</a></h3>
 <p>A transcritical bifurcation is characterised by a system with one stable equilibrium point and one unstable equilibrium point, which exchange stability when they collide.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ce78aaff-6323-4f5b-9a27-e305f2e27c5a">
-<span class="eqno">(24.11)<a class="headerlink" href="#equation-ce78aaff-6323-4f5b-9a27-e305f2e27c5a" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-71000583-93de-4c1f-bf6e-11a47953c749">
+<span class="eqno">(24.11)<a class="headerlink" href="#equation-71000583-93de-4c1f-bf6e-11a47953c749" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \dot{x}=\mu x - x^2
 \end{equation}\]</div>
 <div class="figure align-default">
@@ -712,7 +712,7 @@ J(x,y)=\begin{bmatrix}0 &amp; 1\\ \mu-3x^2-2xy &amp; -1-x^2\end{bmatrix}
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="linearclassify.html" title="previous page"><span class="section-number">23. </span>Linear differential equations</a>
+    <a class='left-prev' id="prev-link" href="linearclassify.html" title="previous page"><span class="section-number">23. </span>Linear systems</a>
 
         </div>
         
