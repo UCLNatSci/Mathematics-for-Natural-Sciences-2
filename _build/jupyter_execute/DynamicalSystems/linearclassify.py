@@ -190,7 +190,7 @@ plt.show()
 # ```{math}
 # \begin{align}
 # \lambda=-1 &: \quad y=-\frac{2}{3}x\\
-# \lambda=4 &: \quad y=-x
+# \lambda=4 &: \quad y=x
 # \end{align}
 # ```
 # ````
