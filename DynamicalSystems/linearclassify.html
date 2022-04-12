@@ -441,14 +441,14 @@
   <div class="section" id="linear-systems">
 <h1><span class="section-number">23. </span>Linear systems<a class="headerlink" href="#linear-systems" title="Permalink to this headline">¶</a></h1>
 <p>Now, we will start to build up some theory. To do this, we will revert to the simplest general class of 2D problem, which consists of a pair of coupled, linear differential equations. We will consider a system of the form</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b2809a61-70db-40d4-b33a-248285f763a2">
-<span class="eqno">(23.1)<a class="headerlink" href="#equation-b2809a61-70db-40d4-b33a-248285f763a2" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9fa6dc55-3221-4f80-9da8-d1dfb98e1632">
+<span class="eqno">(23.1)<a class="headerlink" href="#equation-9fa6dc55-3221-4f80-9da8-d1dfb98e1632" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \dot{x}&amp;=a_{11}x + a_{12}y,\\
 \dot{y}&amp;=a_{21}x + a_{22}y.
 \end{align}\]</div>
 <p>The equation can be written in matrix form as follows:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-edc58e16-a476-4786-aff4-795a76e0bbd4">
-<span class="eqno">(23.2)<a class="headerlink" href="#equation-edc58e16-a476-4786-aff4-795a76e0bbd4" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-26f2af1a-c432-4c7c-a0b7-16aca587ae71">
+<span class="eqno">(23.2)<a class="headerlink" href="#equation-26f2af1a-c432-4c7c-a0b7-16aca587ae71" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \begin{bmatrix}\dot{x}\\\dot{y}\end{bmatrix}=\begin{bmatrix}a_{11} &amp; a_{12}\\a_{21}&amp;a_{22}\end{bmatrix}\begin{bmatrix}x\\y\end{bmatrix}.
 \end{equation}\]</div>
 <p>Recalling the ansatz for systems of this type, we may take <span class="math notranslate nohighlight">\((x,y)=(x_0 e^{\lambda t},y_0 e^{\lambda t})\)</span>, and by substituting into the ODE we obtain</p>
@@ -624,18 +624,18 @@
 <div class="section" id="real-repeated-eigenvalues-lambda">
 <h2><span class="section-number">23.2. </span>Real repeated eigenvalues <span class="math notranslate nohighlight">\(\lambda\)</span><a class="headerlink" href="#real-repeated-eigenvalues-lambda" title="Permalink to this headline">¶</a></h2>
 <p>If the eigenvalue problem has repeated roots <span class="math notranslate nohighlight">\(\lambda\)</span> corresponding to eigenvector <span class="math notranslate nohighlight">\(\underline{v}_1\)</span> then we need to find a second linearly independent solution. We may try the following ansatz</p>
-<div class="amsmath math notranslate nohighlight" id="equation-58a7dfc3-ce0e-472e-b5a8-a86b1f983388">
-<span class="eqno">(23.4)<a class="headerlink" href="#equation-58a7dfc3-ce0e-472e-b5a8-a86b1f983388" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-cb7a3d30-b628-427d-9fab-6085e95df4f0">
+<span class="eqno">(23.4)<a class="headerlink" href="#equation-cb7a3d30-b628-427d-9fab-6085e95df4f0" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \underline{x}=e^{\lambda t}(t\underline{v}_1+\underline{v}_2).
 \end{equation}\]</div>
 <p>Substituting into the problem <span class="math notranslate nohighlight">\(\underline{x}^{\prime}=A\underline{x}\)</span> we find this is a solution if</p>
-<div class="amsmath math notranslate nohighlight" id="equation-17ce3f86-14f5-4c97-b7e7-163e4467c762">
-<span class="eqno">(23.5)<a class="headerlink" href="#equation-17ce3f86-14f5-4c97-b7e7-163e4467c762" title="Permalink to this equation">¶</a></span>\[\begin{equation}
-(A+\lambda I)\underline{v}_2=\underline{v}_1
+<div class="amsmath math notranslate nohighlight" id="equation-63b59c1e-95d1-4bb1-b2f2-badcac23978a">
+<span class="eqno">(23.5)<a class="headerlink" href="#equation-63b59c1e-95d1-4bb1-b2f2-badcac23978a" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+(A-\lambda I)\underline{v}_2=\underline{v}_1
 \end{equation}\]</div>
 <p>Thus, the general solution is of the form</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3256edb0-9edf-4118-b47e-bde1471c9675">
-<span class="eqno">(23.6)<a class="headerlink" href="#equation-3256edb0-9edf-4118-b47e-bde1471c9675" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-254d4b1e-4304-4664-a161-733845920eab">
+<span class="eqno">(23.6)<a class="headerlink" href="#equation-254d4b1e-4304-4664-a161-733845920eab" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \underline{x}=c_1\underline{v}_1e^{\lambda t}+c_2e^{\lambda t}(t\underline{v}_1+\underline{v}_2)
 \end{equation}\]</div>
 <p>For large <span class="math notranslate nohighlight">\(t\)</span> the term <span class="math notranslate nohighlight">\(t\underline{v}_1e^{\lambda t}\)</span> dominates and the solution ends up parallel to the eigenvector <span class="math notranslate nohighlight">\(\underline{v}_1\)</span></p>
