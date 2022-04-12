@@ -380,13 +380,13 @@
 <div class="section" id="a-motivating-example-in-1d">
 <span id="motv-exam"></span><h2><span class="section-number">22.1. </span>A motivating example in 1D<a class="headerlink" href="#a-motivating-example-in-1d" title="Permalink to this headline">¶</a></h2>
 <p>Consider the following ODE, subject to the given initial condition :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a21d9bbc-0600-482e-918d-b8297178839a">
-<span class="eqno">(22.1)<a class="headerlink" href="#equation-a21d9bbc-0600-482e-918d-b8297178839a" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-903368be-8524-44bb-a01b-62d946be2e3a">
+<span class="eqno">(22.1)<a class="headerlink" href="#equation-903368be-8524-44bb-a01b-62d946be2e3a" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \dot{x}=2x, \qquad x(0)=x_0.
 \end{equation}\]</div>
 <p>We can solve this problem by separation of variables to obtain a family of solution curves, each corresponding to different values of the initial condition:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e080f047-e982-4891-81b3-66e21760b609">
-<span class="eqno">(22.2)<a class="headerlink" href="#equation-e080f047-e982-4891-81b3-66e21760b609" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-c2830a03-b6c9-4ce5-b740-b354dc63ac26">
+<span class="eqno">(22.2)<a class="headerlink" href="#equation-c2830a03-b6c9-4ce5-b740-b354dc63ac26" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 x = x_0 e^{2t}.
 \end{equation}\]</div>
 <p>Notice that for this example,</p>
@@ -438,18 +438,18 @@ Here the graphs of <span class="math notranslate nohighlight">\((x,\dot{x})\)</s
 <div class="section" id="a-motivating-example-in-2d">
 <span id="undamp-pend"></span><h2><span class="section-number">22.2. </span>A motivating example in 2D<a class="headerlink" href="#a-motivating-example-in-2d" title="Permalink to this headline">¶</a></h2>
 <p>We now consider the equation of motion for a simple pendulum, which is given by the following nonlinear second order ODE. The term with coefficient <span class="math notranslate nohighlight">\(k\)</span> represents frictional effects, and the term with coefficient <span class="math notranslate nohighlight">\(\omega^2\)</span> represents the weight of the pendulum.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-96602fb1-635c-44ee-bae6-233d9ac25019">
-<span class="eqno">(22.3)<a class="headerlink" href="#equation-96602fb1-635c-44ee-bae6-233d9ac25019" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-a7daea77-4894-43f1-9d3b-d0a4047d9404">
+<span class="eqno">(22.3)<a class="headerlink" href="#equation-a7daea77-4894-43f1-9d3b-d0a4047d9404" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \ddot{x}+k\dot{x}+\omega^2\sin(x)=0
 \end{equation}\]</div>
 <p>We may rewrite the equation as a coupled first order system by introducing the variable <span class="math notranslate nohighlight">\(y=\dot{x}\)</span>, which gives</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b77f309a-b5d0-49a3-b426-8d429b6c45ab">
-<span class="eqno">(22.4)<a class="headerlink" href="#equation-b77f309a-b5d0-49a3-b426-8d429b6c45ab" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-7d3fedcc-3b14-413b-83de-ff9be017cdce">
+<span class="eqno">(22.4)<a class="headerlink" href="#equation-7d3fedcc-3b14-413b-83de-ff9be017cdce" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \begin{bmatrix}\dot{x}\\\dot{y}\end{bmatrix} = \begin{bmatrix}y\\-\omega^2\sin(x)-ky\end{bmatrix}
 \end{equation}\]</div>
 <p>The system has equilibrium points when <span class="math notranslate nohighlight">\(\dot{x}=\dot{y}=0\)</span>. These occur at</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c6202f8f-d856-4fb2-a4fc-2eaf8d20d5d1">
-<span class="eqno">(22.5)<a class="headerlink" href="#equation-c6202f8f-d856-4fb2-a4fc-2eaf8d20d5d1" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-e86e46b4-ff38-4437-881e-12b3e08b93b9">
+<span class="eqno">(22.5)<a class="headerlink" href="#equation-e86e46b4-ff38-4437-881e-12b3e08b93b9" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 x=n\pi, \quad y=0, \qquad n\in\mathbb{Z}.
 \end{equation}\]</div>
 <div class="theorem admonition">
