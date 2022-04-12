@@ -214,6 +214,16 @@
    24. Bifurcation analysis
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DynamicalSystems/limit_cycles.html">
+   25. Limit cycles
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../DynamicalSystems/python_examples.html">
+   26. Python code
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -355,8 +365,8 @@
 <div class="section" id="motivation">
 <h3><span class="section-number">15.1.1. </span>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">¶</a></h3>
 <p>Gaussian elimination is a systematic technique for solving systems of linear equations, which are of the form</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0d6fef1f-9196-4e85-bb99-fa2bc8929fa4">
-<span class="eqno">(15.1)<a class="headerlink" href="#equation-0d6fef1f-9196-4e85-bb99-fa2bc8929fa4" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-093868ad-ef1d-4c13-9f5f-9610968285a5">
+<span class="eqno">(15.1)<a class="headerlink" href="#equation-093868ad-ef1d-4c13-9f5f-9610968285a5" title="Permalink to this equation">¶</a></span>\[\begin{align}
 a_{1,1} x_1 + a_{1,2} x_2 + a_{1,3} x_3 + \dots + a_{1,n} x_n &amp;= b_1 \\
 
    a_{2,1} x_1 + a_{2,2} x_2 + a_{2,3} x_3 + \dots + a_{2,n} x_n &amp;= b_2\\
@@ -366,8 +376,8 @@ a_{1,1} x_1 + a_{1,2} x_2 + a_{1,3} x_3 + \dots + a_{1,n} x_n &amp;= b_1 \\
 <p>where <span class="math notranslate nohighlight">\(a_{i,j}\)</span> are constants. Usually there are the same number of equations as unknowns, so <span class="math notranslate nohighlight">\(m = n\)</span>.  If <span class="math notranslate nohighlight">\(m &lt; n\)</span> then the system is undetermined, if <span class="math notranslate nohighlight">\(m &gt; n\)</span>, the system is over constrained.</p>
 <div class="tip admonition">
 <p class="admonition-title">Example</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ee938dce-662c-4c5a-9fbc-ec51c7e773f3">
-<span class="eqno">(15.2)<a class="headerlink" href="#equation-ee938dce-662c-4c5a-9fbc-ec51c7e773f3" title="Permalink to this equation">¶</a></span>\[\begin{align}4 x_1 - x_2 &amp;= 1\\ -2 x_1 + 3 x_2 &amp;= 12 \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-d7a7fb39-137b-4ce7-b4b8-0e5e605a5e6f">
+<span class="eqno">(15.2)<a class="headerlink" href="#equation-d7a7fb39-137b-4ce7-b4b8-0e5e605a5e6f" title="Permalink to this equation">¶</a></span>\[\begin{align}4 x_1 - x_2 &amp;= 1\\ -2 x_1 + 3 x_2 &amp;= 12 \end{align}\]</div>
 <p>Each equation here defines a line, and we are looking for a point which satisfies both equations, which means that the lines intersect.</p>
 <p>From the first line we obtain <span class="math notranslate nohighlight">\(x_2 = 4 x_1 - 1\)</span>, and by substituting this into the second line, we obtain <span class="math notranslate nohighlight">\(x = \frac{3}{2}\)</span>, <span class="math notranslate nohighlight">\(y = 5\)</span>. Two equations with two unknowns will always give a unique solution, unless the lines are parallel (and so the equations are just a scaling of each other).</p>
 <ul class="simple">
@@ -546,8 +556,8 @@ r_1 - r_2 &amp; \longrightarrow &amp; (r_1)\\
 <li><p>The first nonzero entry of a row is to the right of the first nonzero entry of the row above.</p></li>
 <li><p>Below the first nonzero entry of a row, all entries are zero.</p></li>
 </ol>
-<div class="amsmath math notranslate nohighlight" id="equation-e3960262-8368-4db1-a915-f97c0c31db3d">
-<span class="eqno">(15.3)<a class="headerlink" href="#equation-e3960262-8368-4db1-a915-f97c0c31db3d" title="Permalink to this equation">¶</a></span>\[\begin{pmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-6b9f5ed2-12ff-4d67-abca-7ebc3514fea4">
+<span class="eqno">(15.3)<a class="headerlink" href="#equation-6b9f5ed2-12ff-4d67-abca-7ebc3514fea4" title="Permalink to this equation">¶</a></span>\[\begin{pmatrix}
 \boxed{\star} &amp; \star &amp;\star &amp;\star &amp;\star \\
 0     &amp; \boxed{\star} &amp;\star &amp;\star &amp;\star \\
 0     &amp;  0    &amp; 0    &amp; \boxed{\star} &amp;\star \\
@@ -560,8 +570,8 @@ r_1 - r_2 &amp; \longrightarrow &amp; (r_1)\\
 <li><p>Each pivot is equal to 1.</p></li>
 <li><p>Each pivot is the only nonzero entry in its column.</p></li>
 </ol>
-<div class="amsmath math notranslate nohighlight" id="equation-5096ce4c-be0d-4f31-b6d2-4c6e432a4997">
-<span class="eqno">(15.4)<a class="headerlink" href="#equation-5096ce4c-be0d-4f31-b6d2-4c6e432a4997" title="Permalink to this equation">¶</a></span>\[\begin{pmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-685bc3e4-0563-48b4-b863-4fcdde3bd6b3">
+<span class="eqno">(15.4)<a class="headerlink" href="#equation-685bc3e4-0563-48b4-b863-4fcdde3bd6b3" title="Permalink to this equation">¶</a></span>\[\begin{pmatrix}
 1 &amp; 0 &amp;\star &amp; 0 &amp;\star \\
 0     &amp; 1 &amp;\star &amp;0 &amp;\star \\
 0     &amp;  0    &amp; 0    &amp; 1 &amp;\star \\

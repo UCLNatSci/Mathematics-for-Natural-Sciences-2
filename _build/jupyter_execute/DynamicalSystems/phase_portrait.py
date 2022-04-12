@@ -3,35 +3,48 @@
 
 # # The phase portrait
 # 
-# In this section, we introduce the phase portrait representation of an autonomous ODE. This is a plot of the solution *state space*, illustrating the location of any equilibrium points and selected trajectories. We usually do not need to solve the ODE to obtain the phase portrait.
+# In this section, we introduce the phase portrait representation of an autonomous ODE. This is a plot of the solution *state space*, illustrating any equilibrium points and selected trajectories. We usually do not need to solve the ODE to obtain the phase portrait.
 # 
 # We train ourselves to understand the behaviour from looking at the phase plane, because we can often construct the phase plane even when there is no exact solution.
 # 
 # (motv-exam)=
 # ## A motivating example in 1D
-# Consider the following ODE, subject to the given initial condition
+# Consider the following ODE, subject to the given initial condition :
 # 
-# \begin{equation*}
+# \begin{equation}
 # \dot{x}=2x, \qquad x(0)=x_0.
-# \end{equation*}
+# \end{equation}
 # 
 # We can solve this problem by separation of variables to obtain a family of solution curves, each corresponding to different values of the initial condition:
 # 
-# \begin{equation*}
+# \begin{equation}
 # x = x_0 e^{2t}.
-# \end{equation*}
+# \end{equation}
 # 
 # Notice that for this example,
 # 
 # * if $x_0 >0$ then $x$ is always strictly increasing (monotonic increasing)
 # * if $x_0 <0$ then $x$ is always strictly decreasing (monotonic decrasing)
-# * if $x_0=0$ then the $x=0$ $\forall t$
+# * if $x_0=0$ then the $x=0$ $\forall t$. This is an equilibrium point.
 # 
-#  We could infer this behaviour from the ODE without solving it:
+# ```{admonition} Equilibrium point (1D)
+# :class: theorem
+# For a system described by $\dot{x}=f(x)$, a point where $f(x)=0$ is called an **equilibrium point**.
 # 
-#  First, we observe that the ODE has an **equilibrium point**, where $\dot{x}=0$. If we supply $x=0$ as our initial condition then the system will remain there forever.
+# If an equilibrium point is given as the initial condition then the system will remain there for all time. We are usually interested to know how the system behaves when it is near to equilibrium.
+# ```
 # 
-#  We then explore what happens around the equilibrium point, as illustrated below. To the right, $\dot{x}$ is positive and to the left, $\dot{x}$ is negative.
+# **Below-left diagram:**
+# 
+# We could infer the behaviour from the ODE without solving it by looking at a graph of $(x,\dot{x})$. To the right of the equilibrium, $\dot{x}$ is positive and therefore $x$ is increasing. To the left of the equilibrium $\dot{x}$ is negative and therefore $x$ is decreasing.
+# 
+# **Below-right diagram:**
+# 
+# For this system the real number line represents the **state space** of possible values that the solution $x(t)$ can take. The direction of change at each point in state space is shown using arrows.
+# 
+# On $x>0$ the change vector points in the direction of increasing $x$, and on $x<0$ the change vector points in the direction of decreasing $x$. The change vector only swaps sign (direction) at the equilibrium point.
+# 
+# <br>
 
 # In[1]:
 
@@ -39,34 +52,34 @@
 from myst_nb import glue
 import numpy as np
 import matplotlib.pyplot as plt
-
-a=1; k=2; r=1;
+plt.rcParams.update({'font.size': 14})
 
 x = np.linspace(-1,1)
 
-fig,ax = plt.subplots(figsize=(8,4))
-plt.plot(x,2*x)
-plt.plot([-1,1],[0,0],'k')
-plt.arrow(-0.5, 0, -0.2, 0,head_width=0.2,head_length=0.1)
-plt.arrow(0.5, 0, 0.2, 0,head_width=0.2,head_length=0.1)
-plt.ylim(-2, 2)
-plt.xlim([-1,1])
-plt.xlabel('x')
-plt.ylabel('$\dot{x}$')
+fig,ax = plt.subplots(1,2,figsize=(12,6))
+ax[0].plot(x,2*x)
+ax[0].set_xlabel('x')
+ax[0].set_ylabel('$\dot{x}$')
+ax[1].plot([-1,1],[0,0],'k')
+ax[1].plot([0], [0], marker="o", markersize=10, markerfacecolor="black")
+ax[1].arrow(-0.2, 0, -0.5, 0,head_width=0.2,head_length=0.1)
+ax[1].arrow(0.2, 0, 0.5, 0,head_width=0.2,head_length=0.1)
+ax[1].set_ylim(-2, 2)
+ax[1].set_xlim([-1,1])
+ax[1].yaxis.set_visible(False)
+plt.box(on=None)
+ax[1].set_xlabel('x')
 
 glue("simple_fig", fig, display=False)
 
 
 #  ```{glue:} simple_fig
 #  ```
+# <br>
 # 
-#  We indicate this behaviour on the real number line, which represents the **state space** of possible values that the solution $x$ can take. The direction of change at each point in state space is shown using arrows.
+# The state space diagram provides a qualitative view of the ordinary differential equation, from only a one-dimensional image. We can infer from the state space diagram that the point $x=0$ is an equilibrium point, and moreover that it is **unstable**. If we provide an initial condition near to the equilibrium point, the system will move away from the equilibrium.
 # 
-#  On $x>0$ the change vector points in the direction of increasing $x$, and on $x<0$ the change vector points in the direction of decreasing $x$. The change vector only swaps sign (direction) at the equilibrium point.
-# 
-#  This provides a qualitative view of the ordinary differential equation, from only a one-dimensional image. We can infer from the state space diagram that the point $x=0$ is an equilibrium point, and moreover that it is **unstable**. If we provide an initial condition near to the equilibrium point, the system will move away from the equilibrium.
-# 
-#  The diagram also provides information about how the system will behave for all possible initial conditions.
+# The diagram also provides information about how the system will behave for all possible initial conditions.
 # 
 # ```{exercise}
 # By hand, try to produce a similar sketch of the state space for the following nonlinear ODE, assuming that $a<k$:
@@ -107,6 +120,7 @@ glue("allee_fig", fig, display=False)
 # ````{toggle}
 # 
 # **Solution:**
+# Here the graphs of $(x,\dot{x})$ and the state space have been shown on the same diagram for ease of presentation.
 # 
 # * The equilibrium point at $x=0$ is stable
 # * The equilibrium point at $x=a$ is unstable
@@ -120,103 +134,230 @@ glue("allee_fig", fig, display=False)
 # (undamp-pend)=
 # ## A motivating example in 2D
 # 
-# We now consider the equation of motion for a simple pendulum, which is given by the following nonlinear second order ODE in which the term with coefficient $k$ represents frictional effects, and the term with coefficient $\omega^2$ represents the weight of the pendulum.
+# We now consider the equation of motion for a simple pendulum, which is given by the following nonlinear second order ODE. The term with coefficient $k$ represents frictional effects, and the term with coefficient $\omega^2$ represents the weight of the pendulum.
 # 
-# ```{math}
+# \begin{equation}
 # \ddot{x}+k\dot{x}+\omega^2\sin(x)=0
-# ```
+# \end{equation}
 # 
 # We may rewrite the equation as a coupled first order system by introducing the variable $y=\dot{x}$, which gives
 # 
-# ```{math}
+# \begin{equation}
 # \begin{bmatrix}\dot{x}\\\dot{y}\end{bmatrix} = \begin{bmatrix}y\\-\omega^2\sin(x)-ky\end{bmatrix}
+# \end{equation}
+# 
+# The system has equilibrium points when $\dot{x}=\dot{y}=0$. These occur at
+# 
+# \begin{equation}
+# x=n\pi, \quad y=0, \qquad n\in\mathbb{Z}.
+# \end{equation}
+# 
+# 
+# ```{admonition} Equilibrium point (2D)
+# :class: theorem
+# Equilibrium points for a system described by
+# \begin{align*}
+# \dot{x}&=f(x,y)\\
+# \dot{y}&=g(x,y)
+# \end{align*}
+# 
+# must satisfy $f(x,y)=g(x,y)=0$.
 # ```
 # 
-# In principle, we can solve this system to obtain the angular displacement $x(t)$ and the velocity $y(t)$, and we could plot these time series for given initial conditions. An example is shown below for the case when $k=0$ and $\omega=1$.
+# As in the previous example, we would like to investigate the behaviour of the system at points near to the equilibrium solutions. Although we could make progress investigating this system by hand, we will here illustrate the dynamics using computer plots for convenience.
+# 
+# <br>
+# 
+# **Python definition:**
+# 
+# We can set up the system in Python as follows. Our defined function `pend` takes an input state `X` and returns the derivatives. Our definition requires that the parameter values `w` and `k` are provided as inputs.
+# 
+# The independent variable `t` must also be given as an input, even though it does not appear explicitly in the equations. This is because the method we will use to solve the system expects a definition of the form `f(X,t,params)`.
 
 # In[3]:
 
 
-from scipy.integrate import odeint
-
 # Model definition
+import numpy as np
 def pend(X,t,w,k):
   dxdt = X[1]
   dydt = -w**2*np.sin(X[0])-k*X[1]
   return [dxdt, dydt]
 
-t0=0; X0=[1,0] #initial conditions for t,x,y
-w=1; k=0
 
-t = np.linspace(0,20,100)    # time points
-
-# solve ODE
-X = odeint(pend,X0,t,args=(w,k))
-
-# plot results
-fig,ax = plt.subplots(figsize=(8,4))
-ax.plot(t,X[:,0],'b')
-plt.ylabel('x')
-plt.xlabel('time')
-plt.xlim([0,20])
-plt.show()
-
-
-# However, if we want to understand how the system behaves for a range of initial conditions or when subjected to a small perturbation, we would need to re-solve and compare the two solutions. This is inconvenient.
+# <br>
 # 
-# We can make better progress by again working in state space. This time, there are two state variables, $x$ and $y$ and so the state space is $\mathbb{R}^2$.
+# ### Solving numerically
 # 
-# This makes sense, because to solve a second order ODE we need to have two initial conditions. In this case we have one condition for the initial angular displacement $x(0)$ and one condition for the initial angular velocity $y(0)$. A plot of some solution trajectories are shown below.
+# We can solve the system to obtain the angular displacement $x(t)$ and the velocity $y(t)$ for given parameters and initial conditions.
+# 
+# In the work that follows we will choose $k=0$, which means there are no losses due to friction. We will take $\omega=1$ and we will begin by choosing initial conditions $x(0)=1$, $y(0)=0$.
+# 
+# The solution uses the `odeint` function which is a numerical ODE solver. We specify the timepoints `t` that we require the solution value for. The solver returns `X` which is the numeric solution at those timepoints. Each column in `X` gives the solution values for one of the dependent variables, so for this system there will be two columns.
 
 # In[4]:
 
 
-plt.figure(figsize=(8,4))
-for i in np.arange(-4,4,0.2):
-  for j in [-2*np.pi,0,2*np.pi]:
-    X0=[j,i]
-    sol = odeint(pend,X0, t,args=(w,k))
-    plt.plot(sol[:,0],sol[:,1])
+from scipy.integrate import odeint
 
-plt.xlim(-2*np.pi,2*np.pi)
-plt.ylim(-2,2)
-plt.xticks([-np.pi,0,np.pi],['$-\pi$','0','$\pi$'])
-plt.show()
+# Parameter values
+w=1; k=0
+
+# Initial conditions for t,x,y
+t0=0; X0=[1,0]
+
+# time points from t0 to tmax (1000 points)
+tmax=20
+t = np.linspace(t0,tmax,1000)    
+
+# solve ODE
+X = odeint(pend,X0,t,args=(w,k))
 
 
-# ```{admonition} Phase portrait
-# :class: theorem
-# A plot showing a region of state space together with any equilibrium points and some indicative trajctories is called a phase portrait.
+# <br>
+# 
+# ### Time series plots
+# 
+# We can plot the time series for the given parameters and conditions, as shown below. Most of the code here is just twiddles to improve how the plot looks, such as changes to the axis limits or plot labels. The main functional part of the code is the following line that plots the timepoints `t` against the solutions for $x$, which are found in the first column of array `X`.
+# 
+# ```{code}
+# plt.plot(t,X[:,0],'blue')
 # ```
-# 
-# We can also infer the solution trajectories by plotting the vector field $(\dot{x},\dot{y})$ in state space. Since there is no explicit time dependence on the right-hand side, the change vectors remain static and the solution will follow a trajectory tangent to them.
-# 
-# ### No damping
-# 
-# First we will take $k=0$, so there are no losses due to friction. The phase portrait is shown below.
 
 # In[5]:
 
 
-x=np.linspace(-2*np.pi,2*np.pi,100)
-y=np.linspace(-2.5,2.5,100)
+import matplotlib.pyplot as plt
 
-[X,Y]=np.meshgrid(x,y)
+# plot results
+plt.figure(figsize=(12,6))
+plt.plot(t,X[:,0],'blue')
+plt.ylabel('x')
+plt.xlabel('time')
+plt.xlim([t0,tmax])
+plt.show()
 
-plt.figure(figsize=(10,5))
-#define the vector field values at each point
-(U,V)=(Y,-np.sin(X))    
-plt.title('The simple pendulum with no damping')
-plt.streamplot(X,Y,U,V,arrowsize=2)
+
+# <br>
+# 
+# If we want to understand how the system behaves for a range of initial conditions or when subjected to a small perturbation, we would need to re-solve and compare multiple solutions. This is inconvenient.
+# 
+# <br>
+# 
+# ### State space plots
+# 
+# We can make better progress by working in state space. This time, there are two state variables, $x$ and $y$ and so the state space is $\mathbb{R}^2$. This makes sense, because to solve a second order ODE we need to have two initial conditions. In this case we have one condition for the initial angular displacement $x(0)$ and one condition for the initial angular velocity $y(0)$.
+# 
+# The plot below shows the solution trajectory in state space corresponding to the parameter values and initial conditions that we used in the time series plot above.
+# 
+# The main functional part of the code is the following line that plots $x$ against $y$ by extracting each column from array `X`.
+# 
+# ```{code}
+# plt.plot(X[:,0],X[:,1],'blue')
+# ```
+# 
+# The arrows shown on this plot illustrate the direction of change. The code that was used to add the arrows to the trajectory has not been provided, because you won't need this for your work.
+# 
+# ````{toggle}
+# ```{code}
+# plt.plot(X[:,0],X[:,1],'blue')
+# plt.xticks([-np.pi,0,np.pi],['$-\pi$','0','$\pi$'])
+# plt.ylabel('y')
+# plt.xlabel('x')
+# plt.show()
+# 
+# ```
+# ````
+
+# In[6]:
+
+
+plt.figure(figsize=(12,6))
+plt.plot(X[:,0],X[:,1],'b')
+
+h=100
+x=X[0:-1:h,0]
+y=X[0:-1:h,1]
+u=y
+v=-w**2*np.sin(x)-k*y
+plt.quiver(x,y,u,v,pivot="middle",headaxislength=5,headwidth=10,headlength=10,scale=30)
+
+plt.xticks([-np.pi,0,np.pi],['$-\pi$','0','$\pi$'])
+plt.ylabel('y')
+plt.xlabel('x')
 
 plt.show()
 
 
-# We can immediately locate and classify the equilibrium points. To satisfy the conditions $\dot{x}=\dot{y}=0$, we have
+# <br>
 # 
-# \begin{equation}
-# x=n\pi, \quad y=0, \qquad n\in\mathbb{Z}.
-# \end{equation}
+# **Observations**
+# 
+# It can be seen that time series oscillations correspond to circles or ellipses in state space. This is a general result, that you should learn to recognise.
+# 
+# The initial condition that was used here lies at the point $(1,0)$. For these values $\dot{y}<0$ and $\dot{x}=0$ so the change vector points vertically downwards at that point as shown. For increasing time the solution evolves clockwise along the trajectory.
+# 
+# ```{admonition} Think about it!
+# Try tracing your finger around the circle and consider (separately) how variables $x$ and $y$ change. Where is $x$ increasing and where is it decreasing? Which positions on the trajectory correspond to the lowest and highest parts of the pendulum swing? Where is the speed zero?
+# ```
+# <br>
+# 
+# ### The phase portrait
+# 
+# The plot below illustrates several solution trajectories for the undamped pendulum on the same sketch. The equilibrium points are also marked. Notice the difference in character between solution trajectories near to $x=0$ compared to those near $x=\pm\pi$. The former corresponds to the pendulum in the downward vertical position, whilst the latter corresponds to the pendulum in the upward vertical position.
+# 
+# Initialising the pendulum with a low/moderate speed provides backward and forward oscillations of constant amplitude (closed trajectories). However, for larger value of the initial speed the pendulum performs complete revolutions (open trajectories). The *separatrix* is the curve that separates the open and closed trajectories. It is identified on the sketch in dashed blue.
+
+# In[7]:
+
+
+plt.figure(figsize=(12,6))
+for j in np.arange(-2.2,0,0.4):
+  for i in [-2*np.pi,0,2*np.pi]:
+    X0=[i,j]
+    sol = odeint(pend,X0, t,args=(w,k))
+    plt.plot(sol[:,0],sol[:,1],'k')
+
+for i in np.arange(2.2,4,0.3):
+  X0=[-2*np.pi,i]
+  t=np.linspace(0,150,1000)
+  sol = odeint(pend,X0, t,args=(w,k))
+  plt.plot(sol[:,0],sol[:,1],'k')
+
+X0=[-2*np.pi,2]
+t=np.linspace(0,150,1000)
+sol = odeint(pend,X0, t,args=(w,k))
+plt.plot(sol[:,0],sol[:,1],'b--')
+
+
+for i in np.arange(2.2,4,0.3):
+  X0=[2*np.pi,-i]
+  t=np.linspace(0,150,1000)
+  sol = odeint(pend,X0, t,args=(w,k))
+  plt.plot(sol[:,0],sol[:,1],'k')
+
+X0=[2*np.pi,-2]
+t=np.linspace(0,150,1000)
+sol = odeint(pend,X0, t,args=(w,k))
+plt.plot(sol[:,0],sol[:,1],'b--')
+
+plt.xlim(-2*np.pi,2*np.pi)
+plt.ylim(-2,2)
+
+xpt=np.pi*np.array([-2,-1,0,1,2])
+ypt=np.zeros(np.shape(xpt))
+plt.scatter(xpt,ypt, marker="o",s=20, c="black")
+
+plt.xlim(-2*np.pi,2*np.pi)
+plt.ylim(-2,2)
+plt.xticks([-np.pi,0,np.pi],['$-\pi$','0','$\pi$'])
+
+plt.ylabel('y')
+plt.xlabel('x')
+plt.show()
+
+
+# We can classify the equilibrium points as follows:
 # 
 # **Stationary point at $(0,0)$**
 # 
@@ -226,35 +367,77 @@ plt.show()
 # 
 # This point corresponds to the pendulum in a stationary upward vertical position. If the pendulum is started at the equilibrium point it will remain there, but if it is started from a perturbed position close to the upward vertical, it will move away. As there is no damping, the subsequent motion depends on whether the pendulum is released from rest or given a push. If it is released from rest close to the upward vertical it will perform closed oscillations. If it is given a push it may perform repeated full rotations. This type of equilibrium point is called a "saddle".
 # 
+# ```{admonition} Terminology
+# :class: theorem
+# A plot showing a region of state space together with any equilibrium points and some indicative trajectories is called a phase portrait.
 # 
-# ### With damping
+# The phase portrait is useful because it shows us how the system behaves for a range of initial conditions.
 # 
-# Now we add a small amount of damping $k=0.4$. The phase portrait is shown below.
+# Usually we also mark some of the change vectors on a phase portrait to provide further information, as discussed below.
+# ```
+# 
+# ### The vector field
+# 
+# We can also infer solution trajectories by plotting the vector field $(\dot{x},\dot{y})$ in state space. Since there is no explicit time dependence on the right-hand side, the change vectors remain static and the solution will follow a trajectory tangent to them.
+# 
+# In Python we can use the `quiver` function to plot the vector field, as shown below-left. It can be difficult to infer the behaviour from the vector field alone, but by combining plots of the vector field with a few solution trajectories we can usually get a good overview.
+# 
+# Replacing the `quiver` function with the `streamplot` function results in an attempt by Python to create the curves that are tangent to the vector field, as shown below-right.
 
-# In[6]:
+# In[8]:
 
 
-x=np.linspace(-2*np.pi,2*np.pi,100)
-y=np.linspace(-2.5,2.5,100)
+# Define x and y value ranges
+xmin=-2*np.pi; xmax=2*np.pi;
+ymin=-2.5; ymax=2.5;
 
+# We will use 30 grid points in each direction
+npts=30
+x=np.linspace(xmin,xmax,npts)
+y=np.linspace(ymin,ymax,npts)
 [X,Y]=np.meshgrid(x,y)
 
-plt.figure(figsize=(10,5))
-#define the vector field values at each point
-k=0.4
-(U,V)=(Y,-np.sin(X)-k*Y)        
-plt.title('The simple pendulum with damping')
-plt.streamplot(X,Y,U,V,arrowsize=2)
+# Define the vector field values at each point
+(U,V)=(Y,-np.sin(X))
 
+# Make and twiddle the plot
+fig,ax = plt.subplots(1,2,figsize=(12,6))
+ax[0].quiver(X,Y,U,V)
+ax[1].streamplot(X,Y,U,V,arrowsize=2)
+ax[0].set_xlabel('x')
+ax[0].set_ylabel('y')
+ax[1].set_xlabel('x')
+ax[1].set_ylabel('y')
 plt.show()
 
 
-# The addition of damping does not change the locations of the equilibria, but it dos affect their stability. All solutions decay gradually towards the equilibrium at $(0,0)$. This is represented by an inward-spiralling trajectory on the phase diagram. The pendulum oscillates with decaying amplitude.
+# The quality of the streamplots is usually not very satisfactory unless additional painstaking work is undertaken to force a better result. An example of a better result is shown below.
 # 
-# 
-# ## Side note
-# 
-# Whilst is not generally practical to find an explicit expression $y(x)$ for the phase paths, we can sometimes do it. For instance, if we consider the undamped pendulum case then the paths satisfy
+# However, by combining  rough-and-ready streamplots with mathematical analysis we can usually get a very clear understanding of the system dynamics.
+
+# In[9]:
+
+
+plt.figure(figsize=(12,6))
+
+# Define trajectory start points
+start=[
+       [-np.pi,0.01],[np.pi,-0.01],[-2*np.pi,2.4],[2*np.pi,-2.4],
+       [-np.pi,2],[np.pi,2],[-np.pi,-2],[np.pi,-2],
+       [0,0.4],[0,0.8],[0,1.2],[0,1.6],
+       [-2*np.pi,0.4],[-2*np.pi,0.8],[-2*np.pi,1.2],[-2*np.pi,1.6],
+       [2*np.pi,0.4],[2*np.pi,0.8],[2*np.pi,1.2],[2*np.pi,1.6]
+       ]
+
+plt.streamplot(X,Y,U,V,start_points=start,density=20,arrowsize=2)
+
+plt.xlabel('x')
+plt.ylabel('y')
+plt.show()
+
+
+# ````{admonition} Side note on phase paths
+# Whilst is not generally practical to find an explicit expression $y(x)$ for the phase paths, we can sometimes do it. In the case of this undamped pendulum the phase paths satisfy
 # 
 # \begin{equation*}
 # \frac{\mathrm{d}y}{\mathrm{d}x}=\frac{\dot{y}}{\dot{x}}=-\frac{\omega^2\sin(x)}{y}.
@@ -266,40 +449,46 @@ plt.show()
 # y=\pm \sqrt{2}\omega \sqrt{k+\cos(x)}.
 # ```
 # 
-# For $k>1$ we have open orbits, and for $-1<k<1$ we have closed orbits (periodic motion). The case $k=1$ divides between qualitiatively different behaviours. It is called the separatrix.
+# For $k>1$ we have open orbits, and for $-1<k<1$ we have closed orbits (periodic motion). The case $k=1$ gives the separatrix, which divides between qualitatively different behaviours.
+# ````
+# 
+# ### Classifying different behaviours
+# In the each of the time series and state space plots above we considered the undamped case $k=0$. Now we will repeat our methodology for the case where there is a small amount of damping $k=0.4$. The following code produces a rough-and-ready version of the phase portrait shown below.
+# 
+# ```{code}
+# k=0.4
+# (U,V)=(Y,-np.sin(X)-k*Y)
+# plt.streamplot(X,Y,U,V,arrowsize=2)
+# ```
 
-# In[7]:
+# In[10]:
 
 
-import numpy as np
-import matplotlib.pyplot as plt
-import cmath
-import numpy.ma as ma
+# Define trajectory start points
+start=[
+       [-np.pi,0.01],[np.pi,-0.01],[-np.pi,-0.01],[np.pi,0.01],
+       [-2*np.pi,2.4],[2*np.pi,-2.4],
+       [-np.pi,2],[np.pi,2],[-np.pi,-2],[np.pi,-2],
+       [-2*np.pi,0.4],[-2*np.pi,0.8],[-2*np.pi,1.2],[-2*np.pi,1.8],
+       [2*np.pi,-0.4],[2*np.pi,-0.8],[2*np.pi,-1.2],[2*np.pi,-1.8]
+       ]
 
-x=np.linspace(-2*np.pi,2*np.pi,1000)
+k=0.4
+(U,V)=(Y,-np.sin(X)-k*Y)
+plt.figure(figsize=(12,6))
+plt.streamplot(X,Y,U,V,start_points=start,density=20,arrowsize=2,integration_direction="forward",color="blue")
+plt.streamplot(X,Y,U,V,start_points=start,density=20,arrowsize=2,integration_direction="backward",color="blue")
 
-plt.figure(figsize=(10,5))
-#define the vector field values at each point
-
-v1=np.sqrt(2)*np.sqrt(1+np.cos(x))
-v2=np.sqrt(2)*np.sqrt(2+np.cos(x))
-v3=[cmath.sqrt(2*(0.3+k)) for k in np.cos(x)]
-v3 = ma.masked_array(np.real(v3), mask=(np.imag(v3)!=0))
-v4=[cmath.sqrt(2*(0.01+k)) for k in np.cos(x)]
-v4 = ma.masked_array(np.real(v4), mask=(np.imag(v4)!=0))
-
-plt.plot(x,+v1,'k')
-plt.plot(x,-v1,'k')
-plt.plot(x,+v2,'k')
-plt.plot(x,-v2,'k')
-plt.plot(x,+v3,'k')
-plt.plot(x,-v3,'k')
-plt.plot(x,+v4,'k')
-plt.plot(x,-v4,'k')
-plt.xlim([-2*np.pi,2*np.pi])
+plt.xlabel('x')
+plt.ylabel('y')
 plt.show()
 
 
+# The addition of damping does not change the locations of the equilibria, but it dos affect their stability. All solutions decay gradually towards the equilibrium at $(0,0)$. This is represented by an inward-spiralling trajectory on the phase diagram. The pendulum oscillates with decaying amplitude.
+# 
+# 
+# 
+# 
 # ## Exercise
 # 
 # ```{exercise}
@@ -318,7 +507,7 @@ plt.show()
 # Also try changing the value of $c$ to 0.9. How do the trajectories in the vicinity of the stationary point change?
 # ```
 
-# In[8]:
+# In[11]:
 
 
 from myst_nb import glue
@@ -326,24 +515,33 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import odeint
 
+# define the model
 def glyco(X,t,v0,c,k):
   dpdt = c*X[1]*X[0]**2 - k*X[0]
   dsdt = v0 - c*X[1]*X[0]**2
   return [dpdt,dsdt]
 
+# define the time range and fixed parameters
 t = np.linspace(0,100,10000)
 v0=1; k=1;
 
+# make plot axes
 fig,ax=plt.subplots(1,2,figsize=(10,6))
 
-X = odeint(glyco,[2,2],t,args=(v0,1.1,k))
+# Solve for c=1.1
+X0=[2,2]
+X = odeint(glyco,X0,t,args=(v0,1.1,k))
 ax[0].plot(X[:,0],X[:,1],'r')
 ax[0].set_title('c=1.1')
 
-X = odeint(glyco,[2,2],t,args=(v0,0.9,k))
+# Solve for c=0.9 (red trajectory)
+X0=[2,2]
+X = odeint(glyco,X0,t,args=(v0,0.9,k))
 ax[1].plot(X[:,0],X[:,1],'r')
 
-X = odeint(glyco,[1.01,1.12],t,args=(v0,0.9,k))
+# Solve for c=0.9 (blue trajectory)
+X0=[1.01,1.12]
+X = odeint(glyco,X0,t,args=(v0,0.9,k))
 ax[1].plot(X[:,0],X[:,1],'b')
 
 ax[1].set_title('c=0.9')
@@ -354,9 +552,11 @@ glue("glyco_fig", fig, display=False)
 # 
 # **Solution:**
 # 
-# It is a little easier to see the behaviour clearly by plotting trajectories rather than streamlines. There is a stationary point at
+# There is a stationary point at
 # 
 # \begin{equation*}(p,s)=\left(\frac{v_0}{k},\frac{k^2}{c v_0}\right)\end{equation*}
+# 
+# It is a little easier to see the behaviour clearly by plotting trajectories rather than streamlines.
 # 
 # * For $c=1.1$ the equilibrium point is a stable centre. The red trajectory spirals in towards the equilibrium point.
 # * For $c=0.9$ the equilibrium point is unstable. The blue trajectory spirals out away from the equilibrium point.
@@ -364,30 +564,39 @@ glue("glyco_fig", fig, display=False)
 # For $c=0.9$ we see that the solution approaches a closed cycle from initial conditions inside (blue) and outside (red). This is called a *limit cycle*.
 # 
 # ```{code}
+# # define the model
 # def glyco(X,t,v0,c,k):
 #   dpdt = c*X[1]*X[0]**2 - k*X[0]
 #   dsdt = v0 - c*X[1]*X[0]**2
 #   return [dpdt,dsdt]
 # 
+# # define the time range and fixed parameters
 # t = np.linspace(0,100,10000)
 # v0=1; k=1;
 # 
+# # make plot axes
 # fig,ax=plt.subplots(1,2,figsize=(10,6))
 # 
-# X = odeint(glyco,[2,2],t,args=(v0,1.1,k))
+# # Solve for c=1.1
+# X0=[2,2]
+# X = odeint(glyco,X0,t,args=(v0,1.1,k))
 # ax[0].plot(X[:,0],X[:,1],'r')
 # ax[0].set_title('c=1.1')
 # 
-# X = odeint(glyco,[2,2],t,args=(v0,0.9,k))
+# # Solve for c=0.9 (red trajectory)
+# X0=[2,2]
+# X = odeint(glyco,X0,t,args=(v0,0.9,k))
 # ax[1].plot(X[:,0],X[:,1],'r')
 # 
-# X = odeint(glyco,[1.01,1.12],t,args=(v0,0.9,k))
+# # Solve for c=0.9 (blue trajectory)
+# X0=[1.01,1.12]
+# X = odeint(glyco,X0,t,args=(v0,0.9,k))
 # ax[1].plot(X[:,0],X[:,1],'b')
 # 
 # ax[1].set_title('c=0.9')
+# 
 # plt.show()
 # ```
-# 
 # 
 # ```{glue:} glyco_fig
 # ```

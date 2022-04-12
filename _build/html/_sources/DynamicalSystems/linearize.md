@@ -114,11 +114,14 @@ Since $\sqrt{k^2+4\omega^2}>k$ $\forall\omega\neq 0$, the odd nodes are always s
 
 ## Differential equations with a parameter
 
-We now consider an example of a system featuring a parameter. We looked at some examples of this sort in previous exercises by trying a few different parameter values. For example,
+The exercise above involved a parameter $k$. Other sections of the notes have also featured examples that involved parameters. For example,
+
 * {numref}`ex-222` featured parameters $c,k$
 * {numref}`ex-235` featured parameter $c$
 
-We will now attempt to sytematically study the location and nature of any equilibria for different parameter values.
+We have seen that it is possible for the behaviour of the system change as the parameter is varied. In some cases changing one parameter can result in a transition from having a stable equilibrium to an unstable one, or vice-versa. We saw this in the glycolysis example. In other cases there may also be equilibrium states that exist only within certain parameter regimes.
+
+We will now attempt to systematically study how the location and stability of any equilibria vary for different parameter values.
 
 ### Example: A pitchfork bifurcation
 
@@ -186,11 +189,16 @@ In this subsection we will look at some of the most commonly encountered types o
 
 A pitchfork bifurcation occurs when a system transitions from one equilibrium point to three.
 
-* In a supercritical pitchfork bifurcation the transition to three points occurs as the parameter value is increased.
-* In a subcritical pitchfork bifurcation the transition to three points occurs as the parameter value is decreased.
+* In a supercritical pitchfork bifurcation a stable equilibrium turns unstable and two stable equilibria emerge either side
+* In a subcritical pitchfork bifurcation an unstable equilibrium turns stable and two unstable equilibria emerge either side.
 
 Illustrations of both types are shown below. In these examples the parameter $\mu$ is shown on the horizontal axis and the equilibrium point is shown on the vertical axis.  
 
+```{admonition} Terminology
+:class: warning
+
+Note that subcritical and supercritical describe the stability of the equilibrium points and are not dependent on which direction the pitchfork faces.
+```
 
 ````{panels}
 :column: col-6
@@ -217,7 +225,7 @@ Illustrations of both types are shown below. In these examples the parameter $\m
 ````
 
 ```{exercise}
-Pick one of the two examples above and sketch change vectors on the diagram.
+Pick one of the two examples above and sketch change vectors on the diagram. Note that in the bifurcation diagram the $x$ axis is vertical, so the change vectors will point either up or down depending on the sign of $\dot{x}$
 ```
 
 ````{toggle}
@@ -226,14 +234,51 @@ Pick one of the two examples above and sketch change vectors on the diagram.
 The plot below is for the case $\dot{x}=\mu x +x^3$
 
 ```{figure} ../figures/pitchfork4.png
-:scale: 60%
+:scale: 80%
 ```
-For example, consider that for $\mu<0$ the shape of the change function is as shown below. The change function is positive for $-\sqrt{\mu}<x<0$, negative $x<-\sqrt{\mu}$, etc.
+For example, consider that for $\mu<0$ the shape of the change function is as shown below. The change function is positive for $-\sqrt{\mu}<x<0$, negative for $x<-\sqrt{\mu}$, etc.
 
 ```{figure} ../figures/schematic.png
 ```
 
 ````
+
+**Classification using the 1D Jacobian**
+
+It is also possible to classify the stability of these equilibria using the 1D Jacobian. For a problem
+
+\begin{equation}
+\dot{x} = f(x)
+\end{equation}
+
+the Jacobian is simply $f^{\prime}(x)$. If $x_0$ is an equilibrium point then $f^{\prime}(x_0)$ determines whether the stability as follows:
+
+* If $f^{\prime}(x_0)>0$ the equilibrium point is unstable,
+* If $f^{\prime}(x_0)<0$ the equilibrium point is stable.
+
+Can you understand why this is so? Think about the shape of the plot $f(x)$, which determines the direction vectors $\dot{x}$.
+
+
+```{exercise}
+Use the 1D Jacobian to verify the stability results for the case where $f(x)=\mu x+x^3$.
+```
+
+```{toggle}
+
+**Solution:**
+
+We have $f^{\prime}(x)=\mu+ 3x^2$ and so
+
+* $f^{\prime}(0)=\mu$
+* $f^{\prime}(\pm\sqrt{-\mu})=-2\mu$
+
+This concludes that :
+
+* the equilibrium point $x=0$ is stable for $\mu<0$ and unstable for $\mu>0$,
+* the equilibrium points $x=\pm\sqrt{-\mu}$ are unstable where they exist.
+
+The results are consistent with what we found by sketching.
+```
 
 ### Saddle node bifurcation
 
@@ -248,7 +293,7 @@ A saddle node bifurcation or fold bifurcation occurs when two equilibrium points
 \dot{x} = \mu -x^2
 \end{equation*}
 
-```{figure} ../figures/saddlenode2.png
+```{figure} ../figures/saddlenode3.png
 :scale: 60%
 ```
 ---
@@ -258,10 +303,28 @@ A saddle node bifurcation or fold bifurcation occurs when two equilibrium points
 \dot{x} = \mu +x^2
 \end{equation*}
 
-```{figure} ../figures/saddlenode3.png
+```{figure} ../figures/saddlenode2.png
 :scale: 60%
 ```
 ````
+
+```{exercise}
+Pick one of these two cases and plot the change vectors on the diagram. Also use the 1D Jacobian to verify your results.
+```
+
+````{toggle}
+For the case where $f(x)=\mu-x^2$ the equilibria are at $x=\pm\sqrt{\mu}$, $\mu>0$.
+
+* $f^{\prime}(\sqrt{\mu})=-2\mu$ : stable
+* $f^{\prime}(-\sqrt{\mu})=2\mu$ : unstable
+
+The diagram is shown below.
+
+```{figure} ../figures/saddlenode4.png
+:scale: 80%
+```
+````
+
 
 ```{exercise}
 Show that the following two-dimensional problem has a saddle-node bifurcation at $\mu=0$:
@@ -280,7 +343,7 @@ Equilibrium points $(\pm\sqrt{\mu},0)$, for $\mu\geq 0$
 
 Jacobian: $\begin{bmatrix}-2x & 0\\0&-1\end{bmatrix}$
 
-Eigenvalues: $\lambda=-1,\mp\sqrt{\mu}$
+Eigenvalues: $\lambda=-1,\mp2\sqrt{\mu}$
 
 The point $(0,-\sqrt{\mu})$ is a saddle node
 
@@ -289,7 +352,7 @@ The point $(0,\sqrt{\mu})$ is a stable node
 
 ### Transcritical bifurcation
 
-A transcritical bifurcation is characterised by a system with one stable equilibrium point and one unstable equilibrium point, which exchange stability when they collide.
+A transcritical bifurcation is characterised by a system with one stable equilibrium point and one unstable equilibrium point, which exchange stability when they collide. An example of a transcritical bifurcation is illustrated below.
 
 \begin{equation}
 \dot{x}=\mu x - x^2
@@ -299,28 +362,7 @@ A transcritical bifurcation is characterised by a system with one stable equilib
 :scale: 60%
 ```
 
-### Hopf bifurcation
+The equilibrium points are at $x=0$ and $x=\mu$. To classify their stablity, either use the change vectors or simply note that for $f(x)=\mu x - x^2$ we have
 
-A Hopf bifurcation occurs when a parameter in the system creates a change from a stable equilibrium point to an unstable equilibrium point together with a periodic solution that takes the form of a *limit cycle*. We have already seen illustrated examples of limit cycles in in {numref}`ex-222` and {numref}`ex-235`.
-
-```{admonition} Limit cycle
-:class:theorem
-A limit cycle is an isolated periodic solution, unlike a centre which has a family of periodic solutions.
-
-* For a stable limit cycle all trajectories approach the limit cycle as $t\rightarrow\infty$
-* For an unstable limit cycle all trajectories approach the limit cycle as $t\rightarrow -\infty$
-
-Limit cycles can be extremely difficult to find.
-```
-
-Again, we can distinguish between a supercritical and subritical Hopf bifurcation.
-
-
-```{exercise}
-For the glycolysis problem introduced in {numref}`ex-222`, with $k=v_0=1$, show that there is an equilibrium point at
-$(s,p)=(1/c,1)$. Find the eigenvalues and show that decreasing the parameter past $c=1$ creates a subcrtical Hopf bifurcation.
-```
-
-```{exercise}
-Find the eigenvalues of the Rayleigh problem introduced in {numref}`ex-235`. Show that a Hopf bifurcation occurs at $c=0$. Is this a supercritical or a subcritical bifurcation?
-```
+* $f^{\prime}(0)=\mu$  : stable for $\mu<0$
+* $f^{\prime}(\mu)=-\mu$ : stable for $\mu>0$
