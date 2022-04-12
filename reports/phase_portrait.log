@@ -17,40 +17,40 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-from scipy.integrate import odeint
+# Define x and y value ranges
+xmin=-2*np.pi; xmax=2*np.pi;
+ymin=-2.5; ymax=2.5;
 
-# Model definition
-def pend(X,t,w,k):
-  dxdt = X[1]
-  dydt = -w**2*np.sin(X[0])-k*X[1]
-  return [dxdt, dydt]
+# We will use 10 grid points in each direction
+npts=10
+x=np.linspace(xmin,xmax,npts)
+y=np.linspace(ymin,ymax,npts)
+[X,Y]=np.meshgrid(x,y)
 
-t0=0; X0=[1,0] #initial conditions for t,x,y
-w=1; k=0
+# Define the vector field values at each point
+(U,V)=(Y,-np.sin(X))
 
-t = np.linspace(0,20,100)    # time points
+# Make and twiddle the plot
+fig,ax=plt.figure(figsize=(12,6))    
+plt.title('The simple pendulum with no damping')
+ax[0].quiver(X,Y,U,V)
+ax[1].streamplot(X,Y,U,V,arrowsize=2)
 
-# solve ODE
-X = odeint(dXdt,X0,t,args=(w,k))
+#ax[0].set_xlabel('x')
+#ax[0].set_ylabel('y')
 
-# plot results
-fig,ax = plt.subplots(figsize=(8,4))
-ax.plot(t,X[:,0],'b')
-plt.ylabel('x')
-plt.xlabel('time')
-plt.xlim([0,20])
 plt.show()
 ------------------
 
 [1;31m---------------------------------------------------------------------------[0m
-[1;31mNameError[0m                                 Traceback (most recent call last)
-[1;32mC:\Users\ELLAME~1\AppData\Local\Temp/ipykernel_4272/1458885959.py[0m in [0;36m<module>[1;34m[0m
+[1;31mTypeError[0m                                 Traceback (most recent call last)
+[1;32mC:\Users\ELLAME~1\AppData\Local\Temp/ipykernel_6316/566637670.py[0m in [0;36m<module>[1;34m[0m
 [0;32m     13[0m [1;33m[0m[0m
-[0;32m     14[0m [1;31m# solve ODE[0m[1;33m[0m[1;33m[0m[1;33m[0m[0m
-[1;32m---> 15[1;33m [0mX[0m [1;33m=[0m [0modeint[0m[1;33m([0m[0mdXdt[0m[1;33m,[0m[0mX0[0m[1;33m,[0m[0mt[0m[1;33m,[0m[0margs[0m[1;33m=[0m[1;33m([0m[0mw[0m[1;33m,[0m[0mk[0m[1;33m)[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
-[0m[0;32m     16[0m [1;33m[0m[0m
-[0;32m     17[0m [1;31m# plot results[0m[1;33m[0m[1;33m[0m[1;33m[0m[0m
+[0;32m     14[0m [1;31m# Make and twiddle the plot[0m[1;33m[0m[1;33m[0m[1;33m[0m[0m
+[1;32m---> 15[1;33m [0mfig[0m[1;33m,[0m[0max[0m[1;33m=[0m[0mplt[0m[1;33m.[0m[0mfigure[0m[1;33m([0m[0mfigsize[0m[1;33m=[0m[1;33m([0m[1;36m12[0m[1;33m,[0m[1;36m6[0m[1;33m)[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[0m[0;32m     16[0m [0mplt[0m[1;33m.[0m[0mtitle[0m[1;33m([0m[1;34m'The simple pendulum with no damping'[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[0;32m     17[0m [0max[0m[1;33m[[0m[1;36m0[0m[1;33m][0m[1;33m.[0m[0mquiver[0m[1;33m([0m[0mX[0m[1;33m,[0m[0mY[0m[1;33m,[0m[0mU[0m[1;33m,[0m[0mV[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
 
-[1;31mNameError[0m: name 'dXdt' is not defined
-NameError: name 'dXdt' is not defined
+[1;31mTypeError[0m: cannot unpack non-iterable Figure object
+TypeError: cannot unpack non-iterable Figure object
 

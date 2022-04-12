@@ -55,6 +55,7 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="25. Limit cycles" href="limit_cycles.html" />
     <link rel="prev" title="23. Linear systems" href="linearclassify.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -213,6 +214,16 @@
    24. Bifurcation analysis
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="limit_cycles.html">
+   25. Limit cycles
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_examples.html">
+   26. Python code
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -328,11 +339,6 @@
      24.3.3. Transcritical bifurcation
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#hopf-bifurcation">
-     24.3.4. Hopf bifurcation
-    </a>
-   </li>
   </ul>
  </li>
 </ul>
@@ -353,14 +359,14 @@
 <div class="section" id="linearisation">
 <h2><span class="section-number">24.1. </span>Linearisation<a class="headerlink" href="#linearisation" title="Permalink to this headline">¶</a></h2>
 <p>We now consider a general first order coupled autonomous system involving two dependent variables. The problem may be written in the following form, in which the arbitrary functions <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> may be nonlinear:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2222029e-a22b-4f1d-ae6e-04f473885cae">
-<span class="eqno">(24.1)<a class="headerlink" href="#equation-2222029e-a22b-4f1d-ae6e-04f473885cae" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-cdd8c592-0605-464a-be19-5ad59d78f6e1">
+<span class="eqno">(24.1)<a class="headerlink" href="#equation-cdd8c592-0605-464a-be19-5ad59d78f6e1" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \dot{x} &amp; = f(x,y)\\
 \dot{y} &amp; = g(x,y)
 \end{align}\]</div>
 <p>We will assume that the system has an equilibrium point <span class="math notranslate nohighlight">\((x_0,y_0)\)</span> satisfying</p>
-<div class="amsmath math notranslate nohighlight" id="equation-db02ee44-ba8e-474e-a343-96b4767ee7e1">
-<span class="eqno">(24.2)<a class="headerlink" href="#equation-db02ee44-ba8e-474e-a343-96b4767ee7e1" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-22744615-4b5d-4979-858a-6cd01492199c">
+<span class="eqno">(24.2)<a class="headerlink" href="#equation-22744615-4b5d-4979-858a-6cd01492199c" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 f(x_0,y_0)=g(x_0,y_0)=0.
 \end{equation}\]</div>
 <div class="theorem admonition">
@@ -368,39 +374,39 @@ f(x_0,y_0)=g(x_0,y_0)=0.
 <p>It is not always possible to find all equilibrium points by hand if <span class="math notranslate nohighlight">\(f,g\)</span> are not both simple algebraic functions. In such cases a numerical root-finding algorithm such as Newton-Raphson or bisection algorithm could be employed.</p>
 </div>
 <p>To examine the nature of the equilibrium point, we will expand the functions <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> using Taylor series centred at <span class="math notranslate nohighlight">\((x_0,y_0)\)</span>. Since we are interested in the behaviour of solution trajectories in the neighbourhood of the point, we can linearise the expansion:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-41fe81fb-444c-416f-ba79-a3e471aff678">
-<span class="eqno">(24.3)<a class="headerlink" href="#equation-41fe81fb-444c-416f-ba79-a3e471aff678" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-d066e9ba-3360-4de4-9d86-bd980dd8971d">
+<span class="eqno">(24.3)<a class="headerlink" href="#equation-d066e9ba-3360-4de4-9d86-bd980dd8971d" title="Permalink to this equation">¶</a></span>\[\begin{align}
 f(x,y) &amp; = f(x_0,y_0) +(x-x_0)\frac{\partial f}{\partial x}\biggr|_{(x_0,y_0)}+(y-y_0)\frac{\partial f}{\partial y}\biggr|_{(x_0,y_0)}+\dots\\
 g(x,y) &amp; = g(x_0,y_0) +(x-x_0)\frac{\partial g}{\partial x}\biggr|_{(x_0,y_0)}+(y-y_0)\frac{\partial g}{\partial y}\biggr|_{(x_0,y_0)}+\dots\\
 \end{align}\]</div>
 <p>We can further simplify by making the variable substitution <span class="math notranslate nohighlight">\(X=(x-x_0)\)</span>, <span class="math notranslate nohighlight">\(Y=(y-y_0)\)</span> to obtain</p>
-<div class="amsmath math notranslate nohighlight" id="equation-888ab396-a021-400d-ae92-8f42e1681079">
-<span class="eqno">(24.4)<a class="headerlink" href="#equation-888ab396-a021-400d-ae92-8f42e1681079" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f553ca4c-e354-46db-8e84-54cdc28de1ad">
+<span class="eqno">(24.4)<a class="headerlink" href="#equation-f553ca4c-e354-46db-8e84-54cdc28de1ad" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \dot{X} &amp;= X\frac{\partial f}{\partial x}\biggr|_{(x_0,y_0)}+Y\frac{\partial f}{\partial y}\biggr|_{(x_0,y_0)}\\
 \dot{Y} &amp;= X\frac{\partial g}{\partial x}\biggr|_{(x_0,y_0)}+Y\frac{\partial g}{\partial y}\biggr|_{(x_0,y_0)}
 \end{align}\]</div>
 <p>This is a first order linear system in two unknowns, with equilibrium point at <span class="math notranslate nohighlight">\((X,Y)=(0,0)\)</span>. We can write it in matrix form, just as we did in the previous chapters:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5d596536-dd31-4c78-8e40-0d85135063a1">
-<span class="eqno">(24.5)<a class="headerlink" href="#equation-5d596536-dd31-4c78-8e40-0d85135063a1" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-b1f865f7-badd-4c13-9e67-a659365ed036">
+<span class="eqno">(24.5)<a class="headerlink" href="#equation-b1f865f7-badd-4c13-9e67-a659365ed036" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \frac{\mathrm{d}}{\mathrm{d}t}\begin{bmatrix}X\\Y\end{bmatrix} = J(x_0,y_0)\begin{bmatrix}X\\Y\end{bmatrix}, \qquad J(x_0,y_0)= \begin{bmatrix}\frac{\partial f}{\partial x} &amp; \frac{\partial f}{\partial y}\\ \frac{\partial g}{\partial x} &amp; \frac{\partial g}{\partial y}\end{bmatrix}_{(x_0,y_0)}
 \end{equation}\]</div>
 <p>The coefficient matrix <span class="math notranslate nohighlight">\(J(x,y)\)</span> is called the Jacobian. Finding the eigenvalues and eigenvectors of the Jacobian at the stationary point tells us its stability and allows us to plot the shape of the solution trajectories.</p>
 <div class="section" id="example-nonlinear-pendulum">
 <h3><span class="section-number">24.1.1. </span>Example: Nonlinear pendulum<a class="headerlink" href="#example-nonlinear-pendulum" title="Permalink to this headline">¶</a></h3>
 <p>Recall the equation for the undamped pendulum that was given in the <a class="reference internal" href="phase_portrait.html#undamp-pend"><span class="std std-numref">Section 22.2</span></a> :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e4d2e8eb-a8fa-4849-96fd-a83b7027565e">
-<span class="eqno">(24.6)<a class="headerlink" href="#equation-e4d2e8eb-a8fa-4849-96fd-a83b7027565e" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-2cccf360-43dc-47d8-955f-1b1628c158d2">
+<span class="eqno">(24.6)<a class="headerlink" href="#equation-2cccf360-43dc-47d8-955f-1b1628c158d2" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \dot{x} &amp; = y &amp;&amp; =f(x,y)\\
 \dot{y} &amp; = -\omega^2 \sin(x) &amp;&amp; =g(x,y)
 \end{align}\]</div>
 <p>Equilibrium points:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c6b58834-7b99-4ad4-9a7e-5b1b92ddf8a9">
-<span class="eqno">(24.7)<a class="headerlink" href="#equation-c6b58834-7b99-4ad4-9a7e-5b1b92ddf8a9" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-c3e124f3-0f4e-41b6-9695-ccbdabde1356">
+<span class="eqno">(24.7)<a class="headerlink" href="#equation-c3e124f3-0f4e-41b6-9695-ccbdabde1356" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 f=g=0 \qquad \Rightarrow \quad x=n\pi, \ n\in\mathbb{Z}
 \end{equation}\]</div>
 <p>Evaluate the Jacobian:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-23f168c1-b2b2-49ce-b312-8e8da3e6f3c1">
-<span class="eqno">(24.8)<a class="headerlink" href="#equation-23f168c1-b2b2-49ce-b312-8e8da3e6f3c1" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-024db39e-32bf-4d1c-8869-0f5b1be80e93">
+<span class="eqno">(24.8)<a class="headerlink" href="#equation-024db39e-32bf-4d1c-8869-0f5b1be80e93" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 J(x,y) = \begin{bmatrix}\frac{\partial f}{\partial x} &amp; \frac{\partial f}{\partial y}\\ \frac{\partial g}{\partial x} &amp; \frac{\partial g}{\partial y}\end{bmatrix} = \begin{bmatrix}0 &amp; 1\\ -\omega^2\cos(x) &amp; 0\end{bmatrix}
 \end{equation}\]</div>
 <p>We can separate treatment of the equilibrium points according to even and odd <span class="math notranslate nohighlight">\(n\)</span>.</p>
@@ -458,23 +464,24 @@ J(x,y) = \begin{bmatrix}\frac{\partial f}{\partial x} &amp; \frac{\partial f}{\p
 </div>
 <div class="section" id="differential-equations-with-a-parameter">
 <h2><span class="section-number">24.2. </span>Differential equations with a parameter<a class="headerlink" href="#differential-equations-with-a-parameter" title="Permalink to this headline">¶</a></h2>
-<p>We now consider an example of a system featuring a parameter. We looked at some examples of this sort in previous exercises by trying a few different parameter values. For example,</p>
+<p>The exercise above involved a parameter <span class="math notranslate nohighlight">\(k\)</span>. Other sections of the notes have also featured examples that involved parameters. For example,</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="phase_portrait.html#ex-222"><span class="std std-numref">Exercise 22.2</span></a> featured parameters <span class="math notranslate nohighlight">\(c,k\)</span></p></li>
 <li><p><a class="reference internal" href="linearclassify.html#ex-235"><span class="std std-numref">Exercise 23.5</span></a> featured parameter <span class="math notranslate nohighlight">\(c\)</span></p></li>
 </ul>
-<p>We will now attempt to sytematically study the location and nature of any equilibria for different parameter values.</p>
+<p>We have seen that it is possible for the behaviour of the system change as the parameter is varied. In some cases changing one parameter can result in a transition from having a stable equilibrium to an unstable one, or vice-versa. We saw this in the glycolysis example. In other cases there may also be equilibrium states that exist only within certain parameter regimes.</p>
+<p>We will now attempt to systematically study how the location and stability of any equilibria vary for different parameter values.</p>
 <div class="section" id="example-a-pitchfork-bifurcation">
 <h3><span class="section-number">24.2.1. </span>Example: A pitchfork bifurcation<a class="headerlink" href="#example-a-pitchfork-bifurcation" title="Permalink to this headline">¶</a></h3>
 <p>To illustrate the approach, let us consider the following system that features parameter <span class="math notranslate nohighlight">\(\mu\)</span> :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-846e8802-28f8-4af8-a868-07f2de6f1d33">
-<span class="eqno">(24.9)<a class="headerlink" href="#equation-846e8802-28f8-4af8-a868-07f2de6f1d33" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-b84e3b13-55b4-46f1-bb2f-d432d0932e10">
+<span class="eqno">(24.9)<a class="headerlink" href="#equation-b84e3b13-55b4-46f1-bb2f-d432d0932e10" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \dot{x} &amp;=y &amp;&amp;=f(x,y)\\
 \dot{y}&amp;=\mu x - y - x^3-x^2 y &amp;&amp;=g(x,y)
 \end{align}\]</div>
 <p>Equilibrium points are found at <span class="math notranslate nohighlight">\((0,0)\)</span>, <span class="math notranslate nohighlight">\((\pm\sqrt{\mu},0)\)</span>, with the latter points existing only for <span class="math notranslate nohighlight">\(\mu\geq 0\)</span>. To classify the equilibrium points we use the Jacobian, which is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b26317a9-81dd-47b6-8069-6f3bc7ff236a">
-<span class="eqno">(24.10)<a class="headerlink" href="#equation-b26317a9-81dd-47b6-8069-6f3bc7ff236a" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-35522d88-2057-4153-8846-bd8728412642">
+<span class="eqno">(24.10)<a class="headerlink" href="#equation-35522d88-2057-4153-8846-bd8728412642" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 J(x,y)=\begin{bmatrix}0 &amp; 1\\ \mu-3x^2-2xy &amp; -1-x^2\end{bmatrix}
 \end{equation}\]</div>
 <div class="sphinx-bs container pb-4 docutils">
@@ -538,10 +545,14 @@ J(x,y)=\begin{bmatrix}0 &amp; 1\\ \mu-3x^2-2xy &amp; -1-x^2\end{bmatrix}
 <h3><span class="section-number">24.3.1. </span>Pitchfork bifurcation<a class="headerlink" href="#pitchfork-bifurcation" title="Permalink to this headline">¶</a></h3>
 <p>A pitchfork bifurcation occurs when a system transitions from one equilibrium point to three.</p>
 <ul class="simple">
-<li><p>In a supercritical pitchfork bifurcation the transition to three points occurs as the parameter value is increased.</p></li>
-<li><p>In a subcritical pitchfork bifurcation the transition to three points occurs as the parameter value is decreased.</p></li>
+<li><p>In a supercritical pitchfork bifurcation a stable equilibrium turns unstable and two stable equilibria emerge either side</p></li>
+<li><p>In a subcritical pitchfork bifurcation an unstable equilibrium turns stable and two unstable equilibria emerge either side.</p></li>
 </ul>
 <p>Illustrations of both types are shown below. In these examples the parameter <span class="math notranslate nohighlight">\(\mu\)</span> is shown on the horizontal axis and the equilibrium point is shown on the vertical axis.</p>
+<div class="warning admonition">
+<p class="admonition-title">Terminology</p>
+<p>Note that subcritical and supercritical describe the stability of the equilibrium points and are not dependent on which direction the pitchfork faces.</p>
+</div>
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
 <div class="d-flex col-6 docutils">
@@ -581,19 +592,51 @@ J(x,y)=\begin{bmatrix}0 &amp; 1\\ \mu-3x^2-2xy &amp; -1-x^2\end{bmatrix}
 <div class="exercise admonition" id="DynamicalSystems/linearize-exercise-1">
 <p class="admonition-title"><span class="caption-number">Exercise 24.2 </span> </p>
 <div class="section" id="exercise-content">
-<p>Pick one of the two examples above and sketch change vectors on the diagram.</p>
+<p>Pick one of the two examples above and sketch change vectors on the diagram. Note that in the bifurcation diagram the <span class="math notranslate nohighlight">\(x\)</span> axis is vertical, so the change vectors will point either up or down depending on the sign of <span class="math notranslate nohighlight">\(\dot{x}\)</span></p>
 </div>
 </div>
 <div class="toggle docutils container">
 <p><strong>Solution:</strong></p>
 <p>The plot below is for the case <span class="math notranslate nohighlight">\(\dot{x}=\mu x +x^3\)</span></p>
 <div class="figure align-default">
-<a class="reference internal image-reference" href="../_images/pitchfork4.png"><img alt="../_images/pitchfork4.png" src="../_images/pitchfork4.png" style="width: 216.0px; height: 216.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/pitchfork4.png"><img alt="../_images/pitchfork4.png" src="../_images/pitchfork4.png" style="width: 288.0px; height: 288.0px;" /></a>
 </div>
-<p>For example, consider that for <span class="math notranslate nohighlight">\(\mu&lt;0\)</span> the shape of the change function is as shown below. The change function is positive for <span class="math notranslate nohighlight">\(-\sqrt{\mu}&lt;x&lt;0\)</span>, negative <span class="math notranslate nohighlight">\(x&lt;-\sqrt{\mu}\)</span>, etc.</p>
+<p>For example, consider that for <span class="math notranslate nohighlight">\(\mu&lt;0\)</span> the shape of the change function is as shown below. The change function is positive for <span class="math notranslate nohighlight">\(-\sqrt{\mu}&lt;x&lt;0\)</span>, negative for <span class="math notranslate nohighlight">\(x&lt;-\sqrt{\mu}\)</span>, etc.</p>
 <div class="figure align-default">
 <img alt="../_images/schematic.png" src="../_images/schematic.png" />
 </div>
+</div>
+<p><strong>Classification using the 1D Jacobian</strong></p>
+<p>It is also possible to classify the stability of these equilibria using the 1D Jacobian. For a problem</p>
+<div class="amsmath math notranslate nohighlight" id="equation-7d89dfb4-93e1-46f6-accf-102779ad2080">
+<span class="eqno">(24.11)<a class="headerlink" href="#equation-7d89dfb4-93e1-46f6-accf-102779ad2080" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\dot{x} = f(x)
+\end{equation}\]</div>
+<p>the Jacobian is simply <span class="math notranslate nohighlight">\(f^{\prime}(x)\)</span>. If <span class="math notranslate nohighlight">\(x_0\)</span> is an equilibrium point then <span class="math notranslate nohighlight">\(f^{\prime}(x_0)\)</span> determines whether the stability as follows:</p>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(f^{\prime}(x_0)&gt;0\)</span> the equilibrium point is unstable,</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(f^{\prime}(x_0)&lt;0\)</span> the equilibrium point is stable.</p></li>
+</ul>
+<p>Can you understand why this is so? Think about the shape of the plot <span class="math notranslate nohighlight">\(f(x)\)</span>, which determines the direction vectors <span class="math notranslate nohighlight">\(\dot{x}\)</span>.</p>
+<div class="exercise admonition" id="DynamicalSystems/linearize-exercise-2">
+<p class="admonition-title"><span class="caption-number">Exercise 24.3 </span> </p>
+<div class="section" id="exercise-content">
+<p>Use the 1D Jacobian to verify the stability results for the case where <span class="math notranslate nohighlight">\(f(x)=\mu x+x^3\)</span>.</p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><strong>Solution:</strong></p>
+<p>We have <span class="math notranslate nohighlight">\(f^{\prime}(x)=\mu+ 3x^2\)</span> and so</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(f^{\prime}(0)=\mu\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f^{\prime}(\pm\sqrt{-\mu})=-2\mu\)</span></p></li>
+</ul>
+<p>This concludes that :</p>
+<ul class="simple">
+<li><p>the equilibrium point <span class="math notranslate nohighlight">\(x=0\)</span> is stable for <span class="math notranslate nohighlight">\(\mu&lt;0\)</span> and unstable for <span class="math notranslate nohighlight">\(\mu&gt;0\)</span>,</p></li>
+<li><p>the equilibrium points <span class="math notranslate nohighlight">\(x=\pm\sqrt{-\mu}\)</span> are unstable where they exist.</p></li>
+</ul>
+<p>The results are consistent with what we found by sketching.</p>
 </div>
 </div>
 <div class="section" id="saddle-node-bifurcation">
@@ -612,7 +655,7 @@ J(x,y)=\begin{bmatrix}0 &amp; 1\\ \mu-3x^2-2xy &amp; -1-x^2\end{bmatrix}
 \dot{x} = \mu -x^2
 \end{equation*}\]</div>
 <div class="figure align-default">
-<a class="reference internal image-reference" href="../_images/saddlenode2.png"><img alt="../_images/saddlenode2.png" src="../_images/saddlenode2.png" style="width: 216.0px; height: 216.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/saddlenode3.png"><img alt="../_images/saddlenode3.png" src="../_images/saddlenode3.png" style="width: 216.0px; height: 216.0px;" /></a>
 </div>
 </div>
 </div>
@@ -628,15 +671,32 @@ J(x,y)=\begin{bmatrix}0 &amp; 1\\ \mu-3x^2-2xy &amp; -1-x^2\end{bmatrix}
 \dot{x} = \mu +x^2
 \end{equation*}\]</div>
 <div class="figure align-default">
-<a class="reference internal image-reference" href="../_images/saddlenode3.png"><img alt="../_images/saddlenode3.png" src="../_images/saddlenode3.png" style="width: 216.0px; height: 216.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/saddlenode2.png"><img alt="../_images/saddlenode2.png" src="../_images/saddlenode2.png" style="width: 216.0px; height: 216.0px;" /></a>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="exercise admonition" id="DynamicalSystems/linearize-exercise-2">
-<p class="admonition-title"><span class="caption-number">Exercise 24.3 </span> </p>
+<div class="exercise admonition" id="DynamicalSystems/linearize-exercise-3">
+<p class="admonition-title"><span class="caption-number">Exercise 24.4 </span> </p>
+<div class="section" id="exercise-content">
+<p>Pick one of these two cases and plot the change vectors on the diagram. Also use the 1D Jacobian to verify your results.</p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p>For the case where <span class="math notranslate nohighlight">\(f(x)=\mu-x^2\)</span> the equilibria are at <span class="math notranslate nohighlight">\(x=\pm\sqrt{\mu}\)</span>, <span class="math notranslate nohighlight">\(\mu&gt;0\)</span>.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(f^{\prime}(\sqrt{\mu})=-2\mu\)</span> : stable</p></li>
+<li><p><span class="math notranslate nohighlight">\(f^{\prime}(-\sqrt{\mu})=2\mu\)</span> : unstable</p></li>
+</ul>
+<p>The diagram is shown below.</p>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../_images/saddlenode4.png"><img alt="../_images/saddlenode4.png" src="../_images/saddlenode4.png" style="width: 288.0px; height: 287.2px;" /></a>
+</div>
+</div>
+<div class="exercise admonition" id="DynamicalSystems/linearize-exercise-4">
+<p class="admonition-title"><span class="caption-number">Exercise 24.5 </span> </p>
 <div class="section" id="exercise-content">
 <p>Show that the following two-dimensional problem has a saddle-node bifurcation at <span class="math notranslate nohighlight">\(\mu=0\)</span>:</p>
 <div class="amsmath math notranslate nohighlight">
@@ -650,39 +710,26 @@ J(x,y)=\begin{bmatrix}0 &amp; 1\\ \mu-3x^2-2xy &amp; -1-x^2\end{bmatrix}
 <p><strong>Solution</strong></p>
 <p>Equilibrium points <span class="math notranslate nohighlight">\((\pm\sqrt{\mu},0)\)</span>, for <span class="math notranslate nohighlight">\(\mu\geq 0\)</span></p>
 <p>Jacobian: <span class="math notranslate nohighlight">\(\begin{bmatrix}-2x &amp; 0\\0&amp;-1\end{bmatrix}\)</span></p>
-<p>Eigenvalues: <span class="math notranslate nohighlight">\(\lambda=-1,\mp\sqrt{\mu}\)</span></p>
+<p>Eigenvalues: <span class="math notranslate nohighlight">\(\lambda=-1,\mp2\sqrt{\mu}\)</span></p>
 <p>The point <span class="math notranslate nohighlight">\((0,-\sqrt{\mu})\)</span> is a saddle node</p>
 <p>The point <span class="math notranslate nohighlight">\((0,\sqrt{\mu})\)</span> is a stable node</p>
 </div>
 </div>
 <div class="section" id="transcritical-bifurcation">
 <h3><span class="section-number">24.3.3. </span>Transcritical bifurcation<a class="headerlink" href="#transcritical-bifurcation" title="Permalink to this headline">¶</a></h3>
-<p>A transcritical bifurcation is characterised by a system with one stable equilibrium point and one unstable equilibrium point, which exchange stability when they collide.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-71000583-93de-4c1f-bf6e-11a47953c749">
-<span class="eqno">(24.11)<a class="headerlink" href="#equation-71000583-93de-4c1f-bf6e-11a47953c749" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<p>A transcritical bifurcation is characterised by a system with one stable equilibrium point and one unstable equilibrium point, which exchange stability when they collide. An example of a transcritical bifurcation is illustrated below.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-aae48604-7872-4420-b086-40accf2632d5">
+<span class="eqno">(24.12)<a class="headerlink" href="#equation-aae48604-7872-4420-b086-40accf2632d5" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \dot{x}=\mu x - x^2
 \end{equation}\]</div>
 <div class="figure align-default">
 <a class="reference internal image-reference" href="../_images/transcritical2.png"><img alt="../_images/transcritical2.png" src="../_images/transcritical2.png" style="width: 216.0px; height: 216.0px;" /></a>
 </div>
-</div>
-<div class="section" id="hopf-bifurcation">
-<h3><span class="section-number">24.3.4. </span>Hopf bifurcation<a class="headerlink" href="#hopf-bifurcation" title="Permalink to this headline">¶</a></h3>
-<p>A Hopf bifurcation occurs when a parameter in the system creates a change from a stable equilibrium point to an unstable equilibrium point together with a periodic solution that takes the form of a <em>limit cycle</em>. We have already seen illustrated examples of limit cycles in in <a class="reference internal" href="phase_portrait.html#ex-222"><span class="std std-numref">Exercise 22.2</span></a> and <a class="reference internal" href="linearclassify.html#ex-235"><span class="std std-numref">Exercise 23.5</span></a>.</p>
-<p>Again, we can distinguish between a supercritical and subritical Hopf bifurcation.</p>
-<div class="exercise admonition" id="DynamicalSystems/linearize-exercise-3">
-<p class="admonition-title"><span class="caption-number">Exercise 24.4 </span> </p>
-<div class="section" id="exercise-content">
-<p>For the glycolysis problem introduced in <a class="reference internal" href="phase_portrait.html#ex-222"><span class="std std-numref">Exercise 22.2</span></a>, with <span class="math notranslate nohighlight">\(k=v_0=1\)</span>, show that there is an equilibrium point at
-<span class="math notranslate nohighlight">\((s,p)=(1/c,1)\)</span>. Find the eigenvalues and show that decreasing the parameter past <span class="math notranslate nohighlight">\(c=1\)</span> creates a subcrtical Hopf bifurcation.</p>
-</div>
-</div>
-<div class="exercise admonition" id="DynamicalSystems/linearize-exercise-4">
-<p class="admonition-title"><span class="caption-number">Exercise 24.5 </span> </p>
-<div class="section" id="exercise-content">
-<p>Find the eigenvalues of the Rayleigh problem introduced in <a class="reference internal" href="linearclassify.html#ex-235"><span class="std std-numref">Exercise 23.5</span></a>. Show that a Hopf bifurcation occurs at <span class="math notranslate nohighlight">\(c=0\)</span>. Is this a supercritical or a subcritical bifurcation?</p>
-</div>
-</div>
+<p>The equilibrium points are at <span class="math notranslate nohighlight">\(x=0\)</span> and <span class="math notranslate nohighlight">\(x=\mu\)</span>. To classify their stablity, either use the change vectors or simply note that for <span class="math notranslate nohighlight">\(f(x)=\mu x - x^2\)</span> we have</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(f^{\prime}(0)=\mu\)</span>  : stable for <span class="math notranslate nohighlight">\(\mu&lt;0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f^{\prime}(\mu)=-\mu\)</span> : stable for <span class="math notranslate nohighlight">\(\mu&gt;0\)</span></p></li>
+</ul>
 </div>
 </div>
 </div>
@@ -713,6 +760,7 @@ J(x,y)=\begin{bmatrix}0 &amp; 1\\ \mu-3x^2-2xy &amp; -1-x^2\end{bmatrix}
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="linearclassify.html" title="previous page"><span class="section-number">23. </span>Linear systems</a>
+    <a class='right-next' id="next-link" href="limit_cycles.html" title="next page"><span class="section-number">25. </span>Limit cycles</a>
 
         </div>
         

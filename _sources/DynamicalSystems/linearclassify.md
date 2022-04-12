@@ -66,8 +66,10 @@ in which $\underline{v}_1,\underline{v}_2$ are eigenvectors corresponding to the
 Notice that as $t\rightarrow\infty$ one of the eigensolutions will dominate and so solution trajectories will end up parallel to the eigenvector corresponding to the largest eigenvalue.
 
 **Eigenvector directions**
+
 According to the relationship $A\underline{x}=\lambda\underline{x}$, the vector field at points lying along the eigenvector directions points directly away/towards the equilibrium point at the origin, depending on the sign of the eigenvalue.
 
+(unst-nod)=
 ### Unstable node: $\lambda_1, \lambda_2 >0$
 
 Consider the following example system :
@@ -222,7 +224,7 @@ Eigenvalues and corresponding eigenvectors:
 
 ## Real repeated eigenvalues $\lambda$
 
-If the eigenvalue problem has repeated roots $\lambda$ corresponding to eigenvector $\underline{v}_1$ then we need to find a second linearly independent solution. We may Try the following ansatz
+If the eigenvalue problem has repeated roots $\lambda$ corresponding to eigenvector $\underline{v}_1$ then we need to find a second linearly independent solution. We may try the following ansatz
 
 \begin{equation}
 \underline{x}=e^{\lambda t}(t\underline{v}_1+\underline{v}_2).
