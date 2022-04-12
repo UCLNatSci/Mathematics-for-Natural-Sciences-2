@@ -206,7 +206,7 @@ plt.show()
 # Substituting into the problem $\underline{x}^{\prime}=A\underline{x}$ we find this is a solution if
 # 
 # \begin{equation}
-# (A+\lambda I)\underline{v}_2=\underline{v}_1
+# (A-\lambda I)\underline{v}_2=\underline{v}_1
 # \end{equation}
 # 
 # Thus, the general solution is of the form
