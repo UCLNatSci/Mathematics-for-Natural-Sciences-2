@@ -60,7 +60,7 @@
 # 
 # ```{admonition} Sub/supercritical
 # :class: theorem
-# A Hopf bifurcation is said to be subcritical if the limit cycle is stable and supercritical if the limit cycle is stable.
+# A Hopf bifurcation is said to be subcritical if the limit cycle is unstable and supercritical if the limit cycle is stable.
 # ```
 # 
 # An illustration of a subcritical Hopf bifurcation is shown below. Here the bifurcation diagram has been shown in 3D to make it easier to infer what is happening. However, the normal representation of a bifurcation diagram is in 2D with only the extrema (max/min) values of the limit cycle indicated.
@@ -150,7 +150,7 @@ glue("hf123", fig, display=False)
 # 
 # The transition from an unstable to a stable spiral in a nonlinear system strongly hints at the possibility of a limit cycle in one of these two regimes.
 # 
-# To know where the limit cycle will occur is difficult without plotting some solution trajectories. We have done this in {numref}`ex-222` and we found that the limit cycle appears in the region where the equilibrium point is unstable. Hence, the limit cycle is stable and this is an example of a subcritical Hopf bifurcation.
+# To know where the limit cycle will occur is difficult without plotting some solution trajectories. We have done this in {numref}`ex-222` and we found that the limit cycle appears in the region where the equilibrium point is unstable. Hence, the limit cycle is stable and this is an example of a supercritical Hopf bifurcation.
 # 
 # *Side note:*
 # 

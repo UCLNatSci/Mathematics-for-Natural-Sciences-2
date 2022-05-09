@@ -350,14 +350,14 @@
 <div class="section" id="example">
 <h2><span class="section-number">25.1. </span>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
 <p>By way of illustration, we consider the following problem</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fe600812-c87b-4c7d-a513-e3c5bdd79d01">
-<span class="eqno">(25.1)<a class="headerlink" href="#equation-fe600812-c87b-4c7d-a513-e3c5bdd79d01" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-663f68ef-6a0e-49dc-934b-d671da65e8e4">
+<span class="eqno">(25.1)<a class="headerlink" href="#equation-663f68ef-6a0e-49dc-934b-d671da65e8e4" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \dot{x} &amp;=x-y-x(x^2+y^2),\\
 \dot{y} &amp;=x+y-y(x^2+y^2).
 \end{align}\]</div>
 <p>For this example it is instructive to transform to polar coordinates <span class="math notranslate nohighlight">\(x=r\cos(\theta)\)</span>, <span class="math notranslate nohighlight">\(y=r\sin(\theta)\)</span>, which gives the simpler-looking system</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c6253f10-2126-4f90-9e6d-986bbc588c0d">
-<span class="eqno">(25.2)<a class="headerlink" href="#equation-c6253f10-2126-4f90-9e6d-986bbc588c0d" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-be11da31-6a04-4d4e-b22c-0af5a75a413b">
+<span class="eqno">(25.2)<a class="headerlink" href="#equation-be11da31-6a04-4d4e-b22c-0af5a75a413b" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \dot{r}&amp;= r(1-r^2), \quad r\geq 0,\\
 \dot{\theta}&amp;=1.
 \end{align}\]</div>
@@ -382,7 +382,7 @@
 <p>A Hopf bifurcation occurs when a parameter in the system creates a change from a stable/unstable equilibrium point to an unstable/stable equilibrium point, together with a periodic solution that takes the form of a limit cycle.</p>
 <div class="theorem admonition">
 <p class="admonition-title">Sub/supercritical</p>
-<p>A Hopf bifurcation is said to be subcritical if the limit cycle is stable and supercritical if the limit cycle is stable.</p>
+<p>A Hopf bifurcation is said to be subcritical if the limit cycle is unstable and supercritical if the limit cycle is stable.</p>
 </div>
 <p>An illustration of a subcritical Hopf bifurcation is shown below. Here the bifurcation diagram has been shown in 3D to make it easier to infer what is happening. However, the normal representation of a bifurcation diagram is in 2D with only the extrema (max/min) values of the limit cycle indicated.</p>
 <div class="figure align-default" id="id1">
@@ -442,7 +442,7 @@ J=\begin{bmatrix}2csp-k &amp; cp^2\\-2csp &amp; -cp^2\end{bmatrix} \quad = \quad
 <li><p>For <span class="math notranslate nohighlight">\(1&lt;c&lt;3+2\sqrt{2}\)</span> the spiral trajectories are stable (negative real part).</p></li>
 </ul>
 <p>The transition from an unstable to a stable spiral in a nonlinear system strongly hints at the possibility of a limit cycle in one of these two regimes.</p>
-<p>To know where the limit cycle will occur is difficult without plotting some solution trajectories. We have done this in <a class="reference internal" href="phase_portrait.html#ex-222"><span class="std std-numref">Exercise 22.2</span></a> and we found that the limit cycle appears in the region where the equilibrium point is unstable. Hence, the limit cycle is stable and this is an example of a subcritical Hopf bifurcation.</p>
+<p>To know where the limit cycle will occur is difficult without plotting some solution trajectories. We have done this in <a class="reference internal" href="phase_portrait.html#ex-222"><span class="std std-numref">Exercise 22.2</span></a> and we found that the limit cycle appears in the region where the equilibrium point is unstable. Hence, the limit cycle is stable and this is an example of a supercritical Hopf bifurcation.</p>
 <p><em>Side note:</em></p>
 <p>It is possible to infer the stability of the limit cycle by transforming to a polar coordinate system with origin at the equilibrium point. Undertaking this level of investigation is beyond the scope of the course, but if you did it you would find that</p>
 <div class="amsmath math notranslate nohighlight">
