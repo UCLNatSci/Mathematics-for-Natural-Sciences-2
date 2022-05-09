@@ -260,11 +260,11 @@ plt.show()
 # \begin{bmatrix}1&1\\-1&-1\end{bmatrix}\begin{bmatrix}x\\y\end{bmatrix}=\begin{bmatrix}1\\-1\end{bmatrix} \qquad\Rightarrow \quad x+y=1
 # \end{equation*}
 # 
-# A suitable choice of eigenvector is $\underline{v}_2=\begin{bmatrix}0\\1\end{bmatrix}$
+# A suitable choice is $\underline{v}_2=\begin{bmatrix}0\\1\end{bmatrix}$
 # 
 # The general form of the solution is
 # \begin{equation*}
-# \underline{x}=c_1e^{2t}\begin{bmatrix}1\\-1\end{bmatrix}+c_1e^{2t}\left(t\begin{bmatrix}1\\-1\end{bmatrix}+\begin{bmatrix}0\\1\end{bmatrix}\right)
+# \underline{x}=c_1e^{2t}\begin{bmatrix}1\\-1\end{bmatrix}+c_2e^{2t}\left(t\begin{bmatrix}1\\-1\end{bmatrix}+\begin{bmatrix}0\\1\end{bmatrix}\right)
 # \end{equation*}
 # ```
 # 

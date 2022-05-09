@@ -17,120 +17,36 @@
       }
     }
   },
-  "DynamicalSystems\\linearclassify": {
-    "rayl_fig": {
-      "output_type": "display_data",
-      "metadata": {
-        "scrapbook": {
-          "name": "rayl_fig",
-          "mime_prefix": "application/papermill.record/"
-        },
-        "filenames": {
-          "image/png": "C:\\Users\\Ella Metcalfe\\OneDrive - University College London\\Mathematics-for-Natural-Sciences-2\\_build\\jupyter_execute\\DynamicalSystems\\linearclassify_19_0.png"
-        }
-      },
-      "data": {
-        "application/papermill.record/text/plain": "<Figure size 720x720 with 4 Axes>",
-        "application/papermill.record/image/png": null
-      }
-    },
-    "fig_stablespiral": {
-      "output_type": "display_data",
-      "metadata": {
-        "scrapbook": {
-          "name": "fig_stablespiral",
-          "mime_prefix": "application/papermill.record/"
-        },
-        "filenames": {
-          "image/png": "C:\\Users\\Ella Metcalfe\\OneDrive - University College London\\Mathematics-for-Natural-Sciences-2\\_build\\jupyter_execute\\DynamicalSystems\\linearclassify_17_0.png"
-        }
-      },
-      "data": {
-        "application/papermill.record/text/plain": "<Figure size 360x360 with 1 Axes>",
-        "application/papermill.record/image/png": null
-      }
-    },
-    "fig_stableinflected": {
-      "output_type": "display_data",
-      "metadata": {
-        "scrapbook": {
-          "name": "fig_stableinflected",
-          "mime_prefix": "application/papermill.record/"
-        },
-        "filenames": {
-          "image/png": "C:\\Users\\Ella Metcalfe\\OneDrive - University College London\\Mathematics-for-Natural-Sciences-2\\_build\\jupyter_execute\\DynamicalSystems\\linearclassify_11_0.png"
-        }
-      },
-      "data": {
-        "application/papermill.record/text/plain": "<Figure size 360x360 with 1 Axes>",
-        "application/papermill.record/image/png": null
-      }
-    }
-  },
-  "DynamicalSystems\\phase_portrait": {
-    "glyco_fig": {
-      "output_type": "display_data",
-      "metadata": {
-        "scrapbook": {
-          "name": "glyco_fig",
-          "mime_prefix": "application/papermill.record/"
-        },
-        "filenames": {
-          "image/png": "C:\\Users\\Ella Metcalfe\\OneDrive - University College London\\Mathematics-for-Natural-Sciences-2\\_build\\jupyter_execute\\DynamicalSystems\\phase_portrait_21_0.png"
-        }
-      },
-      "data": {
-        "application/papermill.record/text/plain": "<Figure size 720x432 with 2 Axes>",
-        "application/papermill.record/image/png": null
-      }
-    },
-    "simple_fig": {
-      "output_type": "display_data",
-      "metadata": {
-        "scrapbook": {
-          "name": "simple_fig",
-          "mime_prefix": "application/papermill.record/"
-        },
-        "filenames": {
-          "image/png": "C:\\Users\\Ella Metcalfe\\OneDrive - University College London\\Mathematics-for-Natural-Sciences-2\\_build\\jupyter_execute\\DynamicalSystems\\phase_portrait_1_0.png"
-        }
-      },
-      "data": {
-        "application/papermill.record/text/plain": "<Figure size 864x432 with 2 Axes>",
-        "application/papermill.record/image/png": null
-      }
-    },
-    "allee_fig": {
-      "output_type": "display_data",
-      "metadata": {
-        "scrapbook": {
-          "name": "allee_fig",
-          "mime_prefix": "application/papermill.record/"
-        },
-        "filenames": {
-          "image/png": "C:\\Users\\Ella Metcalfe\\OneDrive - University College London\\Mathematics-for-Natural-Sciences-2\\_build\\jupyter_execute\\DynamicalSystems\\phase_portrait_3_0.png"
-        }
-      },
-      "data": {
-        "application/papermill.record/text/plain": "<Figure size 576x288 with 1 Axes>",
-        "application/papermill.record/image/png": null
-      }
-    }
-  },
   "LinearAlgebra\\linear_systems_matrices\\linear_transformations": {
-    "la_fig_3": {
+    "la_fig_1": {
       "output_type": "display_data",
       "metadata": {
         "scrapbook": {
-          "name": "la_fig_3",
+          "name": "la_fig_1",
           "mime_prefix": "application/papermill.record/"
         },
         "filenames": {
-          "image/png": "C:\\Users\\Ella Metcalfe\\OneDrive - University College London\\Mathematics-for-Natural-Sciences-2\\_build\\jupyter_execute\\LinearAlgebra\\linear_systems_matrices\\linear_transformations_4_0.png"
+          "image/png": "C:\\Users\\Ella Metcalfe\\OneDrive - University College London\\Mathematics-for-Natural-Sciences-2\\_build\\jupyter_execute\\LinearAlgebra\\linear_systems_matrices\\linear_transformations_2_0.png"
         }
       },
       "data": {
         "application/papermill.record/text/plain": "<Figure size 684x288 with 2 Axes>",
+        "application/papermill.record/image/png": null
+      }
+    },
+    "la_fig_6": {
+      "output_type": "display_data",
+      "metadata": {
+        "scrapbook": {
+          "name": "la_fig_6",
+          "mime_prefix": "application/papermill.record/"
+        },
+        "filenames": {
+          "image/png": "C:\\Users\\Ella Metcalfe\\OneDrive - University College London\\Mathematics-for-Natural-Sciences-2\\_build\\jupyter_execute\\LinearAlgebra\\linear_systems_matrices\\linear_transformations_8_0.png"
+        }
+      },
+      "data": {
+        "application/papermill.record/text/plain": "<Figure size 720x194.4 with 3 Axes>",
         "application/papermill.record/image/png": null
       }
     },
@@ -166,31 +82,15 @@
         "application/papermill.record/image/png": null
       }
     },
-    "la_fig_1": {
+    "la_fig_3": {
       "output_type": "display_data",
       "metadata": {
         "scrapbook": {
-          "name": "la_fig_1",
+          "name": "la_fig_3",
           "mime_prefix": "application/papermill.record/"
         },
         "filenames": {
-          "image/png": "C:\\Users\\Ella Metcalfe\\OneDrive - University College London\\Mathematics-for-Natural-Sciences-2\\_build\\jupyter_execute\\LinearAlgebra\\linear_systems_matrices\\linear_transformations_2_0.png"
-        }
-      },
-      "data": {
-        "application/papermill.record/text/plain": "<Figure size 684x288 with 2 Axes>",
-        "application/papermill.record/image/png": null
-      }
-    },
-    "la_fig_7": {
-      "output_type": "display_data",
-      "metadata": {
-        "scrapbook": {
-          "name": "la_fig_7",
-          "mime_prefix": "application/papermill.record/"
-        },
-        "filenames": {
-          "image/png": "C:\\Users\\Ella Metcalfe\\OneDrive - University College London\\Mathematics-for-Natural-Sciences-2\\_build\\jupyter_execute\\LinearAlgebra\\linear_systems_matrices\\linear_transformations_9_0.png"
+          "image/png": "C:\\Users\\Ella Metcalfe\\OneDrive - University College London\\Mathematics-for-Natural-Sciences-2\\_build\\jupyter_execute\\LinearAlgebra\\linear_systems_matrices\\linear_transformations_4_0.png"
         }
       },
       "data": {
@@ -214,19 +114,19 @@
         "application/papermill.record/image/png": null
       }
     },
-    "la_fig_6": {
+    "la_fig_7": {
       "output_type": "display_data",
       "metadata": {
         "scrapbook": {
-          "name": "la_fig_6",
+          "name": "la_fig_7",
           "mime_prefix": "application/papermill.record/"
         },
         "filenames": {
-          "image/png": "C:\\Users\\Ella Metcalfe\\OneDrive - University College London\\Mathematics-for-Natural-Sciences-2\\_build\\jupyter_execute\\LinearAlgebra\\linear_systems_matrices\\linear_transformations_8_0.png"
+          "image/png": "C:\\Users\\Ella Metcalfe\\OneDrive - University College London\\Mathematics-for-Natural-Sciences-2\\_build\\jupyter_execute\\LinearAlgebra\\linear_systems_matrices\\linear_transformations_9_0.png"
         }
       },
       "data": {
-        "application/papermill.record/text/plain": "<Figure size 720x194.4 with 3 Axes>",
+        "application/papermill.record/text/plain": "<Figure size 684x288 with 2 Axes>",
         "application/papermill.record/image/png": null
       }
     }

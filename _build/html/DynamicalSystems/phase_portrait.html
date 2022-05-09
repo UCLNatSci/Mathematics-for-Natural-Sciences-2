@@ -380,13 +380,13 @@
 <div class="section" id="a-motivating-example-in-1d">
 <span id="motv-exam"></span><h2><span class="section-number">22.1. </span>A motivating example in 1D<a class="headerlink" href="#a-motivating-example-in-1d" title="Permalink to this headline">¶</a></h2>
 <p>Consider the following ODE, subject to the given initial condition :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-903368be-8524-44bb-a01b-62d946be2e3a">
-<span class="eqno">(22.1)<a class="headerlink" href="#equation-903368be-8524-44bb-a01b-62d946be2e3a" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-25d7218c-6f15-481e-ad5e-f87a0f8d81ff">
+<span class="eqno">(22.1)<a class="headerlink" href="#equation-25d7218c-6f15-481e-ad5e-f87a0f8d81ff" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \dot{x}=2x, \qquad x(0)=x_0.
 \end{equation}\]</div>
 <p>We can solve this problem by separation of variables to obtain a family of solution curves, each corresponding to different values of the initial condition:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c2830a03-b6c9-4ce5-b740-b354dc63ac26">
-<span class="eqno">(22.2)<a class="headerlink" href="#equation-c2830a03-b6c9-4ce5-b740-b354dc63ac26" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-299dd69f-a5ce-4473-b9e1-dccedd17492c">
+<span class="eqno">(22.2)<a class="headerlink" href="#equation-299dd69f-a5ce-4473-b9e1-dccedd17492c" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 x = x_0 e^{2t}.
 \end{equation}\]</div>
 <p>Notice that for this example,</p>
@@ -414,7 +414,7 @@ x = x_0 e^{2t}.
 <div class="exercise admonition" id="DynamicalSystems/phase_portrait-exercise-0">
 <p class="admonition-title"><span class="caption-number">Exercise 22.1 </span> </p>
 <div class="section" id="exercise-content">
-<p>By hand, try to produce a similar sketch of the state space for the following nonlinear ODE, assuming that <span class="math notranslate nohighlight">\(a&lt;k\)</span>:</p>
+<p>By hand, try to produce a similar sketch of the state space for the following nonlinear ODE, assuming that <span class="math notranslate nohighlight">\(0&lt;a&lt;k\)</span> and that <span class="math notranslate nohighlight">\(r&gt;0\)</span>:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
 x'=rx\left(1-\frac{x}{k}\right)\left(\frac{x}{a}-1\right)
@@ -438,18 +438,18 @@ Here the graphs of <span class="math notranslate nohighlight">\((x,\dot{x})\)</s
 <div class="section" id="a-motivating-example-in-2d">
 <span id="undamp-pend"></span><h2><span class="section-number">22.2. </span>A motivating example in 2D<a class="headerlink" href="#a-motivating-example-in-2d" title="Permalink to this headline">¶</a></h2>
 <p>We now consider the equation of motion for a simple pendulum, which is given by the following nonlinear second order ODE. The term with coefficient <span class="math notranslate nohighlight">\(k\)</span> represents frictional effects, and the term with coefficient <span class="math notranslate nohighlight">\(\omega^2\)</span> represents the weight of the pendulum.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a7daea77-4894-43f1-9d3b-d0a4047d9404">
-<span class="eqno">(22.3)<a class="headerlink" href="#equation-a7daea77-4894-43f1-9d3b-d0a4047d9404" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-97d6ca02-fea9-42ed-815a-bbdbc7cdb8e0">
+<span class="eqno">(22.3)<a class="headerlink" href="#equation-97d6ca02-fea9-42ed-815a-bbdbc7cdb8e0" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \ddot{x}+k\dot{x}+\omega^2\sin(x)=0
 \end{equation}\]</div>
 <p>We may rewrite the equation as a coupled first order system by introducing the variable <span class="math notranslate nohighlight">\(y=\dot{x}\)</span>, which gives</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7d3fedcc-3b14-413b-83de-ff9be017cdce">
-<span class="eqno">(22.4)<a class="headerlink" href="#equation-7d3fedcc-3b14-413b-83de-ff9be017cdce" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-b06cd033-17d4-4f6f-964d-399c9a907fcb">
+<span class="eqno">(22.4)<a class="headerlink" href="#equation-b06cd033-17d4-4f6f-964d-399c9a907fcb" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \begin{bmatrix}\dot{x}\\\dot{y}\end{bmatrix} = \begin{bmatrix}y\\-\omega^2\sin(x)-ky\end{bmatrix}
 \end{equation}\]</div>
 <p>The system has equilibrium points when <span class="math notranslate nohighlight">\(\dot{x}=\dot{y}=0\)</span>. These occur at</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e86e46b4-ff38-4437-881e-12b3e08b93b9">
-<span class="eqno">(22.5)<a class="headerlink" href="#equation-e86e46b4-ff38-4437-881e-12b3e08b93b9" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-a7c043b9-f221-402d-96af-77f021cbb7e5">
+<span class="eqno">(22.5)<a class="headerlink" href="#equation-a7c043b9-f221-402d-96af-77f021cbb7e5" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 x=n\pi, \quad y=0, \qquad n\in\mathbb{Z}.
 \end{equation}\]</div>
 <div class="theorem admonition">
