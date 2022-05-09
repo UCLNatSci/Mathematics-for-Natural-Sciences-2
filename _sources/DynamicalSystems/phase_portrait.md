@@ -93,7 +93,7 @@ The state space diagram provides a qualitative view of the ordinary differential
 The diagram also provides information about how the system will behave for all possible initial conditions.
 
 ```{exercise}
-By hand, try to produce a similar sketch of the state space for the following nonlinear ODE, assuming that $a<k$:
+By hand, try to produce a similar sketch of the state space for the following nonlinear ODE, assuming that $0<a<k$ and that $r>0$:
 
  \begin{equation*}
 x'=rx\left(1-\frac{x}{k}\right)\left(\frac{x}{a}-1\right)
