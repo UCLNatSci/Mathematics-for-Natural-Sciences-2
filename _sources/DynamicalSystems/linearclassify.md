@@ -345,9 +345,9 @@ Eigenvalues and corresponding eigenvectors:
 
 In the case of complex conjugate eigenvalues the eigenvectors will also be complex, of the form $\underline{v}=\underline{v}_r\pm i\underline{v}_i$. Expanding out the complex terms in the general solution {eq}`realeigs` using Euler's identity gives a solution of the form
 
-```{math}
+\begin{equation}
 \underline{x}=c_1 \underline{x}_1+c_2\underline{x}_2
-```
+\end{equation}
 where
 
 \begin{align*}
