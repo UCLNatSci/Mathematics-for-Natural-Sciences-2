@@ -321,7 +321,7 @@ glue("fig_stableinflected", fig, display=False)
 # 
 # \begin{align*}
 # \underline{x}_1&= e^{\mu t}(\underline{v}_r \cos(\omega t)-\underline{v}_i \sin(\omega t))\\
-# \underline{x}_2&= e^{\mu t}(\underline{v}_r \cos(\omega t)+\underline{v}_i \sin(\omega t))\\
+# \underline{x}_2&= e^{\mu t}(\underline{v}_r \sin(\omega t)+\underline{v}_i \cos(\omega t))\\
 # \end{align*}
 # 
 # It can be seen that the solutions for $(x,y)$ demonstrate oscillating behaviour with growing or decay amplitude.
