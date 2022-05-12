@@ -232,6 +232,8 @@ true.  We denote this as:
 ```{math}
 P(p,\,q,\,\dots) \Rightarrow Q(p,\,q,\,\dots) 
 ```
+This is distinct from a logical argument, because we are only interested in statements being true (whereas in logical arguments a false statement can invalidate them).
+
 We can consider the truth table:
 
 - $p \Rightarrow p \vee q$
@@ -243,9 +245,9 @@ We can consider the truth table:
 | F | T | T |
 | F | F | F |
 
-Since in the first two rows $p \vee q$ is true whenever $p$ is true, thus $p \Rightarrow p \vee q$:
+Since in the first two rows $p \vee q$ is true whenever $p$ is true, thus $p \Rightarrow p \vee q$ and the implication is true.
 
-- $p \Rightarrow \neg p \vee \neg q$.
+- $p \Rightarrow \neg p \wedge \neg q$.
 
 |$p$ | $\neg p$ | $q$ | $\neg q$ | $\neg p \wedge \neg q$ |
 |---|---|---|---|---|
@@ -254,4 +256,15 @@ Since in the first two rows $p \vee q$ is true whenever $p$ is true, thus $p \Ri
 | F | T | T | F | F |
 | F | T | F | T | T |
 
-Since in the final row $\neg p \vee \neg q$ is true but $p$ is false, this implication is false.
+Since in the first two rows $p$ is true, but $\neg p \wedge \neg q$ is false, thus this implication is false.
+
+-  $\left(p,\, q\right)  \Rightarrow (p \wedge q,\, p \vee q)$.
+
+|$p$ | $q$ | $p \wedge q$ | $p \vee q$ |
+|---|---|---|---|
+| T | T | T | T |
+| T | F | F | T |
+| F | T | F | T |
+| F | F | F | F |
+
+Since in the first row $p \wedge q$ and $p \vee q$ are both true and also $p$ and $q$ are all true, thus this implication is true.

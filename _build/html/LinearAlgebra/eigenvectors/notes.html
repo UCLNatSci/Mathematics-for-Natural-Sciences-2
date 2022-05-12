@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>20. Eigenvalues and Eigenvectors &#8212; Mathematics for Natural Sciences 2</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -43,22 +43,25 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="21. Matrix Diagonalisation" href="../linear_systems_matrices/diagonalisation.html" />
     <link rel="prev" title="19. Determinants" href="../linear_systems_matrices/determinants.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -75,6 +78,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="../../_static/logo.png" class="logo" alt="logo">
       
       
@@ -84,7 +91,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -270,7 +277,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -288,12 +295,12 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
@@ -335,7 +342,57 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Eigenvalues and Eigenvectors</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   20.1. Eigenvalues and Eigenvectors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#eigenspaces">
+   20.2. Eigenspaces
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#calculating-eigenspaces">
+     20.2.1. Calculating Eigenspaces
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-characteristic-polynomial">
+   20.3. The Characteristic Polynomial
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calculating-eigenvalues">
+   20.4. Calculating Eigenvalues
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solutions-to-exercises">
+   20.5. Solutions to Exercises
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="section" id="eigenvalues-and-eigenvectors">
@@ -368,7 +425,8 @@
 </ol>
 </div>
 <div class="exercise admonition" id="q_check_eigenvector">
-<p class="admonition-title"><span class="caption-number">Exercise 20.1 </span> </p>
+
+<p class="admonition-title"><span class="caption-number">Exercise 20.1 </span></p>
 <div class="section" id="exercise-content">
 <p>Let the matrix <span class="math notranslate nohighlight">\(A = \begin{pmatrix}0 &amp; 6 &amp; 8 \\ \frac{1}{2} &amp; 0 &amp;0 \\ 0 &amp; \frac{1}{2} &amp; 0\end{pmatrix}\)</span> and vectors <span class="math notranslate nohighlight">\(v_1 = \begin{pmatrix} 16 \\ 4 \\ 1 \end{pmatrix}\)</span>, <span class="math notranslate nohighlight">\(v_2 = \begin{pmatrix} 2 \\ 2 \\ 2 \end{pmatrix}\)</span>.</p>
 <ol class="simple">
@@ -467,7 +525,8 @@ x_1 &amp; {}+{} &amp; 2x_2 &amp; {}={} &amp;  \lambda x_1  \\
 <p>Therefore <span class="math notranslate nohighlight">\(\lambda = 3\)</span> is an eigenvalue with corresponding eigenvector <span class="math notranslate nohighlight">\(v = \begin{pmatrix}-4  \\ 1\end{pmatrix}\)</span>.</p>
 </div>
 <div class="exercise admonition" id="q_check_eigenvalue">
-<p class="admonition-title"><span class="caption-number">Exercise 20.2 </span> </p>
+
+<p class="admonition-title"><span class="caption-number">Exercise 20.2 </span></p>
 <div class="section" id="exercise-content">
 <p>Show that <span class="math notranslate nohighlight">\(\lambda=-2\)</span> is an eigenvalue of the matrix <a class="reference internal" href="#equation-eqn-eigenvector-example">(20.2)</a> and calculate its eigenvector.</p>
 </div>
@@ -522,8 +581,8 @@ f(\lambda) &amp;= \mathrm{det}\left(A - \lambda I\right)\\
 <div class="math notranslate nohighlight">
 \[\begin{split}A - \lambda_1 I = \begin{pmatrix}2-2\sqrt{2} &amp; 2 \\ 2 &amp; -2-\sqrt{2}\end{pmatrix}\end{split}\]</div>
 <p>Reduces to:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bf631f9b-b991-4ce1-8251-2bd8b1231404">
-<span class="eqno">(20.3)<a class="headerlink" href="#equation-bf631f9b-b991-4ce1-8251-2bd8b1231404" title="Permalink to this equation">¶</a></span>\[\begin{pmatrix}1 &amp; -1-\sqrt{2}\\ 0 &amp; 0\end{pmatrix}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-99b70c0b-61ef-4654-8628-d297bc52907a">
+<span class="eqno">(20.3)<a class="headerlink" href="#equation-99b70c0b-61ef-4654-8628-d297bc52907a" title="Permalink to this equation">¶</a></span>\[\begin{pmatrix}1 &amp; -1-\sqrt{2}\\ 0 &amp; 0\end{pmatrix}\]</div>
 <p>and the general solution to <span class="math notranslate nohighlight">\(\left(A - \lambda_1I\right)v=0\)</span> is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} v = x_2\begin{pmatrix}1+\sqrt{2}  \\ 1\end{pmatrix}.\end{split}\]</div>
@@ -580,7 +639,8 @@ f(\lambda) &amp;= \mathrm{det}\left(A - \lambda I\right)\\
 \[\begin{split}t\begin{pmatrix}4\\-2\\1\end{pmatrix}, t\in \mathbb{R}.\end{split}\]</div>
 </div>
 <div class="exercise admonition" id="calculate_eigenvectors">
-<p class="admonition-title"><span class="caption-number">Exercise 20.3 </span> </p>
+
+<p class="admonition-title"><span class="caption-number">Exercise 20.3 </span></p>
 <div class="section" id="exercise-content">
 <p>Find the eigenvalues and eigenvectors of the matrix</p>
 <div class="math notranslate nohighlight">
@@ -591,7 +651,8 @@ f(\lambda) &amp;= \mathrm{det}\left(A - \lambda I\right)\\
 <div class="section" id="solutions-to-exercises">
 <h2><span class="section-number">20.5. </span>Solutions to Exercises<a class="headerlink" href="#solutions-to-exercises" title="Permalink to this headline">¶</a></h2>
 <div class="solution admonition" id="LinearAlgebra/eigenvectors/notes-solution-3">
-<p class="admonition-title">Solution to : <a class="reference external" href="#q_check_eigenvector"><span>Exercise 20.1</span></a></p>
+
+<p class="admonition-title"><a class="reference internal" href="#q_check_eigenvector">Solution to Exercise 20.1</a></p>
 <div class="section" id="solution-content">
 <div class="math notranslate nohighlight">
 \[\begin{split}Av_1 =\begin{pmatrix}0 &amp; 6 &amp; 8 \\ \frac{1}{2} &amp; 0 &amp;0 \\ 0 &amp; \frac{1}{2} &amp; 0\end{pmatrix}\begin{pmatrix} 16 \\ 4 \\ 1 \end{pmatrix} = \begin{pmatrix} 32 \\ 8 \\ 2 \end{pmatrix} = 2v_1.\end{split}\]</div>
@@ -602,7 +663,8 @@ f(\lambda) &amp;= \mathrm{det}\left(A - \lambda I\right)\\
 </div>
 </div>
 <div class="solution admonition" id="LinearAlgebra/eigenvectors/notes-solution-4">
-<p class="admonition-title">Solution to : <a class="reference external" href="#q_check_eigenvalue"><span>Exercise 20.2</span></a></p>
+
+<p class="admonition-title"><a class="reference internal" href="#q_check_eigenvalue">Solution to Exercise 20.2</a></p>
 <div class="section" id="solution-content">
 <p><span class="math notranslate nohighlight">\(\lambda = -2\)</span> is an eigenvalue of <span class="math notranslate nohighlight">\(A\)</span> if the equation <span class="math notranslate nohighlight">\(\left(A + 2I\right)v = 0\)</span> has non-zero solutions.</p>
 <div class="math notranslate nohighlight">
@@ -617,7 +679,8 @@ f(\lambda) &amp;= \mathrm{det}\left(A - \lambda I\right)\\
 </div>
 </div>
 <div class="solution admonition" id="LinearAlgebra/eigenvectors/notes-solution-5">
-<p class="admonition-title">Solution to : <a class="reference external" href="#calculate_eigenvectors"><span>Exercise 20.3</span></a></p>
+
+<p class="admonition-title"><a class="reference internal" href="#calculate_eigenvectors">Solution to Exercise 20.3</a></p>
 <div class="section" id="solution-content">
 <p>1. Calculate the characteristic polynomial.</p>
 <div class="math notranslate nohighlight">
@@ -684,34 +747,42 @@ f(\lambda) &amp;= \det(M-\lambda I)\\
 
               </div>
               
-        
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../linear_systems_matrices/determinants.html" title="previous page"><span class="section-number">19. </span>Determinants</a>
-    <a class='right-next' id="next-link" href="../linear_systems_matrices/diagonalisation.html" title="next page"><span class="section-number">21. </span>Matrix Diagonalisation</a>
-
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../linear_systems_matrices/determinants.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">19. </span>Determinants</p>
         </div>
-        
+    </a>
+    <a class='right-next' id="next-link" href="../linear_systems_matrices/diagonalisation.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">21. </span>Matrix Diagonalisation</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Natural Sciences<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+    <footer class="footer">
+  <p>
+    
+      By Natural Sciences<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>
