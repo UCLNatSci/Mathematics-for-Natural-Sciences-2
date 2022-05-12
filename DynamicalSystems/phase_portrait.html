@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>22. The phase portrait &#8212; Mathematics for Natural Sciences 2</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -43,22 +43,25 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="23. Linear systems" href="linearclassify.html" />
     <link rel="prev" title="21. Matrix Diagonalisation" href="../LinearAlgebra/linear_systems_matrices/diagonalisation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -75,6 +78,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="../_static/logo.png" class="logo" alt="logo">
       
       
@@ -84,7 +91,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -273,7 +280,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -308,12 +315,12 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#a-motivating-example-in-1d">
@@ -370,7 +377,72 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>The phase portrait</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-motivating-example-in-1d">
+   22.1. A motivating example in 1D
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-motivating-example-in-2d">
+   22.2. A motivating example in 2D
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#solving-numerically">
+     22.2.1. Solving numerically
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#time-series-plots">
+     22.2.2. Time series plots
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#state-space-plots">
+     22.2.3. State space plots
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     22.2.4. The phase portrait
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-vector-field">
+     22.2.5. The vector field
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#classifying-different-behaviours">
+     22.2.6. Classifying different behaviours
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise">
+   22.3. Exercise
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="section" id="the-phase-portrait">
@@ -380,13 +452,13 @@
 <div class="section" id="a-motivating-example-in-1d">
 <span id="motv-exam"></span><h2><span class="section-number">22.1. </span>A motivating example in 1D<a class="headerlink" href="#a-motivating-example-in-1d" title="Permalink to this headline">¶</a></h2>
 <p>Consider the following ODE, subject to the given initial condition :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-25d7218c-6f15-481e-ad5e-f87a0f8d81ff">
-<span class="eqno">(22.1)<a class="headerlink" href="#equation-25d7218c-6f15-481e-ad5e-f87a0f8d81ff" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-64ce87ad-3a91-4a7c-af9d-fae4f36d53f2">
+<span class="eqno">(22.1)<a class="headerlink" href="#equation-64ce87ad-3a91-4a7c-af9d-fae4f36d53f2" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \dot{x}=2x, \qquad x(0)=x_0.
 \end{equation}\]</div>
 <p>We can solve this problem by separation of variables to obtain a family of solution curves, each corresponding to different values of the initial condition:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-299dd69f-a5ce-4473-b9e1-dccedd17492c">
-<span class="eqno">(22.2)<a class="headerlink" href="#equation-299dd69f-a5ce-4473-b9e1-dccedd17492c" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-6a1efaef-19c0-4e57-8343-4525fc056cfa">
+<span class="eqno">(22.2)<a class="headerlink" href="#equation-6a1efaef-19c0-4e57-8343-4525fc056cfa" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 x = x_0 e^{2t}.
 \end{equation}\]</div>
 <p>Notice that for this example,</p>
@@ -412,7 +484,8 @@ x = x_0 e^{2t}.
 <p>The state space diagram provides a qualitative view of the ordinary differential equation, from only a one-dimensional image. We can infer from the state space diagram that the point <span class="math notranslate nohighlight">\(x=0\)</span> is an equilibrium point, and moreover that it is <strong>unstable</strong>. If we provide an initial condition near to the equilibrium point, the system will move away from the equilibrium.</p>
 <p>The diagram also provides information about how the system will behave for all possible initial conditions.</p>
 <div class="exercise admonition" id="DynamicalSystems/phase_portrait-exercise-0">
-<p class="admonition-title"><span class="caption-number">Exercise 22.1 </span> </p>
+
+<p class="admonition-title"><span class="caption-number">Exercise 22.1 </span></p>
 <div class="section" id="exercise-content">
 <p>By hand, try to produce a similar sketch of the state space for the following nonlinear ODE, assuming that <span class="math notranslate nohighlight">\(0&lt;a&lt;k\)</span> and that <span class="math notranslate nohighlight">\(r&gt;0\)</span>:</p>
 <div class="amsmath math notranslate nohighlight">
@@ -438,18 +511,18 @@ Here the graphs of <span class="math notranslate nohighlight">\((x,\dot{x})\)</s
 <div class="section" id="a-motivating-example-in-2d">
 <span id="undamp-pend"></span><h2><span class="section-number">22.2. </span>A motivating example in 2D<a class="headerlink" href="#a-motivating-example-in-2d" title="Permalink to this headline">¶</a></h2>
 <p>We now consider the equation of motion for a simple pendulum, which is given by the following nonlinear second order ODE. The term with coefficient <span class="math notranslate nohighlight">\(k\)</span> represents frictional effects, and the term with coefficient <span class="math notranslate nohighlight">\(\omega^2\)</span> represents the weight of the pendulum.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-97d6ca02-fea9-42ed-815a-bbdbc7cdb8e0">
-<span class="eqno">(22.3)<a class="headerlink" href="#equation-97d6ca02-fea9-42ed-815a-bbdbc7cdb8e0" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-4f8e149b-7e55-41c8-a0c6-d4c1c05f6686">
+<span class="eqno">(22.3)<a class="headerlink" href="#equation-4f8e149b-7e55-41c8-a0c6-d4c1c05f6686" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \ddot{x}+k\dot{x}+\omega^2\sin(x)=0
 \end{equation}\]</div>
 <p>We may rewrite the equation as a coupled first order system by introducing the variable <span class="math notranslate nohighlight">\(y=\dot{x}\)</span>, which gives</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b06cd033-17d4-4f6f-964d-399c9a907fcb">
-<span class="eqno">(22.4)<a class="headerlink" href="#equation-b06cd033-17d4-4f6f-964d-399c9a907fcb" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-634b263a-d456-4999-abbf-162ee8976c5d">
+<span class="eqno">(22.4)<a class="headerlink" href="#equation-634b263a-d456-4999-abbf-162ee8976c5d" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \begin{bmatrix}\dot{x}\\\dot{y}\end{bmatrix} = \begin{bmatrix}y\\-\omega^2\sin(x)-ky\end{bmatrix}
 \end{equation}\]</div>
 <p>The system has equilibrium points when <span class="math notranslate nohighlight">\(\dot{x}=\dot{y}=0\)</span>. These occur at</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a7c043b9-f221-402d-96af-77f021cbb7e5">
-<span class="eqno">(22.5)<a class="headerlink" href="#equation-a7c043b9-f221-402d-96af-77f021cbb7e5" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-d6faa09e-081d-425a-bbef-b372f8fb724c">
+<span class="eqno">(22.5)<a class="headerlink" href="#equation-d6faa09e-081d-425a-bbef-b372f8fb724c" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 x=n\pi, \quad y=0, \qquad n\in\mathbb{Z}.
 \end{equation}\]</div>
 <div class="theorem admonition">
@@ -684,7 +757,8 @@ x=n\pi, \quad y=0, \qquad n\in\mathbb{Z}.
 <div class="section" id="exercise">
 <h2><span class="section-number">22.3. </span>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h2>
 <div class="exercise admonition" id="ex-222">
-<p class="admonition-title"><span class="caption-number">Exercise 22.2 </span> </p>
+
+<p class="admonition-title"><span class="caption-number">Exercise 22.2 </span></p>
 <div class="section" id="exercise-content">
 <p>The following system is a model of glycolysis, in which <span class="math notranslate nohighlight">\(s\)</span> represents the concentration of F6P (fructose-6-phosphate) and <span class="math notranslate nohighlight">\(p\)</span> represents the concentration of ADP (adenosine diphosphate):</p>
 <div class="amsmath math notranslate nohighlight">
@@ -772,34 +846,42 @@ x=n\pi, \quad y=0, \qquad n\in\mathbb{Z}.
 
               </div>
               
-        
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../LinearAlgebra/linear_systems_matrices/diagonalisation.html" title="previous page"><span class="section-number">21. </span>Matrix Diagonalisation</a>
-    <a class='right-next' id="next-link" href="linearclassify.html" title="next page"><span class="section-number">23. </span>Linear systems</a>
-
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../LinearAlgebra/linear_systems_matrices/diagonalisation.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">21. </span>Matrix Diagonalisation</p>
         </div>
-        
+    </a>
+    <a class='right-next' id="next-link" href="linearclassify.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">23. </span>Linear systems</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Natural Sciences<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+    <footer class="footer">
+  <p>
+    
+      By Natural Sciences<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>

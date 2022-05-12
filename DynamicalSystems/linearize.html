@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>24. Bifurcation analysis &#8212; Mathematics for Natural Sciences 2</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -43,22 +43,25 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="25. Limit cycles" href="limit_cycles.html" />
     <link rel="prev" title="23. Linear systems" href="linearclassify.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -75,6 +78,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="../_static/logo.png" class="logo" alt="logo">
       
       
@@ -84,7 +91,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -270,7 +277,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -288,12 +295,12 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#linearisation">
@@ -349,7 +356,71 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Bifurcation analysis</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#linearisation">
+   24.1. Linearisation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-nonlinear-pendulum">
+     24.1.1. Example: Nonlinear pendulum
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#differential-equations-with-a-parameter">
+   24.2. Differential equations with a parameter
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-a-pitchfork-bifurcation">
+     24.2.1. Example: A pitchfork bifurcation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classifying-bifurcations">
+   24.3. Classifying bifurcations
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pitchfork-bifurcation">
+     24.3.1. Pitchfork bifurcation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#saddle-node-bifurcation">
+     24.3.2. Saddle node bifurcation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#transcritical-bifurcation">
+     24.3.3. Transcritical bifurcation
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="section" id="bifurcation-analysis">
@@ -359,14 +430,14 @@
 <div class="section" id="linearisation">
 <h2><span class="section-number">24.1. </span>Linearisation<a class="headerlink" href="#linearisation" title="Permalink to this headline">¶</a></h2>
 <p>We now consider a general first order coupled autonomous system involving two dependent variables. The problem may be written in the following form, in which the arbitrary functions <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> may be nonlinear:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-24aa27cd-083a-4eed-bda8-7ae67bfc88a7">
-<span class="eqno">(24.1)<a class="headerlink" href="#equation-24aa27cd-083a-4eed-bda8-7ae67bfc88a7" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-6e519a72-9295-47b1-be75-d058c21c2438">
+<span class="eqno">(24.1)<a class="headerlink" href="#equation-6e519a72-9295-47b1-be75-d058c21c2438" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \dot{x} &amp; = f(x,y)\\
 \dot{y} &amp; = g(x,y)
 \end{align}\]</div>
 <p>We will assume that the system has an equilibrium point <span class="math notranslate nohighlight">\((x_0,y_0)\)</span> satisfying</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8f1ec663-c448-49ca-807f-01870d692410">
-<span class="eqno">(24.2)<a class="headerlink" href="#equation-8f1ec663-c448-49ca-807f-01870d692410" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-c909022e-debf-47ab-aa99-ce9ca47dfe19">
+<span class="eqno">(24.2)<a class="headerlink" href="#equation-c909022e-debf-47ab-aa99-ce9ca47dfe19" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 f(x_0,y_0)=g(x_0,y_0)=0.
 \end{equation}\]</div>
 <div class="theorem admonition">
@@ -374,39 +445,39 @@ f(x_0,y_0)=g(x_0,y_0)=0.
 <p>It is not always possible to find all equilibrium points by hand if <span class="math notranslate nohighlight">\(f,g\)</span> are not both simple algebraic functions. In such cases a numerical root-finding algorithm such as Newton-Raphson or bisection algorithm could be employed.</p>
 </div>
 <p>To examine the nature of the equilibrium point, we will expand the functions <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> using Taylor series centred at <span class="math notranslate nohighlight">\((x_0,y_0)\)</span>. Since we are interested in the behaviour of solution trajectories in the neighbourhood of the point, we can linearise the expansion:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f01e26c1-91f0-4716-9114-2dbbd8a9031c">
-<span class="eqno">(24.3)<a class="headerlink" href="#equation-f01e26c1-91f0-4716-9114-2dbbd8a9031c" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9116f49f-b1f3-4717-806d-2fcba4370900">
+<span class="eqno">(24.3)<a class="headerlink" href="#equation-9116f49f-b1f3-4717-806d-2fcba4370900" title="Permalink to this equation">¶</a></span>\[\begin{align}
 f(x,y) &amp; = f(x_0,y_0) +(x-x_0)\frac{\partial f}{\partial x}\biggr|_{(x_0,y_0)}+(y-y_0)\frac{\partial f}{\partial y}\biggr|_{(x_0,y_0)}+\dots\\
 g(x,y) &amp; = g(x_0,y_0) +(x-x_0)\frac{\partial g}{\partial x}\biggr|_{(x_0,y_0)}+(y-y_0)\frac{\partial g}{\partial y}\biggr|_{(x_0,y_0)}+\dots\\
 \end{align}\]</div>
 <p>We can further simplify by making the variable substitution <span class="math notranslate nohighlight">\(X=(x-x_0)\)</span>, <span class="math notranslate nohighlight">\(Y=(y-y_0)\)</span> to obtain</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a4fe0965-43fd-4a3c-bb21-688fdc1c40bb">
-<span class="eqno">(24.4)<a class="headerlink" href="#equation-a4fe0965-43fd-4a3c-bb21-688fdc1c40bb" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-400e0e8f-c82b-4bc8-bdcb-e335e849dfdb">
+<span class="eqno">(24.4)<a class="headerlink" href="#equation-400e0e8f-c82b-4bc8-bdcb-e335e849dfdb" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \dot{X} &amp;= X\frac{\partial f}{\partial x}\biggr|_{(x_0,y_0)}+Y\frac{\partial f}{\partial y}\biggr|_{(x_0,y_0)}\\
 \dot{Y} &amp;= X\frac{\partial g}{\partial x}\biggr|_{(x_0,y_0)}+Y\frac{\partial g}{\partial y}\biggr|_{(x_0,y_0)}
 \end{align}\]</div>
 <p>This is a first order linear system in two unknowns, with equilibrium point at <span class="math notranslate nohighlight">\((X,Y)=(0,0)\)</span>. We can write it in matrix form, just as we did in the previous chapters:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-251d3cb9-6597-4975-a075-db6aea0dc24b">
-<span class="eqno">(24.5)<a class="headerlink" href="#equation-251d3cb9-6597-4975-a075-db6aea0dc24b" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-2f664811-9e05-48d7-819d-7814e3561fbe">
+<span class="eqno">(24.5)<a class="headerlink" href="#equation-2f664811-9e05-48d7-819d-7814e3561fbe" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \frac{\mathrm{d}}{\mathrm{d}t}\begin{bmatrix}X\\Y\end{bmatrix} = J(x_0,y_0)\begin{bmatrix}X\\Y\end{bmatrix}, \qquad J(x_0,y_0)= \begin{bmatrix}\frac{\partial f}{\partial x} &amp; \frac{\partial f}{\partial y}\\ \frac{\partial g}{\partial x} &amp; \frac{\partial g}{\partial y}\end{bmatrix}_{(x_0,y_0)}
 \end{equation}\]</div>
 <p>The coefficient matrix <span class="math notranslate nohighlight">\(J(x,y)\)</span> is called the Jacobian. Finding the eigenvalues and eigenvectors of the Jacobian at the stationary point tells us its stability and allows us to plot the shape of the solution trajectories.</p>
 <div class="section" id="example-nonlinear-pendulum">
 <h3><span class="section-number">24.1.1. </span>Example: Nonlinear pendulum<a class="headerlink" href="#example-nonlinear-pendulum" title="Permalink to this headline">¶</a></h3>
 <p>Recall the equation for the undamped pendulum that was given in the <a class="reference internal" href="phase_portrait.html#undamp-pend"><span class="std std-numref">Section 22.2</span></a> :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c155310a-ffa8-4df9-9f8f-42095120b4cc">
-<span class="eqno">(24.6)<a class="headerlink" href="#equation-c155310a-ffa8-4df9-9f8f-42095120b4cc" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-d9213e03-71ef-4aaf-9d16-a0c83f5891b6">
+<span class="eqno">(24.6)<a class="headerlink" href="#equation-d9213e03-71ef-4aaf-9d16-a0c83f5891b6" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \dot{x} &amp; = y &amp;&amp; =f(x,y)\\
 \dot{y} &amp; = -\omega^2 \sin(x) &amp;&amp; =g(x,y)
 \end{align}\]</div>
 <p>Equilibrium points:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8014d83f-ecc5-4ea9-90ad-07c06e1d933e">
-<span class="eqno">(24.7)<a class="headerlink" href="#equation-8014d83f-ecc5-4ea9-90ad-07c06e1d933e" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-611ead26-c67c-45a1-bbad-6672df06f769">
+<span class="eqno">(24.7)<a class="headerlink" href="#equation-611ead26-c67c-45a1-bbad-6672df06f769" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 f=g=0 \qquad \Rightarrow \quad x=n\pi, \ n\in\mathbb{Z}
 \end{equation}\]</div>
 <p>Evaluate the Jacobian:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ba61729f-a37c-4c3d-93f4-c9a8585e088a">
-<span class="eqno">(24.8)<a class="headerlink" href="#equation-ba61729f-a37c-4c3d-93f4-c9a8585e088a" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-226d5763-d7d5-455c-898c-3d7d3827979a">
+<span class="eqno">(24.8)<a class="headerlink" href="#equation-226d5763-d7d5-455c-898c-3d7d3827979a" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 J(x,y) = \begin{bmatrix}\frac{\partial f}{\partial x} &amp; \frac{\partial f}{\partial y}\\ \frac{\partial g}{\partial x} &amp; \frac{\partial g}{\partial y}\end{bmatrix} = \begin{bmatrix}0 &amp; 1\\ -\omega^2\cos(x) &amp; 0\end{bmatrix}
 \end{equation}\]</div>
 <p>We can separate treatment of the equilibrium points according to even and odd <span class="math notranslate nohighlight">\(n\)</span>.</p>
@@ -438,7 +509,8 @@ J(x,y) = \begin{bmatrix}\frac{\partial f}{\partial x} &amp; \frac{\partial f}{\p
 </div>
 <p>This agrees with the results we found earlier by plotting the vector field and solution trajectories.</p>
 <div class="exercise admonition" id="DynamicalSystems/linearize-exercise-0">
-<p class="admonition-title"><span class="caption-number">Exercise 24.1 </span> </p>
+
+<p class="admonition-title"><span class="caption-number">Exercise 24.1 </span></p>
 <div class="section" id="exercise-content">
 <p>The equation of motion for the damped pendulum is given by</p>
 <div class="amsmath math notranslate nohighlight">
@@ -474,14 +546,14 @@ J(x,y) = \begin{bmatrix}\frac{\partial f}{\partial x} &amp; \frac{\partial f}{\p
 <div class="section" id="example-a-pitchfork-bifurcation">
 <h3><span class="section-number">24.2.1. </span>Example: A pitchfork bifurcation<a class="headerlink" href="#example-a-pitchfork-bifurcation" title="Permalink to this headline">¶</a></h3>
 <p>To illustrate the approach, let us consider the following system that features parameter <span class="math notranslate nohighlight">\(\mu\)</span> :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8da8af04-1075-43fd-85aa-bd6348199b87">
-<span class="eqno">(24.9)<a class="headerlink" href="#equation-8da8af04-1075-43fd-85aa-bd6348199b87" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-d985bab7-a540-4a04-b2f2-5e7be78998c6">
+<span class="eqno">(24.9)<a class="headerlink" href="#equation-d985bab7-a540-4a04-b2f2-5e7be78998c6" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \dot{x} &amp;=y &amp;&amp;=f(x,y)\\
 \dot{y}&amp;=\mu x - y - x^3-x^2 y &amp;&amp;=g(x,y)
 \end{align}\]</div>
 <p>Equilibrium points are found at <span class="math notranslate nohighlight">\((0,0)\)</span>, <span class="math notranslate nohighlight">\((\pm\sqrt{\mu},0)\)</span>, with the latter points existing only for <span class="math notranslate nohighlight">\(\mu\geq 0\)</span>. To classify the equilibrium points we use the Jacobian, which is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-21456789-5743-4af0-ac7f-3cde66942b8c">
-<span class="eqno">(24.10)<a class="headerlink" href="#equation-21456789-5743-4af0-ac7f-3cde66942b8c" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-4fbe5bd3-62f0-479e-8b17-2a34cdc870a5">
+<span class="eqno">(24.10)<a class="headerlink" href="#equation-4fbe5bd3-62f0-479e-8b17-2a34cdc870a5" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 J(x,y)=\begin{bmatrix}0 &amp; 1\\ \mu-3x^2-2xy &amp; -1-x^2\end{bmatrix}
 \end{equation}\]</div>
 <div class="sphinx-bs container pb-4 docutils">
@@ -590,7 +662,8 @@ J(x,y)=\begin{bmatrix}0 &amp; 1\\ \mu-3x^2-2xy &amp; -1-x^2\end{bmatrix}
 </div>
 </div>
 <div class="exercise admonition" id="DynamicalSystems/linearize-exercise-1">
-<p class="admonition-title"><span class="caption-number">Exercise 24.2 </span> </p>
+
+<p class="admonition-title"><span class="caption-number">Exercise 24.2 </span></p>
 <div class="section" id="exercise-content">
 <p>Pick one of the two examples above and sketch change vectors on the diagram. Note that in the bifurcation diagram the <span class="math notranslate nohighlight">\(x\)</span> axis is vertical, so the change vectors will point either up or down depending on the sign of <span class="math notranslate nohighlight">\(\dot{x}\)</span></p>
 </div>
@@ -608,8 +681,8 @@ J(x,y)=\begin{bmatrix}0 &amp; 1\\ \mu-3x^2-2xy &amp; -1-x^2\end{bmatrix}
 </div>
 <p><strong>Classification using the 1D Jacobian</strong></p>
 <p>It is also possible to classify the stability of these equilibria using the 1D Jacobian. For a problem</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e8e36f25-4f72-494b-bdc1-3f44133a1935">
-<span class="eqno">(24.11)<a class="headerlink" href="#equation-e8e36f25-4f72-494b-bdc1-3f44133a1935" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-9e180d18-4cbc-4c46-ba1f-b28e5bfc1698">
+<span class="eqno">(24.11)<a class="headerlink" href="#equation-9e180d18-4cbc-4c46-ba1f-b28e5bfc1698" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \dot{x} = f(x)
 \end{equation}\]</div>
 <p>the Jacobian is simply <span class="math notranslate nohighlight">\(f^{\prime}(x)\)</span>. If <span class="math notranslate nohighlight">\(x_0\)</span> is an equilibrium point then <span class="math notranslate nohighlight">\(f^{\prime}(x_0)\)</span> determines whether the stability as follows:</p>
@@ -619,7 +692,8 @@ J(x,y)=\begin{bmatrix}0 &amp; 1\\ \mu-3x^2-2xy &amp; -1-x^2\end{bmatrix}
 </ul>
 <p>Can you understand why this is so? Think about the shape of the plot <span class="math notranslate nohighlight">\(f(x)\)</span>, which determines the direction vectors <span class="math notranslate nohighlight">\(\dot{x}\)</span>.</p>
 <div class="exercise admonition" id="DynamicalSystems/linearize-exercise-2">
-<p class="admonition-title"><span class="caption-number">Exercise 24.3 </span> </p>
+
+<p class="admonition-title"><span class="caption-number">Exercise 24.3 </span></p>
 <div class="section" id="exercise-content">
 <p>Use the 1D Jacobian to verify the stability results for the case where <span class="math notranslate nohighlight">\(f(x)=\mu x+x^3\)</span>.</p>
 </div>
@@ -679,7 +753,8 @@ J(x,y)=\begin{bmatrix}0 &amp; 1\\ \mu-3x^2-2xy &amp; -1-x^2\end{bmatrix}
 </div>
 </div>
 <div class="exercise admonition" id="DynamicalSystems/linearize-exercise-3">
-<p class="admonition-title"><span class="caption-number">Exercise 24.4 </span> </p>
+
+<p class="admonition-title"><span class="caption-number">Exercise 24.4 </span></p>
 <div class="section" id="exercise-content">
 <p>Pick one of these two cases and plot the change vectors on the diagram. Also use the 1D Jacobian to verify your results.</p>
 </div>
@@ -696,7 +771,8 @@ J(x,y)=\begin{bmatrix}0 &amp; 1\\ \mu-3x^2-2xy &amp; -1-x^2\end{bmatrix}
 </div>
 </div>
 <div class="exercise admonition" id="DynamicalSystems/linearize-exercise-4">
-<p class="admonition-title"><span class="caption-number">Exercise 24.5 </span> </p>
+
+<p class="admonition-title"><span class="caption-number">Exercise 24.5 </span></p>
 <div class="section" id="exercise-content">
 <p>Show that the following two-dimensional problem has a saddle-node bifurcation at <span class="math notranslate nohighlight">\(\mu=0\)</span>:</p>
 <div class="amsmath math notranslate nohighlight">
@@ -718,8 +794,8 @@ J(x,y)=\begin{bmatrix}0 &amp; 1\\ \mu-3x^2-2xy &amp; -1-x^2\end{bmatrix}
 <div class="section" id="transcritical-bifurcation">
 <h3><span class="section-number">24.3.3. </span>Transcritical bifurcation<a class="headerlink" href="#transcritical-bifurcation" title="Permalink to this headline">¶</a></h3>
 <p>A transcritical bifurcation is characterised by a system with one stable equilibrium point and one unstable equilibrium point, which exchange stability when they collide. An example of a transcritical bifurcation is illustrated below.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-43339c39-5468-4408-a362-ab5390ad3731">
-<span class="eqno">(24.12)<a class="headerlink" href="#equation-43339c39-5468-4408-a362-ab5390ad3731" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-3becf279-1c43-4fb1-b61d-a0e612286f7d">
+<span class="eqno">(24.12)<a class="headerlink" href="#equation-3becf279-1c43-4fb1-b61d-a0e612286f7d" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \dot{x}=\mu x - x^2
 \end{equation}\]</div>
 <div class="figure align-default">
@@ -756,34 +832,42 @@ J(x,y)=\begin{bmatrix}0 &amp; 1\\ \mu-3x^2-2xy &amp; -1-x^2\end{bmatrix}
 
               </div>
               
-        
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="linearclassify.html" title="previous page"><span class="section-number">23. </span>Linear systems</a>
-    <a class='right-next' id="next-link" href="limit_cycles.html" title="next page"><span class="section-number">25. </span>Limit cycles</a>
-
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="linearclassify.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">23. </span>Linear systems</p>
         </div>
-        
+    </a>
+    <a class='right-next' id="next-link" href="limit_cycles.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">25. </span>Limit cycles</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Natural Sciences<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+    <footer class="footer">
+  <p>
+    
+      By Natural Sciences<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>

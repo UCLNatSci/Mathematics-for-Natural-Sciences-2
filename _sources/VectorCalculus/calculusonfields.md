@@ -151,7 +151,7 @@ A contour plot of the surface $z = x^3−y^3−2xy+2$, together with the gradien
 We can always take some surface $z = z(x,\,y)$ and convert it into a scalar field $\phi$ with some surface normal ${\bf n} = \nabla \phi$, for instance
 $z = x^3−y^3−2xy+2$ means we can write $\phi = x^3−y^3−2xy+2 - z$ and therefore:
 ```{math}
-{\bf n} = \nabla \phi = \begin{pmatrix} 3x^2 - 2y \\ -3y^2 - 2xz \\ -1 \end{pmatrix}
+{\bf n} = \nabla \phi = \begin{pmatrix} 3x^2 - 2y \\ -3y^2 - 2x \\ -1 \end{pmatrix}
 ```
 
 If we want to find the equation of the resulting tangent surface at a given point, say $A:(1,\,1,\,0)$, then we know that the scalar products of all vectors 

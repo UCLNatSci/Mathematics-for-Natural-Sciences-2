@@ -95,7 +95,7 @@ path length over the $y$ axis:
 ```{math}
 A_y = \int_{y(a)}^{y(b)} 2\pi\,x\,\mathrm{d}s = \int_{y(a)}^{y(b)} 2\pi\,x\,\sqrt{1 + \left(\frac{\mathrm{d}y}{\mathrm{d}x}\right)^2}\,\mathrm{d}y
 ```
-As an exmaple, lets find the volume of a cone depicted in {numref}`cone`, with height $h$ and circular radius $R$, so $y = R x / h$ over the range $x \in [0,\, h]$:
+As an example, lets find the volume of a cone depicted in {numref}`cone`, with height $h$ and circular radius $R$, so $y = R x / h$ over the range $x \in [0,\, h]$:
 
 ```{math}
 V_x = \int_0^h \pi\,\left(\frac{R x}{h}\right)^2\,\mathrm{d}x = \frac{R^2 \,\pi}{h^2}\Big[ \frac{1}{3}x^3\Big]_0^h = \frac{1}{3}\pi \,R^2\,h\\
