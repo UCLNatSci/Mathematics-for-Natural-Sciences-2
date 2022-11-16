@@ -13,8 +13,11 @@ to be confused with taking some partial derivative!), as depicted in {numref}`ga
 name: gaussdivergence
 ---
 Vectorial surface-area element $\mathrm{d}{\bf S}$ of a closed surface $S = \partial V$, with the convention that 
-$\mathrm{d}{\bf S} = \hat{\bf b} \mathrm{D}S$ points outwards.
+$\mathrm{d}{\bf S} = \hat{\bf n} \mathrm{d}S$ points outwards.
 ```
+
+````{admonition} Definition
+
 Thinking about a vector field ${\bf G}({\bf r})$ through the closed surface $S$, one thing we can do is count the flux from the surface intregral:
 ```{math}
 \int_S {\bf G}({\bf r})\cdot \mathrm{d}{\bf S}
@@ -25,13 +28,15 @@ This result gives us the <b>Divergence Theorem</b>:
 ```{math}
 \int_S {\bf G}({\bf r})\cdot \mathrm{d}{\bf S} = \int_V \left(\nabla \cdot G\right)\,\mathrm{d}V
 ```
+````
 
-### Divergence Theorem Example
-Lets start with an example, for the vector field:
+````{admonition} Worked example
+:class: seealso
+Consider the vector field:
 ```{math}
 {\bf G}({\bf r}) = \begin{pmatrix} x^2 \\ y \\ z \end{pmatrix}
 ```
-over a cubic volume, centered on the origin, with corners $(\pm 1,\, \pm 1,\, \pm 1)$, as depicted in {numref}`divergencecube`
+over a cubic volume surface, centered on the origin, with corners $(\pm 1,\, \pm 1,\, \pm 1)$, as depicted in {numref}`divergencecube`.
 
 ```{figure} ../figures/divergencecube.png
 ---
@@ -42,16 +47,17 @@ An example cubic surface around some vector field divergence.
 
 If we compute the surface integral:
 ```{math}
-I = \int_{S = \partial V} {\bf G}({\bf r})\cdot \mathrm{d}{\bf S} &=& \,
+I &= \int_{S = \partial V} {\bf G}({\bf r})\cdot \mathrm{d}{\bf S} \\
+&= \,
 \int_{-1}^1 \,\mathrm{d}y\,\int_{-1}^1\,\mathrm{d}z \,\begin{pmatrix} 1 \\ y \\ z \end{pmatrix} \cdot \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix} 
- + \int_{-1}^1 \,\mathrm{d}y\,\int_{-1}^1\,\mathrm{d}z \,\begin{pmatrix} 1 \\ y \\ z \end{pmatrix} \cdot \begin{pmatrix} - \\ 0\\ 0 \end{pmatrix}  \\ 
-&+& \,
+ + \int_{-1}^1 \,\mathrm{d}y\,\int_{-1}^1\,\mathrm{d}z \,\begin{pmatrix} 1 \\ y \\ z \end{pmatrix} \cdot \begin{pmatrix} -1 \\ 0\\ 0 \end{pmatrix}  \\ 
+&+ \,
 \int_{-1}^1 \,\mathrm{d}x\,\int_{-1}^1\,\mathrm{d}z \,\begin{pmatrix} x^2 \\ 1 \\ z \end{pmatrix} \cdot \begin{pmatrix} x^2 \\ 1 \\ 0 \end{pmatrix} 
  + \int_{-1}^1 \,\mathrm{d}y\,\int_{-1}^1\,\mathrm{d}z \,\begin{pmatrix} x^2 \\ -1 \\ z \end{pmatrix} \cdot \begin{pmatrix} x^2 \\ -1 \\ 0 \end{pmatrix}  \\ 
- &+& \,
+ &+ \,
  \int_{-1}^1 \,\mathrm{d}x\,\int_{-1}^1\,\mathrm{d}y \,\begin{pmatrix} x^2 \\ y \\ 1 \end{pmatrix} \cdot \begin{pmatrix} x^2 \\ y \\ 1 \end{pmatrix} 
  + \int_{-1}^1 \,\mathrm{d}x\,\int_{-1}^1\,\mathrm{d}y \,\begin{pmatrix} x^2 \\ y \\ -1 \end{pmatrix} \cdot \begin{pmatrix} x^2 \\ y \\ -1 \end{pmatrix}  \\ 
- &=& \,
+ &= \,
  2 \int_{-1}^1 \,\mathrm{d}x\,\int_{-1}^1\,\mathrm{d}z + \int_{-1}^1 \,\mathrm{d}x\,\int_{-1}^1\,\mathrm{d}y  = 16
 ```
 
@@ -64,6 +70,7 @@ I &=  \int_{V} (\nabla \cdot {\bf G})\,\mathrm{d}V = \int_{-1}^1\,\mathrm{d}x\, 
 
 In agreement with the previous result and whole lot easier to do!
 
+````
 
 ### A Sketch of a Proof
 
@@ -82,15 +89,15 @@ volume element $\mathrm{d}V = \mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z$:
 :label: divtheoremproof
 \mathrm{d}F &=  {\bf G}\left({\bf r} + \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)\cdot \hat{\bf x}\,\mathrm{d}y\,\mathrm{d}z 
 + {\bf G}\left({\bf r} - \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)\cdot (-\hat{\bf x})\,\mathrm{d}y\,\mathrm{d}z\\
-&+&\, {\bf G}\left({\bf r} + \frac{1}{2}\mathrm{d}y\,\hat{\bf y} \right)\cdot \hat{\bf y}\,\mathrm{d}x\,\mathrm{d}z 
+&+\, {\bf G}\left({\bf r} + \frac{1}{2}\mathrm{d}y\,\hat{\bf y} \right)\cdot \hat{\bf y}\,\mathrm{d}x\,\mathrm{d}z 
 + {\bf G}\left({\bf r} - \frac{1}{2}\mathrm{d}x\,\hat{\bf y} \right)\cdot (-\hat{\bf y})\,\mathrm{d}x\,\mathrm{d}z\\
-&+&\, {\bf G}\left({\bf r} + \frac{1}{2}\mathrm{d}z\,\hat{\bf z} \right)\cdot \hat{\bf z}\,\mathrm{d}x\,\mathrm{d}y 
+&+\, {\bf G}\left({\bf r} + \frac{1}{2}\mathrm{d}z\,\hat{\bf z} \right)\cdot \hat{\bf z}\,\mathrm{d}x\,\mathrm{d}y 
 + {\bf G}\left({\bf r} - \frac{1}{2}\mathrm{d}x\,\hat{\bf z} \right)\cdot (-\hat{\bf z})\,\mathrm{d}x\,\mathrm{d}y
 ```
 
 The first line of {eq}`divtheoremproof` reduces to:
 ```{math}
-&&\, \left[{\bf G}\left({\bf r} + \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)\cdot \hat{\bf x}
+&\, \left[{\bf G}\left({\bf r} + \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)\cdot \hat{\bf x}
 + {\bf G}\left({\bf r} - \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)\cdot (-\hat{\bf x})\right]\,\mathrm{d}y\,\mathrm{d}z\\
 &=  \left[G_x\left({\bf r} + \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)
 - G_x\left({\bf r} - \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)\right]\,\mathrm{d}y\,\mathrm{d}z\\
@@ -142,12 +149,15 @@ which is the desired result.
 
 ## (Kelvin-)Stoke's Theorem
 
+````{admonition} Definition
 Stokes's theorem states that the loop integral of a vector field ${\bf G}({\bf r})$ around the boundary $C = \partial S$ of an open surface $S$ is 
 equal to the flux of the curl of the vector field, $\nabla \times {\bf G}({\bf r})$ through the surface;
 ```{math}
 \oint_{C = \partial S} {\bf G}({\bf r}) \cdot \mathrm{d}{\bf r} = \iint_{S} \Bigg(\nabla \times {\bf G}\Bigg)\cdot\mathrm{d}{\bf S}
 ```
-where the orientation of this closed contour is given by the right hand rule, as depicted in {numref}`stokesRHrule`:
+where the orientation of this closed contour is given by the right hand rule, as depicted in {numref}`stokesRHrule`.
+
+````
 
 ```{figure} ../figures/stokesRHrule.png
 ---
@@ -156,9 +166,10 @@ name: stokesRHrule
 The relevant orientation of the closed contour used in Stoke's theorem.
 ```
 
-### Stoke's Theorem Example
-Lets look at an example, with the vector field ${\bf G}({\bf r}) = \begin{pmatrix} y \\ -z \\ -x^2 \end{pmatrix}$ over a closed path around a 
-circular arc around the origin, which we depict in {numref}`contourexample`:
+````{admonition} Worked example
+:class: seealso
+Consider the vector field ${\bf G}({\bf r}) = \begin{pmatrix} y \\ -z \\ -x^2 \end{pmatrix}$ over a closed circular arc path around the origin, which we depict 
+in {numref}`contourexample`:
 
 ```{figure} ../figures/contourexample.png
 ---
@@ -177,26 +188,28 @@ C_3: {\bf r}(t) &=  \begin{pmatrix} 0 \\ 0 \\ 1-t \end{pmatrix} \Rightarrow {\bf
 Therefore we can calculate the line integral:
 ```{math}
 I &=  \int_C {\bf G}({\bf r})\cdot \mathrm{d}{\bf r} = \int_0^1 {\bf G}({\bf r})\cdot {\bf r'}\,\mathrm{d}t\\
-&=  \int_0^1  \begin{pmatrix} t \\ 0 \\ 0 \end{pmatrix} \cdot \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}\,\mathrm{d}t + 
-\int_0^1  \begin{pmatrix} \cos(\pi t/2) \\ -\sin(\pi t/2) \\ 0 \end{pmatrix}\cdot \begin{pmatrix} 0 \\ -\frac{\pi}{2}\sin(\pi t/2) \\ \frac{\pi}{2}\cos(\pi t/2) \end{pmatrix}\,\mathrm{d}t + 
-\int_0^1  \begin{pmatrix} 0 \\ -(1-t) \\ 0 \end{pmatrix} \cdot\begin{pmatrix} 0 \\ 0 \\ -1 \end{pmatrix}\,\mathrm{d}t\\
-&=  \frac{\pi}{2}\int_0^1\sin^2(\pi t/2)\,\mathrm{d}t = \frac{\pi}{4}\int_0^1\Bigg (1-\cos(\pi t)\Bigg)\,\mathrm{d}t = \frac{\pi}{4}\Bigg[t - \frac{1}{\pi}\sin(\pi t)\Bigg]_0^1 =\frac{\pi}{4}
+&=  \int_0^1  \left[ \begin{pmatrix} t \\ 0 \\ 0 \end{pmatrix} \cdot \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix} 
++ \begin{pmatrix} \cos(\pi t/2) \\ -\sin(\pi t/2) \\ 0 \end{pmatrix}\cdot \begin{pmatrix} 0 \\ -\frac{\pi}{2}\sin(\pi t/2) \\ \frac{\pi}{2}\cos(\pi t/2) \end{pmatrix}
++ \begin{pmatrix} 0 \\ -(1-t) \\ 0 \end{pmatrix} \cdot\begin{pmatrix} 0 \\ 0 \\ -1 \end{pmatrix}\right]\,\mathrm{d}t\\
+&=  \frac{\pi}{2}\int_0^1\sin^2(\pi t/2)\,\mathrm{d}t = \frac{\pi}{4}\int_0^1\Bigg (1-\cos(\pi t)\Bigg)\,\mathrm{d}t 
+= \frac{\pi}{4}\Bigg[t - \frac{1}{\pi}\sin(\pi t)\Bigg]_0^1 =\frac{\pi}{4}
 ```
 
-
-Using Stoke's theorem, we are free to find formally <em>any</em> surface which would be bounded by the contour - however clearly the easiest to work 
+Using Stoke's theorem, we are free to find formally *any* surface which would be bounded by the contour - however clearly the easiest to work 
 with is the area of the quarter circle, sitting on the $y-z$ plane.  To make sure the orientation of the contour matches with the 
-right hand rule, we have $\mathrm{d}{\bf S} = \mathrm{d}y\,\mathrm{d}z\,\hat{\bf x}$, therefore given that 
+right hand rule, we have $\mathrm{d}{\bf S} = \mathrm{d}y\,\mathrm{d}z\,\hat{\bf x}$.  Therefore given that:
 ```{math}
 \nabla \times {\bf G} = \begin{pmatrix} 1\\ 2x\\ -1\end{pmatrix}
 ```
 we can find:
 ```{math}
-I &=  \iint_S\Bigg( \nabla \times {\bf G}\Bigg)\cdot\mathrm{d}{\bf S} \\
-I &=  \iint_S \begin{pmatrix} 1\\ 2x\\ -1\end{pmatrix}\cdot \begin{pmatrix} 1\\ 0\\ 0\end{pmatrix}\,\mathrm{d}y\,\mathrm{d}z\\
+I &=  \iint_S\Bigg( \nabla \times {\bf G}\Bigg)\cdot\mathrm{d}{\bf S} =
+  \iint_S \begin{pmatrix} 1\\ 2x\\ -1\end{pmatrix}\cdot \begin{pmatrix} 1\\ 0\\ 0\end{pmatrix}\,\mathrm{d}y\,\mathrm{d}z\\
 &= \iint_S \,\mathrm{d}y\,\mathrm{d}z = \frac{1}{4}\pi 1^2 = \frac{\pi}{4}
 ```
 Therefore for quite a lot less work, we find the same result!
+
+````
 
 ### A Sketch of a Proof
 
@@ -216,7 +229,7 @@ We can therefore find the loop integral of a vector field ${\bf G}({\bf r})$ aro
 
 dI &=  {\bf G}\left({\bf r} - \frac{1}{2}\mathrm{d}y\,\hat{\bf y} \right)\cdot \hat{\bf x}\,\mathrm{d}x 
 + {\bf G}\left({\bf r} + \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)\cdot \hat{\bf y}\,\mathrm{d}y \\
-&+&\,  {\bf G}\left({\bf r} + \frac{1}{2}\mathrm{d}y\,\hat{\bf y} \right)\cdot (-\hat{\bf x})\,\mathrm{d}x 
+&+\,  {\bf G}\left({\bf r} + \frac{1}{2}\mathrm{d}y\,\hat{\bf y} \right)\cdot (-\hat{\bf x})\,\mathrm{d}x 
 + {\bf G}\left({\bf r} + \frac{1}{2}\mathrm{d}x\,\hat{\bf x} \right)\cdot (-\hat{\bf y})\,\mathrm{d}y \\
 &=  \left[G_x \left({\bf r} - \frac{1}{2}\mathrm{d}y\,\hat{\bf y} \right) 
 - G_x\left({\bf r} + \frac{1}{2}\mathrm{d}y\,\hat{\bf y} \right) \right]\,\mathrm{d}x 

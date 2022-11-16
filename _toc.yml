@@ -6,9 +6,6 @@ root: intro
 options:
   numbered: True
 chapters:
-- file: VectorCalculus/partialdifferentiation
-- file: VectorCalculus/integrationprelim
-- file: VectorCalculus/vectoralgebra
 - file: VectorCalculus/calculusonfields
 - file: VectorCalculus/divandcurl
 - file: VectorCalculus/coordinatesystems
@@ -16,11 +13,6 @@ chapters:
 - file: VectorCalculus/volumeintegrals
 - file: VectorCalculus/surfaceintegrals
 - file: VectorCalculus/vectorcalctheorems
-
-- file: ProofLogic/setsnotation
-- file: ProofLogic/functions
-- file: ProofLogic/propositionallogic
-- file: ProofLogic/methodsofproof
 
 
 - file: LinearAlgebra/linear_systems_matrices/echelon_form.md
@@ -32,9 +24,3 @@ chapters:
 - file: LinearAlgebra/linear_systems_matrices/diagonalisation.md
 
 #- file: LinearAlgebra/problems/problems_1.md
-
-- file: DynamicalSystems/phase_portrait.md
-- file: DynamicalSystems/linearclassify.md
-- file: DynamicalSystems/linearize.md
-- file: DynamicalSystems/limit_cycles.md
-- file: DynamicalSystems/python_examples.md

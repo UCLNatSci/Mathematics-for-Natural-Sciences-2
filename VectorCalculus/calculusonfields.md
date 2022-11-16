@@ -7,8 +7,8 @@ we assume the whole of the space is being used as the domain.
 In a physical sense, a field is some physical quantity which has a value at every point within a space, examples of which include temperature, distances, velocities, 
 acceleations, forces, electric and magnetic fields.  
 
-One impoirtant distinction to make between fields is whether they are <b>Scalar</b>, <b>Vector</b> or some other (e.g. <b>Tensor</b> although this is beyond 
-the scope of this course).
+One important distinction to make between fields is whether they are <b>Scalar</b>, <b>Vector</b> or some other (e.g. <b>Tensor</b> although this is beyond 
+the scope of this course).	
 
 ### Scalar Fields
 A scalar field is a physical quantity which has some value (or magnitude) but contains no information about direction, at every point ${\bf r} = (x, \,y, \,z)$ 
@@ -21,14 +21,14 @@ within a domain. Physical examples include pressure and temperature.  Mathematic
 
 ### Vector Fields
 A vector field A scalar field is a physical quantity which has both magnitude and direction, at every point ${\bf r} = (x, \,y, \,z)$ within a domain.  Physical 
-examples include velocity, force, and electric and magnetic fields.  Mathematically we can write this as a function $\bf A(r)$ such that:
+examples include 8velocity*, *force*, *electric* and *magnetic fields*.  Mathematically we can write this as a function $\bf A(r)$ such that:
 
 ```{math}
-\phi \,:\, D \,\subset\, \mathbb{R}^3 \,&\longrightarrow&\, \mathbb{R}^3 \\
-{\bf r} &\longrightarrow&\, {\bf A(r)} = \begin{pmatrix}
- A_x ({\bf r})\\
- A_y ({\bf r})\\
- A_z ({\bf r}) 
+\phi \,:\, D \,\subset\, \mathbb{R}^3 \,&\longrightarrow \, \mathbb{R}^3 \\
+{\bf r} &\longrightarrow\, {\bf A(r)} = \begin{pmatrix}
+ A_x \,({\bf r})\\
+ A_y \,({\bf r})\\
+ A_z \,({\bf r}) 
 \end{pmatrix}
 ```
 
@@ -53,10 +53,18 @@ over the domain $D\,:\,x^2 + y^2 \leq 1$ (shown in red on the $(x,\,y)$ plane),
 Now that we have defined fields, which can vary according to different parameters at every point within a domain, we can begin to apply 
 our toolkit of mathematical tools, here calculus.  
 
-We can find the partial derivatives of fields in a similar way to functions, for example for $\phi = \exp(-(x^2+y^2)$, ${\bf A(r)} = \frac{1}{10}\begin{pmatrix}
+We can find the partial derivatives of fields in a similar way to functions, 
+
+````{admonition} Worked example 
+:class: seealso 
+Find the $x,\, y$ derivatives for the fields:
+```{math}
+\phi = \exp(-(x^2+y^2), \qquad  {\bf A(r)} = \frac{1}{10}\begin{pmatrix}
  x\\
  y^2
-\end{pmatrix}$:
+\end{pmatrix}
+```
+
 ```{math}
 \partial_x \phi &=  -2x\,\exp(-(x^2+y^2) \\
 \partial_y \phi &=  -2y\,\exp(-(x^2+y^2) \\
@@ -69,9 +77,11 @@ We can find the partial derivatives of fields in a similar way to functions, for
  2y
 \end{pmatrix} 
 ```
+```` 
 
 These partial derivatives measure the change of $\phi$ along the directions of $x$ or $y$, but can we calculate the derivative of $\phi$ along some 
 general direction, characterised by a unit vector $\hat{\bf u}$:
+
 ```{math}
 \hat{\bf u} = \begin{pmatrix}
  u_x\\
@@ -79,7 +89,7 @@ general direction, characterised by a unit vector $\hat{\bf u}$:
  u_z
 \end{pmatrix} 
 ```
-We need a directional derivative, which can tell us about the changes in $\phi$ along each component of $\hat{\bf u}.  This leads us to the gradient
+We need a directional derivative, which can tell us about the changes in $\phi$ along each component of $\hat{\bf u}$.  This leads us to the gradient
 operator:
 ```{math}
 \nabla = \begin{pmatrix}
@@ -116,7 +126,9 @@ direction of maximum increase of $\phi$ (i.e. a maxima).
 Likewise the directional derivative is zero when $\theta = \pi/2$, i.e. tangential surfaces, which would be given by $\phi({\bf r}) = C$ which is 
 one dimension lower than the dimension of the problem (therefore in 3D, these would be surface areas, in 2D there would be contour lines).
 
-As example, lets consider $\phi = \exp(-(x^2+y^2)$ defined over the domain $x^2 + y^2 \leq 1$:
+````{admonition} Worked example
+:class: seealso 
+Consider $\phi = \exp(-(x^2+y^2)$ defined over the domain $x^2 + y^2 \leq 1$, find $\nabla \phi$.  
 ```{math}
 \nabla \phi = \begin{pmatrix}
  -2x\,\exp(-(x^2+y^2) \\
@@ -137,6 +149,7 @@ $\bf r=r_0$).  The gradients are perpendicular to the contour lines and point to
 which from {numref}`scalarvectorfield` we know is a maxima.
 ```
 
+
 The gradient of $\phi(x,\,y,\,z)$ will therefore be perpendicular to the surface $\phi=c$, and we can use this to find the tangent plane 
 to the surface at a given point.  The gradient of $z = z(x,\,y)$ will be perpendicular to the contours of $z$, projected in the $(x,\,y)$ plane, 
 as illustrated in {numref}`quiver`.
@@ -147,9 +160,18 @@ name: quiver
 ---
 A contour plot of the surface $z = x^3−y^3−2xy+2$, together with the gradient field given by $\nabla z = (3x^2−2y,\,−3y^2−2x,\,0)$.
 ```
+````
+We can always take some surface $z = z(x,\,y)$ and convert it into a scalar field $\phi$ with some surface normal ${\bf n} = \nabla \phi$.
 
-We can always take some surface $z = z(x,\,y)$ and convert it into a scalar field $\phi$ with some surface normal ${\bf n} = \nabla \phi$, for instance
-$z = x^3−y^3−2xy+2$ means we can write $\phi = x^3−y^3−2xy+2 - z$ and therefore:
+````{admonition} Worked examples
+:class: seealso
+
+1\. Find the tangent plane for the surface 
+```{math}
+z = x^3−y^3−2xy+2
+```
+
+This equation means we can write $\phi = x^3−y^3−2xy+2 - z$ and therefore:
 ```{math}
 {\bf n} = \nabla \phi = \begin{pmatrix} 3x^2 - 2y \\ -3y^2 - 2x \\ -1 \end{pmatrix}
 ```
@@ -161,18 +183,21 @@ $\begin{pmatrix} x\\y\\z \end{pmatrix}$ on the tangent surface with the surface 
 {\bf n}_A\cdot \begin{pmatrix} x\\y\\z \end{pmatrix} &=  {\bf n}_A\cdot \begin{pmatrix} 1\\1\\0 \end{pmatrix} \Rightarrow x - 5y - z  =-4
 ```
 
-Another example would be to find the gradient of the function $f(x,\,y,\,z) = xyz$ at the point $(−2,\,3,\,4)$ and also find the directional 
-derivative of this function in the direction ${\bf v} = (3, \,-4, \,12)$.   We can find $\nabla f$:
+2\. Find the gradient of the function $f(x,\,y,\,z) = xyz$ at the point $(−2,\,3,\,4)$ and find the directional 
+derivative of this function in the direction ${\bf v} = (3, \,-4, \,12)$.   
+
+We can find $\nabla f$:
 
 ```{math}
-\nabla f = (yz,\,xz,\, xy) \Rightarrow \nabla f\Bigg|_{(−2,\,3,\,4)} = (12,\, -8,\, -6)
+\nabla f = \begin{pmatrix}yz \\ xz \\ xy\end{pmatrix} \Rightarrow \nabla f\Bigg|_{(−2,\,3,\,4)} = \begin{pmatrix} 12 \\ -8 \\ -6\end{pmatrix}
 ```
 and therefore the directional derivative is given by:
 ```{math}
 \frac{1}{|{\bf v}|}{\bf v} \cdot \nabla f\Bigg|_{(−2,\,3,\,4)} \Rightarrow 
-\frac{1}{\sqrt{3^2 + 4^2 + 12^2}} (3, \,-4, \,12)\cdot (12,\, -8,\, -6) = -\frac{4}{13}
+\frac{1}{\sqrt{3^2 + 4^2 + 12^2}} \begin{pmatrix} 3 \\ -4 \\ 12 \end{pmatrix}\cdot \begin{pmatrix} 12 \\ -8 \\ -6\end{pmatrix} = -\frac{4}{13}
 ```
-  
+````
+
 ## Total Differential
 
 Recall from our discussions about partial derivatives, we can also define a <em>scalar total differential</em>:
@@ -192,7 +217,7 @@ To find the <em>vector total differential</em>:
 ```{math}
 \mathrm{d}{\bf A} = \frac{\partial {\bf A} }{\partial x} \mathrm{d} x + \frac{\partial {\bf A} }{\partial y} \mathrm{d} y + \frac{\partial {\bf A} }{\partial z} \mathrm{d} z
 
-```
+````
 
 
 

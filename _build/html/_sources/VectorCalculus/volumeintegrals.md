@@ -41,8 +41,10 @@ then the value of $\phi$ in each infinitesimal box will be what is summedup by t
 The order of the integration can however sometimes matter - this becomes important if the limits of each of the integals depends on one of the other 
 variables (this can happen as when the integration is done, all the other variables are considered constant).
 
-### Area Integral Examples 
+````{admonition} Worked examples
+:class: seealso
 
+1\. 
 Lets think about a flat 2D sheet with some density $\sigma(x,\,y)$ (mass per unit area), as depcited in {numref}`areaintegral`,
 
 ```{figure} ../figures/areaintegral.png
@@ -61,7 +63,7 @@ where we use the final notation for brevity and ease of expression - it does not
 - If the rectangular plate has a uniform density, then $\sigma$ is just a constant and we find:
 
 ```{math}
-M = \sigma\,\int0^a\,\mathrm{d}x\,\int_0^b\,\mathrm{d}y = \sigma\,a\,b = \sigma \,A
+M = \sigma\,\int_0^a\,\mathrm{d}x\,\int_0^b\,\mathrm{d}y = \sigma\,a\,b = \sigma \,A
 ```
 
 - If the rectangular plate has a uniform density, then we need to evaluate the integrals in turn, e.g. for $\sigma(x,\, y) = y^2 + xy$, we can 
@@ -84,6 +86,7 @@ M &=  \int_0^a\,\mathrm{d}x\,\int_0^b\,\mathrm{d}y\,(y^2 + xy) = \int_0^b\,\Bigg
 ```
 So we see in this case, the order of integration does not matter.
 
+2\. 
 Lets look a more involved example, $f(x,\,y) = x^2 + 2xy$ and we are interested in an area over a triangle, as depicted in {numref}`areaintegraltriangle`:
 
 ```{figure} ../figures/areaintegraltriangle.png
@@ -113,6 +116,7 @@ I &=  \int_0^{1-y}\,\mathrm{d}x\,\int_0^{1}\,\mathrm{d}y\,(x^2 + 2xy) = \int_0^1
 = \Bigg[\frac{1}{6}y^4 - \frac{1}{3}y^3 +\frac{1}{3}y\Bigg]_0^1 = \frac{1}{6}
 ```
 
+3\.
 A final example looks at a trickier set of limits, lets try and calculate the integral $I = \iint_A x^2y\,\mathrm{d}A$ for an area composed of 
 a rectangle and a semi-circle, as depicted in {numref}`areaintegralsemicircle`:
 
@@ -159,6 +163,7 @@ A = \iint\,r\mathrm{d}r\,\mathrm{d}\theta = \int_0^R\,r\mathrm{d}r\,\int_0^{\pi}
 ```
 which makes the result we expect!
 
+````
 
 ## Volume Integrals
 

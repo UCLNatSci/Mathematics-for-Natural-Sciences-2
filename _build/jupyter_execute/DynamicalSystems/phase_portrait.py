@@ -269,7 +269,7 @@ plt.show()
 # ```
 # ````
 
-# In[6]:
+# In[ ]:
 
 
 plt.figure(figsize=(12,6))
@@ -308,7 +308,7 @@ plt.show()
 # 
 # Initialising the pendulum with a low/moderate speed provides backward and forward oscillations of constant amplitude (closed trajectories). However, for larger value of the initial speed the pendulum performs complete revolutions (open trajectories). The *separatrix* is the curve that separates the open and closed trajectories. It is identified on the sketch in dashed blue.
 
-# In[7]:
+# In[ ]:
 
 
 plt.figure(figsize=(12,6))
@@ -384,7 +384,7 @@ plt.show()
 # 
 # Replacing the `quiver` function with the `streamplot` function results in an attempt by Python to create the curves that are tangent to the vector field, as shown below-right.
 
-# In[8]:
+# In[ ]:
 
 
 # Define x and y value ranges
@@ -415,7 +415,7 @@ plt.show()
 # 
 # However, by combining  rough-and-ready streamplots with mathematical analysis we can usually get a very clear understanding of the system dynamics.
 
-# In[9]:
+# In[ ]:
 
 
 plt.figure(figsize=(12,6))
@@ -461,7 +461,7 @@ plt.show()
 # plt.streamplot(X,Y,U,V,arrowsize=2)
 # ```
 
-# In[10]:
+# In[ ]:
 
 
 # Define trajectory start points
@@ -507,7 +507,7 @@ plt.show()
 # Also try changing the value of $c$ to 0.9. How do the trajectories in the vicinity of the stationary point change?
 # ```
 
-# In[11]:
+# In[ ]:
 
 
 from myst_nb import glue
