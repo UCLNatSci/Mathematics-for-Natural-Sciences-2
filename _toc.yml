@@ -6,13 +6,14 @@ root: intro
 options:
   numbered: True
 chapters:
+- file: VectorCalculus/coordinatesystems
+- file: VectorCalculus/volumeintegrals
 - file: VectorCalculus/calculusonfields
 - file: VectorCalculus/divandcurl
-- file: VectorCalculus/coordinatesystems
 - file: VectorCalculus/lineintegrals
-- file: VectorCalculus/volumeintegrals
 - file: VectorCalculus/surfaceintegrals
 - file: VectorCalculus/vectorcalctheorems
+- file: VectorCalculus/ODEs
 
 
 - file: LinearAlgebra/linear_systems_matrices/echelon_form.md
