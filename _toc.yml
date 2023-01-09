@@ -16,12 +16,12 @@ chapters:
 - file: VectorCalculus/ODEs
 
 
-- file: LinearAlgebra/linear_systems_matrices/echelon_form.md
-- file: LinearAlgebra/linear_systems_matrices/matrices.md
-- file: LinearAlgebra/linear_systems_matrices/linear_maps.md
-- file: LinearAlgebra/linear_systems_matrices/inverses.md
-- file: LinearAlgebra/linear_systems_matrices/determinants.md
-- file: LinearAlgebra/eigenvectors/notes.md
-- file: LinearAlgebra/linear_systems_matrices/diagonalisation.md
+#- file: LinearAlgebra/linear_systems_matrices/echelon_form.md
+#- file: LinearAlgebra/linear_systems_matrices/matrices.md
+#- file: LinearAlgebra/linear_systems_matrices/linear_maps.md
+#- file: LinearAlgebra/linear_systems_matrices/inverses.md
+#- file: LinearAlgebra/linear_systems_matrices/determinants.md
+#- file: LinearAlgebra/eigenvectors/notes.md
+#- file: LinearAlgebra/linear_systems_matrices/diagonalisation.md
 
 #- file: LinearAlgebra/problems/problems_1.md
