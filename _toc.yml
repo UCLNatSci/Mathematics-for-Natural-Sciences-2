@@ -7,13 +7,13 @@ options:
   numbered: True
 chapters:
 - file: VectorCalculus/coordinatesystems
-- file: VectorCalculus/volumeintegrals
+- file: VectorCalculus/doubletripleintegrals
 - file: VectorCalculus/calculusonfields
 - file: VectorCalculus/divandcurl
-- file: VectorCalculus/lineintegrals
-- file: VectorCalculus/surfaceintegrals
-- file: VectorCalculus/vectorcalctheorems
-- file: VectorCalculus/ODEs
+#- file: VectorCalculus/lineintegrals
+#- file: VectorCalculus/surfaceintegrals
+#- file: VectorCalculus/vectorcalctheorems
+#- file: VectorCalculus/ODEs
 
 
 #- file: LinearAlgebra/linear_systems_matrices/echelon_form.md
