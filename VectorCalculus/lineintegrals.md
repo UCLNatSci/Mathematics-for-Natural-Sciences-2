@@ -238,6 +238,8 @@ both contours, the integral is the weighted sum of $x^2$ along each of these len
 2\. Evaluate the vector line integral $\int_{\mathcal{C}} {\bf F}\cdot \mathrm{d}{\bf r}$ for ${\bf F} = xz\,\hat{\bf x} - yz\,\hat{\bf z}$ 
 along the line linking $(-1,\,2,\,0) \rightarrow (3,\,0,\,1)$.
 
+
+
 ````
 
 
