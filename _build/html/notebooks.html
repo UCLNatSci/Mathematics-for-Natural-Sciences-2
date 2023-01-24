@@ -136,6 +136,31 @@ const thebe_selector_output = ".output, .cell_output"
    4. Variations of Fields
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="VectorCalculus/lineintegrals.html">
+   5. Line Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="VectorCalculus/surfaceintegrals.html">
+   6. Surface Integrals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="VectorCalculus/vectorcalctheorems.html">
+   7. Vector Calculus Theorems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="odes/ODEreduction.html">
+   8. Solving Ordinary Differential Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="odes/ODEvariation.html">
+   9. Solving Ordinary Differential Equations
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -455,7 +480,7 @@ C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\markers.py:825: RuntimeWar
   gauss_w = np.ones([9], dtype=np.float64) / 9.
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.pyplot._IonContext at 0xe024ad8&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.pyplot._IonContext at 0xcef4850&gt;
 </pre></div>
 </div>
 </div>
@@ -500,7 +525,7 @@ C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\function_base.py:161: Runt
   y += start
 C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\function_base.py:277: RuntimeWarning: divide by zero encountered in power
   return _nx.power(base, y)
-C:\Users\alimo\AppData\Local\Temp/ipykernel_3380/3412760897.py:5: RuntimeWarning: divide by zero encountered in add
+C:\Users\alimo\AppData\Local\Temp/ipykernel_19980/3412760897.py:5: RuntimeWarning: divide by zero encountered in add
   data = [np.logspace(0, 1, 100) + np.random.randn(100) + ii for ii in range(N)]
 C:\Users\alimo\anaconda3\lib\site-packages\numpy\lib\function_base.py:1281: RuntimeWarning: divide by zero encountered in subtract
   a = op(a[slice1], a[slice2])
@@ -512,7 +537,9 @@ C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\colors.py:525: RuntimeWarn
   xind = (N - 1) * np.linspace(0, 1, N) ** gamma
 C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\colors.py:525: RuntimeWarning: divide by zero encountered in multiply
   xind = (N - 1) * np.linspace(0, 1, N) ** gamma
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\colors.py:528: RuntimeWarning: divide by zero encountered in subtract
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\colors.py:528: RuntimeWarning: divide by zero encountered in subtract
   distance = (xind[1:-1] - x[ind - 1]) / (x[ind] - x[ind - 1])
 C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\colors.py:528: RuntimeWarning: divide by zero encountered in true_divide
   distance = (xind[1:-1] - x[ind - 1]) / (x[ind] - x[ind - 1])
@@ -538,9 +565,7 @@ C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\colors.py:631: RuntimeWarn
   xa[xa &gt; self.N - 1] = self._i_over
 C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\colors.py:632: RuntimeWarning: divide by zero encountered in less
   xa[xa &lt; 0] = self._i_under
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\fromnumeric.py:87: RuntimeWarning: divide by zero encountered in reduce
+C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\fromnumeric.py:87: RuntimeWarning: divide by zero encountered in reduce
   return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
 C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\figure.py:2251: RuntimeWarning: divide by zero encountered in isfinite
   if not np.isfinite(figsize).all() or (np.array(figsize) &lt; 0).any():
@@ -690,7 +715,9 @@ C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:2035: Runtim
   self._mtx[1, 1] *= sy
 C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:2036: RuntimeWarning: divide by zero encountered in double_scalars
   self._mtx[1, 2] *= sy
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:384: RuntimeWarning: divide by zero encountered in double_scalars
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:384: RuntimeWarning: divide by zero encountered in double_scalars
   return points[1, 1] - points[0, 1]
 C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\axis.py:2539: RuntimeWarning: divide by zero encountered in double_scalars
   length = ends.height * 72
@@ -698,7 +725,9 @@ C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\axis.py:2543: RuntimeWarni
   return int(np.floor(length / size))
 C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\axis.py:2543: RuntimeWarning: divide by zero encountered in floor
   return int(np.floor(length / size))
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib_inline\backend_inline.py:247: RuntimeWarning: divide by zero encountered in greater
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\alimo\anaconda3\lib\site-packages\matplotlib_inline\backend_inline.py:247: RuntimeWarning: divide by zero encountered in greater
   return rgbaArr[:, :3].dot((.299, .587, .114)) &gt; .5
 C:\Users\alimo\anaconda3\lib\site-packages\matplotlib_inline\backend_inline.py:235: RuntimeWarning: divide by zero encountered in equal
   if ticksLight.size and (ticksLight == ticksLight[0]).all():
@@ -770,9 +799,7 @@ C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:2624: Runtim
   self._mtx = np.array([[x_scale, 0.0    , (-inl*x_scale)],
 C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:2625: RuntimeWarning: divide by zero encountered in double_scalars
   [0.0    , y_scale, (-inb*y_scale)],
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:652: RuntimeWarning: divide by zero encountered in add
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:652: RuntimeWarning: divide by zero encountered in add
   return Bbox(self._points + (tx, ty))
 C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\text.py:687: RuntimeWarning: divide by zero encountered in isfinite
   if not np.isfinite(posx) or not np.isfinite(posy):
@@ -904,7 +931,9 @@ C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\spines.py:184: RuntimeWarn
   bb0.y1 = bb0.y1 + padin
 C:\Users\alimo\anaconda3\lib\site-packages\numpy\lib\arraysetops.py:327: RuntimeWarning: divide by zero encountered in not_equal
   mask[1:] = aux[1:] != aux[:-1]
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\lib\arraysetops.py:432: RuntimeWarning: divide by zero encountered in equal
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\alimo\anaconda3\lib\site-packages\numpy\lib\arraysetops.py:432: RuntimeWarning: divide by zero encountered in equal
   mask = aux[1:] == aux[:-1]
 C:\Users\alimo\anaconda3\lib\site-packages\numpy\lib\arraysetops.py:583: RuntimeWarning: divide by zero encountered in equal
   mask |= (ar1 == a)
@@ -912,9 +941,7 @@ C:\Users\alimo\anaconda3\lib\site-packages\numpy\lib\arraysetops.py:583: Runtime
   mask |= (ar1 == a)
 C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\figure.py:1654: RuntimeWarning: divide by zero encountered in isfinite
   if (np.isfinite(b.width) and np.isfinite(b.height)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\tight_bbox.py:65: RuntimeWarning: divide by zero encountered in double_scalars
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\tight_bbox.py:65: RuntimeWarning: divide by zero encountered in double_scalars
   w1, h1 = fig.bbox.width * dpi_scale, fig.bbox.height * dpi_scale
 C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\tight_bbox.py:71: RuntimeWarning: divide by zero encountered in double_scalars
   fig.patch.set_bounds(x0 / w1, y0 / h1,
@@ -934,7 +961,7 @@ C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\backends\backend_agg.py:21
   y = round(y + yo + yd)
 </pre></div>
 </div>
-<img alt="_images/notebooks_2_4.png" src="_images/notebooks_2_4.png" />
+<img alt="_images/notebooks_2_5.png" src="_images/notebooks_2_5.png" />
 </div>
 </div>
 <p>There is a lot more that you can do with outputs (such as including interactive outputs)
