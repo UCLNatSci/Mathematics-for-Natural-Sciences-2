@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>8. ODE Methods - Reduction of Order &#8212; Mathematics for Natural Sciences 2</title>
+    <title>7. ODE Methods - Reduction of Order &#8212; Mathematics for Natural Sciences 2</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -56,8 +56,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="9. ODE Methods - Variation of Parameters" href="ODEvariation.html" />
-    <link rel="prev" title="7. Vector Calculus Theorems" href="../VectorCalculus/vectorcalctheorems.html" />
+    <link rel="next" title="8. ODE Methods - Variation of Parameters" href="ODEvariation.html" />
+    <link rel="prev" title="6. Vector Calculus Theorems" href="../VectorCalculus/vectorcalctheorems.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -144,23 +144,18 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../VectorCalculus/surfaceintegrals.html">
-   6. Surface Integrals
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../VectorCalculus/vectorcalctheorems.html">
-   7. Vector Calculus Theorems
+   6. Vector Calculus Theorems
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   8. ODE Methods - Reduction of Order
+   7. ODE Methods - Reduction of Order
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="ODEvariation.html">
-   9. ODE Methods - Variation of Parameters
+   8. ODE Methods - Variation of Parameters
   </a>
  </li>
 </ul>
@@ -297,17 +292,17 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#euler-equations">
-   8.1. Euler Equations
+   7.1. Euler Equations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reduction-of-order">
-   8.2. Reduction of Order
+   7.2. Reduction of Order
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#finding-homogeneous-solutions">
-     8.2.1. Finding homogeneous solutions
+     7.2.1. Finding homogeneous solutions
     </a>
    </li>
   </ul>
@@ -333,17 +328,17 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#euler-equations">
-   8.1. Euler Equations
+   7.1. Euler Equations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reduction-of-order">
-   8.2. Reduction of Order
+   7.2. Reduction of Order
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#finding-homogeneous-solutions">
-     8.2.1. Finding homogeneous solutions
+     7.2.1. Finding homogeneous solutions
     </a>
    </li>
   </ul>
@@ -359,7 +354,7 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="ode-methods-reduction-of-order">
-<h1><span class="section-number">8. </span>ODE Methods - Reduction of Order<a class="headerlink" href="#ode-methods-reduction-of-order" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">7. </span>ODE Methods - Reduction of Order<a class="headerlink" href="#ode-methods-reduction-of-order" title="Permalink to this headline">#</a></h1>
 <p>Whilst we can feel confident about solving first order ODEs that are linear (and in some cases non-linear) as well as second order ODEs with constant coefficients,
 there clearly remain many classes of ODEs which we cannot currently solve.  We can however use a series of generalisations of our current methods to solve more
 complicated problems.  Here we will focus on two such methods, <em>reduction of order</em> and <em>variation of parameters</em>.</p>
@@ -367,14 +362,14 @@ complicated problems.  Here we will focus on two such methods, <em>reduction of 
 <p class="admonition-title">Definition</p>
 <p>Recall that in general a linear second order differential equation is of the form:</p>
 <div class="math notranslate nohighlight" id="equation-ode2general">
-<span class="eqno">(8.1)<a class="headerlink" href="#equation-ode2general" title="Permalink to this equation">#</a></span>\[a\,y^{\prime\prime}(x)+b\,y^{\prime}(x)+c\,y(x)=f(x)\]</div>
+<span class="eqno">(7.1)<a class="headerlink" href="#equation-ode2general" title="Permalink to this equation">#</a></span>\[a\,y^{\prime\prime}(x)+b\,y^{\prime}(x)+c\,y(x)=f(x)\]</div>
 <p>where <span class="math notranslate nohighlight">\(a,\,b,\,c\)</span> are arbitrary constants.</p>
 </div>
 <section id="euler-equations">
-<h2><span class="section-number">8.1. </span>Euler Equations<a class="headerlink" href="#euler-equations" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">7.1. </span>Euler Equations<a class="headerlink" href="#euler-equations" title="Permalink to this headline">#</a></h2>
 </section>
 <section id="reduction-of-order">
-<h2><span class="section-number">8.2. </span>Reduction of Order<a class="headerlink" href="#reduction-of-order" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">7.2. </span>Reduction of Order<a class="headerlink" href="#reduction-of-order" title="Permalink to this headline">#</a></h2>
 <p>Recall the following linear homogeneous second order ODE:</p>
 <div class="math notranslate nohighlight">
 \[a\,y^{\prime\prime}(x)+b\,y^{\prime}(x)+\frac{b^2}{4a}\,y(x)=0\]</div>
@@ -400,7 +395,7 @@ independent solution <span class="math notranslate nohighlight">\(y_2(x)\)</span
 <p class="admonition-title">Definition</p>
 <p>We employ this method to solve inhomogeneous linear differential equations of the form:</p>
 <div class="math notranslate nohighlight" id="equation-ode2redorder">
-<span class="eqno">(8.2)<a class="headerlink" href="#equation-ode2redorder" title="Permalink to this equation">#</a></span>\[a(x)\,y'' + b(x)\,y' + c(x)\,y = f(x) \Rightarrow y'' + p(x)\,y' + q(x)\,y  = r(x)\]</div>
+<span class="eqno">(7.2)<a class="headerlink" href="#equation-ode2redorder" title="Permalink to this equation">#</a></span>\[a(x)\,y'' + b(x)\,y' + c(x)\,y = f(x) \Rightarrow y'' + p(x)\,y' + q(x)\,y  = r(x)\]</div>
 <p>where we have relabelled <span class="math notranslate nohighlight">\(\displaystyle p(x) = \frac{b(x)}{a(x)},\, q(x) = \frac{c(x)}{a(x)},\, r(x) = \frac{f(x)}{a(x)}\)</span> for simplicity.</p>
 <p>If we know a solution <span class="math notranslate nohighlight">\(y_1(x)\)</span> of the homogeneous problem <span class="math notranslate nohighlight">\(y_1'' + p\,y_1'+q\,y_1 = 0\)</span>, then the solution to
 the inhomogeneous problem will be of the form:</p>
@@ -418,7 +413,7 @@ the inhomogeneous problem will be of the form:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}y_2' &amp;= u'\,y_1 + u\,y_1' \\
 y_2'' &amp;= u''\,y_1 + 2u'\,y_1+ f\,y_1'' \end{split}\]</div>
-<p>and sustituting these into <a class="reference internal" href="#equation-ode2redorder">(8.2)</a>:</p>
+<p>and sustituting these into <a class="reference internal" href="#equation-ode2redorder">(7.2)</a>:</p>
 <div class="math notranslate nohighlight">
 \[y_1\,u'' + (2y_1' + p\,y_1)\,u' + (y_1''+p\,y_1'+q\,y_1)\,u = r\]</div>
 <p>but since <span class="math notranslate nohighlight">\(y_1\)</span> satisfies <span class="math notranslate nohighlight">\(y_1'' + p\,y_1' + q\,y_1 = 0\)</span>, then this reduces do:</p>
@@ -437,8 +432,8 @@ if we started with an <span class="math notranslate nohighlight">\(n^{th}\)</spa
 \Rightarrow u'(x) &amp;= \frac{\int y_1\,r\,e^{\int p\,\mathrm{d}x}\,\mathrm{d}x + C}{y_1^2\,e^{\int p\,\mathrm{d}x}}\\
 u(x) &amp;= \int \frac{\int y_1\,r\,e^{\int p\,\mathrm{d}x}\,\mathrm{d}x + C}{y_1^2\,e^{\int p\,\mathrm{d}x}}\,\mathrm{d}x\end{split}\]</div>
 <section id="finding-homogeneous-solutions">
-<h3><span class="section-number">8.2.1. </span>Finding homogeneous solutions<a class="headerlink" href="#finding-homogeneous-solutions" title="Permalink to this headline">#</a></h3>
-<p>If the form of <span class="math notranslate nohighlight">\(p(x),\, q(x)\)</span> are just polynomial, then finding homogeneous solution(s) to ODEs of the form <a class="reference internal" href="#equation-ode2redorder">(8.2)</a> can be done,
+<h3><span class="section-number">7.2.1. </span>Finding homogeneous solutions<a class="headerlink" href="#finding-homogeneous-solutions" title="Permalink to this headline">#</a></h3>
+<p>If the form of <span class="math notranslate nohighlight">\(p(x),\, q(x)\)</span> are just polynomial, then finding homogeneous solution(s) to ODEs of the form <a class="reference internal" href="#equation-ode2redorder">(7.2)</a> can be done,
 using the ansatz <span class="math notranslate nohighlight">\(y = x^n\)</span>.  Obviously this may only work for one of the solutions, however for the reduction of order method this is exactly what
 is required.</p>
 <p>To see this in action, lets pick the example:</p>
@@ -506,13 +501,13 @@ problems <span class="math notranslate nohighlight">\(y = \sum_{n=1}^\infty a_n\
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">7. </span>Vector Calculus Theorems</p>
+            <p class="prev-next-title"><span class="section-number">6. </span>Vector Calculus Theorems</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="ODEvariation.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">9. </span>ODE Methods - Variation of Parameters</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>ODE Methods - Variation of Parameters</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

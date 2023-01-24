@@ -9,11 +9,11 @@ and now try to integrate this:
 ```{math}
 \int \,\mathrm{d}f = \int\,\nabla f \cdot \mathrm{d}{\bf r}
 ```
-we see that this can be thought of doing the scalar product between two vectors ${\bf V}$ and $\mathrm{d}{\bf r}$ 
+we see that this can be thought of doing the scalar product between two vectors ${\bf F}$ and $\mathrm{d}{\bf r}$ 
 before finally integrating:
 
 ```{math}
-\int {\bf V}\cdot \mathrm{d}{\bf r}
+\int {\bf F}\cdot \mathrm{d}{\bf r}
 ```
 
 We call integrals of this kind **line integrals** or otherwise called **contour integrals**.  
@@ -238,6 +238,28 @@ both contours, the integral is the weighted sum of $x^2$ along each of these len
 2\. Evaluate the vector line integral $\int_{\mathcal{C}} {\bf F}\cdot \mathrm{d}{\bf r}$ for ${\bf F} = xz\,\hat{\bf x} - yz\,\hat{\bf z}$ 
 along the line linking $(-1,\,2,\,0) \rightarrow (3,\,0,\,1)$.
 
+Here we need a parameterise the line over $0 \leq t \leq 1$:
+```{math}
+x &= x_0(1-t) + x_1 t = -1(1-t) + 3(t) = 4t - 1\\
+y &= y_0(1-t) + y_1 t = 2(1-t) + 0(t) = 2-2t\\
+z &= z_0(1-t) + z_1 t = 0(1-t) + 1(t) = t
+```
+
+Using this we can rewrite the variables in terms of $t$:
+```{math}
+{\bf F} &= t(4t-1)\,\hat{\bf x} - t(2-2t)\,\hat{\bf z}\\
+\frac{\mathrm{d}{\bf r}}{\mathrm{d}t} &= 4\,\hat{\bf x} -2\,\hat{\bf y} + \hat{\bf z}
+```
+
+and so we can find the dot product:
+```{math}
+{\bf F}\cdot \frac{\mathrm{d}{\bf r}}{\mathrm{d}t} = 4(4t^2-t) - 2t(1-t) = 18t^2 - 6t
+```
+which we can then just integrate:
+```{math}
+\int_0^1 (18t^2 - 6t)\,\mathrm{d}t = \Big[6t^3 - 3t^2\Big]_0^1 = 3
+```
+
 ````
 
 
@@ -249,156 +271,104 @@ along the line linking $(-1,\,2,\,0) \rightarrow (3,\,0,\,1)$.
 ```
 over the following contours:
 
-a\. 
-- Straight line path $(0,\,0) \rightarrow (1,\, 2)$
+a\. Straight line path $(0,\,0) \rightarrow (1,\, 2)$
 
-The function following by this path will be $y = 2x,\, x \in [0, 1]$, so:
+The path followed can be parameterised over $0\ leq t \leq 1$ by:
 
 ```{math}
-{\bf r}(x) = \begin{pmatrix} x \\ 2x \end{pmatrix}
+x &= x_0(1-t) + x_1t = 0(1-t) + 1t = t\\
+y &= y_0(1-t) + y_1t = 0(1-t) + 2t = 2t
 ```
 
-Thus ${\bf G}({\bf r}(x))$ will be:
+Thus ${\bf G}({\bf r}(t))$ will be:
 
 ```{math}
-{\bf G}({\bf r}(x)) = \begin{pmatrix} 2x^2 \\ -4x^2 \end{pmatrix}
+{\bf G}({\bf r}(t)) = \begin{pmatrix} 2t^2 \\ -4t^2 \end{pmatrix}
 ```
 
-and ${\bf r'}(x)$ is given by:
+and ${\bf r'}(t)$ is given by:
 
 ```{math}
-{\bf r}'(x) = \begin{pmatrix} 1 \\ 2 \end{pmatrix}
-```
-
-so the line integral is found by:
-
-```{math}
-I &=  \int_{\mathcal{C}} {\bf G}(r) \cdot \mathrm{d}{\bf r} = \int_0^1 {\bf G}({\bf r}(t)) \cdot {\bf r}'(t)\,\mathrm{d}t = 
-\int_0^1 \begin{pmatrix} 2x^2 \\ -4x^2 \end{pmatrix} \cdot \begin{pmatrix} 1 \\ 2 \end{pmatrix} \mathrm{d}x \\
-&=  \int_0^1 \left( 2x^2 - 8x^2 \right)\,\textrm{d}x = -\int_0^1 6x^2 \,\textrm{d}x = \Big[ -\frac{6}{3}x^3\Big ]_0^1 = -2
-```
-
-- Curved path following $y = x^2$ for $0 \leq x \leq 1$
-
-
-```{math}
-{\bf r}(x) = \begin{pmatrix} x \\ x^2 \end{pmatrix}
-```
-
-Thus ${\bf G}({\bf r}(x))$ will be:
-
-```{math}
-{\bf G}({\bf r}(x)) = \begin{pmatrix} x^3 \\ -x^4 \end{pmatrix}
-```
-
-and ${\bf r'}(x)$ is given by:
-
-```{math}
-{\bf r}'(x) = \begin{pmatrix} 1 \\ 2x \end{pmatrix}
+{\bf r}'(t) = \begin{pmatrix} 1 \\ 2 \end{pmatrix}
 ```
 
 so the line integral is found by:
 
 ```{math}
 I &=  \int_{\mathcal{C}} {\bf G}(r) \cdot \mathrm{d}{\bf r} = \int_0^1 {\bf G}({\bf r}(t)) \cdot {\bf r}'(t)\,\mathrm{d}t = 
-\int_0^1 \begin{pmatrix} x^3 \\ -x^4 \end{pmatrix} \cdot \begin{pmatrix} 1 \\ 2x \end{pmatrix} \mathrm{d}x \\
-&=  \int_0^1 \left( x^3 - 2x^5 \right)\,\textrm{d}x = \Big[\frac{1}{4}x^4 - \frac{1}{3}x^6 \Big ]_0^1 = -\frac{1}{12}
+\int_0^1 \begin{pmatrix} 2t^2 \\ -4t^2 \end{pmatrix} \cdot \begin{pmatrix} 1 \\ 2 \end{pmatrix} \mathrm{d}t \\
+&=  \int_0^1 \left( 2t^2 - 8t^2 \right)\,\textrm{d}t = -\int_0^1 6t^2 \,\textrm{d}t = \Big[ -\frac{6}{3}t^3\Big ]_0^1 = -2
+```
+b\.  Curved path following $y = x^2$ for $0 \leq x \leq 1$
+
+So the parameterisation for $0 \leq t \leq 1$ is:
+```{math}
+{\bf r}(t) = \begin{pmatrix} t \\ t^2 \end{pmatrix}
 ```
 
-- Curved path following $y = x^{1/2}$ over $0 \leq x \leq 1$
-
+Thus ${\bf G}({\bf r}(t))$ will be:
 
 ```{math}
-{\bf r}(x) = \begin{pmatrix} x \\ x^{1/2} \end{pmatrix}
+{\bf G}({\bf r}(t)) = \begin{pmatrix} t^3 \\ -t^4 \end{pmatrix}
 ```
 
-Thus ${\bf G}({\bf r}(x))$ will be:
+and ${\bf r'}(t)$ is given by:
 
 ```{math}
-{\bf G}({\bf r}(x)) = \begin{pmatrix} x^{3/2} \\ -x \end{pmatrix}
-```
-
-and ${\bf r'}(x)$ is given by:
-
-```{math}
-{\bf r}'(x) = \begin{pmatrix} 1 \\ \frac{1}{2} x^{-1/2} \end{pmatrix}
+{\bf r}'(x) = \begin{pmatrix} 1 \\ 2t \end{pmatrix}
 ```
 
 so the line integral is found by:
 
 ```{math}
 I &=  \int_{\mathcal{C}} {\bf G}(r) \cdot \mathrm{d}{\bf r} = \int_0^1 {\bf G}({\bf r}(t)) \cdot {\bf r}'(t)\,\mathrm{d}t = 
-\int_0^1 \begin{pmatrix} x^{3/2} \\ -x \end{pmatrix} \cdot \begin{pmatrix} 1 \\ \frac{1}{2} x^{-1/2} \end{pmatrix} \mathrm{d}x \\
-&=  \int_0^1 \left( x^{3/2} - \frac{1}{2}x^{1/2} \right)\,\textrm{d}x = \Big[\frac{2}{5}x^{5/2} - \frac{1}{3}x^{3/2} \Big ]_0^1 = \frac{1}{15}
+\int_0^1 \begin{pmatrix} t^3 \\ -t^4 \end{pmatrix} \cdot \begin{pmatrix} 1 \\ 2t \end{pmatrix} \mathrm{d}t \\
+&=  \int_0^1 \left( t^3 - 2t^5 \right)\,\textrm{d}t = \Big[\frac{1}{4}t^4 - \frac{1}{3}t^6 \Big ]_0^1 = -\frac{1}{12}
+```
+
+c\. Curved path following $y = x^{1/2}$ over $0 \leq x \leq 1$
+
+So the parameterisation for $0 \leq t \leq 1$ is:
+
+```{math}
+{\bf r}(t) = \begin{pmatrix} t \\ t^{1/2} \end{pmatrix}
+```
+
+Thus ${\bf G}({\bf r}(t))$ will be:
+
+```{math}
+{\bf G}({\bf r}(t)) = \begin{pmatrix} t^{3/2} \\ -t \end{pmatrix}
+```
+
+and ${\bf r'}(x)$ is given by:
+
+```{math}
+{\bf r}'(t) = \begin{pmatrix} 1 \\ \frac{1}{2} t^{-1/2} \end{pmatrix}
+```
+
+so the line integral is found by:
+
+```{math}
+I &=  \int_{\mathcal{C}} {\bf G}(r) \cdot \mathrm{d}{\bf r} = \int_0^1 {\bf G}({\bf r}(t)) \cdot {\bf r}'(t)\,\mathrm{d}t = 
+\int_0^1 \begin{pmatrix} t^{3/2} \\ -t \end{pmatrix} \cdot \begin{pmatrix} 1 \\ \frac{1}{2} t^{-1/2} \end{pmatrix} \mathrm{d}t \\
+&=  \int_0^1 \left( t^{3/2} - \frac{1}{2}t^{1/2} \right)\,\textrm{d}t = \Big[\frac{2}{5}t^{5/2} - \frac{1}{3}t^{3/2} \Big ]_0^1 = \frac{1}{15}
 ```
 ````
 
-## Conservative Vector Fields
 
-There is an important class of vector fields, known as **conservative** vector fields, for which line integrals do not depend on 
-which path is taken from rA to rB, and for which all loop integrals are zero.  We see that our example 
-```{math}
-{\bf G(r)} = xy\hat{\bf x} - y^2 \hat{\bf y}
-```
-is not conservative since the line integrals along different paths from $(0,\, 0)$ to $(1,\,2)$ gave different values.  
+## Conservative vector fields
 
-Whist it is not possible show that for all paths ${\bf r}_A \rightarrow {\bf r}_B$. the line integral gives the same value, simply because there exist
-infinitely many possible paths. Instead we can use an equivalent definition of conservative fields:
+In the case of a conservative vector field ${\bf F} = \nabla f$, then we find that the line integral is actually **path independent**, something which 
+allows us to dramatically simplify calculating it in some cases.  To see this fact, go back to the total derivative:
 
 ```{math}
-\text{Vector Field}\,{\bf G(r)}\,\text{is conservative} \Longleftrightarrow \exists\,\phi({\bf r}),\, 
-\text{s.t.}\,{\bf G} = \nabla \phi
+\nabla f \cdot \mathrm{d}{\bf r} = \mathrm{d}f
 ```
 
-where $\phi{(\bf{r})$ is a scalar field.  
-
-To show that a vector field which satisfies this condition is conservative, lets think about a line integral taken along a path 
-${\bf r}_A \rightarrow {\bf r}_B$, which we have parameterised by the $t \in [a,\, b]$, where ${\bf}(t=a) = {\bf r}_A$ and ${\bf}(t=b) = {\bf r}_B$
+If this is true, then when we calculate the line integral of a conservative vector field:
 ```{math}
-I &=  \int_{\mathcal{C}} {\bf G(r)}\cdot \mathrm{d}{\bf r} = \int_{t=a}^{t=b} {\bf G(r)}\cdot {\bf r}'(t) \mathrm{d}t\\
-&=  \int_{t=a}^{t=b} (\nabla \phi({\bf r}(t)))\cdot {\bf r}'(t) \mathrm{d}t
+\int_{\mathcal{C}} \nabla f \cdot \mathrm{d}{\bf r} = \int_{f_{initial}}^{f_{final}} \mathrm{d}f = \Big[ f\Big]_{f_{initial}}^{f_{final}} = f_{final} - f_{initial}
 ```
-However using the fact that the total differential $\mathrm{d}\phi = \nabla \phi \cdot \mathrm{d}{\bf r}$, 
-then $\mathrm{d}\phi/\mathrm{d}t = \nabla \phi \cdot \mathrm{d}{\bf r}'$ and thus:
-```{math}
-I &=  \int_{t=a}^{t=b} \frac{\mathrm{d}}{\mathrm{d}t}\phi({\bf r}(t)) \mathrm{d}t  \\
-&=  \Bigg[ \phi({\bf r}(t)) \Bigg]_{t=a}^{t=b} = \phi({\bf r_B}) - \phi({\bf r_A})
-```
-which means that the details of the line integral only depend on the start and finish of the contour, not the path taken.  Likewise if we have a 
-conservative vector field and a closed loop integral, then ${\bf r_A} = \bf{r_B}$ and so the integral becomes zero.
+over some points $f_{initial} \rightarrow f_{final}$ which correspond to the points $a \leq t \leq b$ in the parameterised version of the line integral.
 
-For a three dimensional vector field defined on a domain that is <em>simply connected</em> (that is contains no holes) there exists another 
-equivalent definition of conservativeness:
-```{math}
-\text{Vector Field}\,{\bf G(r)}\,\text{is conservative} \Longleftrightarrow \nabla \times {\bf G} = 0
-```
-
-````{admonition} Worked example
-Is the vector ${\bf G(r)} = 2xy \hat{\bf x} + (x^2 - 2y)\hat{\bf y} + \hat{\bf z}$ is conservative?
-
-Since G is defined on the entire three-dimensional space $\mathbb{R}^3$, we can make use the curl criterion, hence
-```{math}
-\nabla \times {\bf G} &= 
-\begin{pmatrix} \partial_y G_z - \partial_z G_y \\ \partial_z G_x - \partial_x G_y \\ \partial_y G_x - \partial_x G_y\end{pmatrix}\\
-&=  \begin{pmatrix} 0 - 0 \\ 0 - 0 \\ 2x - 2x\end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix}
-```
-Hence since the curl of $\bf G$ is zero, $\bf G$ is a conservative vector field, so it must be possible to find a potential $\phi({\bf r})$ such 
-that ${\bf G} = \nabla \phi$.  This means that:
-
-- $\partial_x \phi = 2xy$
-- $\partial_x \phi = x^2-2y$
-- $\partial_x \phi = 1$
-
-Integrating each of these in turn we find that:
-
-- $\phi = x^2y + f(y,\,z)$
-- $\phi = x^2y - y^2 + g(x,\,z)$
-- $\phi = z + h(z,\,y)$
-
-Since these all need to be consistent, we find that 
-```{math}
-\phi(x,\,y,\,z) = x^2y - y^2 + z + C
-```
-up to an additive constant $C \in \mathbb{C}$.  We notice that for the line integral this constant drops out of the calculation anyway.
-
-````
+Hence this answer **only** depends on the starting/ending values of the path integral, not the path taken.

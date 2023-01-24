@@ -11,7 +11,7 @@ chapters:
 - file: VectorCalculus/calculusonfields
 - file: VectorCalculus/divandcurl
 - file: VectorCalculus/lineintegrals
-- file: VectorCalculus/surfaceintegrals
+#- file: VectorCalculus/surfaceintegrals
 - file: VectorCalculus/vectorcalctheorems
 - file: odes/ODEreduction
 - file: odes/ODEvariation
