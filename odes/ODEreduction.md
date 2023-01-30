@@ -19,6 +19,19 @@ where $a,\,b,\,c$ are arbitrary constants.
 
 ## Euler Equations
 
+As a warm up, lets try to solve problems of the form:
+```{math}
+ax^2\,y′′+bx\,y′+cy=0
+```
+We do so by using an ansatz of the form $y = x^n$, which means that:
+```{math}
+x^{n}\left( an(n-1) + bn + c) = 0
+```
+A quadratic that we can solve:
+```{math}
+an^2 + (b-a)n + c = 0 \Rightarrow n = \frac{a-b \pm \sqrt{b^2-2ab + a^2 - 4ac}}{2a}
+```
+
 ## Reduction of Order
 Recall the following linear homogeneous second order ODE:
 ```{math}
