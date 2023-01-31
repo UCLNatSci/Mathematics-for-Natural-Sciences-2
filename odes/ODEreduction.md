@@ -21,16 +21,68 @@ where $a,\,b,\,c$ are arbitrary constants.
 
 As a warm up, lets try to solve problems of the form:
 ```{math}
+:label: EulerEqn
 ax^2\,y′′+bx\,y′+cy=0
 ```
 We do so by using an ansatz of the form $y = x^n$, which means that:
 ```{math}
 x^{n}\left( an(n-1) + bn + c) = 0
 ```
-A quadratic that we can solve:
+A quadratic (which we call the characteristic equation) that we can solve:
 ```{math}
 an^2 + (b-a)n + c = 0 \Rightarrow n = \frac{a-b \pm \sqrt{b^2-2ab + a^2 - 4ac}}{2a}
 ```
+which means there are three distinct cases to solve for here (to begin with assume $x > 0$ to avoid any additional complications with complex solutions)
+
+1\. Two distinct, real roots $n = n_1,\, n_2$
+
+Since the ODE {eq}`EulerEqn` here is linear, we can find the superposition of solutions:
+```{math}
+y = A\,x^{n_1} + B\,x^{n_2}
+```
+
+2\. One repeated, real root $n$
+We find that solving the characteristic equation, the only root is:
+```{math}
+n = \frac{a-b}{2a}
+```
+giving a solution $y_1 = Ax^n$.  But there should be two solutions to the ODE {eq}`EulerEqn`, so we can use an ansatz of the form:
+```{math}
+y_2 = x^{n}\,f(x)
+```
+to find $y_2$, by solving for $f(x)$.  We can think of $f(x)$ here is a *bridging function* between the different solutions $y_1,\,y_2$.  
+
+Using this ansatz, the ODE takes the form:
+```{math}
+y &= x^n\,f \\
+y' &= nx^{n-1}\,f + x^n\,f' \\
+y'' &= n(n-1)x^{n-2}\,f + 2nx^{n-1}\,f' + x^{n}f''
+\Rightarrow & ax^2\,y′′+bx\,y′+cy = ax^{n+1}\,f'' + (2an+b)\,x^{n+1}\,f' + (an(n-1) + bn + c)\,x^n\,f = 0
+```
+This can be simplified straight away since we are using the value of $n$ which satisfies the characteristic equation $an(n-1) + bn + c = 0$, therefore the equation reduces to:
+```{math}
+ax^{n+1}\,f'' + (2an+b)\,x^{n+1}\,f' = 0 
+```
+using the fact that the $n$ here satisfies $n = \frac{a-n}{2a} \Rightarrow 2an + b = a$ means:
+```{math}
+ax^{n+1}\left(xf'' + f') = 0
+```
+which can be solved as a linear 1st order ODE in $f'$:
+```{math}
+\frac{\mathrm{d}}{\mathrm{d}x}\left( xf'\right) = 0 \Rightarrow xf' = A 
+```
+which means the form of $f(x)$ is given by:
+```{math}
+f(x) = A\ln(x) + B
+```
+and therefore the solution here is:
+```{math}
+y = x^n\,\left(A \ln(x) + B\right)
+```
+
+3\. Two complex roots $n = \lambda \pm i\mu$
+We can solve the equation for 
+
 
 ## Reduction of Order
 Recall the following linear homogeneous second order ODE:
