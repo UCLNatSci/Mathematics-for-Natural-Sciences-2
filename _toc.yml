@@ -20,10 +20,12 @@ chapters:
 - file: LinearAlgebra/linear_systems/echelon_form.md
 - file: LinearAlgebra/linear_systems/vectors.md
 - file: LinearAlgebra/linear_systems/matrix_equations.md
-# - file: LinearAlgebra/linear_systems_matrices/subspaces.md
-# - file: LinearAlgebra/linear_systems_matrices/matrices.md
-# - file: LinearAlgebra/linear_systems_matrices/linear_maps.md
-# - file: LinearAlgebra/linear_systems_matrices/inverses.md
-# - file: LinearAlgebra/linear_systems_matrices/determinants.md
+- file: LinearAlgebra/linear_systems/linear_independence.md
+- file: LinearAlgebra/linear_systems/subspaces.md
+- file: LinearAlgebra/linear_systems/linear_maps.md
+# - file: LinearAlgebra/linear_systems/composition.md
+# - file: LinearAlgebra/linear_systems/matrices.md
+# - file: LinearAlgebra/linear_systems/inverses.md
+# - file: LinearAlgebra/linear_systems/determinants.md
 # - file: LinearAlgebra/eigenvectors/notes.md
-# - file: LinearAlgebra/linear_systems_matrices/diagonalisation.md
+# - file: LinearAlgebra/linear_systems/diagonalisation.md

@@ -1,14 +1,14 @@
 {
   "LinearAlgebra\\linear_systems\\linear_transformations": {
-    "la_fig_4": {
+    "la_fig_2": {
       "output_type": "display_data",
       "metadata": {
         "scrapbook": {
-          "name": "la_fig_4",
+          "name": "la_fig_2",
           "mime_prefix": "application/papermill.record/"
         },
         "filenames": {
-          "image/png": "C:\\Users\\NatSciTeaching\\github\\Mathematics-for-Natural-Sciences-2\\_build\\jupyter_execute\\LinearAlgebra\\linear_systems\\linear_transformations_5_0.png"
+          "image/png": "C:\\Users\\NatSciTeaching\\github\\Mathematics-for-Natural-Sciences-2\\_build\\jupyter_execute\\LinearAlgebra\\linear_systems\\linear_transformations_3_0.png"
         }
       },
       "data": {
@@ -48,6 +48,38 @@
         "application/papermill.record/image/png": null
       }
     },
+    "la_fig_3": {
+      "output_type": "display_data",
+      "metadata": {
+        "scrapbook": {
+          "name": "la_fig_3",
+          "mime_prefix": "application/papermill.record/"
+        },
+        "filenames": {
+          "image/png": "C:\\Users\\NatSciTeaching\\github\\Mathematics-for-Natural-Sciences-2\\_build\\jupyter_execute\\LinearAlgebra\\linear_systems\\linear_transformations_4_0.png"
+        }
+      },
+      "data": {
+        "application/papermill.record/text/plain": "<Figure size 950x400 with 2 Axes>",
+        "application/papermill.record/image/png": null
+      }
+    },
+    "la_fig_4": {
+      "output_type": "display_data",
+      "metadata": {
+        "scrapbook": {
+          "name": "la_fig_4",
+          "mime_prefix": "application/papermill.record/"
+        },
+        "filenames": {
+          "image/png": "C:\\Users\\NatSciTeaching\\github\\Mathematics-for-Natural-Sciences-2\\_build\\jupyter_execute\\LinearAlgebra\\linear_systems\\linear_transformations_5_0.png"
+        }
+      },
+      "data": {
+        "application/papermill.record/text/plain": "<Figure size 950x400 with 2 Axes>",
+        "application/papermill.record/image/png": null
+      }
+    },
     "la_fig_6": {
       "output_type": "display_data",
       "metadata": {
@@ -73,38 +105,6 @@
         },
         "filenames": {
           "image/png": "C:\\Users\\NatSciTeaching\\github\\Mathematics-for-Natural-Sciences-2\\_build\\jupyter_execute\\LinearAlgebra\\linear_systems\\linear_transformations_2_0.png"
-        }
-      },
-      "data": {
-        "application/papermill.record/text/plain": "<Figure size 950x400 with 2 Axes>",
-        "application/papermill.record/image/png": null
-      }
-    },
-    "la_fig_3": {
-      "output_type": "display_data",
-      "metadata": {
-        "scrapbook": {
-          "name": "la_fig_3",
-          "mime_prefix": "application/papermill.record/"
-        },
-        "filenames": {
-          "image/png": "C:\\Users\\NatSciTeaching\\github\\Mathematics-for-Natural-Sciences-2\\_build\\jupyter_execute\\LinearAlgebra\\linear_systems\\linear_transformations_4_0.png"
-        }
-      },
-      "data": {
-        "application/papermill.record/text/plain": "<Figure size 950x400 with 2 Axes>",
-        "application/papermill.record/image/png": null
-      }
-    },
-    "la_fig_2": {
-      "output_type": "display_data",
-      "metadata": {
-        "scrapbook": {
-          "name": "la_fig_2",
-          "mime_prefix": "application/papermill.record/"
-        },
-        "filenames": {
-          "image/png": "C:\\Users\\NatSciTeaching\\github\\Mathematics-for-Natural-Sciences-2\\_build\\jupyter_execute\\LinearAlgebra\\linear_systems\\linear_transformations_3_0.png"
         }
       },
       "data": {
