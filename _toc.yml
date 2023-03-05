@@ -23,9 +23,9 @@ chapters:
 - file: LinearAlgebra/linear_systems/linear_independence.md
 - file: LinearAlgebra/linear_systems/subspaces.md
 - file: LinearAlgebra/linear_systems/linear_maps.md
-# - file: LinearAlgebra/linear_systems/composition.md
-# - file: LinearAlgebra/linear_systems/matrices.md
-# - file: LinearAlgebra/linear_systems/inverses.md
-# - file: LinearAlgebra/linear_systems/determinants.md
-# - file: LinearAlgebra/eigenvectors/notes.md
-# - file: LinearAlgebra/linear_systems/diagonalisation.md
+- file: LinearAlgebra/linear_systems/matrices.md
+- file: LinearAlgebra/linear_systems/composition.md
+- file: LinearAlgebra/linear_systems/inverses.md
+- file: LinearAlgebra/linear_systems/determinants.md
+- file: LinearAlgebra/eigenvectors/notes.md
+- file: LinearAlgebra/linear_systems/diagonalisation.md
